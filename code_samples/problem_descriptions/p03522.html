@@ -1,0 +1,102 @@
+<span class="lang-en">
+<p>Score : <var>1500</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>We have a sequence <var>A</var> of length <var>N</var>.</p>
+<p>On this sequence, we can perform the following two kinds of operations:</p>
+<ul>
+<li>
+<p>Swap two adjacent elements.</p>
+</li>
+<li>
+<p>Select one element, and increment it by <var>1</var>.</p>
+</li>
+</ul>
+<p>We will repeatedly perform these operations so that <var>A</var> will be a non-decreasing sequence. Find the minimum required number of operations.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 ≤ N ≤ 200000</var></li>
+<li><var>1 ≤ A_i ≤ 10^9</var></li>
+<li><var>A_i</var> is an integer.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+<var>A_1</var>
+<var>A_2</var>
+<var>:</var>
+<var>A_N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the minimum number of operations required to turn <var>A</var> into a non-decreasing sequence.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>5
+4
+1
+8
+8
+7
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>2
+</pre>
+<p>We can turn <var>A</var> into a non-decreasing sequence in two operations:</p>
+<ul>
+<li>Initially, <var>A = \{4, 1, 8, 8, 7\}</var>.</li>
+<li>Swap the first two elements. Now, <var>A = \{1, 4, 8, 8, 7\}</var>.</li>
+<li>Increment the last element by <var>1</var>. Now, <var>A = \{1, 4, 8, 8, 8\}</var>.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>20
+8
+2
+9
+7
+4
+6
+7
+9
+7
+4
+7
+4
+4
+3
+6
+2
+3
+4
+4
+9
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>62
+</pre></section>
+</div>
+</span>

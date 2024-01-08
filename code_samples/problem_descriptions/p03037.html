@@ -1,0 +1,90 @@
+<span class="lang-en">
+<p>Score : <var>300</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>We have <var>N</var> ID cards, and there are <var>M</var> gates.</p>
+<p>We can pass the <var>i</var>-th gate if we have one of the following ID cards: the <var>L_i</var>-th, <var>(L_i+1)</var>-th, ..., and <var>R_i</var>-th ID cards.</p>
+<p>How many of the ID cards allow us to pass all the gates alone?</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li>All values in input are integers.</li>
+<li><var>1 \leq N \leq 10^5</var></li>
+<li><var>1 \leq M \leq 10^5</var></li>
+<li><var>1 \leq L_i \leq R_i \leq N</var></li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var> <var>M</var>
+<var>L_1</var> <var>R_1</var>
+<var>L_2</var> <var>R_2</var>
+<var>\vdots</var>
+<var>L_M</var> <var>R_M</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the number of ID cards that allow us to pass all the gates alone.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>4 2
+1 3
+2 4
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>2
+</pre>
+<p>Two ID cards allow us to pass all the gates alone, as follows:</p>
+<ul>
+<li>The first ID card does not allow us to pass the second gate.</li>
+<li>The second ID card allows us to pass all the gates.</li>
+<li>The third ID card allows us to pass all the gates.</li>
+<li>The fourth ID card does not allow us to pass the first gate.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>10 3
+3 6
+5 7
+6 9
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>1
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>100000 1
+1 100000
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>100000
+</pre></section>
+</div>
+</span>

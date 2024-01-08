@@ -1,0 +1,78 @@
+<span class="lang-en">
+<p>Score : <var>600</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>The squirrel Chokudai has <var>N</var> acorns.
+One day, he decides to do some trades in multiple precious metal exchanges to make more acorns.</p>
+<p>His plan is as follows:</p>
+<ol>
+<li>Get out of the nest with <var>N</var> acorns in his hands.</li>
+<li>Go to Exchange <var>A</var> and do some trades.</li>
+<li>Go to Exchange <var>B</var> and do some trades.</li>
+<li>Go to Exchange <var>A</var> and do some trades.</li>
+<li>Go back to the nest.</li>
+</ol>
+<p>In Exchange <var>X</var> <var>(X = A, B)</var>, he can perform the following operations any integer number of times (possibly zero) in any order:</p>
+<ul>
+<li>Lose <var>g_{X}</var> acorns and gain <var>1</var> gram of gold.</li>
+<li>Gain <var>g_{X}</var> acorns and lose <var>1</var> gram of gold.</li>
+<li>Lose <var>s_{X}</var> acorns and gain <var>1</var> gram of silver.</li>
+<li>Gain <var>s_{X}</var> acorns and lose <var>1</var> gram of silver.</li>
+<li>Lose <var>b_{X}</var> acorns and gain <var>1</var> gram of bronze.</li>
+<li>Gain <var>b_{X}</var> acorns and lose <var>1</var> gram of bronze.</li>
+</ul>
+<p>Naturally, he cannot perform an operation that would leave him with a negative amount of acorns, gold, silver, or bronze.</p>
+<p>What is the maximum number of acorns that he can bring to the nest?
+Note that gold, silver, or bronze brought to the nest would be worthless because he is just a squirrel.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 \leq N \leq 5000</var></li>
+<li><var>1 \leq g_{X} \leq 5000</var></li>
+<li><var>1 \leq s_{X} \leq 5000</var></li>
+<li><var>1 \leq b_{X} \leq 5000</var></li>
+<li>All values in input are integers.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+<var>g_A</var> <var>s_A</var> <var>b_A</var>
+<var>g_B</var> <var>s_B</var> <var>b_B</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the maximum number of acorns that Chokudai can bring to the nest.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>23
+1 1 1
+2 1 1
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>46
+</pre>
+<p>He can bring <var>46</var> acorns to the nest, as follows:</p>
+<ul>
+<li>In Exchange <var>A</var>, trade <var>23</var> acorns for <var>23</var> grams of gold. {acorns, gold, silver, bronze}={ <var>0,23,0,0</var> }</li>
+<li>In Exchange <var>B</var>, trade <var>23</var> grams of gold for <var>46</var> acorns. {acorns, gold, silver, bronze}={ <var>46,0,0,0</var> }</li>
+<li>In Exchange <var>A</var>, trade nothing. {acorns, gold, silver, bronze}={ <var>46,0,0,0</var> }</li>
+</ul>
+<p>He cannot have <var>47</var> or more acorns, so the answer is <var>46</var>.</p></section>
+</div>
+</span>

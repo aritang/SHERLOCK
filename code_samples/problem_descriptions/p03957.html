@@ -1,0 +1,90 @@
+<span class="lang-en">
+<p>Score : <var>100</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>This contest is <code>CODEFESTIVAL</code>, which can be shortened to the string <code>CF</code> by deleting some characters.  </p>
+<p>Mr. Takahashi, full of curiosity, wondered if he could obtain <code>CF</code> from other strings in the same way.  </p>
+<p>You are given a string <var>s</var> consisting of uppercase English letters.
+Determine whether the string <code>CF</code> can be obtained from the string <var>s</var> by deleting some characters.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>2 ≤ |s| ≤ 100</var></li>
+<li>All characters in <var>s</var> are uppercase English letters (<code>A</code>-<code>Z</code>).</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>The input is given from Standard Input in the following format:</p>
+<pre><var>s</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print <code>Yes</code> if the string <code>CF</code> can be obtained from the string <var>s</var> by deleting some characters.
+Otherwise print <code>No</code>.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>CODEFESTIVAL
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>Yes
+</pre>
+<p><code>CF</code> is obtained by deleting characters other than the first character <code>C</code> and the fifth character <code>F</code>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>FESTIVALCODE
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>No
+</pre>
+<p><code>FC</code> can be obtained but <code>CF</code> cannot be obtained because you cannot change the order of the characters.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>CF
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>Yes
+</pre>
+<p>It is also possible not to delete any characters.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 4</h3><pre>FCF
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 4</h3><pre>Yes
+</pre>
+<p><code>CF</code> is obtained by deleting the first character.</p></section>
+</div>
+</span>

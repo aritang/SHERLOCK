@@ -1,0 +1,132 @@
+<span class="lang-en">
+<p>Score : <var>400</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3>
+<p>We have an undirected graph <var>G</var> with <var>N</var> vertices numbered <var>1</var> to <var>N</var> and <var>N</var> edges as follows:</p>
+<ul>
+<li>For each <var>i=1,2,...,N-1</var>, there is an edge between Vertex <var>i</var> and Vertex <var>i+1</var>.</li>
+<li>There is an edge between Vertex <var>X</var> and Vertex <var>Y</var>.</li>
+</ul>
+<p>For each <var>k=1,2,...,N-1</var>, solve the problem below:</p>
+<ul>
+<li>Find the number of pairs of integers <var>(i,j) (1 \leq i &lt; j \leq N)</var> such that the shortest distance between Vertex <var>i</var> and Vertex <var>j</var> in <var>G</var> is <var>k</var>.</li>
+</ul>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3>
+<ul>
+<li><var>3 \leq N \leq 2 \times 10^3</var></li>
+<li><var>1 \leq X,Y \leq N</var></li>
+<li><var>X+1 &lt; Y</var></li>
+<li>All values in input are integers.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3>
+<p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var> <var>X</var> <var>Y</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3>
+<p>For each <var>k=1, 2, ..., N-1</var> in this order, print a line containing the answer to the problem.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>5 2 4
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>5
+4
+1
+0
+</pre>
+<p>The graph in this input is as follows:
+<br/>
+<br/>
+<img alt="Figure" src="https://img.atcoder.jp/ghi/3ae0885a4aeda99694b9fde4efe39dc1.png">
+<br/>
+<br/>
+There are five pairs <var>(i,j) (1 \leq i &lt; j \leq N)</var> such that the shortest distance between Vertex <var>i</var> and Vertex <var>j</var> is <var>1</var>: <var>(1,2)\,,(2,3)\,,(2,4)\,,(3,4)\,,(4,5)</var>.
+<br/>
+There are four pairs <var>(i,j) (1 \leq i &lt; j \leq N)</var> such that the shortest distance between Vertex <var>i</var> and Vertex <var>j</var> is <var>2</var>: <var>(1,3)\,,(1,4)\,,(2,5)\,,(3,5)</var>.
+<br/>
+There is one pair <var>(i,j) (1 \leq i &lt; j \leq N)</var> such that the shortest distance between Vertex <var>i</var> and Vertex <var>j</var> is <var>3</var>: <var>(1,5)</var>.
+<br/>
+There are no pairs <var>(i,j) (1 \leq i &lt; j \leq N)</var> such that the shortest distance between Vertex <var>i</var> and Vertex <var>j</var> is <var>4</var>.</img></p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>3 1 3
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>3
+0
+</pre>
+<p>The graph in this input is as follows:
+<br/>
+<br/>
+<img alt="Figure" src="https://img.atcoder.jp/ghi/be2921b3b307fc993a390a59437e624e.png">
+<br/>
+<br/></img></p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>7 3 7
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>7
+8
+4
+2
+0
+0
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 4</h3><pre>10 4 8
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 4</h3><pre>10
+12
+10
+8
+4
+1
+0
+0
+0
+</pre></section>
+</div>
+</span>

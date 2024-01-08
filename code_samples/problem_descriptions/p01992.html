@@ -1,0 +1,116 @@
+<h2>D: しりとり圧縮 (Shiritori Compression)</h2>
+
+<h3>問題</h3>
+<p>えびちゃんとかにちゃんの二人はしりとりをしました。えびちゃんはしりとりで出た単語のメモを見ています。</p>
+
+<p>えびちゃんは、この単語列 <var>w_1</var>, <var>w_2</var>, <var>...</var>, <var>w_N</var> から冗長な連続部分列を、存在しなくなるまで取り除きたいと思っています。えびちゃんの思う冗長な連続部分列とは以下のように定義されます。</p>
+
+<ul>
+<li>以下を満たす <var>i</var>, <var>j</var> が存在したとき、連続部分列 <var>w_i</var>, <var>...</var>, <var>w_{j-1}</var> は冗長です。</li>
+<ul>
+<li><var>i &lt; j</var> なる添字 <var>i</var>, <var>j</var> について、単語 <var>w_i</var> と <var>w_j</var> の先頭の文字が等しい。</li>
+</ul>
+</ul>
+
+<p>このとき、えびちゃんは添字 <var>i</var> 以上 <var>j-1</var> 以下の単語を取り除きます。</p>
+
+<p>たとえば、次のような単語列を考えます。</p>
+
+<ul>
+<li> apple→editor→random→me→edge</li>
+</ul>
+
+<p>これは、次のように圧縮されます。</p>
+
+<ul>
+<li> apple→edge</li>
+</ul>
+
+<p>editor と edge の先頭の文字が e で一致しているため、editor から edge の直前（me）までの単語が取り除かれます。</p>
+
+<p>えびちゃんの判断基準では、末尾の文字が同じであっても冗長とは見なさないことに注意してください。たとえば、上の圧縮済み単語列において、apple と edge の末尾の文字はどちらも e ですが、このことによって単語が取り除かれることはありません。</p>
+
+<p>また、以下のような例も考えられます。</p>
+
+<ul>
+<li> orange→eel→luck</li>
+<li> banana→at→tomb→bus→sound→does→some</li>
+<li> peach→hero→owl→loop→proof→fish→he</li>
+</ul>
+
+<p>これらはそれぞれ次のように圧縮できます。いずれも、最後の単語は保存されることに注意してください。</p>
+<ul>
+<li> orange→eel→luck</li>
+<ul>
+<li> すでに圧縮済みです。</li>
+</ul>
+<li> bus→some</li>
+<ul>
+<li> banana から bus、sound から some がそれぞれ圧縮可能です。</li>
+</ul>
+<li> peach→he</li>
+<ul>
+<li> proof→fish→he と圧縮することもできますが、圧縮後の単語数が異なっていることに注意してください。</li>
+</ul>
+</ul>
+
+<p>えびちゃんのメモが与えられるので、それらを圧縮して得られる単語列の長さ（単語数）の最小値 <var>L</var> を出力してください。</p>
+
+<p>なお、「同じ単語が複数回現れる」または「ある単語の先頭の文字が直前の単語の末尾の文字と一致していない」ことは起こらないと仮定して構いません。</p>
+
+<h3>入力形式</h3>
+
+<pre>
+<var>N</var>
+<var>w_1</var>
+<var>...</var>
+<var>w_N</var>
+</pre>
+
+<p>一行目に単語数 <var>N</var> が与えられ、<var>1+i</var> 行目には <var>i</var> 番目の単語が与えられます。</p>
+
+<h3>制約</h3>
+
+<ul>
+<li><var>1\leq N\leq 10^5</var></li>
+<li><var>1\leq </var> $\sum_{i=1}^N$<var>|w_i| \leq 10^6</var></li>
+<li><var>w_i</var> の各文字は英小文字</li>
+</ul>
+
+<h3>出力形式</h3>
+
+<p><var>L</var> を一行に出力してください。それ以外の余計な文字は含まれてはいけません。</p>
+
+<h3>入力例1</h3>
+<pre>
+7
+banana
+at
+tomb
+bus
+sound
+does
+some
+</pre>
+
+<h3>出力例1</h3>
+<pre>2</pre>
+
+<p>上で挙げた例です。</p>
+
+<h3>入力例2</h3>
+<pre>
+7
+peach
+hero
+owl
+loop
+proof
+fish
+he
+</pre>
+
+<h3>出力例2</h3>
+<pre>2</pre>
+
+<p>上で挙げた別の例です。</p>

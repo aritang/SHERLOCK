@@ -1,0 +1,105 @@
+<span class="lang-en">
+<p>Score : <var>600</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>There is a grid with <var>N</var> rows and <var>N</var> columns of squares. Let <var>(i, j)</var> be the square at the <var>i</var>-th row from the top and the <var>j</var>-th column from the left.</p>
+<p>Each of the central <var>(N-2) \times (N-2)</var> squares in the grid has a black stone on it.
+Each of the <var>2N - 1</var> squares on the bottom side and the right side has a white stone on it.</p>
+<p><var>Q</var> queries are given. We ask you to process them in order.
+There are two kinds of queries. Their input format and description are as follows:</p>
+<ul>
+<li><code>1 x</code>: Place a white stone on <var>(1, x)</var>. After that, for each black stone between <var>(1, x)</var> and the first white stone you hit if you go down from <var>(1, x)</var>, replace it with a white stone.</li>
+<li><code>2 x</code>: Place a white stone on <var>(x, 1)</var>. After that, for each black stone between <var>(x, 1)</var> and the first white stone you hit if you go right from <var>(x, 1)</var>, replace it with a white stone.</li>
+</ul>
+<p>How many black stones are there on the grid after processing all <var>Q</var> queries?</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>3 \leq N \leq 2\times 10^5</var></li>
+<li><var>0 \leq Q \leq \min(2N-4,2\times 10^5)</var></li>
+<li><var>2 \leq x \leq N-1</var></li>
+<li>Queries are pairwise distinct.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var> <var>Q</var>
+<var>Query_1</var>
+<var>\vdots</var>
+<var>Query_Q</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print how many black stones there are on the grid after processing all <var>Q</var> queries.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>5 5
+1 3
+2 3
+1 4
+2 2
+1 2
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>1
+</pre>
+<p>After each query, the grid changes in the following way:</p>
+<p><img alt="Figure" src="https://img.atcoder.jp/ghi/31ba2cd6b3155b137f0e007299225028.png"/></p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>200000 0
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>39999200004
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>176527 15
+1 81279
+2 22308
+2 133061
+1 80744
+2 44603
+1 170938
+2 139754
+2 15220
+1 172794
+1 159290
+2 156968
+1 56426
+2 77429
+1 97459
+2 71282
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>31159505795
+</pre></section>
+</div>
+</span>

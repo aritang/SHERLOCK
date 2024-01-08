@@ -1,0 +1,92 @@
+<span class="lang-en">
+<p>Score : <var>1500</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>Iroha has a sequence of <var>N</var> strings <var>s_1, s_2, ..., s_N</var>.</p>
+<p>She will choose some (possibly all) strings from the sequence, then concatenate those strings retaining the relative order, to produce a long string.</p>
+<p>Among all strings of length <var>K</var> that she can produce in this way, find the lexicographically smallest one.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 ≦ N ≦ 2000</var></li>
+<li><var>1 ≦ K ≦ 10^4</var></li>
+<li>For each <var>i</var>, <var>1 ≦ |s_i| ≦ K</var>.</li>
+<li><var>|s_1| + |s_2| + ... + |s_N| ≦ 10^6</var></li>
+<li>For each <var>i</var>, <var>s_i</var> consists of lowercase letters.</li>
+<li>There exists at least one string of length <var>K</var> that Iroha can produce.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>The input is given from Standard Input in the following format:</p>
+<pre><var>N</var> <var>K</var>
+<var>s_1</var>
+<var>s_2</var>
+:
+<var>s_N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the lexicographically smallest string of length <var>K</var> that Iroha can produce.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>3 7
+at
+coder
+codar
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>atcodar
+</pre>
+<p><code>at</code> and <code>codar</code> should be chosen.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>3 7
+coder
+codar
+at
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>codarat
+</pre>
+<p><code>codar</code> and <code>at</code> should be chosen.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>4 13
+kyuri
+namida
+zzzzzzz
+aaaaaa
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>namidazzzzzzz
+</pre>
+<p><code>namida</code> and <code>zzzzzzz</code> should be chosen.</p></section>
+</div>
+</span>

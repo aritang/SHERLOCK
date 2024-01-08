@@ -1,0 +1,119 @@
+<span class="lang-en">
+<p>Score : <var>400</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3>
+<p>We have <var>N</var> balls. The <var>i</var>-th ball has an integer <var>A_i</var> written on it.<br/>
+For each <var>k=1, 2, ..., N</var>, solve the following problem and print the answer.  </p>
+<ul>
+<li>Find the number of ways to choose two distinct balls (disregarding order) from the <var>N-1</var> balls other than the <var>k</var>-th ball so that the integers written on them are equal.</li>
+</ul>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3>
+<ul>
+<li><var>3 \leq N \leq 2 \times 10^5</var></li>
+<li><var>1 \leq A_i \leq N</var></li>
+<li>All values in input are integers.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3>
+<p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+<var>A_1</var> <var>A_2</var> <var>...</var> <var>A_N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3>
+<p>For each <var>k=1,2,...,N</var>, print a line containing the answer.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>5
+1 1 2 1 2
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>2
+2
+3
+2
+3
+</pre>
+<p>Consider the case <var>k=1</var> for example. The numbers written on the remaining balls are <var>1,2,1,2</var>.<br/>
+From these balls, there are two ways to choose two distinct balls so that the integers written on them are equal.<br/>
+Thus, the answer for <var>k=1</var> is <var>2</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>4
+1 2 3 4
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>0
+0
+0
+0
+</pre>
+<p>No two balls have equal numbers written on them.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>5
+3 3 3 3 3
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>6
+6
+6
+6
+6
+</pre>
+<p>Any two balls have equal numbers written on them.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 4</h3><pre>8
+1 2 1 4 2 1 4 1
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 4</h3><pre>5
+7
+5
+7
+7
+5
+7
+5
+</pre></section>
+</div>
+</span>

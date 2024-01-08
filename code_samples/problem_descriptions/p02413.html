@@ -1,0 +1,49 @@
+
+<H1>Spreadsheet</H1><br>
+
+<p>
+  Your task is to perform a simple table calculation.
+</p>
+
+<p>
+  Write a program which reads the number of rows <var>r</var>, columns <var>c</var> and a table of <var>r</var> &times; <var>c</var> elements, and prints a new table, which includes the total sum for each row and column. 
+</p>
+
+<H2>Input</H2>
+<p>
+  In the first line, two integers <var>r</var> and <var>c</var> are given. Next, the table is given by <var>r</var> lines, each of which consists of <var>c</var> integers separated by space characters.
+</p>
+
+<H2>Output</H2>
+
+<p>
+  Print the new table of (<var>r</var>+1) &times; (<var>c</var>+1) elements. Put a single space character between adjacent elements. For each row, print the sum of it's elements in the last column. For each column, print the sum of it's elements in the last row. Print the total sum of the elements at the bottom right corner of the table.
+</p>
+
+<H2>Constraints</H2>
+
+<ul>
+<li> 1 &le; <var>r</var>, <var>c</var> &le; 100</li>
+<li> 0 &le; an element of the table &le; 100</li>
+</ul>
+
+
+<H2>Sample Input</H2>
+
+<pre>
+4 5
+1 1 3 4 5
+2 2 2 4 5
+3 3 0 1 1
+2 3 4 4 6
+</pre>
+
+<H2>Sample Output</H2>
+
+<pre>
+1 1 3 4 5 14
+2 2 2 4 5 15
+3 3 0 1 1 8
+2 3 4 4 6 19
+8 9 9 13 17 56
+</pre>

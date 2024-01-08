@@ -1,0 +1,71 @@
+
+
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({ tex2jax: { inlineMath: [["$","$"], ["\\(","\\)"]], processEscapes: true }});
+</script>
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+
+<H1>ニュータウン</H1>
+
+<p>
+会津県では人口増加のためにニュータウンを作ることにしました。そのために、新たに長方形の土地を開拓し、この土地を余すところなく、すべて同じ大きさの正方形からなる区画に区切ることを決めました。この土地の整備には、区画数に比例した費用がかかりますが、県としてはこの費用を最小にしたいと考えています。
+</p>
+<p>
+新たに開拓した土地の東西方向と南北方向の長さと、１区画当たりの整備費用が与えられたとき、すべての区画を整備したときにかかる、最小の整備費用を求めるプログラムを作成せよ。 
+</p>
+
+
+<h2>Input</h2>
+
+<p>
+入力は以下の形式で与えられる。 
+</p>
+
+<pre>
+<var>W</var> <var>H</var> <var>C</var>
+</pre>
+
+<p>
+入力は１行であり、新たに開拓した土地の東西方向の長さ <var>W</var> (1 &le; <var>W</var> &le; 1000)と南北方向の長さ <var>H</var> (1 &le; <var>H</var> &le; 1000)、区画当たりの整備費用 <var>C</var> (1 &le; <var>C</var> &le; 1000)が整数で与えられる。
+</p>
+
+
+<h2>Output</h2>
+
+<p>
+土地を整備するために必要な最小の費用を１行に出力する。
+</p>
+
+<h2>Sample Input 1</h2>
+
+<pre>
+10 20 5
+</pre>
+
+<h2>Sample Output 1</h2>
+<pre>
+10
+</pre>
+<p>
+２個の正方形で土地を余すところなく区切ることができ、１区画当たりの整備費用が５なので、１０と
+出力する。 
+</p>
+
+<br/>
+
+
+<h2>Sample Input 2</h2>
+<pre>
+27 6 1
+</pre>
+
+<h2>Sample Output 2</h2>
+<pre>
+18
+</pre>
+<p>
+１８個の正方形で土地を余すところなく区切ることができ、１区画当たりの整備費用が１なので、１８と出力する。 
+</p>

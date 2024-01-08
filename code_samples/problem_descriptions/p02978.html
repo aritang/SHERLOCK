@@ -1,0 +1,89 @@
+<span class="lang-en">
+<p>Score : <var>1000</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>There is a stack of <var>N</var> cards, each of which has a non-negative integer written on it. The integer written on the <var>i</var>-th card from the top is <var>A_i</var>.</p>
+<p>Snuke will repeat the following operation until two cards remain:</p>
+<ul>
+<li>Choose three consecutive cards from the stack.</li>
+<li>Eat the middle card of the three.</li>
+<li>For each of the other two cards, replace the integer written on it by the sum of that integer and the integer written on the card eaten.</li>
+<li>Return the two cards to the original position in the stack, without swapping them.</li>
+</ul>
+<p>Find the minimum possible sum of the integers written on the last two cards remaining.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>2 \leq N \leq 18</var></li>
+<li><var>0 \leq A_i \leq 10^9 (1\leq i\leq N)</var></li>
+<li>All values in input are integers.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+<var>A_1</var> <var>A_2</var> <var>...</var> <var>A_N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the minimum possible sum of the integers written on the last two cards remaining.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>4
+3 1 4 2
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>16
+</pre>
+<p>We can minimize the sum of the integers written on the last two cards remaining by doing as follows:</p>
+<ul>
+<li>Initially, the integers written on the cards are <var>3</var>, <var>1</var>, <var>4</var>, and <var>2</var> from top to bottom.</li>
+<li>Choose the first, second, and third card from the top. Eat the second card with <var>1</var> written on it, add <var>1</var> to each of the other two cards, and return them to the original position in the stack. The integers written on the cards are now <var>4</var>, <var>5</var>, and <var>2</var> from top to bottom.</li>
+<li>Choose the first, second, and third card from the top. Eat the second card with <var>5</var> written on it, add <var>5</var> to each of the other two cards, and return them to the original position in the stack. The integers written on the cards are now <var>9</var> and <var>7</var> from top to bottom.</li>
+<li>The sum of the integers written on the last two cards remaining is <var>16</var>.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>6
+5 2 4 1 6 9
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>51
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>10
+3 1 4 1 5 9 2 6 5 3
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>115
+</pre></section>
+</div>
+</span>

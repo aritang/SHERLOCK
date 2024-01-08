@@ -1,0 +1,103 @@
+
+<H1><font color="#000">Problem F:</font> Triangle Partition</H1>
+
+<p>
+Suppose that a triangle and a number of points inside the triangle are given. Your job is to find a partition of the triangle so that the set of the given points are divided into three subsets of equal size.
+</p>
+
+<p>
+Let A, B and C denote the vertices of the triangle. There are <i>n</i> points, P<sub>1</sub>, P<sub>2</sub>, ... , P<sub><i>n</i></sub>, given inside &#8710;ABC. You are requested to find a point Q such that each of the three triangles &#8710;QBC, &#8710QCA and &#8710QAB contains at least <i>n</i>/3 points. Points on the boundary line are counted in both triangles. For example, a point on the line QA is counted in &#8710QCA and also in &#8710QAB. If Q coincides a point, the point is counted in all three triangles.
+</p>
+
+<p>
+It can be proved that there always exists a point Q satisfying the above condition. The problem will be easily understood from the figure below.
+</p>
+
+<center>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE1_trianglePartition">
+</center>
+
+<H2>Input</H2>
+
+<p>
+The input consists of multiple data sets, each representing a set of points. A data set is given in the following format.
+</p>
+
+<pre>
+<i>n</i>
+<i>x</i><sub>1</sub> <i>y</i><sub>1</sub>
+<i>x</i><sub>2</sub> <i>y</i><sub>2</sub>
+...
+<i>x</i><sub><i>n</i></sub> <i>y</i><sub><i>n</i></sub>
+</pre>
+
+<p>
+The first integer <i>n</i> is the number of points, such that 3 &le; <i>n</i> &le; 300. <i>n</i> is always a multiple of 3. The coordinate of a point P<i><sub>i</sub></i> is given by (<i>x<sub>i</sub>, y<sub>i</sub></i>). <i>x<sub>i</sub></i> and <i>y<sub>i</sub></i> are integers between 0 and 1000.
+</p>
+
+<p>
+The coordinates of the triangle ABC are fixed. They are A(0, 0), B(1000, 0) and C(0, 1000).
+</p>
+
+<p>
+Each of P<sub><i>i</i></sub> is located strictly inside the triangle ABC, not on the side BC, CA nor AB. No two points can be connected by a straight line running through one of the vertices of the triangle. Speaking more precisely, if you connect a point P<i><sub>i</sub></i> with the vertex A by a straight line, another point P<i><sub>j</sub></i> never appears on the line. The same holds for B and C.
+</p>
+
+<p>
+The end of the input is indicated by a 0 as the value of <i>n</i>. The number of data sets does not exceed 10.
+</p>
+
+<H2>Output</H2>
+
+<p>
+For each data set, your program should output the coordinate of the point Q. The format of the output is as follows.
+</p>
+
+<pre>
+<i>q<sub>x</sub> q<sub>y</sub></i>
+</pre>
+
+<p>
+For each data set, a line of this format should be given. No extra lines are allowed. On the contrary, any number of space characters may be inserted before <i>q<sub>x</sub></i>, between <i>q<sub>x</sub></i> and <i>q<sub>y</sub></i> or after <i>q<sub>y</sub></i>.
+</p>
+
+
+<p>
+Each of <i>q<sub>x</sub></i> and <i>q<sub>y</sub></i> should be represented by a fractional number (e.g., 3.1416) but not with an exponential part (e.g., 6.023e+23 is not allowed). Four digits should follow the decimal point.
+</p>
+
+<p>
+Note that there is no unique "correct answer" in this problem. In general, there are infinitely many points which satisfy the given condition. Your result may be any one of these "possible answers".
+</p>
+
+<p>
+In your program you should be careful to minimize the effect of numeric errors in the handling of floating-point numbers. However, it seems inevitable that some rounding errors exist in the output. We expect that there is an error of 0.5 &times; 10<sup>-4</sup> in the output, and will judge your result accordingly.
+</p>
+
+<H2>Sample Input</H2>
+<pre>
+3
+100 500
+200 500
+300 500
+6
+100 300
+100 600
+200 100
+200 700
+500 100
+600 300
+0
+</pre>
+
+<H2>Output for the Sample Input</H2>
+<pre>
+166.6667 555.5556
+333.3333 333.3333
+</pre>
+
+<p>
+As mentioned above, the results shown here are not the only solutions. Many other coordinates for the point Q are also acceptable. The title of this section should really be "Sample Output for the Sample Input".
+</p>
+
+

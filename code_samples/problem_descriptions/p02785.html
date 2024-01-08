@@ -1,0 +1,87 @@
+<span class="lang-en">
+<p>Score : <var>300</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>Fennec is fighting with <var>N</var> monsters.</p>
+<p>The <em>health</em> of the <var>i</var>-th monster is <var>H_i</var>.</p>
+<p>Fennec can do the following two actions:</p>
+<ul>
+<li>Attack: Fennec chooses one monster. That monster's health will decrease by <var>1</var>.</li>
+<li>Special Move: Fennec chooses one monster. That monster's health will become <var>0</var>.</li>
+</ul>
+<p>There is no way other than Attack and Special Move to decrease the monsters' health.</p>
+<p>Fennec wins when all the monsters' healths become <var>0</var> or below.</p>
+<p>Find the minimum number of times Fennec needs to do Attack (not counting Special Move) before winning when she can use Special Move at most <var>K</var> times.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 \leq N \leq 2 \times 10^5</var></li>
+<li><var>0 \leq K \leq 2 \times 10^5</var></li>
+<li><var>1 \leq H_i \leq 10^9</var></li>
+<li>All values in input are integers.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var> <var>K</var>
+<var>H_1</var> <var>...</var> <var>H_N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the minimum number of times Fennec needs to do Attack (not counting Special Move) before winning.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>3 1
+4 1 5
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>5
+</pre>
+<p>By using Special Move on the third monster, and doing Attack four times on the first monster and once on the second monster, Fennec can win with five Attacks.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>8 9
+7 9 3 2 3 8 4 6
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>0
+</pre>
+<p>She can use Special Move on all the monsters.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>3 0
+1000000000 1000000000 1000000000
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>3000000000
+</pre>
+<p>Watch out for overflow.</p></section>
+</div>
+</span>

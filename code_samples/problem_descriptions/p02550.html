@@ -1,0 +1,74 @@
+<span class="lang-en">
+<p>Score : <var>500</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>Let us denote by <var>f(x, m)</var> the remainder of the Euclidean division of <var>x</var> by <var>m</var>.</p>
+<p>Let <var>A</var> be the sequence that is defined by the initial value <var>A_1=X</var> and the recurrence relation <var>A_{n+1} = f(A_n^2, M)</var>.
+Find <var>\displaystyle{\sum_{i=1}^N A_i}</var>.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 \leq N \leq 10^{10}</var></li>
+<li><var>0 \leq X &lt; M \leq 10^5</var></li>
+<li>All values in input are integers.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var> <var>X</var> <var>M</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print <var>\displaystyle{\sum_{i=1}^N A_i}</var>.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>6 2 1001
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>1369
+</pre>
+<p>The sequence <var>A</var> begins <var>2,4,16,256,471,620,\ldots</var> Therefore, the answer is <var>2+4+16+256+471+620=1369</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>1000 2 16
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>6
+</pre>
+<p>The sequence <var>A</var> begins <var>2,4,0,0,\ldots</var> Therefore, the answer is <var>6</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>10000000000 10 99959
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>492443256176507
+</pre></section>
+</div>
+</span>

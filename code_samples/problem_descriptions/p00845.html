@@ -1,0 +1,107 @@
+<H1><font color="#000">Problem A:</font> How I Wonder What You Are!</H1>
+
+<p>
+One of the questions children often ask is "How many stars are there in the sky?" Under ideal conditions, even with the naked eye, nearly eight thousands are observable in the northern hemisphere. With a decent telescope, you may find many more, but, as the sight field will be
+limited, you may find much less at a time.
+</p>
+<p>
+Children may ask the same questions to their parents on a planet of some solar system billions
+of light-years away from the Earth. Their telescopes are similar to ours with circular sight fields,
+but alien kids have many eyes and can look into different directions at a time through many
+telescopes.
+</p>
+<p>
+Given a set of positions of stars, a set of telescopes and the directions they are looking to, your
+task is to count up how many stars can be seen through these telescopes.
+</p>
+
+<H2>Input</H2>
+
+<p>
+The input consists of one or more datasets. The number of datasets is less than 50. Each dataset
+describes stars and the parameters of the telescopes used.
+</p>
+<p>
+The first line of a dataset contains a positive integer <i>n</i> not exceeding 500, meaning the number
+of stars. Each of the <i>n</i> lines following it contains three decimal fractions, <i>s<sub>x</sub></i>, <i>s<sub>y</sub></i>, and <i>s<sub>z</sub></i>. They
+give the position (<i>s<sub>x</sub></i>, <i>s<sub>y</sub></i>, <i>s<sub>z</sub></i>) of the star described in Euclidean coordinates. You may assume
+-1000 &le; <i>s<sub>x</sub></i> &le; 1000, -1000 &le; <i>s<sub>y</sub></i> &le; 1000, -1000 &le; <i>s<sub>z</sub></i> &le; 1000 and (<i>s<sub>x</sub></i>, <i>s<sub>y</sub></i>, <i>s<sub>z</sub></i>) &ne; (0, 0, 0).
+</p>
+<p>
+Then comes a line containing a positive integer <i>m</i> not exceeding 50, meaning the number of
+telescopes. Each of the following <i>m</i> lines contains four decimal fractions, <i>t<sub>x</sub></i>, <i>t<sub>y</sub></i>, <i>t<sub>z</sub></i>, and <i>&phi;</i>, describing a telescope.
+</p>
+<p>
+The first three numbers represent the direction of the telescope. All the telescopes are at the
+origin of the coordinate system (0, 0, 0) (we ignore the size of the planet). The three numbers give
+the point (<i>t<sub>x</sub></i>, <i>t<sub>y</sub></i>, <i>t<sub>z</sub></i>) which can be seen in the center of the sight through the telescope. You may
+assume -1000 &le; <i>t<sub>x</sub></i> &le; 1000, -1000 &le; <i>t<sub>y</sub></i> &le; 1000, -1000 &le; <i>t<sub>z</sub></i> &le; 1000 and (<i>t<sub>x</sub></i>, <i>t<sub>y</sub></i>, <i>t<sub>z</sub></i>) &ne; (0, 0, 0).
+</p>
+<p>
+The fourth number <i>&phi;</i> (0 &le; <i>&phi;</i> &le; <i>&pi;</i>/2) gives the angular radius, in radians, of the sight field of
+the telescope.
+</p>
+<p>
+Let us defie that <i>&theta;<sub>i,j</sub></i> is the angle between the direction of the <i>i</i>-th star and the center direction
+of the <i>j</i>-th telescope and <i>&phi;<sub>j</sub></i>is the angular radius of the sight field of the <i>j</i>-th telescope. The <i>i</i>-th star is observable through the <i>j</i>-th telescope if and only if <i>&theta;<sub>i,j</sub></i> is less than . You may assume that |<i>&theta;<sub>i,j</sub></i> - <i>&phi;<sub>j</sub></i>| &gt; 0.00000001 for all pairs of <i>i</i> and <i>j</i>.
+
+</p>
+
+<center>
+  <img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE_howIWonder"><br/>
+<p>Figure 1: Direction and angular radius of a telescope</p> 
+</center>
+<p>
+The end of the input is indicated with a line containing a single zero.
+</p>
+
+<H2>Output</H2>
+
+<p>
+For each dataset, one line containing an integer meaning the number of stars observable through
+the telescopes should be output. No other characters should be contained in the output. Note
+that stars that can be seen through more than one telescope should not be counted twice or
+more.
+
+</p>
+
+<H2>Sample Input</H2>
+<pre>
+3
+100 0 500
+-500.243 -200.1 -300.5
+0 300 200
+2
+1 1 1 0.65
+-1 0 0 1.57
+3
+1 0 0
+0 1 0
+0 0 1
+4
+1 -1 -1 0.9553
+-1 1 -1 0.9554
+-1 -1 1 0.9553
+-1 1 -1 0.9554
+3
+1 0 0
+0 1 0
+0 0 1
+4
+1 -1 -1 0.9553
+-1 1 -1 0.9553
+-1 -1 1 0.9553
+-1 1 -1 0.9553
+0
+</pre>
+
+<H2>Output for the Sample Input</H2>
+<pre>
+2
+1
+0
+</pre>
+
+
+
+

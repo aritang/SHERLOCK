@@ -1,0 +1,125 @@
+<span class="lang-en">
+<p>Score : <var>1800</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>Three men, A, B and C, are eating sushi together.
+Initially, there are <var>N</var> pieces of sushi, numbered <var>1</var> through <var>N</var>.
+Here, <var>N</var> is a multiple of <var>3</var>.</p>
+<p>Each of the three has likes and dislikes in sushi.
+A's preference is represented by <var>(a_1,\ ...,\ a_N)</var>, a permutation of integers from <var>1</var> to <var>N</var>.
+For each <var>i</var> (<var>1 \leq i \leq N</var>), A's <var>i</var>-th favorite sushi is Sushi <var>a_i</var>.
+Similarly, B's and C's preferences are represented by <var>(b_1,\ ...,\ b_N)</var> and <var>(c_1,\ ...,\ c_N)</var>, permutations of integers from <var>1</var> to <var>N</var>.</p>
+<p>The three repeats the following action until all pieces of sushi are consumed or a fight brakes out (described later):</p>
+<ul>
+<li>Each of the three A, B and C finds his most favorite piece of sushi among the remaining pieces. Let these pieces be Sushi <var>x</var>, <var>y</var> and <var>z</var>, respectively. If <var>x</var>, <var>y</var> and <var>z</var> are all different, A, B and C eats Sushi <var>x</var>, <var>y</var> and <var>z</var>, respectively. Otherwise, a fight brakes out.</li>
+</ul>
+<p>You are given A's and B's preferences, <var>(a_1,\ ...,\ a_N)</var> and <var>(b_1,\ ...,\ b_N)</var>.
+How many preferences of C, <var>(c_1,\ ...,\ c_N)</var>, leads to all the pieces of sushi being consumed without a fight?
+Find the count modulo <var>10^9+7</var>.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>3 \leq N \leq 399</var></li>
+<li><var>N</var> is a multiple of <var>3</var>.</li>
+<li><var>(a_1,\ ...,\ a_N)</var> and <var>(b_1,\ ...,\ b_N)</var> are permutations of integers from <var>1</var> to <var>N</var>.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+<var>a_1</var> <var>...</var> <var>a_N</var>
+<var>b_1</var> <var>...</var> <var>b_N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the number of the preferences of C that leads to all the pieces of sushi being consumed without a fight, modulo <var>10^9+7</var>.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>3
+1 2 3
+2 3 1
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>2
+</pre>
+<p>The answer is two, <var>(c_1,\ c_2,\ c_3) = (3,\ 1,\ 2),\ (3,\ 2,\ 1)</var>.
+In both cases, A, B and C will eat Sushi <var>1</var>, <var>2</var> and <var>3</var>, respectively, and there will be no more sushi.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>3
+1 2 3
+1 2 3
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>0
+</pre>
+<p>Regardless of what permutation <var>(c_1,\ c_2,\ c_3)</var> is, A and B will try to eat Sushi <var>1</var>, resulting in a fight.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>6
+1 2 3 4 5 6
+2 1 4 3 6 5
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>80
+</pre>
+<p>For example, if <var>(c_1,\ c_2,\ c_3,\ c_4,\ c_5,\ c_6) = (5,\ 1,\ 2,\ 6,\ 3,\ 4)</var>, A, B and C will first eat Sushi <var>1</var>, <var>2</var> and <var>5</var>, respectively, then they will eat Sushi <var>3</var>, <var>4</var> and <var>6</var>, respectively, and there will be no more sushi.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 4</h3><pre>6
+1 2 3 4 5 6
+6 5 4 3 2 1
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 4</h3><pre>160
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 5</h3><pre>9
+4 5 6 7 8 9 1 2 3
+7 8 9 1 2 3 4 5 6
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 5</h3><pre>33600
+</pre></section>
+</div>
+</span>

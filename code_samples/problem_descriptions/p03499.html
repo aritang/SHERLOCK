@@ -1,0 +1,94 @@
+<span class="lang-en">
+<p>Score : <var>1000</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>Snuke has a rooted tree with <var>N+1</var> vertices.
+The vertices are numbered <var>0</var> through <var>N</var>, and Vertex <var>0</var> is the root of the tree.
+The parent of Vertex <var>i</var> <var>(1 \leq i \leq N)</var> is Vertex <var>p_i</var>.</p>
+<p>Besides this tree, Snuke also has an box which is initially empty and many marbles, and playing with them.
+The play begins with placing one marble on some of the vertices, then proceeds as follows:</p>
+<ol>
+<li>If there is a marble on Vertex <var>0</var>, move the marble into the box.</li>
+<li>Move each marble from the vertex to its parent (all at once).</li>
+<li>For each vertex occupied by two or more marbles, remove all the marbles from the vertex.</li>
+<li>If there exists a vertex with some marbles, go to Step 1. Otherwise, end the play.</li>
+</ol>
+<p>There are <var>2^{N+1}</var> ways to place marbles on some of the vertices.
+For each of them, find <strong>the number of marbles that will be in the box at the end of the play</strong>, and compute the sum of all those numbers modulo <var>1,000,000,007</var>.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 \leq N &lt; 2 \times 10^{5}</var></li>
+<li><var>0 \leq p_i &lt; i</var></li>
+</ul>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Partial Scores</h3><ul>
+<li>In the test set worth <var>400</var> points, <var>N &lt; 2{,}000</var>.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+<var>p_1</var> <var>p_2</var> <var>...</var> <var>p_{N}</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the answer.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>2
+0 0
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>8
+</pre>
+<p>When we place a marble on both Vertex <var>1</var> and <var>2</var>, there will be multiple marbles on Vertex <var>0</var> by step 2. In such a case, these marbles will be removed instead of being moved to the box.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>5
+0 1 1 0 4
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>96
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>31
+0 1 0 2 4 0 4 1 6 4 3 9 7 3 7 2 15 6 12 10 12 16 5 3 20 1 25 20 23 24 23
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>730395550
+</pre>
+<p>Be sure to compute the sum modulo <var>1,000,000,007</var>.</p></section>
+</div>
+</span>

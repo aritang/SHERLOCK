@@ -1,0 +1,78 @@
+<!--<H1>Cargo Layout</H1>-->
+<H1>Loading</H1>
+
+<p>
+Aizu Ocean Transport Company (AOTC) accepted a new shipping order. The pieces of the cargo included in this order all have the same square footprint (2m x 2m). The cargo room has a rectangular storage space of 4m width with various longitudinal extents. Each pieces of cargo must be placed in alignment with partition boundaries which form a 1m x 1m square grid. A straddling arrangement with a neighboring partition (for example, protrusion by 50 cm) is not allowed. Neither an angled layout nor stacked placement are allowed. Note also that there may be some partitions on which any cargo loading is prohibited.
+</p>
+
+
+<center>
+  <img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_PCK2017_cargo" width="680"><br/>
+</center>
+<br/>
+
+<p>
+  AOTC wishes to use the currently available ship for this consignment and needs to know how many pieces of cargo it can accommodate.
+</p>
+<p>
+  Make a program to report the maximum cargo capacity of the cargo space given the following information: the depth (m) of the cargo space and the loading-inhibited partitions.
+</p>
+
+
+<h2>Input</h2>
+
+<p>
+  The input is given in the following format.
+</p>
+
+<pre>
+<var>H</var> <var>N</var>
+<var>x_1</var> <var>y_1</var>
+<var>x_2</var> <var>y_2</var>
+:
+<var>x_N</var> <var>y_N</var>
+</pre>
+
+<p>
+  The first line provides the longitudinal depth <var>H</var> (2 &le; <var>H</var> &le; 10<sup>4</sup>) of the cargo space in meters and the number of load-inhibited partitions <var>N</var> (0 &le; <var>N</var> &le; 4 &times; 10<sup>4</sup>). Each of the subsequent <var>N</var> lines defines the position of the <var>i</var>-th load-inhibited partition <var>x_i</var> (0 &le; <var>x_i</var> &le; 3) and <var>y_i</var> (0 &le; <var>y_i</var> &le; <var>H</var>-1) in integers, where <var>x</var> = 0 and <var>y</var> = 0 indicate the bottom-left corner partition. A load-inhibited partition appears only once in the list.
+</p>
+
+<h2>Output</h2>
+
+<p>
+  Output the maximum number of cargo pieces loaded into the cargo space.
+</p>
+
+<h2>Sample Input 1</h2>
+
+<pre>
+5 3
+0 1
+1 2
+3 3
+</pre>
+
+<h2>Sample Output 1</h2>
+<pre>
+2
+</pre>
+
+<p>
+  Input example 1 corresponds to the cargo layout shown in the left-most figure.
+</p>
+
+
+
+<h2>Sample Input 2</h2>
+<pre>
+6 4
+0 2
+1 3
+3 4
+0 5
+</pre>
+
+<h2>Sample Output 2</h2>
+<pre>
+4
+</pre>

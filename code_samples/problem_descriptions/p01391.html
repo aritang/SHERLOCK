@@ -1,0 +1,76 @@
+
+
+<script src="./IMAGE/varmath.js" charset="UTF-8"></script>
+
+<h1><font color="#000">問題 D </font> 列の構成</h1>
+
+
+
+
+<h2>問題文</h2>
+<p><var>1</var> から <var>N</var> までの相異なる整数が <var>N / 2</var> 個書かれたカードがいくつか与えられるので，次の条件を満たすような長さ <var>N</var> の数列 <var>seq</var> を <var>1</var> つ作って出力して欲しい．</p>
+
+<ul>
+<li><var>seq</var> の各要素は <var>0</var> か <var>1</var> である．</li>
+<li>すべてのカードについて以下が成り立つ： カードに書かれた数字を<var>card[1], ..., card[N/2]</var>とする．このときカードに書かれた部分の和: <var>seq[card[1]] + ... + seq[card[N/2]]</var> が <var>N / 8</var> 以上かつ <var>3N / 8</var> 以下になっている．</li>
+
+</ul>
+<p></p>
+<p>例えば，<var>N = 8</var> でカードが <var>2</var> 枚渡され，カードに書かれている数字がそれぞれ <var>[1, 2, 7, 8]</var>，<var>[4, 5, 7, 8]</var> であったとする．このとき <var>seq=[0, 1, 0, 1, 0, 1, 0, 1]</var> や <var>seq=[0, 0, 0, 0, 1, 1, 1, 1]</var> とおくと条件を満たすようにできている．</p>
+
+<h2>入力形式</h2>
+入力は次の形式で与えられる．
+<pre><var>N</var> <var>K</var>
+<var>card<sub>1</sub>[1]</var> <var>card<sub>1</sub>[2]</var> ... <var>card<sub>1</sub>[N/2]</var>
+<var>card<sub>2</sub>[1]</var> <var>card<sub>2</sub>[2]</var> ... <var>card<sub>2</sub>[N/2]</var>
+...
+<var>card<sub>K</sub>[1]</var> <var>card<sub>K</sub>[2]</var> ... <var>card<sub>K</sub>[N/2]</var>
+</pre>
+<p>
+<var>1</var> 行目において <var>N</var> は構成するべき数列の長さ，<var>K</var> はカードの枚数である．
+続く <var>K</var> 行には各カードの情報が与えられる．<var>card<sub>i</sub>[1], ..., card<sub>i</sub>[N/2]</var> が <var>i</var> 番目のカードに書かれている数字である．
+</p>
+
+
+<h2>出力形式</h2>
+<p><var>seq</var> の <var>i</var> 番目の要素が <var>i</var> 文字目に対応するように数列 <var>seq</var> を <var>1</var> 行に出力せよ．</p>
+
+<p>なお，どの入力に対しても解は必ず少なくとも <var>1</var> つは存在する．</p>
+
+<h2>制約</h2>
+<ul>
+<li><var>8 &le; N &le; 1,000</var>, <var>1&le; K &le; N / 2</var></li>
+
+<li><var>N</var> は <var>8</var> の倍数</li>
+<li><var>1 &le; card<sub>i</sub>[1] &lt; card<sub>i</sub>[2] &lt; ... &lt; card<sub>i</sub>[N/2] &le; N</var></li>
+
+</ul>
+
+<h2>入出力例</h2>
+<h3>入力例 1</h3>
+<pre>
+8 2
+1 2 7 8
+4 5 7 8
+</pre>
+
+<h3>出力例 1</h3>
+<pre>
+01010101
+</pre>
+
+<h3>入力例 2</h3>
+
+<pre>
+8 3
+2 3 4 6
+3 4 5 8
+3 4 6 8
+</pre>
+
+<h3>出力例 2</h3>
+<pre>
+01110011
+</pre>
+
+

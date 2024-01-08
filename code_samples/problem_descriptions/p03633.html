@@ -1,0 +1,77 @@
+<span class="lang-en">
+<p>Score : <var>300</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>We have <var>N</var> clocks. The hand of the <var>i</var>-th clock <var>(1≤i≤N)</var> rotates through <var>360°</var> in exactly <var>T_i</var> seconds.<br/>
+Initially, the hand of every clock stands still, pointing directly upward.<br/>
+Now, Dolphin starts all the clocks simultaneously.<br/>
+In how many seconds will the hand of every clock point directly upward again?</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1≤N≤100</var> </li>
+<li><var>1≤T_i≤10^{18}</var> </li>
+<li>All input values are integers.  </li>
+<li>The correct answer is at most <var>10^{18}</var> seconds.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:  </p>
+<pre><var>N</var>
+<var>T_1</var>
+<var>:</var>  
+<var>T_N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the number of seconds after which the hand of every clock point directly upward again.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>2
+2
+3
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>6
+</pre>
+<p>We have two clocks. The time when the hand of each clock points upward is as follows:</p>
+<ul>
+<li>Clock <var>1</var>: <var>2</var>, <var>4</var>, <var>6</var>, <var>...</var> seconds after the beginning</li>
+<li>Clock <var>2</var>: <var>3</var>, <var>6</var>, <var>9</var>, <var>...</var> seconds after the beginning</li>
+</ul>
+<p>Therefore, it takes <var>6</var> seconds until the hands of both clocks point directly upward.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>5
+2
+5
+10
+1000000000000000000
+1000000000000000000
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>1000000000000000000
+</pre></section>
+</div>
+</span>

@@ -1,0 +1,171 @@
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({ tex2jax: { inlineMath: [["$","$"], ["\\(","\\)"]], processEscapes: true }});
+</script>
+<script type='text/javascript' src='http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
+</script>
+
+<h2>I - Tokyo Olympics Center</h2>
+
+<h3>Problem Statement</h3>
+
+<p>
+You are participating in the Summer Training Camp for Programming Cotests. The camp is held in an accommodation facility called <i>Tokyo Olympics Center</i>. Today is the last day of the camp. Unfortunately, you are ordered to check if all the participants have properly cleaned their rooms.
+</p>
+
+<p>
+The accommodation facility is a rectangular field whose height is $H$ and width is $W$. The field is divided into square cells. The rows are numbered $1$ through $H$ from top to bottom and the columns are numbered $1$ through $W$ from left to right. The cell in row $i$, column $j$ is denoted by $(i, j)$. Two cells are adjacent if they share an edge.
+</p>
+
+<p>
+Each cell is called either a <i>wall cell</i> or a <i>floor cell</i>. A wall cell represents a wall which no one can enter. 
+A floor cell is a part of the inside of the accommodation facility. Everybody can move between two adjacent floor cells. The floor cells are divided into several units. Each unit is assigned an uppercase English letter (<code>A</code>, <code>B</code>, <code>C</code>, ...). A floor cell adjacent to exactly one floor cell is called a <i>room</i>. Otherwise the floor cell is called an <i>aisle</i>. For example, the accommodation facility can be shown as the following figure. We denote a wall cell by <code>.</code> (single period).
+</p>
+
+<pre>...................
+.....AAABBBBBBB....
+...A.AA.A...B.B..B.
+..AAAAAAAABBBBBBBB.
+...A..A.A.....B....
+......A.......BBBB.
+....A.AA..C.C...B..
+...AAAAACCCCCCBBBB.
+...A..A...C.C...B..
+...................</pre>
+
+<p>
+In the above figure, there are $7$ rooms in unit A, $4$ rooms in unit B, and $4$ rooms in unit C.
+</p>
+
+<p>
+Because the accommodation facility is too large to explore alone, you asked the other participants of the camp to check the rooms. For simplicity's sake, we call them <i>staffs</i>. Now, there are $K$ staffs at the cell $(s, t)$. You decided to check the rooms according to the following procedure.
+</p>
+
+<ol>
+<li> First, you assign each staff to some of units. Every unit must be assigned to exactly one staff. Note that it is allowed to assign all the units to one staff or to assign no units to some staffs.</li>
+<li> Then, each staff starts to check the rooms in the assigned units at the same time. The staffs can move between two adjacent floor cells in $T_{\mathit{move}}$ time. To check the room at $(i, j)$, the staffs must move to the cell $(i, j)$ and spend $T_{\mathit{check}}$ time there. Each staff first determines the order of the units to check and he or she must check the rooms according to the order. For example, suppose that there is a staff who is assigned units A, C, and E. He may decide that the order is E-&gt;A-&gt;C. After that, he must check all the rooms in unit E at first. Then, he must check all the rooms in unit A, and so on. The staffs can pass any floor cells. However, the staffs cannot check rooms that are not assigned to them. Further, the staffs cannot check rooms against the order of units that they have decided. </li>
+<li> After checking all the assigned rooms, the staffs must return to the cell $(s, t)$. </li>
+<li> When every staff returns to the cell $(s, t)$, the task is done. </li>
+</ol>
+
+<p>
+Because you do not have enough time before the next contest, you want to minimize the total time to check all the rooms.
+</p>
+
+<h3>Input</h3>
+
+<p>
+The first line of the input contains three integers $H$, $W$, and $K$ ($1 \le H \le 50$, $1 \le W \le 50$, $1 \le K \le 12$). The second line contains four integers $s$, $t$, $T_{\mathit{move}}$, and $T_{\mathit{check}}$ ($1 \le s \le H$, $1 \le t \le W$, $1 \le T_{\mathit{move}},T_{\mathit{check}} \le 10{,}000$). Each of the following $H$ lines contains exactly $W$ characters. Each character represents a cell in the accommodation facility. The $j$-th character in the $i$-th line of these lines is <code>.</code> if the cell $(i, j)$ is a wall cell. Otherwise, the character is an uppercase English letter (<code>A</code>-<code>L</code>) representing the unit to which the cell $(i, j)$ belongs.
+</p>
+
+<p>
+You can assume that the following conditions are satisfied.
+</p>
+
+<ul>
+<li> The number of rooms in each unit is between $1$ and $12$, inclusive. </li>
+<li> The cell $(s, t)$ is guaranteed to be an aisle.</li>
+<li> Floor cells in each unit are connected.</li>
+<li> Floor cells in the field are connected.</li>
+<li> Every unit contains at least two cells.</li>
+</ul>
+
+
+<h3>Output</h3>
+
+<p>
+Output the minimum required time to check all the rooms in one line.
+</p>
+
+<h3>Sample Input 1</h3>
+
+<pre>3 3 1
+1 1 10 10
+AAA
+A..
+A..</pre>
+
+<h3>Output for the Sample Input 1</h3>
+
+<pre>100</pre>
+
+<h3>Sample Input 2</h3>
+
+<pre>3 3 2
+1 1 10 10
+ABB
+A..
+A..</pre>
+
+<h3>Output for the Sample Input 2</h3>
+
+<pre>50</pre>
+
+<h3>Sample Input 3</h3>
+
+<pre>5 10 3
+3 6 1 100
+...G.H.A..
+.AAGAHAABB
+FFAAAAAAA.
+.EEAAADACC
+..E...D...</pre>
+
+<h3>Output for the Sample Input 3</h3>
+
+<pre>316</pre>
+
+<h3>Sample Input 4</h3>
+
+<pre>10 19 2
+6 15 3 10
+...................
+.....AAABBBBBBB....
+...A.AA.A...B.B..B.
+..AAAAAAAABBBBBBBB.
+...A..A.A.....B....
+......A.......BBBB.
+....A.AA..C.C...B..
+...AAAAACCCCCCBBBB.
+...A..A...C.C...B..
+...................</pre>
+
+<h3>Output for the Sample Input 4</h3>
+
+<pre>232</pre>
+
+<h3>Sample Input 5</h3>
+
+<pre>27 36 6
+24 19 616 1933
+....................................
+..........B...............B.........
+..........BBB..........BBBB.........
+..........BBBBB.......BBBB..........
+...........BBBBBBBBBBBBBBB..........
+...........BBBBBBBBBBBBBBB..........
+...........BBBBBBBBBBBBBB...........
+............BBBBBBBBBBBBB...........
+...........BBBBBBBBBBBBBBB..........
+..........BBBBBBBBBBBBBBBBB.........
+......B...BBBBBBBBBBBBBBBBB...B.....
+......BB.BBBBBBBBBBBBBBBBBB..BB.....
+.......BBBBBBBBBBBBBBBBBBBB.BB......
+.........BBBBBBBBBBBBBBBBBBBB.......
+........BBBBB..BBBBBBBB..BBBBB......
+......BBBBBB....BBBBB....BBBBBB.....
+.....BBBBBBBB...BBBBB..BBBBBBBB.B...
+...BBBBBBB..B...BBBBB..B..BBBBBBBB..
+.BBBBBBBBB.....BBBBBBB......BBBBBBB.
+..BBBBBBB......BBBBBBB........BBB...
+.BBBB.........BBBBBBBBB........BBB..
+..............BBBBBBBBB.............
+.............BBBBBBBBBB.............
+.............BBBBBBBBBB.............
+..............BBBBBBBB..............
+..............BBBBBBBB..............
+....................................</pre>
+
+<h3>Output for the Sample Input 5</h3>
+
+<pre>137071</pre>

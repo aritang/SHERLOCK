@@ -1,0 +1,253 @@
+
+<h2>Complex Paper Folding</h2>
+
+
+<p>
+Dr. G, an authority in paper folding and one of the directors of
+Intercultural Consortium on Paper Crafts,
+believes complexity gives figures beauty.
+As one of his assistants, your job is to find the way to fold a paper
+to obtain the most complex figure.
+Dr. G defines the complexity of a figure by the number of vertices.
+With the same number of vertices, one with longer perimeter is more
+complex.
+To simplify the problem, we consider papers with convex polygon in
+their shapes and folding them only once.
+Each paper should be folded so that one of its vertices exactly lies
+on top of another vertex.
+</p><p>
+Write a program that, for each given convex polygon, outputs the
+perimeter of the most complex polygon obtained by folding it once.
+</p>
+
+<p>
+Figure 1 (left) illustrates the polygon given in the first dataset of
+Sample Input. This happens to be a rectangle.
+
+Folding this rectangle can yield three different polygons illustrated in the Figures 1-a to c by solid
+lines.
+For this dataset, you should answer the perimeter of the pentagon
+shown in Figure 1-a.  Though the rectangle in Figure 1-b has longer
+perimeter, the number of vertices takes priority.
+</p>
+
+<center>
+<table border="0">
+<tbody><tr><td><img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_ICPCDomestic2015_G1-1" valign="middle" width="100%"></td>
+    <td><img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_ICPCDomestic2015_G1-2" valign="middle" width="100%"></td>
+    <td><img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_ICPCDomestic2015_G1-3" valign="middle" width="100%"></td>
+    <td><img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_ICPCDomestic2015_G1-4" valign="middle" width="100%"></td></tr>
+<tr><td></td>
+    <td align="center">(a)</td>
+    <td align="center">(b)</td>
+    <td align="center">(c)</td></tr>
+</tbody></table>
+<br>
+
+Figure 1: The case of the first sample input
+
+</center>
+
+
+<p>
+Figure 2 (left) illustrates the polygon given in the second
+dataset of Sample Input, which is a triangle.  Whichever pair of its vertices are
+chosen, quadrangles are obtained as shown in Figures 2-a to c.  Among
+these, you should answer the longest perimeter, which is that of the
+quadrangle shown in Figure 2-a.
+</p>
+
+<center>
+<table border="0">
+<tbody><tr><td><img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_ICPCDomestic2015_G2-1" valign="middle" width="100%"></td>
+    <td><img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_ICPCDomestic2015_G2-2" valign="middle" width="100%"></td>
+    <td><img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_ICPCDomestic2015_G2-3" valign="middle" width="100%"></td>
+    <td><img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_ICPCDomestic2015_G2-4" valign="middle" width="100%"></td></tr>
+<tr><td></td>
+    <td align="center">(a)</td>
+    <td align="center">(b)</td>
+    <td align="center">(c)</td></tr>
+</tbody></table>
+<br>
+
+Figure 2: The case of the second sample input
+
+</center>
+
+
+<p>
+Although we start with a convex polygon, folding it may result a
+concave polygon.
+Figure 3 (left) illustrates the polygon given in the third dataset in Sample Input.
+A concave hexagon shown in Figure 3 (right) can be obtained
+by folding it, which has the largest number of vertices.
+</p>
+
+<center>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_ICPCDomestic2015_G3-1" valign="middle" width="25%">
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_ICPCDomestic2015_G3-2" valign="middle" width="25%">
+<br>
+
+Figure 3: The case of the third sample input
+
+</center>
+
+
+<p>
+Figure 4 (left) illustrates the polygon given in the fifth dataset in 
+Sample
+Input.
+Although the perimeter of the polygon in Figure 4-b is longer than that 
+of the polygon in Figure 4-a, because the polygon in Figure 4-b is a 
+quadrangle, the answer should be the perimeter of the pentagon in Figure
+ 4-a.
+</p>
+
+
+<center>
+<table border="0">
+<tbody><tr><td><img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_ICPCDomestic2015_G4-1" valign="middle" width="100%"></td>
+    <td><img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_ICPCDomestic2015_G4-2" valign="middle" width="100%"></td>
+    <td><img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_ICPCDomestic2015_G4-3" valign="middle" width="100%"></td></tr>
+<tr><td></td>
+    <td align="center">(a)</td>
+    <td align="center">(b)</td></tr>
+</tbody></table>
+<br>
+
+Figure 4: The case of the fifth sample input
+
+</center>
+
+<h3>Input</h3>
+
+
+<p>
+The input consists of multiple datasets, each in the following format.
+</p>
+<!-- end en only -->
+
+<blockquote>
+<i>n</i> <br>
+<i>x</i><sub>1</sub> <i>y</i><sub>1</sub> <br>
+... <br>
+<i>x<sub>n</sub></i> <i>y<sub>n</sub></i> <br>
+</blockquote>
+
+
+
+<p>
+<i>n</i> is the number of vertices of the given polygon.
+<i>n</i> is a positive integer satisfying 3 &#8804; <i>n</i> &#8804; 20.
+(<i>x<sub>i</sub></i>, <i>y<sub>i</sub></i>) gives the coordinates of
+the <i>i</i>-th vertex.
+<i>x<sub>i</sub></i> and <i>y<sub>i</sub></i> are integers
+satisfying 0 &#8804; <i>x<sub>i</sub></i>, <i>y<sub>i</sub></i> &lt; 1000.
+The vertices (<i>x</i><sub>1</sub>, <i>y</i><sub>1</sub>), ..., (<i>x<sub>n</sub></i>, <i>y<sub>n</sub></i>)
+are given in the counterclockwise order on the <i>xy</i>-plane with <i>y</i> axis oriented upwards.
+You can assume that all the given polygons are convex.
+</p><p>
+All the possible polygons obtained by folding the given polygon
+satisfy the following conditions.
+</p><ul>
+<li>Distance between any two vertices is greater than or equal to 0.00001. </li>
+<li>For any three consecutive vertices P, Q, and R, the distance between the
+point Q and the line passing through the points P and R is greater than or equal to 0.00001. </li>
+</ul>
+
+
+
+
+<p>
+The end of the input is indicated by a line with a zero.
+</p>
+
+
+<h3>Output</h3>
+
+
+<p>
+For each dataset, output the perimeter of the most complex polygon
+obtained through folding the given polygon.
+
+The output value should not have an error greater than 0.00001.
+Any extra characters should not appear in the output.
+</p>
+
+<h3>Sample Input</h3>
+
+
+<pre>4
+0 0
+10 0
+10 5
+0 5
+3
+5 0
+17 3
+7 10
+4
+0 5
+5 0
+10 0
+7 8
+4
+0 0
+40 0
+50 5
+0 5
+4
+0 0
+10 0
+20 5
+10 5
+7
+4 0
+20 0
+24 1
+22 10
+2 10
+0 6
+0 4
+18
+728 997
+117 996
+14 988
+1 908
+0 428
+2 98
+6 54
+30 28
+106 2
+746 1
+979 17
+997 25
+998 185
+999 573
+999 938
+995 973
+970 993
+910 995
+6
+0 40
+0 30
+10 0
+20 0
+40 70
+30 70
+0
+</pre>
+
+
+<h3>Output for the Sample Input</h3>
+
+
+<pre>23.090170
+28.528295
+23.553450
+97.135255
+34.270510
+57.124116
+3327.900180
+142.111776
+</pre>

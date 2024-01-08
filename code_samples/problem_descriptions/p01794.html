@@ -1,0 +1,86 @@
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({ tex2jax: { inlineMath: [["$","$"], ["\\(","\\)"]], processEscapes: true }});
+</script>
+<script type='text/javascript' src='http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
+</script>
+
+<h2>Problem E
+Cost Performance Flow</h2>
+
+<p>
+Yayoi is a professional of money saving. Yayoi does not select items just because they are cheap; her motto is "cost performance". This is one of the reasons why she is good at cooking with bean sprouts. Due to her saving skill, Yayoi often receives requests to save various costs. This time, her task is optimization of "network flow".
+</p>
+
+<p>
+Network flow is a problem on graph theory. Now, we consider a directed graph $G = (V, E)$, where $V = \{1, 2, ... , |V|\}$ is a vertex set and $E \subset V \times V$ is an edge set. Each edge $e$ in $E$ has a capacity $u(e)$ and a cost $c(e)$. For two vertices $s$ and $t$, a function $f_{s,t} : E \rightarrow R$, where $R$ is the set of real numbers, is called an $s$-$t$ flow if the following conditions hold:
+</p>
+
+<ul>
+<li> For all $e$ in $E$, $f_{s,t}$ is non-negative and no more than $u(e)$. Namely, $0 \leq f_{s,t}(e) \leq u(e)$ holds.</li>
+<li> For all $v$ in $V \setminus \{s, t\}$, the sum of $f_{s,t}$ of out-edges from $v$ equals the sum of $f_{s,t}$ of in-edges to $v$. Namely, $\sum_{e=(u,v) \in E} f_{s,t}(e) = \sum_{e=(v,w) \in E} f_{s,t}(e)$ holds.
+</li>
+</ul>
+
+<p>
+Here, we define flow $F( f_{s,t})$ and cost $C( f_{s,t})$ of $f_{s,t}$ as $F( f_{s,t}) = \sum_{e=(s,v)\in E} f_{s,t}(e) - \sum_{e=(u,s)\in E} f_{s,t}(e)$ and $C( f_{s,t}) = \sum_{e\in E} f_{s,t}(e)c(e)$, respectively.
+</p>
+
+<p>
+Usually, optimization of network flow is defined as cost minimization under the maximum flow. However, Yayoi's motto is "cost performance". She defines a balanced function $B( f_{s,t})$ for $s$-$t$ flow as the sum of the square of the cost $C( f_{s,t})$ and the difference between the maximum flow $M = max_{f : s-t flow} F( f )$ and the flow $F( f_{s,t})$, i.e. $B( f_{s,t}) = C( f_{s,t})^2 + (M - F( f_{s,t}))^2$. Then, Yayoi considers that the best cost performance flow yields the minimum of $B( f_{s,t})$.
+</p>
+
+<p>
+Your task is to write a program for Yayoi calculating $B( f_{s,t}^*)$ for the best cost performance flow $f_{s,t}^*$.
+</p>
+
+<h3>Input</h3>
+
+<p>
+The input consists of a single test case. The first line gives two integers separated by a single space: the number of vertices $N$ $(2 \leq N \leq 100)$ and the number of edges $M$ $(1 \leq M \leq 1,000)$. The second line gives two integers separated by a single space: two vertices $s$ and $t$ $(1 \leq s, t \leq N, s \ne t)$. The $i$-th line of the following $M$ lines describes the $i$-th edges as four integers $a_i$, $b_i$, $u_i$, and $c_i$: the $i$-th edge from $a_i$ $(1 \leq a_i \leq N)$ to $b_i$ $(1 \leq b_i \leq N)$ has the capacity $u_i$ $(1 \leq u_i \leq 100)$ and the cost $c_i$ $(1 \leq c_i \leq 100)$ . You can assume that $a_i \ne b_i$ for all $1 \leq i \leq M$, and $a_i \ne a_j$ or $b_i \ne b_j$ if $i \ne j$ for all $1 \leq i, j \leq M$.
+</p>
+
+
+
+<h3>Output</h3>
+
+<p>
+Display $B( f_{s,t}^*)$, the minimum of balanced function under $s$-$t$ flow, as a fraction in a line. More precisely, output "$u/d$", where $u$ is the numerator and $d$ is the denominator of $B( f_{s,t}^*)$, respectively. Note that $u$ and
+$d$ must be non-negative integers and relatively prime, i.e. the greatest common divisor of $u$ and $d$ is 1. You can assume that the answers for all the test cases are rational numbers.
+</p>
+
+
+
+<h3>Sample Input 1</h3>
+
+<pre>2 1
+1 2
+1 2 1 1</pre>
+
+<h3>Output for the Sample Input 1</h3>
+
+<pre>1/2</pre>
+
+<h3>Sample Input 2</h3>
+
+<pre>3 3
+1 2
+1 2 1 1
+1 3 3 1
+3 2 3 2</pre>
+
+<h3>Output for the Sample Input 2</h3>
+
+<pre>10/1</pre>
+
+<h3>Sample Input 3</h3>
+
+<pre>3 3
+1 2
+1 2 1 1
+1 3 7 1
+3 2 7 1</pre>
+
+<h3>Output for the Sample Input 3</h3>
+
+<pre>45/1</pre>

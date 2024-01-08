@@ -1,0 +1,176 @@
+<H1><font color="#000">Problem F:</font> Dice Puzzle</H1>
+
+<p>
+Let’s try a dice puzzle. The rules of this puzzle are as follows.
+</p>
+
+<ol>
+
+<li>
+Dice with six faces as shown in Figure 1 are used in the puzzle.
+
+<br><br>
+<center>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/dicePuzzle1">
+<p>Figure 1: Faces of a die</p>
+</center>
+</li>
+
+<li>
+With twenty seven such dice, a 3 &times; 3 &times; 3 cube is built as shown in Figure 2.
+
+<br><br>
+<center>
+  <img src="https://judgeapi.u-aizu.ac.jp/resources/images/dicePuzzle2">
+<p>Figure 2: 3 &times; 3 &times; 3 cube</p>
+</center>
+</li>
+
+<li>
+When building up a cube made of dice, the sum of the numbers marked on the faces of adjacent dice that are placed against each other must be seven (See Figure 3). For example, if one face of the pair is marked “2”, then the other face must be “5”.
+<br><br>
+<center>
+    <img src="https://judgeapi.u-aizu.ac.jp/resources/images/dicePuzzle3">
+<p>Figure 3: A pair of faces placed against each other</p>
+</center>
+
+</li>
+
+
+<li>
+The top and the front views of the cube are partially given, i.e. the numbers on faces of
+some of the dice on the top and on the front are given.
+
+<br><br>
+<center>
+  <img src="https://judgeapi.u-aizu.ac.jp/resources/images/dicePuzzle4">
+<p>Figure 4: Top and front views of the cube</p>
+</center>
+</li>
+
+
+<li>
+The goal of the puzzle is to find all the plausible dice arrangements that are consistent
+with the given top and front view information.
+</li>
+
+</ol>
+
+<p>
+Your job is to write a program that solves this puzzle.
+</p>
+
+
+<H2>Input</H2>
+
+<p>
+The input consists of multiple datasets in the following format.
+</p>
+<pre>
+       <i>N</i>
+       <i>Dataset</i><sub>1</sub>
+       <i>Dataset</i><sub>2</sub>
+       ...
+       <i>Dataset<sub>N</sub></i>
+</pre>
+<p>
+<i>N</i> is the number of the datasets.
+</p>
+<p>
+The format of each dataset is as follows.
+</p>
+
+<pre>
+<i>T</i><sub>11</sub> <i>T</i><sub>12</sub> <i>T</i><sub>13</sub>
+<i>T</i><sub>21</sub> <i>T</i><sub>22</sub> <i>T</i><sub>23</sub>
+<i>T</i><sub>31</sub> <i>T</i><sub>32</sub> <i>T</i><sub>33</sub>
+<i>F</i><sub>11</sub> <i>F</i><sub>12</sub> <i>F</i><sub>13</sub>
+<i>F</i><sub>21</sub> <i>F</i><sub>22</sub> <i>F</i><sub>23</sub>
+<i>F</i><sub>31</sub> <i>F</i><sub>32</sub> <i>F</i><sub>33</sub>
+</pre>
+<p>
+<i>T<sub>ij</sub></i> and <i>F<sub>ij</sub></i> (1 &le; <i>i</i> &le; 3, 1 &le; <i>j</i> &le; 3) are the faces of dice appearing on the top and front views,
+as shown in Figure 2, or a zero. A zero means that the face at the corresponding position is
+unknown.
+</p>
+
+<H2>Output</H2>
+
+<p>
+For each plausible arrangement of dice, compute the sum of the numbers marked on the nine
+faces appearing on the right side of the cube, that is, with the notation given in Figure 2,
+
+&sum;<sup>3</sup><sub><i>i</i>=1</sub>&sum;<sup>3</sup><sub><i>j</i>=1</sub><i>R<sub>ij</sub></i>.
+</p>
+
+
+<p>
+For each dataset, you should output the right view sums for all the plausible arrangements, in
+ascending order and without duplicates. Numbers should be separated by a single space.
+</p>
+<p>
+When there are no plausible arrangements for a dataset, output a zero.
+</p>
+<p>
+For example, suppose that the top and the front views are given as follows.
+</p>
+
+<center>
+  <img src="https://judgeapi.u-aizu.ac.jp/resources/images/dicePuzzle5">
+<p>Figure 5: Example</p>
+</center>
+
+<p>There are four plausible right views as shown in Figure 6. The right view sums are 33, 36, 32,
+and 33, respectively. After rearranging them into ascending order and eliminating duplicates,
+the answer should be “32 33 36”.
+</p>
+
+<center>
+
+  <img src="https://judgeapi.u-aizu.ac.jp/resources/images/dicePuzzle6">
+
+<p>Figure 6: Plausible right views</p>
+</center>
+
+<p>
+The output should be one line for each dataset. The output may have spaces at ends of lines.
+</p>
+
+<H2>Sample Input</H2>
+<pre>
+4
+1 1 1
+1 1 1
+1 1 1
+2 2 2
+2 2 2
+2 2 2
+4 3 3
+5 2 2
+4 3 3
+6 1 1
+6 1 1
+6 1 0
+1 0 0
+0 2 0
+0 0 0
+5 1 2
+5 1 2
+0 0 0
+2 0 0
+0 3 0
+0 0 0
+0 0 0
+0 0 0
+3 0 1
+</pre>
+
+<H2>Output for the Sample Input</H2>
+<pre>
+27
+24
+32 33 36
+0
+</pre>
+
+

@@ -1,0 +1,148 @@
+
+<H1><font color="#000000">Problem D:</font> Distorted Love</H1>
+
+<p>
+Saying that it is not surprising that people want to know about their love, she has checked up his address, name, age, phone number, hometown, medical history, political party and even his sleeping position, every piece of his personal information. The word "privacy" is not in her dictionary. A person like her is called "stoker" or "<i>yandere</i>", but it doesn't mean much to her.
+</p>
+
+
+<p>
+To know about him, she set up spyware to his PC. This spyware can record his mouse operations while he is browsing websites. After a while, she could successfully obtain the record from the spyware in absolute secrecy.
+</p>
+
+<p>
+Well, we want you to write a program which extracts web pages he visited from the records.
+</p>
+
+<p>
+All pages have the same size <i>H</i> &times; <i>W</i> where upper-left corner is (0, 0) and lower right corner is (<i>W</i>, <i>H</i>). A page includes several (or many) rectangular buttons (parallel to the page). Each button has a link to another page, and when a button is clicked the browser leads you to the corresponding page.
+</p>
+
+
+<p>
+His browser manages history and the current page in the following way:
+</p>
+
+<p>
+The browser has a buffer of 1-dimensional array with enough capacity to store pages, and a pointer to indicate a page in the buffer. A page indicated by the pointer is shown on the browser. At first, a predetermined page is stored and the pointer indicates that page. When the link button is clicked, all pages recorded in the right side from the pointer are removed from the buffer. Then, the page indicated by the link button is stored into the right-most position of the buffer, and the pointer moves to right. As a result, the user browse the page indicated by the button.
+</p>
+
+<p>
+The browser also has special buttons 'back to the previous page' (back button) and 'forward to the next page' (forward button). When the user clicks the back button, the pointer moves to left, and the user clicks the forward button, the pointer moves to right. But in both cases, if there are no such pages in the buffer, nothing happen.
+</p>
+
+<p>
+The record consists of the following operations:
+</p>
+
+<pre>
+click x y
+</pre>
+
+<p>
+It means to click (<i>x</i>, <i>y</i>). If there is a button on the point (<i>x</i>, <i>y</i>), he moved to the corresponding page. If there is nothing in the point, nothing happen. The button is clicked if <i>x</i>1 &le; <i>x</i> &le; <i>x</i>2 and <i>y</i>1 &le; <i>y</i> &le; <i>y</i>2 where <i>x</i>1, <i>x</i>2 means the leftmost and rightmost coordinate and <i>y</i>1, <i>y</i>2 means the topmost and bottommost coordinate of the corresponding button respectively.
+</p>
+
+<pre>
+back
+</pre>
+
+<p>
+It means to click the Back button.
+</p>
+
+<pre>
+forward
+</pre>
+
+<p>
+It means to click the Forward button.
+</p>
+
+<p>
+In addition, there is a special operation <span>show</span>. Your program should print the name of current page for each <span>show</span> operation.
+</p>
+
+
+<p>
+By the way, setting spyware into computers of others may conflict with the law. Do not attempt, or you will be reprimanded by great men.
+</p>
+
+
+<H2>Input</H2>
+
+<p>
+Input consists of several datasets.
+</p>
+
+<p>
+Each dataset starts with an integer <i>n</i> which represents the number of pages in the dataset.
+</p>
+
+<p>
+Next line contains two integers <i>W</i> and <i>H</i>.
+</p>
+
+<p>
+Next, information of each page are given. Each page starts with a string of characters and <i>b</i>[<i>i</i>], the number of buttons the page has. Following <i>b</i>[<i>i</i>] lines give information of buttons. Each button consists of four integers representing the coordinate (<i>x</i>1, <i>y</i>1) of upper left corner and the coordinate (<i>x</i>2, <i>y</i>2) of lower right corner of the button and a string of characters, which represents the name of page that the link of the button represents.
+</p>
+
+<p>
+Next, the number of operation <i>m</i> is given. Following <i>m</i> lines represent the record of operations. Please see the above description for the operation.
+</p>
+
+<p>
+The first page is stored in the buffer at first.
+</p>
+
+<p>
+Input ends when <i>n</i> = 0.
+</p>
+
+<H2>Output</H2>
+
+<p>
+For each dataset, output the name of current page for each <span>show</span> operation.
+</p>
+
+<H2>Constraints</H2>
+
+<ul>
+<li>1 &le; <i>n</i> &le; 100</li>
+<li><i>b</i>[<i>i</i>] &le; 100</li>
+<li>1 &le; the number of characters in the name &le; 20</li>
+<li>Buttons are not touch, overlapped nor run over from the browser.</li>
+</ul>
+
+<H2>Sample Input</H2>
+<pre>
+3
+800 600
+index 1
+500 100 700 200 profile
+profile 2
+100 100 400 200 index
+100 400 400 500 link
+link 1
+100 100 300 200 index
+9
+click 600 150
+show
+click 200 450
+show
+back
+back
+show
+forward
+show
+0
+</pre>
+
+<H2>Output for the Sample Input</H2>
+<pre>
+profile
+link
+index
+profile
+</pre>
+

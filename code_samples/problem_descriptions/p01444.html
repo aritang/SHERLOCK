@@ -1,0 +1,62 @@
+
+<H1><font color="#000">Problem H:</font> Sky Jump</H1>
+
+<p>
+Dr. Kay Em, a genius scientist, developed a new missile named "Ikan-no-i." This missile has <i>N</i> jet engines. When the <i>i</i>-th engine is ignited, the missile's velocity changes to (<i>vx<sub>i</sub></i>, <i>vy<sub>i</sub></i>) immediately.
+</p>
+
+<p>
+Your task is to determine whether the missile can reach the given target point (<i>X</i>, <i>Y</i> ). The missile can be considered as a mass point in a two-dimensional plane with the <i>y</i>-axis pointing up, affected by the gravity of 9.8 downward (i.e. the negative <i>y</i>-direction) and initially set at the origin (0, 0). The engines can be ignited at any time in any order. Still, note that at least one of them needs to be ignited to get the missile launched.
+</p>
+
+<H2>Input</H2>
+
+<p>
+The input consists of multiple datasets. Each dataset has the following format.
+</p>
+<p>
+<i>N</i><br>
+<i>vx</i><sub>1</sub> <i>vy</i><sub>1</sub><br>
+<i>vx</i><sub>2</sub> <i>vy</i><sub>2</sub><br>
+...<br>
+<i>vx</i><sub><i>N</i></sub> <i>vy</i><sub><i>N</i></sub><br>
+<i>X Y</i><br>
+</p>
+
+<p>
+All values are integers and meet the following constraints: 1 &le; <i>N</i> &le; 1,000, 0 &lt; <i>vx<sub>i</sub></i> &le; 1,000, -1,000 &le; <i>vy<sub>i</sub></i> &le; 1,000, 0 &lt; <i>X</i> &le; 1,000, -1,000 &le; <i>Y</i> &le; 1,000.
+</p>
+
+<p>
+The end of input is indicated by a line with a single zero.
+</p>
+
+<H2>Output</H2>
+
+<p>
+For each dataset, output whether the missile can reach the target point in a line: "<span>Yes</span>" if it can, "<span>No</span>" otherwise.
+</p>
+
+<H2>Sample Input</H2>
+<pre>
+1
+1 1
+10 -480
+2
+6 7
+5 5
+4 1
+3
+10 5
+4 4
+8 4
+2 0
+0
+</pre>
+
+<H2>Output for the Sample Input</H2>
+<pre>
+Yes
+Yes
+No
+</pre>

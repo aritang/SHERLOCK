@@ -1,0 +1,76 @@
+<span class="lang-en">
+<p>Score : <var>200</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>You have a digit sequence <var>S</var> of length <var>4</var>. You are wondering which of the following formats <var>S</var> is in:</p>
+<ul>
+<li>YYMM format: the last two digits of the year and the two-digit representation of the month (example: <code>01</code> for January), concatenated in this order</li>
+<li>MMYY format: the two-digit representation of the month and the last two digits of the year, concatenated in this order</li>
+</ul>
+<p>If <var>S</var> is valid in only YYMM format, print <code>YYMM</code>; if <var>S</var> is valid in only MMYY format, print <code>MMYY</code>; if <var>S</var> is valid in both formats, print <code>AMBIGUOUS</code>; if <var>S</var> is valid in neither format, print <code>NA</code>.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>S</var> is a digit sequence of length <var>4</var>.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>S</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the specified string: <code>YYMM</code>, <code>MMYY</code>, <code>AMBIGUOUS</code> or <code>NA</code>.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>1905
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>YYMM
+</pre>
+<p>May <var>XX19</var> is a valid date, but <var>19</var> is not valid as a month. Thus, this string is only valid in YYMM format.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>0112
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>AMBIGUOUS
+</pre>
+<p>Both December <var>XX01</var> and January <var>XX12</var> are valid dates. Thus, this string is valid in both formats.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>1700
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>NA
+</pre>
+<p>Neither <var>0</var> nor <var>17</var> is valid as a month. Thus, this string is valid in neither format.</p></section>
+</div>
+</span>

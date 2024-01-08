@@ -1,0 +1,87 @@
+
+
+
+<h1>青春の片道切符</h1>
+
+<p>
+太郎君は夏休みに電車で長旅をする計画を立てています。しかし高校生の身である太郎君が一ヵ月しかない夏休みで可能な限り遠くに旅をするには、出来るだけ安い行き方と出来るだけ早い行き方をそれぞれ見つけなければうまく計画が立てられません。太郎君が素敵な旅を満喫できるように、太郎君の計画の助けになるプログラムを作ってあげましょう。
+</p>
+
+<br>
+<center>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_trip">
+</center>
+<br><br>
+
+<p>
+線路の情報、駅の数を入力とし、問い合わせに応じて、最小金額または最短時間を出力するプログラムを作成してください。
+</p>
+
+<H2>Input</H2>
+
+<p>
+複数のデータセットの並びが入力として与えられます。入力の終わりはゼロふたつの行で示されます。各データセットは以下の形式で与えられます。
+</p>
+
+<pre>
+<var>n</var> <var>m</var>
+<var>a<sub>1</sub></var> <var>b<sub>1</sub></var> <var>cost<sub>1</sub></var> <var>time<sub>1</sub></var>
+<var>a<sub>2</sub></var> <var>b<sub>2</sub></var> <var>cost<sub>2</sub></var> <var>time<sub>2</sub></var>
+:
+<var>a<sub>n</sub></var> <var>b<sub>n</sub></var> <var>cost<sub>n</sub></var> <var>time<sub>n</sub></var>
+<var>k</var>
+<var>p<sub>1</sub></var> <var>q<sub>1</sub></var> <var>r<sub>1</sub></var>
+<var>p<sub>2</sub></var> <var>q<sub>2</sub></var> <var>r<sub>2</sub></var>
+:
+<var>p<sub>k</sub></var> <var>q<sub>k</sub></var> <var>r<sub>k</sub></var>
+</pre>
+
+<p>
+1 行目に線路の情報の数 <var>n</var> (1 &le; <var>n</var> &le; 3000)と駅の数 <var>m</var> (1 &le; <var>m</var> &le; 100) が与えられます。
+</p>
+
+<p>
+続く <var>n</var> 行に <var>i</var> 番目の路線の情報が与えられます。各路線の情報として、路線がつなぐ２つの駅の番号 <var>a<sub>i</sub></var>, <var>b<sub>i</sub></var> (1 &le; <var>a<sub>i</sub></var>, <var>b<sub>i</sub></var> &le; <var>m</var>)、料金 <var>cost<sub>i</sub></var> (1 &le; <var>cost<sub>i</sub></var> &le; 1000)、移動時間 <var>time<sub>i</sub></var> (1 &le; <var>time<sub>i</sub></var> &le; 1000) が与えられます。ただし、各駅は 1 から <var>m</var> まで順番に番号が付けられているものとします。
+なお、<var>a<sub>i</sub></var> と <var>b<sub>i</sub></var> が線路でつながっていれば、<var>a<sub>i</sub></var> から <var>b<sub>i</sub></var>、 <var>b<sub>i</sub></var> から<var>a<sub>i</sub></var> の両方の移動が同じ料金と時間で可能とします。
+</p>
+
+<p>
+続く行に問い合わせの数 <var>k</var> (1 &le; <var>k</var> &le; 200) が与えられます。続く <var>k</var> 行に <var>i</var> 番目の問い合わせが与えられます。各問合わせとして、出発駅 <var>p<sub>i</sub></var> 、到着駅 <var>q<sub>i</sub></var> 、出力する値の種類 <var>r<sub>i</sub></var> (0 または 1)が与えられます。なお、問い合わせには必ず経路があるものとします。
+</p>
+
+<p>
+データセットの数は 50 を超えない。
+</p>
+
+
+<H2>Output</H2>
+
+<p>
+データセットごとに、最小金額もしくは最短時間を１行に出力します。<var>r<sub>i</sub></var> が 0 の時は最小金額を、 1 の時は最短時間を出力します。
+</p>
+
+<H2>Sample Input</H2>
+
+<pre>
+6 5
+1 2 200 10
+1 4 400 15
+1 3 250 25
+2 4 100 10
+4 5 150 20
+3 5 300 20
+2
+1 5 0
+1 5 1
+0 0
+</pre>
+
+<H2>Output for the Sample Input</H2>
+
+<pre>
+450
+35
+</pre>
+
+
+

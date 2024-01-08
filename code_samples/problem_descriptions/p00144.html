@@ -1,0 +1,93 @@
+
+
+
+<H1>パケット転送</H1>
+
+<p>
+インターネットでは、データはパケットに分割され、パケットごとにルータと呼ばれる中継機器を介して宛先に転送されます。各ルータはパケットに記載された宛先から次に転送すべきルータを判断します。さらに、無限にルータ間を転送され続けることを防ぐため、パケットには TTL（Time To Live） という値が付加されています。ルータは受け取ったパケットの TTL を 1 減算し、その結果が 0 ならそのパケットを破棄し、それ以外なら次のルータに転送します。
+</p>
+
+<p>
+そこで、ネットワークの設計を手助けするプログラムを作ることになりました。ネットワークの接続情報と送信パケットの情報を入力として、各パケットが宛先ルータに到着するまでに経由するルータの数のうち最小の値を表示するプログラムを作成してください。
+</p>
+
+<p>
+ネットワークは図のように複数のルータとそれらを結ぶケーブルで構成されています。ただし、各接続（ケーブル）は単方向であることに注意してください。各ルータが直接つながっているルータの番号の配列がネットワークの接続の情報として与えられます。ルータの数を <var>n</var> とすれば、各ルータは 1 から <var>n</var> までの整数で識別されます。送信元から宛先ルータまでの経路が複数ある場合は、経由するルータの数が少ない方の値を出力してください。また、パケットが宛先に到達しない場合は NA と出力してください。
+</p>
+
+<p>
+例えば、以下の図のようなネットワークで、送信元ルータが 6、宛先ルータが 5 の場合を考えます。最短経路は 6→1→5 であり経由するルータは 3 個です。この場合、TTL はルータ 6、1 でそれぞれ減算されるので、送信時の TTL が 3 以上であればパケットは到達できます。宛先ルータでは TTL を減算する必要はありません。また、送信元と宛先が同じルータになるようなパケットは無いものとします。
+</p>
+
+<center>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE1_network">
+</center>
+<br/>
+
+
+<H2>Input</H2>
+<p>
+入力は以下の形式で与えられます。
+</p>
+
+<pre>
+<var>n</var>
+<var>r<sub>1</sub></var> <var>k<sub>1</sub></var> <var>t<sub>11</sub></var> <var>t<sub>12</sub></var> ... <var>t<sub>1k<sub>1</sub></sub></var>
+<var>r<sub>2</sub></var> <var>k<sub>2</sub></var> <var>t<sub>21</sub></var> <var>t<sub>22</sub></var> ... <var>t<sub>2k<sub>2</sub></sub></var>
+:
+<var>r<sub>n</sub></var> <var>k<sub>n</sub></var> <var>t<sub>n1</sub></var> <var>t<sub>n2</sub></var> ... <var>t<sub>nk<sub>n</sub></sub></var>
+<var>p</var>
+<var>s<sub>1</sub></var> <var>d<sub>1</sub></var> <var>v<sub>1</sub></var>
+<var>s<sub>2</sub></var> <var>d<sub>2</sub></var> <var>v<sub>2</sub></var>
+:
+<var>s<sub>p</sub></var> <var>d<sub>p</sub></var> <var>v<sub>p</sub></var>
+</pre>
+
+<p>
+1 行目にルータの総数 <var>n</var>（<var>n</var> &le; 100）、続く <var>n</var> 行に <var>i</var> 番目のルータの接続情報が与えられます。接続情報として、<var>i</var> 番目のルータの番号 <var>r<sub>i</sub></var>、<var>i</var> 番目のルータと直接接続しているルータの個数 <var>k<sub>i</sub></var>、<var>i</var> 番目のルータから送信できるルータの番号 <var>t<sub>i1</sub></var>, <var>t<sub>i2</sub></var>, ... <var>t<sub>ik<sub>i</sub></sub></var>が与えられます。
+</p>
+
+<p>
+続く行にパケットの個数 <var>p</var>（<var>p</var> &le; 1000）、続く <var>p</var> 行に <var>i</var> 番目のパケットの情報が与えられます。パケットの情報として、 送信元ルータの番号 <var>s<sub>i</sub></var>, 宛先ルータの番号 <var>d<sub>i</sub></var>, TTL の値 <var>v<sub>i</sub></var> (0 &le; <var>v<sub>i</sub></var> &le; 10000) が与えられます。
+</p>
+
+
+<H2>Output</H2>
+
+<p>
+各パケットごとに、経由するルータの個数または NA を１行に出力してください。
+</p>
+
+<H2>Sample Input</H2>
+
+<pre>
+7
+1 4 2 5 4 3
+2 1 5
+3 1 6
+4 1 7
+5 2 7 6
+6 1 1
+7 0
+6
+1 2 2
+1 5 3
+1 2 1
+5 1 3
+6 3 3
+1 7 4
+</pre>
+
+<H2>Output for the Sample Input</H2>
+
+<pre>
+2
+2
+NA
+3
+3
+3
+</pre>
+
+
+

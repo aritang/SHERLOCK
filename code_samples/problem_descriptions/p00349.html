@@ -1,0 +1,100 @@
+
+
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({ tex2jax: { inlineMath: [["$","$"], ["\\(","\\)"]], processEscapes: true }});
+</script>
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+
+<H1>蟻</H1>
+
+<p>
+  大きなチェス盤上に、それぞれ１から <var>N</var> までの番号が割り振られた <var>N</var> 匹の蟻がいます。図のように、チェス盤は H×W のマスからなる長方形で、北西角を白として、白マスと黒マスが交互に並んでいます。
+</p>
+
+<center>
+  <img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_PCK2016_ant" width="360"><br/>
+</center>
+<br/>
+
+<p>
+  最初、どの蟻もチェス盤のマスの中にいて、東または南を向いています。１つのマスの中に２匹以上の蟻がいることはありません。
+</p>
+
+<p>
+  今、蟻たちが一斉に動き出します。すべての蟻は 1 単位時間に向いている方向のマスに１つ移動します。ただし、移動先がチェス盤の外の場合、落下してチェス盤から姿を消します。
+</p>
+
+<p>
+  チェス盤上で２匹の蟻が同じマスに入ると、それらの蟻は以下のような行動をとります：
+</p>
+
+<ul>
+<li> そのマスの色が白ならば、東方向に進んでいた蟻は南方向へ、南方向に進んでいた蟻は東方向へ向きを変える。</li>
+<li> そのマスの色が黒ならば、それぞれの蟻は進む方向を維持する。</li>
+</ul>
+
+<br/>
+
+<p>
+  チェス盤の大きさと蟻の情報が与えられたとき、落下する順番に蟻の番号を報告するプログラムを作成せよ。ただし、同じ時刻に複数の蟻が落下する場合は、番号がより小さい方を先に報告する。
+  </p>
+  
+
+<h2>Input</h2>
+
+<p>
+  入力は以下の形式で与えられる。
+</p>
+
+<pre>
+<var>W</var> <var>H</var> <var>N</var>
+<var>x<sub>1</sub></var> <var>y<sub>1</sub></var> <var>d<sub>1</sub></var>
+<var>x<sub>2</sub></var> <var>y<sub>2</sub></var> <var>d<sub>2</sub></var>
+:
+<var>x<sub>N</sub></var> <var>y<sub>N</sub></var> <var>d<sub>N</sub></var>
+</pre>
+
+<p>
+１行目にチェス盤の東西方向のマスの数 <var>W</var> と南北方向のマスの数 <var>H</var> (2 &le; <var>W</var>, <var>H</var> &le; 10<sup>9</sup>) と蟻の数 <var>N</var> (1 &le; <var>N</var> &le; 200000) が与えられる。続く <var>N</var> 行に <var>i</var> 番目の蟻の東西方向の位置 <var>x<sub>i</sub></var> (1 &le; <var>x<sub>i</sub></var> &le; <var>W</var>)、南北方向の位置 <var>y<sub>i</sub></var> (1 &le; <var>y<sub>i</sub></var> &le; <var>H</var>)、向きを表す文字 <var>d<sub>i</sub></var>（東向きの場合「E」、南向きの場合「S」）が与えられる。ここで、チェス盤の北西角のマスを (1,1)、<var>x</var> が増加する方向を東、<var>y</var> が増加する方向を南とする。
+</p>
+
+<h2>Output</h2>
+
+<p>
+落下する順番に、蟻の番号を１行ずつ出力する。
+</p>
+
+
+<h2>Sample Input 1</h2>
+
+<pre>
+3 3 3
+2 1 S
+1 2 E
+2 2 E
+</pre>
+
+<h2>Sample Output 1</h2>
+<pre>
+3
+1
+2
+</pre>
+
+<h2>Sample Input 2</h2>
+<pre>
+5 4 3
+3 1 S
+2 2 E
+1 3 E
+</pre>
+
+<h2>Sample Output 2</h2>
+<pre>
+2
+3
+1
+</pre>

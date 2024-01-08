@@ -1,0 +1,69 @@
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({ tex2jax: { inlineMath: [["$","$"], ["\\(","\\)"]], processEscapes: true }});
+</script>
+<script type='text/javascript' src='http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
+</script>
+
+<h2>Parentheses</h2>
+
+<p>
+Dave loves strings consisting only of '(' and ')'. Especially, he is interested in balanced strings. Any balanced strings can be constructed using the following rules:
+</p>
+
+<ul>
+<li> A string "()" is balanced.</li>
+<li> Concatenation of two balanced strings are balanced.</li>
+<li> If $T$ is a balanced string, concatenation of '(', $T$, and ')' in this order is balanced. For example, "()()" and "(()())" are balanced strings. ")(" and ")()(()" are not balanced strings.</li>
+</ul>
+
+<p>
+Dave has a string consisting only of '(' and ')'. It satises the followings:
+</p>
+
+<ul>
+<li> You can make it balanced by swapping adjacent characters exactly $A$ times. </li>
+<li> For any non-negative integer $B$ ($B < A$), you cannot make it balanced by $B$ swaps of adjacent characters.</li>
+<li> It is the shortest of all strings satisfying the above conditions.</li>
+</ul>
+
+<p>
+Your task is to compute Dave's string. If there are multiple candidates, output the minimum in lexicographic order. As is the case with ASCII, '(' is less than ')'.
+</p>
+
+<h3>Input</h3>
+<p>
+The input consists of a single test case, which contains an integer $A$ ($1 \leq A \leq 10^9$).
+</p>
+
+<h3>Output</h3>
+<p>
+Output Dave's string in one line. If there are multiple candidates, output the minimum in lexicographic order.
+</p>
+
+<h3>Sample Input 1</h3>
+<pre>
+1
+</pre>
+
+<h3>Output for the Sample Input 1</h3>
+<pre>
+)(
+</pre>
+<p>
+There are infinitely many strings which can be balanced by only one swap. Dave's string is the shortest of them.
+</p>
+
+<h3>Sample Input 2</h3>
+<pre>
+4
+</pre>
+
+<h3>Output for the Sample Input 2</h3>
+<pre>
+)())((
+</pre>
+<p>
+String "))(()(" can be balanced by 4 swaps, but the output should be ")())((" because it is the minimum in lexicographic order.
+</p>
+

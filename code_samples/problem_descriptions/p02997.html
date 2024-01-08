@@ -1,0 +1,80 @@
+<span class="lang-en">
+<p>Score: <var>500</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3>
+<p>Does there exist an undirected graph with <var>N</var> vertices satisfying the following conditions?</p>
+<ul>
+<li>The graph is simple and connected.</li>
+<li>The vertices are numbered <var>1, 2, ..., N</var>.</li>
+<li>Let <var>M</var> be the number of edges in the graph. The edges are numbered <var>1, 2, ..., M</var>, the length of each edge is <var>1</var>, and Edge <var>i</var> connects Vertex <var>u_i</var> and Vertex <var>v_i</var>.</li>
+<li>There are exactly <var>K</var> pairs of vertices <var>(i,\ j)\ (i &lt; j)</var> such that the shortest distance between them is <var>2</var>.</li>
+</ul>
+<p>If there exists such a graph, construct an example.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li>All values in input are integers.</li>
+<li><var>2 \leq N \leq 100</var></li>
+<li><var>0 \leq K \leq \frac{N(N - 1)}{2}</var></li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3>
+<p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var> <var>K</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>If there does not exist an undirected graph with <var>N</var> vertices satisfying the conditions, print <code>-1</code>.</p>
+<p>If there exists such a graph, print an example in the following format (refer to Problem Statement for what the symbols stand for):</p>
+<pre><var>M</var>
+<var>u_1</var> <var>v_1</var>
+<var>:</var>
+<var>u_M</var> <var>v_M</var>
+</pre>
+<p>If there exist multiple graphs satisfying the conditions, any of them will be accepted.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>5 3
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>5
+4 3
+1 2
+3 1
+4 5
+2 3
+</pre>
+<p>This graph has three pairs of vertices such that the shortest distance between them is <var>2</var>: <var>(1,\ 4)</var>, <var>(2,\ 4)</var>, and <var>(3,\ 5)</var>. Thus, the condition is satisfied.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>5 8
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>-1
+</pre>
+<p>There is no graph satisfying the conditions.</p></section>
+</div>
+</span>

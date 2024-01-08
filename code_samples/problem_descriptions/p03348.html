@@ -1,0 +1,140 @@
+<span class="lang-en">
+<p>Score : <var>1100</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>Coloring of the vertices of a tree <var>G</var> is called a <em>good coloring</em> when, for every pair of two vertices <var>u</var> and <var>v</var> painted in the same color, picking <var>u</var> as the root and picking <var>v</var> as the root would result in isomorphic rooted trees.</p>
+<p>Also, the <em>colorfulness</em> of <var>G</var> is defined as the minimum possible number of different colors used in a good coloring of <var>G</var>.</p>
+<p>You are given a tree with <var>N</var> vertices. The vertices are numbered <var>1</var> through <var>N</var>, and the <var>i</var>-th edge connects Vertex <var>a_i</var> and Vertex <var>b_i</var>. We will construct a new tree <var>T</var> by repeating the following operation on this tree some number of times:</p>
+<ul>
+<li>Add a new vertex to the tree by connecting it to one of the vertices in the current tree with an edge.</li>
+</ul>
+<p>Find the minimum possible colorfulness of <var>T</var>.
+Additionally, print the minimum number of leaves (vertices with degree <var>1</var>) in a tree <var>T</var> that achieves the minimum colorfulness.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Notes</h3><p>The phrase "picking <var>u</var> as the root and picking <var>v</var> as the root would result in isomorphic rooted trees" for a tree <var>G</var> means that there exists a bijective function <var>f_{uv}</var> from the vertex set of <var>G</var> to itself such that both of the following conditions are met:</p>
+<ul>
+<li><var>f_{uv}(u)=v</var></li>
+<li>For every pair of two vertices <var>(a,b)</var>, edge <var>(a,b)</var> exists if and only if edge <var>(f_{uv}(a),f_{uv}(b))</var> exists.</li>
+</ul>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>2 \leq N \leq 100</var></li>
+<li><var>1 \leq a_i,b_i \leq N(1\leq i\leq N-1)</var></li>
+<li>The given graph is a tree.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+<var>a_1</var> <var>b_1</var>
+<var>:</var>
+<var>a_{N-1}</var> <var>b_{N-1}</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print two integers with a space in between.
+First, print the minimum possible colorfulness of a tree <var>T</var> that can be constructed.
+Second, print the minimum number of leaves in a tree that achieves it.</p>
+<p>It can be shown that, under the constraints of this problem, the values that should be printed fit into <var>64</var>-bit signed integers.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>5
+1 2
+2 3
+3 4
+3 5
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>2 4
+</pre>
+<p>If we connect a new vertex <var>6</var> to vertex <var>2</var>, painting the vertices <var>(1,4,5,6)</var> red and painting the vertices <var>(2,3)</var> blue is a good coloring.
+Since painting all the vertices in a single color is not a good coloring, we can see that the colorfulness of this tree is <var>2</var>.
+This is actually the optimal solution. There are four leaves, so we should print <var>2</var> and <var>4</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>8
+1 2
+2 3
+4 3
+5 4
+6 7
+6 8
+3 6
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>3 4
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>10
+1 2
+2 3
+3 4
+4 5
+5 6
+6 7
+3 8
+5 9
+3 10
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>4 6
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 4</h3><pre>13
+5 6
+6 4
+2 8
+4 7
+8 9
+3 2
+10 4
+11 10
+2 4
+13 10
+1 8
+12 1
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 4</h3><pre>4 12
+</pre></section>
+</div>
+</span>

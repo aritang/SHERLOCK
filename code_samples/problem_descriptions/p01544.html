@@ -1,0 +1,122 @@
+
+ 
+<h1>最長増加列問題</h1>
+<p>
+時は過ぎて太郎君は高校生になりました。
+大学生だったお兄さんの影響も受け、コンピューターサイエンスに興味を持ち始めました。
+
+太郎君はコンピューターサイエンスの教科書を読み進め、「最長増加部分列問題」という有名問題があることを知りました。太郎君はこの問題のことを理解しましたが、自分でも類似問題が作れないものかと気になりました。
+
+そこで太郎君は試行錯誤の結果に次のような問題を作りました。
+</p>
+
+<ul>
+<li><var>n</var>個の整数で構成される数列Aがある
+</li><li><var>m-1</var>個の区切りを入れて、数列Aを<var>m</var>個の数列に分解する。なお、分解後のそれぞれの数列は1つ以上の数を必ず含まなければならない。
+</li><li>この<var>m</var>個それぞれの数列内の整数をすべて足し合わせた結果出来上がる<var>m</var>個の数を、元の数列の順に配置すると厳密な増加列になっている(つまり、出来上がる数列は<var>B<sub>i</sub> &lt; B<sub>i+1</sub></var>をみたす)ようにしたい。
+</li><li>目標は最終的にできる数列<var>B</var>の長さ<var>m</var>を最大化することである。
+</li></ul>
+<p>
+例えば、数列<var>A</var>が{5,-4,10,-3,8}の場合を考えてみる。<br>
+区切りの位置を表す数列<var>C</var>を用意し、<var>C={2,4}</var>とする。<br>
+このとき、数列<var>A</var>は(5,-4),(10,-3),(8)の部分に分かれ、これらの内部を足し合わせるとそれぞれ1,7,8となり、出来上がる数列<var>B</var>は{1,7,8}となる。
+</p>
+
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE_probG" height="389" width="555">
+<p>
+
+太郎君はこの問題について&quot;最長増加列問題&quot;と名付け、これを解くアルゴリズムも考えました。<br>
+そして社会人になったあなたにチェックをしてほしいと連絡をしました。
+
+あなたの仕事は、成長した太郎君の作った問題を解くプログラムを作ることです。<br>
+チェックするのが仕事なので、<var>m-1</var>個の区切りの位置も出力します。
+なお、最適な<var>m</var>に対してこのような区切り方が複数考えられる場合もありますが、この<var>m</var>が正しく出力されていれば、考えられるもののうち一つを出力すればよいです。
+</p>
+
+<h2>Input</h2>
+<p>
+改行区切りで<var>n+1</var>個の整数が与えられる。
+</p>
+<blockquote>
+<var>n</var> <br><var>A<sub>1</sub></var><br><var>A<sub>2</sub></var><br>...<br><var>A<sub>n</sub></var><br></blockquote>
+<ul>
+<li><var>n</var>は与えられる数列<var>A</var>の長さを表す
+</li><li><var>A<sub>i</sub></var>は数列<var>A</var>のi番目の要素を表す。
+</li></ul>
+
+
+
+<h2>Constraints</h2>
+<blockquote>
+<var>1&le;n&le;4000</var><br><var>|Ai|&le; 10<sup>8</sup></var>　<br></blockquote>
+<ul>
+<li>整数<var>k</var>に対して<var>|k|</var>は<var>k</var>の絶対値を表す
+</li></ul>
+
+<h2>Output</h2>
+<blockquote>
+<var>m</var><br><var>C<sub>1</sub></var> <var>C<sub>2</sub></var> .. <var>C<sub>m-1</sub></var><br></blockquote>
+<ul>
+<li>1行目は一つの整数<var>m</var>を出力する。
+<var>m</var>は最終的にできる数列<var>B</var>の長さを表す。
+2行目は<var>m-1</var>個の整数<var>C<sub>i</sub></var>を空白区切りで出力する。
+<var>C<sub>i</sub></var>は、数列<var>A</var>を<var>m</var>個の部分に適切に区切った時の<var>i</var>番目の区切り場所を表す。
+区切り場所の定義は図を参照せよ。なお、<var>1&le;C<sub>i</sub>&lt;n</var> を満たす。
+2行目の<var>m-1</var>個の整数列Cは昇順に並んでいなければならないしたがって、<var>i &lt; j</var> ならば
+<var>C<sub>i</sub> &lt; C<sub>j</sub> </var>が成立する。
+</li></ul>
+
+<ul>
+<li><var>m=1</var>の場合2行目は空行になる。
+</li><li>数列<var>C</var>に従って数列<var>A</var>から数列<var>B</var>を生成したとき、数列<var>B</var>が増加列になっていないとき(すなわち<var>B<sub>i</sub>&ge;B<sub>i+1</sub></var>となる<var>i(1&le;i&lt;m)</var>が存在するとき)、WrongAnswerとなる
+</li></ul>
+
+
+<H2>Sample Input 1</H2>
+
+<pre>3
+1
+2
+4
+</pre>
+<H2>Output for the Sample Input 1</H2>
+
+<pre>3
+1 2
+</pre>
+<p>
+もともと増加列なので、すべての場所に区切りを入れればよい
+</p>
+
+<H2>Sample Input 2</H2>
+
+<pre>3
+2
+2
+2
+</pre>
+<H2>Output for the Sample Input 2</H2>
+
+<pre>2
+1
+</pre>
+<p>
+2 2 2は増加列でないので、3つに分割することはできない
+</p>
+
+<H2>Sample Input 3</H2>
+
+<pre>3
+4
+2
+1
+</pre>
+
+<H2>Output for the Sample Input 3</H2>
+
+<pre>1
+(空行)
+</pre>
+<p>
+どう分割しても増加列にはならないため、分割をしない
+</p>

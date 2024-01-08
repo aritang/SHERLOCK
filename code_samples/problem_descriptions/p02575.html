@@ -1,0 +1,61 @@
+<span class="lang-en">
+<p>Score : <var>600</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>There is a grid of squares with <var>H+1</var> horizontal rows and <var>W</var> vertical columns.</p>
+<p>You will start at one of the squares in the top row and repeat moving one square right or down. However, for each integer <var>i</var> from <var>1</var> through <var>H</var>, you cannot move down from the <var>A_i</var>-th, <var>(A_i + 1)</var>-th, <var>\ldots</var>, <var>B_i</var>-th squares from the left in the <var>i</var>-th row from the top.</p>
+<p>For each integer <var>k</var> from <var>1</var> through <var>H</var>, find the minimum number of moves needed to reach one of the squares in the <var>(k+1)</var>-th row from the top. (The starting square can be chosen individually for each case.) If, starting from any square in the top row, none of the squares in the <var>(k+1)</var>-th row can be reached, print <code>-1</code> instead.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 \leq H,W \leq 2\times 10^5</var></li>
+<li><var>1 \leq A_i \leq B_i \leq W</var></li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>H</var> <var>W</var>
+<var>A_1</var> <var>B_1</var>
+<var>A_2</var> <var>B_2</var>
+<var>:</var>
+<var>A_H</var> <var>B_H</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print <var>H</var> lines. The <var>i</var>-th line should contain the answer for the case <var>k=i</var>.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>4 4
+2 4
+1 1
+2 3
+2 4
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>1
+3
+6
+-1
+</pre>
+<p>Let <var>(i,j)</var> denote the square at the <var>i</var>-th row from the top and <var>j</var>-th column from the left.</p>
+<p>For <var>k=1</var>, we need one move such as <var>(1,1)</var> → <var>(2,1)</var>.</p>
+<p>For <var>k=2</var>, we need three moves such as <var>(1,1)</var> → <var>(2,1)</var> → <var>(2,2)</var> → <var>(3,2)</var>.</p>
+<p>For <var>k=3</var>, we need six moves such as <var>(1,1)</var> → <var>(2,1)</var> → <var>(2,2)</var> → <var>(3,2)</var> → <var>(3,3)</var> → <var>(3,4)</var> → <var>(4,4)</var>.</p>
+<p>For <var>k=4</var>, it is impossible to reach any square in the fifth row from the top.</p></section>
+</div>
+</span>

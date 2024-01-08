@@ -1,0 +1,74 @@
+<span class="lang-en">
+<p>Score : <var>300</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>Two foxes Jiro and Saburo are playing a game called <em>1D Reversi</em>. This game is played on a board, using black and white stones. On the board, stones are placed in a row, and each player places a new stone to either end of the row. Similarly to the original game of Reversi, when a white stone is placed, all black stones between the new white stone and another white stone, turn into white stones, and vice versa.</p>
+<p>In the middle of a game, something came up and Saburo has to leave the game. The state of the board at this point is described by a string <var>S</var>. There are |S| (the length of <var>S</var>) stones on the board, and each character in <var>S</var> represents the color of the <var>i</var>-th (<var>1 ≦ i ≦ |S|</var>) stone from the left. If the <var>i</var>-th character in <var>S</var> is <code>B</code>, it means that the color of the corresponding stone on the board is black. Similarly, if the <var>i</var>-th character in <var>S</var> is <code>W</code>, it means that the color of the corresponding stone is white.</p>
+<p>Jiro wants all stones on the board to be of the same color. For this purpose, he will place new stones on the board according to the rules. Find the minimum number of new stones that he needs to place.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 ≦ |S| ≦ 10^5</var></li>
+<li>Each character in <var>S</var> is <code>B</code> or <code>W</code>.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>The input is given from Standard Input in the following format:</p>
+<pre><var>S</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the minimum number of new stones that Jiro needs to place for his purpose.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>BBBWW
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>1
+</pre>
+<p>By placing a new black stone to the right end of the row of stones, all white stones will become black. Also, by placing a new white stone to the left end of the row of stones, all black stones will become white.</p>
+<p>In either way, Jiro's purpose can be achieved by placing one stone.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>WWWWWW
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>0
+</pre>
+<p>If all stones are already of the same color, no new stone is necessary.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>WBWBWBWBWB
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>9
+</pre></section>
+</div>
+</span>

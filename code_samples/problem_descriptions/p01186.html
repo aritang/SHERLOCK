@@ -1,0 +1,73 @@
+
+<H1><font color="#000">Problem F:</font> TV Watching</H1>
+
+<p>
+You are addicted to watching TV, and you watch so many TV programs every day. You have been in
+trouble recently: the airtimes of your favorite TV programs overlap.
+</p>
+<p>
+Fortunately, you have both a TV and a video recorder at your home. You can therefore watch a program
+on air while another program (on a different channel) is recorded to a video at the same time. However,
+it is not easy to decide which programs should be watched on air or recorded to a video. As you are a
+talented computer programmer, you have decided to write a program to find the way of watching TV
+programs which gives you the greatest possible satisfaction.
+</p>
+<p>
+Your program (for a computer) will be given TV listing of a day along with your <i>score</i> for each TV
+program. Each score represents how much you will be satisfied if you watch the corresponding TV
+program on air or with a video. Your program should compute the maximum possible sum of the scores
+of the TV programs that you can watch.
+</p>
+
+<H2>Input</H2>
+
+<p>
+The input consists of several scenarios.
+</p>
+<p>
+The first line of each scenario contains an integer <i>N</i> (1 &le; <i>N</i> &le; 1000) that represents the number of
+programs. Each of the following <i>N</i> lines contains program information in the format below:
+</p
+<pre>
+      <i>T</i> <i>T</i><sub><i>b</i></sub> <i>T</i><sub><i>e</i></sub> <i>R</i><sub>1</sub> <i>R</i><sub>2</sub>
+</pre>
+<p>
+<i>T</i> is the title of the program and is composed by up to 32 alphabetical letters. <i>T</i><sub><i>b</i></sub> and <i>T</i><sub><i>e</i></sub> specify the
+start time and the end time of broadcasting, respectively. <i>R</i><sub>1</sub> and <i>R</i><sub>2</sub> indicate the score when you watch
+the program on air and when you have the program recorded, respectively.
+</p>
+<p>
+All times given in the input have the form of “hh:mm” and range from 00:00 to 23:59. You may assume
+that no program is broadcast across the twelve midnight.
+</p>
+<p>
+The end of the input is indicated by a line containing only a single zero. This is not part of scenarios.
+</p>
+
+<H2>Output</H2>
+
+<p>
+For each scenario, output the maximum possible score in a line.
+</p>
+
+<H2>Sample Input</H2>
+<pre>
+4
+OmoikkiriTV 12:00 13:00 5 1
+WaratteIitomo 12:00 13:00 10 2
+WatarusekennhaOnibakari 20:00 21:00 10 3
+SuzumiyaharuhiNoYuuutsu 23:00 23:30 100 40
+5
+a 0:00 1:00 100 100
+b 0:00 1:00 101 101
+c 0:00 1:00 102 102
+d 0:00 1:00 103 103
+e 0:00 1:00 104 104
+0
+</pre>
+
+<H2>Output for the Sample Input</H2>
+<pre>
+121
+207
+</pre>

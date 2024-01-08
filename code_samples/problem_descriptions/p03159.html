@@ -1,0 +1,155 @@
+<span class="lang-en">
+<p>Score : <var>600</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>The server in company A has a structure where <var>N</var> devices numbered <var>1, 2, ..., N</var> are connected with <var>N - 1</var> cables.
+The <var>i</var>-th cable connects Device <var>U_i</var> and Device <var>V_i</var>.
+Any two different devices are connected through some number of cables.</p>
+<p>Each device <var>v</var> (<var>1 \leq v \leq N</var>) has a non-zero integer <var>A_v</var>, which represents the following:</p>
+<ul>
+<li>If <var>A_v &lt; 0</var>, Device <var>v</var> is a computer that consumes an electric power of <var>-A_v</var>.</li>
+<li>If <var>A_v &gt; 0</var>, Device <var>v</var> is a battery that supplies an electric power of <var>A_v</var>.</li>
+</ul>
+<p>You have decided to disconnect some number of cables (possibly zero) to disable the server.
+When some cables are disconnected, the devices will be divided into some number of connected components.
+The server will be disabled if all of these connected components satisfy one of the following conditions:</p>
+<ul>
+<li>There is no computer in the connected component. That is, <var>A_v</var> is positive for every device <var>v</var> that belongs to the connected component.</li>
+<li>There is not enough supply of electric power in the connected component. That is, the sum of <var>A_v</var> over all devices <var>v</var> that belong to the connected component is negative.</li>
+</ul>
+<p>At least how many cables do you need to disconnect in order to disable the server?</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 \leq N \leq 5</var> <var>000</var></li>
+<li><var>1 \leq |A_i| \leq 10^9</var> (<var>1 \leq i \leq N</var>)</li>
+<li><var>1 \leq U_i, V_i \leq N</var> (<var>1 \leq i \leq N - 1</var>)</li>
+<li><var>U_i \neq V_i</var> (<var>1 \leq i \leq N - 1</var>)</li>
+<li>Any two different devices are connected through some number of cables.</li>
+<li>All values in input are integers.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+<var>A_1</var> <var>A_2</var> <var>...</var> <var>A_N</var>
+<var>U_1</var> <var>V_1</var>
+<var>U_2</var> <var>V_2</var>
+<var>:</var>
+<var>U_{N - 1}</var> <var>V_{N - 1}</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the answer.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>7
+-2 7 5 6 -8 3 4
+1 2
+2 3
+2 4
+1 5
+5 6
+5 7
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>1
+</pre>
+<p>We should disconnect the cable connecting Device <var>1</var> and Device <var>2</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>4
+1 2 3 4
+1 2
+1 3
+1 4
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>0
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>6
+10 -1 10 -1 10 -1
+1 2
+2 3
+3 4
+4 5
+5 6
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>5
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 4</h3><pre>8
+-2 3 6 -2 -2 -5 3 2
+3 4
+7 6
+6 2
+8 2
+5 3
+1 8
+3 7
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 4</h3><pre>3
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 5</h3><pre>10
+3 4 9 6 1 5 -1 10 -10 -10
+7 4
+5 6
+8 1
+9 5
+7 1
+10 3
+2 8
+4 10
+9 2
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 5</h3><pre>3
+</pre></section>
+</div>
+</span>

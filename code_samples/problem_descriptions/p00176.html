@@ -1,0 +1,82 @@
+
+
+
+<H1>何色？</H1>
+
+<p>
+ウェブデザイナーを目指す太郎君はただいま修行中。事務所の先輩から「このページの背景色は#ffe085で」と、ウェブデザイン特有の色番号で指示されるのですが、それがどんな色かパッと思い浮かべることができません。
+</p>
+
+<p>
+この色番号は光の三原色である赤、緑、青それぞれの強さを表わしています。具体的には2 桁の 16 進数を3 つ組み合わせたもので、色番号を“#RGB”とするとき、R は赤の強さ、G は緑の強さ、は青の強さを表します。それぞれ 00 から ff までの値になります。
+</p>
+
+<p>
+色番号にまだ不慣れな太郎君のために、色番号を入力とし、色の表の中からもっとも近い色の名前
+を出力するプログラムを作成してください。使用する色の表は以下の通りです。
+</p>
+
+<center>
+<table>
+<tr><td width="20">&nbsp;</td><td width="100"> 色の名前</td><td width="80">赤の強さ</td><td width="80"> 緑の強さ</td><td width="80"> 青の強さ</td></tr>
+<tr><td bgcolor="#000000"></td><td>black</td><td> 00</td><td> 00</td><td>   00</td></tr>
+<tr><td bgcolor="#0000ff"></td><td>blue</td><td>  00</td><td> 00</td><td>   ff</td></tr>
+<tr><td bgcolor="#00ff00"></td><td>    lime</td><td>  00</td><td> ff</td><td>   00</td></tr>
+<tr><td bgcolor="#00ffff"></td><td>    aqua</td><td>  00</td><td> ff</td><td>   ff</td></tr>
+<tr><td bgcolor="#ff0000"></td><td>     red</td><td>  ff</td><td> 00</td><td>   00</td></tr>
+<tr><td bgcolor="#ff00ff"></td><td>  fuchsia</td><td> ff</td><td> 00</td><td>   ff</td></tr>
+<tr><td bgcolor="#ffff00"></td><td>   yellow</td><td> ff</td><td> ff</td><td>   00</td></tr>
+<tr><td bgcolor="#ffffff"></td><td>    white</td><td> ff</td><td> ff</td><td>   ff</td></tr>
+</table>
+</center>
+<br/>
+<br/>
+
+<p>
+「もっとも近い色」とは、以下のように定義します。与えられた色番号での赤、緑、青の強さをそれぞれ <var>R</var>、<var>G</var>、<var>B</var> とし、表の <var>k</var> 番目の色の赤、緑、青の強さをそれぞれ <var>R<sub>k</sub></var>、<var>G<sub>k</sub></var>、<var>B<sub>k</sub></var> とするとき、次の式で計算する <var>d<sub>k</sub></var> の値が最も小さい色がもっとも近い色とします。
+</p>
+
+<center>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE1_pck2008_04">
+</center>
+<br/>
+<br/>
+
+<p>
+なお、<var>d<sub>k</sub></var> の値が同じになる色が複数存在する場合は表の中でより上にある色がもっとも近い色になり
+ます。
+
+</p>
+
+<H2>Input</H2>
+<p>
+複数のデータセットの並びが入力として与えられます。入力の終わりはゼロひとつの行で示されます。各データセットとして、色番号を表す文字列が、<span>#</span><var>RGB</var> 形式で１行に与えられます。
+</p>
+
+<p>
+データセットの数は 1000 を超えません。
+</p>
+
+<H2>Output</H2>
+<p>
+データセット毎に最も近い色の名前を１行に出力します。
+</p>
+<H2>Sample Input</H2>
+<pre>
+#ffe085
+#787878
+#decade
+#ff55ff
+0
+</pre>
+
+<H2>Output for the Sample Input</H2>
+<pre>
+white
+black
+white
+fuchsia
+</pre>
+
+
+

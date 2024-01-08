@@ -1,0 +1,65 @@
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({ tex2jax: { inlineMath: [["$","$"], ["\\(","\\)"]], processEscapes: true }});
+</script>
+<script language="JavaScript" type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML">
+</script>
+
+
+<h1>Dice II</h1><br>
+
+<p>
+Construct a dice from a given sequence of integers in the same way as <a href="description.jsp?id=ITP1_11_A">Dice I</a>.
+</p>
+
+<p>
+  You are given integers on the top face and the front face after the dice was rolled in the same way as <a href="description.jsp?id=ITP1_11_A">Dice I</a>. Write a program to print an integer on the right side face.
+</p>
+
+<br>
+<center>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_ITP1_11_B">
+</center>
+<br><br>
+
+<h2>Input</h2>
+<p>
+ In the first line, six integers assigned to faces are given in ascending order of their corresponding labels.
+In the second line, the number of questions $q$ is given.
+</p>
+<p>
+  In the following $q$ lines, $q$ questions are given. Each question consists of two integers on the top face and the front face respectively.
+</p>
+
+<h2>Output</h2>
+
+
+<p>
+  For each question, print the integer on the right side face.
+</p>
+
+
+<h2>Constraints</h2>
+
+<ul>
+<li>$0 \leq $ the integer assigned to a face $ \leq 100$</li>
+<li>The integers are all different</li>
+<li>$1 \leq q \leq 24$</li>
+</ul>
+
+<h2>Sample Input</h2>
+<pre>
+1 2 3 4 5 6
+3
+6 5
+1 3
+3 2
+</pre>
+
+<h2>Sample Output</h2>
+<pre>
+3
+5
+6
+</pre>
+

@@ -1,0 +1,98 @@
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({ tex2jax: { inlineMath: [["$","$"], ["\\(","\\)"]], processEscapes: true }});
+</script>
+<script type='text/javascript' src='http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
+</script>
+
+
+<h2>Problem L
+Wall Making Game</h2>
+
+<p>
+The game <i>Wall Making Game</i>, a two-player board game, is all the rage.
+</p>
+
+<p>
+This game is played on an $H \times W$ board. Each cell of the board is one of <i>empty</i>, <i>marked</i>, or <i>wall</i>. At the beginning of the game, there is no wall on the board.
+</p>
+
+<p>
+In this game, two players alternately move as follows:
+</p>
+<ol>
+<li> A player chooses one of the empty cells (not marked and not wall). If the player can't choose a cell, he loses.</li>
+<li> Towards each of the four directions (upper, lower, left, and right) from the chosen cell, the player changes cells (including the chosen cell) to walls until the player first reaches a wall or the outside of the board.
+</li>
+</ol>
+
+<p>
+Note that marked cells cannot be chosen in step 1, but they can be changed to walls in step 2.
+</p>
+
+<p>
+Fig.1 shows an example of a move in which a player chooses the cell at the third row and the fourth
+column.
+</p>
+
+
+<center>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_WallMakingGame"><br>
+Fig.1: An example of a move in Wall Making Game.
+</center>
+
+<p>
+Your task is to write a program that determines which player wins the game if the two players play optimally from a given initial board.
+</p>
+
+
+<h3>Input</h3>
+
+<p>
+The first line of the input consists of two integers $H$ and $W$ $(1 \leq H, W \leq 20)$, where $H$ and $W$ are the height and the width of the board respectively. The following $H$ lines represent the initial board. Each of the $H$ lines consists of $W$ characters.
+</p>
+
+<p>
+The $j$-th character of the $i$-th line is '<span>.</span>' if the cell at the $j$-th column of the $i$-th row is empty, or '<span>X</span>' if the cell is marked.
+</p>
+
+
+
+<h3>Output</h3>
+
+<p>
+Print "<span>First</span>" (without the quotes) in a line if the first player wins the given game. Otherwise, print "<span>Second</span>" (also without the quotes) in a line.
+</p>
+
+
+<h3>Sample Input 1</h3>
+
+<pre>2 2
+..
+..</pre>
+
+<h3>Output for the Sample Input 1</h3>
+
+<pre>Second</pre>
+
+<h3>Sample Input 2</h3>
+
+<pre>2 2
+X.
+..</pre>
+
+<h3>Output for the Sample Input 2</h3>
+
+<pre>First</pre>
+
+<h3>Sample Input 3</h3>
+
+<pre>4 5
+X....
+...X.
+.....
+.....</pre>
+
+<h3>Output for the Sample Input 3</h3>
+
+<pre>First</pre>

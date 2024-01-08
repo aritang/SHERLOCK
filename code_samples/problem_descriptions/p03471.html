@@ -1,0 +1,89 @@
+<span class="lang-en">
+<p>Score : <var>300</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>The commonly used bills in Japan are <var>10000</var>-yen, <var>5000</var>-yen and <var>1000</var>-yen bills. Below, the word "bill" refers to only these.</p>
+<p>According to Aohashi, he received an otoshidama (New Year money gift) envelope from his grandfather that contained <var>N</var> bills for a total of <var>Y</var> yen, but he may be lying. Determine whether such a situation is possible, and if it is, find a possible set of bills contained in the envelope. Assume that his grandfather is rich enough, and the envelope was large enough.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 ≤ N ≤ 2000</var></li>
+<li><var>1000 ≤ Y ≤ 2 × 10^7</var></li>
+<li><var>N</var> is an integer.</li>
+<li><var>Y</var> is a multiple of <var>1000</var>.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var> <var>Y</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>If the total value of <var>N</var> bills cannot be <var>Y</var> yen, print <code>-1 -1 -1</code>.</p>
+<p>If the total value of <var>N</var> bills can be <var>Y</var> yen, let one such set of bills be "<var>x</var> <var>10000</var>-yen bills, <var>y</var> <var>5000</var>-yen bills and <var>z</var> <var>1000</var>-yen bills", and print <var>x</var>, <var>y</var>, <var>z</var> with spaces in between. If there are multiple possibilities, any of them may be printed.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>9 45000
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>4 0 5
+</pre>
+<p>If the envelope contained <var>4</var> <var>10000</var>-yen bills and <var>5</var> <var>1000</var>-yen bills, he had <var>9</var> bills and <var>45000</var> yen in total. It is also possible that the envelope contained <var>9</var> <var>5000</var>-yen bills, so the output <code>0 9 0</code> is also correct.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>20 196000
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>-1 -1 -1
+</pre>
+<p>When the envelope contained <var>20</var> bills in total, the total value would be <var>200000</var> yen if all the bills were <var>10000</var>-yen bills, and would be at most <var>195000</var> yen otherwise, so it would never be <var>196000</var> yen.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>1000 1234000
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>14 27 959
+</pre>
+<p>There are also many other possibilities.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 4</h3><pre>2000 20000000
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 4</h3><pre>2000 0 0
+</pre></section>
+</div>
+</span>

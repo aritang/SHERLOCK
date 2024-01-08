@@ -1,0 +1,108 @@
+<span class="lang-en">
+<p>Score : <var>500</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>We have a sequence of <var>N</var> integers: <var>A_1, A_2, \cdots, A_N</var>.</p>
+<p>You can perform the following operation between <var>0</var> and <var>K</var> times (inclusive):</p>
+<ul>
+<li>Choose two integers <var>i</var> and <var>j</var> such that <var>i \neq j</var>, each between <var>1</var> and <var>N</var> (inclusive). Add <var>1</var> to <var>A_i</var> and <var>-1</var> to <var>A_j</var>, possibly producing a negative element.</li>
+</ul>
+<p>Compute the maximum possible positive integer that divides every element of <var>A</var> after the operations. Here a positive integer <var>x</var> divides an integer <var>y</var> if and only if there exists an integer <var>z</var> such that <var>y = xz</var>.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>2 \leq N \leq 500</var></li>
+<li><var>1 \leq A_i \leq 10^6</var></li>
+<li><var>0 \leq K \leq 10^9</var></li>
+<li>All values in input are integers.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var> <var>K</var>
+<var>A_1</var> <var>A_2</var> <var>\cdots</var> <var>A_{N-1}</var> <var>A_{N}</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the maximum possible positive integer that divides every element of <var>A</var> after the operations.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>2 3
+8 20
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>7
+</pre>
+<p><var>7</var> will divide every element of <var>A</var> if, for example, we perform the following operation:</p>
+<ul>
+<li>Choose <var>i = 2, j = 1</var>. <var>A</var> becomes <var>(7, 21)</var>.</li>
+</ul>
+<p>We cannot reach the situation where <var>8</var> or greater integer divides every element of <var>A</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>2 10
+3 5
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>8
+</pre>
+<p>Consider performing the following five operations:</p>
+<ul>
+<li>Choose <var>i = 2, j = 1</var>. <var>A</var> becomes <var>(2, 6)</var>.</li>
+<li>Choose <var>i = 2, j = 1</var>. <var>A</var> becomes <var>(1, 7)</var>.</li>
+<li>Choose <var>i = 2, j = 1</var>. <var>A</var> becomes <var>(0, 8)</var>.</li>
+<li>Choose <var>i = 2, j = 1</var>. <var>A</var> becomes <var>(-1, 9)</var>.</li>
+<li>Choose <var>i = 1, j = 2</var>. <var>A</var> becomes <var>(0, 8)</var>.</li>
+</ul>
+<p>Then, <var>0 = 8 \times 0</var> and <var>8 = 8 \times 1</var>, so <var>8</var> divides every element of <var>A</var>. We cannot reach the situation where <var>9</var> or greater integer divides every element of <var>A</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>4 5
+10 1 2 22
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>7
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 4</h3><pre>8 7
+1 7 5 6 8 2 6 5
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 4</h3><pre>5
+</pre></section>
+</div>
+</span>

@@ -1,0 +1,94 @@
+<span class="lang-en">
+<p>Score : <var>300</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>When <var>l</var> is an odd number, the median of <var>l</var> numbers <var>a_1, a_2, ..., a_l</var> is the <var>(\frac{l+1}{2})</var>-th largest value among <var>a_1, a_2, ..., a_l</var>.</p>
+<p>You are given <var>N</var> numbers <var>X_1, X_2, ..., X_N</var>, where <var>N</var> is an even number.
+For each <var>i = 1, 2, ..., N</var>, let the median of <var>X_1, X_2, ..., X_N</var> excluding <var>X_i</var>, that is, the median of <var>X_1, X_2, ..., X_{i-1}, X_{i+1}, ..., X_N</var> be <var>B_i</var>.</p>
+<p>Find <var>B_i</var> for each <var>i = 1, 2, ..., N</var>.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>2 \leq N \leq 200000</var></li>
+<li><var>N</var> is even.</li>
+<li><var>1 \leq X_i \leq 10^9</var></li>
+<li>All values in input are integers.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+<var>X_1</var> <var>X_2</var> ... <var>X_N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print <var>N</var> lines.
+The <var>i</var>-th line should contain <var>B_i</var>.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>4
+2 4 4 3
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>4
+3
+3
+4
+</pre>
+<ul>
+<li>Since the median of <var>X_2, X_3, X_4</var> is <var>4</var>, <var>B_1 = 4</var>.</li>
+<li>Since the median of <var>X_1, X_3, X_4</var> is <var>3</var>, <var>B_2 = 3</var>.</li>
+<li>Since the median of <var>X_1, X_2, X_4</var> is <var>3</var>, <var>B_3 = 3</var>.</li>
+<li>Since the median of <var>X_1, X_2, X_3</var> is <var>4</var>, <var>B_4 = 4</var>.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>2
+1 2
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>2
+1
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>6
+5 5 4 4 3 3
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>4
+4
+4
+4
+4
+4
+</pre></section>
+</div>
+</span>

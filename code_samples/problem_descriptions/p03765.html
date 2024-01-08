@@ -1,0 +1,109 @@
+<span class="lang-en">
+<p>Score : <var>600</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>Let us consider the following operations on a string consisting of <code>A</code> and <code>B</code>:</p>
+<ol>
+<li>Select a character in a string. If it is <code>A</code>, replace it with <code>BB</code>. If it is <code>B</code>, replace with <code>AA</code>.</li>
+<li>Select a substring that is equal to either <code>AAA</code> or <code>BBB</code>, and delete it from the string.</li>
+</ol>
+<p>For example, if the first operation is performed on <code>ABA</code> and the first character is selected, the string becomes <code>BBBA</code>.
+If the second operation is performed on <code>BBBAAAA</code> and the fourth through sixth characters are selected, the string becomes <code>BBBA</code>.</p>
+<p>These operations can be performed any number of times, in any order.</p>
+<p>You are given two string <var>S</var> and <var>T</var>, and <var>q</var> queries <var>a_i, b_i, c_i, d_i</var>.
+For each query, determine whether <var>S_{a_i} S_{{a_i}+1} ... S_{b_i}</var>, a substring of <var>S</var>, can be made into <var>T_{c_i} T_{{c_i}+1} ... T_{d_i}</var>, a substring of <var>T</var>.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 \leq |S|, |T| \leq 10^5</var></li>
+<li><var>S</var> and <var>T</var> consist of letters <code>A</code> and <code>B</code>.</li>
+<li><var>1 \leq q \leq 10^5</var></li>
+<li><var>1 \leq a_i \leq b_i \leq |S|</var></li>
+<li><var>1 \leq c_i \leq d_i \leq |T|</var></li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>S</var>
+<var>T</var>
+<var>q</var>
+<var>a_1</var> <var>b_1</var> <var>c_1</var> <var>d_1</var>
+<var>...</var>
+<var>a_q</var> <var>b_q</var> <var>c_q</var> <var>d_q</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print <var>q</var> lines. The <var>i</var>-th line should contain the response to the <var>i</var>-th query. If <var>S_{a_i} S_{{a_i}+1} ... S_{b_i}</var> can be made into <var>T_{c_i} T_{{c_i}+1} ... T_{d_i}</var>, print <code>YES</code>. Otherwise, print <code>NO</code>.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>BBBAAAABA
+BBBBA
+4
+7 9 2 5
+7 9 1 4
+1 7 2 5
+1 7 2 4
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>YES
+NO
+YES
+NO
+</pre>
+<p>The first query asks whether the string <code>ABA</code> can be made into <code>BBBA</code>.
+As explained in the problem statement, it can be done by the first operation.</p>
+<p>The second query asks whether <code>ABA</code> can be made into <code>BBBB</code>, and the fourth query asks whether <code>BBBAAAA</code> can be made into <code>BBB</code>.
+Neither is possible.</p>
+<p>The third query asks whether the string <code>BBBAAAA</code> can be made into <code>BBBA</code>.
+As explained in the problem statement, it can be done by the second operation.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>AAAAABBBBAAABBBBAAAA
+BBBBAAABBBBBBAAAAABB
+10
+2 15 2 13
+2 13 6 16
+1 13 2 20
+4 20 3 20
+1 18 9 19
+2 14 1 11
+3 20 3 15
+6 16 1 17
+4 18 8 20
+7 20 3 14
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>YES
+YES
+YES
+YES
+YES
+YES
+NO
+NO
+NO
+NO
+</pre></section>
+</div>
+</span>

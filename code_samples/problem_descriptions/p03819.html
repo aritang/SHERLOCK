@@ -1,0 +1,92 @@
+<span class="lang-en">
+<p>Score : <var>700</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>Snuke has decided to play a game, where the player runs a railway company.
+There are <var>M+1</var> stations on Snuke Line, numbered <var>0</var> through <var>M</var>.
+A train on Snuke Line stops at station <var>0</var> and every <var>d</var>-th station thereafter, where <var>d</var> is a predetermined constant for each train.
+For example, if <var>d = 3</var>, the train stops at station <var>0</var>, <var>3</var>, <var>6</var>, <var>9</var>, and so forth.</p>
+<p>There are <var>N</var> kinds of souvenirs sold in areas around Snuke Line. The <var>i</var>-th kind of souvenirs can be purchased when the train stops at one of the following stations: stations <var>l_i</var>, <var>l_i+1</var>, <var>l_i+2</var>, <var>...</var>, <var>r_i</var>.</p>
+<p>There are <var>M</var> values of <var>d</var>, the interval between two stops, for trains on Snuke Line: <var>1</var>, <var>2</var>, <var>3</var>, <var>...</var>, <var>M</var>.
+For each of these <var>M</var> values, find the number of the kinds of souvenirs that can be purchased if one takes a train with that value of <var>d</var> at station <var>0</var>.
+Here, assume that it is not allowed to change trains.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 ≦ N ≦ 3 × 10^{5}</var></li>
+<li><var>1 ≦ M ≦ 10^{5}</var></li>
+<li><var>1 ≦ l_i ≦ r_i ≦ M</var></li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>The input is given from Standard Input in the following format:</p>
+<pre><var>N</var> <var>M</var>
+<var>l_1</var> <var>r_1</var>
+<var>:</var>
+<var>l_{N}</var> <var>r_{N}</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the answer in <var>M</var> lines. The <var>i</var>-th line should contain the maximum number of the kinds of souvenirs that can be purchased if one takes a train stopping every <var>i</var>-th station.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>3 3
+1 2
+2 3
+3 3
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>3
+2
+2
+</pre>
+<ul>
+<li>If one takes a train stopping every station, three kinds of souvenirs can be purchased: kind <var>1</var>, <var>2</var> and <var>3</var>.</li>
+<li>If one takes a train stopping every second station, two kinds of souvenirs can be purchased: kind <var>1</var> and <var>2</var>.</li>
+<li>If one takes a train stopping every third station, two kinds of souvenirs can be purchased: kind <var>2</var> and <var>3</var>.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>7 9
+1 7
+5 9
+5 7
+5 9
+1 1
+6 8
+3 4
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>7
+6
+6
+5
+4
+5
+5
+3
+2
+</pre></section>
+</div>
+</span>

@@ -1,0 +1,81 @@
+<span class="lang-en">
+<p>Score : <var>600</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>Given is an integer <var>N</var>. Snuke will choose integers <var>s_1</var>, <var>s_2</var>, <var>n_1</var>, <var>n_2</var>, <var>u_1</var>, <var>u_2</var>, <var>k_1</var>, <var>k_2</var>, <var>e_1</var>, and <var>e_2</var> so that all of the following six conditions will be satisfied:</p>
+<ul>
+<li><var>0 \leq s_1 &lt; s_2</var></li>
+<li><var>0 \leq n_1 &lt; n_2</var></li>
+<li><var>0 \leq u_1 &lt; u_2</var></li>
+<li><var>0 \leq k_1 &lt; k_2</var></li>
+<li><var>0 \leq e_1 &lt; e_2</var></li>
+<li><var>s_1 + s_2 + n_1 + n_2 + u_1 + u_2 + k_1 + k_2 + e_1 + e_2 \leq N</var></li>
+</ul>
+<p>For every possible choice <var>(s_1,s_2,n_1,n_2,u_1,u_2,k_1,k_2,e_1,e_2)</var>, compute <var>(s_2 − s_1)(n_2 − n_1)(u_2 − u_1)(k_2 - k_1)(e_2 - e_1)</var>, and find the sum of all computed values, modulo <var>(10^{9} +7)</var>.</p>
+<p>Solve this problem for each of the <var>T</var> test cases given.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li>All values in input are integers.</li>
+<li><var>1 \leq T \leq 100</var></li>
+<li><var>1 \leq N \leq 10^{9}</var></li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>T</var>
+<var>\mathrm{case}_1</var>
+<var>\vdots</var>
+<var>\mathrm{case}_T</var>
+</pre>
+<p>Each case is given in the following format:</p>
+<pre><var>N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print <var>T</var> lines. The <var>i</var>-th line should contain the answer to the <var>i</var>-th test case.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>4
+4
+6
+10
+1000000000
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>0
+11
+4598
+257255556
+</pre>
+<ul>
+<li>When <var>N=4</var>, there is no possible choice <var>(s_1,s_2,n_1,n_2,u_1,u_2,k_1,k_2,e_1,e_2)</var>. Thus, the answer is <var>0</var>.</li>
+<li>When <var>N=6</var>, there are six possible choices <var>(s_1,s_2,n_1,n_2,u_1,u_2,k_1,k_2,e_1,e_2)</var> as follows:<ul>
+<li><var>(0,1,0,1,0,1,0,1,0,1)</var></li>
+<li><var>(0,2,0,1,0,1,0,1,0,1)</var></li>
+<li><var>(0,1,0,2,0,1,0,1,0,1)</var></li>
+<li><var>(0,1,0,1,0,2,0,1,0,1)</var></li>
+<li><var>(0,1,0,1,0,1,0,2,0,1)</var></li>
+<li><var>(0,1,0,1,0,1,0,1,0,2)</var></li>
+</ul>
+</li>
+<li>We have one choice where <var>(s_2 − s_1)(n_2 − n_1)(u_2 − u_1)(k_2 - k_1)(e_2 - e_1)</var> is <var>1</var> and five choices where <var>(s_2 − s_1)(n_2 − n_1)(u_2 − u_1)(k_2 - k_1)(e_2 - e_1)</var> is <var>2</var>, so the answer is <var>11</var>.</li>
+<li>Be sure to find the sum modulo <var>(10^{9} +7)</var>.</li>
+</ul></section>
+</div>
+</span>

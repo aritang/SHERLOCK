@@ -1,0 +1,99 @@
+<span class="lang-en">
+<p>Score : <var>700</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>There is a sequence <var>X</var> of length <var>N</var>, where every element is initially <var>0</var>. Let <var>X_i</var> denote the <var>i</var>-th element of <var>X</var>.</p>
+<p>You are given a sequence <var>A</var> of length <var>N</var>. The <var>i</var>-th element of <var>A</var> is <var>A_i</var>. Determine if we can make <var>X</var> equal to <var>A</var> by repeating the operation below. If we can, find the minimum number of operations required.</p>
+<ul>
+<li>Choose an integer <var>i</var> such that <var>1\leq i\leq N-1</var>. Replace the value of <var>X_{i+1}</var> with the value of <var>X_i</var> plus <var>1</var>.</li>
+</ul>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 \leq N \leq 2 \times 10^5</var></li>
+<li><var>0 \leq A_i \leq 10^9(1\leq i\leq N)</var></li>
+<li>All values in input are integers.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+<var>A_1</var>
+<var>:</var>
+<var>A_N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>If we can make <var>X</var> equal to <var>A</var> by repeating the operation, print the minimum number of operations required. If we cannot, print <var>-1</var>.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>4
+0
+1
+1
+2
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>3
+</pre>
+<p>We can make <var>X</var> equal to <var>A</var> as follows:</p>
+<ul>
+<li>Choose <var>i=2</var>. <var>X</var> becomes <var>(0,0,1,0)</var>.</li>
+<li>Choose <var>i=1</var>. <var>X</var> becomes <var>(0,1,1,0)</var>.</li>
+<li>Choose <var>i=3</var>. <var>X</var> becomes <var>(0,1,1,2)</var>.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>3
+1
+2
+1
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>-1
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>9
+0
+1
+1
+0
+1
+2
+2
+1
+2
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>8
+</pre></section>
+</div>
+</span>

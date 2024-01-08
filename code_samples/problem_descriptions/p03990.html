@@ -1,0 +1,147 @@
+<span class="lang-en">
+<p>Score : <var>1400</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>Sigma and Sugim are playing a game.</p>
+<p>The game is played on a graph with <var>N</var> vertices numbered <var>1</var> through <var>N</var>. The graph has <var>N-1</var> red edges and <var>N-1</var> blue edges, and the <var>N-1</var> edges in each color forms a tree. The red edges are represented by pairs of integers <var>(a_i, b_i)</var>, and the blue edges are represented by pairs of integers <var>(c_i, d_i)</var>.</p>
+<p>Each player has his own piece. Initially, Sigma's piece is at vertex <var>X</var>, and Sugim's piece is at vertex <var>Y</var>.</p>
+<p>The game is played in turns, where turns are numbered starting from turn <var>1</var>. Sigma takes turns <var>1, 3, 5, ...</var>, and Sugim takes turns <var>2, 4, 6, ...</var>.</p>
+<p>In each turn, the current player either moves his piece, or does nothing. Here, Sigma can only move his piece to a vertex that is directly connected to the current vertex by a red edge. Similarly, Sugim can only move his piece to a vertex that is directly connected to the current vertex by a blue edge.</p>
+<p>When the two pieces come to the same vertex, the game ends immediately. If the game ends just after the operation in turn <var>i</var>, let <var>i</var> be the total number of turns in the game.</p>
+<p>Sigma's objective is to make the total number of turns as large as possible, while Sugim's objective is to make it as small as possible.</p>
+<p>Determine whether the game will end in a finite number of turns, assuming both players plays optimally to achieve their respective objectives. If the answer is positive, find the number of turns in the game.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>2 ≦ N ≦ 200,000</var></li>
+<li><var>1 ≦ X, Y ≦ N</var></li>
+<li><var>X \neq Y</var></li>
+<li><var>1 ≦ a_i, b_i, c_i, d_i ≦ N</var></li>
+<li>The <var>N-1</var> edges in each color (red and blue) forms a tree.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>The input is given from Standard Input in the following format:</p>
+<pre><var>N</var> <var>X</var> <var>Y</var>
+<var>a_1</var> <var>b_1</var>
+<var>a_2</var> <var>b_2</var>
+<var>:</var>
+<var>a_{N-1}</var> <var>b_{N-1}</var>
+<var>c_1</var> <var>d_1</var>
+<var>c_2</var> <var>d_2</var>
+<var>:</var>
+<var>c_{N-1}</var> <var>d_{N-1}</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>If the game will end in a finite number of turns, print the number of turns.
+Otherwise, print <code>-1</code>.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>4 1 2
+1 2
+1 3
+1 4
+2 1
+2 3
+1 4
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>4
+</pre>
+<p><img alt="" src="https://atcoder.jp/img/agc005/0f55f48518cb9031ee9f1cc30f686228.png"/></p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>3 3 1
+1 2
+2 3
+1 2
+2 3
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>4
+</pre>
+<p><img alt="" src="https://atcoder.jp/img/agc005/df982a9959ce46d5d5f63800f8972bff.png"/></p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>4 1 2
+1 2
+3 4
+2 4
+1 2
+3 4
+1 3
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>2
+</pre>
+<p><img alt="" src="https://atcoder.jp/img/agc005/11ce9a2283a853025b7075769439d745.png"/></p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 4</h3><pre>4 2 1
+1 2
+3 4
+2 4
+1 2
+3 4
+1 3
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 4</h3><pre>-1
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 5</h3><pre>5 1 2
+1 2
+1 3
+1 4
+4 5
+2 1
+1 3
+1 5
+5 4
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 5</h3><pre>6
+</pre></section>
+</div>
+</span>

@@ -1,0 +1,88 @@
+<span class="lang-en">
+<p>Score : <var>300</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>Hearing that energy drinks increase rating in those sites, Takahashi decides to buy up <var>M</var> cans of energy drinks.</p>
+<p>There are <var>N</var> stores that sell energy drinks. In the <var>i</var>-th store, he can buy at most <var>B_i</var> cans of energy drinks for <var>A_i</var> yen (the currency of Japan) each.</p>
+<p>What is the minimum amount of money with which he can buy <var>M</var> cans of energy drinks?</p>
+<p>It is guaranteed that, in the given inputs, a sufficient amount of money can always buy <var>M</var> cans of energy drinks.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li>All values in input are integers.</li>
+<li><var>1 \leq N, M \leq 10^5</var></li>
+<li><var>1 \leq A_i \leq 10^9</var></li>
+<li><var>1 \leq B_i \leq 10^5</var></li>
+<li><var>B_1 + ... + B_N \geq M</var></li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var> <var>M</var>
+<var>A_1</var> <var>B_1</var>
+<var>A_2</var> <var>B_2</var>
+<var>\vdots</var>
+<var>A_N</var> <var>B_N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the minimum amount of money with which Takahashi can buy <var>M</var> cans of energy drinks.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>2 5
+4 9
+2 4
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>12
+</pre>
+<p>With <var>12</var> yen, we can buy one drink at the first store and four drinks at the second store, for the total of five drinks. However, we cannot buy <var>5</var> drinks with <var>11</var> yen or less.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>4 30
+6 18
+2 5
+3 10
+7 9
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>130
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>1 100000
+1000000000 100000
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>100000000000000
+</pre>
+<p>The output may not fit into a <var>32</var>-bit integer type.</p></section>
+</div>
+</span>

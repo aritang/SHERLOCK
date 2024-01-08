@@ -1,0 +1,88 @@
+
+
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({ tex2jax: { inlineMath: [["$","$"], ["\\(","\\)"]], processEscapes: true }});
+</script>
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+<H1>極秘調査</H1>
+
+<p>
+秘密の組織アイヅアナリティクス(AiZu AnalyticS)は、極秘の調査を開始した。ターゲットになっている人物は <var>N</var> 人いて、1 から <var>N</var> の識別番号が付けられている。AZAS 情報戦略調査員であるあなたは、
+ターゲットの中から、以下の条件を少なくとも一つ満たす人物の数を割り出すことにした。
+</p>
+
+<ul>
+<li> 組織 $A$ に属さず、かつ、商品 $C$ を所持している者。</li>
+<li> 組織 $B$ に属し、かつ、商品 $C$ を所持している者。</li>
+</ul>
+
+<p>
+組織 $A$ に属している者、組織 $B$ に属している者、商品 $C$ を所持している者の識別番号が入力として与えられたとき、条件を満たす人物の数を割り出すプログラムを作成せよ。ただし、どちらの条件も満たす人物を重複して数えないように注意せよ。
+</p>
+
+<p>
+（補足：上記の条件について）<br>
+1 から $N$ までの自然数の集合から、いくつかの要素を選んだ集合を $A$，$B$，$C$ とする。条件を満たす人物の数は、$(\bar{A} \cap C) \cup (B \cap C)$ (図の塗られた部分) を満たす要素の個数である。ただし、$\bar{A}$ は集合 $A$ の補集合とする。
+</p>
+
+<center>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_PCK2015_azas">
+</center>
+<br/>
+
+
+<h2>Input</h2>
+
+<p>
+入力は以下の形式で与えられる。
+</p>
+
+<pre>
+<var>N</var>
+<var>X</var> <var>a<sub>1</sub></var> <var>a<sub>2</sub></var> ... <var>a<sub>X</sub></var>
+<var>Y</var> <var>b<sub>1</sub></var> <var>b<sub>2</sub></var> ... <var>b<sub>Y</sub></var>
+<var>Z</var> <var>c<sub>1</sub></var> <var>c<sub>2</sub></var> ... <var>c<sub>Z</sub></var>
+</pre>
+
+<p>
+入力は４行であり、１行目に調査対象の人数 <var>N</var> (1 &le; <var>N</var> &le; 100) が与えられる。２行目に、組織 $A$ に属している者の数 <var>X</var> (0 &le; <var>X</var> &le; <var>N</var>)と、それに続いて組織 $A$ に属している者の識別番号 <var>a<sub>i</sub></var> (1 &le; <var>a<sub>i</sub></var> &le; <var>N</var>) が与えられる。３行目に、組織 $B$ に属している者の数 <var>Y</var> (0 &le; <var>Y</var> &le; <var>N</var>) と、それに続いて組織 $B$ に属している者の識別番号 <var>b<sub>i</sub></var> (1 &le; <var>b<sub>i</sub></var> &le; <var>N</var>) が与えられる。４行目に、商品 $C$ を所持している者の数 <var>Z</var> (0 &le; <var>Z</var> &le; <var>N</var>) と、それに続いて商品 $C$ を所持している者の識別番号 <var>c<sub>i</sub></var> (1 &le; <var>c<sub>i</sub></var> &le; <var>N</var>) が与えられる。
+</p>
+
+
+<h2>Output</h2>
+
+<p>
+条件を満たす人物の数を１行に出力する。
+</p>
+
+<h2>Sample Input 1</h2>
+
+<pre>
+5
+3 1 2 3
+2 4 5
+2 3 4
+</pre>
+
+<h2>Sample Output 1</h2>
+<pre>
+1
+</pre>
+<br/>
+
+
+<h2>Sample Input 2</h2>
+<pre>
+100
+3 1 100 4
+0
+2 2 3
+</pre>
+
+<h2>Sample Output 2</h2>
+<pre>
+2
+</pre>

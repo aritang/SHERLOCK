@@ -1,0 +1,60 @@
+<!--<H1>Breakfast, Lunch and Supper</H1>-->
+<h1>Three Meals</h1>
+
+<p>
+You are running a restaurant that serves dishes only three times a day. Each of your customer has his/her own separate time zones for eating breakfast, lunch and supper. Thus, your customer enjoys your dish only when he/she visits your restaurant to meet your serving time settings. Your wish is to modify your serving time arrangement so that as many as possible of your customers can enjoy your meals three times a day.
+  
+</p>
+
+<p>
+  Write a program to enable as many as possible of customers can enjoy your service three times a day, i.e. breakfast, lunch, and supper. A list of customers eating time zones is given, which you cannot change. Settings of your service time are your option. Coincidence between your service time and either edge of customer’s time zone (start or end time) does not hinder you to provide your service.
+</p>
+
+<h2>Input</h2>
+
+<p>
+  The input is given in the following format.
+</p>
+
+<pre>
+<var>N</var>
+<var>ast_1</var> <var>aet_1</var> <var>hst_1</var> <var>het_1</var> <var>bst_1</var> <var>bet_1</var>
+<var>ast_2</var> <var>aet_2</var> <var>hst_2</var> <var>het_2</var> <var>bst_2</var> <var>bet_2</var>
+:
+<var>ast_N</var> <var>aet_N</var> <var>hst_N</var> <var>het_N</var> <var>bst_N</var> <var>bet_N</var>
+</pre>
+
+<p>
+The first line provides the number of customers <var>N</var>(1&le;<var>N</var>&le;50). Each of subsequent <var>N</var> lines provides time zone information of <var>i</var>-th customer: start and end time of breakfast zone (<var>ast_i</var>, <var>aet_i</var>), those of lunch zone (<var>hst_i</var>, <var>het_i</var>) and those of supper zone (<var>bst_i</var>, <var>bet_i</var>). The end time must be later in time as the start time. Time zones do not overlap, i.e. <var>hst_i</var> is later in time than <var>aet_i</var>, and so on. Each time settings must not cross 0:00 midnight.
+</p>
+
+<pre>
+<var>h</var> <var>m</var>
+</pre>
+
+<p>
+  Each time information is given by hour <var>h</var> (0&le;<var>h</var>&le;23) and minute <var>m</var>(0&le;<var>m</var>&le;59).
+</p>
+
+
+<h2>Output</h2>
+
+<p>
+  Output the maximum number of customers that can be served all three meals (breakfast, lunch, and supper).
+</p>
+
+<h2>Sample Input 1</h2>
+
+<pre>
+5
+1 0 2 0 3 30 4 30 6 0 7 0
+2 30 3 0 4 0 5 0 5 30 6 30
+1 30 2 30 4 30 5 0 6 30 7 0
+2 30 3 0 5 0 6 0 6 30 7 0
+1 0 2 0 3 0 3 30 4 0 5 0
+</pre>
+
+<h2>Sample Output 1</h2>
+<pre>
+3
+</pre>

@@ -1,0 +1,91 @@
+<span class="lang-en lang-child hidden-lang">
+<div class="part">
+				Max Score: <var>250</var> Points <br/>
+<section>
+<h3>Problem Statement</h3>
+					Mr.X, who the handle name is <var>T</var>, looked at the list which written <var>N</var> handle names, <var>S_1, S_2, ..., S_N</var>. <br/>
+					But he couldn't see some parts of the list. Invisible part is denoted <code>?</code>. <br/>
+<br/>
+					Please calculate all possible index of the handle name of Mr.X when you sort <var>N+1</var> handle names (<var>S_1, S_2, ..., S_N</var> and <var>T</var>) in lexicographical order. <br/>
+					Note: If there are pair of people with same handle name, either one may come first. <br/>
+</section>
+</div>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3>
+						The input is given from standard input in the following format.<br/>
+<pre>
+<var>N</var>
+<var>S_1</var>
+<var>S_2</var>
+ :
+<var>S_N</var>
+<var>T</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3>
+<ul>
+<li>Calculate the possible index and print in sorted order. The output should be separated with a space. Don't print a space after last number.</li>
+<li>Put a line break in the end.</li>
+</ul>
+</section>
+<section>
+<h3>Constraints</h3>
+<ul>
+<li><var>1 ≤ N ≤ 10000</var></li>
+<li><var>1 ≤ |S_i|, |T| ≤ 20</var> (<var>|A|</var> is the length of <var>A</var>.)</li>
+<li><var>S_i</var> consists from lower-case alphabet and <code>?</code>.</li>
+<li><var>T</var> consists from lower-case alphabet.</li>
+</ul>
+</section>
+<section>
+<h3>Scoring</h3>
+<p>Subtask 1 [ <var>130</var> points ]</p>
+<ul>
+<li>There are no <code>?</code>'s.</li>
+</ul>
+<p>Subtask 2 [ <var>120</var> points ]</p>
+<ul>
+<li>There are no additional constraints.</li>
+</ul>
+</section>
+</div>
+</div>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3>
+<pre>
+2
+tourist
+petr
+e
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3>
+<pre>
+1
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+					There are no invisible part, so there are only one possibility.
+					The sorted handle names are <code>e</code>, <code>petr</code>, <code>tourist</code>, so <code>e</code> comes first.<br/>
+</section>
+</div>
+<div class="part">
+<h3>Sample Input 2</h3>
+<pre>
+2
+?o?r?s?
+?et?
+e
+</pre>
+</div></span>

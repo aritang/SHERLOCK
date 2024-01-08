@@ -1,0 +1,138 @@
+
+
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({ tex2jax: { inlineMath: [["$","$"], ["\\(","\\)"]], processEscapes: true }});
+</script>
+<script language="JavaScript" type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+
+<h3>Big Maze</h3>
+
+<p>あなたは Jumbo Amusement Garden，略して「JAG」と呼ばれる巨大な遊園地で働いている．この遊園地の敷地は広大で，アトラクションもことごとく巨大なものが設置される．
+</p>
+
+<p>この度JAGに，新たな巨大迷路アトラクション「Big Maze」が導入されることになった．
+Big Maze の形状は，平面図で見ると，縦横共に <i>N</i> マスの正方形状の迷路 <i>M</i> 個を，隣接する左右の辺同士を繋ぎ合わせ，縦 <i>N</i> マス，横 <i>NM</i> マスの長方形状になる予定である．
+</p>
+
+<p><i>M</i> 個の迷路を左からどの順番で繋ぎ合わせるかはあらかじめ決まっているが，隣り合う迷路のどの辺同士を繋ぎ合わせるかは未定である．
+<i>M</i> 個の迷路を繋ぎ合わせる前に，各迷路を90 度回転させる事が出来る．回転は何度でも行うことができ．回数は迷路毎に別々に決めてよい．回転させない迷路があってもかまわない．
+</p>
+
+<p>各マスは通行可能な「通路」か，通行不可能な「壁」のいずれかであり，Big Maze の内部での移動は，上下左右の 4 方向に隣接する通路のマスに限り可能である．
+</p>
+
+<p>Big Maze の左端の <i>N</i> 箇所に位置し，かつ通路であるマスをスタート地点とし，右端の <i>N</i> 箇所に位置し，かつ通路であるマスをゴール地点とする．
+</p>
+
+<p><i>M</i> 個の迷路を繋ぎ合わせる辺の選び方によっては，スタート地点やゴール地点が複数存在する場合や，存在しない場合もあり得る．
+また，スタート地点からゴール地点への経路が複数存在する場合や，存在しない場合もあり得る．
+</p>
+
+<p>あなたの仕事は， 左から繋ぎ合わせる順番があらかじめ決まっている <i>M</i> 個の迷路を適切に回転させ，繋ぎ合わせる辺を上手く選ぶことで，スタート地点からゴール地点へ通路を移動して到達可能な縦 <i>N</i> マス，横 <i>NM</i> マスの長方形状の Big Maze を作ることが出来るか確認することである．
+</p>
+
+
+<h3>Input</h3>
+
+<p>入力は複数のデータセットからなり，各データセットが連続して与えられる．
+データセットの数は最大で 50 である．
+各データセットは，次の形式で表される．
+</p><blockquote><i>N</i> <i>M</i><br><i>maze<sub>1</sub></i><br><i>maze<sub>2</sub></i><br><i>...</i><br><i>maze<sub>M</sub></i><br></blockquote>
+<p>最初の行はふたつの整数 <i>N</i>，<i>M</i> が空白区切りで与えられ，縦横 <i>N</i> マスの迷路が <i>M</i> 個与えられることを示し，<i>1 &le; N &le; 12</i> かつ <i>1 &le; M &le; 1,</sub>000</i> である．
+</p><blockquote></blockquote>
+<p>続いて，空白無しの <i>N</i> 文字を 1 行とする <i>N</i> 行の入力 <i>maze<sub>i</sub></i> が <i>M</i> 回続く．
+ここで，<i>1 &le; i &le; M</i> である．
+</p><blockquote></blockquote>
+<p><i>N</i> 行の入力 <i>maze<sub>i</sub></i> は，左から繋ぎ合わせる順番で数えたときの <i>i</i> 番目の迷路の情報を表し，以下の形式で与えられる．
+</p><blockquote><i>c<sub>1, 1</sub> c<sub>1, 2</sub> ... c<sub>1, N</sub></i><br><i>c<sub>2, 1</sub> c<sub>2, 2</sub> ... c<sub>2, N</sub></i><br><i>...</i><br><i>c<sub>N, 1</sub> c<sub>N, 2</sub> ... c<sub>N, N</sub></i><br></blockquote>
+<p>各<i>c<sub>j, k</sub></i> は，“.” または “#” のいずれか 1 文字で，上から <i>j</i> 番目かつ左から <i>k</i> 番目のマスの情報を表し，“.” のとき通路，“#”のとき壁である．
+ここで，<i>1 &le; j, k &le; N</i> である．
+</p><blockquote></blockquote>
+<p>入力の終わりは，空白で区切られた 2 個のゼロからなる行で示される．
+</p><blockquote></blockquote>
+
+
+
+<h3>Output</h3>
+
+<p>各データセットについて，スタート地点からゴール地点へ移動可能な経路が少なくともひとつ存在する Big Maze を作ることが可能なら “Yes”，不可能なら “No” を 1 行で出力せよ．
+</p><blockquote></blockquote>
+
+
+<h3>Sample Input</h3>
+
+<pre>3 2
+#.#
+...
+#.#
+###
+...
+###
+3 2
+#.#
+...
+#.#
+###
+#.#
+###
+3 3
+#..
+..#
+###
+..#
+#.#
+#..
+#..
+..#
+###
+5 3
+.....
+#####
+##...
+##.##
+##...
+.....
+#####
+.....
+#####
+.....
+...##
+##.##
+...##
+#####
+.....
+3 2
+#.#
+...
+#.#
+#.#
+#.#
+#.#
+0 0
+</pre>
+
+<h3>Output for Sample Input</h3>
+
+<pre>Yes
+No
+Yes
+Yes
+Yes</pre>
+
+<p>以下に，サンプルデータセットの図を示す．</p>
+<br><div style="text-align:center">
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_JAGDomestic2017_fig_h_sample_00" height="160">
+</div><br>
+<br><div style="text-align:center">
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_JAGDomestic2017_fig_h_sample_01" height="160">
+</div><br>
+<br><div style="text-align:center">
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_JAGDomestic2017_fig_h_sample_02" height="160">
+</div><br>
+<br><div style="text-align:center">
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_JAGDomestic2017_fig_h_sample_03" height="160">
+</div><br>
+<br><div style="text-align:center">
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_JAGDomestic2017_fig_h_sample_04" height="160">
+</div><br>

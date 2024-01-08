@@ -1,0 +1,100 @@
+<span class="lang-en">
+<p>Score : <var>600</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>You are given a string <var>S</var> of length <var>2N</var> consisting of lowercase English letters.</p>
+<p>There are <var>2^{2N}</var> ways to color each character in <var>S</var> red or blue. Among these ways, how many satisfy the following condition?</p>
+<ul>
+<li>The string obtained by reading the characters painted red <strong>from left to right</strong> is equal to the string obtained by reading the characters painted blue <strong>from right to left</strong>.</li>
+</ul>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 \leq N \leq 18</var></li>
+<li>The length of <var>S</var> is <var>2N</var>.</li>
+<li><var>S</var> consists of lowercase English letters.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+<var>S</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the number of ways to paint the string that satisfy the condition.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>4
+cabaacba
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>4
+</pre>
+<p>There are four ways to paint the string, as follows:</p>
+<ul>
+<li><span style="color:red">c</span><span style="color:blue">a</span><span style="color:blue">b</span><span style="color:blue">a</span><span style="color:red">a</span><span style="color:blue">c</span><span style="color:red">b</span><span style="color:red">a</span></li>
+<li><span style="color:red">c</span><span style="color:blue">a</span><span style="color:blue">b</span><span style="color:red">a</span><span style="color:blue">a</span><span style="color:blue">c</span><span style="color:red">b</span><span style="color:red">a</span></li>
+<li><span style="color:blue">c</span><span style="color:red">a</span><span style="color:red">b</span><span style="color:red">a</span><span style="color:blue">a</span><span style="color:red">c</span><span style="color:blue">b</span><span style="color:blue">a</span></li>
+<li><span style="color:blue">c</span><span style="color:red">a</span><span style="color:red">b</span><span style="color:blue">a</span><span style="color:red">a</span><span style="color:red">c</span><span style="color:blue">b</span><span style="color:blue">a</span></li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>11
+mippiisssisssiipsspiim
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>504
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>4
+abcdefgh
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>0
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 4</h3><pre>18
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 4</h3><pre>9075135300
+</pre>
+<p>The answer may not be representable as a <var>32</var>-bit integer.</p></section>
+</div>
+</span>

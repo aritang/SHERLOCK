@@ -1,0 +1,101 @@
+
+<H1><font color="#000">Problem A:</font> Strange String Manipulation</H1>
+
+<p>
+A linear congruential generator produces a series R(&sdot;) of pseudo-random numbers by the following for-
+mulas:
+</p>
+
+<!--
+<p>
+                      R(0) = S , R(i) = (A · R(i − 1) + C) mod M     (for i = 1, 2, . . .),
+</p>
+-->
+
+<center>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_strangeString1">
+</center>
+
+<p>
+where <i>S</i>, <i>A</i>, <i>C</i>, and <i>M</i> are all parameters. In this problem, 0 &le; <i>S</i>, <i>A</i>, <i>C</i> &le; 15 and <i>M</i> = 256.
+</p>
+
+<p>
+Now suppose we have some input string <i>I</i>(&sdot;), where each character in the string is an integer between 0
+and (<i>M</i> - 1). Then, using the pseudo-random number series <i>R</i>(&sdot;), we obtain another string <i>O</i>(&sdot;) as the
+output by the following formula:
+</p>
+<!--
+<p>
+                               O(i) = (I(i) + R(i)) mod M    (for i = 1, 2, . . .),
+</p>
+-->
+
+<center>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_strangeString2">
+</center>
+
+<p>
+Your task is to write a program that shows the parameters <i>S</i>, <i>A</i>, and <i>C</i> such that the information entropy of the output string <i>O</i>(&sdot;) is minimized. Here, the information entropy <i>H</i> is given by the following formula:
+</p>
+
+<!--
+                                                      #(x)     #(x)
+                                                           log
+                                           H=−
+                                                       N        N
+                                                    x
+-->
+
+<center>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_strangeString3">
+</center>
+
+<p>
+where <i>N</i> is the length of the string and #(<i>x</i>) is the number of occurences of the alphabet <i>x</i>.
+</p>
+
+<H2>Input</H2>
+
+<p>
+The input consists of multiple datasets. Each dataset has the following format:
+</p>
+
+<p>
+<i>N</i><br>
+<i>I</i>(1) <i>I</i>(2) ... <i>I</i>(<i>N</i>)<br>
+</p>
+
+<p>
+<i>N</i> does not exceed 256.
+</p>
+
+
+<p>
+The last dataset is followed by a line containing one zero. This line is not a part of any dataset and should not be processed.
+</p>
+
+
+<H2>Output</H2>
+
+<p>
+For each dataset, print in a line the values of the three parameters <i>S</i>, <i>A</i>, and <i>C</i> separated by a single space. If more than one solution gives the same minimum entropy, choose the solution with the smallest <i>S</i>, <i>A</i>, and then <i>C</i>.
+</p>
+
+<H2>Sample Input</H2>
+<pre>
+5
+5 4 3 2 1
+5
+7 7 7 7 7
+10
+186 8 42 24 154 40 10 56 122 72
+0
+</pre>
+
+<H2>Output for the Sample Input</H2>
+<pre>
+0 1 1
+0 0 0
+8 7 14
+</pre>

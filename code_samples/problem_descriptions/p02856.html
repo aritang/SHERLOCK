@@ -1,0 +1,93 @@
+<span class="lang-en">
+<p>Score: <var>500</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3>
+<p><var>N</var> programmers are going to participate in the preliminary stage of DDCC 20XX. Due to the size of the venue, however, at most <var>9</var> contestants can participate in the finals.</p>
+<p>The preliminary stage consists of several rounds, which will take place as follows:</p>
+<ul>
+<li>All the <var>N</var> contestants will participate in the first round.</li>
+<li>When <var>X</var> contestants participate in some round, the number of contestants advancing to the next round will be decided as follows:<ul>
+<li>The organizer will choose two consecutive digits in the decimal notation of <var>X</var>, and replace them with the sum of these digits. The number resulted will be the number of contestants advancing to the next round.<br/>
+For example, when <var>X = 2378</var>, the number of contestants advancing to the next round will be <var>578</var> (if <var>2</var> and <var>3</var> are chosen), <var>2108</var> (if <var>3</var> and <var>7</var> are chosen), or <var>2315</var> (if <var>7</var> and <var>8</var> are chosen).<br/>
+When <var>X = 100</var>, the number of contestants advancing to the next round will be <var>10</var>, no matter which two digits are chosen.</li>
+</ul>
+</li>
+<li>The preliminary stage ends when <var>9</var> or fewer contestants remain.</li>
+</ul>
+<p>Ringo, the chief organizer, wants to hold as many rounds as possible.
+Find the maximum possible number of rounds in the preliminary stage.</p>
+<p>Since the number of contestants, <var>N</var>, can be enormous, it is given to you as two integer sequences <var>d_1, \ldots, d_M</var> and <var>c_1, \ldots, c_M</var>, which means the following: the decimal notation of <var>N</var> consists of <var>c_1 + c_2 + \ldots + c_M</var> digits, whose first <var>c_1</var> digits are all <var>d_1</var>, the following <var>c_2</var> digits are all <var>d_2</var>, <var>\ldots</var>, and the last <var>c_M</var> digits are all <var>d_M</var>.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3>
+<ul>
+<li><var>1 \leq M \leq 200000</var></li>
+<li><var>0 \leq d_i \leq 9</var></li>
+<li><var>d_1 \neq 0</var></li>
+<li><var>d_i \neq d_{i+1}</var></li>
+<li><var>c_i \geq 1</var></li>
+<li><var>2 \leq c_1 + \ldots + c_M \leq 10^{15}</var></li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3>
+<p>Input is given from Standard Input in the following format:</p>
+<pre><var>M</var>
+<var>d_1</var> <var>c_1</var>
+<var>d_2</var> <var>c_2</var>
+<var>:</var>
+<var>d_M</var> <var>c_M</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3>
+<p>Print the maximum possible number of rounds in the preliminary stage.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>2
+2 2
+9 1
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>3
+</pre>
+<p>In this case, <var>N = 229</var> contestants will participate in the first round. One possible progression of the preliminary stage is as follows:</p>
+<ul>
+<li><var>229</var> contestants participate in Round <var>1</var>, <var>49</var> contestants participate in Round <var>2</var>, <var>13</var> contestants participate in Round <var>3</var>, and <var>4</var> contestants advance to the finals.</li>
+</ul>
+<p>Here, three rounds take place in the preliminary stage, which is the maximum possible number.  </p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>3
+1 1
+0 8
+7 1
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>9
+</pre>
+<p>In this case, <var>1000000007</var> will participate in the first round.  </p></section>
+</div>
+</span>

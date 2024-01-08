@@ -1,0 +1,68 @@
+<span class="lang-en">
+<p>Score : <var>1200</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>Let <var>M</var> be a positive integer.</p>
+<p>You are given <var>2 N</var> integers <var>a_1, a_2, \ldots, a_{2 N}</var>, where <var>0 \leq a_i &lt; M</var> for each <var>i</var>.</p>
+<p>Consider dividing the <var>2 N</var> integers into <var>N</var> pairs.
+Here, each integer must belong to exactly one pair.</p>
+<p>We define the <em>ugliness</em> of a pair <var>(x, y)</var> as <var>(x + y) \mod M</var>.
+Let <var>Z</var> be the largest ugliness of the <var>N</var> pairs. Find the minimum possible value of <var>Z</var>.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li>All values in input are integers.</li>
+<li><var>1 \leq N \leq 10^5</var></li>
+<li><var>1 \leq M \leq 10^9</var></li>
+<li><var>0 \leq a_i &lt; M</var></li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var> <var>M</var>
+<var>a_1</var> <var>a_2</var> <var>\cdots</var> <var>a_{2N}</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the minimum possible value of <var>Z</var>, where <var>Z</var> is the largest ugliness of the <var>N</var> pairs.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>3 10
+0 2 3 4 5 9
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>5
+</pre>
+<p>One solution is to form pairs <var>(0, 5), (2, 3)</var> and <var>(4, 9)</var>, with ugliness <var>5, 5</var> and <var>3</var>, respectively.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>2 10
+1 9 1 9
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>0
+</pre>
+<p>Pairs <var>(1, 9)</var> and <var>(1, 9)</var> should be formed, with ugliness both <var>0</var>.</p></section>
+</div>
+</span>

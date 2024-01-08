@@ -1,0 +1,115 @@
+
+
+<script src="./IMAGE/varmath.js" charset="UTF-8"></script>
+
+<h1>Problem C: Last One</h1>
+<h2>Problem</h2>
+
+<p>
+  あなたは、集合好きな友人Aと一風変わったゲームをしてみる事にした。
+</p>
+
+<p>
+  n個の要素からなる重複が許される非負の整数の集合Sが与えられる。集合Sに含まれる各要素は非負の<var>p<sub>i</sub></var>進数である。集合Sに対して
+  以下のStep1~3を1つのターンとして、あなたと相手の二人が交互にターンを繰り返す。各ターンではこの番号の順に操作を行う。
+</p>
+
+<p>
+    Step 1: 集合Sに含まれる全ての要素を一度取り除き、その取り除いた各要素を2進数に変換して、0を消して1が1つ以上連続する部分に分割し、その分割された部分を全て集合Sに加える。<br/><br/>
+    Step 2: このとき集合Sが空になっていたならば、現在このターンをプレイしているプレイヤーは負ける。</br><br/>
+    Step 3: 集合Sに含まれる要素aを1つ選び、そのaから 1 &le; x &le; a を満たす任意の整数xを引く。</br>
+  <br/>
+</p>
+
+<p>
+下の図は次の入力が与えられたときの最初の1ターンの進行の仕方のうちの1つの例である。
+</p>
+
+<pre>
+4
+10 3
+2 11
+16 5
+16 AE
+</pre>
+
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE3_ACPC2013Aizu_aizuicpc_C" width="700"><br/>
+
+
+<p>
+  最初はあなたのターンだ。与えられた入力に対して両者が最善を尽くすとき、果たしてあなたに勝ち目はあるのだろうか。
+</p>
+
+
+<h2>Input</h2>
+<p>
+入力は次の形式で与えられる。
+</p>
+<pre>
+<var>n</var>
+<var>p<sub>1</sub></var> <var>m<sub>1</sub></var>
+<var>p<sub>2</sub></var> <var>m<sub>2</sub></var>
+...
+<var>p<sub>i</sub></var> <var>m<sub>i</sub></var>
+...
+<var>p<sub>n</sub></var> <var>m<sub>n</sub></var>
+</pre>
+
+<p>
+集合の要素である<var>p<sub>i</sub></var>進数<var>m<sub>i</sub></var>が<var>n</var>個与えられる。集合の要素の数<var>n</var>は10<sup>5</sup>を超えない。また、2≦<var>p<sub>i<sub></var>≦62を満たす。
+<var>p<sub>i</sub></var>進数<var>m<sub>i</sub></var>は通常の数字である0~9に加え、アルファベット52文字を使用する。
+その順番は012...789ABC...XYZabc...xyzを昇順とし、<var>i</var>番目までの文字を使うものとする。また、<var>p<sub>i</sub></var>進数<var>m<sub>i</sub></var>は10進数で2<sup>18</sup>-1を超えない.
+</p>
+
+
+<h2>Output</h2>
+<p>
+与えられた入力に対しあなたが勝てるならwin、負けるならloseを出力せよ。
+</p>
+
+
+<h2>Sample Input 1</h2>
+<pre>
+1
+10 1
+</pre>
+
+
+
+<h2>Sample Output 1</h2>
+<pre>
+win
+</pre>
+
+
+
+<h2>Sample Input 2</h2>
+<pre>
+2
+10 1
+10 1
+</pre>
+
+
+
+<h2>Sample Output 2</h2>
+<pre>
+lose
+</pre>
+
+
+
+<h2>Sample Input 3</h2>
+<pre>
+3
+25 53AI
+43 3BI0
+62 pn6
+</pre>
+
+
+
+<h2>Sample Output 3</h2>
+<pre>
+win
+</pre>

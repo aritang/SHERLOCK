@@ -1,0 +1,143 @@
+<span class="lang-en">
+<p>Score : <var>700</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>For strings <var>s</var> and <var>t</var>, we will say that <var>s</var> and <var>t</var> are <em>prefix-free</em> when neither is a prefix of the other.</p>
+<p>Let <var>L</var> be a positive integer. A set of strings <var>S</var> is a <em>good string set</em> when the following conditions hold true:</p>
+<ul>
+<li>Each string in <var>S</var> has a length between <var>1</var> and <var>L</var> (inclusive) and consists of the characters <code>0</code> and <code>1</code>.</li>
+<li>Any two distinct strings in <var>S</var> are prefix-free.</li>
+</ul>
+<p>We have a good string set <var>S = \{ s_1, s_2, ..., s_N \}</var>. Alice and Bob will play a game against each other. They will alternately perform the following operation, starting from Alice:</p>
+<ul>
+<li>Add a new string to <var>S</var>. After addition, <var>S</var> must still be a good string set.</li>
+</ul>
+<p>The first player who becomes unable to perform the operation loses the game. Determine the winner of the game when both players play optimally.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 \leq N \leq 10^5</var></li>
+<li><var>1 \leq L \leq 10^{18}</var></li>
+<li><var>s_1</var>, <var>s_2</var>, ..., <var>s_N</var> are all distinct.</li>
+<li>{ <var>s_1</var>, <var>s_2</var>, ..., <var>s_N</var> } is a good string set.</li>
+<li><var>|s_1| + |s_2| + ... + |s_N| \leq 10^5</var></li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var> <var>L</var>
+<var>s_1</var>
+<var>s_2</var>
+<var>:</var>
+<var>s_N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>If Alice will win, print <code>Alice</code>; if Bob will win, print <code>Bob</code>.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>2 2
+00
+01
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>Alice
+</pre>
+<p>If Alice adds <code>1</code>, Bob will be unable to add a new string.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>2 2
+00
+11
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>Bob
+</pre>
+<p>There are two strings that Alice can add on the first turn: <code>01</code> and <code>10</code>.
+In case she adds <code>01</code>, if Bob add <code>10</code>, she will be unable to add a new string.
+Also, in case she adds <code>10</code>, if Bob add <code>01</code>, she will be unable to add a new string.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>3 3
+0
+10
+110
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>Alice
+</pre>
+<p>If Alice adds <code>111</code>, Bob will be unable to add a new string.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 4</h3><pre>2 1
+0
+1
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 4</h3><pre>Bob
+</pre>
+<p>Alice is unable to add a new string on the first turn.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 5</h3><pre>1 2
+11
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 5</h3><pre>Alice
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 6</h3><pre>2 3
+101
+11
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 6</h3><pre>Bob
+</pre></section>
+</div>
+</span>

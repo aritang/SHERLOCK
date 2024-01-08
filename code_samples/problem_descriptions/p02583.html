@@ -1,0 +1,98 @@
+<span class="lang-en">
+<p>Score : <var>200</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>We have sticks numbered <var>1, \cdots, N</var>. The length of Stick <var>i</var> <var>(1 \leq i \leq N)</var> is <var>L_i</var>.</p>
+<p>In how many ways can we choose three of the sticks with different lengths that can form a triangle?</p>
+<p>That is, find the number of triples of integers <var>(i, j, k)</var> <var>(1 \leq i &lt; j &lt; k \leq N)</var> that satisfy both of the following conditions:</p>
+<ul>
+<li><var>L_i</var>, <var>L_j</var>, and <var>L_k</var> are all different.</li>
+<li>There exists a triangle whose sides have lengths <var>L_i</var>, <var>L_j</var>, and <var>L_k</var>.</li>
+</ul>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 \leq N \leq 100</var></li>
+<li><var>1 \leq L_i \leq 10^9</var></li>
+<li>All values in input are integers.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+<var>L_1</var> <var>L_2</var> <var>\cdots</var> <var>L_N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the number of ways to choose three of the sticks with different lengths that can form a triangle.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>5
+4 4 9 7 5
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>5
+</pre>
+<p>The following five triples <var>(i, j, k)</var> satisfy the conditions: <var>(1, 3, 4)</var>, <var>(1, 4, 5)</var>, <var>(2, 3, 4)</var>, <var>(2, 4, 5)</var>, and <var>(3, 4, 5)</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>6
+4 5 4 3 3 5
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>8
+</pre>
+<p>We have two sticks for each of the lengths <var>3</var>, <var>4</var>, and <var>5</var>. To satisfy the first condition, we have to choose one from each length.</p>
+<p>There is a triangle whose sides have lengths <var>3</var>, <var>4</var>, and <var>5</var>, so we have <var>2 ^ 3 = 8</var> triples <var>(i, j, k)</var> that satisfy the conditions.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>10
+9 4 6 1 9 6 10 6 6 8
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>39
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 4</h3><pre>2
+1 1
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 4</h3><pre>0
+</pre>
+<p>No triple <var>(i, j, k)</var> satisfies <var>1 \leq i &lt; j &lt; k \leq N</var>, so we should print <var>0</var>.</p></section>
+</div>
+</span>

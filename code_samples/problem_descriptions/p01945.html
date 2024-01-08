@@ -1,0 +1,124 @@
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({ tex2jax: { inlineMath: [["$","$"], ["\\(","\\)"]], skipTags: ["script","noscript","style","textarea","code"], processEscapes: true }});
+</script>
+<script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML"></script>
+
+<H1>
+Star in Parentheses
+</H1>
+
+<p>
+  You are given a string $S$, which is balanced parentheses with a star symbol '<span>*</span>' inserted.
+</p>
+
+<p>
+  Any balanced parentheses can be constructed using the following rules:
+</p>
+
+<ul>
+<li>An empty string is balanced.</li>
+<li>Concatenation of two balanced parentheses is balanced.</li>
+<li>If $T$ is balanced parentheses, concatenation of '<span>(</span>', $T$, and '<span>)</span>' in this order is balanced.</li>
+</ul>
+
+<p>
+  For example, '<span>()()</span>' and '<span>(()())</span>' are balanced parentheses. '<span>)(</span>' and '<span>)()(()</span>' are not balanced parentheses.
+</p>
+
+<p>
+  Your task is to count how many matching pairs of parentheses surround the star.
+</p>
+
+<p>
+Let $S_i$be the $i$-th character of a string $S$. The pair of $S_l$ and $S_r$ ($l < r$) is called a matching pair of parentheses if $S_l$ is '<span>(</span>', $S_r$ is '<span>)</span>' and the surrounded string by them is balanced when ignoring a star symbol.
+</p>
+
+<H2>Input</H2>
+
+<p>
+The input consists of a single test case formatted as follows.
+</p>
+
+<pre>
+$S$
+</pre>
+
+<p>
+$S$ is balanced parentheses with exactly one '<span>*</span>' inserted somewhere. The length of $S$ is between 1 and 100, inclusive.
+</p>
+
+
+<H2>Output</H2>
+
+<p>
+Print the answer in one line.
+</p>
+
+<H2>Sample Input 1</H2>
+<pre>
+((*)())
+</pre>
+
+<H2>Output for Sample Input 1</H2>
+<pre>
+2
+</pre>
+
+
+
+<H2>Sample Input 2</H2>
+<pre>
+(*)
+</pre>
+
+<H2>Output for Sample Input 2</H2>
+<pre>
+1
+</pre>
+
+<H2>Sample Input 3</H2>
+<pre>
+(()())*
+</pre>
+
+<H2>Output for Sample Input 3</H2>
+<pre>
+0
+</pre>
+
+
+<H2>Sample Input 4</H2>
+<pre>
+()*()
+</pre>
+
+<H2>Output for Sample Input 4</H2>
+<pre>
+0
+</pre>
+
+
+<H2>Sample Input 5</H2>
+<pre>
+((((((((((*))))))))))
+</pre>
+
+<H2>Output for Sample Input 5</H2>
+<pre>
+10
+</pre>
+
+<H2>Sample Input 6</H2>
+<pre>
+*
+</pre>
+
+<H2>Output for Sample Input 6</H2>
+<pre>
+0
+</pre>
+
+
+
+

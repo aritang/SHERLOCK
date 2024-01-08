@@ -1,0 +1,111 @@
+
+
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: { inlineMath: [['\\(','\\)']] }
+  });
+</script>
+<script type='text/javascript' src='http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
+
+<h1 class="ndoc-heading1">Problem F: MLE</h1>
+
+<p class="ndoc-top">ICPC World Finals 4日目</p>
+<p class="ndoc-top">暗い嵐の夜だった。 夢の中でティー氏はタイムスリップしていた。
+ICPCの会場のようだが何かおかしい…。 もしや…これは、N年前（Nは自然数）のICPCなのか…? 混乱の内に競技は開始してしまった。
+だが慌てる必要はない。 きっと問題も簡単に違いない。 例えばこれなどはソートするだけで解けてしまうはずではないか。
+冷静にコードを書き上げ、速やかにSubmit。</p>
+<p class="ndoc-top">しかしその結果は…Memory Limit Exceeded…?!</p>
+<h2 class="ndoc-heading2">問題</h2>
+<p class="ndoc-top">C++言語については以下のコード</p>
+<pre>
+long long int a[n];
+unsigned long long int x = x0;
+for (int i = 0; i &lt; n; i++) {
+  a[i]=(long long int)x;
+  x ^= x &lt;&lt; 13;
+  x ^= x &gt;&gt; 7;
+  x ^= x &lt;&lt; 17;
+}
+</pre>
+<p>Java言語については以下のコード</p>
+<pre>
+long[] a = new long[n];
+long x = x0;
+for(int i = 0; i &lt; n; i++){
+  a[i] = x;
+  x ^= x &lt;&lt; 13;
+  x ^= x &gt;&gt;&gt; 7;
+  x ^= x &lt;&lt; 17;
+}
+</pre>
+<p>で与えられる擬似乱数列\( a[0], a[1], \cdots, a[n-1] \)を昇順にソートする。 \(k\)番目の数（\(
+a[k-1] \)）を答えよ。</p>
+<h2 class="ndoc-heading2">入力</h2>
+
+<pre>
+n k x0
+</pre>
+<p>1行目に 擬似乱数列の長さ\(n\)、 求めるインデックス\(k\)、 コード中の初期値\(x0\) が空白区切りで与えられる。</p>
+
+<h2 class="ndoc-heading2">出力</h2>
+<p class="ndoc-top">問題文にて定義された擬似乱数列において\(k\)番目に小さい数を1行に出力せよ。</p>
+<h2 class="ndoc-heading2">制約</h2>
+
+<ul class="ndoc-indent">
+<li>\( 0 \leq x0 \leq 9 \)</li>
+<li>\( 1 \leq n \leq 10^{8}(= 100000000) \)</li>
+<li>\( 1 \leq k \leq n \)</li>
+</ul>
+<h2 class="ndoc-heading2">入出力例</h2>
+<h3 class="ndoc-heading3">入力1</h3>
+
+<pre>
+20 10 1
+</pre>
+<h3 class="ndoc-heading3">出力1</h3>
+
+<pre>
+-768720241707614171
+</pre>
+<p>
+この入力において生成される数列は以下の通りである。
+</p>
+<pre>
+1
+1082269761
+1152992998833853505
+-7269227409276787159
+-768720241707614171
+-8787613929710185883
+-670945072575735807
+-6753709453369041295
+-4166779903597258483
+9024654201992055039
+8332670729032836398
+2074683623940568804
+-1176172910426220663
+5632491372296299238
+-8006175397324373085
+-8536891001451786268
+-3486562341448986757
+1956468987595729445
+-6260278484400246991
+1076885984028793263
+</pre>
+<h3 class="ndoc-heading3">入力2</h3>
+<pre>
+1000000 100 2
+</pre>
+<h3 class="ndoc-heading3">出力2</h3>
+<pre>
+-9221458681145860019
+</pre>
+<h3 class="ndoc-heading3">入力3</h3>
+<pre>
+100000000 10000000 3
+</pre>
+<h3 class="ndoc-heading3">出力3</h3>
+<pre>
+-7379326796154077070
+</pre>

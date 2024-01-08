@@ -1,0 +1,160 @@
+
+
+<script src="./IMAGE/varmath.js" charset="UTF-8"></script>
+
+
+<h1>Problem D: Room of Time and Spirit</h1>
+<h2>Problem</h2>
+
+<p>
+　20XX年、とある科学者がバイオテクノロジーによって強力な人造人間を開発してしまった。この人造人間はコンピュータにより、戦闘の達人たちの細胞を組み合わせて作られているため非常に強力である。
+<br/>
+
+<br/>
+　このままでは地球は人造人間に支配されてしまうので、 <var>N</var> 人の戦士たちは人造人間と戦うことにした。しかし今の戦士たちでは到底人造人間に敵わないため、修行をしなければならない。また、<var>N</var> 人の戦士たちはそれぞれ 1 ~ <var>N</var> の番号が付いている。
+
+<br/>
+<br/>
+
+　この時代、天空都市AIZUには SRLU室と呼ばれる修行のための特殊な部屋が存在した。この部屋での1年は外界の時間の1日と同じであるため、短期間で戦闘力を大幅に上昇することが出来る。同時に部屋に入れる人数の上限は2人である。また、その2人が部屋に入った時、それぞれ戦闘力が上昇する。
+
+<br/>
+<br/>
+
+　戦士たちは残された時間でどのように部屋に入るか検討するため、あなたに以下のクエリを処理するプログラムの作成を依頼した。
+
+<br/>
+<br/>
+
+　与えられるクエリは以下の通りである。
+<br/>
+　また以下の説明で出てくる <var>A</var>, <var>B</var> はそれぞれ戦士の番号を表す。<var>A</var> と <var>B</var> が等しい事は無い。
+<br/>
+<br/>
+	
+<b>IN <var>A</var> <var>B</var> <var>C</var></b>
+<br/>
+<br/>
+　<var>A</var> と <var>B</var> が部屋に入り、それぞれ <var>C</var> だけ戦闘力が上昇する。この時、(部屋に入る直前の <var>B</var> の戦闘力) - (部屋に入る直前の <var>A</var> の戦闘力) = <var>C</var> が成り立つ。また、この時 <var>B</var> の戦闘力は <var>A</var> の戦闘力より高い事が保証される。
+
+<br/>
+<br/>
+
+<b>COMPARE <var>A</var> <var>B</var></b>
+<br/>
+<br/>
+　<var>A</var> と <var>B</var> の戦闘力の差 (現在の <var>B</var> の戦闘力) - (現在の <var>A</var> の戦闘力)を出力する。もしその差が特定出来なければ、WARNING と出力せよ。
+
+<br/>
+<br/>
+
+<h2>Input</h2>
+
+<pre>
+<var>N</var> <var>Q</var>
+<var>query<sub>1</sub></var>
+.
+.
+.
+<var>query<sub>Q</sub></var>
+</pre>
+
+<p>
+最初に戦士の人数 <var>N</var> , クエリの数 <var>Q</var> が与えられる。
+<br/>
+次に <var>Q</var> 回だけクエリが与えられる。
+</p>
+
+
+<h2>Constraints</h2>
+<p>入力は以下の条件を満たす。</p>
+<ul>
+
+<li>2 &le; <var>N</var> &le; 100000</li>
+<li>1 &le; <var>Q</var> &le; 100000</li>
+<li>1 &le; <var>A</var>, <var>B</var> &le; <var>N</var></li>
+<li>1 &le; <var>C</var> &le; 5000</li>
+
+</ul>
+
+<h2>Output</h2>
+<p>
+
+上記のように与えられたクエリを順番に処理していき、 COMPAREの入力が与えられた際に出力を行う。
+
+</p>
+
+<h2>Sample Input1</h2>
+<pre>
+3 5
+COMPARE 1 2
+IN 1 2 5
+IN 2 3 3
+COMPARE 2 3
+COMPARE 1 3
+</pre>
+
+<h2>Sample Output1</h2>
+<pre>
+WARNING
+3
+11
+</pre>
+
+<h2>Sample Input2</h2>
+<pre>
+4 3
+IN 1 4 10
+IN 2 3 20
+COMPARE 1 2
+</pre>
+
+<h2>Sample Output2</h2>
+<pre>
+WARNING
+</pre>
+
+<h2>Sample Input3</h2>
+<pre>
+3 4
+IN 2 1 2
+IN 3 1 2
+COMPARE 1 3
+COMPARE 2 3
+</pre>
+
+<h2>Sample Output3</h2>
+<pre>
+-2
+2
+</pre>
+
+<h2>Sample Input4</h2>
+<pre>
+10 4
+IN 10 8 2328
+IN 8 4 3765
+IN 3 8 574
+COMPARE 4 8
+</pre>
+
+<h2>Sample Output4</h2>
+<pre>
+-3191
+</pre>
+
+<h2>Sample Input5</h2>
+<pre>
+3 5
+IN 1 2 5
+IN 1 2 5
+IN 2 3 10
+COMPARE 1 2
+COMPARE 2 3
+</pre>
+
+<h2>Sample Output5</h2>
+<pre>
+15
+10
+</pre>

@@ -1,0 +1,82 @@
+<span class="lang-en">
+<p>Score : <var>100</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>You are given an array <var>a_0, a_1, ..., a_{N-1}</var> of length <var>N</var>. Process <var>Q</var> queries of the following types.</p>
+<p>The type of <var>i</var>-th query is represented by <var>T_i</var>.</p>
+<ul>
+<li><var>T_i=1</var>: You are given two integers <var>X_i,V_i</var>. Replace the value of <var>A_{X_i}</var> with <var>V_i</var>.</li>
+<li><var>T_i=2</var>: You are given two integers <var>L_i,R_i</var>. Calculate the maximum value among <var>A_{L_i},A_{L_i+1},\cdots,A_{R_i}</var>.</li>
+<li><var>T_i=3</var>: You are given two integers <var>X_i,V_i</var>. Calculate the minimum <var>j</var> such that <var>X_i \leq j \leq N, V_i \leq A_j</var>. If there is no such <var>j</var>, answer <var>j=N+1</var> instead.</li>
+</ul>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 \leq N \leq 2 \times 10^5</var></li>
+<li><var>0 \leq A_i \leq 10^9</var></li>
+<li><var>1 \leq Q \leq 2 \times 10^5</var></li>
+<li><var>1 \leq T_i \leq 3</var></li>
+<li><var>1 \leq X_i \leq N</var>, <var>0 \leq V_i \leq 10^9</var> (<var>T_i=1,3</var>)</li>
+<li><var>1 \leq L_i \leq R_i \leq N</var> (<var>T_i=2</var>)</li>
+<li>All values in Input are integer.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var> <var>Q</var>
+<var>A_1</var> <var>A_2</var> <var>\cdots</var> <var>A_N</var>
+First query
+Second query
+<var>\vdots</var>
+<var>Q</var>-th query
+</pre>
+<p>Each query is given in the following format:</p>
+<p>If <var>T_i=1,3</var>,</p>
+<pre><var>T_i</var> <var>X_i</var> <var>V_i</var>
+</pre>
+<p>If <var>T_i=2</var>,</p>
+<pre><var>T_i</var> <var>L_i</var> <var>R_i</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>For each query with <var>T_i=2, 3</var>, print the answer.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>5 5
+1 2 3 2 1
+2 1 5
+3 2 3
+1 3 1
+2 2 4
+3 1 3
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>3
+3
+2
+6
+</pre>
+<ul>
+<li>First query: Print <var>3</var>, which is the maximum of <var>(A_1,A_2,A_3,A_4,A_5)=(1,2,3,2,1)</var>.</li>
+<li>Second query: Since <var>3&gt;A_2</var>, <var>j=2</var> does not satisfy the condition．Since <var>3 \leq A_3</var>, print <var>j=3</var>.</li>
+<li>Third query: Replace the value of <var>A_3</var> with <var>1</var>. It becomes <var>A=(1,2,1,2,1)</var>.</li>
+<li>Fourth query: Print <var>2</var>, which is the maximum of <var>(A_2,A_3,A_4)=(2,1,2)</var>.</li>
+<li>Fifth query: Since there is no <var>j</var> that satisfies the condition, print <var>j=N+1=6</var>.</li>
+</ul></section>
+</div>
+</span>

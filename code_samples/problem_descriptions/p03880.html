@@ -1,0 +1,82 @@
+<span class="lang-en">
+<p>Score : <var>500</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><style>
+   #nck {
+      width: 30px;
+      height: auto;
+   }
+</style>
+<p>A cheetah and a cheater are going to play the game of Nim.
+In this game they use <var>N</var> piles of stones.
+Initially the <var>i</var>-th pile contains <var>a_i</var> stones.
+The players take turns alternately, and the cheetah plays first.
+In each turn, the player chooses one of the piles, and takes one or more stones from the pile.
+The player who can't make a move loses.</p>
+<p>However, before the game starts, the cheater wants to cheat a bit to make sure that he can win regardless of the moves by the cheetah.
+From each pile, the cheater takes zero or one stone and eats it before the game.
+In case there are multiple ways to guarantee his winning, he wants to minimize the number of stones he eats.</p>
+<p>Compute the number of stones the cheater will eat.
+In case there is no way for the cheater to win the game even with the cheating, print <code>-1</code> instead.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 ≤ N ≤ 10^5</var></li>
+<li><var>2 ≤ a_i ≤ 10^9</var></li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>The input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+<var>a_1</var>
+:
+<var>a_N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the answer.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>3
+2
+3
+4
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>3
+</pre>
+<p>The only way for the cheater to win the game is to take stones from all piles and eat them.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>3
+100
+100
+100
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>-1
+</pre></section>
+</div>
+</span>

@@ -1,0 +1,78 @@
+
+
+<script src="./IMAGE/varmath.js" charset="UTF-8"></script>
+<h1>Make KND So Fat</h1>
+<h2>Problem</h2>
+<p>KND君は会津大学に在籍する学生プログラマである。彼の隣人はとても迷惑なことで知られている。隣人は彼が甘党であることを知り、必要以上に甘味を差し入れて彼を太らせようと画策している。そのために、当の隣人であるあなたは友人からとある甘味処を紹介してもらった。</p>
+<p>しかし、その甘味処での商品の販売の仕方は少し変わっている。その販売方法とは、甘味セットと呼ばれる甘味の組を日替わりで販売するというものだ。予算内であればその日に販売されている甘味セットの中から自由に甘味を買うことができる。しかし、甘味セットに含まれる甘味は一種類につき１個しか販売されていない。
+また、予算は期間の始めに用意した額から支払い、期間途中での追加予算はないものとする。あなたは友人から教えられた甘味の体重に与える影響の度合いと値段をもとに、ある期間中に一定の予算内で彼の体重を最適に増やす甘味の買い方を計算するプログラムを作成することにした。</p>
+
+<h2>Input</h2>
+<p>
+入力は複数のテストケースからなる。空行区切りで与えられる。ひとつのテストケースは以下の形式で与えられる。入力の終了をEOFで示す。
+</p>
+<pre>
+<var>s</var> <var>d</var> <var>m</var>
+<var>k<sub>1</sub></var>
+<var>w<sub>1,1</sub></var> <var>p<sub>1,1</sub></var> <var>w<sub>1,2</sub></var> <var>p<sub>1,2</sub></var> ... <var>w<sub>1,k</sub></var> <var>p<sub>1,k</sub></var>
+<var>k<sub>2</sub></var>
+<var>w<sub>2,1</sub></var> <var>p<sub>2,1</sub></var> <var>w<sub>2,2</sub></var> <var>p<sub>2,2</sub></var> ... <var>w<sub>2,k</sub></var> <var>p<sub>2,k</sub></var>
+...
+<var>k<sub>s</sub></var>
+<var>w<sub>s,1</sub></var> <var>p<sub>s,1</sub></var> <var>w<sub>s,2</sub></var> <var>p<sub>s,2</sub></var> ... <var>w<sub>s,k</sub></var> <var>p<sub>s,k</sub></var>
+<var>f<sub>1</sub></var> <var>f<sub>2</sub></var> ... <var>f<sub>d</sub></var>
+</pre>
+<p>
+ここで、
+</p>
+<ul>
+<li><var>s</var>:甘味セットの種類</li>
+<li><var>d</var>:対象となる期間</li>
+<li><var>m</var>:予算</li>
+<li><var>k<sub>i</sub></var>:i番目の甘味セットに含まれる甘味の種類数</li>
+<li><var>w<sub>i,j</sub></var>:i番目の甘味セットに含まれるj番目の甘味の体重に与える影響</li>
+<li><var>p<sub>i,j</sub></var>:i番目の甘味セットに含まれるj番目の甘味の値段</li>
+<li><var>f<sub>i</sub></var>:i日目に販売されている甘味セットの番号(0から始まる)</li>
+</ul>
+<p>
+である。
+</p>
+
+<h2>Constraints</h2>
+<p>入力は以下の条件を満たす。</p>
+<ul>
+<li>入力はすべて整数。</li>
+<li>1 &le; <var>s</var> &le; <var>d</var> &le; 100</li>
+<li>1 &le; <var>m</var> &le; 300</li>
+<li>1 &le; <var>k<sub>i</sub></var> &le; 50</li>
+<li>0 &le; <var>w<sub>i,j</sub></var> &le; 50</li>
+<li>0 &le; <var>p<sub>i,j</sub></var> &le; 300</li>
+<li>0 &le; <var>f<sub>i</sub></var> &lt; <var>s</var></li>
+</ul>
+
+
+<h2>Output</h2>
+<p>各テストケースにつき予算内で体重に与えられる最大の影響とその影響を与えるために必要な最小の金額を空白区切りで1行に出力せよ。</p>
+
+<h2>Sample Input</h2>
+<pre>
+3 3 100
+2
+5 20 3 10
+2
+10 50 12 60
+2
+8 30 22 100
+0 1 2
+
+1 1 30
+1
+13 8
+0
+</pre>
+
+<h2>Sample Output</h2>
+<pre>
+23 100
+13 8
+</pre>

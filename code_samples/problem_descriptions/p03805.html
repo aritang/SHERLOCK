@@ -1,0 +1,104 @@
+<span class="lang-en">
+<p>Score : <var>300</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>You are given an undirected unweighted graph with <var>N</var> vertices and <var>M</var> edges that contains neither self-loops nor double edges.<br/>
+Here, a <em>self-loop</em> is an edge where <var>a_i = b_i (1≤i≤M)</var>, and <em>double edges</em> are two edges where <var>(a_i,b_i)=(a_j,b_j)</var> or <var>(a_i,b_i)=(b_j,a_j) (1≤i&lt;j≤M)</var>.<br/>
+How many different paths start from vertex <var>1</var> and visit all the vertices exactly once?<br/>
+Here, the endpoints of a path are considered visited.  </p>
+<p>For example, let us assume that the following undirected graph shown in Figure 1 is given.</p>
+<div style="text-align: center;">
+<img src="https://atcoder.jp/img/5013/888b2f55d46f66125a4ac25cd8cfc19a.png"/>
+<p>Figure 1: an example of an undirected graph</p>
+</div>
+<p>The following path shown in Figure 2 satisfies the condition.</p>
+<div style="text-align: center;">
+<img src="https://atcoder.jp/img/5013/694eda4639f3f4608c9f0b38af1633d3.png"/>
+<p>Figure 2: an example of a path that satisfies the condition</p>
+</div>
+<p>However, the following path shown in Figure 3 does not satisfy the condition, because it does not visit all the vertices.</p>
+<div style="text-align: center;">
+<img src="https://atcoder.jp/img/5013/4739baf6665ab2832ea424b1cc404ee1.png"/>
+<p>Figure 3: an example of a path that does not satisfy the condition</p>
+</div>
+<p>Neither the following path shown in Figure 4, because it does not start from vertex <var>1</var>.</p>
+<div style="text-align: center;">
+<img src="https://atcoder.jp/img/5013/7ad401c30e069a98a34c8cfec70ec278.png"/>
+<p>Figure 4: another example of a path that does not satisfy the condition</p>
+</div>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>2≦N≦8</var> </li>
+<li><var>0≦M≦N(N-1)/2</var> </li>
+<li><var>1≦a_i&lt;b_i≦N</var> </li>
+<li>The given graph contains neither self-loops nor double edges.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>The input is given from Standard Input in the following format:</p>
+<pre><var>N</var> <var>M</var>  
+<var>a_1</var> <var>b_1</var>  
+<var>a_2</var> <var>b_2</var>
+<var>:</var>  
+<var>a_M</var> <var>b_M</var>  
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the number of the different paths that start from vertex <var>1</var> and visit all the vertices exactly once.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>3 3
+1 2
+1 3
+2 3
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>2
+</pre>
+<p>The given graph is shown in the following figure:</p>
+<div style="text-align: center;">
+<img alt="43c0ac53de20d989d100bf60b3cd05fa.png" src="https://atcoder.jp/img/5013/43c0ac53de20d989d100bf60b3cd05fa.png"/>
+</div>
+<p>The following two paths satisfy the condition:</p>
+<div style="text-align: center;">
+<img alt="c4a27b591d364fa479314e3261b85071.png" src="https://atcoder.jp/img/5013/c4a27b591d364fa479314e3261b85071.png"/>
+</div>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>7 7
+1 3
+2 7
+3 4
+4 5
+4 6
+5 6
+6 7
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>1
+</pre>
+<p>This test case is the same as the one described in the problem statement.</p></section>
+</div>
+</span>

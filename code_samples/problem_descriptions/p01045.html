@@ -1,0 +1,84 @@
+
+
+<h1>Problem I: Hopping Mind</h1>
+
+<h2>Problem</h2>
+<p>
+チエノとカカオは同じ喫茶店で働く姉妹である。2人はとても仲が良く、ある日、とあるテーブルゲームで遊ぶことになった。
+</p>
+
+<p>
+ゲームは<var>R</var>マス&times;<var>C</var>マスの盤面と、駒としてうさぎのTPを用いる。盤面の各マスは白か黒の色が塗られている。最初にTPを盤面の右下(<var>R</var>,<var>C</var>)におき、2人で次の行動を交互に行う。TPの現在の位置を(<var>a</var>,<var>b</var>)とすると、そこからジャンプ可能な位置(<var>i</var>,<var>j</var>)を1つ選び、TPをそこにジャンプさせる。TPがジャンプ可能な位置(<var>i</var>,<var>j</var>)は以下をすべて満たす。
+</p>
+
+<ol>
+<li>
+1 &le; <var>i</var> &le; <var>R</var> かつ 1 &le; <var>j</var> &le; <var>C</var> かつ <var>i</var> &le; <var>a</var> かつ <var>j</var> &le; <var>b</var> かつ 1 &le; (<var>a</var>-<var>i</var>) + (<var>b</var>-<var>j</var>) &le; <var>K</var>
+</li>
+<li>
+(<var>i</var>,<var>j</var>)は白いマスである
+</li>
+</ol>
+
+<p>
+自分のターンにTPをジャンプさせることができなくなった場合、負けとなる。
+</p>
+
+<p>
+チエノが先手、カカオが後手でこのゲームを行う。カカオは頭の中でゲームを最後まで先読みすることができ、常に最適な行動をとる。この時、チエノが勝つ方法が存在するかどうかを判定せよ。
+</p>
+
+<h2>Input</h2>
+<p>
+入力は以下の形式で与えられる。
+</p>
+
+<pre>
+<var>R</var> <var>C</var> <var>K</var>
+<var>G<sub>1,1</sub></var> <var>G<sub>1,2</sub></var> ... <var>G<sub>1,C</sub></var>
+<var>G<sub>2,1</sub></var> <var>G<sub>2,2</sub></var> ... <var>G<sub>2,C</sub></var>
+:
+<var>G<sub>R,1</sub></var> <var>G<sub>R,2</sub></var> ... <var>G<sub>R,C</sub></var>
+</pre>
+
+<p>
+1行目に3つの整数<var>R</var>,<var>C</var>,<var>K</var>が空白区切りで与えられる。次の<var>R</var>行に盤面の情報として<var>C</var>個の".”または"#”が与えられる。<var>G<sub>i,j</sub></var>は盤面の位置(<var>i</var>,<var>j</var>)の色を表し、”.”が白、"#”が黒を表す。
+</p>
+
+<h2>Constraints</h2>
+<ul>
+<li>1 &le; <var>R</var>,<var>C</var> &le; 1000</li>
+<li>1 &le; <var>K</var> &le; 2000</li>
+<li><var>G<sub>R,C</sub></var>は“.”である</li>
+</ul>
+
+<h2>Output</h2>
+<p>
+チエノが勝つ方法が存在する場合は”Chieno”を、存在しない場合は”Cacao”を1行に出力せよ。
+</p>
+
+<h2>Sample Input1</h2>
+<pre>
+3 3 2
+...
+...
+...
+</pre>
+
+<h2>Sample Output1</h2>
+<pre>
+Chieno
+</pre>
+
+<h2>Sample Input2</h2>
+<pre>
+3 3 2
+#.#
+.#.
+#..
+</pre>
+
+<h2>Sample Output2</h2>
+<pre>
+Cacao
+</pre>

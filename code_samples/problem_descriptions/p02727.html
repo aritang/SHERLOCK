@@ -1,0 +1,96 @@
+<span class="lang-en">
+<p>Score : <var>500</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>You are going to eat <var>X</var> red apples and <var>Y</var> green apples.<br/>
+You have <var>A</var> red apples of deliciousness <var>p_1,p_2, \dots, p_A</var>, <var>B</var> green apples of deliciousness <var>q_1,q_2, \dots, q_B</var>, and <var>C</var> colorless apples of deliciousness <var>r_1,r_2, \dots, r_C</var>.<br/>
+Before eating a colorless apple, you can paint it red or green, and it will count as a red or green apple, respectively.<br/>
+From the apples above, you will choose the apples to eat while making the sum of the deliciousness of the eaten apples as large as possible.<br/>
+Find the maximum possible sum of the deliciousness of the eaten apples that can be achieved when optimally coloring zero or more colorless apples.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 \leq X \leq A \leq 10^5</var></li>
+<li><var>1 \leq Y \leq B \leq 10^5</var></li>
+<li><var>1 \leq C \leq 10^5</var></li>
+<li><var>1 \leq p_i \leq 10^9</var></li>
+<li><var>1 \leq q_i \leq 10^9</var></li>
+<li><var>1 \leq r_i \leq 10^9</var></li>
+<li>All values in input are integers.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>X</var> <var>Y</var> <var>A</var> <var>B</var> <var>C</var>
+<var>p_1</var> <var>p_2</var> <var>...</var> <var>p_A</var>
+<var>q_1</var> <var>q_2</var> <var>...</var> <var>q_B</var>
+<var>r_1</var> <var>r_2</var> <var>...</var> <var>r_C</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the maximum possible sum of the deliciousness of the eaten apples.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>1 2 2 2 1
+2 4
+5 1
+3
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>12
+</pre>
+<p>The maximum possible sum of the deliciousness of the eaten apples can be achieved as follows:</p>
+<ul>
+<li>Eat the <var>2</var>-nd red apple.</li>
+<li>Eat the <var>1</var>-st green apple.</li>
+<li>Paint the <var>1</var>-st colorless apple green and eat it.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>2 2 2 2 2
+8 6
+9 1
+2 1
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>25
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>2 2 4 4 4
+11 12 13 14
+21 22 23 24
+1 2 3 4
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>74
+</pre></section>
+</div>
+</span>

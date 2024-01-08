@@ -1,0 +1,106 @@
+<span class="lang-en">
+<p>Score : <var>300</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>You are playing the following game with Joisino.</p>
+<ul>
+<li>Initially, you have a blank sheet of paper.</li>
+<li>Joisino announces a number. If that number is written on the sheet, erase the number from the sheet; if not, write the number on the sheet. This process is repeated <var>N</var> times.</li>
+<li>Then, you are asked a question: How many numbers are written on the sheet now?</li>
+</ul>
+<p>The numbers announced by Joisino are given as <var>A_1, ... ,A_N</var> in the order she announces them. How many numbers will be written on the sheet at the end of the game?</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1≤N≤100000</var></li>
+<li><var>1≤A_i≤1000000000(=10^9)</var></li>
+<li>All input values are integers.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+<var>A_1</var>
+<var>:</var>
+<var>A_N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print how many numbers will be written on the sheet at the end of the game.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>3
+6
+2
+6
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>1
+</pre>
+<p>The game proceeds as follows:</p>
+<ul>
+<li>
+<p><var>6</var> is not written on the sheet, so write <var>6</var>.</p>
+</li>
+<li>
+<p><var>2</var> is not written on the sheet, so write <var>2</var>.</p>
+</li>
+<li>
+<p><var>6</var> is written on the sheet, so erase <var>6</var>.</p>
+</li>
+</ul>
+<p>Thus, the sheet contains only <var>2</var> in the end. The answer is <var>1</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>4
+2
+5
+5
+2
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>0
+</pre>
+<p>It is possible that no number is written on the sheet in the end.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>6
+12
+22
+16
+22
+18
+12
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>2
+</pre></section>
+</div>
+</span>

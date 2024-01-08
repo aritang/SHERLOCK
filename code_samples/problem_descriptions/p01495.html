@@ -1,0 +1,63 @@
+
+
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({ tex2jax: { inlineMath: [["$","$"], ["\\(","\\)"]], processEscapes: true }});
+</script>
+<script type='text/javascript' src='http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
+</script>
+
+<h2>Problem J:
+SolveMe
+</h2>
+
+<p>
+$N$ 個の部屋があり, それぞれの部屋の床にはうさぎの絵が描かれている. あなたが部屋 $r$ のうさぎの絵の右耳の部分に乗ると, あなたは部屋 $A[r]$ に書かれたうさぎのしっぽの上にテレポートする. 同様に, 部屋 $r$ のうさぎの絵の左耳の部分に乗ると, 部屋 $B[r]$ に書かれたうさぎのしっぽの上にテレポートする.
+</p>
+
+<p>
+  整数 $X$, $Y$, $Z$ が与えられる. ねこは, 以下の条件を満たすようにテレポートを設定しようとしている. テレポートの $N^{2N}$ 通りの設定方法のうち, 条件を満たすものは何通りか, mod 1,000,000,007で求めよ.
+</p>
+
+<p>
+  条件: 任意の部屋 $r$ に対し, $r$ から右耳にちょうど $X$ 回乗り, 左耳にちょうど 1 回乗り, 右耳にちょうど $Y$ 回乗り, 左耳にちょうど 1 回乗り, 右耳にちょうど $Z$ 回乗ると, $r$ に戻る.
+  </p>
+
+<h3>Constraints</h3>
+<ul>
+<li>$N$ will be between 1 and 1,000, inclusive.</li>
+<li>$X$, $Y$, $Z$ will be between 0 and 1,000,000,000,000,000,000, inclusive.</li>
+</ul>
+
+<h3>Input</h3>
+
+<p>
+  入力は以下の形式で与えられる:<br>
+  <br>
+$N$ $X$ $Y$ $Z$
+</p>
+
+
+<h3>Output</h3>
+
+<p>
+テレポートの設定方法を 1,000,000,007 で割ったあまりを表す整数を 1 行に出力せよ.
+</p>
+
+
+
+<h3>Sample Input 1</h3>
+
+<pre>3 1 0 1</pre>
+
+<h3>Sample Output 1</h3>
+
+<pre>18</pre>
+
+<h3>Sample Input 2</h3>
+
+<pre>5 8 5 8</pre>
+
+<h3>Sample Output 2</h3>
+
+<pre>120</pre>

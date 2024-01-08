@@ -1,0 +1,104 @@
+<span class="lang-en">
+<p>Score : <var>600</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>A <strong>bracket sequence</strong> is a string that is one of the following:</p>
+<ol>
+<li>An empty string;</li>
+<li>The concatenation of <code>(</code>, <var>A</var>, and <code>)</code> in this order, for some bracket sequence <var>A</var> ;</li>
+<li>The concatenation of <var>A</var> and <var>B</var> in this order, for some non-empty bracket sequences <var>A</var> and <var>B</var> /</li>
+</ol>
+<p>Given are <var>N</var> strings <var>S_i</var>. Can a bracket sequence be formed by concatenating all the <var>N</var> strings in some order?</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 \leq N \leq 10^6</var></li>
+<li>The total length of the strings <var>S_i</var> is at most <var>10^6</var>.</li>
+<li><var>S_i</var> is a non-empty string consisting of <code>(</code> and <code>)</code>.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+<var>S_1</var>
+<var>:</var>
+<var>S_N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>If a bracket sequence can be formed by concatenating all the <var>N</var> strings in some order, print <code>Yes</code>; otherwise, print <code>No</code>.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>2
+)
+(()
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>Yes
+</pre>
+<p>Concatenating <code>(()</code> and <code>)</code> in this order forms a bracket sequence.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>2
+)(
+()
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>No
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>4
+((()))
+((((((
+))))))
+()()()
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>Yes
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 4</h3><pre>3
+(((
+)
+)
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 4</h3><pre>No
+</pre></section>
+</div>
+</span>

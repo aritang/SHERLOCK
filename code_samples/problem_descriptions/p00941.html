@@ -1,0 +1,143 @@
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({ tex2jax: { inlineMath: [["$","$"], ["\\(","\\)"]], processEscapes: true }});
+</script>
+<script type='text/javascript' src='http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
+</script>
+
+
+<h2>Problem G
+Do Geese See God?</h2>
+
+<p>
+A palindrome is a sequence of characters which reads the same backward or forward. Famous ones include "dogeeseseegod" ("Do geese see God?"), "amoreroma" ("Amore, Roma.") and "risetovotesir" ("Rise to vote, sir.").
+</p>
+
+<p>
+An ancient sutra has been handed down through generations at a temple on Tsukuba foothills. They say the sutra was a palindrome, but some of the characters have been dropped through transcription.
+</p>
+
+<p>
+A famous scholar in the field of religious studies was asked to recover the original. After long repeated deliberations, he concluded that no information to recover the original has been lost, and that the original can be reconstructed as the shortest palindrome including all the characters of the current sutra in the same order. That is to say, the original sutra is obtained by adding some characters before, between, and/or behind the characters of the current.
+</p>
+
+<p>
+Given a character sequence, your program should output one of the shortest palindromes containing the characters of the current sutra preserving their order. One of the shortest? Yes, more than one shortest palindromes may exist. Which of them to output is also specified as its rank among the candidates in the lexicographical order.
+</p>
+
+<p>
+For example, if the current sutra is cdba and 7th is specified, your program should output <span>cdabadc</span> among the 8 candidates, <span>abcdcba</span>, <span>abdcdba</span>, <span>acbdbca</span>, <span>acdbdca</span>, <span>cabdbac</span>, <span>cadbdac</span>, <span>cdabadc</span> and <span>cdbabdc</span>.
+</p>
+
+
+<h3>Input</h3>
+
+<p>
+The input consists of a single test case. The test case is formatted as follows.<br>
+<br>
+
+$S$<br>
+$k$<br>
+</br>
+
+The first line contains a string $S$ composed of lowercase letters from '<span>a</span>' to '<span>z</span>'. The length of $S$ is greater than 0, and less than or equal to 2000. The second line contains an integer $k$ which represents the rank in the lexicographical order among the candidates of the original sutra. $1 \leq k \leq 10^{18}$.
+</p>
+
+
+<h3>Output</h3>
+
+<p>
+Output the $k$-th string in the lexicographical order among the candidates of the original sutra. If the number of the candidates is less than $k$, output <span>NONE</span>.
+</p>
+
+<p>
+Though the first lines of the Sample Input/Output 7 are folded at the right margin, they are actually single lines.
+</p>
+
+
+<h3>Sample Input 1</h3>
+
+<pre>crc
+1</pre>
+
+<h3>Sample Output 1</h3>
+
+<pre>crc</pre>
+
+
+<h3>Sample Input 2</h3>
+
+<pre>icpc
+1</pre>
+
+<h3>Sample Output 2</h3>
+
+<pre>icpci</pre>
+
+
+<h3>Sample Input 3</h3>
+
+<pre>hello
+1</pre>
+
+<h3>Sample Output 3</h3>
+
+<pre>heolloeh</pre>
+
+
+<h3>Sample Input 4</h3>
+
+<pre>hoge
+8</pre>
+
+<h3>Sample Output 4</h3>
+
+<pre>hogegoh</pre>
+
+
+<h3>Sample Input 5</h3>
+
+<pre>hoge
+9</pre>
+
+<h3>Sample Output 5</h3>
+
+<pre>NONE</pre>
+
+
+<h3>Sample Input 6</h3>
+
+<pre>bbaaab
+2</pre>
+
+<h3>Sample Output 6</h3>
+
+<pre>NONE</pre>
+
+
+
+<h3>Sample Input 7</h3>
+
+<pre>thdstodxtksrnfacdsohnlfuivqvqsozdstwa
+szmkboehgcerwxawuojpfuvlxxdfkezprodne
+ttawsyqazekcftgqbrrtkzngaxzlnphynkmsd
+sdleqaxnhehwzgzwtldwaacfczqkfpvxnalnn
+hfzbagzhqhstcymdeijlbkbbubdnptolrmemf
+xlmmzhfpshykxvzbjmcnsusllpyqghzhdvljd
+xrrebeef
+11469362357953500</pre>
+
+<h3>Sample Output 7</h3>
+
+<pre>feeberrthdstodxtksrnfacdjsohnlfuivdhq
+vqsozhgdqypllstwausnzcmjkboehgcerzvwx
+akyhswuojpfhzumvmlxxdfkmezmprlotpndbu
+bbkblnjiedttmawsyqazekcftgshqbrhrtkzn
+gaxbzfhnnlanxvphyfnkqmzcsdfscaawdleqa
+xtnhehwzgzwhehntxaqeldwaacsfdsczmqknf
+yhpvxnalnnhfzbxagnzktrhrbqhsgtfckezaq
+yswamttdeijnlbkbbubdnptolrpmzemkfdxxl
+mvmuzhfpjouwshykaxwvzrecgheobkjmcznsu
+awtsllpyqdghzosqvqhdviuflnhosjdcafnrs
+ktxdotsdhtrrebeef</pre>
+

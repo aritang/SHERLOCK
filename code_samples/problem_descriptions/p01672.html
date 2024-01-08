@@ -1,0 +1,124 @@
+
+<h2>F - Point Distance</h2>
+
+<h3>Problem Statement</h3>
+
+<p>
+You work for invention center as a part time programmer. This center researches movement of protein molecules. It needs how molecules make clusters, so it will calculate distance of all pair molecules and will make a histogram.
+Molecules’ positions are given by a <var>N</var> x <var>N</var> grid map.
+Value <var>C_{xy}</var> of cell <var>(x, y)</var> in a grid map means that <var>C_{xy}</var> molecules are in the position <var>(x, y)</var>.
+</p>
+
+<p>
+You are given a grid map, please calculate histogram of all pair molecules.
+</p>
+
+<h3>Input</h3>
+
+<p>
+Input is formatted as follows.
+</p>
+
+<pre>
+<var>N</var>
+<var>C_{11}</var> <var>C_{12}</var> ... <var>C_{1N}</var>
+<var>C_{21}</var> <var>C_{22}</var> ... <var>C_{2N}</var>
+...
+<var>C_{N1}</var> <var>C_{N2}</var> ... <var>C_{NN}</var>
+</pre>
+
+<p>
+First line contains the grid map size <var>N</var> (<var>1 \leq N \leq 1024</var>).
+Each next <var>N</var> line contains <var>N</var> numbers.
+Each numbers <var>C_{xy}</var> (<var>0 \leq C_{xy} \leq 9</var>) means the number of molecule in position (x,y).
+There are at least 2 molecules.
+</p>
+
+<h3>Output</h3>
+<p>
+Output is formatted as follows.
+</p>
+
+<pre>
+<var>D_{ave}</var>
+<var>d_{1}</var> <var>c_{1}</var>
+<var>d_{2}</var> <var>c_{2}</var>
+...
+<var>d_{m}</var> <var>c_{m}</var>
+</pre>
+
+
+<p>
+Print <var>D_{ave}</var> which an average distance of all pair molecules on first line.
+Next, print histogram of all pair distance.
+Each line contains a distance <var>d_i</var> and the number of pair molecules <var>c_i(0 \lt c_i)</var>.
+The distance <var>d_i</var> should be calculated by squared Euclidean distance and sorted as increasing order.
+If the number of different distance is more than 10,000, please show the first 10,000 lines.
+The answer may be printed with an arbitrary number of decimal digits, but may not contain an absolute or relative error greater than or equal to <var>10^{-8}</var>.
+</p>
+
+<h3>Sample Input 1</h3>
+
+<pre>
+2
+1 0
+0 1
+</pre>
+
+<h3>Output for the Sample Input 1</h3>
+
+<pre>
+1.4142135624
+2 1
+</pre>
+
+<h3>Sample Input 2</h3>
+
+<pre>
+3
+1 1 1
+1 1 1
+1 1 1
+</pre>
+
+<h3>Output for the Sample Input 2</h3>
+
+<pre>
+1.6349751825
+1 12
+2 8
+4 6
+5 8
+8 2
+</pre>
+
+<h3>Sample Input 3</h3>
+
+<pre>
+5
+0 1 2 3 4
+5 6 7 8 9
+1 2 3 2 1
+0 0 0 0 0
+0 0 0 0 1
+</pre>
+
+<h3>Output for the Sample Input 3</h3>
+
+<pre>
+1.8589994382
+0 125
+1 379
+2 232
+4 186
+5 200
+8 27
+9 111
+10 98
+13 21
+16 50
+17 37
+18 6
+20 7
+25 6
+</pre>

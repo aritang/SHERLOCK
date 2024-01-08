@@ -1,0 +1,78 @@
+<span class="lang-en">
+<p>Score : <var>200</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>You are given a string <var>S</var> of length <var>N</var>.
+Among its subsequences, count the ones such that all characters are different, modulo <var>10^9+7</var>. Two subsequences are considered different if their characters come from different positions in the string, even if they are the same as strings.</p>
+<p>Here, a subsequence of a string is a concatenation of <strong>one or more</strong> characters from the string without changing the order.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 \leq N \leq 100000</var></li>
+<li><var>S</var> consists of lowercase English letters.</li>
+<li><var>|S|=N</var></li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+<var>S</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the number of the subsequences such that all characters are different, modulo <var>10^9+7</var>.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>4
+abcd
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>15
+</pre>
+<p>Since all characters in <var>S</var> itself are different, all its subsequences satisfy the condition.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>3
+baa
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>5
+</pre>
+<p>The answer is five: <code>b</code>, two occurrences of <code>a</code>, two occurrences of <code>ba</code>. Note that we do not count <code>baa</code>, since it contains two <code>a</code>s.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>5
+abcab
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>17
+</pre></section>
+</div>
+</span>

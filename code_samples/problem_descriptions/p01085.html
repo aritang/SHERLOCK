@@ -1,0 +1,130 @@
+
+
+<h2>Entrance Examination</h2>
+
+<p>
+The International Competitive Programming College (ICPC) is famous
+for its research on competitive programming.
+Applicants to the college are required to take its entrance examination.
+</p>
+
+<p>
+The successful applicants of the examination are chosen as follows.
+</p>
+
+<ul>
+<li>The score of any successful applicant is higher than that of any unsuccessful applicant.</li>
+<li>The number of successful applicants <i>n</i> must be between <i>n</i><sub>min</sub> and <i>n</i><sub>max</sub>, inclusive.
+We choose <i>n</i> within the specified range that maximizes the <i>gap.</i>
+Here, the <i>gap</i> means the difference between the lowest score of
+successful applicants and the highest score of unsuccessful applicants.
+</li>
+<li> When two or more candidates for <i>n</i> make exactly the same <i>gap,</i>
+use the greatest <i>n</i> among them.</li>
+</ul>
+
+
+<p>
+Let's see the first couple of examples given in Sample Input below.
+In the first example, <i>n</i><sub>min</sub> and <i>n</i><sub>max</sub> are two and four, respectively, and there are five applicants whose scores are 100, 90, 82, 70, and 65.
+For <i>n</i> of two, three and four, the gaps will be 8, 12, and 5, respectively.
+We must choose three as <i>n</i>, because it maximizes the gap.
+</p>
+
+<p>
+In the second example, <i>n</i><sub>min</sub> and <i>n</i><sub>max</sub> are two and four, respectively, and there are five applicants whose scores are 100, 90, 80, 75, and 65.
+For <i>n</i> of two, three and four, the gap will be 10, 5, and 10, 
+respectively. Both two and four maximize the gap, and we must choose the
+ greatest number, four.
+</p>
+
+<p>
+You are requested to write a program that computes the number of successful applicants that satisfies the conditions.
+</p>
+
+<h3>Input</h3>
+
+<p>
+The input consists of multiple datasets. Each dataset is formatted as follows.
+</p>
+
+<blockquote>
+<i>m</i> <i>n</i><sub>min</sub> <i>n</i><sub>max</sub><br>
+<i>P</i><sub>1</sub><br>
+<i>P</i><sub>2</sub><br>
+...<br>
+<i>P<sub>m</sub></i><br>
+</blockquote>
+
+<p>
+The first line of a dataset contains three integers separated by single spaces.
+<i>m</i> represents the number of applicants, <i>n</i><sub>min</sub> represents the minimum number of successful applicants, and <i>n</i><sub>max</sub> represents the maximum number of successful applicants.
+Each of the following <i>m</i> lines contains an integer
+<i>P<sub>i</sub></i>, which represents the score of each applicant.
+The scores are listed in descending order.
+These numbers satisfy 0 &lt; <i>n</i><sub>min</sub> &lt; <i>n</i><sub>max</sub> &lt; <i>m</i> &#8804; 200, 0 &#8804; <i>P<sub>i</sub></i> &#8804; 10000 (1 &#8804; <i>i</i> &#8804; <i>m</i>) and  <i>P</i><sub><i>n</i><sub>min</sub></sub> &gt; <i>P</i><sub><i>n</i><sub>max</sub>+1</sub>. These ensure that there always exists an <i>n</i> satisfying the conditions.
+</p>
+
+<p>
+The end of the input is represented by a line containing three zeros separated by single spaces.
+</p>
+
+
+<h3>Output</h3>
+
+
+<p>
+For each dataset, output the number of successful applicants in a line.
+</p>
+
+
+
+<h3>Sample Input</h3>
+
+
+<pre>5 2 4
+100
+90
+82
+70
+65
+5 2 4
+100
+90
+80
+75
+65
+3 1 2
+5000
+4000
+3000
+4 2 3
+10000
+10000
+8000
+8000
+4 2 3
+10000
+10000
+10000
+8000
+5 2 3
+100
+80
+68
+60
+45
+0 0 0
+</pre>
+
+
+<h3>Output for the Sample Input</h3>
+
+
+<pre>3
+4
+2
+2
+3
+2
+</pre>

@@ -1,0 +1,112 @@
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({ tex2jax: { inlineMath: [["$","$"], ["\\(","\\)"]], skipTags: ["script","noscript","style","textarea","code"], processEscapes: true }});
+</script>
+<script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML"></script>
+
+<h2>Problem D
+  Making Perimeter of the Convex Hull Shortest
+  </h2>
+
+<p>
+  The convex hull of a set of three or more planar points is, when not all of them are on one line, the convex polygon with the smallest area that has all the points of the set on its boundary or in its inside. Your task is, given positions of the points of a set, to find how much shorter the perimeter of the convex hull can be made by excluding <i>two</i> points from the set.
+</p>
+
+<p>
+  The figures below correspond to the three cases given as Sample Input 1 to 3. Encircled points are excluded to make the shortest convex hull depicted as thick dashed lines.
+</p>
+<table>
+  <tr>
+    <td><img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_ICPCAsia2017_convexHullShortest1" width="240"></td>
+    <td><img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_ICPCAsia2017_convexHullShortest2" width="240"></td>
+    <td><img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_ICPCAsia2017_convexHullShortest3" width="240"></td>
+  </tr>
+  <tr>
+    <td style="text-align:center">Sample Input 1</td>
+    <td style="text-align:center">Sample Input 2</td>
+    <td style="text-align:center">Sample Input 3</td>
+
+  </tr>
+</table>
+
+<h3>Input</h3>
+<p>
+  The input consists of a single test case in the following format.
+</p>
+<pre>
+$n$
+$x_1$ $y_1$
+...
+$x_n$ $y_n$
+</pre>
+
+<p>
+  Here, $n$ is the number of points in the set satisfying $5 \leq n \leq 10^5$. For each $i$, ($x_i, y_i$) gives the coordinates of the position of the $i$-th point in the set. $x_i$ and $y_i$ are integers between $-10^6$ and $10^6$, inclusive. All the points in the set are distinct, that is, $x_j \ne x_k$ or $y_j \ne y_k$ holds when $j \ne k$. It is guaranteed that no single line goes through $n - 2$ or more points in the set.
+  </p>
+
+<h3>Output</h3>
+
+<p>
+  Output the difference of the perimeter of the convex hull of the original set and the shortest of the perimeters of the convex hulls of the subsets with two points excluded from the original set. The output should not have an error greater than $10^{-4}$.
+</p>
+
+
+<h3>Sample Input 1</h3>
+<pre>
+10
+-53 62
+-19 58
+-11 11
+-9 -22
+45 -7
+37 -39
+47 -58
+-2 41
+-37 10
+13 42
+</pre>
+
+<h3>Sample Output 1</h3>
+<pre>
+72.96316928
+</pre>
+
+<h3>Sample Input 2</h3>
+<pre>
+10
+-53 62
+-19 58
+-11 11
+-9 -22
+45 -7
+43 -47
+47 -58
+-2 41
+-37 10
+13 42
+</pre>
+
+<h3>Sample Output 2</h3>
+<pre>
+62.62947992
+</pre>
+
+<h3>Sample Input 3</h3>
+<pre>
+10
+-53 62
+-35 47
+-11 11
+-9 -22
+45 -7
+43 -47
+47 -58
+-2 41
+-37 10
+13 42
+</pre>
+
+<h3>Sample Output 3</h3>
+<pre>
+61.58166534
+</pre>

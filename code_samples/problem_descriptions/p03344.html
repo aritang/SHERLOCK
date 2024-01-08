@@ -1,0 +1,147 @@
+<span class="lang-en">
+<p>Score : <var>1000</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>There is a simple undirected graph with <var>N</var> vertices and <var>M</var> edges.
+The vertices are numbered <var>1</var> through <var>N</var>, and the edges are numbered <var>1</var> through <var>M</var>.
+Edge <var>i</var> connects Vertex <var>U_i</var> and <var>V_i</var>.
+Also, Vertex <var>i</var> has two predetermined integers <var>A_i</var> and <var>B_i</var>.
+You will play the following game on this graph.</p>
+<p>First, choose one vertex and stand on it, with <var>W</var> yen (the currency of Japan) in your pocket.
+Here, <var>A_s \leq W</var> must hold, where <var>s</var> is the vertex you choose.
+Then, perform the following two kinds of operations any number of times in any order:</p>
+<ul>
+<li>Choose one vertex <var>v</var> that is directly connected by an edge to the vertex you are standing on, and move to vertex <var>v</var>. Here, you need to have at least <var>A_v</var> yen in your pocket when you perform this move.</li>
+<li>Donate <var>B_v</var> yen to the vertex <var>v</var> you are standing on. Here, the amount of money in your pocket must not become less than <var>0</var> yen.</li>
+</ul>
+<p>You win the game when you donate once to every vertex.
+Find the smallest initial amount of money <var>W</var> that enables you to win the game.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 \leq N \leq 10^5</var></li>
+<li><var>N-1 \leq M \leq 10^5</var></li>
+<li><var>1 \leq A_i,B_i \leq 10^9</var></li>
+<li><var>1 \leq U_i &lt; V_i \leq N</var></li>
+<li>The given graph is connected and simple (there is at most one edge between any pair of vertices).</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var> <var>M</var>
+<var>A_1</var> <var>B_1</var>
+<var>A_2</var> <var>B_2</var>
+<var>:</var>
+<var>A_N</var> <var>B_N</var>
+<var>U_1</var> <var>V_1</var>
+<var>U_2</var> <var>V_2</var>
+<var>:</var>
+<var>U_M</var> <var>V_M</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the smallest initial amount of money <var>W</var> that enables you to win the game.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>4 5
+3 1
+1 2
+4 1
+6 2
+1 2
+2 3
+2 4
+1 4
+3 4
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>6
+</pre>
+<p>If you have <var>6</var> yen initially, you can win the game as follows:</p>
+<ul>
+<li>Stand on Vertex <var>4</var>. This is possible since you have not less than <var>6</var> yen.</li>
+<li>Donate <var>2</var> yen to Vertex <var>4</var>. Now you have <var>4</var> yen.</li>
+<li>Move to Vertex <var>3</var>. This is possible since you have not less than <var>4</var> yen.</li>
+<li>Donate <var>1</var> yen to Vertex <var>3</var>. Now you have <var>3</var> yen.</li>
+<li>Move to Vertex <var>2</var>. This is possible since you have not less than <var>1</var> yen.</li>
+<li>Move to Vertex <var>1</var>. This is possible since you have not less than <var>3</var> yen.</li>
+<li>Donate <var>1</var> yen to Vertex <var>1</var>. Now you have <var>2</var> yen.</li>
+<li>Move to Vertex <var>2</var>. This is possible since you have not less than <var>1</var> yen.</li>
+<li>Donate <var>2</var> yen to Vertex <var>2</var>. Now you have <var>0</var> yen.</li>
+</ul>
+<p>If you have less than <var>6</var> yen initially, you cannot win the game. Thus, the answer is <var>6</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>5 8
+6 4
+15 13
+15 19
+15 1
+20 7
+1 3
+1 4
+1 5
+2 3
+2 4
+2 5
+3 5
+4 5
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>44
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>9 10
+131 2
+98 79
+242 32
+231 38
+382 82
+224 22
+140 88
+209 70
+164 64
+6 8
+1 6
+1 4
+1 3
+4 7
+4 9
+3 7
+3 9
+5 9
+2 5
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>582
+</pre></section>
+</div>
+</span>

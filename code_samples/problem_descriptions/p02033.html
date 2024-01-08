@@ -1,0 +1,88 @@
+<h2>D: 矢 / Arrow</h2>
+
+<h3>問題</h3>
+<p>rodea 君は 1 次元座標系の中におり、<var>x = 0</var> の場所に立っている。この位置から、<var>x = N</var> の位置にある的を目がけて、 常に速さ <var>1</var> で移動する正の整数の長さの矢を投げる。しかし、rodea 君は非力なため、  区間 <var>0 \leq x \leq N</var> の中に合計 <var>M</var> 個の送風機を置くことにしている。</p>
+
+<p>ここで、矢の先端から根元までの位置に <var>1</var> つの送風機も含まれない場合を「損失」と定義する。損失の判定は、矢の先端が <var>x = 1, 2, 3,</var> $\ldots$<var>, N</var> に到達した際に行う（つまり、合計 <var>N</var> 回行う）。</p>
+
+<p>このとき、以下のクエリを <var>Q</var> 回処理せよ。</p>
+
+<ul>
+<li> 「損失」許容可能な回数 <var>l_i</var> が与えられる。すなわち、<var>N</var> 回の判定において、「損失」が合計 <var>l_i</var> 回以下なら矢を的に届けることが可能である。このときの、矢を的に届けるために必要な最短の矢の長さを求める。</li>
+</ul>
+
+<h3>入力形式</h3>
+<pre>
+<var>N</var> <var>M</var>
+<var>m_1</var> <var>m_2</var> $\ldots$ <var>m_M</var>
+<var>Q</var>
+<var>l_1</var> <var>l_2</var> $\ldots$ <var>l_Q</var>
+</pre>
+
+<p><var>1</var> 行目に距離 <var>N</var> と送風機の個数 <var>M</var> が空白区切りで与えられる。</p>
+
+<p><var>2</var> 行目に、<var>M</var> 個の送風機それぞれの位置が与えられる。<var>m_i=j</var> のとき、 <var>i</var> 番目の送風機は <var>x=j-1</var> と <var>x=j</var> の丁度中間に位置している。</p>
+
+<p><var>3</var> 行目にクエリの個数 <var>Q</var> が与えられ、<var>4</var> 行目に「損失」許容可能な回数 <var>l_i</var> が <var>Q</var> 個与えられる。</p>
+
+<h3>制約</h3>
+<ul>
+<li><var>1 \leq N \leq 10^5</var></li>
+<li><var>1 \leq M \leq N</var></li>
+<li><var>1 \leq m_1 &lt; m_2 &lt;</var> $\ldots$<var> &lt; m_M \leq N</var></li>
+<li><var>1 \leq Q \leq 10^5</var></li>
+<li><var>0 \leq l_i \leq 10^5</var> (<var>1 \leq i \leq Q</var>)</li>
+</ul>
+
+<h3>出力形式</h3>
+<p>与えられる <var>Q</var> 個の <var>l_i</var> に対して考えられる最短の矢の長さを、順に改行して出力せよ。</p>
+
+<p>ただし、条件を満たす正の整数の長さの矢が存在しない場合は <var>-1</var> を出力するものとする。</p>
+
+<h3>入力例1</h3>
+<pre>
+5 1
+2
+1
+3
+</pre>
+
+<h3>出力例1</h3>
+<pre>2</pre>
+
+<object data="https://judgeapi.u-aizu.ac.jp/resources/images/hupc2019_rupc2019-d-001.jsp" type="image/jpeg" width="500"></object>
+
+<p>矢の先端が <var>x = 1</var> に到達したとき、先端から根元までに送風機は含まれないので、「損失」回数は <var>1</var> になる。</p>
+
+<object data="https://judgeapi.u-aizu.ac.jp/resources/images/hupc2019_rupc2019-d-002.jpg" type="image/jpeg" width="500"></object>
+
+<p>矢の先端が <var>x = 2</var> に到達したとき、先端から根元までに送風機は含まれるので、「損失」回数は <var>1</var> のままである。</p>
+
+<object data="https://judgeapi.u-aizu.ac.jp/resources/images/hupc2019_rupc2019-d-003.jpg" type="image/jpeg" width="500"></object>
+
+<p>矢の先端が <var>x = 3</var> に到達したとき、先端から根元までに送風機は含まれるので、「損失」回数は <var>1</var> のままである。</p>
+
+<object data="https://judgeapi.u-aizu.ac.jp/resources/images/hupc2019_rupc2019-d-004.jpg" type="image/jpeg" width="500"></object>
+
+<p>矢の先端が <var>x = 4</var> に到達したとき、先端から根元までに送風機は含まれないので、「損失」回数は <var>2</var> になる。</p>
+
+<object data="https://judgeapi.u-aizu.ac.jp/resources/images/hupc2019_rupc2019-d-005.jpg" type="image/jpeg" width="500"></object>
+
+<p>矢の先端が <var>x = 5</var> に到達したとき、先端から根元までに送風機は含まれないので、「損失」回数は <var>3</var> になる。</p>
+
+<p>長さ <var>2</var> より短い矢を投げる場合、「損失」回数が <var>3</var> よりも多くなるため、長さ <var>2</var> の矢を投げるときが条件を満たす最短の矢の長さである。</p>
+
+<h3>入力例2</h3>
+<pre>
+11 3
+2 5 9
+3
+1 4 8
+</pre>
+
+<h3>出力例2</h3>
+<pre>
+4
+3
+1
+</pre>

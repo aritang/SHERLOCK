@@ -1,0 +1,125 @@
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+});
+</script>
+<script type="text/javascript" async
+        src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+
+
+<!-- begin en only -->
+<h3><u>Stamp Rally</u></h3>
+<!-- end en only -->
+<!-- begin ja only -->
+<h3><u>スタンプラリー</u></h3>
+<!-- end ja only -->
+
+<!-- end en only -->
+<!-- begin ja only -->
+<p>日本アミューズメントグループ (Japan Amusement Group, JAG) では，島国を模したテーマパークでのイベントを企画している．
+このイベントでは，参加者は橋を渡るたびに橋ごとに決められたスタンプをスタンプ帳に順番に押していく．
+用意されたスタンプは以下の7種類のどれかである．
+</p><pre>a ( ) [ ] + *</pre><p>スタートからゴールまで橋を渡り歩いて，押されたスタンプの列が正しい数式になればクリアである．
+ただし橋を渡る向きは決まっていて，逆向きに渡ることはできない．
+同じ橋を何度も渡ってよく，最終的にゴール地点に到着するのであれば一度ゴール地点に着いた後に引き続きスタンプを集めてもよい．
+正しい数式とは以下の BNF で定義される &lt;expression&gt; である．
+</p>
+<pre>&lt;expression&gt; ::= &lt;term&gt; | &lt;expression&gt; "+" &lt;term&gt;
+&lt;term&gt;       ::= &lt;factor&gt; | &lt;term&gt; "*" &lt;factor&gt;
+&lt;factor&gt;     ::= "a" | "(" &lt;expression&gt; ")" | "[" &lt;expression&gt; "]"</pre>
+
+<p>スタート・ゴールと橋ごとのスタンプを決めたので，関係者で試しにやってみたがなかなかクリアする人が現れない．
+もしかしたら，この設定ではクリアすることができないのかもしれない．
+</p>
+<p>スタート・ゴールと橋の情報が与えられるので，クリア可能かどうかを判定するプログラムを書きなさい．
+</p>
+
+
+<!-- end ja only -->
+
+<h3>Input</h3>
+
+<!-- begin ja only -->
+<p>入力は50個以下のデータセットからなる．各データセットは以下の形式で表される．
+</p>
+<blockquote><var>n</var> <var>m</var> <var>s</var> <var>t</var><br><var>a</var><sub>1</sub> <var>b</var><sub>1</sub> <var>c</var><sub>1</sub><br>...<br><var>a<sub>m</sub></var> <var>b<sub>m</sub></var> <var>c<sub>m</sub></var></blockquote>
+
+<p>データセットの最初の行は，空白文字1個で区切られた4個の整数 <var>n</var>, <var>m</var>, <var>s</var>, <var>t</var> からなる．
+<var>n</var> は島の数であり， 1 &le; <var>n</var> &le; 200 と仮定してよい．
+それぞれの島には 1 から <var>n</var> までの番号が付けられている．
+<var>m</var> は橋の数であり， 1 &le; <var>m</var> &le; 100,000 と仮定してよい．
+<var>s</var> はスタートの島の番号， <var>t</var> はゴールの島の番号である．スタートとゴールが同じ島であることもある．
+続く <var>m</var> 行のそれぞれは，空白文字1個で区切られた2個の整数と1個の文字からなる．
+<var>a<sub>i</sub></var>， <var>b<sub>i</sub></var> は <var>i</var> 番目の橋によって島 <var>a<sub>i</sub></var> から島 <var>b<sub>i</sub></var> へ渡れることを表し， <var>c<sub>i</sub></var> は <var>i</var> 番目の橋で押すスタンプを表す．ある2つの島の間に複数の橋がかかっていたり，1つの島の中で橋がかかっていたりすることもある．
+</p>
+<p>入力の終わりは，4つのゼロからなる1行で示される．
+</p>
+
+
+<!-- end ja only -->
+
+<h3>Output</h3>
+
+<!-- begin ja only -->
+<p>各データセットに対して，クリアできるならば"<samp>Yes</samp>"を，できないならば"<samp>No</samp>"を1行に出力せよ．
+</p>
+
+
+<!-- end ja only -->
+
+<h3>Sample Input</h3>
+
+<pre>4 5 1 4
+1 2 (
+1 3 a
+2 4 a
+3 4 )
+3 2 +
+4 4 1 2
+1 3 (
+3 4 a
+4 1 +
+3 2 a
+3 4 1 1
+1 2 a
+2 2 +
+2 3 a
+3 1 a
+5 8 1 5
+1 1 [
+1 2 (
+2 1 *
+2 2 a
+2 3 a
+3 3 )
+3 4 ]
+4 5 )
+2 14 1 1
+1 2 a
+1 2 (
+1 2 )
+1 2 [
+1 2 ]
+1 2 +
+1 2 *
+2 1 a
+2 1 (
+2 1 )
+2 1 [
+2 1 ]
+2 1 +
+2 1 *
+0 0 0 0</pre>
+
+<h3>Output for Sample Input</h3>
+
+<pre>Yes
+No
+No
+Yes
+No</pre>

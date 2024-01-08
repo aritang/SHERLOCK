@@ -1,0 +1,65 @@
+<span class="lang-en">
+<p>Score : <var>400</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>We have a string <var>S</var> of length <var>N</var> consisting of <code>R</code>, <code>G</code>, and <code>B</code>.</p>
+<p>Find the number of triples <var>(i,~j,~k)~(1 \leq i &lt; j &lt; k \leq N)</var> that satisfy both of the following conditions:</p>
+<ul>
+<li><var>S_i \neq S_j</var>, <var>S_i \neq S_k</var>, and <var>S_j \neq S_k</var>.</li>
+<li><var>j - i \neq k - j</var>.</li>
+</ul>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 \leq N \leq 4000</var></li>
+<li><var>S</var> is a string of length <var>N</var> consisting of <code>R</code>, <code>G</code>, and <code>B</code>.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+<var>S</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the number of triplets in question.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>4
+RRGB
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>1
+</pre>
+<p>Only the triplet <var>(1,~3,~4)</var> satisfies both conditions. The triplet <var>(2,~3,~4)</var> satisfies the first condition but not the second, so it does not count.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>39
+RBRBGRBGGBBRRGBBRRRBGGBRBGBRBGBRBBBGBBB
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>1800
+</pre></section>
+</div>
+</span>

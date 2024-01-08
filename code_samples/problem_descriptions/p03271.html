@@ -1,0 +1,115 @@
+<span class="lang-en">
+<p>Score : <var>1200</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>You are given a permutation of <var>1,2,...,N</var>: <var>p_1,p_2,...,p_N</var>. Determine if the state where <var>p_i=i</var> for every <var>i</var> can be reached by performing the following operation any number of times:</p>
+<ul>
+<li>Choose three elements <var>p_{i-1},p_{i},p_{i+1}</var> (<var>2\leq i\leq N-1</var>) such that <var>p_{i-1}&gt;p_{i}&gt;p_{i+1}</var> and reverse the order of these three.</li>
+</ul>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>3 \leq N \leq 3 × 10^5</var></li>
+<li><var>p_1,p_2,...,p_N</var> is a permutation of <var>1,2,...,N</var>.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+<var>p_1</var>
+<var>:</var>
+<var>p_N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>If the state where <var>p_i=i</var> for every <var>i</var> can be reached by performing the operation, print <code>Yes</code>; otherwise, print <code>No</code>.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>5
+5
+2
+1
+4
+3
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>Yes
+</pre>
+<p>The state where <var>p_i=i</var> for every <var>i</var> can be reached as follows:</p>
+<ul>
+<li>Reverse the order of <var>p_1,p_2,p_3</var>. The sequence <var>p</var> becomes <var>1,2,5,4,3</var>.</li>
+<li>Reverse the order of <var>p_3,p_4,p_5</var>. The sequence <var>p</var> becomes <var>1,2,3,4,5</var>.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>4
+3
+2
+4
+1
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>No
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>7
+3
+2
+1
+6
+5
+4
+7
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>Yes
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 4</h3><pre>6
+5
+3
+4
+1
+2
+6
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 4</h3><pre>No
+</pre></section>
+</div>
+</span>

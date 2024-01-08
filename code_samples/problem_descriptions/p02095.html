@@ -1,0 +1,102 @@
+
+<h2>H: Colorful Tree</h2>
+
+<h3>Story</h3>
+<p>
+<i>Yamiuchi</i> (assassination) is a traditional event that is held annually in JAG summer camp. Every team displays a decorated tree in the dark and all teams' trees are compared from the point of view of their colorfulness. In this competition, it is allowed to cut the other teams’ tree to reduce its colorfulness. Despite a team would get a penalty if it were discovered that the team cuts the tree of another team, many teams do this obstruction.
+</p>
+
+<p>You decided to compete in <i>Yamiuchi</i> and write a program that maximizes the colorfulness of your team’s tree. The program has to calculate maximum scores for all subtrees in case the other teams cut your tree.</p>
+
+<h3>Problem Statement</h3>
+<p>You are given a rooted tree <var>G</var> with <var>N</var> vertices indexed with <var>1</var> through <var>N</var>. The root is vertex <var>1</var>. There are <var>K</var> kinds of colors indexed with <var>1</var> through <var>K</var>. You can paint vertex <var>i</var> with either color <var>c_i</var> or <var>d_i</var>. Note that <var>c_i = d_i</var> may hold, and if so you have to paint vertex <var>i</var> with <var>c_i</var> (<var>=d_i</var>).</p>
+
+<p>Let the colorfulness of tree <var>T</var> be the number of different colors in <var>T</var>. Your task is to write a program that calculates maximum colorfulness for all rooted subtrees. Note that coloring for each rooted subtree is done independently, so previous coloring does not affect to other coloring.</p>
+
+<h3>Input</h3>
+<pre>
+<var>N</var> <var>K</var>
+<var>u_1</var> <var>v_1</var>
+<var>:</var>
+<var>u_{N-1}</var> <var>v_{N-1}</var>
+<var>c_1</var> <var>d_1</var>
+<var>:</var>
+<var>c_N</var> <var>d_N</var>
+</pre>
+
+<p>The first line contains two integers <var>N</var> and <var>K</var> in this order.</p>
+
+<p>The following <var>N-1</var> lines provide information about the edges of <var>G</var>. The <var>i</var>-th line of them contains two integers <var>u_i</var> and <var>v_i</var>, meaning these two vertices are connected with an edge.</p>
+
+<p>The following <var>N</var> lines provide information about color constraints. The <var>i</var>-th line of them contains two integers <var>c_i</var> and <var>d_i</var> explained above.</p>
+
+<h3>Constraints</h3>
+<ul>
+<li><var>1 \leq N \leq 10^5</var></li>
+<li><var>1 \leq K \leq 2\times 10^5</var></li>
+<li><var>1 \leq u_i , v_i \leq N</var></li>
+<li><var>1 \leq c_i , d_i \leq K</var></li>
+<li>The input graph is a tree.</li>
+<li> All inputs are integers.</li>
+</ul>
+
+<h3>Output</h3>
+<p>Output <var>N</var> lines.</p>
+
+<p>The <var>i</var>-th line of them contains the maximum colorfulness of the rooted subtree of <var>G</var> whose root is <var>i</var>.</p>
+
+<h3>Sample Input 1</h3>
+<pre>
+2 10
+1 2
+1 9
+8 7
+</pre>
+
+<h3>Output for Sample Input 1</h3>
+<pre>
+2
+1
+</pre>
+
+<h3>Sample Input 2</h3>
+<pre>
+3 2
+1 2
+1 3
+1 2
+1 1
+1 2
+</pre>
+
+<h3>Output for Sample Input 2</h3>
+<pre>
+2
+1
+1
+</pre>
+
+<p>Note that two color options of a vertex can be the same.</p>
+
+<h3>Sample Input 3</h3>
+<pre>
+5 100000
+4 3
+3 5
+1 3
+2 1
+3 2
+1 3
+2 1
+4 2
+1 4
+</pre>
+
+<h3>Output for Sample Input 3</h3>
+<pre>
+4
+1
+3
+1
+1
+</pre>

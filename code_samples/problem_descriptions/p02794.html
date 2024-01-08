@@ -1,0 +1,157 @@
+<span class="lang-en">
+<p>Score : <var>600</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3>
+<p>We have a tree with <var>N</var> vertices numbered <var>1</var> to <var>N</var>.
+The <var>i</var>-th edge in this tree connects Vertex <var>a_i</var> and Vertex <var>b_i</var>.<br/>
+Consider painting each of these edges white or black. There are <var>2^{N-1}</var> such ways to paint the edges. Among them, how many satisfy all of the following <var>M</var> restrictions?  </p>
+<ul>
+<li>The <var>i</var>-th <var>(1 \leq i \leq M)</var> restriction is represented by two integers <var>u_i</var> and <var>v_i</var>, which mean that the path connecting Vertex <var>u_i</var> and Vertex <var>v_i</var> must contain at least one edge painted black.</li>
+</ul>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3>
+<ul>
+<li><var>2 \leq N \leq 50</var></li>
+<li><var>1 \leq a_i,b_i \leq N</var></li>
+<li>The graph given in input is a tree.</li>
+<li><var>1 \leq M \leq \min(20,\frac{N(N-1)}{2})</var></li>
+<li><var>1 \leq u_i &lt; v_i \leq N</var></li>
+<li>If <var>i \not= j</var>, either <var>u_i \not=u_j</var> or <var>v_i\not=v_j</var></li>
+<li>All values in input are integers.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3>
+<p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+<var>a_1</var> <var>b_1</var>
+<var>:</var>
+<var>a_{N-1}</var> <var>b_{N-1}</var>
+<var>M</var>
+<var>u_1</var> <var>v_1</var>
+<var>:</var>
+<var>u_M</var> <var>v_M</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3>
+<p>Print the number of ways to paint the edges that satisfy all of the <var>M</var> conditions.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>3
+1 2
+2 3
+1
+1 3
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>3
+</pre>
+<p>The tree in this input is shown below:
+<br/>
+<br/>
+<img alt="Figure" src="https://img.atcoder.jp/ghi/5b0208ab1e3bb39a5d4fb7bafbfc448e.png">
+<br/>
+<br/>
+All of the <var>M</var> restrictions will be satisfied if Edge <var>1</var> and <var>2</var> are respectively painted (white, black), (black, white), or (black, black), so the answer is <var>3</var>.</img></p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>2
+1 2
+1
+1 2
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>1
+</pre>
+<p>The tree in this input is shown below:
+<br/>
+<br/>
+<img alt="Figure" src="https://img.atcoder.jp/ghi/d08b3f53dfa4857fe9ffe13fa5d7ae69.png"/>
+<br/>
+<br/>
+All of the <var>M</var> restrictions will be satisfied only if Edge <var>1</var> is painted black, so the answer is <var>1</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>5
+1 2
+3 2
+3 4
+5 3
+3
+1 3
+2 4
+2 5
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>9
+</pre>
+<p>The tree in this input is shown below:
+<br/>
+<br/>
+<img alt="Figure" src="https://img.atcoder.jp/ghi/386502bb3c85e0bb5aee64e4e7c087a1.png"/>
+<br/>
+<br/></p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 4</h3><pre>8
+1 2
+2 3
+4 3
+2 5
+6 3
+6 7
+8 6
+5
+2 7
+3 5
+1 6
+2 8
+7 8
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 4</h3><pre>62
+</pre>
+<p>The tree in this input is shown below:
+<br/>
+<br/>
+<img alt="Figure" src="https://img.atcoder.jp/ghi/955fa8fd8af658abb24ff2f68b9997be.png"/>
+<br/>
+<br/></p></section>
+</div>
+</span>

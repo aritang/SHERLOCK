@@ -1,0 +1,74 @@
+<span class="lang-en">
+<p>Score : <var>200</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>Takahashi received <em>otoshidama</em> (New Year's money gifts) from <var>N</var> of his relatives.</p>
+<p>You are given <var>N</var> values <var>x_1, x_2, ..., x_N</var> and <var>N</var> strings <var>u_1, u_2, ..., u_N</var> as input. Each string <var>u_i</var> is either <code>JPY</code> or <code>BTC</code>, and <var>x_i</var> and <var>u_i</var> represent the content of the otoshidama from the <var>i</var>-th relative.</p>
+<p>For example, if <var>x_1 =</var> <code>10000</code> and <var>u_1 =</var> <code>JPY</code>, the otoshidama from the first relative is <var>10000</var> Japanese yen; if <var>x_2 =</var> <code>0.10000000</code> and <var>u_2 =</var> <code>BTC</code>, the otoshidama from the second relative is <var>0.1</var> bitcoins.</p>
+<p>If we convert the bitcoins into yen at the rate of <var>380000.0</var> JPY per <var>1.0</var> BTC, how much are the gifts worth in total?</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>2 \leq N \leq 10</var></li>
+<li><var>u_i =</var> <code>JPY</code> or <code>BTC</code>.</li>
+<li>If <var>u_i =</var> <code>JPY</code>, <var>x_i</var> is an integer such that <var>1 \leq x_i \leq 10^8</var>.</li>
+<li>If <var>u_i =</var> <code>BTC</code>, <var>x_i</var> is a decimal with <var>8</var> decimal digits, such that <var>0.00000001 \leq x_i \leq 100.00000000</var>.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+<var>x_1</var> <var>u_1</var>
+<var>x_2</var> <var>u_2</var>
+<var>:</var>
+<var>x_N</var> <var>u_N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>If the gifts are worth <var>Y</var> yen in total, print the value <var>Y</var> (not necessarily an integer).</p>
+<p>Output will be judged correct when the absolute or relative error from the judge's output is at most <var>10^{-5}</var>.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>2
+10000 JPY
+0.10000000 BTC
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>48000.0
+</pre>
+<p>The otoshidama from the first relative is <var>10000</var> yen. The otoshidama from the second relative is <var>0.1</var> bitcoins, which is worth <var>38000.0</var> yen if converted at the rate of <var>380000.0</var> JPY per <var>1.0</var> BTC. The sum of these is <var>48000.0</var> yen.</p>
+<p>Outputs such as <code>48000</code> and <code>48000.1</code> will also be judged correct.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>3
+100000000 JPY
+100.00000000 BTC
+0.00000001 BTC
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>138000000.0038
+</pre>
+<p>In this case, outputs such as <code>138001000</code> and <code>1.38e8</code> will also be judged correct.</p></section>
+</div>
+</span>

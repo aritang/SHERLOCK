@@ -1,0 +1,97 @@
+<span class="lang-en">
+<p>Score : <var>500</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>An adult game master and <var>N</var> children are playing a game on an ice rink.
+The game consists of <var>K</var> rounds.
+In the <var>i</var>-th round, the game master announces:</p>
+<ul>
+<li>Form groups consisting of <var>A_i</var> children each!</li>
+</ul>
+<p>Then the children who are still in the game form as many groups of <var>A_i</var> children as possible.
+One child may belong to at most one group.
+Those who are left without a group leave the game. The others proceed to the next round.
+Note that it's possible that nobody leaves the game in some round.</p>
+<p>In the end, after the <var>K</var>-th round, there are exactly two children left, and they are declared the winners.</p>
+<p>You have heard the values of <var>A_1</var>, <var>A_2</var>, ..., <var>A_K</var>. You don't know <var>N</var>, but you want to estimate it.</p>
+<p>Find the smallest and the largest possible number of children in the game before the start, or determine that no valid values of <var>N</var> exist.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 \leq K \leq 10^5</var></li>
+<li><var>2 \leq A_i \leq 10^9</var></li>
+<li>All input values are integers.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>K</var>
+<var>A_1</var> <var>A_2</var> <var>...</var> <var>A_K</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print two integers representing the smallest and the largest possible value of <var>N</var>, respectively,
+or a single integer <var>-1</var> if the described situation is impossible.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>4
+3 4 3 2
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>6 8
+</pre>
+<p>For example, if the game starts with <var>6</var> children, then it proceeds as follows:</p>
+<ul>
+<li>In the first round, <var>6</var> children form <var>2</var> groups of <var>3</var> children, and nobody leaves the game.</li>
+<li>In the second round, <var>6</var> children form <var>1</var> group of <var>4</var> children, and <var>2</var> children leave the game.</li>
+<li>In the third round, <var>4</var> children form <var>1</var> group of <var>3</var> children, and <var>1</var> child leaves the game.</li>
+<li>In the fourth round, <var>3</var> children form <var>1</var> group of <var>2</var> children, and <var>1</var> child leaves the game.</li>
+</ul>
+<p>The last <var>2</var> children are declared the winners.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>5
+3 4 100 3 2
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>-1
+</pre>
+<p>This situation is impossible.
+In particular, if the game starts with less than <var>100</var> children, everyone leaves after the third round.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>10
+2 2 2 2 2 2 2 2 2 2
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>2 3
+</pre></section>
+</div>
+</span>

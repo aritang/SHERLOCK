@@ -1,0 +1,70 @@
+<span class="lang-en">
+<p>Score : <var>400</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>Skenu constructed a building that has <var>N</var> floors. The building has an elevator that stops at every floor.</p>
+<p>There are buttons to control the elevator, but Skenu thoughtlessly installed only one button on each floor - up or down.
+This means that, from each floor, one can only go in one direction.
+If <var>S_i</var> is <code>U</code>, only "up" button is installed on the <var>i</var>-th floor and one can only go up; if <var>S_i</var> is <code>D</code>, only "down" button is installed on the <var>i</var>-th floor and one can only go down.</p>
+<p>The residents have no choice but to go to their destination floors via other floors if necessary.
+Find the sum of the following numbers over all ordered pairs of two floors <var>(i,j)</var>: the minimum number of times one needs to take the elevator to get to the <var>j</var>-th floor from the <var>i</var>-th floor.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>2 ≤ |S| ≤ 10^5</var></li>
+<li><var>S_i</var> is either <code>U</code> or <code>D</code>.</li>
+<li><var>S_1</var> is <code>U</code>.</li>
+<li><var>S_{|S|}</var> is <code>D</code>.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>The input is given from Standard Input in the following format:</p>
+<pre><var>S_1S_2...S_{|S|}</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the sum of the following numbers over all ordered pairs of two floors <var>(i,j)</var>: the minimum number of times one needs to take the elevator to get to the <var>j</var>-th floor from the <var>i</var>-th floor.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>UUD
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>7
+</pre>
+<p>From the <var>1</var>-st floor, one can get to the <var>2</var>-nd floor by taking the elevator once.</p>
+<p>From the <var>1</var>-st floor, one can get to the <var>3</var>-rd floor by taking the elevator once.</p>
+<p>From the <var>2</var>-nd floor, one can get to the <var>1</var>-st floor by taking the elevator twice.</p>
+<p>From the <var>2</var>-nd floor, one can get to the <var>3</var>-rd floor by taking the elevator once.</p>
+<p>From the <var>3</var>-rd floor, one can get to the <var>1</var>-st floor by taking the elevator once.</p>
+<p>From the <var>3</var>-rd floor, one can get to the <var>2</var>-nd floor by taking the elevator once.</p>
+<p>The sum of these numbers of times, <var>7</var>, should be printed.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>UUDUUDUD
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>77
+</pre></section>
+</div>
+</span>

@@ -1,0 +1,86 @@
+<span class="lang-en">
+<p>Score : <var>300</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>The problem set at <em>CODE FESTIVAL 20XX Finals</em> consists of <var>N</var> problems.</p>
+<p>The score allocated to the <var>i</var>-th <var>(1≦i≦N)</var> problem is <var>i</var> points.</p>
+<p>Takahashi, a contestant, is trying to score exactly <var>N</var> points. For that, he is deciding which problems to solve.</p>
+<p>As problems with higher scores are harder, he wants to minimize the highest score of a problem among the ones solved by him.</p>
+<p>Determine the set of problems that should be solved.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1≦N≦10^7</var></li>
+</ul>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Partial Score</h3><ul>
+<li><var>200</var> points will be awarded for passing the test set satisfying <var>1≦N≦1000</var>.</li>
+<li>Additional <var>100</var> points will be awarded for passing the test set without additional constraints.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>The input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Among the sets of problems with the total score of <var>N</var>, find a set in which the highest score of a problem is minimum, then print the indices of the problems in the set in any order, one per line.</p>
+<p>If there exists more than one such set, any of them will be accepted.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>4
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>1
+3
+</pre>
+<p>Solving only the <var>4</var>-th problem will also result in the total score of <var>4</var> points, but solving the <var>1</var>-st and <var>3</var>-rd problems will lower the highest score of a solved problem.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>7
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>1
+2
+4
+</pre>
+<p>The set <var>\{3,4\}</var> will also be accepted.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>1
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>1
+</pre></section>
+</div>
+</span>

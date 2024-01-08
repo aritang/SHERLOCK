@@ -1,0 +1,63 @@
+
+<script src="./IMAGE/varmath.js" charset="UTF-8"></script>
+
+<H1>Testing Circuits</H1>
+
+<p>
+A Boolean expression is given.
+In the expression, each variable appears exactly once.
+Calculate the number of variable assignments that make the expression evaluate to true.
+</p>
+
+<H2>Input</H2>
+
+<p>
+A data set consists of only one line.
+The Boolean expression is given by a string which consists of digits, x, (, ), |, &amp;, and ~.
+Other characters such as spaces are not contained.
+The expression never exceeds 1,000,000 characters.
+The grammar of the expressions is given by the following BNF.
+</p>
+
+<pre>
+&lt;expression&gt; ::= &lt;term&gt; | &lt;expression&gt; &quot;|&quot; &lt;term&gt;
+&lt;term&gt; ::= &lt;factor&gt; | &lt;term&gt; &quot;&amp;&quot; &lt;factor&gt;
+&lt;factor&gt; ::= &lt;variable&gt; | &quot;~&quot; &lt;factor&gt; | &quot;(&quot; &lt;expression&gt; &quot;)&quot;
+&lt;variable&gt; ::= &quot;x&quot; &lt;number&gt;
+&lt;number&gt; ::= &quot;1&quot; | &quot;2&quot; |... | &quot;999999&quot; | &quot;1000000&quot;
+</pre>
+
+<p>
+The expression obeys this syntax and thus you do not have to care about grammatical errors.
+When the expression contains N variables, each variable in {x1, x2,..., xN} appears exactly once.
+</p>
+
+<H2>Output</H2>
+
+<p>
+Output a line containing the number of variable assignments that make the expression evaluate to true in modulo 1,000,000,007.
+</p>
+
+<H2>Sample Input 1</H2>
+
+<pre>
+(x1&amp;x2)
+</pre>
+
+<H2>Output for the Sample Input 1</H2>
+
+<pre>
+1
+</pre>
+
+<H2>Sample Input 2</H2>
+
+<pre>
+(x1&amp;x2)|(x3&amp;x4)|(~(x5|x6)&amp;(x7&amp;x8))
+</pre>
+
+<H2>Output for the Sample Input 2</H2>
+
+<pre>
+121
+</pre>

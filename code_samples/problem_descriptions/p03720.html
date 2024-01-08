@@ -1,0 +1,111 @@
+<span class="lang-en">
+<p>Score : <var>200</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>There are <var>N</var> cities and <var>M</var> roads.
+The <var>i</var>-th road <var>(1≤i≤M)</var> connects two cities <var>a_i</var> and <var>b_i</var> <var>(1≤a_i,b_i≤N)</var> bidirectionally.
+There may be more than one road that connects the same pair of two cities.
+For each city, how many roads are connected to the city?</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>2≤N,M≤50</var></li>
+<li><var>1≤a_i,b_i≤N</var></li>
+<li><var>a_i ≠ b_i</var></li>
+<li>All input values are integers.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:  </p>
+<pre><var>N</var> <var>M</var>
+<var>a_1</var> <var>b_1</var>
+<var>:</var>  
+<var>a_M</var> <var>b_M</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the answer in <var>N</var> lines.
+In the <var>i</var>-th line <var>(1≤i≤N)</var>, print the number of roads connected to city <var>i</var>.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>4 3
+1 2
+2 3
+1 4
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>2
+2
+1
+1
+</pre>
+<ul>
+<li>City <var>1</var> is connected to the <var>1</var>-st and <var>3</var>-rd roads.</li>
+<li>City <var>2</var> is connected to the <var>1</var>-st and <var>2</var>-nd roads.</li>
+<li>City <var>3</var> is connected to the <var>2</var>-nd road.</li>
+<li>City <var>4</var> is connected to the <var>3</var>-rd road.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>2 5
+1 2
+2 1
+1 2
+2 1
+1 2
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>5
+5
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>8 8
+1 2
+3 4
+1 5
+2 8
+3 7
+5 2
+4 1
+6 8
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>3
+3
+2
+2
+2
+1
+1
+2
+</pre></section>
+</div>
+</span>

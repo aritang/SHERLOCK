@@ -1,0 +1,81 @@
+<span class="lang-en">
+<p>Score : <var>200</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>We have an integer sequence <var>A</var>, whose length is <var>N</var>.</p>
+<p>Find the number of the non-empty <strong>contiguous</strong> subsequences of <var>A</var> whose sums are <var>0</var>.
+Note that we are counting <strong>the ways to take out subsequences</strong>.
+That is, even if the contents of some two subsequences are the same, they are counted individually if they are taken from different positions.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 \leq N \leq 2 \times 10^5</var></li>
+<li><var>-10^9 \leq A_i \leq 10^9</var></li>
+<li>All values in input are integers.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+<var>A_1</var> <var>A_2</var> <var>...</var> <var>A_N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Find the number of the non-empty contiguous subsequences of <var>A</var> whose sum is <var>0</var>.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>6
+1 3 -4 2 2 -2
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>3
+</pre>
+<p>There are three contiguous subsequences whose sums are <var>0</var>: <var>(1,3,-4)</var>, <var>(-4,2,2)</var> and <var>(2,-2)</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>7
+1 -1 1 -1 1 -1 1
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>12
+</pre>
+<p>In this case, some subsequences that have the same contents but are taken from different positions are counted individually.
+For example, three occurrences of <var>(1, -1)</var> are counted.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>5
+1 -2 3 -4 5
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>0
+</pre>
+<p>There are no contiguous subsequences whose sums are <var>0</var>.</p></section>
+</div>
+</span>

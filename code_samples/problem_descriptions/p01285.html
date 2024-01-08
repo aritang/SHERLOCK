@@ -1,0 +1,70 @@
+
+<H1><font color="#000">Problem C:</font> Find the Point</H1>
+
+<p>
+We understand that reading English is a great pain to many of you. So we’ll keep this problem statememt
+simple. Write a program that reports the point equally distant from a set of lines given as the input. In
+case of no solutions or multiple solutions, your program should report as such.
+
+</p>
+
+<H2>Input</H2>
+
+<p>
+The input consists of multiple datasets. Each dataset is given in the following format:
+</p>
+<p>
+       <i>n</i><br>
+       <i>x</i><sub>1,1</sub> <i>y</i><sub>1,1</sub> <i>x</i><sub>1,2</sub> <i>y</i><sub>1,2</sub><br>
+       <i>x</i><sub>2,1</sub> <i>y</i><sub>2,1</sub> <i>x</i><sub>2,2</sub> <i>y</i><sub>2,2</sub><br>
+       ...<br>
+       <i>x</i><sub><i>n</i>,1</sub> <i>y</i><sub><i>n</i>,1</sub> <i>x</i><sub><i>n</i>,2</sub> <i>y</i><sub><i>n</i>,2</sub><br>
+</p>
+
+<p>
+<i>n</i> is the number of lines (1 &le; <i>n</i> &le; 100); (<i>x</i><sub><i>i</i>,1</sub>, <i>y</i><sub><i>i</i>,1</sub>) and (<i>x</i><sub><i>i</i>,2</sub>, <i>y</i><sub><i>i</i>,2</sub>) denote the different points the <i>i</i>-th line passes through. The lines do not coincide each other. The coordinates are all integers between -10000
+and 10000.
+</p>
+
+<p>
+The last dataset is followed by a line containing one zero. This line is not a part of any dataset and should not be processed.
+</p>
+
+
+<H2>Output</H2>
+
+<p>
+For each dataset, print a line as follows. If there is exactly one point equally distant from all the given lines, print the <i>x</i>- and <i>y</i>-coordinates in this order with a single space between them. If there is more than one such point,
+just print "<span>Many</span>" (without quotes). If there is none, just print "<span>None</span>" (without quotes).
+</p>
+<p>
+The coordinates may be printed with any number of digits after the decimal point, but should be accurate
+to 10<sup>-4</sup>.
+</p>
+
+<H2>Sample Input</H2>
+<pre>
+2
+-35 -35 100 100
+-49 49 2000 -2000
+4
+0 0 0 3
+0 0 3 0
+0 3 3 3
+3 0 3 3
+4
+0 3 -4 6
+3 0 6 -4
+2 3 6 6
+-1 2 -4 6
+0
+</pre>
+
+<H2>Output for the Sample Input</H2>
+<pre>
+Many
+1.5000 1.5000
+1.000 1.000
+</pre>
+
+

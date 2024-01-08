@@ -1,0 +1,89 @@
+<span class="lang-en">
+<p>Score : <var>200</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>There are <var>N</var> rectangular plate materials made of special metal called AtCoder Alloy.
+The dimensions of the <var>i</var>-th material are <var>A_i \times B_i</var> (<var>A_i</var> vertically and <var>B_i</var> horizontally).</p>
+<p>Takahashi wants a rectangular plate made of AtCoder Alloy whose dimensions are exactly <var>H \times W</var>.
+He is trying to obtain such a plate by choosing one of the <var>N</var> materials and cutting it if necessary.
+When cutting a material, the cuts must be parallel to one of the sides of the material.
+Also, the materials have fixed directions and cannot be rotated.
+For example, a <var>5 \times 3</var> material cannot be used as a <var>3 \times 5</var> plate.</p>
+<p>Out of the <var>N</var> materials, how many can produce an <var>H \times W</var> plate if properly cut?</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 \leq N \leq 1000</var></li>
+<li><var>1 \leq H \leq 10^9</var></li>
+<li><var>1 \leq W \leq 10^9</var></li>
+<li><var>1 \leq A_i \leq 10^9</var></li>
+<li><var>1 \leq B_i \leq 10^9</var></li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var> <var>H</var> <var>W</var>
+<var>A_1</var> <var>B_1</var>
+<var>A_2</var> <var>B_2</var>
+<var>:</var>
+<var>A_N</var> <var>B_N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the answer.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>3 5 2
+10 3
+5 2
+2 5
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>2
+</pre>
+<p>Takahashi wants a <var>5 \times 2</var> plate.</p>
+<ul>
+<li>The dimensions of the first material are <var>10 \times 3</var>. We can obtain a <var>5 \times 2</var> plate by properly cutting it.</li>
+<li>The dimensions of the second material are <var>5 \times 2</var>. We can obtain a <var>5 \times 2</var> plate without cutting it.</li>
+<li>The dimensions of the third material are <var>2 \times 5</var>. We cannot obtain a <var>5 \times 2</var> plate, whatever cuts are made. Note that the material cannot be rotated and used as a <var>5 \times 2</var> plate.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>10 587586158 185430194
+894597290 708587790
+680395892 306946994
+590262034 785368612
+922328576 106880540
+847058850 326169610
+936315062 193149191
+702035777 223363392
+11672949 146832978
+779291680 334178158
+615808191 701464268
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>8
+</pre></section>
+</div>
+</span>

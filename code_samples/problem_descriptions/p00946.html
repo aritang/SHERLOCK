@@ -1,0 +1,84 @@
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({ tex2jax: { inlineMath: [["$","$"], ["\\(","\\)"]], processEscapes: true }});
+</script>
+<script type='text/javascript' src='http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
+</script>
+
+
+<h2>Problem A
+Rearranging a Sequence
+</h2>
+
+<p>
+You are given an ordered sequence of integers, ($1, 2, 3, ..., n$). Then, a number of requests will be given. Each request specifies an integer in the sequence. You need to move the specified integer to the head of the sequence, leaving the order of the rest untouched. Your task is to find the order of the elements in the sequence after following all the requests successively.
+</p>
+
+<h3>Input</h3>
+
+<p>
+The input consists of a single test case of the following form.<br/>
+<br/>
+$n$ $m$<br/>
+$e_1$<br/>
+...<br/>
+$e_m$<br/>
+</p>
+
+<p>
+The integer $n$ is the length of the sequence ($1 \leq n \leq 200000$). The integer $m$ is the number of requests ($1 \leq m \leq 100000$). The following $m$ lines are the requests, namely $e_1, ...,  e_m$, one per line. Each request $e_i$ ($1 \leq i \leq m$) is an integer between 1 and $n$, inclusive, designating the element to move. Note that, the integers designate the integers themselves to move, not their positions in the sequence.
+</p>
+
+
+<h3>Output</h3>
+
+<p>
+Output the sequence after processing all the requests. Its elements are to be output, one per line, in the order in the sequence.
+</p>
+
+
+<h3>Sample Input 1</h3>
+
+<pre>5 3
+4
+2
+5</pre>
+
+<h3>Sample Output 1</h3>
+
+<pre>5
+2
+4
+1
+3</pre>
+
+<br/>
+
+<h3>Sample Input 2</h3>
+
+<pre>10 8
+1
+4
+7
+3
+4
+10
+1
+3</pre>
+
+<h3>Sample Output 2</h3>
+
+<pre>3
+1
+10
+4
+7
+2
+5
+6
+8
+9</pre>
+
+<p>
+In Sample Input 1, the initial sequence is (1, 2, 3, 4, 5). The first request is to move the integer 4 to the head, that is, to change the sequence to (4, 1, 2, 3, 5). The next request to move the integer 2 to the head makes the sequence (2, 4, 1, 3, 5). Finally, 5 is moved to the head, resulting in (5, 2, 4, 1, 3).
+</p>

@@ -1,0 +1,81 @@
+<span class="lang-en">
+<p>Score : <var>500</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>You are given a string <var>S</var> of length <var>N</var> consisting of lowercase English letters.</p>
+<p>Process <var>Q</var> queries of the following two types:</p>
+<ul>
+<li>Type <var>1</var>: change the <var>i_q</var>-th character of <var>S</var> to <var>c_q</var>. (Do nothing if the <var>i_q</var>-th character is already <var>c_q</var>.)</li>
+<li>Type <var>2</var>: answer the number of different characters occurring in the substring of <var>S</var> between the <var>l_q</var>-th and <var>r_q</var>-th characters (inclusive).</li>
+</ul>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>N</var>, <var>Q</var>, <var>i_q</var>, <var>l_q</var>, and <var>r_q</var> are integers.</li>
+<li><var>S</var> is a string consisting of lowercase English letters.</li>
+<li><var>c_q</var> is a lowercase English letter.</li>
+<li><var>1 \leq N \leq 500000</var></li>
+<li><var>1 \leq Q \leq 20000</var></li>
+<li><var>|S| = N</var></li>
+<li><var>1 \leq i_q \leq N</var></li>
+<li><var>1 \leq l_q \leq r_q \leq N</var></li>
+<li>There is at least one query of type <var>2</var> in each testcase.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+<var>S</var>
+<var>Q</var>
+<var>Query_1</var>
+<var>\vdots</var>
+<var>Query_Q</var>
+</pre>
+<p>Here, <var>Query_i</var> in the <var>4</var>-th through <var>(Q+3)</var>-th lines is one of the following:</p>
+<pre><var>1</var> <var>i_q</var> <var>c_q</var>
+</pre>
+<pre><var>2</var> <var>l_q</var> <var>r_q</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>For each query of type <var>2</var>, print a line containing the answer.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>7
+abcdbbd
+6
+2 3 6
+1 5 z
+2 1 1
+1 4 a
+1 7 d
+2 1 7
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>3
+1
+5
+</pre>
+<p>In the first query, <code>cdbb</code> contains three kinds of letters: <code>b</code> , <code>c</code> , and <code>d</code>, so we print <var>3</var>.</p>
+<p>In the second query, <var>S</var> is modified to <code>abcdzbd</code>.</p>
+<p>In the third query, <code>a</code> contains one kind of letter: <code>a</code>, so we print <var>1</var>.</p>
+<p>In the fourth query, <var>S</var> is modified to <code>abcazbd</code>.</p>
+<p>In the fifth query, <var>S</var> does not change and is still <code>abcazbd</code>.</p>
+<p>In the sixth query, <code>abcazbd</code> contains five kinds of letters: <code>a</code>, <code>b</code>, <code>c</code>, <code>d</code>, and <code>z</code>, so we print <var>5</var>.</p></section>
+</div>
+</span>

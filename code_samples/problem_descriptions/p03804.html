@@ -1,0 +1,85 @@
+<span class="lang-en">
+<p>Score : <var>200</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>You are given an image <var>A</var> composed of <var>N</var> rows and <var>N</var> columns of pixels, and a template image <var>B</var> composed of <var>M</var> rows and <var>M</var> columns of pixels.<br/>
+A pixel is the smallest element of an image, and in this problem it is a square of size <var>1×1</var>.<br/>
+Also, the given images are binary images, and the color of each pixel is either white or black.  </p>
+<p>In the input, every pixel is represented by a character: <code>.</code> corresponds to a white pixel, and <code>#</code> corresponds to a black pixel.<br/>
+The image <var>A</var> is given as <var>N</var> strings <var>A_1,...,A_N</var>.<br/>
+The <var>j</var>-th character in the string <var>A_i</var> corresponds to the pixel at the <var>i</var>-th row and <var>j</var>-th column of the image <var>A</var> <var>(1≦i,j≦N)</var>.<br/>
+Similarly, the template image <var>B</var> is given as <var>M</var> strings <var>B_1,...,B_M</var>.<br/>
+The <var>j</var>-th character in the string <var>B_i</var> corresponds to the pixel at the <var>i</var>-th row and <var>j</var>-th column of the template image <var>B</var> <var>(1≦i,j≦M)</var>.  </p>
+<p>Determine whether the template image <var>B</var> is contained in the image <var>A</var> when only parallel shifts can be applied to the images.  </p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1≦M≦N≦50</var> </li>
+<li><var>A_i</var> is a string of length <var>N</var> consisting of <code>#</code> and <code>.</code>.</li>
+<li><var>B_i</var> is a string of length <var>M</var> consisting of <code>#</code> and <code>.</code>.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>The input is given from Standard Input in the following format:</p>
+<pre><var>N</var> <var>M</var>
+<var>A_1</var>
+<var>A_2</var>
+<var>:</var>  
+<var>A_N</var>
+<var>B_1</var>
+<var>B_2</var>
+<var>:</var>  
+<var>B_M</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print <code>Yes</code> if the template image <var>B</var> is contained in the image <var>A</var>. Print <code>No</code> otherwise.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>3 2
+#.#
+.#.
+#.#
+#.
+.#
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>Yes
+</pre>
+<p>The template image <var>B</var> is identical to the upper-left <var>2 × 2</var> subimage and the lower-right <var>2 × 2</var> subimage of <var>A</var>. Thus, the output should be <code>Yes</code>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>4 1
+....
+....
+....
+....
+#
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>No
+</pre>
+<p>The template image <var>B</var>, composed of a black pixel, is not contained in the image <var>A</var> composed of white pixels.</p></section>
+</div>
+</span>

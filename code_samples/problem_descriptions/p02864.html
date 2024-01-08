@@ -1,0 +1,89 @@
+<span class="lang-en">
+<p>Score : <var>600</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>We will create an artwork by painting black some squares in a white square grid with <var>10^9</var> rows and <var>N</var> columns.<br/>
+The current plan is as follows: for the <var>i</var>-th column from the left, we will paint the <var>H_i</var> bottommost squares and will not paint the other squares in that column.<br/>
+Before starting to work, you can choose at most <var>K</var> columns (possibly zero) and change the values of <var>H_i</var> for these columns to any integers of your choice between <var>0</var> and <var>10^9</var> (inclusive).<br/>
+Different values can be chosen for different columns.<br/></p>
+<p>Then, you will create the modified artwork by repeating the following operation:<br/></p>
+<ul>
+<li>Choose one or more consecutive squares in one row and paint them black. (Squares already painted black can be painted again, but squares not to be painted according to the modified plan should not be painted.)</li>
+</ul>
+<p>Find the minimum number of times you need to perform this operation.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 \leq N \leq 300</var></li>
+<li><var>0 \leq K \leq N</var></li>
+<li><var>0 \leq H_i \leq 10^9</var></li>
+<li>All values in input are integers.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var> <var>K</var>
+<var>H_1</var> <var>H_2</var> <var>...</var> <var>H_N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the minimum number of operations required.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>4 1
+2 3 4 1
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>3
+</pre>
+<p>For example, by changing the value of <var>H_3</var> to <var>2</var>, you can create the modified artwork by the following three operations:</p>
+<ul>
+<li>Paint black the <var>1</var>-st through <var>4</var>-th squares from the left in the <var>1</var>-st row from the bottom.</li>
+<li>Paint black the <var>1</var>-st through <var>3</var>-rd squares from the left in the <var>2</var>-nd row from the bottom.</li>
+<li>Paint black the <var>2</var>-nd square from the left in the <var>3</var>-rd row from the bottom.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>6 2
+8 6 9 1 2 1
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>7
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>10 0
+1 1000000000 1 1000000000 1 1000000000 1 1000000000 1 1000000000
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>4999999996
+</pre></section>
+</div>
+</span>

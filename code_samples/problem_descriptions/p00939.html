@@ -1,0 +1,115 @@
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({ tex2jax: { inlineMath: [["$","$"], ["\\(","\\)"]], processEscapes: true }});
+</script>
+<script type='text/javascript' src='http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
+</script>
+
+
+<h2>Problem E
+Bringing Order to Disorder</h2>
+
+<p>
+A sequence of digits usually represents a number, but we may define an alternative interpretation. In this problem we define a new interpretation with the order relation $\prec$ among the digit sequences of the same length defined below.
+</p>
+
+<p>
+Let $s$ be a sequence of $n$ digits, $d_1d_2 ... d_n$, where each $d_i$ $(1 \leq i \leq n)$ is one of 0, 1, ... , and 9. Let sum($s$), prod($s$), and int($s$) be as follows:<br>
+<br>
+sum($s$) = $d_1 + d_2 + ... + d_n$<br>
+prod($s$) = $(d_1 + 1) \times (d_2 + 1) \times  ... \times (d_n + 1)$<br>
+int($s$) = $d_1 \times 10^{n-1} + d_2 \times 10^{n-2} + ... + d_n \times 10^0$<br>
+<br>
+
+int($s$) is the integer the digit sequence $s$ represents with normal decimal interpretation.
+</p>
+
+<p>
+Let $s_1$ and $s_2$ be sequences of the same number of digits. Then $s_1 \prec s_2$ ($s_1$ is less than $s_2$) is satisfied if and only if one of the following conditions is satisfied.
+</p>
+
+<ol>
+<li> sum($s_1$) $<$ sum($s_2$)</li>
+<li> sum($s_1$) $=$ sum($s_2$) and prod($s_1$) $<$ prod($s_2$)</li>
+<li> sum($s_1$) $=$ sum($s_2$), prod($s_1$) $=$ prod($s_2$), and int($s_1$) $<$ int($s_2$)</li>
+</ol>
+
+<p>
+For 2-digit sequences, for instance, the following relations are satisfied.<br>
+<br>
+
+$00 \prec 01 \prec 10 \prec 02 \prec 20 \prec 11 \prec 03 \prec 30 \prec 12 \prec 21 \prec ... \prec 89 \prec 98 \prec 99$<br>
+</p>
+
+<p>
+Your task is, given an $n$-digit sequence $s$, to count up the number of $n$-digit sequences that are less than $s$ in the order $\prec$ defined above.
+</p>
+
+
+<h3>Input</h3>
+
+<p>
+The input consists of a single test case in a line.<br>
+<br>
+$d_1d_2 ... d_n$<br>
+<br>
+
+$n$ is a positive integer at most 14. Each of $d_1, d_2, ...,$  and $d_n$ is a digit.
+</p>
+
+
+<h3>Output</h3>
+
+<p>
+Print the number of the $n$-digit sequences less than $d_1d_2 ... d_n$ in the order defined above.
+</p>
+
+
+<h3>Sample Input 1</h3>
+
+<pre>20</pre>
+
+<h3>Sample Output 1</h3>
+
+<pre>4</pre>
+
+
+
+<h3>Sample Input 2</h3>
+
+<pre>020</pre>
+
+<h3>Sample Output 2</h3>
+
+<pre>5</pre>
+
+
+
+<h3>Sample Input 3</h3>
+
+<pre>118</pre>
+
+<h3>Sample Output 3</h3>
+
+<pre>245</pre>
+
+
+
+
+<h3>Sample Input 4</h3>
+
+<pre>11111111111111</pre>
+
+<h3>Sample Output 4</h3>
+
+<pre>40073759</pre>
+
+
+
+<h3>Sample Input 5</h3>
+
+<pre>99777222222211</pre>
+
+<h3>Sample Output 5</h3>
+
+<pre>23733362467675</pre>

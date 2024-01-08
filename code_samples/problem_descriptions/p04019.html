@@ -1,0 +1,92 @@
+<span class="lang-en">
+<p>Score : <var>200</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>Snuke lives on an infinite two-dimensional plane. He is going on an <var>N</var>-day trip.
+At the beginning of Day <var>1</var>, he is at home. His plan is described in a string <var>S</var> of length <var>N</var>.
+On Day <var>i(1 ≦ i ≦ N)</var>, he will travel a positive distance in the following direction:</p>
+<ul>
+<li>North if the <var>i</var>-th letter of <var>S</var> is <code>N</code></li>
+<li>West if the <var>i</var>-th letter of <var>S</var> is <code>W</code></li>
+<li>South if the <var>i</var>-th letter of <var>S</var> is <code>S</code></li>
+<li>East if the <var>i</var>-th letter of <var>S</var> is <code>E</code></li>
+</ul>
+<p>He has not decided each day's travel distance. Determine whether it is possible to set each day's travel distance so that he will be back at home at the end of Day <var>N</var>.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 ≦ | S | ≦ 1000</var></li>
+<li><var>S</var> consists of the letters <code>N</code>, <code>W</code>, <code>S</code>, <code>E</code>.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>The input is given from Standard Input in the following format:</p>
+<pre><var>S</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print <code>Yes</code> if it is possible to set each day's travel distance so that he will be back at home at the end of Day <var>N</var>. Otherwise, print <code>No</code>.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>SENW
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>Yes
+</pre>
+<p>If Snuke travels a distance of <var>1</var> on each day, he will be back at home at the end of day <var>4</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>NSNNSNSN
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>Yes
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>NNEW
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>No
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 4</h3><pre>W
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 4</h3><pre>No
+</pre></section>
+</div>
+</span>

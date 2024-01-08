@@ -1,0 +1,167 @@
+<span class="lang-en lang-child hidden-lang">
+<div class="part">
+				Max Score: <var>1150</var> Points <br/>
+<font color="red">Task statement was updated.</font>
+<section>
+<h3>Problem Statement</h3>
+					There is a grid which size is $H \times W$. the upper-left cell is $(1,1)$ and the lower-right cell is $(H,W)$.<br/>
+					There is $N$ arrows. Arrow which start point is $(a_i,b_i)$ of direction is $c_i$, and size is $d_i$. ($d_i$ may be negative)<br/>
+					It is guaranteed that there are no two arrow which start point is same.<br/>
+<br/>
+					Sothe want to move from cell $(sx,sy)$ to cell $(gx,gy)$ with arrows.<br/>
+					But it may not possible to move to goal in initial grid.<br/>
+					So, Snuke decided to change some arrows.<br/>
+<br/>
+<div align="left" class="img-nocaption">
+<img src="https://atcoder.jp/img/s8pc-4/5eff69da8ebd635a501515b7f86a47e6.png" width="500"/>
+</div>
+					Sothe can change each arrow as follows:<br/>
+<ul>
+<li>He can't change the start point of this arrow.</li>
+<li>It costs $e_i$ if he change the direction of this arrow.</li>
+<li>It costs $f \times |d_i-G|$ if he change <var>d_i</var> to $G$.</li>
+</ul>
+<div align="left" class="img-nocaption">
+<img src="https://atcoder.jp/img/s8pc-4/532f821bbe6594a29e622d7a81cbcad7.png" width="700"/>
+</div><br/>
+					He can't add or erase arrows.<br/>
+<br/>
+					Please calculate the minimum cost that he can move to $(gx,gy)$.<br/><h3> If he can't move to goal, please output '-1'.</h3>
+					Note: Arrows are directed, and he can't turn in the middle of the arrow.<br/>
+</section>
+</div>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3>
+						The input is given from standard input in the following format. <br/>
+<br/>
+<pre>
+<var>H</var> <var>W</var> <var>N</var> <var>f</var>
+<var>sx</var> <var>sy</var> <var>gx</var> <var>gy</var>
+<var>a_1</var> <var>b_1</var> <var>c_1</var> <var>d_1</var> <var>e_1</var>
+<var>a_2</var> <var>b_2</var> <var>c_2</var> <var>d_2</var> <var>e_2</var>
+ :   :   :
+<var>a_N</var> <var>b_N</var> <var>c_N</var> <var>d_N</var> <var>e_N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3>
+<ul>
+<li>Please output a single integer: The minimum cost to clear this puzzle.</li>
+<li>If you can't achieve the objective, print <code>-1</code>.</li>
+<li>Print <code>\n</code> (line break) in the end.</li>
+</ul>
+</section>
+<section>
+<h3>Constraints</h3>
+<ul>
+<li>$1 \le H,W \le 100000$</li>
+<li>$1 \le N \le 70000$</li>
+<li>$1 \le f,e_i \le 1000000$</li>
+<li>$1 \le d_i \le 100000$</li>
+<li>$1 \le a_i,sx,tx \le H$</li>
+<li>$1 \le b_i,sy,ty \le W$</li>
+<li>$c_i$ is <code>N</code>, <code>E</code>, <code>S</code>, or <code>W</code>, which means North, East, South, West.</li>
+</ul>
+</section>
+<section>
+<h3>Subtasks</h3>
+<p>Subtask 1 [ <var>190</var> points ]</p>
+<ul>
+<li>$H=1$</li>
+<li>$W \le 600$</li>
+</ul>
+<p>Subtask 2 [ <var>170</var> points ]</p>
+<ul>
+<li>$H,W \le 80$</li>
+</ul>
+<p>Subtask 3 [ <var>360</var> points ]</p>
+<ul>
+<li>$H,W \le 600$</li>
+</ul>
+<p>Subtask 4 [ <var>430</var> points ]</p>
+<ul>
+<li>There is no additional constraints.</li>
+</ul>
+</section>
+</div>
+</div>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3>
+<pre>
+4 4 2 2
+1 1 2 2
+1 1 E 1 1
+1 2 E 2 2
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3>
+<pre>
+4
+</pre>
+</section>
+</div>
+<div align="left" class="img-nocaption">
+<img src="https://atcoder.jp/img/s8pc-4/6c5665931a6f8044048238e0a68bf17c.png" width="500"/>
+</div>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3>
+<pre>
+1 4 2 10
+1 1 1 4
+1 1 E 1 4
+1 3 W 1 4
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3>
+<pre>
+14
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3>
+<pre>
+1 8 4 9
+1 3 1 6
+1 1 E 7 2
+1 8 W 7 5
+1 3 W 2 5
+1 6 E 2 8
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3>
+<pre>
+14
+</pre>
+</section>
+</div>
+<div class="part">
+<h3>Sample Input 4</h3>
+<pre>
+5 5 7 10
+1 2 4 5
+1 2 E 2 6
+2 3 S 2 7
+3 1 N 1 8
+3 2 W 1 10
+4 1 E 4 12
+5 5 N 3 13
+5 1 E 2 14
+</pre>
+</div></span>

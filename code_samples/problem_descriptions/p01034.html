@@ -1,0 +1,120 @@
+<h1>Problem H: Yu-kun Likes a Directed Graph</h1>
+<h2>Background</h2>
+<p>
+会津大学付属幼稚園はプログラミングが大好きな子供が集まる幼稚園である。園児の一人であるゆう君は、プログラミングと同じくらいお絵描きが大好きだ。
+これまでゆう君は、丸と矢印で沢山絵を書いてきた。矢印は必ず丸と丸を結ぶようにして描いてある。ある日ゆう君はこれらの絵がグラフであることを知る。
+</p>
+
+<p>
+丸は頂点と呼ばれ、矢印は辺と呼ばれているらしい。更にゆう君は、矢印を描く際に、必ずその上に１つ正の整数を書いていた。このように、辺に重みがあり有向な辺からなるグラフは重み付き有向グラフと呼ばれる。
+</p>
+
+<p>
+  今日ゆう君は、新たに閉路という言葉を知った。閉路とは、連結した辺の列であり、それに含まれるどの頂点も高々1度しか現れないもので、最初の頂点と最後の頂点が同じであるようなものをいう。閉路の辺の重みの総和が負になる場合、そのような閉路は負の閉路と呼ばれる。
+</p>
+
+<p>
+新たな言葉を沢山知ったゆう君は一つの問題を思いついた。
+</p>
+
+<h2>Problem</h2>
+<p>
+閉路を持たない重み付き有向グラフが与えられる。
+異なる２つの頂点 <var>i</var>, <var>j</var> を選び、<var>i</var> から <var>j</var> に重み <var>w</var> ( <var>w</var> < 0 ) の有向な辺を1本追加する。
+これによってグラフ内に負の閉路ができるような <var>i</var>、 <var>j</var> をみつけ、その負の閉路に属する辺の重みの総和の最大値を求めよ。
+そのような <var>i</var>, <var>j</var> が存在しない場合は"NA"と出力すること。
+</p>
+
+<h2>Input</h2>
+
+
+<pre>
+<var>V</var> <var>E</var> <var>w</var>
+<var>s<sub>0</sub></var> <var>t<sub>0</sub></var> <var>c<sub>0</sub></var>
+<var>s<sub>1</sub></var> <var>t<sub>1</sub></var> <var>c<sub>1</sub></var>
+...
+<var>s<sub>(E-1)</sub></var> <var>t<sub>(E-1)</sub></var> <var>c<sub>(E-1)</sub></var>
+</pre>
+
+
+<p>１行目に頂点の数 <var>V</var>, 辺の数 <var>E</var>, 追加する辺の重み <var>w</var> が空白区切りで与えられる。</p>
+<p>続く <var>E</var> 行に有向な辺の情報が <var>s<sub>i</sub></var> <var>t<sub>i</sub></var> <var>c<sub>i</sub></var> として与えられる。 ( 0 &le; <var>i</var> &le; <var>E-1</var> )</p>
+<p>これは、 <var>s<sub>i</sub></var> から <var>t<sub>i</sub></var> に向けて重み <var>c<sub>i</sub></var> の有向な辺が存在することを表す。</p>
+
+
+<h2>Constraints</h2>
+<p>入力は以下の条件を満たす。</p>
+<ul>
+<li>2 &le; <var>V</var> &le; 100000</li>
+<li>1 &le; <var>E</var> &le; 500000</li>
+<li>-100 &le; <var>w</var> &lt; 0</li>
+<li>0 &le; <var>c<sub>i</sub></var> &le; 100 ( 0 &le; <var>i</var> &le; <var>E-1</var> )</li>
+<li>0 &le; <var>s<sub>i</sub></var>, <var>t<sub>i</sub></var> &le; <var>V-1</var> ( 0 &le; <var>i</var> &le; <var>E-1</var> )</li>
+<li>入力中に同じ <var>s<sub>i</sub></var> と <var>t<sub>i</sub></var> のペアが現れることはない</li>
+<li><var>s<sub>i</sub></var> と <var>t<sub>i</sub></var> は異なる</li>
+</ul>
+
+<h2>Output</h2>
+
+<p>
+重み <var>w</var> の有向な辺を追加することで出来る負の閉路に属する辺の重みの総和の最大値を１行に出力せよ。
+どこに辺を追加しても負の閉路が作れない場合は"NA"と出力すること。
+
+</p>
+
+
+<h2>Sample Input 1</h2>
+<pre>
+3 2 -3
+0 1 1
+0 2 5
+</pre>
+
+<h2>Sample Output 1</h2>
+<pre>
+-2
+</pre>
+
+<h2>Sample Input 2</h2>
+<pre>
+3 2 -1
+0 1 1
+0 2 5
+</pre>
+
+<h2>Sample Output 2</h2>
+<pre>
+NA
+</pre>
+
+<h2>Sample Input 3</h2>
+<pre>
+7 8 -8
+0 1 5
+0 4 3
+1 2 10
+1 3 1
+3 6 6
+4 3 1
+4 5 2
+4 6 2
+</pre>
+
+<h2>Sample Output 3</h2>
+<pre>
+-1
+</pre>
+
+<h2>Sample Input 4</h2>
+<pre>
+5 4 -30
+0 1 1
+1 3 15
+1 4 4
+2 1 3
+</pre>
+
+<h2>Sample Output 4</h2>
+<pre>
+-12
+</pre>

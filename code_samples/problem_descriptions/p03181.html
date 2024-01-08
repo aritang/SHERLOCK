@@ -1,0 +1,132 @@
+<span class="lang-en">
+<p>Score : <var>100</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>There is a tree with <var>N</var> vertices, numbered <var>1, 2, \ldots, N</var>.
+For each <var>i</var> (<var>1 \leq i \leq N - 1</var>), the <var>i</var>-th edge connects Vertex <var>x_i</var> and <var>y_i</var>.</p>
+<p>Taro has decided to paint each vertex in white or black, so that any black vertex can be reached from any other black vertex by passing through only black vertices.</p>
+<p>You are given a positive integer <var>M</var>.
+For each <var>v</var> (<var>1 \leq v \leq N</var>), answer the following question:</p>
+<ul>
+<li>Assuming that Vertex <var>v</var> has to be black, find the number of ways in which the vertices can be painted, modulo <var>M</var>.</li>
+</ul>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li>All values in input are integers.</li>
+<li><var>1 \leq N \leq 10^5</var></li>
+<li><var>2 \leq M \leq 10^9</var></li>
+<li><var>1 \leq x_i, y_i \leq N</var></li>
+<li>The given graph is a tree.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var> <var>M</var>
+<var>x_1</var> <var>y_1</var>
+<var>x_2</var> <var>y_2</var>
+<var>:</var>
+<var>x_{N - 1}</var> <var>y_{N - 1}</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print <var>N</var> lines.
+The <var>v</var>-th (<var>1 \leq v \leq N</var>) line should contain the answer to the following question:</p>
+<ul>
+<li>Assuming that Vertex <var>v</var> has to be black, find the number of ways in which the vertices can be painted, modulo <var>M</var>.</li>
+</ul>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>3 100
+1 2
+2 3
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>3
+4
+3
+</pre>
+<p>There are seven ways to paint the vertices, as shown in the figure below.
+Among them, there are three ways such that Vertex <var>1</var> is black, four ways such that Vertex <var>2</var> is black and three ways such that Vertex <var>3</var> is black.</p>
+<p><img alt="" src="https://img.atcoder.jp/dp/subtree_0_muffet.png"/></p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>4 100
+1 2
+1 3
+1 4
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>8
+5
+5
+5
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>1 100
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>1
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 4</h3><pre>10 2
+8 5
+10 8
+6 5
+1 5
+4 8
+2 10
+3 6
+9 2
+1 7
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 4</h3><pre>0
+0
+1
+1
+1
+0
+1
+0
+1
+1
+</pre>
+<p>Be sure to print the answers modulo <var>M</var>.</p></section>
+</div>
+</span>

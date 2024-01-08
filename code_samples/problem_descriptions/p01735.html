@@ -1,0 +1,168 @@
+
+<p>
+Fox Ciel is developing an artificial intelligence (AI) for a game. This game is described as a game tree T with n vertices.
+Each node in the game has an evaluation value which shows how good a situation is.
+This value is the same as maximum value of child nodes’ values multiplied by -1. Values on leaf nodes are evaluated with Ciel’s special function -- which is a bit heavy.
+So, she will use alpha-beta pruning for getting root node’s evaluation value to decrease the number of leaf nodes to be calculated.
+</p>
+
+<p>
+By the way, changing evaluation order of child nodes affects the number of calculation on the leaf nodes.
+Therefore, Ciel wants to know the minimum and maximum number of times to calculate in leaf nodes when she could evaluate child node in arbitrary order.
+She asked you to calculate minimum evaluation number of times and maximum evaluation number of times in leaf nodes.
+</p>
+
+<p>
+Ciel uses following algotithm:
+</p>
+
+<pre>
+function negamax(node, &alpha;, &beta;)
+    if node is a terminal node
+        return value of leaf node
+    else
+        foreach child of node
+            val := -negamax(child, -&beta;, -&alpha;)
+            if val >= &beta;
+                return val
+            if val > &alpha;
+                &alpha; := val
+        return &alpha;
+</pre>
+
+
+<p>
+[NOTE]
+<a href="http://en.wikipedia.org/wiki/Negamax">negamax algorithm</a>
+</p>
+
+
+<h3>Input</h3>
+<p>Input follows following format:</p>
+<pre>
+<var>n</var>
+<var>p_1</var> <var>p_2</var> ... <var>p_n</var>
+<var>k_1</var> <var>t_{11}</var> <var>t_{12}</var> ... <var>t_{1k}</var>
+:
+:
+<var>k_n</var> <var>t_{n1}</var> <var>t_{n2}</var> ... <var>t_{nk}</var>
+</pre>
+
+<p>The first line contains an integer <var>n</var>, which means the number of vertices in game tree T.<br>
+The second line contains <var>n</var> integers <var>p_i</var>, which means the evaluation value of vertex <var>i</var>.<br>
+Then, next <var>n</var> lines which contain the information of game tree T.<br>
+<var>k_i</var> is the number of child nodes of vertex <var>i</var>, and <var>t_{ij}</var> is the indices of the child node of vertex <var>i</var>.<br>
+
+Input follows following constraints:
+</p>
+
+<ul><li> <var>2 \leq n \leq 100</var>
+</li><li> <var>-10,000 \leq p_i \leq 10,000</var>
+</li><li> <var>0 \leq k_i \leq 5</var>
+</li><li> <var>2 \leq t_{ij} \leq n</var>
+</li><li> Index of root node is <var>1</var>.
+</li><li> Evaluation value except leaf node is always <var>0</var>. This does not mean the evaluation values of non-leaf nodes are <var>0</var>. You have to calculate them if necessary.
+</li><li> Leaf node sometimes have evaluation value of <var>0</var>.
+</li><li> Game tree T is tree structure.
+</li></ul>
+
+
+
+<h3>Output</h3>
+<p>Print the minimum evaluation number of times and the maximum evaluation number of times in leaf node.<br>
+Please separated by whitespace between minimum and maximum.
+</p><pre>
+minimum maximum</pre>
+
+
+
+<h3>Sample Input 1</h3>
+
+
+<pre>3
+0 1 1
+2 2 3
+0
+0
+</pre>
+
+
+<h3>Output for the Sample Input 1</h3>
+
+
+<pre>2 2
+</pre>
+
+
+<h3>Sample Input 2</h3>
+
+
+<pre>8
+0 0 100 100 0 -100 -100 -100
+2 2 5
+2 3 4
+0
+0
+3 6 7 8
+0
+0
+0
+</pre>
+
+<h3>Output for the Sample Input 2</h3>
+
+<pre>3 5
+</pre>
+
+<h3>Sample Input 3</h3>
+
+<pre>8
+0 0 100 100 0 100 100 100
+2 2 5
+2 3 4
+0
+0
+3 6 7 8
+0
+0
+0
+</pre>
+
+<h3>Output for the Sample Input 3</h3>
+
+<pre>3 4
+</pre>
+
+
+<h3>Sample Input 4</h3>
+
+
+<pre>19
+0 100 0 100 0 0 0 0 0 1 2 3 4 5 6 7 8 9 10
+2 2 3
+0
+2 4 5
+0
+3 6 7 8
+3 9 10 11
+3 12 13 14
+3 15 16 17
+2 18 19
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+</pre>
+
+<h3>Output for the Sample Input 4</h3>
+
+<pre>7 12
+</pre>
+</div>
+</div>

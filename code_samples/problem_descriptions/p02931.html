@@ -1,0 +1,109 @@
+<span class="lang-en">
+<p>Score : <var>800</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>There are <var>N</var> cards placed on a grid with <var>H</var> rows and <var>W</var> columns of squares.</p>
+<p>The <var>i</var>-th card has an integer <var>A_i</var> written on it, and it is placed on the square at the <var>R_i</var>-th row from the top and the <var>C_i</var>-th column from the left.</p>
+<p>Multiple cards may be placed on the same square.</p>
+<p>You will first pick up at most one card from each row.</p>
+<p>Then, you will pick up at most one card from each column.</p>
+<p>Find the maximum possible sum of the integers written on the picked cards.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li>All values are integers.</li>
+<li><var>1 \leq N \leq 10^5</var></li>
+<li><var>1 \leq H, W \leq 10^5</var></li>
+<li><var>1 \leq A_i \leq 10^5</var></li>
+<li><var>1 \leq R_i \leq H</var></li>
+<li><var>1 \leq C_i \leq W</var></li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var> <var>H</var> <var>W</var>
+<var>R_1</var> <var>C_1</var> <var>A_1</var>
+<var>R_2</var> <var>C_2</var> <var>A_2</var>
+<var>\vdots</var>
+<var>R_N</var> <var>C_N</var> <var>A_N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the maximum possible sum of the integers written on the picked cards.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>6 2 2
+2 2 2
+1 1 8
+1 1 5
+1 2 9
+1 2 7
+2 1 4
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>28
+</pre>
+<p>The sum of the integers written on the picked cards will be <var>28</var>, the maximum value possible, if you pick up cards as follows:</p>
+<ul>
+<li>Pick up the fourth card from the first row.</li>
+<li>Pick up the sixth card from the second row.</li>
+<li>Pick up the second card from the first column.</li>
+<li>Pick up the fifth card from the second column.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>13 5 6
+1 3 35902
+4 6 19698
+4 6 73389
+3 6 3031
+3 1 4771
+1 4 4784
+2 1 36357
+2 1 24830
+5 6 50219
+4 6 22645
+1 2 30739
+1 4 68417
+1 5 78537
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>430590
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>1 100000 100000
+1 1 1
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>1
+</pre></section>
+</div>
+</span>

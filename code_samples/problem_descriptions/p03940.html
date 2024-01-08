@@ -1,0 +1,92 @@
+<span class="lang-en">
+<p>Score : <var>1200</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><style>
+   #nck {
+      width: 30px;
+      height: auto;
+   }
+</style>
+<p>Imagine a game played on a line. Initially, the player is located at position <var>0</var> with <var>N</var> candies in his possession, and the exit is at position <var>E</var>. There are also <var>N</var> bears in the game. The <var>i</var>-th bear is located at <var>x_i</var>. The maximum moving speed of the player is <var>1</var> while the bears do not move at all.</p>
+<p>When the player gives a candy to a bear, it will provide a coin after <var>T</var> units of time. More specifically, if the <var>i</var>-th bear is given a candy at time <var>t</var>, it will put a coin at its position at time <var>t+T</var>. The purpose of this game is to give candies to all the bears, pick up all the coins, and go to the exit. Note that the player can only give a candy to a bear if the player is at the exact same position of the bear. Also, each bear will only produce a coin once. If the player visits the position of a coin after or at the exact same time that the coin is put down, the player can pick up the coin. Coins do not disappear until collected by the player.</p>
+<p>Shik is an expert of this game. He can give candies to bears and pick up coins instantly. You are given the configuration of the game. Please calculate the minimum time Shik needs to collect all the coins and go to the exit.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 \leq N \leq 100,000</var></li>
+<li><var>1 \leq T, E \leq 10^9</var></li>
+<li><var>0 &lt; x_i &lt; E</var></li>
+<li><var>x_i &lt; x_{i+1}</var> for <var>1 \leq i &lt; N</var></li>
+<li>All input values are integers.</li>
+</ul>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Partial Scores</h3><ul>
+<li>In test cases worth <var>600</var> points, <var>N \leq 2,000</var>.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>The input is given from Standard Input in the following format:</p>
+<pre><var>N</var> <var>E</var> <var>T</var>
+<var>x_1</var> <var>x_2</var> <var>...</var> <var>x_N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print an integer denoting the answer.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>3 9 1
+1 3 8
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>12
+</pre>
+<p>The optimal strategy is to wait for the coin after treating each bear. The total time spent on waiting is <var>3</var> and moving is <var>9</var>. So the answer is <var>3 + 9 = 12</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>3 9 3
+1 3 8
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>16
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>2 1000000000 1000000000
+1 999999999
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>2999999996
+</pre></section>
+</div>
+</span>

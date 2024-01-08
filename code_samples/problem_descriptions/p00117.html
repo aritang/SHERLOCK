@@ -1,0 +1,72 @@
+
+
+
+<H1>大工の褒美</H1>
+
+<p>
+ある日、殿様は一人の大工に、「台風や地震が来たときに町人が避難できる、頑丈で大きな建物を造りなさい。」と命じました。しかし、その頑丈で大きな建物を完成させるには、大きな太い柱が必要です。町にそんな大きな柱はありません。そこで、大工は遠くの山里まで大きな柱を調達しに行くことになりました（大工は町から里山に行って、町に戻ってくる必要があります）。
+</p>
+
+<p>
+大工の褒美は、殿様から受け取ったお金から柱の代金と交通費を差し引いた余りです。下の地図のように、山里に行くには、いろいろな町を通るたくさんの街道があり、2つの町をつなぐ街道はそれぞれ交通費が違います。大工の褒美を最大にするにはどのように街道をたどり調達すればよいでしょうか。最大となる大工の褒美を出力するプログラムを作成してください。ただし、町の数を <var>n</var> とすれば、各町は 1 から <var>n</var> までの整数で識別されます。2 つの町を直接つなぐ街道は 2 本以上ありません。
+</p>
+<center>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE1_carpenter">
+</center>
+
+<p>
+※ 矢印上の数字は、その方向に行くための交通費を示します。 
+</p>
+
+<H2>Input</H2>
+
+<p>
+入力は以下の形式で与えられます。
+</p>
+
+<pre>
+<var>n</var>
+<var>m</var>
+<var>a<sub>1</sub></var>,<var>b<sub>1</sub></var>,<var>c<sub>1</sub></var>, <var>d<sub>1</sub></var>
+<var>a<sub>2</sub></var>,<var>b<sub>2</sub></var>,<var>c<sub>2</sub></var>, <var>d<sub>2</sub></var>
+:
+<var>a<sub>m</sub></var>,<var>b<sub>m</sub></var>,<var>c<sub>m</sub></var>, <var>d<sub>m</sub></var>
+<var>s</var>,<var>g</var>,<var>V</var>,<var>P</var>
+</pre>
+
+<p>
+1 行目に町の総数 <var>n</var>（ <var>n</var> &le; 20）、2 行目に街道の総数 <var>m</var> (<var>m</var> &le; 100) が与えられます。続く <var>m</var> 行に <var>i</var> 番目の街道の情報 <var>a<sub>i</sub></var>, <var>b<sub>i</sub></var>, <var>c<sub>i</sub></var>, <var>d<sub>i</sub></var> (1 &le; <var>a<sub>i</sub></var>, <var>b<sub>i</sub></var> &le; <var>n</var>,  0 &le; <var>c<sub>i</sub></var>, <var>d<sub>i</sub></var> &le; 1,000) が与えられます。<var>a<sub>i</sub></var>, <var>b<sub>i</sub></var> は街道 <var>i</var> がつないでいる町の番号、 <var>c<sub>i</sub></var> は <var>a<sub>i</sub></var> から <var>b<sub>i</sub></var> への交通費、 <var>d<sub>i</sub></var> は <var>b<sub>i</sub></var> から <var>a<sub>i</sub></var> への交通費を表します。
+</p>
+<p>
+最終行に大工が出発する町の番号 <var>s</var>、柱のある山里の番号 <var>g</var>、殿様から大工が受け取ったお金 <var>V</var>、柱の代金 <var>P</var> が与えられます。
+</p>
+
+<H2>Output</H2>
+
+<p>
+大工の褒美（整数）を１行に出力してください。
+</p>
+
+<H2>Sample Input</H2>
+<pre>
+6
+8
+1,2,2,2 
+1,3,4,3 
+1,4,4,2 
+2,5,3,2 
+3,4,4,2 
+3,6,1,2 
+4,6,1,1 
+5,6,1,2 
+2,4,50,30
+</pre>
+
+<H2>Output for the Sample Input</H2>
+
+<pre>
+11
+</pre>
+
+
+

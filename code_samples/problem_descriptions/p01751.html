@@ -1,0 +1,95 @@
+
+
+
+<p>
+A 君は山手線に乗って目的地にたどり着きたい．
+</p>
+
+<p>
+A 君は電車に乗ってから <var>a</var> 分起きて <var>b</var> 分寝ることを繰り返す．目的地までは乗車後 <var>c</var> 分であり，このとき起きていれば下車できるが，逆に寝ている途中であれば乗り過ごしてしまう．また，A 君は乗り過ごしてもずっと同じ電車に乗り続け，電車は山手線を一周するのに <var>60</var> 分かかる．したがって，A 君は目的地に <var>60t + c</var> ( <var>t</var> は非負整数) 分後に着くことになる．
+</p>
+
+<p>
+何分後にA 君は目的地に到着できるか．到着不可能なときは-1 を出力せよ．ただし，目的地に到着した時が寝ている時間と起きている時間の境目だった場合は降りることができるものとする．
+</p>
+
+
+<h2>Input</h2>
+<p>
+入力は以下の形式で1 行で与えられる．
+</p>
+<pre>
+<var>a</var> <var>b</var> <var>c</var>
+</pre>
+
+<p>
+入力は3 つの整数 <var>a, b, c</var> からなる．
+</p>
+
+<p>
+<var>a</var> は起きている時間，<var>b</var> は寝ている時間，<var>c</var> は乗車してから目的地までにかかる時間である．また，<var>a, b, c</var> の単位は分である．
+</p>
+
+<h2>Constraints</h2>
+<ul>
+<li>0 &lt; <var>a, b, c</var> &lt; 60</li>
+</ul>
+
+<h2>Output</h2>
+<p>
+A 君が目的地に到着できる場合はA 君の目的地到着までにかかる時間を出力せよ．それ以外の場合は-1 を出力せよ．
+</p>
+
+
+<h2>Sample Input 1</h2>
+<pre>
+10 10 5
+</pre>
+
+<h2>Output for the Sample Input 1</h2>
+<pre>
+5
+</pre>
+<ul>
+<li> 寝る前に目的地にたどり着く．</li>
+</ul>
+
+<h2>Sample Input 2</h2>
+<pre>
+50 40 51
+</pre>
+
+<h2>Output for the Sample Input 2</h2>
+<pre>
+111
+</pre>
+<ul>
+<li> 一回乗り過ごしてしまう．</li>
+</ul>
+
+<h2>Sample Input 3</h2>
+<pre>
+20 20 20
+</pre>
+
+<h2>Output for the Sample Input 3</h2>
+<pre>
+20
+</pre>
+<ul>
+<li>もうちょっとで寝るところだったがなんとか目的地で起きていられた．</li>
+</ul>
+
+<h2>Sample Input 4</h2>
+<pre>
+30 30 40
+</pre>
+
+<h2>Output for the Sample Input 4</h2>
+<pre>
+-1
+</pre>
+<ul>
+<li> 一周の前半では起きているが後半で寝ているということを繰り返す．</li>
+<li> このため目的地にはたどり着けない．</li>
+</ul>

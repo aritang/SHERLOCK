@@ -1,0 +1,132 @@
+<span class="lang-en">
+<p>Score : <var>1600</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>Yui loves shopping. She lives in Yamaboshi City and there is a train service in the city. The city can be modelled as a very long number line. Yui's house is at coordinate <var>0</var>.</p>
+<p>There are <var>N</var> shopping centres in the city, located at coordinates <var>x_{1}, x_{2}, ..., x_{N}</var> respectively. There are <var>N + 2</var> train stations, one located at coordinate <var>0</var>, one located at coordinate <var>L</var>, and one located at each shopping centre.</p>
+<p>At time <var>0</var>, the train departs from position <var>0</var> to the positive direction. The train travels at a constant speed of <var>1</var> unit per second. At time <var>L</var>, the train will reach the last station, the station at coordinate <var>L</var>. The train immediately moves in the opposite direction at the same speed. At time <var>2L</var>, the train will reach the station at coordinate <var>0</var> and it immediately moves in the opposite direction again. The process repeats indefinitely.</p>
+<p>When the train arrives at a station where Yui is located, Yui can board or leave the train immediately. At time <var>0</var>, Yui is at the station at coordinate <var>0</var>. </p>
+<p>Yui wants to go shopping in all <var>N</var> shopping centres, in any order, and return home after she finishes her shopping. She needs to shop for <var>t_{i}</var> seconds in the shopping centre at coordinate <var>x_{i}</var>. <strong>She must finish her shopping in one shopping centre before moving to the next shopping centre.</strong> Yui can immediately start shopping when she reaches a station with a shopping centre and she can immediately board the train when she finishes shopping.</p>
+<p>Yui wants to spend the minimum amount of time to finish her shopping. Can you help her determine the minimum number of seconds required to complete her shopping?</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 \leq N \leq 300000</var></li>
+<li><var>1 \leq L \leq 10^{9}</var></li>
+<li><var>0 &lt; x_{1} &lt; x_{2} &lt; ... &lt; x_{N} &lt; L</var></li>
+<li><var>1 \leq t_{i} \leq 10^{9}</var></li>
+<li>All values in the input are integers.</li>
+</ul>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Partial Score</h3><ul>
+<li><var>1000</var> points will be awarded for passing the testset satisfying <var>1 \leq N \leq 3000</var>.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var> <var>L</var>
+<var>x_{1}</var> <var>x_{2}</var> <var>...</var> <var>x_{N}</var>
+<var>t_{1}</var> <var>t_{2}</var> <var>...</var> <var>t_{N}</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the minimum time (in seconds) required for Yui to finish shopping at all <var>N</var> shopping centres and return home.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>2 10
+5 8
+10 4
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>40
+</pre>
+<p>Here's one possible way for Yui to finish her shopping :</p>
+<ul>
+<li>
+<p>Travel to the station at coordinate <var>8</var> with the train. She arrives at coordinate <var>8</var> at time <var>8</var>.</p>
+</li>
+<li>
+<p>Shop in the shopping centre at coordinate <var>8</var>. She finishes her shopping at time <var>12</var>.</p>
+</li>
+<li>
+<p>The train arrives at coordinate <var>8</var> at time <var>12</var>. She boards the train which is currently moving in the negative direction.</p>
+</li>
+<li>
+<p>She arrives at coordinate <var>5</var> at time <var>15</var>. She finishes her shopping at time <var>25</var>.</p>
+</li>
+<li>
+<p>The train arrives at coordinate <var>5</var> at time <var>25</var>. She boards the train which is currently moving in the positive direction.</p>
+</li>
+<li>
+<p>She arrives at coordinate <var>L = 10</var> at time <var>30</var>. The train starts moving in the negative direction immediately.</p>
+</li>
+<li>
+<p>She arrives at coordinate <var>0</var> at time <var>40</var>, ending the trip.</p>
+</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>2 10
+5 8
+10 5
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>60
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>5 100
+10 19 28 47 68
+200 200 200 200 200
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>1200
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 4</h3><pre>8 1000000000
+2018 123456 1719128 1929183 9129198 10100101 77777777 120182018
+99999999 1000000000 1000000000 11291341 1 200 1 123812831
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 4</h3><pre>14000000000
+</pre>
+<p>Beware of overflow issues.</p></section>
+</div>
+</span>

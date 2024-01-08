@@ -1,0 +1,106 @@
+<span class="lang-en">
+<p>Score : <var>300</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>There are <var>N</var> people. The name of the <var>i</var>-th person is <var>S_i</var>.</p>
+<p>We would like to choose three people so that the following conditions are met:</p>
+<ul>
+<li>The name of every chosen person begins with <code>M</code>, <code>A</code>, <code>R</code>, <code>C</code> or <code>H</code>.</li>
+<li>There are no multiple people whose names begin with the same letter.</li>
+</ul>
+<p>How many such ways are there to choose three people, disregarding order?</p>
+<p>Note that the answer may not fit into a <var>32</var>-bit integer type.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 \leq N \leq 10^5</var></li>
+<li><var>S_i</var> consists of uppercase English letters.</li>
+<li><var>1 \leq |S_i| \leq 10</var></li>
+<li><var>S_i \neq S_j (i \neq j)</var></li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+<var>S_1</var>
+<var>:</var>
+<var>S_N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>If there are <var>x</var> ways to choose three people so that the given conditions are met, print <var>x</var>.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>5
+MASHIKE
+RUMOI
+OBIRA
+HABORO
+HOROKANAI
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>2
+</pre>
+<p>We can choose three people with the following names:</p>
+<ul>
+<li>
+<p><code>MASHIKE</code>, <code>RUMOI</code>, <code>HABORO</code></p>
+</li>
+<li>
+<p><code>MASHIKE</code>, <code>RUMOI</code>, <code>HOROKANAI</code></p>
+</li>
+</ul>
+<p>Thus, we have two ways.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>4
+ZZ
+ZZZ
+Z
+ZZZZZZZZZZ
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>0
+</pre>
+<p>Note that there may be no ways to choose three people so that the given conditions are met.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>5
+CHOKUDAI
+RNG
+MAKOTO
+AOKI
+RINGO
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>7
+</pre></section>
+</div>
+</span>

@@ -1,0 +1,73 @@
+<span class="lang-en">
+<p>Score : <var>100</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>We have weather records at AtCoder Town for some consecutive three days. A string of length <var>3</var>, <var>S</var>, represents the records - if the <var>i</var>-th character is <code>S</code>, it means it was sunny on the <var>i</var>-th day; if that character is <code>R</code>, it means it was rainy on that day.</p>
+<p>Find the maximum number of consecutive rainy days in this period.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>|S| = 3</var></li>
+<li>Each character of <var>S</var> is <code>S</code> or <code>R</code>.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>S</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the maximum number of consecutive rainy days in the period.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>RRS
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>2
+</pre>
+<p>We had rain on the <var>1</var>-st and <var>2</var>-nd days in the period. Here, the maximum number of consecutive rainy days is <var>2</var>, so we should print <var>2</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>SSS
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>0
+</pre>
+<p>It was sunny throughout the period. We had no rainy days, so we should print <var>0</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>RSR
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>1
+</pre>
+<p>We had rain on the <var>1</var>-st and <var>3</var>-rd days - two "streaks" of one rainy day, so we should print <var>1</var>.</p></section>
+</div>
+</span>

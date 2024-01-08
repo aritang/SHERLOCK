@@ -1,0 +1,95 @@
+<span class="lang-en">
+<p>Score : <var>1000</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>Snuke got a present from his mother on his birthday.
+The present was a pair of two sequences <var>a</var> and <var>b</var>, consisting of positive integers.
+They satisfied all of the following properties:</p>
+<ul>
+<li>The sum of all elements of <var>a</var> is <var>N</var>.</li>
+<li>The sum of all elements of <var>b</var> is <var>N</var>.</li>
+<li>Any string of length <var>N</var> that satisfies the following two conditions (1) and (2) will also satisfy the condition (3).</li>
+<ul style="list-style:none;">
+<li><b>(1)</b> Any of the following forms a palindrome: the first <var>a_1</var> letters, the following <var>a_2</var> letters, the following <var>a_3</var> letters and so on.</li>
+<li><b>(2)</b> Any of the following forms a palindrome: the first <var>b_1</var> letters, the following <var>b_2</var> letters, the following <var>b_3</var> letters and so on.</li>
+<li><b>(3)</b> All <var>N</var> letters are the same.</li>
+</ul>
+</ul>
+<p>He was happy, until one day he lost both of the sequences.
+Now, he only remembers that the sequence <var>a</var> was a permutation of another sequence <var>A</var> of length <var>M</var>.</p>
+<p>To bring him happiness again, his mother has decided to give him another pair of sequences <var>a</var> and <var>b</var> that satisfies his favorite properties and is consistent with his memory.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1≦N≦10^5</var></li>
+<li><var>1≦M≦100</var></li>
+<li><var>1≦A_i≦10^5</var></li>
+<li>The sum of all <var>A_i</var> equals <var>N</var>.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>The input is given from Standard Input in the following format:</p>
+<pre><var>N</var> <var>M</var>
+<var>A_1</var> <var>A_2</var> <var>...</var> <var>A_M</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>If there exists a pair of sequences <var>a</var> and <var>b</var> that satisfies the properties and is consistent with Snuke's memory, print three lines. The first line must contain the sequence <var>a</var>, the second line must contain the length of the sequence <var>b</var>, and the third line must contain the sequence <var>b</var>.</p>
+<p>If such a pair does not exist (because Snuke's memory is wrong or some other reason), print a single line containing the word <code>Impossible</code> (case-sensitive).</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>3 2
+2 1
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>1 2
+1
+3
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>6 1
+6
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>6
+3
+1 2 3
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>55 10
+1 2 3 4 5 6 7 8 9 10
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>Impossible
+</pre></section>
+</div>
+</span>

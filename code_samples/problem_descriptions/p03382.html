@@ -1,0 +1,77 @@
+<span class="lang-en">
+<p>Score : <var>400</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>Let <var>{\rm comb}(n,r)</var> be the number of ways to choose <var>r</var> objects from among <var>n</var> objects, disregarding order.
+From <var>n</var> non-negative integers <var>a_1, a_2, ..., a_n</var>, select two numbers <var>a_i &gt; a_j</var> so that <var>{\rm comb}(a_i,a_j)</var> is maximized.
+If there are multiple pairs that maximize the value, any of them is accepted.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>2 \leq n \leq 10^5</var></li>
+<li><var>0 \leq a_i \leq 10^9</var></li>
+<li><var>a_1,a_2,...,a_n</var> are pairwise distinct.</li>
+<li>All values in input are integers.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>n</var>
+<var>a_1</var> <var>a_2</var> <var>...</var> <var>a_n</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print <var>a_i</var> and <var>a_j</var> that you selected, with a space in between.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>5
+6 9 4 2 11
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>11 6
+</pre>
+<p><var>\rm{comb}(a_i,a_j)</var> for each possible selection is as follows:</p>
+<ul>
+<li><var>\rm{comb}(4,2)=6</var> </li>
+<li><var>\rm{comb}(6,2)=15</var> </li>
+<li><var>\rm{comb}(6,4)=15</var> </li>
+<li><var>\rm{comb}(9,2)=36</var> </li>
+<li><var>\rm{comb}(9,4)=126</var> </li>
+<li><var>\rm{comb}(9,6)=84</var> </li>
+<li><var>\rm{comb}(11,2)=55</var> </li>
+<li><var>\rm{comb}(11,4)=330</var> </li>
+<li><var>\rm{comb}(11,6)=462</var> </li>
+<li><var>\rm{comb}(11,9)=55</var></li>
+</ul>
+<p>Thus, we should print <var>11</var> and <var>6</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>2
+100 0
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>100 0
+</pre></section>
+</div>
+</span>

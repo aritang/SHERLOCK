@@ -1,0 +1,78 @@
+<span class="lang-en">
+<p>Score : <var>300</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>You are given an integer sequence of length <var>N</var>, <var>a_1,a_2,...,a_N</var>.</p>
+<p>For each <var>1≤i≤N</var>, you have three choices: add <var>1</var> to <var>a_i</var>, subtract <var>1</var> from <var>a_i</var> or do nothing.</p>
+<p>After these operations, you select an integer <var>X</var> and count the number of <var>i</var> such that <var>a_i=X</var>.</p>
+<p>Maximize this count by making optimal choices.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1≤N≤10^5</var></li>
+<li><var>0≤a_i&lt;10^5 (1≤i≤N)</var></li>
+<li><var>a_i</var> is an integer.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>The input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+<var>a_1</var> <var>a_2</var> .. <var>a_N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the maximum possible number of <var>i</var> such that <var>a_i=X</var>.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>7
+3 1 4 1 5 9 2
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>4
+</pre>
+<p>For example, turn the sequence into <var>2,2,3,2,6,9,2</var> and select <var>X=2</var> to obtain <var>4</var>, the maximum possible count.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>10
+0 1 2 3 4 5 6 7 8 9
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>3
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>1
+99999
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>1
+</pre></section>
+</div>
+</span>

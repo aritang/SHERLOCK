@@ -1,0 +1,104 @@
+<span class="lang-en">
+<p>Score : <var>600</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>Silver Fox is fighting with <var>N</var> monsters.</p>
+<p>The monsters are standing in a row, and we can assume them to be standing on a number line. The <var>i</var>-th monster, standing at the coordinate <var>X_i</var>, has the <em>health</em> of <var>H_i</var>.</p>
+<p>Silver Fox can use bombs to attack the monsters.
+Using a bomb at the coordinate <var>x</var> decreases the healths of all monsters between the coordinates <var>x-D</var> and <var>x+D</var> (inclusive) by <var>A</var>.
+There is no way other than bombs to decrease the monster's health.</p>
+<p>Silver Fox wins when all the monsters' healths become <var>0</var> or below.</p>
+<p>Find the minimum number of bombs needed to win.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 \leq N \leq 2 \times 10^5</var></li>
+<li><var>0 \leq D \leq 10^9</var></li>
+<li><var>1 \leq A \leq 10^9</var></li>
+<li><var>0 \leq X_i \leq 10^9</var></li>
+<li><var>1 \leq H_i \leq 10^9</var></li>
+<li><var>X_i</var> are distinct.</li>
+<li>All values in input are integers.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var> <var>D</var> <var>A</var>
+<var>X_1</var> <var>H_1</var>
+<var>:</var>
+<var>X_N</var> <var>H_N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the minimum number of bombs needed to win.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>3 3 2
+1 2
+5 4
+9 2
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>2
+</pre>
+<p>First, let us use a bomb at the coordinate <var>4</var> to decrease the first and second monsters' health by <var>2</var>.</p>
+<p>Then, use a bomb at the coordinate <var>6</var> to decrease the second and third monsters' health by <var>2</var>.</p>
+<p>Now, all the monsters' healths are <var>0</var>.
+We cannot make all the monsters' health drop to <var>0</var> or below with just one bomb.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>9 4 1
+1 5
+2 4
+3 3
+4 2
+5 1
+6 2
+7 3
+8 4
+9 5
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>5
+</pre>
+<p>We should use five bombs at the coordinate <var>5</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>3 0 1
+300000000 1000000000
+100000000 1000000000
+200000000 1000000000
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>3000000000
+</pre>
+<p>Watch out for overflow.</p></section>
+</div>
+</span>

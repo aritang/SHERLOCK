@@ -1,0 +1,101 @@
+<span class="lang-en">
+<p>Score : <var>800</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>There are <var>N</var> points on a number line, <var>i</var>-th of which is placed on coordinate <var>X_i</var>.
+These points are numbered in the increasing order of coordinates.
+In other words, for all <var>i</var> (<var>1 \leq i \leq N-1</var>), <var>X_i &lt; X_{i+1}</var> holds.
+In addition to that, an integer <var>K</var> is given.</p>
+<p>Process <var>Q</var> queries.</p>
+<p>In the <var>i</var>-th query, two integers <var>L_i</var> and <var>R_i</var> are given.
+Here, a set <var>s</var> of points is said to be a <em>good</em> set if it satisfies all of the following conditions.
+Note that the definition of good sets varies over queries.</p>
+<ul>
+<li>Each point in <var>s</var> is one of <var>X_{L_i},X_{L_i+1},\ldots,X_{R_i}</var>.</li>
+<li>For any two distinct points in <var>s</var>, the distance between them is greater than or equal to <var>K</var>.</li>
+<li>The size of <var>s</var> is maximum among all sets that satisfy the aforementioned conditions.</li>
+</ul>
+<p>For each query, find the size of the union of all good sets.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 \leq N \leq 2 \times 10^5</var></li>
+<li><var>1 \leq K \leq 10^9</var></li>
+<li><var>0 \leq X_1 &lt; X_2 &lt; \cdots &lt; X_N \leq 10^9</var></li>
+<li><var>1 \leq Q \leq 2 \times 10^5</var></li>
+<li><var>1 \leq L_i \leq R_i \leq N</var></li>
+<li>All values in input are integers.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var> <var>K</var>
+<var>X_1</var> <var>X_2</var> <var>\cdots</var> <var>X_N</var>
+<var>Q</var>
+<var>L_1</var> <var>R_1</var>
+<var>L_2</var> <var>R_2</var>
+<var>\vdots</var>
+<var>L_Q</var> <var>R_Q</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>For each query, print the size of the union of all good sets in a line.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>5 3
+1 2 4 7 8
+2
+1 5
+1 2
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>4
+2
+</pre>
+<p>In the first query, you can have at most <var>3</var> points in a good set.
+There exist two good sets: <var>\{1,4,7\}</var> and <var>\{1,4,8\}</var>.
+Therefore, the size of the union of all good sets is <var>|\{1,4,7,8\}|=4</var>.</p>
+<p>In the second query, you can have at most <var>1</var> point in a good set.
+There exist two good sets: <var>\{1\}</var> and <var>\{2\}</var>.
+Therefore, the size of the union of all good sets is <var>|\{1,2\}|=2</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>15 220492538
+4452279 12864090 23146757 31318558 133073771 141315707 263239555 350278176 401243954 418305779 450172439 560311491 625900495 626194585 891960194
+5
+6 14
+1 8
+1 13
+7 12
+4 12
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>4
+6
+11
+2
+3
+</pre></section>
+</div>
+</span>

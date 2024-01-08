@@ -1,0 +1,145 @@
+
+<H1><font color="#000">Problem F:</font> Traveling Cube</H1>
+
+<p>
+On a small planet named Bandai, a landing party of the starship Tadamigawa discovered colorful
+cubes traveling on flat areas of the planet surface, which the landing party named beds. A cube
+appears at a certain position on a bed, travels on the bed for a while, and then disappears. After
+a longtime observation, a science officer Lt. Alyssa Ogawa of Tadamigawa found the rule how a
+cube travels on a bed.
+</p>
+<p>
+A bed is a rectangular area tiled with squares of the same size.
+
+</p>
+
+<ul>
+<li> One of the squares is colored red,</li>
+<li>  one colored green,</li>
+<li>  one colored blue,</li>
+<li>  one colored cyan,</li>
+<li>  one colored magenta,</li>
+<li>  one colored yellow,</li>
+<li>  one or more colored white, and</li>
+<li>  all others, if any, colored black.</li>
+</ul>
+
+<p>
+Initially, a cube appears on one of the white squares. The cube’s faces are colored as follows.
+</p>
+<pre>
+             top  red
+          bottom  cyan
+           north  green
+           south  magenta
+            east  blue
+            west  yellow
+</pre>
+<p>
+The cube can roll around a side of the current square at a step and thus rolls on to an adjacent
+square. When the cube rolls on to a chromatically colored (red, green, blue, cyan, magenta or
+yellow) square, the top face of the cube after the roll should be colored the same. When the
+cube rolls on to a white square, there is no such restriction. The cube should never roll on to a
+black square.
+</p>
+
+<p>
+Throughout the travel, the cube can visit each of the chromatically colored squares only once,
+and any of the white squares arbitrarily many times. As already mentioned, the cube can never
+visit any of the black squares. On visit to the final chromatically colored square, the cube
+disappears. Somehow the order of visits to the chromatically colored squares is known to us
+before the travel starts.
+</p>
+<p>
+Your mission is to find the least number of steps for the cube to visit all the chromatically
+colored squares in the given order.
+
+</p>
+
+<H2>Input</H2>
+
+<p>
+The input is a sequence of datasets. A dataset is formatted as follows:
+</p>
+<pre>
+      <i>w d</i><br>
+      <i>c</i><sub>11</sub> . . . <i>c</i><sub><i>w</i>1</sub>
+       .        .
+       .        .
+       .        .
+      <i>c</i><sub>1<i>d</i></sub> . . . <i>c</i><sub><i>wd</i></sub>
+      <i>v</i><sub>1</sub><i>v</i><sub>2</sub><i>v</i><sub>3</sub><i>v</i><sub>4</sub><i>v</i><sub>5</sub><i>v</i><sub>6</sub>
+</pre>
+
+<p>
+The first line is a pair of positive integers w and d separated by a space. The next d lines are
+w-character-long strings <i>c</i><sub>11</sub> . . . <i>c</i><sub><i>w</i>1</sub> , . . . , <i>c</i><sub>1<i>d</i></sub> . . . <i>c<sub>wd</sub></i> with no spaces. Each character cij is one of
+the letters r, g, b, c, m, y, w and k, which stands for red, green, blue, cyan, magenta, yellow,
+white and black respectively, or a sign #. Each of r, g, b, c, m, y and # occurs once and only once
+in a dataset. The last line is a six-character-long string  <i>v</i><sub>1</sub><i>v</i><sub>2</sub><i>v</i><sub>3</sub><i>v</i><sub>4</sub><i>v</i><sub>5</sub><i>v</i><sub>6</sub> which is a permutation of
+“rgbcmy”.
+</p>
+<p>
+The integers <i>w</i> and <i>d</i> denote the width (the length from the east end to the west end) and the
+depth (the length from the north end to the south end) of a bed. The unit is the length of a
+side of a square. You can assume that neither <i>w</i> nor d is greater than 30.
+</p>
+<p>
+Each character <i>c<sub>ij</sub></i> shows the color of a square in the bed. The characters <i>c</i><sub>11</sub> , <i>c</i><sub><i>w</i>1</sub> , <i>c</i><sub>1<i>d</i></sub> and <i>c<sub>wd</sub></i>
+correspond to the north-west corner, the north-east corner, the south-west corner and the south-
+east corner of the bed respectively. If <i>c<sub>ij</sub></i> is a letter, it indicates the color of the corresponding
+square. If <i>c<sub>ij</sub></i> is a #, the corresponding square is colored white and is the initial position of the
+cube.
+</p>
+<p>
+The string <i>v</i><sub>1</sub><i>v</i><sub>2</sub><i>v</i><sub>3</sub><i>v</i><sub>4</sub><i>v</i><sub>5</sub><i>v</i><sub>6</sub> shows the order of colors of squares to visit. The cube should visit the
+squares colored <i>v</i><sub>1</sub>, <i>v</i><sub>2</sub> , <i>v</i><sub>3</sub> , <i>v</i><sub>4</sub> , <i>v</i><sub>5</sub> and <i>v</i><sub>6</sub> in this order.
+</p>
+<p>
+The end of the input is indicated by a line containing two zeros separated by a space.
+
+</p>
+
+<H2>Output</H2>
+
+<p>
+For each input dataset, output the least number of steps if there is a solution, or "unreachable"
+if there is no solution. In either case, print it in one line for each input dataset.
+
+</p>
+
+<H2>Sample Input</H2>
+<pre>
+10 5
+kkkkkwwwww
+w#wwwrwwww
+wwwwbgwwww
+kwwmcwwwkk
+kkwywwwkkk
+rgbcmy
+10 5
+kkkkkkkkkk
+k#kkkkkkkk
+kwkkkkkwwk
+kcmyrgbwwk
+kwwwwwwwwk
+cmyrgb
+10 5
+kkkkkkkkkk
+k#kkkkkkkk
+kwkkkkkwkk
+kcmyrgbwwk
+kwwwwwwwwk
+cmyrgb
+0 0
+
+</pre>
+
+<H2>Output for the Sample Input</H2>
+<pre>
+9
+49
+unreachable
+</pre>
+
+

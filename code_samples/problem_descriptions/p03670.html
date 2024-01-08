@@ -1,0 +1,123 @@
+<span class="lang-en">
+<p>Score : <var>1600</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>There are <var>N(N+1)/2</var> dots arranged to form an equilateral triangle whose sides consist of <var>N</var> dots, as shown below.
+The <var>j</var>-th dot from the left in the <var>i</var>-th row from the top is denoted by <var>(i, j)</var> (<var>1 \leq i \leq N</var>, <var>1 \leq j \leq i</var>).
+Also, we will call <var>(i+1, j)</var> immediately lower-left to <var>(i, j)</var>, and <var>(i+1, j+1)</var> immediately lower-right to <var>(i, j)</var>.</p>
+<p><img alt="" src="https://atcoder.jp/img/agc017/8d354fb1a389a0aa5b64ba93f6ca7801.png"/></p>
+<p>Takahashi is drawing <var>M</var> polygonal lines <var>L_1, L_2, ..., L_M</var> by connecting these dots.
+Each <var>L_i</var> starts at <var>(1, 1)</var>, and visits the dot that is immediately lower-left or lower-right to the current dots <var>N-1</var> times.
+More formally, there exist <var>X_{i,1}, ..., X_{i,N}</var> such that:</p>
+<ul>
+<li><var>L_i</var> connects the <var>N</var> points <var>(1, X_{i,1}), (2, X_{i,2}), ..., (N, X_{i,N})</var>, in this order.</li>
+<li>For each <var>j=1, 2, ..., N-1</var>, either <var>X_{i,j+1} = X_{i,j}</var> or <var>X_{i,j+1} = X_{i,j}+1</var> holds.</li>
+</ul>
+<p>Takahashi would like to draw these lines so that no part of <var>L_{i+1}</var> is to the left of <var>L_{i}</var>.
+That is, for each <var>j=1, 2, ..., N</var>, <var>X_{1,j} \leq X_{2,j} \leq ... \leq X_{M,j}</var> must hold.</p>
+<p>Additionally, there are <var>K</var> conditions on the shape of the lines that must be followed.
+The <var>i</var>-th condition is denoted by <var>(A_i, B_i, C_i)</var>, which means:</p>
+<ul>
+<li>If <var>C_i=0</var>, <var>L_{A_i}</var> must visit the immediately lower-left dot for the <var>B_i</var>-th move.</li>
+<li>If <var>C_i=1</var>, <var>L_{A_i}</var> must visit the immediately lower-right dot for the <var>B_i</var>-th move.</li>
+</ul>
+<p>That is, <var>X_{A_i, {B_i}+1} = X_{A_i, B_i} + C_i</var> must hold.</p>
+<p>In how many ways can Takahashi draw <var>M</var> polygonal lines? Find the count modulo <var>1000000007</var>.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Notes</h3><p>Before submission, it is strongly recommended to measure the execution time of your code using "Custom Test".</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 \leq N \leq 20</var></li>
+<li><var>1 \leq M \leq 20</var></li>
+<li><var>0 \leq K \leq (N-1)M</var></li>
+<li><var>1 \leq A_i \leq M</var></li>
+<li><var>1 \leq B_i \leq N-1</var></li>
+<li><var>C_i = 0</var> or <var>1</var></li>
+<li>No pair appears more than once as <var>(A_i, B_i)</var>.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var> <var>M</var> <var>K</var>
+<var>A_1</var> <var>B_1</var> <var>C_1</var>
+<var>A_2</var> <var>B_2</var> <var>C_2</var>
+:
+<var>A_K</var> <var>B_K</var> <var>C_K</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the number of ways for Takahashi to draw <var>M</var> polygonal lines, modulo <var>1000000007</var>.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>3 2 1
+1 2 0
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>6
+</pre>
+<p>There are six ways to draw lines, as shown below. Here, red lines represent <var>L_1</var>, and green lines represent <var>L_2</var>.</p>
+<p><img alt="" src="https://atcoder.jp/img/agc017/75921b6e5a59ab17b4c07ada848b9f14.png"/></p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>3 2 2
+1 1 1
+2 1 0
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>0
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>5 4 2
+1 3 1
+4 2 0
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>172
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 4</h3><pre>20 20 0
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 4</h3><pre>881396682
+</pre></section>
+</div>
+</span>

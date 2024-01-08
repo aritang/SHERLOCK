@@ -1,0 +1,61 @@
+
+
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({ tex2jax: { inlineMath: [["$","$"], ["\\(","\\)"]], skipTags: ["script","noscript","style","textarea","code"], processEscapes: true }});
+</script>
+<script language="JavaScript" type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+
+<h2>問題文</h2>
+
+<p>正整数列 $X_1,X_2,...,X_N$ がある。数列 $\{1,2,...,N\}$ から部分列 $S$ を選ぶ。ただし $S$ は以下の条件を満たす必要がある。</p>
+<ul><li>$T=\{X_s | s \in S\}$ とする。このとき、任意の $x \in T$ について、$x$ の約数(ただし $x$ は除く)は $T$ に含まれない。</li></ul>
+<p>条件を満たす $S$ のうち、最も多くの要素を含むものを求めよ。また、そのような $S$ が複数ある場合は辞書式順序で最小のものを求めよ。</p>
+
+<h2>入力</h2>
+
+<p>入力は以下の形式に従う。与えられる数は全て整数である。</p>
+<pre>$N$
+$X_1$ $X_2$ $...$ $X_N$</pre>
+
+<h2>制約</h2>
+
+<ul><li>$1 \leq N \leq 100$</li>
+<li>$1 \leq X_i \leq 10^8$</li>
+<li>$i \neq j$ ならば $X_i \neq X_j$</li></ul>
+
+<h2>出力</h2>
+
+<p>求める $S$ の各要素を1行にスペースを空けて昇順で出力せよ。</p>
+
+<h2>Sample Input 1</h2>
+
+<pre>3
+25 125 5</pre>
+
+<h2>Output for the Sample Input 1</h2>
+
+<pre>1</pre>
+<p>$T=\{X_1\}=\{25\}$ は条件を満たす。</p>
+
+<h2>Sample Input 2</h2>
+
+<pre>3
+6 3 2</pre>
+
+<h2>Output for the Sample Input 2</h2>
+
+<pre>2 3</pre>
+<p>$T=\{X_2,X_3\}=\{2,3\}$ は条件を満たす。</p>
+
+<h2>Sample Input 3</h2>
+
+<pre>10
+10 9 8 7 6 5 4 3 2 1</pre>
+
+
+<h2>Output for the Sample Input 3</h2>
+
+<pre>1 2 3 4 5</pre>
+<p>$T=\{X_1,X_2,X_3,X_4,X_5\}=\{6,7,8,9,10\}$ は条件を満たす。
+$T=\{X_1,X_2,X_4,X_5,X_7\}=\{4,6,7,9,10\}$ も条件を満たすが、$\{1,2,4,5,7\}$は $\{1,2,3,4,5\}$ より辞書順で大きいので答とはならない。</p>

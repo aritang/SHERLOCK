@@ -1,0 +1,94 @@
+<span class="lang-en">
+<p>Score : <var>600</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>AtCoDeer the deer has <var>N</var> cards with positive integers written on them. The number on the <var>i</var>-th card <var>(1≤i≤N)</var> is <var>a_i</var>.
+Because he loves big numbers, he calls a subset of the cards <em>good</em> when the sum of the numbers written on the cards in the subset, is <var>K</var> or greater.</p>
+<p>Then, for each card <var>i</var>, he judges whether it is <em>unnecessary</em> or not, as follows:</p>
+<ul>
+<li>If, for any good subset of the cards containing card <var>i</var>, the set that can be obtained by eliminating card <var>i</var> from the subset is also good, card <var>i</var> is unnecessary.</li>
+<li>Otherwise, card <var>i</var> is NOT unnecessary.</li>
+</ul>
+<p>Find the number of the unnecessary cards. Here, he judges each card independently, and he does not throw away cards that turn out to be unnecessary.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li>All input values are integers.</li>
+<li><var>1≤N≤5000</var></li>
+<li><var>1≤K≤5000</var></li>
+<li><var>1≤a_i≤10^9 (1≤i≤N)</var></li>
+</ul>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Partial Score</h3><ul>
+<li><var>300</var> points will be awarded for passing the test set satisfying <var>N,K≤400</var>.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>The input is given from Standard Input in the following format:</p>
+<pre><var>N</var> <var>K</var>
+<var>a_1</var> <var>a_2</var> ... <var>a_N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the number of the unnecessary cards.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>3 6
+1 4 3
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>1
+</pre>
+<p>There are two good sets: {<var>2,3</var>} and {<var>1,2,3</var>}.</p>
+<p>Card <var>1</var> is only contained in {<var>1,2,3</var>}, and this set without card <var>1</var>, {<var>2,3</var>}, is also good. Thus, card <var>1</var> is unnecessary.</p>
+<p>For card <var>2</var>, a good set {<var>2,3</var>} without card <var>2</var>, {<var>3</var>}, is not good. Thus, card <var>2</var> is NOT unnecessary.</p>
+<p>Neither is card <var>3</var> for a similar reason, hence the answer is <var>1</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>5 400
+3 1 4 1 5
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>5
+</pre>
+<p>In this case, there is no good set. Therefore, all the cards are unnecessary.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>6 20
+10 4 3 10 25 2
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>3
+</pre></section>
+</div>
+</span>

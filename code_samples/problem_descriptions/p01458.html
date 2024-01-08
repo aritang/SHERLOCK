@@ -1,0 +1,78 @@
+
+<script src="./IMAGE/varmath.js" charset="UTF-8"></script>
+
+<H1>Kth Sentence</H1>
+
+<p>
+A student, Kita_masa, is taking an English examination.
+In this examination, he has to write a sentence of length <var>m</var>.
+</p>
+
+<p>
+Since he completely forgot the English grammar, he decided to consider all sentences of length <var>m</var> constructed by concatenating the words he knows and write the <var>K</var>-th sentence among the candidates sorted in lexicographic order.
+He believes that it must be the correct sentence because <var>K</var> is today's lucky number for him.
+</p>
+
+<p>
+Each word may be used multiple times (or it's also fine not to use it at all) and the sentence does not contain any extra character between words.
+Two sentences are considered different if the order of the words are different even if the concatenation resulted in the same string.
+</p>
+
+<H2>Input</H2>
+
+<p>
+The first line contains three integers <var>n</var> (<var>1 \leq n \leq 100</var>), <var>m</var> (<var>1 \leq m \leq 2000</var>) and <var>K</var> (<var>1 \leq K \leq 10^{18}</var>), separated by a single space.
+Each of the following <var>n</var> lines contains a word that Kita_masa knows.
+The length of each word is between 1 and 200, inclusive, and the words contain only lowercase letters.
+You may assume all the words given are distinct.
+</p>
+
+<H2>Output</H2>
+
+<p>
+Print the <var>K</var>-th (1-based) sentence of length <var>m</var> in lexicographic order.
+If there is no such a sentence, print &quot;-&quot;.
+</p>
+
+<H2>Sample Input 1</H2>
+
+<pre>
+2 10 2
+hello
+world
+</pre>
+
+<H2>Output for the Sample Input 1</H2>
+
+<pre>
+helloworld
+</pre>
+
+<H2>Sample Input 2</H2>
+
+<pre>
+3 3 6
+a
+aa
+b
+</pre>
+
+<H2>Output for the Sample Input 2</H2>
+
+<pre>
+aba
+</pre>
+
+<H2>Sample Input 3</H2>
+
+<pre>
+2 59 1000000000000000000
+a
+b
+</pre>
+
+<H2>Output for the Sample Input 3</H2>
+
+<pre>
+-
+</pre>

@@ -1,0 +1,66 @@
+
+
+
+
+
+<h2>C： たったひとつの部分列 - Unique Subsequence -</h2>
+
+<h3>問題</h3>
+
+<p>ある日えびちゃんは、机の上に長さ <var>n</var> のテキスト文字列 <var>T</var> と長さ <var>m</var> のパターン文字列 <var>P</var>  (<var>m \leq n</var>) が置かれていることに気づきました。えびちゃんは、文字列に現れる「たったひとつの部分列」が大好きであるため、 <var>P</var> が <var>T</var> のたったひとつの部分列であるかどうかをすぐに調査し始めました。</p>
+
+<p><var>P</var> が <var>T</var> のたったひとつの部分列であるという性質は以下のように表されます。ここで、文字列 <var>X</var> の <var>i</var> 文字目を <var>X_i</var> と書きます。</p>
+
+<ul>
+<li> 長さ <var>m</var> の数列 <var>S = (s_1, ..., s_m)</var> (ただし、 <var>s_1 &lt; s_2 &lt; ... &lt; s_m</var>) で、各 <var>i</var> (<var>i = 1, ..., m</var>) について <var>T_{s_i} = P_i</var> である数列 <var>S</var> が一意に定まる。</li>
+</ul>
+
+<p>調査を始めてから数時間、えびちゃんは文字列をぐっと睨んでいましたが、文字列が長すぎるために疲れてしまったようです。それを見かねたあなたは、えびちゃんを手伝ってあげることにしました。えびちゃんのために、 <var>P</var> が <var>T</var> のたったひとつの部分列であるならば “yes” を、そうでないならば “no” を出力するプログラムを作成してください。</p>
+
+<h3>入力形式</h3>
+<pre>
+<var>T</var>
+<var>P</var>
+</pre>
+
+<p>
+<var>1</var> 行目には、テキスト文字列 <var>T</var> が与えられる。
+<var>2</var> 行目には、パターン文字列 <var>P</var> が与えられる。
+</p>
+
+<h3>制約</h3>
+
+<ul>
+<li> <var>1 \leq |P| \leq |T| \leq 5 \times 10^5</var></li>
+<li> <var>T</var> および <var>P</var> は英字小文字 ‘a’-’z’ で構成される。</li>
+</ul>
+
+<h3>出力形式</h3>
+<p><var>P</var> が <var>T</var> のたったひとつの部分列であるならば “yes” を、そうでないならば “no” を1行に出力してください。</p>
+
+<h3>入力例1</h3>
+<pre>
+aizucamp
+azu
+</pre>
+
+<h3>出力例1</h3>
+<pre>yes</pre>
+
+<h3>入力例2</h3>
+<pre>
+abracadabra
+rada
+</pre>
+
+<h3>出力例2</h3>
+<pre>no</pre>
+
+<h3>入力例3</h3>
+<pre>
+hokkaido
+dekai
+</pre>
+
+<h3>出力例3</h3>
+<pre>no</pre>

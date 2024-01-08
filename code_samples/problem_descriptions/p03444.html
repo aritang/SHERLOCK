@@ -1,0 +1,86 @@
+<span class="lang-en">
+<p>Score : <var>2000</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>You are given a rooted tree with <var>N</var> vertices.
+The vertices are numbered <var>0, 1, ..., N-1</var>.
+The root is Vertex <var>0</var>, and the parent of Vertex <var>i</var> <var>(i = 1, 2, ..., N-1)</var> is Vertex <var>p_i</var>.</p>
+<p>Initially, an integer <var>a_i</var> is written in Vertex <var>i</var>.
+Here, <var>(a_0, a_1, ..., a_{N-1})</var> is a permutation of <var>(0, 1, ..., N-1)</var>.</p>
+<p>You can execute the following operation at most <var>25</var> <var>000</var> times. Do it so that the value written in Vertex <var>i</var> becomes <var>i</var>.</p>
+<ul>
+<li>Choose a vertex and call it <var>v</var>. Consider the path connecting Vertex <var>0</var> and <var>v</var>.</li>
+<li>Rotate the values written on the path. That is, For each edge <var>(i, p_i)</var> along the path, replace the value written in Vertex <var>p_i</var> with the value written in Vertex <var>i</var> (just before this operation), and replace the value of <var>v</var> with the value written in Vertex <var>0</var> (just before this operation).</li>
+<li>You may choose Vertex <var>0</var>, in which case the operation does nothing.</li>
+</ul>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>2 \leq N \leq 2000</var></li>
+<li><var>0 \leq p_i \leq i-1</var></li>
+<li><var>(a_0, a_1, ..., a_{N-1})</var> is a permutation of <var>(0, 1, ..., N-1)</var>.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+<var>p_1</var> <var>p_2</var> ... <var>p_{N-1}</var>
+<var>a_0</var> <var>a_1</var> ... <var>a_{N-1}</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>In the first line, print the number of operations, <var>Q</var>.
+In the second through <var>(Q+1)</var>-th lines, print the chosen vertices in order.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>5
+0 1 2 3
+2 4 0 1 3
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>2
+3
+4
+</pre>
+<ul>
+<li>After the first operation, the values written in Vertex <var>0, 1, .., 4</var> are <var>4, 0, 1, 2, 3</var>.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>5
+0 1 2 2
+4 3 1 2 0
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>3
+4
+3
+1
+</pre>
+<ul>
+<li>After the first operation, the values written in Vertex <var>0, 1, .., 4</var> are <var>3, 1, 0, 2, 4</var>.</li>
+<li>After the second operation, the values written in Vertex <var>0, 1, .., 4</var> are <var>1, 0, 2, 3, 4</var>.</li>
+</ul></section>
+</div>
+</span>

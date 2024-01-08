@@ -1,0 +1,84 @@
+
+<H1><font color="#000">Problem H:</font> Viva Confetti</H1>
+
+<p>
+Do you know <i>confetti</i>? They are small discs of colored paper, and people throw them around during parties or festivals. Since people throw lots of confetti, they may end up stacked one on another, so there may be hidden ones underneath.</p>
+<p>
+A handful of various sized confetti have been dropped on a table. Given their positions and sizes, can you tell us how many of them you can see?
+</p>
+<p>
+The following figure represents the disc configuration for the first sample input, where the bottom disc is still visible. 
+</p>
+
+<center>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE1_viva">
+</center>
+
+
+<H2>Input</H2>
+
+<p>
+The input is composed of a number of configurations of the following form.
+</p>
+<pre>
+<i>n</i> 		
+<i>x</i><sub>1</sub> <i>y</i><sub>1</sub> <i>z</i><sub>1</sub>
+<i>x</i><sub>2</sub> <i>y</i><sub>2</sub> <i>z</i><sub>2</sub>
+.
+.
+.
+<i>x</i><sub><i>n</i></sub> <i>y</i><sub><i>n</i></sub> <i>z</i><sub><i>n</i></sub>
+</pre>
+
+<p>
+The first line in a configuration is the number of discs in the configuration (a positive integer not more than 100), followed by one Ine descriptions of each disc: coordinates of its center and radius, expressed as real numbers in decimal notation, with up to 12 digits after the decimal point. The imprecision margin is &plusmn;5 &times 10<sup>-13</sup>. That is, it is guaranteed that variations of less than &plusmn;5 &times; 10<sup>-13</sup> on input values do not change which discs are visible. Coordinates of all points contained in discs are between -10 and 10.
+</p>
+<p>
+Confetti are listed in their stacking order, <i>x</i><sub>1</sub> <i>y</i><sub>1</sub> <i>r</i><sub>1</sub> being the bottom one and <i>x<sub>n</sub> y<sub>n</sub> r<sub>n</sub></i> the top one. You are observing from the top.
+</p>
+<p>
+The end of the input is marked by a zero on a single line. 
+</p>
+
+<H2>Output</H2>
+
+<p>
+For each configuration you should output the number of visible confetti on a single line.
+</p>
+
+<H2>Sample Input</H2>
+<pre>
+3
+0 0 0.5
+-0.9 0 1.00000000001
+0.9 0 1.00000000001
+5
+0 1 0.5
+1 1 1.00000000001
+0 2 1.00000000001
+-1 1 1.00000000001
+0 -0.00001 1.00000000001
+5
+0 1 0.5
+1 1 1.00000000001
+0 2 1.00000000001
+-1 1 1.00000000001
+0 0 1.00000000001
+2
+0 0 1.0000001
+0 0 1
+2
+0 0 1
+0.00000001 0 1
+0
+</pre>
+
+<H2>Output for the Sample Input</H2>
+<pre>
+3
+5
+4
+2
+2
+</pre>
+

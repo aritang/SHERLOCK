@@ -1,0 +1,102 @@
+<span class="lang-en">
+<p>Score : <var>500</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>We have <var>N</var> camels numbered <var>1,2,\ldots,N</var>.
+Snuke has decided to make them line up in a row.</p>
+<p>The happiness of Camel <var>i</var> will be <var>L_i</var> if it is among the <var>K_i</var> frontmost camels, and <var>R_i</var> otherwise.</p>
+<p>Snuke wants to maximize the total happiness of the camels. Find the maximum possible total happiness of the camel.</p>
+<p>Solve this problem for each of the <var>T</var> test cases given.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li>All values in input are integers.</li>
+<li><var>1 \leq T \leq 10^5</var></li>
+<li><var>1 \leq N \leq 2 \times 10^{5}</var></li>
+<li><var>1 \leq K_i \leq N</var></li>
+<li><var>1 \leq L_i, R_i \leq 10^9</var></li>
+<li>The sum of values of <var>N</var> in each input file is at most <var>2 \times 10^5</var>.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>T</var>
+<var>\mathrm{case}_1</var>
+<var>\vdots</var>
+<var>\mathrm{case}_T</var>
+</pre>
+<p>Each case is given in the following format:</p>
+<pre><var>N</var>
+<var>K_1</var> <var>L_1</var> <var>R_1</var>
+<var>\vdots</var>
+<var>K_N</var> <var>L_N</var> <var>R_N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print <var>T</var> lines. The <var>i</var>-th line should contain the answer to the <var>i</var>-th test case.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>3
+2
+1 5 10
+2 15 5
+3
+2 93 78
+1 71 59
+3 57 96
+19
+19 23 16
+5 90 13
+12 85 70
+19 67 78
+12 16 60
+18 48 28
+5 4 24
+12 97 97
+4 57 87
+19 91 74
+18 100 76
+7 86 46
+9 100 57
+3 76 73
+6 84 93
+1 6 84
+11 75 94
+19 15 3
+12 11 34
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>25
+221
+1354
+</pre>
+<ul>
+<li>In the first test case, it is optimal to line up the camels in the order <var>2, 1</var>.<ul>
+<li>Camel <var>1</var> is not the frontmost camel, so its happiness will be <var>10</var>.</li>
+<li>Camel <var>2</var> is among the two frontmost camels, so its happiness will be <var>15</var>.</li>
+</ul>
+</li>
+<li>In the second test case, it is optimal to line up the camels in the order <var>2, 1, 3</var>.<ul>
+<li>Camel <var>1</var> is among the two frontmost camels, so its happiness will be <var>93</var>.</li>
+<li>Camel <var>2</var> is the frontmost camel, so its happiness will be <var>71</var>.</li>
+<li>Camel <var>3</var> is among the three frontmost camels, so its happiness will be <var>57</var>.</li>
+</ul>
+</li>
+</ul></section>
+</div>
+</span>

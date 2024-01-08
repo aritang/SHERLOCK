@@ -1,0 +1,95 @@
+<span class="lang-en">
+<p>Score : <var>400</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>Snuke has an empty sequence <var>a</var>.</p>
+<p>He will perform <var>N</var> operations on this sequence.</p>
+<p>In the <var>i</var>-th operation, he chooses an integer <var>j</var> satisfying <var>1 \leq j \leq i</var>, and insert <var>j</var> at position <var>j</var> in <var>a</var> (the beginning is position <var>1</var>).</p>
+<p>You are given a sequence <var>b</var> of length <var>N</var>. Determine if it is possible that <var>a</var> is equal to <var>b</var> after <var>N</var> operations. If it is, show one possible sequence of operations that achieves it.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li>All values in input are integers.</li>
+<li><var>1 \leq N \leq 100</var></li>
+<li><var>1 \leq b_i \leq N</var></li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+<var>b_1</var> <var>\dots</var> <var>b_N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>If there is no sequence of <var>N</var> operations after which <var>a</var> would be equal to <var>b</var>, print <code>-1</code>.
+If there is, print <var>N</var> lines. In the <var>i</var>-th line, the integer chosen in the <var>i</var>-th operation should be printed. If there are multiple solutions, any of them is accepted.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>3
+1 2 1
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>1
+1
+2
+</pre>
+<p>In this sequence of operations, the sequence <var>a</var> changes as follows:</p>
+<ul>
+<li>After the first operation: <var>(1)</var></li>
+<li>After the second operation: <var>(1,1)</var></li>
+<li>After the third operation: <var>(1,2,1)</var></li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>2
+2 2
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>-1
+</pre>
+<p><var>2</var> cannot be inserted at the beginning of the sequence, so this is impossible.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>9
+1 1 1 2 2 1 2 3 2
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>1
+2
+2
+3
+1
+2
+2
+1
+1
+</pre></section>
+</div>
+</span>

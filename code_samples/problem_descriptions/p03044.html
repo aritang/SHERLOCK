@@ -1,0 +1,84 @@
+<span class="lang-en">
+<p>Score : <var>400</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>We have a tree with <var>N</var> vertices numbered <var>1</var> to <var>N</var>.
+The <var>i</var>-th edge in the tree connects Vertex <var>u_i</var> and Vertex <var>v_i</var>, and its length is <var>w_i</var>.
+Your objective is to paint each vertex in the tree white or black (it is fine to paint all vertices the same color) so that the following condition is satisfied:</p>
+<ul>
+<li>For any two vertices painted in the same color, the distance between them is an even number.</li>
+</ul>
+<p>Find a coloring of the vertices that satisfies the condition and print it. It can be proved that at least one such coloring exists under the constraints of this problem.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li>All values in input are integers.</li>
+<li><var>1 \leq N \leq 10^5</var></li>
+<li><var>1 \leq u_i &lt; v_i \leq N</var></li>
+<li><var>1 \leq w_i \leq 10^9</var></li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+<var>u_1</var> <var>v_1</var> <var>w_1</var>
+<var>u_2</var> <var>v_2</var> <var>w_2</var>
+<var>.</var>
+<var>.</var>
+<var>.</var>
+<var>u_{N - 1}</var> <var>v_{N - 1}</var> <var>w_{N - 1}</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print a coloring of the vertices that satisfies the condition, in <var>N</var> lines.
+The <var>i</var>-th line should contain <code>0</code> if Vertex <var>i</var> is painted white and <code>1</code> if it is painted black.</p>
+<p>If there are multiple colorings that satisfy the condition, any of them will be accepted.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>3
+1 2 2
+2 3 1
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>0
+0
+1
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>5
+2 5 2
+2 3 10
+1 3 8
+3 4 2
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>1
+0
+1
+0
+1
+</pre></section>
+</div>
+</span>

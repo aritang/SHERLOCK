@@ -1,0 +1,160 @@
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({ tex2jax: { inlineMath: [["$","$"], ["\\(","\\)"]], processEscapes: true }});
+</script>
+<script type='text/javascript' src='http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
+</script>
+
+
+<h2>Pipe Fitter and the Fierce Dogs</h2>
+<p>
+You, a proud pipe fitter of ICPC (International Community for Pipe Connection), undertake a new task. The area in which you will take charge of piping work is a rectangular shape with $W$ blocks from west to east and $H$ blocks from north to south. We refer to the block at the $i$-th from west and the $j$-th from north as $(i, j)$. The westernmost and northernmost block is $(1, 1)$, and the easternmost and southernmost block is $(W,H)$. To make the area good scenery, the block $(i, j)$ has exactly one house if and only if both of $i$ and $j$ are odd numbers.
+</p>
+
+<p>
+Your task is to construct a water pipe network in the area such that every house in the area is supplied water through the network. A water pipe network consists of pipelines. A pipeline is made by connecting one or more pipes, and a pipeline with l pipes is constructed as follows:
+</p>
+
+<ol>
+<li> choose a first house, and connect the house to an underground water source with a <i>special pipe</i>.</li>
+<li> choose an $i$-th house ($2 \leq i \leq l$), and connect the $i$-th house to the ($i - 1$)-th house with a <i>common pipe</i>. In this case, there is a condition to choose a next $i$-th house because the area is slope land. Let $(x, y)$ be the block of the ($i - 1$)-th house. An $i$-th house must be located at either $(x - 2, y + 2)$, $(x, y + 2)$, or $(x + 2, y + 2)$. A common pipe connecting two houses must be located at $(x - 1, y + 1)$, $(x, y + 1)$, or $(x + 1, y + 1)$, respectively.
+</ol>
+
+<p>
+In addition, you should notice the followings when you construct several pipelines:
+</p>
+
+<ul>
+<li> For each house, exactly one pipeline is through the house.</li>
+<li> Multiple pipes can be located at one block.</li>
+</ul>
+
+<p>
+In your task, common pipes are common, so you can use any number of common pipes. On the other hand, special pipes are special, so the number of available special pipes in this task is restricted under ICPC regulation.
+</p>
+
+<p>
+Besides the restriction of available special pipes, there is another factor obstructing your pipe work: fierce dogs. Some of the blocks which do not contain a house seem to be home of fierce dogs. Each dog always stays at his/her home block. Since several dogs must not live at the same block as their home, you can assume each block is home of only one dog, or not home of any dogs.
+</p>
+
+<p>
+The figure below is an example of a water pipe network in a 5 $\times$ 5 area with 4 special pipes. This corresponds to the first sample.
+
+<center>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_JAGAsia2016_pipeFitter"><br/>
+</center>
+<br/>
+<p>
+Locating a common pipe at a no-dog block costs 1 unit time, but locating a common pipe at a dog-living block costs 2 unit time because you have to fight against the fierce dog. Note that when you locate multiple pipes at the same block, each pipe-locating costs 1 unit time for no-dog blocks and 2 for dog-living blocks, respectively. By the way, special pipes are very special, so locating a special pipe costs 0 unit time.
+</p>
+
+<p>
+You, a proud pipe fitter, want to accomplish this task as soon as possible. Fortunately, you get a list of blocks which are home of dogs. You have frequently participated in programming contests before being a pipe fitter. Hence, you decide to make a program determining whether or not you can construct a water pipe network such that every house is supplied water through the network with a restricted number of special pipes, and if so, computing the minimum total time cost to construct it.
+</p>
+
+<h3>Input</h3>
+<p>
+The input consists of a single test case.<br/>
+<br/>
+$W$ $H$ $K$<br/>
+$N$<br/>
+$x_1$ $y_1$<br/>
+$x_2$ $y_2$<br/>
+...<br/>
+$x_N$ $y_N$
+</p>
+
+<p>
+All numbers in a test case are integers. The first line contains three integers $W$, $H$, and $K$. $W$ and $H$ represent the size of the rectangle area. $W$ is the number of blocks from west to east ($1 \leq W < 10,000$), and $H$ is the number of blocks from north to south ($1 \leq H < 10,000$). $W$ and $H$ must be odd numbers. $K$ is the number of special pipes that you can use in this task ($1 \leq K \leq 100,000,000$). The second line has an integer $N$ ($0 \leq N \leq 100,000$), which is the number of dogs in the area. Each of the following $N$ lines contains two integers $x_i$ and $y_i$, which indicates home of the $i$-th fierce dog is the block $(x_i, y_i)$. These numbers satisfy the following conditions:
+</p>
+
+<ul>
+<li> $1 \leq x_i \leq W, 1 \leq y_i \leq H$.</li>
+<li> At least one of $x_i$ and $y_i$ is even number.</li>
+<li> $i \ne j$ implies $(x_i, y_i) \ne (x_j, y_j)$. That is, two or more dogs are not in the same block.</li>
+</ul>
+
+<h3>Output</h3>
+<p>
+If we can construct a water pipe network such that every house is supplied water through the network with a restricted number of special pipes, print the minimum total time cost to construct it. If not, print -1.
+</p>
+
+<h3>Sample Input 1</h3>
+<pre>
+5 5 4
+6
+3 2
+4 2
+5 2
+1 4
+3 4
+5 4
+</pre>
+
+<h3>Output for the Sample Input 1</h3>
+<pre>
+6
+</pre>
+
+<h3>Sample Input 2</h3>
+<pre>
+5 3 1
+0
+</pre>
+
+<h3>Output for the Sample Input 2</h3>
+<pre>
+-1
+</pre>
+
+<h3>Sample Input 3</h3>
+<pre>
+9 5 100
+5
+2 1
+1 2
+3 4
+4 3
+2 2
+</pre>
+
+<h3>Output for the Sample Input 3</h3>
+<pre>
+0
+</pre>
+
+<h3>Sample Input 4</h3>
+<pre>
+5 5 3
+4
+1 2
+5 2
+1 4
+5 4
+</pre>
+
+<h3>Output for the Sample Input 4</h3>
+<pre>
+8
+</pre>
+
+<h3>Sample Input 5</h3>
+<pre>
+9 5 5
+10
+2 1
+2 2
+3 2
+5 2
+8 2
+4 3
+2 4
+3 4
+5 4
+8 4
+</pre>
+
+<h3>Output for the Sample Input 5</h3>
+<pre>
+10
+</pre>

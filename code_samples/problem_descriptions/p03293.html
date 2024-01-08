@@ -1,0 +1,83 @@
+<span class="lang-en">
+<p>Score : <var>200</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>You are given string <var>S</var> and <var>T</var> consisting of lowercase English letters.</p>
+<p>Determine if <var>S</var> equals <var>T</var> after <em>rotation</em>.</p>
+<p>That is, determine if <var>S</var> equals <var>T</var> after the following operation is performed some number of times:</p>
+<p>Operation: Let <var>S = S_1 S_2 ... S_{|S|}</var>. Change <var>S</var> to <var>S_{|S|} S_1 S_2 ... S_{|S|-1}</var>.</p>
+<p>Here, <var>|X|</var> denotes the length of the string <var>X</var>.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>2 \leq |S| \leq 100</var></li>
+<li><var>|S| = |T|</var></li>
+<li><var>S</var> and <var>T</var> consist of lowercase English letters.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>S</var>
+<var>T</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>If <var>S</var> equals <var>T</var> after <em>rotation</em>, print <code>Yes</code>; if it does not, print <code>No</code>.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>kyoto
+tokyo
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>Yes
+</pre>
+<ul>
+<li>In the first operation, <code>kyoto</code> becomes <code>okyot</code>.</li>
+<li>In the second operation, <code>okyot</code> becomes <code>tokyo</code>.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>abc
+arc
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>No
+</pre>
+<p><code>abc</code> does not equal <code>arc</code> after any number of operations.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>aaaaaaaaaaaaaaab
+aaaaaaaaaaaaaaab
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>Yes
+</pre></section>
+</div>
+</span>

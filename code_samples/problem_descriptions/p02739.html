@@ -1,0 +1,152 @@
+<span class="lang-en">
+<p>Score : <var>1400</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>Given are a positive integer <var>N</var> and a sequence of length <var>2^N</var> consisting of <var>0</var>s and <var>1</var>s: <var>A_0,A_1,\ldots,A_{2^N-1}</var>.
+Determine whether there exists a closed curve <var>C</var> that satisfies the condition below for all <var>2^N</var> sets <var>S \subseteq \{0,1,\ldots,N-1 \}</var>. If the answer is yes, construct one such closed curve.</p>
+<ul>
+<li>Let <var>x = \sum_{i \in S} 2^i</var> and <var>B_S</var> be the set of points <var>\{ (i+0.5,0.5) | i \in S \}</var>.</li>
+<li>If there is a way to continuously move the closed curve <var>C</var> without touching <var>B_S</var> so that every point on the closed curve has a negative <var>y</var>-coordinate, <var>A_x = 1</var>.</li>
+<li>If there is no such way, <var>A_x = 0</var>.</li>
+</ul>
+<p>For instruction on printing a closed curve, see Output below.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Notes</h3><p><var>C</var> is said to be a closed curve if and only if:</p>
+<ul>
+<li><var>C</var> is a continuous function from <var>[0,1]</var> to <var>\mathbb{R}^2</var> such that <var>C(0) = C(1)</var>.</li>
+</ul>
+<p>We say that a closed curve <var>C</var> can be continuously moved without touching a set of points <var>X</var> so that it becomes a closed curve <var>D</var> if and only if:</p>
+<ul>
+<li>There exists a function <var>f : [0,1] \times [0,1] \rightarrow \mathbb{R}^2</var> that satisfies all of the following.<ul>
+<li><var>f</var> is continuous.</li>
+<li><var>f(0,t) = C(t)</var>.</li>
+<li><var>f(1,t) = D(t)</var>.</li>
+<li><var>f(x,t) \notin X</var>.</li>
+</ul>
+</li>
+</ul>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 \leq N \leq 8</var></li>
+<li><var>A_i = 0,1 \quad (0 \leq i \leq 2^N-1)</var></li>
+<li><var>A_0 = 1</var></li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+<var>A_0A_1 \cdots A_{2^N-1}</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>If there is no closed curve that satisfies the condition, print <code>Impossible</code>.</p>
+<p>If such a closed curve exists, print <code>Possible</code> in the first line.
+Then, print one such curve in the following format:</p>
+<pre><var>L</var>
+<var>x_0</var> <var>y_0</var>
+<var>x_1</var> <var>y_1</var>
+<var>:</var>
+<var>x_L</var> <var>y_L</var>
+</pre>
+<p>This represents the closed polyline that passes <var>(x_0,y_0),(x_1,y_1),\ldots,(x_L,y_L)</var> in this order.</p>
+<p>Here, all of the following must be satisfied:</p>
+<ul>
+<li><var>0 \leq x_i \leq N</var>, <var>0 \leq y_i \leq 1</var>, and <var>x_i, y_i</var> are integers. (<var>0 \leq i \leq L</var>)</li>
+<li><var>|x_i-x_{i+1}| + |y_i-y_{i+1}| = 1</var>. (<var>0 \leq i \leq L-1</var>)</li>
+<li><var>(x_0,y_0) = (x_L,y_L)</var>.</li>
+</ul>
+<p>Additionally, the length of the closed curve <var>L</var> must satisfy <var>0 \leq L \leq 250000</var>.</p>
+<p>It can be proved that, if there is a closed curve that satisfies the condition in Problem Statement, there is also a closed curve that can be expressed in this format.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>1
+10
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>Possible
+4
+0 0
+0 1
+1 1
+1 0
+0 0
+</pre>
+<p>When <var>S = \emptyset</var>, we can move this curve so that every point on it has a negative <var>y</var>-coordinate.</p>
+<p><img src="https://img.atcoder.jp/agc043/d44ca639698b4c14bb84b90da5442ca6.png" width="600px"/></p>
+<p>When <var>S = \{0\}</var>, we cannot do so.</p>
+<p><img src="https://img.atcoder.jp/agc043/5a960a0c4167e8593b6c8f8af685253d.png" width="600px"/></p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>2
+1000
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>Possible
+6
+1 0
+2 0
+2 1
+1 1
+0 1
+0 0
+1 0
+</pre>
+<p>The output represents the following curve:</p>
+<p><img alt="" src="https://img.atcoder.jp/agc043/283e490d520a451f1b15160900c9b545.png"/></p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>2
+1001
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>Impossible
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 4</h3><pre>1
+11
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 4</h3><pre>Possible
+0
+1 1
+</pre></section>
+</div>
+</span>

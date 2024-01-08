@@ -1,0 +1,72 @@
+<span class="lang-en">
+<p>Score : <var>300</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>There are <var>3N</var> participants in <em>AtCoder Group Contest</em>.
+The <em>strength</em> of the <var>i</var>-th participant is represented by an integer <var>a_i</var>.
+They will form <var>N</var> teams, each consisting of three participants.
+No participant may belong to multiple teams.</p>
+<p>The strength of a team is defined as the second largest strength among its members.
+For example, a team of participants of strength <var>1</var>, <var>5</var>, <var>2</var> has a strength <var>2</var>, and a team of three participants of strength <var>3</var>, <var>2</var>, <var>3</var> has a strength <var>3</var>.</p>
+<p>Find the maximum possible sum of the strengths of <var>N</var> teams.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 ≤ N ≤ 10^5</var></li>
+<li><var>1 ≤ a_i ≤ 10^{9}</var></li>
+<li><var>a_i</var> are integers.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+<var>a_1</var> <var>a_2</var> <var>...</var> <var>a_{3N}</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the answer.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>2
+5 2 8 5 1 5
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>10
+</pre>
+<p>The following is one formation of teams that maximizes the sum of the strengths of teams:</p>
+<ul>
+<li>Team <var>1</var>: consists of the first, fourth and fifth participants.</li>
+<li>Team <var>2</var>: consists of the second, third and sixth participants.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>10
+1000000000 1000000000 1000000000 1000000000 1000000000 1000000000 1000000000 1000000000 1000000000 1000000000 1000000000 1000000000 1000000000 1000000000 1000000000 1000000000 1000000000 1000000000 1000000000 1000000000 1000000000 1000000000 1000000000 1000000000 1000000000 1000000000 1000000000 1000000000 1000000000 1000000000
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>10000000000
+</pre>
+<p>The sum of the strengths can be quite large.</p></section>
+</div>
+</span>

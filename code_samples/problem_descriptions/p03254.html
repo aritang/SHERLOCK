@@ -1,0 +1,98 @@
+<span class="lang-en">
+<p>Score : <var>200</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>There are <var>N</var> children, numbered <var>1, 2, ..., N</var>.</p>
+<p>Snuke has decided to distribute <var>x</var> sweets among them.
+He needs to give out all the <var>x</var> sweets, but some of the children may get zero sweets.</p>
+<p>For each <var>i</var> (<var>1 \leq i \leq N</var>), Child <var>i</var> will be <em>happy</em> if he/she gets exactly <var>a_i</var> sweets.
+Snuke is trying to maximize the number of happy children by optimally distributing the sweets.
+Find the maximum possible number of happy children.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li>All values in input are integers.</li>
+<li><var>2 \leq N \leq 100</var></li>
+<li><var>1 \leq x \leq 10^9</var></li>
+<li><var>1 \leq a_i \leq 10^9</var></li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var> <var>x</var>
+<var>a_1</var> <var>a_2</var> <var>...</var> <var>a_N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the maximum possible number of happy children.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>3 70
+20 30 10
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>2
+</pre>
+<p>One optimal way to distribute sweets is <var>(20, 30, 20)</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>3 10
+20 30 10
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>1
+</pre>
+<p>The optimal way to distribute sweets is <var>(0, 0, 10)</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>4 1111
+1 10 100 1000
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>4
+</pre>
+<p>The optimal way to distribute sweets is <var>(1, 10, 100, 1000)</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 4</h3><pre>2 10
+20 20
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 4</h3><pre>0
+</pre>
+<p>No children will be happy, no matter how the sweets are distributed.</p></section>
+</div>
+</span>

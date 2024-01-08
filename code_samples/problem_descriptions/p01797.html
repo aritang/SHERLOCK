@@ -1,0 +1,78 @@
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({ tex2jax: { inlineMath: [["$","$"], ["\\(","\\)"]], processEscapes: true }});
+</script>
+<script type='text/javascript' src='http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
+</script>
+
+
+<h2>Problem H
+Kimagure Cleaner</h2>
+
+<p>
+Ichiro won the newest model cleaner as a prize of a programming contest. This cleaner automatically moves around in a house for cleaning. Because Ichiro's house is very large, it can be modeled as an infinite two-dimensional Cartesian plane, whose axes are called $X$ and $Y$. The positive direction of the $Y$-axis is to the left if you face the positive direction of the $X$-axis.
+</p>
+
+<p>
+The cleaner performs a sequence of actions for cleaning. Each action consists of a turn and a run. In an action, first the cleaner turns right or left by 90 degrees, and then runs straight by an integer length to the direction that the cleaner faces. At the end of a day, the cleaner reports the log of its actions in the day to Ichiro, in order to inform him where it has cleaned and where it hasn't.
+</p>
+
+<p>
+Unlike common cleaners, this cleaner has human-like artificial intelligence. Therefore, the cleaner is very forgetful (like humans) and it is possible that the cleaner forgets the direction of a turn, or the cleaner only remembers the length of a run as a very rough range. However, in order to pretend to be operating correctly, the cleaner has to recover the complete log of actions after finishing the cleaning.
+</p>
+
+<p>
+The cleaner was initially at the point $(0, 0)$, facing the positive direction of $X$-axis. You are given the cleaner's location after cleaning, $(X, Y)$, and an incomplete log of the cleaner's actions that the cleaner remembered. Please recover a complete log from the given incomplete log. The actions in the recovered log must satisfy the following constraints:
+</p>
+
+<ul>
+<li> The number of actions must be the same as that in the incomplete log.</li>
+<li> The direction of the $i$-th turn must be the same as that in the incomplete log if it is recorded in the incomplete log.</li>
+<li> The length of the $i$-th run must be within the range of the length specified in the incomplete log.</li>
+<li> The cleaner must be at $(X, Y)$ after finishing all actions. The direction of the cleaner after cleaning is not important and you do not have to care about it, because the cleaner can turn freely after cleaning, though it cannot run after cleaning. You are not required to recover the actual path, because Ichiro only checks the format of the log and the location of the cleaner after cleaning.</li>
+</ul>
+
+
+<h3>Input</h3>
+
+<p>
+The input consists of a single test case. The first line contains three integers $N$ $(1 \leq N \leq 50)$, $X$, and $Y$ $(-10^9 \leq X, Y \leq 10^9)$. $N$ represents the number of actions in the incomplete log. $X$ and $Y$ represent the cleaner's location $(X, Y)$ after cleaning. The $i$-th line of the following $N$ lines contains a character $D_i$ and two integers $LL_i$ and $LU_i$. $D_i$ represents the direction of the $i$-th turn: '<span>L</span>', '<span>R</span>', and '<span>?</span>' represents left, right, and not recorded respectively. $LL_i$ and $LU_i$ represent a lower and upper bound of the length of the $i$-th run, respectively. You can assume $1 \leq LL_i \leq LU_i \leq 55,555,555$.
+</p>
+
+<h3>Output</h3>
+
+<p>
+Display the recovered log. In the first line, display N, the number of actions in the log. In the $i$-th line of the following $N$ lines, display the direction of the $i$-th turn in a character and the length of the $i$-th run separated by a single space. Represent a right turn by a single character '<span>R</span>', and a left turn by a single character '<span>L</span>'. The recovered log must satisfy the constraints in the problem. If there are multiple
+logs that satisfy the constraints, you can display any of them. Display $-1$ in a line if there is no log that satisfies the constraints.
+</p>
+
+
+<h3>Sample Input 1</h3>
+
+<pre>2 -3 4
+L 2 5
+? 3 5</pre>
+
+<h3>Output for the Sample Input 1</h3>
+
+<pre>2
+L 4
+L 3</pre>
+
+<h3>Sample Input 2</h3>
+
+<pre>5 3 -4
+? 1 5
+? 1 5
+? 1 5
+? 1 5
+? 1 5</pre>
+
+<h3>Output for the Sample Input 2</h3>
+
+<pre>5
+L 1
+R 2
+R 4
+L 1
+R 1</pre>

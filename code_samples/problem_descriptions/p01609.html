@@ -1,0 +1,69 @@
+
+
+
+<h2>One</h2>
+
+
+<h2>Problem Statement</h2>
+
+<p>電車の窓から美しい山並みが見える．<br />
+窓は，左下隅の座標が <var>(0, 0)</var>，右上隅の座標が <var>(W, H)</var> の長方形である．<br />
+窓からは <var>N</var> つの山が見えており，<var>i</var> 番目の山は上に凸な放物線 <var>y = a_i (x-p_i)^2 + q_i</var> の形をしている．<br />
+山と空との境界線の長さを求めよ．</p>
+<p>次の三つの図は Sample Input に対応している．太線で示されている部分が山と空との境界線である．</p>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE3_Rits_Camp13_Day2_I_sample1">
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE3_Rits_Camp13_Day2_I_sample2">
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE3_Rits_Camp13_Day2_I_sample3">
+
+
+<h2>Input</h2>
+
+<p>入力は以下の形式に従う．与えられる数は全て整数である．</p>
+<pre><var>W</var> <var>H</var> <var>N</var>
+<var>a_1</var> <var>p_1</var> <var>q_1</var>
+<var>...</var>
+<var>a_N</var> <var>p_N</var> <var>q_N</var></pre>
+
+<h2>Constraints</h2>
+
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li><var>1 ≦ W, H ≦ 100</var></li>
+<li><var>1 ≦ N ≦ 50</var></li>
+<li><var>-100 ≦ a_i ≦ -1</var></li>
+<li><var>0 ≦ p_i ≦ W</var></li>
+<li><var>1 ≦ q_i ≦ H</var></li>
+<li><var>i \neq j</var> ならば <var>(a_i, p_i, q_i) \neq (a_j, p_j, q_j)</var></li></ul>
+
+<h2>Output</h2>
+
+<p>山と空との境界線の長さを 1 行に出力せよ．<br />
+出力する値は，真の値との絶対誤差または相対誤差が <var>10^{-6}</var> 未満でなければならない．</p>
+
+<h2>Sample Input 1</h2>
+
+<pre>20 20 1
+-1 10 10</pre>
+
+<h2>Output for the Sample Input 1</h2>
+
+<pre>21.520346288593280</pre>
+
+<h2>Sample Input 2</h2>
+
+<pre>20 20 2
+-1 10 10
+-2 10 5</pre>
+
+<h2>Output for the Sample Input 2</h2>
+
+<pre>21.520346288593280</pre>
+
+<h2>Sample Input 3</h2>
+
+<pre>15 100 2
+-2 5 100
+-2 10 100</pre>
+
+
+<h2>Output for the Sample Input 3</h2>
+
+<pre>126.921542730127873</pre>

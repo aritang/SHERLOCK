@@ -1,0 +1,98 @@
+<h1>Priority Queue</h1>
+
+<p>
+  Priority queue is a container of elements which the element with the highest priority should be extracted first.
+</p>
+
+<p>
+  For $n$ priority queues $Q_i$ ($i = 0, 1, ..., n-1$) of integers, perform a sequence of the following operations.
+</p>
+
+<ul>
+  <li>insert($t$, $x$): Insert $x$ to $Q_t$.</li>
+  <li>getMax($t$): Report the maximum value in $Q_t$. If $Q_t$ is empty, do nothing.</li>
+  <li>deleteMax($t$): Delete the maximum element from $Q_t$. If $Q_t$ is empty, do nothing.</li>
+</ul>
+
+<p>
+In the initial state, all queues are empty.
+</p>
+
+
+<h2>Input</h2>
+
+<p>
+  The input is given in the following format.
+</p>
+
+<pre>
+$n \; q$
+$query_1$
+$query_2$
+:
+$query_q$
+</pre>
+
+<p>
+Each query $query_i$ is given by
+</p>
+
+<pre>
+0 $t$ $x$
+</pre>
+
+<p>or</p>
+
+<pre>
+1 $t$
+</pre>
+
+<p>or</p>
+
+<pre>
+2 $t$
+</pre>
+
+<p>
+  where  the first digits <span>0</span>, <span>1</span> and <span>2</span> represent insert, getMax and deleteMax operations respectively.
+</p>
+
+<h2>Output</h2>
+<p>
+  For each getMax operation, print an integer in a line.
+</p>
+
+<h2>Constraints</h2>
+<ul>
+  <li>$1 \leq n \leq 1,000$</li>
+  <li>$1 \leq q \leq 200,000$</li>
+  <li>$-1,000,000,000 \leq x \leq 1,000,000,000$</li>
+</ul>
+
+<h2>Sample Input 1</h2>
+
+
+<pre>
+2 10
+0 0 3
+0 0 9
+0 0 1
+1 0
+2 0
+1 0
+0 0 4
+1 0
+0 1 8
+1 1
+</pre>
+
+<h2>Sample Output 1</h2>
+
+<pre>
+9
+3
+4
+8
+</pre>
+
+

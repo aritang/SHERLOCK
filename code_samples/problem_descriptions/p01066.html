@@ -1,0 +1,71 @@
+
+
+
+<h1>Reflection Warp Machine</h1>
+<h2>Problem</h2>
+
+<p>
+とある宇宙では、2次元の格子点上に<var>n</var>個の星が存在し、宇宙人達はReflection Warp Machineを使い、星間を移動している。<br>
+この装置は、任意の位置、角度で直線を引くことができる。<br>
+この直線を対称軸として、現在いる座標から線対称の座標に移動することができる。<br>
+ただし、星が存在しない座標に移動することはできない。<br>
+一度引いた直線は何度でも利用できる。<br>
+現在、(<var>x<sub>0</sub></var>,<var>y<sub>0</sub></var>)の星にいるある宇宙人はすべての星を訪れたいと考えている。<br>
+星は好きな順番に訪れることができる。<br>
+すべての星を訪れるのに最小で何本の直線を引く必要があるか求めよ。
+</p>
+
+<h2>Input</h2>
+
+<pre>
+<var>n</var>
+<var>x<sub>0</sub></var> <var>y<sub>0</sub></var>
+...
+<var>x<sub>n&minus;1</sub></var> <var>y<sub>n&minus;1</sub></var>
+</pre>
+
+<p>
+入力は全て整数で与えられる。<br>
+1行目に<var>n</var>が与えられる。<br>
+2行目以降<var>n</var>行に<var>i</var>番目の星の座標(<var>x<sub>i</sub></var>,<var>y<sub>i</sub></var>)が空白区切りで与えられる。
+</p>
+
+<h2>Constraints</h2>
+
+<ul>
+  <li>2 &le; <var>n</var> &le; 8</li>
+  <li>&minus;100 &le; <var>x<sub>i</sub></var>,<var>y<sub>i</sub></var> &le; 100</li>
+  <li>(<var>x<sub>i</sub></var>,<var>y<sub>i</sub></var>) &ne; (<var>x<sub>j</sub></var>,<var>y<sub>j</sub></var>) (<var>i</var> &ne; <var>j</var>)<br>
+</ul>
+
+<h2>Output</h2>
+<p>
+すべての星を訪れるために必要な最小の直線の数を1行に出力せよ。
+</p>
+
+<h2>Sample Input 1</h2>
+<pre>
+3
+0 0
+0 1
+1 0
+</pre>
+
+<h2>Sample Output 1</h2>
+<pre>
+2
+</pre>
+
+<h2>Sample Input 2</h2>
+<pre>
+4
+0 0
+0 1
+0 2
+0 3
+</pre>
+
+<h2>Sample Output 2</h2>
+<pre>
+2
+</pre>

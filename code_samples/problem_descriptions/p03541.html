@@ -1,0 +1,80 @@
+<span class="lang-en">
+<p>Score : <var>1600</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p><var>2^N</var> players competed in a tournament.
+Each player has a unique ID number from <var>1</var> through <var>2^N</var>. When two players play a match, the player with the smaller ID always wins.</p>
+<p>This tournament was a little special, in which losers are not eliminated to fully rank all the players.</p>
+<p>We will call such a tournament that involves <var>2^n</var> players a <em>full tournament of level <var>n</var></em>.
+In a full tournament of level <var>n</var>, the players are ranked as follows:</p>
+<ul>
+<li>In a full tournament of level <var>0</var>, the only player is ranked first.</li>
+<li>In a full tournament of level <var>n\ (1 \leq n)</var>, initially all <var>2^n</var> players are lined up in a row. Then:</li>
+<li>First, starting from the two leftmost players, the players are successively divided into <var>2^{n-1}</var> pairs of two players.</li>
+<li>Each of the pairs plays a match. The winner enters the "Won" group, and the loser enters the "Lost" group.</li>
+<li>The players in the "Won" group are lined up in a row, maintaining the relative order in the previous row. Then, a full tournament of level <var>n-1</var> is held to fully rank these players.</li>
+<li>The players in the "Lost" group are also ranked in the same manner, then the rank of each of these players increases by <var>2^{n-1}</var>.</li>
+</ul>
+<p>For example, the figure below shows how a full tournament of level <var>3</var> progresses when eight players are lined up in the order <var>3,4,8,6,2,1,7,5</var>. The list of the players sorted by the final ranking will be <var>1,3,5,6,2,4,7,8</var>.</p>
+<p><img alt="" src="https://img.atcoder.jp/cf17-final/e93269f0dfb68bcdff175a3b634ab0d8.png"/></p>
+<p>Takahashi has a sheet of paper with the list of the players sorted by the final ranking in the tournament, but some of it blurred and became unreadable.
+You are given the information on the sheet as a sequence <var>A</var> of length <var>N</var>. When <var>A_i</var> is <var>1</var> or greater, it means that the <var>i</var>-th ranked player had the ID <var>A_i</var>. If <var>A_i</var> is <var>0</var>, it means that the ID of the <var>i</var>-th ranked player is lost.</p>
+<p>Determine whether there exists a valid order in the first phase of the tournament which is consistent with the sheet. If it exists, provide one such order.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 \leq N \leq 18</var></li>
+<li><var>0 \leq A_i \leq 2^N</var></li>
+<li>No integer, except <var>0</var>, occurs more than once in <var>A_i</var>.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+<var>A_1</var> <var>A_2</var> <var>...</var> <var>A_{2^N}</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>If there exists a valid order in the first phase of the tournament, print <code>YES</code> first, then in the subsequent line, print the IDs of the players sorted by the final ranking, with spaces in between.
+If there is no such order, print <code>NO</code> instead.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>3
+0 3 0 6 0 0 0 8
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>YES
+3 4 8 6 2 1 7 5
+</pre>
+<p>This is the same order as the one in the statement.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>1
+2 1
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>NO
+</pre></section>
+</div>
+</span>

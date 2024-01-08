@@ -1,0 +1,82 @@
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({ tex2jax: { inlineMath: [["$","$"], ["\\(","\\)"]], skipTags: ["script","noscript","style","textarea","code"], processEscapes: true }});
+</script>
+<script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML"></script>
+
+<H1>
+Farm Village
+</H1>
+
+<p>
+  There is a village along a road. This village has $N$ houses numbered $1$ to $N$ in order along the road. Each house has a field that can make up to two units of the crop and needs just one unit of the crop. The total cost to distribute one unit of the crop to each house is the summation of carrying costs and growing costs.
+</p>
+
+<ul>
+<li>The carrying cost: The cost to carry one unit of the crop between the $i$-th house and the ($i+1$)-th house is $d_i$. It takes the same cost in either direction to carry.</li>
+<li>The growing cost: The cost to grow one unit of the crop in the $i$-th house's field is $g_i$.</li>
+</ul>
+
+<p>
+  Your task is to calculate the minimum total cost to supply one unit of the crop to each house.
+</p>
+
+<H2>Input</H2>
+
+<p>
+  The input consists of a single test case formatted as follows.
+</p>
+
+<pre>
+$N$
+$d_1$ ... $d_{N-1}$
+$g_1$ ... $g_{N}$
+</pre>
+
+<p>
+  The first line consists of an integer $N$ ($2 \leq 200,000$), which is the number of the houses. The second line consists of $N-1$ integers separated by spaces. The $i$-th integer $d_i$ ($1 \leq d_i \leq 10^9$, $1 \leq i \leq N-1$)represents the carrying cost between the $i$-th and the ($i+1$)-th houses. The third line consists of $N$ integers separated by spaces. The $i$-th integer $g_i$ ($1 \leq g_i \leq 10^9$, $1 \leq i \leq N$) represents the growing cost of the $i$-th house's field.
+</p>
+
+<H2>Output</H2>
+
+<p>
+Print the minimum cost to supply one unit of the crop to each house.
+</p>
+
+<H2>Sample Input 1</H2>
+<pre>
+2
+3
+1 5
+</pre>
+
+<H2>Output for Sample Input 1</H2>
+<pre>
+5
+</pre>
+
+
+
+<H2>Sample Input 2</H2>
+<pre>
+3
+100 100
+1 2 3
+</pre>
+
+<H2>Output for Sample Input 2</H2>
+<pre>
+6
+</pre>
+
+<H2>Sample Input 3</H2>
+<pre>
+4
+1 2 3
+1 1 100 100
+</pre>
+
+<H2>Output for Sample Input 3</H2>
+<pre>
+12
+</pre>

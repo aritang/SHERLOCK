@@ -1,0 +1,94 @@
+<span class="lang-en">
+<p>Score : <var>100</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>Ringo Kingdom Congress is voting on a bill.</p>
+<p><var>N</var> members are present, and the <var>i</var>-th member <var>(1 ≤ i ≤ N)</var> has <var>w_i</var> white ballots and <var>b_i</var> blue ballots. Each member <var>i</var> will put all the <var>w_i</var> white ballots into the box if he/she is in favor of the bill, and put all the <var>b_i</var> blue ballots into the box if he/she is not in favor of the bill. No other action is allowed. For example, a member must not forfeit voting, or put only a part of his/her white ballots or a part of his/her blue ballots into the box.</p>
+<p>After all the members vote, if at least <var>P</var> percent of the ballots in the box is white, the bill is passed; if less than <var>P</var> percent of the ballots is white, the bill is rejected.</p>
+<p>In order for the bill to pass, at least how many members must be in favor of it?</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 ≤ N ≤ 10^5</var></li>
+<li><var>1 ≤ P ≤ 100</var></li>
+<li><var>1 ≤ w_i ≤ 10^9</var></li>
+<li><var>1 ≤ b_i ≤ 10^9</var></li>
+<li>All input values are integers.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var> <var>P</var>
+<var>w_1</var> <var>b_1</var>
+<var>w_2</var> <var>b_2</var>
+<var>:</var>
+<var>w_N</var> <var>b_N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the minimum number of members in favor of the bill required for passage.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>4 75
+1 1
+1 1
+1 1
+1 1
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>3
+</pre>
+<p>This is a "normal" vote, where each of the four members has one white ballot and one blue ballot. For the bill to pass, at least <var>75</var> percent of the four, that is, at least three must be in favor of it.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>4 75
+1 1
+1 1
+1 1
+100 1
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>1
+</pre>
+<p>The "yes" vote of the member with <var>100</var> white ballots alone is enough to pass the bill.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>5 60
+6 3
+5 9
+3 4
+7 8
+4 7
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>3
+</pre></section>
+</div>
+</span>

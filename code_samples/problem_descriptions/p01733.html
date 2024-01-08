@@ -1,0 +1,72 @@
+
+<p>
+Ievan Ritola is a researcher of behavioral ecology. Her group visited a forest to analyze an ecological system of some kinds of foxes.
+</p>
+
+<p>
+The forest can be expressed as a two-dimensional plane. With her previous research, foxes in the forest are known to live at lattice points. Here, lattice points are the points whose <var>x</var> and <var>y</var> coordinates are both integers. Two or more foxes might live at the same point.
+</p>
+
+<p>
+To observe the biology of these foxes, they decided to put a pair of sensors in the forest. The sensors can be put at lattice points. Then, they will be able to observe all foxes inside the bounding rectangle (including the boundary) where the sensors are catty-corner to each other. The sensors cannot be placed at the points that have the same <var>x</var> or <var>y</var> coordinate; in other words the rectangle must have non-zero area.
+</p>
+
+<p>
+The more foxes can be observed, the more data can be collected; on the other hand, monitoring a large area consumes a large amount of energy. So they want to maximize the value given by <var>N' / (|x_1 &minus; x_2| &times; |y_1 &minus; y_2|)</var>, where <var>N'</var> is the number of foxes observed and <var>(x_1, y_1)</var> and <var>(x_2, y_2)</var> are the positions of the two sensors.
+</p>
+
+<p>
+Let's help her observe cute foxes!
+</p>
+
+
+<h3>Input</h3>
+
+<p>
+The input is formatted as follows.
+</p>
+
+<pre>
+<var>N</var>
+<var>x_1</var> <var>y_1</var> <var>w_1</var>
+<var>x_2</var> <var>y_2</var> <var>w_2</var>
+:
+:
+<var>x_N</var> <var>y_N</var> <var>w_N</var>
+</pre>
+
+<p>
+The first line contains a single integer <var>N</var> (<var>1 &le; N &le; 10^5</var>) indicating the number of  the fox lairs in the forest.
+Each of the next <var>N</var> lines contains three integers <var>x_i</var>, <var>y_i</var> (<var>|x_i|,\, |y_i| &le; 10^9</var>) and <var>w_i</var> (<var>1 &le; w_i &le; 10^4</var>), which represent there are <var>w_i</var> foxes at the point <var>(x_i, y_i)</var>.
+It is guaranteed that all points are mutually different.
+</p>
+
+
+<h3>Output</h3>
+<p>Output the maximized value  as a fraction:
+</p>
+<pre>
+<var>a</var> / <var>b</var>
+</pre>
+
+<p>where <var>a</var> and <var>b</var> are integers representing the numerator and the denominato respectively.
+ There should be exactly one space before and after  the slash.
+The fraction should be written in the simplest form, that is,  <var>a</var> and  <var>b</var> must not have a common integer divisor greater than one.
+</p>
+<p>If the value becomes an integer, print a fraction with the denominator of one (e.g. <code>5 / 1</code> to represent 5).
+This implies zero should be printed as <code>0 / 1</code> (without quotes).
+</p>
+
+
+<h3>Sample Input 1</h3>
+
+<pre>2
+1 1 2
+2 2 3
+</pre>
+
+
+<h3>Output for the Sample Input 1</h3>
+
+<pre>5 / 1
+</pre>

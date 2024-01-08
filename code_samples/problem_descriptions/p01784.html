@@ -1,0 +1,62 @@
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({ tex2jax: { inlineMath: [["$","$"], ["\\(","\\)"]], processEscapes: true }});
+</script>
+<script type='text/javascript' src='http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
+</script>
+
+<h2>E - Parentheses</h2>
+
+<h3>Problem Statement</h3>
+
+<p>
+You are given $n$ strings $\mathit{str}_1, \mathit{str}_2, \ldots, \mathit{str}_n$, each consisting of <code>(</code> and <code>)</code>. The objective is to determine whether it is possible to permute the $n$ strings so that the concatenation of the strings represents a <i>valid</i> string.
+</p>
+
+<p>
+Validity of strings are defined as follows:
+</p>
+
+<ul>
+<li> The empty string is valid. </li>
+<li> If $A$ and $B$ are valid, then the concatenation of $A$ and $B$ is valid. </li>
+<li> If $A$ is valid, then the string obtained by putting $A$ in a pair of matching parentheses is valid. </li>
+<li> Any other string is not valid. </li>
+</ul>
+
+<p>
+For example, "()()" and "(())" are valid, while "())" and "((()" are not valid.
+</p>
+
+<h3>Input</h3>
+
+<p>
+The first line of the input contains an integer $n$ ($1 \leq n \leq 100$), representing the number of strings. Then $n$ lines follow, each of which contains $\mathit{str}_i$ ($1 \leq \lvert \mathit{str}_i \rvert \leq 100$). All characters in $\mathit{str}_i$ are <code>(</code> or <code>)</code>.
+</p>
+
+<h3>Output</h3>
+
+<p>
+Output a line with "Yes" (without quotes) if you can make a valid string, or "No" otherwise. 
+</p>
+
+<h3>Sample Input 1</h3>
+
+<pre>3
+()(()((
+))()()(()
+)())(())</pre>
+
+<h3>Output for the Sample Input 1</h3>
+
+<pre>Yes</pre>
+
+<h3>Sample Input 2</h3>
+
+<pre>2
+))()((
+))((())(</pre>
+
+<h3>Output for the Sample Input 2</h3>
+
+<pre>No</pre>

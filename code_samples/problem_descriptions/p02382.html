@@ -1,0 +1,91 @@
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({ tex2jax: { inlineMath: [["$","$"], ["\\(","\\)"]], processEscapes: true }});
+</script>
+<script language="JavaScript" type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML">
+</script>
+
+<h1>Distance II</h1><br>
+
+<p>
+  Your task is to calculate the distance between two $n$ dimensional vectors $x = \{x_1, x_2, ..., x_n\}$ and $y = \{y_1, y_2, ..., y_n\}$.
+</p>
+
+<p>
+  The Minkowski's distance defined below is a metric which is a generalization of both the Manhattan distance and the Euclidean distance.
+<br>
+\[
+D_{xy} = (\sum_{i=1}^n |x_i - y_i|^p)^{\frac{1}{p}}
+\]
+<br>
+
+It can be the Manhattan distance 
+<br>
+
+\[
+D_{xy} = |x_1 - y_1| + |x_2 - y_2| + ... + |x_n - y_n|
+\]
+
+<br>
+where $p = 1 $.
+
+<br>
+<br>
+It can be the Euclidean distance
+<br>
+\[
+D_{xy} = \sqrt{(|x_1 - y_1|)^{2} + (|x_2 - y_2|)^{2} + ... + (|x_n - y_n|)^{2}}
+\]
+<br>
+where $p = 2 $.
+
+<br>
+<br>
+Also, it can be the Chebyshev distance
+<br>
+<br>
+\[
+D_{xy} = max_{i=1}^n (|x_i - y_i|)
+\]
+<br>
+<br>
+where $p = \infty$
+</p>
+
+<p>
+Write a program which reads two $n$ dimensional vectors $x$ and $y$, and calculates Minkowski's distance where $p = 1, 2, 3, \infty$ respectively.
+</p>
+
+<h2>Input</h2>
+<p>
+  In the first line, an integer $n$ is given. In the second and third line, $x = \{x_1, x_2, ... x_n\}$ and $y = \{y_1, y_2, ... y_n\}$ are given respectively. The elements in $x$ and $y$ are given in integers.
+</p>
+
+<h2>Output</h2>
+<p>
+  Print the distance where $p = 1, 2, 3$ and $\infty$ in a line respectively.
+The output should not contain an absolute error greater than 10<sup>-5</sup>.
+</p>
+
+<h2>Constraints</h2>
+<ul>
+<li>$1 \leq n \leq 100$</li>
+<li>$0 \leq x_i, y_i \leq 1000$</li>
+</ul>
+
+<h2>Sample Input</h2>
+<pre>
+3
+1 2 3
+2 0 4
+</pre>
+
+
+<h2>Sample Output</h2>
+
+<pre>
+4.000000
+2.449490
+2.154435
+2.000000
+</pre>

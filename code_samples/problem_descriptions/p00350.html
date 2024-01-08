@@ -1,0 +1,99 @@
+
+
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({ tex2jax: { inlineMath: [["$","$"], ["\\(","\\)"]], processEscapes: true }});
+</script>
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+
+<H1>文字列ゲーム</H1>
+
+<p>
+  あなたは、双子のアイ君とヅー君に文字列を使ったゲームのプログラムをプレゼントしました。このゲームでは、アイ君とヅー君が文字列の中から部分文字列をそれぞれ選び、それらを比較して小さい方を選んだ人に得点が加算されます。二人は競い合い、何度もゲームを行いました。ところが、同じ文字列に対して何度もゲームをしているうちに飽きてしまいました。そこであなたは、文字列が変化するようにプログラムを修正することにしました。
+</p>
+
+<br/>
+
+<p>
+  長さ <var>N</var> の文字列 <var>U</var> と <var>Q</var> 個の命令文が与えられたとき、以下の命令を処理するプログラムを作成せよ。
+</p>
+
+<ul>
+<li> 文字列 <var>U</var> の指定された範囲にあるすべての文字を、指定された文字に置き換える。</li>
+<li> 文字列 <var>U</var> の指定された２つの部分文字列 <var>S</var>, <var>T</var> を辞書順で比較して、それらの大小関係を出力する。</li>
+</ul>
+
+<h2>Input</h2>
+
+<p>
+  入力は以下の形式で与えられる。
+</p>
+
+<pre>
+<var>N</var>
+<var>U</var>
+<var>Q</var>
+<var>query<sub>1</sub></var>
+<var>query<sub>2</sub></var>
+:
+<var>query<sub>Q</sub></var>
+</pre>
+
+<p>
+  １行目に文字列の長さ <var>N</var> (1 &le; <var>N</var> &le; 200000)、２行目に文字列 <var>U</var> (英小文字のみを含む文字列)が与えられる。３行目に命令の数 <var>Q</var> (1 &le; <var>Q</var> &le; 100000) が与えられる。続く <var>Q</var> 行に <var>i</var> 番目の命令 <var>query<sub>i</sub></var> が与えられる。各 <var>query<sub>i</sub></var> は、以下のいずれかの形式で与えられる。
+</p>
+
+<pre>
+set <var>x</var> <var>y</var> <var>z</var>
+</pre>
+<p>  
+  または
+</p>
+
+<pre>
+comp <var>a</var> <var>b</var> <var>c</var> <var>d</var>
+</pre>
+
+<p>
+  set <var>x</var> <var>y</var> <var>z</var> は文字列 <var>U</var> の <var>x</var> 文字目から <var>y</var> 文字目までを、指定された文字 <var>z</var> に置き換えることを表す。ただし、1 &le; <var>x</var> &le; <var>y</var> &le; <var>N</var> であり、<var>z</var> は英小文字である。
+</p>
+
+<p>
+comp <var>a</var> <var>b</var> <var>c</var> <var>d</var> は文字列 <var>U</var> の <var>a</var> 文字目から <var>b</var> 文字目までの部分文字列を <var>S</var>、文字列 <var>U</var> の <var>c</var> 文字目から <var>d</var> 文字目までの部分文字列を <var>T</var> としたとき、文字列 <var>S</var> と文字列 <var>T</var> を辞書順で比較することを表す。ただし、1 &le; <var>a</var> &le; <var>b</var> &le; <var>N</var> かつ 1 &le; <var>c</var> &le; <var>d</var> &le; <var>N</var> である。
+</p>
+
+
+<h2>Output</h2>
+
+<p>
+各 comp 命令について、<var>S</var> の方が小さいならば「s」、<var>T</var> の方が小さいならば「t」、両者が一致しているならば「e」と１行に出力する。
+</p>
+
+<h2>Sample Input 1</h2>
+
+<pre>
+13
+aizualgorithm
+9
+comp 1 1 4 5
+comp 2 6 1 5
+set 9 12 b
+comp 9 9 10 10
+comp 5 8 1 4
+set 1 10 z
+set 11 13 x
+comp 8 10 1 5
+comp 1 5 1 5
+</pre>
+
+<h2>Sample Output 1</h2>
+<pre>
+s
+t
+e
+t
+s
+e 
+</pre>

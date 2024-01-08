@@ -1,0 +1,83 @@
+<span class="lang-en">
+<p>Score : <var>1000</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>We will host a rock-paper-scissors tournament with <var>N</var> people. The participants are called Person <var>1</var>, Person <var>2</var>, <var>\ldots</var>, Person <var>N</var>.
+For any two participants, the result of the match between them is determined in advance.
+This information is represented by positive integers <var>A_{i,j}</var> ( <var>1 \leq j &lt; i \leq N</var> ) as follows:</p>
+<ul>
+<li>If <var>A_{i,j} = 0</var>, Person <var>j</var> defeats Person <var>i</var>.</li>
+<li>If <var>A_{i,j} = 1</var>, Person <var>i</var> defeats Person <var>j</var>.</li>
+</ul>
+<p>The tournament proceeds as follows:</p>
+<ul>
+<li>We will arrange the <var>N</var> participants in a row, in the order Person <var>1</var>, Person <var>2</var>, <var>\ldots</var>, Person <var>N</var> from left to right.</li>
+<li>We will randomly choose two consecutive persons in the row. They will play a match against each other, and we will remove the loser from the row.
+We will repeat this process <var>N-1</var> times, and the last person remaining will be declared the champion.</li>
+</ul>
+<p>Find the number of persons with the possibility of becoming the champion.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 \leq N \leq 2000</var></li>
+<li><var>A_{i,j}</var> is <var>0</var> or <var>1</var>.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+<var>A_{2,1}</var>
+<var>A_{3,1}</var><var>A_{3,2}</var>
+<var>:</var>
+<var>A_{N,1}</var><var>\ldots</var><var>A_{N,N-1}</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the number of persons with the possibility of becoming the champion.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>3
+0
+10
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>2
+</pre>
+<p>Person <var>1</var> defeats Person <var>2</var>, Person <var>2</var> defeats Person <var>3</var> and Person <var>3</var> defeats Person <var>1</var>.
+If Person <var>1</var> and Person <var>2</var> play the first match, Person <var>3</var> will become the champion.
+If Person <var>2</var> and Person <var>3</var> play the first match, Person <var>1</var> will become the champion.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>6
+0
+11
+111
+1111
+11001
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>3
+</pre></section>
+</div>
+</span>

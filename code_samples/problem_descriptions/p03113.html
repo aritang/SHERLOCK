@@ -1,0 +1,83 @@
+<span class="lang-en">
+<p>Score : <var>1000</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>Snuke participated in a magic show.</p>
+<p>A magician prepared <var>N</var> identical-looking boxes.
+He put a treasure in one of the boxes, closed the boxes, shuffled them, and numbered them <var>1</var> through <var>N</var>.</p>
+<p>Since the boxes are shuffled, now Snuke has no idea which box contains the treasure.
+Snuke wins the game if he opens a box containing the treasure.
+You may think that if Snuke opens all boxes at once, he can always win the game.
+However, there are some tricks:</p>
+<ul>
+<li>Snuke must open the boxes one by one. After he opens a box and checks the content of the box, he must close the box before opening the next box.</li>
+<li>He is only allowed to open Box <var>i</var> at most <var>a_i</var> times.</li>
+<li>The magician may secretly move the treasure from a closed box to another closed box, using some magic trick.
+For simplicity, assume that the magician never moves the treasure while Snuke is opening some box.
+However, he can move it at any other time (before Snuke opens the first box, or between he closes some box and opens the next box).</li>
+<li>The magician can perform the magic trick at most <var>K</var> times.</li>
+</ul>
+<p>Can Snuke always win the game, regardless of the initial position of the treasure and the movements of the magician?</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>2 \leq N \leq 50</var></li>
+<li><var>1 \leq K \leq 50</var></li>
+<li><var>1 \leq a_i \leq 100</var></li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var> <var>K</var>
+<var>a_1</var> <var>a_2</var> <var>\cdots</var> <var>a_N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>If the answer is no, print a single <code>-1</code>.</p>
+<p>Otherwise, print one possible move of Snuke in the following format:</p>
+<pre><var>Q</var>
+<var>x_1</var> <var>x_2</var> <var>\cdots</var> <var>x_Q</var>
+</pre>
+<p>It means that he opens boxes <var>x_1, x_2, \cdots, x_Q</var> in this order.</p>
+<p>In case there are multiple possible solutions, you can output any.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>2 1
+5 5
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>7
+1 1 2 1 2 2 1
+</pre>
+<p>If Snuke opens the boxes <var>7</var> times in the order <var>1 \rightarrow 1 \rightarrow 2 \rightarrow 1 \rightarrow 2 \rightarrow 2 \rightarrow 1</var>, he can always find the treasure regardless of its initial position and the movements of the magician.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>3 50
+5 10 15
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>-1
+</pre></section>
+</div>
+</span>

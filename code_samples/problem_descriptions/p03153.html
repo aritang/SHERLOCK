@@ -1,0 +1,93 @@
+<span class="lang-en">
+<p>Score : <var>600</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>There are <var>N</var> cities in Republic of AtCoder. The size of the <var>i</var>-th city is <var>A_{i}</var>.
+Takahashi would like to build <var>N-1</var> bidirectional roads connecting two cities so that any city can be reached from any other city by using these roads.</p>
+<p>Assume that the cost of building a road connecting the <var>i</var>-th city and the <var>j</var>-th city is <var>|i-j| \times D + A_{i} + A_{j}</var>.
+For Takahashi, find the minimum possible total cost to achieve the objective.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 \leq N \leq 2 \times 10^5</var></li>
+<li><var>1 \leq D \leq 10^9</var></li>
+<li><var>1 \leq A_{i} \leq 10^9</var></li>
+<li><var>A_{i}</var> and <var>D</var> are integers.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var> <var>D</var>
+<var>A_1</var> <var>A_2</var> <var>...</var> <var>A_N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the minimum possible total cost.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>3 1
+1 100 1
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>106
+</pre>
+<p>This cost can be achieved by, for example, building roads connecting City <var>1</var>, <var>2</var> and City <var>1</var>, <var>3</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>3 1000
+1 100 1
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>2202
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>6 14
+25 171 7 1 17 162
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>497
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 4</h3><pre>12 5
+43 94 27 3 69 99 56 25 8 15 46 8
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 4</h3><pre>658
+</pre></section>
+</div>
+</span>

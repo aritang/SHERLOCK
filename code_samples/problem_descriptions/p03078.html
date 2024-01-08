@@ -1,0 +1,146 @@
+<span class="lang-en">
+<p>Score: <var>400</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3>
+<p>The Patisserie AtCoder sells cakes with number-shaped candles.
+There are <var>X</var>, <var>Y</var> and <var>Z</var> kinds of cakes with <var>1</var>-shaped, <var>2</var>-shaped and <var>3</var>-shaped candles, respectively.
+Each cake has an integer value called <em>deliciousness</em>, as follows:</p>
+<ul>
+<li>The deliciousness of the cakes with <var>1</var>-shaped candles are <var>A_1, A_2, ..., A_X</var>.</li>
+<li>The deliciousness of the cakes with <var>2</var>-shaped candles are <var>B_1, B_2, ..., B_Y</var>.</li>
+<li>The deliciousness of the cakes with <var>3</var>-shaped candles are <var>C_1, C_2, ..., C_Z</var>.</li>
+</ul>
+<p>Takahashi decides to buy three cakes, one for each of the three shapes of the candles, to celebrate ABC 123.<br/>
+There are <var>X \times Y \times Z</var> such ways to choose three cakes.<br/>
+We will arrange these <var>X \times Y \times Z</var> ways in descending order of the sum of the deliciousness of the cakes.<br/>
+Print the sums of the deliciousness of the cakes for the first, second, <var>...</var>, <var>K</var>-th ways in this list.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3>
+<ul>
+<li><var>1 \leq X \leq 1 \ 000</var></li>
+<li><var>1 \leq Y \leq 1 \ 000</var></li>
+<li><var>1 \leq Z \leq 1 \ 000</var></li>
+<li><var>1 \leq K \leq \min(3 \ 000, X \times Y \times Z)</var></li>
+<li><var>1 \leq A_i \leq 10 \ 000 \ 000 \ 000</var></li>
+<li><var>1 \leq B_i \leq 10 \ 000 \ 000 \ 000</var></li>
+<li><var>1 \leq C_i \leq 10 \ 000 \ 000 \ 000</var></li>
+<li>All values in input are integers.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3>
+<p>Input is given from Standard Input in the following format:</p>
+<pre><var>X</var> <var>Y</var> <var>Z</var> <var>K</var>
+<var>A_1 \ A_2 \ A_3 \ ... \ A_X</var>
+<var>B_1 \ B_2 \ B_3 \ ... \ B_Y</var>
+<var>C_1 \ C_2 \ C_3 \ ... \ C_Z</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3>
+<p>Print <var>K</var> lines. The <var>i</var>-th line should contain the <var>i</var>-th value stated in the problem statement.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>2 2 2 8
+4 6
+1 5
+3 8
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>19
+17
+15
+14
+13
+12
+10
+8
+</pre>
+<p>There are <var>2 \times 2 \times 2 = 8</var> ways to choose three cakes, as shown below in descending order of the sum of the deliciousness of the cakes:</p>
+<ul>
+<li><var>(A_2, B_2, C_2)</var>: <var>6 + 5 + 8 = 19</var></li>
+<li><var>(A_1, B_2, C_2)</var>: <var>4 + 5 + 8 = 17</var></li>
+<li><var>(A_2, B_1, C_2)</var>: <var>6 + 1 + 8 = 15</var></li>
+<li><var>(A_2, B_2, C_1)</var>: <var>6 + 5 + 3 = 14</var></li>
+<li><var>(A_1, B_1, C_2)</var>: <var>4 + 1 + 8 = 13</var></li>
+<li><var>(A_1, B_2, C_1)</var>: <var>4 + 5 + 3 = 12</var></li>
+<li><var>(A_2, B_1, C_1)</var>: <var>6 + 1 + 3 = 10</var></li>
+<li><var>(A_1, B_1, C_1)</var>: <var>4 + 1 + 3 = 8</var></li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>3 3 3 5
+1 10 100
+2 20 200
+1 10 100
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>400
+310
+310
+301
+301
+</pre>
+<p>There may be multiple combinations of cakes with the same sum of the deliciousness. For example, in this test case, the sum of <var>A_1, B_3, C_3</var> and the sum of <var>A_3, B_3, C_1</var> are both <var>301</var>.
+However, they are different ways of choosing cakes, so <var>301</var> occurs twice in the output.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>10 10 10 20
+7467038376 5724769290 292794712 2843504496 3381970101 8402252870 249131806 6310293640 6690322794 6082257488
+1873977926 2576529623 1144842195 1379118507 6003234687 4925540914 3902539811 3326692703 484657758 2877436338
+4975681328 8974383988 2882263257 7690203955 514305523 6679823484 4263279310 585966808 3752282379 620585736
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>23379871545
+22444657051
+22302177772
+22095691512
+21667941469
+21366963278
+21287912315
+21279176669
+21160477018
+21085311041
+21059876163
+21017997739
+20703329561
+20702387965
+20590247696
+20383761436
+20343962175
+20254073196
+20210218542
+20150096547
+</pre>
+<p>Note that the input or output may not fit into a <var>32</var>-bit integer type.</p></section>
+</div>
+</span>

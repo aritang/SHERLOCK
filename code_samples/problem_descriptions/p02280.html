@@ -1,0 +1,130 @@
+<H1>Binary Tree</H1>
+
+
+<p>
+A rooted binary tree is a tree with a root node in which every node has at most two children.
+</p>
+
+<p>
+Your task is to write a program which reads a rooted binary tree <i>T</i> and prints the following information for each node <i>u</i> of <i>T</i>:
+</p>
+
+<ul>
+<li>node ID of <i>u</i></li>
+<li>parent of <i>u</i></li>
+<li>sibling of <i>u</i></li>
+<li>the number of children of <i>u</i></li>
+<li>depth of <i>u</i></li>
+<li>height of <i>u</i></li>
+<li>node type (root, internal node or leaf)</li>
+</ul>
+
+<p>
+If two nodes have the same parent, they are <b>siblings</b>. Here, if <i>u</i> and <i>v</i> have the same parent, we say <i>u</i> is a sibling of <i>v</i> (vice versa).
+</p>
+
+<p>
+The height of a node in a tree is the number of edges on the longest simple downward path from the node to a leaf.
+</p>
+
+<p>
+Here, the given binary tree consists of <i>n</i> nodes and evey node has a unique ID from 0 to <i>n</i>-1.
+</p>
+
+<H2>Input</H2>
+
+<p>
+The first line of the input includes an integer <i>n</i>, the number of nodes of the tree.
+</p>
+<p>
+In the next <i>n</i> lines, the information of each node is given in the following format:
+</p>
+
+<p>
+<i>id left right</i>
+</p>
+
+<p>
+<i>id</i> is the node ID, <i>left</i> is ID of the left child and <i>right</i> is ID of the right child. If the node does not have the left (right) child, the <i>left</i>(<i>right</i>) is indicated by <span>-1</span>.
+</p>
+
+
+<H2>Output</H2>
+
+<p>
+Print the information of each node in the following format:
+</p>
+
+<p>
+<span>node</span> <i>id</i><span>: <span>parent = </span><i>p</i><span>, sibling = </span><i>s</i><span>, degree = </span><i>deg</i><span>, depth = <span><i>dep</i><span>, height = </span><i>h</i><span>, </span><i>type</i><br>
+</p>
+
+<p>
+<i>p</i> is ID of its parent. If the node does not have a parent, print <spna>-1</span>.
+</p>
+
+<p>
+<i>s</i> is ID of its sibling. If the node does not have a sibling, print <spna>-1</span>.
+</p>
+
+<p>
+<i>deg</i>, <i>dep</i> and <i>h</i> are the number of children, depth and height of the node respectively.
+</p>
+
+<p>
+<i>type</i> is a type of nodes represented by a string (<span>root</span>, <span>internal node</span> or <span>leaf</span>. If the root can be considered as a leaf or an internal node, print <span>root</span>.
+</p>
+
+
+<p>
+Please follow the format presented in a sample output below.
+</p>
+
+
+<H2>Constraints</H2>
+
+<ul>
+<li>1 &le; <i>n</i> &le; 25</li>
+</ul>
+
+<H2>Sample Input 1</H2>
+<pre>
+9
+0 1 4
+1 2 3
+2 -1 -1
+3 -1 -1
+4 5 8
+5 6 7
+6 -1 -1
+7 -1 -1
+8 -1 -1
+</pre>
+<H2>Sample Output 1</H2>
+<pre>
+node 0: parent = -1, sibling = -1, degree = 2, depth = 0, height = 3, root
+node 1: parent = 0, sibling = 4, degree = 2, depth = 1, height = 1, internal node
+node 2: parent = 1, sibling = 3, degree = 0, depth = 2, height = 0, leaf
+node 3: parent = 1, sibling = 2, degree = 0, depth = 2, height = 0, leaf
+node 4: parent = 0, sibling = 1, degree = 2, depth = 1, height = 2, internal node
+node 5: parent = 4, sibling = 8, degree = 2, depth = 2, height = 1, internal node
+node 6: parent = 5, sibling = 7, degree = 0, depth = 3, height = 0, leaf
+node 7: parent = 5, sibling = 6, degree = 0, depth = 3, height = 0, leaf
+node 8: parent = 4, sibling = 5, degree = 0, depth = 2, height = 0, leaf
+</pre>
+
+<center>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_ALDS1_7_B_1"><br>
+</center>
+
+
+
+
+
+
+<H2>Reference</H2>
+
+<p>
+Introduction to Algorithms, Thomas H. Cormen, Charles E. Leiserson, Ronald L. Rivest, and Clifford Stein. The MIT Press.
+</p>
+

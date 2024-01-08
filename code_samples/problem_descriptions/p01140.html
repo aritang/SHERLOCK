@@ -1,0 +1,99 @@
+
+
+
+<!-- begin en only -->
+<h3><U>Square Route</U></h3>
+<!-- end en only -->
+<!-- begin ja only -->
+<h3><U>スクウェア・ルート</U></h3>
+<!-- end ja only -->
+
+
+
+<!-- begin en only -->
+<p>
+English text is not available in this practice contest.
+</p>
+<!-- end en only -->
+<!-- begin ja only -->
+<p>
+このたび新しい豪邸を建てることを決めた大富豪の品田氏は，どの街に新邸を建てようかと悩んでいる．実は，品田氏は正方形がとても好きという変わった人物であり，そのため少しでも正方形の多い街に住みたいと思っている．
+</p>
+<p>
+品田氏は，碁盤目状に道路の整備された街の一覧を手に入れて，それぞれの街について，道路により形作られる正方形の個数を数えることにした．ところが，道と道の間隔は一定とは限らないため，手作業で正方形を数えるのは大変である．そこであなたには，碁盤目状の道路の情報が与えられたときに，正方形の個数を数えるプログラムを書いて欲しい．
+</p>
+<!-- end ja only -->
+
+
+<h3>Input</h3>
+
+
+<!-- begin ja only -->
+<p>
+入力は複数のデータセットから構成されており，各データセットは以下のような構成になっている．
+</p>
+<blockquote>
+<i>N</i> <i>M</i><br>
+<i>h</i><sub>1</sub><br>
+<i>h</i><sub>2</sub><br>
+...<br>
+<i>h</i><sub><i>N</i></sub><br>
+<i>w</i><sub>1</sub><br>
+<i>w</i><sub>2</sub><br>
+...<br>
+<i>w</i><sub><i>M</i></sub>
+</blockquote>
+<p>
+1 行目には 2 つの正の整数 <i>N</i>, <i>M</i> (1 ≦ <i>N</i>, <i>M</i> ≦ 1500) が与えられる．続く <i>N</i> 行 <i>h</i><sub>1</sub>, <i>h</i><sub>2</sub>, ..., <i>h</i><sub><i>N</i></sub> (1 ≦ <i>h</i><sub><i>i</i></sub> ≦ 1000）は，道路と道路の南北方向の間隔を表す．ここで <i>h</i><sub><i>i</i></sub> は北から <i>i</i> 番目の道路と北から <i>i</i> + 1 番目の道路の間隔である．同様に，続く <i>M</i> 行 <i>w</i><sub>1</sub>, ..., <i>w</i><sub><i>M</i></sub> (1 ≦ <i>w</i><sub><i>i</i></sub> ≦ 1000）は，道路と道路の東西方向の間隔を表す．ここで <i>w</i><sub><i>i</i></sub> は西から <i>i</i> 番目の道路と西から <i>i</i> + 1 番目の道路の間隔である．道路自体の幅は十分細いため考慮する必要はない．
+</p>
+<center>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE1_squareRoute2" alt="最初のデータセット"><br>
+図 D-1: 最初のデータセット
+</center>
+<p>
+<i>N</i> = <i>M</i> = 0 は入力の終端を示しており，データセットには含めない．
+</p>
+<!-- end ja only -->
+
+
+<h3>Output</h3>
+
+<!-- begin ja only -->
+<p>
+各データセットに対して，正方形の個数を 1 行に出力しなさい．たとえば，Sample Input の最初のデータセットにおいては，以下のとおり 6 個の正方形を含むので，このデータセットに対する出力は 6 となる．
+</p>
+<center>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE1_squareRoute1" alt="最初のデータセットに含まれる正方形"><br>
+図 D-2: 最初のデータセットに含まれる正方形
+</center>
+<!-- end ja only -->
+
+
+<h3>Sample Input</h3>
+
+<pre>
+3 3
+1
+1
+4
+2
+3
+1
+1 2
+10
+10
+10
+0 0
+</pre>
+
+
+<h3>Output for the Sample Input</h3>
+
+<pre>
+6
+2
+</pre>
+
+
+
+

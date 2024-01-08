@@ -1,0 +1,135 @@
+<span class="lang-en">
+<p>Score : <var>700</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>Squid loves painting vertices in graphs.</p>
+<p>There is a simple undirected graph consisting of <var>N</var> vertices numbered <var>1</var> through <var>N</var>, and <var>M</var> edges.
+Initially, all the vertices are painted in color <var>0</var>. The <var>i</var>-th edge bidirectionally connects two vertices <var>a_i</var> and <var>b_i</var>. The length of every edge is <var>1</var>.</p>
+<p>Squid performed <var>Q</var> operations on this graph. In the <var>i</var>-th operation, he repaints all the vertices within a distance of <var>d_i</var> from vertex <var>v_i</var>, in color <var>c_i</var>.</p>
+<p>Find the color of each vertex after the <var>Q</var> operations.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 ≤ N,M,Q ≤ 10^5</var></li>
+<li><var>1 ≤ a_i,b_i,v_i ≤ N</var></li>
+<li><var>a_i ≠ b_i</var></li>
+<li><var>0 ≤ d_i ≤ 10</var></li>
+<li><var>1 ≤ c_i ≤10^5</var></li>
+<li><var>d_i</var> and <var>c_i</var> are all integers.</li>
+<li>There are no self-loops or multiple edges in the given graph.</li>
+</ul>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Partial Score</h3><ul>
+<li><var>200</var> points will be awarded for passing the testset satisfying <var>1 ≤ N,M,Q ≤ 2{,}000</var>.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var> <var>M</var>
+<var>a_1</var> <var>b_1</var>
+<var>:</var>
+<var>a_{M}</var> <var>b_{M}</var>
+<var>Q</var>
+<var>v_1</var> <var>d_1</var> <var>c_1</var>
+<var>:</var>
+<var>v_{Q}</var> <var>d_{Q}</var> <var>c_{Q}</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the answer in <var>N</var> lines.
+In the <var>i</var>-th line, print the color of vertex <var>i</var> after the <var>Q</var> operations.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>7 7
+1 2
+1 3
+1 4
+4 5
+5 6
+5 7
+2 3
+2
+6 1 1
+1 2 2
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>2
+2
+2
+2
+2
+1
+0
+</pre>
+<p>Initially, each vertex is painted in color <var>0</var>.
+In the first operation, vertices <var>5</var> and <var>6</var> are repainted in color <var>1</var>.
+In the second operation, vertices <var>1</var>, <var>2</var>, <var>3</var>, <var>4</var> and <var>5</var> are repainted in color <var>2</var>.
+<div style="text-align: center;">
+<img alt="2ab7e180230b159d42d35ea7e555b3b0.png" src="https://atcoder.jp/img/agc012/2ab7e180230b159d42d35ea7e555b3b0.png">
+</img></div></p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>14 10
+1 4
+5 7
+7 11
+4 10
+14 7
+14 3
+6 14
+8 11
+5 13
+8 3
+8
+8 6 2
+9 7 85
+6 9 3
+6 7 5
+10 3 1
+12 9 4
+9 6 6
+8 2 3
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>1
+0
+3
+1
+5
+5
+3
+3
+6
+1
+3
+4
+5
+3
+</pre>
+<p>The given graph may not be connected.</p></section>
+</div>
+</span>

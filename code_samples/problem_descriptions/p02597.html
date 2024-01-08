@@ -1,0 +1,85 @@
+<span class="lang-en">
+<p>Score : <var>400</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>An altar enshrines <var>N</var> stones arranged in a row from left to right. The color of the <var>i</var>-th stone from the left <var>(1 \leq i \leq N)</var> is given to you as a character <var>c_i</var>; <code>R</code> stands for red and <code>W</code> stands for white.</p>
+<p>You can do the following two kinds of operations any number of times in any order:</p>
+<ul>
+<li>Choose two stones (not necessarily adjacent) and swap them.</li>
+<li>Choose one stone and change its color (from red to white and vice versa).</li>
+</ul>
+<p>According to a fortune-teller, a white stone placed to the immediate left of a red stone will bring a disaster. At least how many operations are needed to reach a situation without such a white stone?</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>2 \leq N \leq 200000</var></li>
+<li><var>c_i</var> is <code>R</code> or <code>W</code>.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+<var>c_{1}c_{2}...c_{N}</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print an integer representing the minimum number of operations needed.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>4
+WWRR
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>2
+</pre>
+<p>For example, the two operations below will achieve the objective.</p>
+<ul>
+<li>Swap the <var>1</var>-st and <var>3</var>-rd stones from the left, resulting in <code>RWWR</code>.</li>
+<li>Change the color of the <var>4</var>-th stone from the left, resulting in <code>RWWW</code>.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>2
+RR
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>0
+</pre>
+<p>It can be the case that no operation is needed.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>8
+WRWWRWRR
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>3
+</pre></section>
+</div>
+</span>

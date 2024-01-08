@@ -1,0 +1,69 @@
+
+
+
+<h2>Cube of Two</h2>
+
+
+<h2>Problem Statement</h2>
+
+<p>日本で販売されているルービックキューブの各面の配色が，
+世界で標準的に採用されているものに合わせられたのはつい最近のことだ．<br />
+これに慣れるため，まずは簡単な2x2x2のキューブをスクランブルして遊ぼう．</p>
+<p>初期状態のルービックキューブは，各色が1つの面に集まるように揃えられており，
+上面に赤色，正面に黄色，右側面に青色が見える．<br />
+また，下面は橙色，背面は白色，左側面は緑色である．
+展開図を用いると次のように表せる．</p>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE3_Rits_Camp13_Day2_J_rubik-color">
+
+<p>各面に対し，向かって時計回りに90°回転させる操作を，それぞれの頭文字をとってU,F,R,D,B,Lと表す．<br />
+ルービックキューブのスクランブルは，各文字が1つの回転操作に対応する文字列<var>S</var>として表される．<br />
+初期状態から入力に従ってスクランブルしたときの，ルービックキューブの各面の色を展開図として出力せよ．</p>
+
+<h2>Input</h2>
+
+<p>入力は以下の形式に従う．</p>
+<pre><var>S</var></pre>
+
+<h2>Constraints</h2>
+
+<p><var>1≦|S|≦100</var>（<var>|S|</var>は文字列の長さ）<br />
+<var>S</var>はU,F,R,D,B,Lのみを含む．</p>
+
+<h2>Output</h2>
+
+<p>初期状態のルービックキューブに対し，各回転操作を順に適用した後の各面の状態を展開図として出力せよ．<br />
+各面の色はr(赤),o(橙),y(黄),g(緑),b(青),w(白)の6種類の英小文字で表す．
+また，空白部はピリオド(.)で表す．</p>
+
+<h2>Sample Input 1</h2>
+
+<pre>R</pre>
+
+<h2>Output for the Sample Input 1</h2>
+
+<pre>..ry....
+..ry....
+ggyobbrw
+ggyobbrw
+..ow....
+..ow....</pre>
+<p>右側面を時計回りに90°回転させると次のようになる．</p>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE3_Rits_Camp13_Day2_J_sample1">
+
+
+<h2>Sample Input 2</h2>
+
+<pre>UFRDBL</pre>
+
+
+<h2>Output for the Sample Input 2</h2>
+
+<pre>..go....
+..yb....
+rbrwrwby
+wogoygwo
+..yb....
+..gr....</pre>
+<p>各回転操作に対する状態の遷移は次のようになる．</p>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE3_Rits_Camp13_Day2_J_sample2">
+

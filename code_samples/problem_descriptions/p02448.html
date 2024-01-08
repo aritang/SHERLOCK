@@ -1,0 +1,69 @@
+<h1>Sorting Tuples</h1>
+ 
+<p>
+  Write a program which reads $n$ items and sorts them. Each item has attributes $\{value, weight, type, date, name\}$ and they are represented by $\{$ integer, integer, upper-case letter, integer, string $\}$ respectively. Sort the items based on the following priorities.
+</p>
+
+<ol>
+  <li>first by value (ascending)</li>
+  <li>in case of a tie, by weight (ascending)</li>
+  <li>in case of a tie, by type (ascending in lexicographic order)</li>
+  <li>in case of a tie, by date (ascending)</li>
+  <li>in case of a tie, by name (ascending in lexicographic order)</li>
+</ol>
+
+<h2>Input</h2>
+ 
+<p>
+  The input is given in the following format.
+</p>
+
+<pre>
+$n$
+$v_0 \; w_0 \; t_0 \; d_0 \; s_0$
+$v_1 \; w_1 \; t_1 \; d_1 \; s_1$
+:
+$v_{n-1} \; w_{n-1} \; t_{n-1} \; d_{n-1} \; s_{n-1}$
+</pre>
+
+<p>
+  In the first line, the number of items $n$. In the following $n$ lines, attributes of each item are given. $v_i \; w_i \; t_i \; d_i \; s_i$ represent value, weight, type, date and name of the $i$-th item respectively.
+</p>
+
+<h2>Output</h2>
+
+<p>
+  Print attributes of each item in order. Print an item in a line and adjacency attributes should be separated by a single space.
+</p>
+
+<h2>Constraints</h2>
+<ul>
+<li>$1 \leq n \leq 100,000$</li>
+<li>$0 \leq v_i \leq 1,000,000,000$</li>
+<li>$0 \leq w_i \leq 1,000,000,000$</li>
+<li>$t_i$ is a upper-case letter</li>
+<li>$0 \leq d_i \leq 2,000,000,000,000$</li>
+<li>$1 \leq $ size of $s_i \leq 20$</li>
+<li>$s_i \ne s_j$ if $(i \ne j)$</li>
+</ul>
+
+<h2>Sample Input 1</h2>
+
+<pre>
+5
+105 24 C 1500000000000 white
+100 23 C 1500000000000 blue
+105 23 A 1480000000000 pink
+110 25 B 1500000000000 black
+110 20 A 1300000000000 gree
+</pre>
+
+<h2>Sample Output 1</h2>
+
+<pre>
+100 23 C 1500000000000 blue
+105 23 A 1480000000000 pink
+105 24 C 1500000000000 white
+110 20 A 1300000000000 gree
+110 25 B 1500000000000 black
+</pre>

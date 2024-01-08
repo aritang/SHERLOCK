@@ -1,0 +1,156 @@
+
+<H1><font color="#000">Problem G:</font> Traffic</H1>
+
+<p>
+You are a resident of Kyoot (oh, well, it’s not a misspelling!) city. All streets there are neatly built on a
+grid; some streets run in a meridional (north-south) direction and others in a zonal (east-west) direction.
+The streets that run from north to south are called avenues, whereas those which run from east to west
+are called <i>drives</i>.
+</p>
+<p>
+Every avenue and drive in the city is numbered to distinguish one from another. The westernmost avenue
+is called the <i>1st avenue</i>. The avenue which lies next to the <i>1st avenue</i> is the <i>2nd avenue</i>, and so forth.
+Similarly, drives are numbered from south to north. The figure below illustrates this situation.
+</p>
+
+<center>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE1_traffic1">
+<p>Figure 1: The Road Map of the Kyoot City
+</center>
+
+<p>
+There is an intersection with traffic signals to regulate traffic on each crossing point of an avenue and a
+drive. Each traffic signal in this city has two lights. One of these lights is colored green, and means “you
+may go”. The other is red, and means “you must stop here”. If you reached an intersection during the
+red light (including the case where the light turns to red on your arrival), you must stop and wait there
+until the light turns to green again. However, you do not have to wait in the case where the light has
+just turned to green when you arrived there.
+</p>
+<p>
+Traffic signals are controlled by a computer so that the lights for two different directions always show
+different colors. Thus if the light for an avenue is green, then the light for a drive must be red, and vice
+versa. In order to avoid car crashes, they will never be green together. Nor will they be red together, for efficiency. So all the signals at one intersection turn simultaneously; no sooner does one signal turn to
+red than the other turns to green. Each signal has a prescribed time interval and permanently repeats
+the cycle.
+</p>
+
+<center>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE1_traffic2">
+<p>Figure 2: Signal and Intersection</p>
+</center>
+
+<p>
+By the way, you are planning to visit your friend by car tomorrow. You want to see her as early as
+possible, so you are going to drive through the shortest route. However, due to existence of the traffic
+signals, you cannot easily figure out which way to take (the city also has a very sophisticated camera
+network to prevent crime or violation: the police would surely arrest you if you didn’t stop on the red
+light!). So you decided to write a program to calculate the shortest possible time to her house, given the
+town map and the configuration of all traffic signals.
+</p>
+<p>
+Your car runs one unit distance in one unit time. Time needed to turn left or right, to begin moving,
+and to stop your car is negligible. You do not need to take other cars into consideration.
+
+</p>
+
+<H2>Input</H2>
+
+<p>
+The input consists of multiple test cases. Each test case is given in the format below:
+</p>
+
+<pre><i>
+w h
+d<sub>A,1</sub> d<sub>A,2</sub> . . . d<sub>A,w−1</sub>
+d<sub>D,1</sub> d<sub>D,2</sub> . . . d<sub>D,h−1</sub>
+ns<sub>1,1</sub> ew<sub>1,1</sub> s<sub>1,1</sub>
+.
+.
+.
+ns<sub>w,1</sub> ew<sub>w,1</sub> s<sub>w,1</sub>
+ns<sub>1,2</sub> ew<sub>1,2</sub> s<sub>1,2</sub>
+.
+.
+.
+ns<sub>w,h</sub> ew<sub>w,h</sub> s<sub>w,h</sub>
+x<sub>s</sub> y<sub>s</sub>
+x<sub>d</sub> y<sub>d</sub>
+</pre></i>
+
+<p>
+Two integers w and h (2 &le; <i>w</i>, <i>h</i> &le; 100) in the first line indicate the number of avenues and drives in the
+city, respectively. The next two lines contain (<i>w</i> - 1) and (<i>h</i> - 1) integers, each of which specifies the
+distance between two adjacent avenues and drives. It is guaranteed that 2 &le; <i>d<sub>A,i</sub></i> , <i>d<sub>D,j</sub></i> &le; 1, 000.
+</p>
+<p>
+The next (<i>w</i> &times <i>h</i>) lines are the configuration of traffic signals. Three parameters <i>ns<sub>i,j</sub></i>, <i>ew<sub>i,j</sub></i> and <i>s<sub>i,j</sub></i>
+describe the traffic signal (<i>i</i>, <i>j</i>) which stands at the crossing point of the <i>i</i>-th avenue and the <i>j</i>-th drive.
+<i>ns<sub>i,j</sub></i> and <i>ew<sub>i,j</sub></i> (1 &le; <i>ns<sub>i,j</sub></i>, <i>ew<sub>i,j</sub></i> < 100) are time intervals for which the light for a meridional direction
+and a zonal direction is green, respectively. <i>s<sub>i,j</sub></i> is the initial state of the light: 0 indicates the light is
+green for a meridional direction, 1 for a zonal direction. All the traffic signal have just switched the state
+to <i>s<sub>i,j</sub></i> at your departure time.
+</p>
+<p>
+The last two lines of a case specify the position of your house (<i>x<sub>s</sub></i>, <i>y<sub>s</sub></i> ) and your friend’s house (<i>x<sub>d</sub></i>, <i>y<sub>d</sub></i> ),
+respectively. These coordinates are relative to the traffic signal (0, 0). <i>x</i>-axis is parallel to the drives,
+and <i>y</i>-axis is parallel to the avenues. x-coordinate increases as you go east, and y-coordinate increases
+as you go north. You may assume that these positions are on streets and will never coincide with any
+intersection.
+</p>
+<p>
+All parameters are integers and separated by a blank character.
+</p>
+<p>
+The end of input is identified by a line containing two zeros. This is not a part of the input and should
+not be processed.
+</p>
+
+<H2>Output</H2>
+
+<p>
+For each test case, output a line containing the shortest possible time from your house to your friend’s
+house.
+</p>
+
+<H2>Sample Input</H2>
+<pre>
+4 4
+2 2 2
+2 2 2
+99 1 0
+1 99 1
+1 99 1
+1 99 1
+1 99 1
+1 99 1
+1 99 1
+99 1 0
+99 1 0
+1 99 1
+1 99 1
+1 99 1
+1 99 1
+1 99 1
+1 99 1
+99 1 0
+1 0
+1 6
+2 2
+10
+10
+5 5 0
+5 5 0
+5 5 0
+5 5 0
+5 0
+5 10
+0 0
+</pre>
+
+<H2>Output for the Sample Input</H2>
+<pre>
+28
+25
+</pre>
+
+

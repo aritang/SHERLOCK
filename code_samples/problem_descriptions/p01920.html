@@ -1,0 +1,101 @@
+
+
+
+<link rel="stylesheet" href="css/description.css" type="text/css" />
+<script language="JavaScript" type="text/javascript" src="js/varmath2017.js" charset="UTF-8"></script>
+
+
+<h2>E：バイナリ列 - Binary Sequence -</h2>
+
+<h3>物語</h3>
+<p>
+わしはバイナリ大好きBonald.Brvin.Bnuthじゃ！
+オフトゥンフォード大学でバイナリ列の性質を研究しておってのお、Bnuthおじさんと呼ばれて、親しまれておるぞい！
+ちなみに、わしの名前「Bonald.Brvin.Bnuth」をASCIIコードからバイナリ化すると「1000010 1101111 1101110 1100001 1101100 1100100 101110 1000010 1110010 1110110 1101001 1101110 101110 1000010 1101110 1110101 1110100 1101000」になるぞい！
+楽しいのお！
+</p>
+
+<p>
+今日は、弟子が何やら面白そうな実験をすると言うからのお、朝から楽しみなんじゃ！
+どれどれ、どんなことをするんじゃの？
+</p>
+
+<p>
+なんと！バイナリ列を書き換え続けることで、何らかの性質を見出したいとな！
+ふむ！これは、重要な発見の匂いがぷんぷんするぞい！
+さあ、さあ、実験を始めようではないか！
+より詳細な設定を文章としてまとめておくぞい！
+</p>
+
+<h3>問題</h3>
+<p>長さ<var>n</var>のバイナリ列<var>x = (x_1, ..., x_n)</var> (<var>x_i \in \{0,1\}</var>, <var>i = 1,...,n</var>) が与えられる。バイナリ列<var>x</var>に対して2つの関数<var>f(x)</var>と<var>g(x)</var>を以下のように定義する。</p>
+
+<pre>
+<var>f(x) = &Sigma;_{i=1}^{n} x_i = x_1 + x_2 + ... + x_n</var>
+<var>g(x) = &Sigma;_{i=1}^{n-1} x_i x_{i+1} = x_1 x_2 + x_2 x_3 + ... x_{n-1} x_n</var>
+</pre>
+
+<p>今、バイナリ列<var>x</var>に対して以下のような変更操作を<var>q</var>回行う。<var>j</var>回目の変更操作は<var>l_j, r_j, b_j</var> (<var>1 \leq l_j \leq  r_j \leq n</var>, <var>b_j \in \{0,1\}</var>, <var>j = 1,...,q</var>) で与えられ、これはバイナリ列<var>x</var>の<var>l_j</var>番目から<var>r_j</var>番目を<var>b_j</var>に置き換える操作に対応する。各変更操作の後で<var>f(x) - g(x)</var>を求めよ。</p>
+
+<h3>入力形式</h3>
+<pre>
+<var>n</var>
+<var>x</var>
+<var>q</var> 
+<var>l_1 r_1 b_1</var>
+<var>...</var>
+<var>l_q r_q b_q</var>
+</pre>
+
+<p>
+1行目にはバイナリ列の長さを表す整数<var>n</var>が与えられる。
+2行目にはバイナリ列<var>x</var>を表せす文字列が与えられる。
+3行目にはクエリの回数を表す整数<var>q</var>が与えられる。
+続く<var>q</var>行のうち<var>i</var>行目には、<var>i</var>回目のクエリに関する情報<var>l_i, r_i, b_i</var>がこの順で空白区切りで与えられる。 
+</p>
+
+<h3>制約</h3>
+<ul>
+<li><var>2 \leq n \leq 100000</var></li>
+<li><var>x</var>は’0’、’1’からなる文字列</li>
+<li><var>|x| = n</var></li>
+<li><var>1 \leq q \leq 100000</var></li>
+<li><var>1 \leq l_j \leq r_j \leq n</var>, <var>b_j \in \{0,1\}</var>, <var>j = 1,...,q</var></li>
+</ul>
+
+<h3>出力形式</h3>
+<p>各<var>i=1,...,q</var>について、<var>i</var>行目に<var>i</var>回目のクエリを処理した後の<var>f(x) - g(x)</var>の値を出力せよ。</p>
+
+<h3>入力例1</h3>
+<pre>
+10
+0101100110
+3
+3 3 1
+1 6 0
+2 5 1
+</pre>
+
+<h3>出力例1</h3>
+<pre>
+2
+1
+2
+</pre>
+
+<h3>入力例2</h3>
+<pre>
+8
+00111100
+3
+8 8 1
+4 5 0
+7 8 1
+</pre>
+
+<h3>出力例2</h3>
+<pre>
+2
+3
+2
+</pre>

@@ -1,0 +1,84 @@
+<span class="lang-en">
+<p>Score : <var>600</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>Takahashi is playing a board game called Sugoroku.</p>
+<p>On the board, there are <var>N + 1</var> squares numbered <var>0</var> to <var>N</var>. Takahashi starts at Square <var>0</var>, and he has to stop exactly at Square <var>N</var> to win the game.</p>
+<p>The game uses a roulette with the <var>M</var> numbers from <var>1</var> to <var>M</var>. In each turn, Takahashi spins the roulette. If the number <var>x</var> comes up when he is at Square <var>s</var>, he moves to Square <var>s+x</var>. If this makes him go beyond Square <var>N</var>, he loses the game.</p>
+<p>Additionally, some of the squares are Game Over Squares. He also loses the game if he stops at one of those squares. You are given a string <var>S</var> of length <var>N + 1</var>, representing which squares are Game Over Squares. For each <var>i</var> <var>(0 \leq i \leq N)</var>, Square <var>i</var> is a Game Over Square if <var>S[i] = 1</var> and not if <var>S[i] = 0</var>.</p>
+<p>Find the sequence of numbers coming up in the roulette in which Takahashi can win the game in the fewest number of turns possible. If there are multiple such sequences, find the lexicographically smallest such sequence. If Takahashi cannot win the game, print <var>-1</var>.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 \leq N \leq 10^5</var></li>
+<li><var>1 \leq M \leq 10^5</var></li>
+<li><var>|S| = N + 1</var></li>
+<li><var>S</var> consists of <code>0</code> and <code>1</code>.</li>
+<li><var>S[0] =</var> <code>0</code></li>
+<li><var>S[N] =</var> <code>0</code></li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var> <var>M</var>
+<var>S</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>If Takahashi can win the game, print the lexicographically smallest sequence among the shortest sequences of numbers coming up in the roulette in which Takahashi can win the game, with spaces in between.</p>
+<p>If Takahashi cannot win the game, print <var>-1</var>.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>9 3
+0001000100
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>1 3 2 3
+</pre>
+<p>If the numbers <var>1</var>, <var>3</var>, <var>2</var>, <var>3</var> come up in this order, Takahashi can reach Square <var>9</var> via Square <var>1</var>, <var>4</var>, and <var>6</var>. He cannot reach Square <var>9</var> in three or fewer turns, and this is the lexicographically smallest sequence in which he reaches Square <var>9</var> in four turns.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>5 4
+011110
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>-1
+</pre>
+<p>Takahashi cannot reach Square <var>5</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>6 6
+0101010
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>6
+</pre></section>
+</div>
+</span>

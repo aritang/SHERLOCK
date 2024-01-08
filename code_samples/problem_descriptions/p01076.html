@@ -1,0 +1,66 @@
+
+
+
+<h1>Problem E: Graph Making</h1>
+
+<h2>Problem</h2>
+<p>
+どの頂点とも連結でない<var>n</var>個の頂点がある。<br>
+各頂点間に無向辺を張っていく。<br>
+直径が<var>d</var>になるようにしたとき、最大何本の辺を張ることができるか求めよ。<br>
+<!--
+直径とは各頂点と連結の頂点との最短距離のうち最大を表す。<br>
+-->
+直径とは、2つの頂点間の最短距離のうち最大のものを表す。<br>
+ここで、最短距離は頂点間を移動するために必要な辺の数の最小値である。<br>
+多重辺、自己ループは認めない。
+</p>
+
+<h2>Input</h2>
+<pre>
+<var>n</var> <var>d</var>
+</pre>
+<p>
+1行に2つの整数<var>n</var>と<var>d</var>が空白区切りで与えられる。
+</p>
+
+<h2>Constraints</h2>
+<ul>
+    <li>2 &le; <var>n</var> &le; 10<sup>9</sup></li>
+    <li>1 &le; <var>d</var> &le; <var>n&minus;</var>1</li>
+</ul>
+
+<h2>Output</h2>
+<p>
+張ることができる最大の辺の数を1行に出力せよ。
+</p>
+
+<h2>Sample Input 1</h2>
+<pre>
+4 3
+</pre>
+
+<h2>Sample Output 1</h2>
+<pre>
+3
+</pre>
+
+<h2>Sample Input 2</h2>
+<pre>
+5 1
+</pre>
+
+<h2>Sample Output 2</h2>
+<pre>
+10
+</pre>
+
+<h2>Sample Input 3</h2>
+<pre>
+4 2
+</pre>
+
+<h2>Sample Output 3</h2>
+<pre>
+5
+</pre>

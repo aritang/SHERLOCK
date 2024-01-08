@@ -1,0 +1,70 @@
+
+
+
+<h2>()</h2>
+
+
+<h2>Problem Statement</h2>
+
+<p>文字列<var>S</var>がある．はじめ，<var>S</var>は空文字列である．<br />
+以下の処理を<var>n</var>個順番に行う．</p>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li><var>S</var>の末尾に<var>p_i</var>(=&quot;(&quot;または&quot;)&quot;)を<var>x_i</var>個追加する．</li></ul>
+<p>処理を施した後，<var>S</var>がバランスのとれた文字列であるかどうか判定せよ．</p>
+<p>「文字列のバランスが取れている」とは，次のように定義される．</p>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>空文字列はバランスが取れている．</li>
+<li>バランスの取れている文字列<var>a</var>と<var>b</var>に対して，<var>a + b</var>(+は文字列の連結を表す)はバランスが取れている．</li>
+<li>バランスの取れている文字列<var>a</var>に対して，&quot;(&quot; + <var>a</var> + &quot;)&quot;はバランスが取れている．</li></ul>
+
+<h2>Input</h2>
+
+<p>入力は以下の形式に従う．与えられる数は全て整数である．</p>
+<pre><var>n</var>
+<var>p_1</var> <var>x_1</var>
+<var>. . .</var>
+<var>p_n</var> <var>x_n</var></pre>
+
+<h2>Constraints</h2>
+
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li><var>1≦n≦1,000</var></li>
+<li><var>1≦x_i≦10^6</var></li>
+<li><var>p_i</var>は&quot;(&quot;または&quot;)&quot;</li></ul>
+
+<h2>Output</h2>
+
+<p>バランスがとれているときは&quot;YES&quot;を，そうでなければ&quot;NO&quot;を1行に出力せよ．</p>
+
+<h2>Sample Input 1</h2>
+
+<pre>3
+( 5
+) 4
+) 1</pre>
+
+<h2>Output for the Sample Input 1</h2>
+
+<pre>YES</pre>
+<p>文字列<var>S</var>=&quot;&#x28;&#x28;&#x28;&#x28;&#x28;&#x29;&#x29;&#x29;&#x29;&#x29;&quot;はバランスがとれている．</p>
+
+<h2>Sample Input 2</h2>
+
+<pre>5
+( 2
+) 2
+( 3
+) 1
+) 2</pre>
+
+<h2>Output for the Sample Input 2</h2>
+
+<pre>YES</pre>
+
+<h2>Sample Input 3</h2>
+
+<pre>2
+) 1
+( 1</pre>
+
+
+<h2>Output for the Sample Input 3</h2>
+
+<pre>NO</pre>

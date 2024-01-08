@@ -1,0 +1,86 @@
+<span class="lang-en">
+<p>Score : <var>1500</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>Consider a circle whose perimeter is divided by <var>N</var> points into <var>N</var> arcs of equal length, and each of the arcs is painted red or blue. Such a circle is said to <em>generate a string <var>S</var> from every point</em> when the following condition is satisfied:</p>
+<ul>
+<li>We will arbitrarily choose one of the <var>N</var> points on the perimeter and place a piece on it.</li>
+<li>Then, we will perform the following move <var>M</var> times: move the piece clockwise or counter-clockwise to an adjacent point.</li>
+<li>Here, whatever point we choose initially, it is always possible to move the piece so that the color of the <var>i</var>-th arc the piece goes along is <var>S_i</var>, by properly deciding the directions of the moves.</li>
+</ul>
+<p>Assume that, if <var>S_i</var> is <code>R</code>, it represents red; if <var>S_i</var> is <code>B</code>, it represents blue.
+Note that the directions of the moves can be decided separately for each choice of the initial point.</p>
+<p>You are given a string <var>S</var> of length <var>M</var> consisting of <code>R</code> and <code>B</code>.
+Out of the <var>2^N</var> ways to paint each of the arcs red or blue in a circle whose perimeter is divided into <var>N</var> arcs of equal length, find the number of ways resulting in a circle that generates <var>S</var> from every point, modulo <var>10^9+7</var>.</p>
+<p>Note that the rotations of the same coloring are also distinguished.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>2 \leq N \leq 2 \times 10^5</var></li>
+<li><var>1 \leq M \leq 2 \times 10^5</var></li>
+<li><var>|S|=M</var></li>
+<li><var>S_i</var> is <code>R</code> or <code>B</code>.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var> <var>M</var>
+<var>S</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the number of ways to paint each of the arcs that satisfy the condition, modulo <var>10^9+7</var>.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>4 7
+RBRRBRR
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>2
+</pre>
+<p>The condition is satisfied only if the arcs are alternately painted red and blue, so the answer here is <var>2</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>3 3
+BBB
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>4
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>12 10
+RRRRBRRRRB
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>78
+</pre></section>
+</div>
+</span>

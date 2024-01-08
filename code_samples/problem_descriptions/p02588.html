@@ -1,0 +1,85 @@
+<span class="lang-en">
+<p>Score : <var>300</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>You are given <var>N</var> real values <var>A_1, A_2, \ldots, A_N</var>.
+Compute the number of pairs of indices <var>(i, j)</var>
+    such that <var>i &lt; j</var> and the product <var>A_i \cdot A_j</var> is integer.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>2 \leq N \leq 200\,000</var></li>
+<li><var>0 &lt; A_i &lt; 10^4</var></li>
+<li><var>A_i</var> is given with at most 9 digits after the decimal.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format.</p>
+<pre><var>N</var>
+<var>A_1</var>
+<var>A_2</var>
+<var>\vdots</var>
+<var>A_N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the number of pairs with integer product <var>A_i \cdot A_j</var> (and <var>i &lt; j</var>).</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>5
+7.5
+2.4
+17.000000001
+17
+16.000000000
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>3
+</pre>
+<p>There are 3 pairs with integer product:</p>
+<ul>
+<li><var>7.5 \cdot 2.4 = 18</var></li>
+<li><var>7.5 \cdot 16 = 120</var></li>
+<li><var>17 \cdot 16 = 272</var></li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>11
+0.9
+1
+1
+1.25
+2.30000
+5
+70
+0.000000001
+9999.999999999
+0.999999999
+1.000000001
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>8
+</pre></section>
+</div>
+</span>

@@ -1,0 +1,136 @@
+<span class="lang-en">
+<p>Score : <var>2200</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>You are given a tree <var>T</var> with <var>N</var> vertices and an undirected graph <var>G</var> with <var>N</var> vertices and <var>M</var> edges.
+The vertices of each graph are numbered <var>1</var> to <var>N</var>.
+The <var>i</var>-th of the <var>N-1</var> edges in <var>T</var> connects Vertex <var>a_i</var> and Vertex <var>b_i</var>, and the <var>j</var>-th of the <var>M</var> edges in <var>G</var> connects Vertex <var>c_j</var> and Vertex <var>d_j</var>.</p>
+<p>Consider adding edges to <var>G</var> by repeatedly performing the following operation:</p>
+<ul>
+<li>Choose three integers <var>a</var>, <var>b</var> and <var>c</var> such that <var>G</var> has an edge connecting Vertex <var>a</var> and <var>b</var> and an edge connecting Vertex <var>b</var> and <var>c</var> but not an edge connecting Vertex <var>a</var> and <var>c</var>. If there is a simple path in <var>T</var> that contains all three of Vertex <var>a, b</var> and <var>c</var> in some order, add an edge in <var>G</var> connecting Vertex <var>a</var> and <var>c</var>.</li>
+</ul>
+<p>Print the number of edges in <var>G</var> when no more edge can be added.
+It can be shown that this number does not depend on the choices made in the operation.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>2 \leq N \leq 2000</var></li>
+<li><var>1 \leq M \leq 2000</var></li>
+<li><var>1 \leq a_i, b_i \leq N</var></li>
+<li><var>a_i \neq b_i</var></li>
+<li><var>1 \leq c_j, d_j \leq N</var></li>
+<li><var>c_j \neq d_j</var></li>
+<li><var>G</var> does not contain multiple edges.</li>
+<li><var>T</var> is a tree.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var> <var>M</var>
+<var>a_1</var> <var>b_1</var>
+<var>:</var>
+<var>a_{N-1}</var> <var>b_{N-1}</var>
+<var>c_1</var> <var>d_1</var>
+<var>:</var>
+<var>c_M</var> <var>d_M</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the final number of edges in <var>G</var>.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>5 3
+1 2
+1 3
+3 4
+1 5
+5 4
+2 5
+1 5
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>6
+</pre>
+<p>We can have at most six edges in <var>G</var> by adding edges as follows:</p>
+<ul>
+<li>Let <var>(a,b,c)=(1,5,4)</var> and add an edge connecting Vertex <var>1</var> and <var>4</var>.</li>
+<li>Let <var>(a,b,c)=(1,5,2)</var> and add an edge connecting Vertex <var>1</var> and <var>2</var>.</li>
+<li>Let <var>(a,b,c)=(2,1,4)</var> and add an edge connecting Vertex <var>2</var> and <var>4</var>.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>7 5
+1 5
+1 4
+1 7
+1 2
+2 6
+6 3
+2 5
+1 3
+1 6
+4 6
+4 7
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>11
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>13 11
+6 13
+1 2
+5 1
+8 4
+9 7
+12 2
+10 11
+1 9
+13 7
+13 11
+8 10
+3 8
+4 13
+8 12
+4 7
+2 3
+5 11
+1 4
+2 11
+8 10
+3 5
+6 9
+4 10
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>27
+</pre></section>
+</div>
+</span>

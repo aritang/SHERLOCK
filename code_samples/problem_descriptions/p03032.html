@@ -1,0 +1,102 @@
+<span class="lang-en">
+<p>Score : <var>400</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>Your friend gave you a dequeue <var>D</var> as a birthday present.</p>
+<p><var>D</var> is a horizontal cylinder that contains a row of <var>N</var> jewels.</p>
+<p>The <em>values</em> of the jewels are <var>V_1, V_2, ..., V_N</var> from left to right. There may be jewels with negative values.</p>
+<p>In the beginning, you have no jewel in your hands.</p>
+<p>You can perform at most <var>K</var> operations on <var>D</var>, chosen from the following, at most <var>K</var> times (possibly zero):</p>
+<ul>
+<li>
+<p>Operation A: Take out the leftmost jewel contained in <var>D</var> and have it in your hand. You cannot do this operation when <var>D</var> is empty.</p>
+</li>
+<li>
+<p>Operation B: Take out the rightmost jewel contained in <var>D</var> and have it in your hand. You cannot do this operation when <var>D</var> is empty.</p>
+</li>
+<li>
+<p>Operation C: Choose a jewel in your hands and insert it to the left end of <var>D</var>. You cannot do this operation when you have no jewel in your hand.</p>
+</li>
+<li>
+<p>Operation D: Choose a jewel in your hands and insert it to the right end of <var>D</var>. You cannot do this operation when you have no jewel in your hand.</p>
+</li>
+</ul>
+<p>Find the maximum possible sum of the values of jewels in your hands after the operations.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li>All values in input are integers.</li>
+<li><var>1 \leq N \leq 50</var></li>
+<li><var>1 \leq K \leq 100</var></li>
+<li><var>-10^7 \leq V_i \leq 10^7</var></li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var> <var>K</var>
+<var>V_1</var> <var>V_2</var> <var>...</var> <var>V_N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the maximum possible sum of the values of jewels in your hands after the operations.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>6 4
+-10 8 2 1 2 6
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>14
+</pre>
+<p>After the following sequence of operations, you have two jewels of values <var>8</var> and <var>6</var> in your hands for a total of <var>14</var>, which is the maximum result.</p>
+<ul>
+<li>Do operation A. You take out the jewel of value <var>-10</var> from the left end of <var>D</var>.</li>
+<li>Do operation B. You take out the jewel of value <var>6</var> from the right end of <var>D</var>.</li>
+<li>Do operation A. You take out the jewel of value <var>8</var> from the left end of <var>D</var>.</li>
+<li>Do operation D. You insert the jewel of value <var>-10</var> to the right end of <var>D</var>.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>6 4
+-6 -100 50 -2 -5 -3
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>44
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>6 3
+-6 -100 50 -2 -5 -3
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>0
+</pre>
+<p>It is optimal to do no operation.</p></section>
+</div>
+</span>

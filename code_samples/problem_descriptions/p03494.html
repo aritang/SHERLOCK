@@ -1,0 +1,86 @@
+<span class="lang-en">
+<p>Score : <var>200</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>There are <var>N</var> positive integers written on a blackboard: <var>A_1, ..., A_N</var>.</p>
+<p>Snuke can perform the following operation when all integers on the blackboard are even:</p>
+<ul>
+<li>Replace each integer <var>X</var> on the blackboard by <var>X</var> divided by <var>2</var>.</li>
+</ul>
+<p>Find the maximum possible number of operations that Snuke can perform.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 \leq N \leq 200</var></li>
+<li><var>1 \leq A_i \leq 10^9</var></li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+<var>A_1</var> <var>A_2</var> ... <var>A_N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the maximum possible number of operations that Snuke can perform.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>3
+8 12 40
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>2
+</pre>
+<p>Initially, <var>[8, 12, 40]</var> are written on the blackboard.
+Since all those integers are even, Snuke can perform the operation.</p>
+<p>After the operation is performed once, <var>[4, 6, 20]</var> are written on the blackboard.
+Since all those integers are again even, he can perform the operation.</p>
+<p>After the operation is performed twice, <var>[2, 3, 10]</var> are written on the blackboard.
+Now, there is an odd number <var>3</var> on the blackboard, so he cannot perform the operation any more.</p>
+<p>Thus, Snuke can perform the operation at most twice.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>4
+5 6 8 10
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>0
+</pre>
+<p>Since there is an odd number <var>5</var> on the blackboard already in the beginning, Snuke cannot perform the operation at all.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>6
+382253568 723152896 37802240 379425024 404894720 471526144
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>8
+</pre></section>
+</div>
+</span>

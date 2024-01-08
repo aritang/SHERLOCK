@@ -1,0 +1,141 @@
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({ tex2jax: { inlineMath: [["$","$"], ["\\(","\\)"]], processEscapes: true }});
+</script>
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+
+<H1>Intersection of Circles</H1>
+
+<p>
+For given two circles $c1$ and $c2$, print
+</p>
+
+<pre>
+4
+</pre>
+
+<p>
+if they do not cross (there are 4 common tangent lines),
+</p>
+
+<pre>
+3
+</pre>
+
+<p>
+if they are circumscribed (there are 3 common tangent lines),
+</p>
+
+<pre>
+2
+</pre>
+
+<p>
+if they intersect (there are 2 common tangent lines),
+</p>
+
+<pre>
+1
+</pre>
+
+<p>
+if a circle is inscribed in another (there are 1 common tangent line),
+</p>
+
+<pre>
+0
+</pre>
+
+<p>
+if a circle includes another (there is no common tangent line).
+</p>
+
+<H2>Input</H2>
+
+<p>
+Coordinates and radii of $c1$ and $c2$ are given in the following format.
+</p>
+
+<p>
+$c1x \; c1y \; c1r$ <br>
+$c2x \; c2y \; c2r$
+</p>
+
+<p>
+  $c1x$, $c1y$ and $c1r$ represent the center coordinate and radius of the first circle.
+  $c2x$, $c2y$ and $c2r$ represent the center coordinate and radius of the second circle.
+  All input values are given in integers.
+</p>
+
+<H2>Output</H2>
+
+<p>
+Print "4", "3", "2", "1" or "0" in a line.
+</p>
+
+
+<H2>Constraints</H2>
+<ul>
+<li>$-1,000 \leq c1x, c1y, c2x, c2y \leq 1,000$</li>
+<li>$1 \leq c1r, c2r \leq 1,000$</li>
+<li>$c1$ and $c2$ are different</li>
+</ul>
+
+
+<H2>Sample Input 1</H2>
+<pre>
+1 1 1
+6 2 2
+</pre>
+
+<H2>Sample Output 1</H2>
+<pre>
+4
+</pre>
+
+
+<H2>Sample Input 2</H2>
+<pre>
+1 2 1
+4 2 2
+</pre>
+
+<H2>Sample Output 2</H2>
+<pre>
+3
+</pre>
+
+<H2>Sample Input 3</H2>
+<pre>
+1 2 1
+3 2 2
+</pre>
+
+<H2>Sample Output 3</H2>
+<pre>
+2
+</pre>
+
+<H2>Sample Input 4</H2>
+<pre>
+0 0 1
+1 0 2
+</pre>
+
+<H2>Sample Output 4</H2>
+<pre>
+1
+</pre>
+
+<H2>Sample Input 5</H2>
+<pre>
+0 0 1
+0 0 2
+</pre>
+
+<H2>Sample Output 5</H2>
+<pre>
+0
+</pre>

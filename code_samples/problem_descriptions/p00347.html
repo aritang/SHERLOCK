@@ -1,0 +1,106 @@
+
+
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({ tex2jax: { inlineMath: [["$","$"], ["\\(","\\)"]], processEscapes: true }});
+</script>
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+
+<H1>勢力の予想 </H1>
+
+<p>
+信夫くんと静夫くんは長方形の島で領地を取り合うゲームをしています。下の図&#9312;のように、島全体は格子状に区切られた正方形の区画でできており、区画にはそこから生じる損得が整数で示されています。
+</p>
+
+<center>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_PCK2016_rectangleGame" width="680"><br/>
+</center>
+<br/>
+
+<p>
+  このゲームでは１つの駒を動かして領地の境界線を決めていきます。ゲーム開始時、駒は島の北西端にあります（図&#9312;）。この駒を島の南東端まで動かしていったときの駒の軌跡が領地の境界線となります。二人のプレーヤーは交互に駒を動かします。駒は南隣の格子点か東隣の格子点にのみ動かすことができます（図&#9313;）。駒が島の端に到達した場合は、南か東のうち動かせる方向に動かします。駒が南東端に到達したらゲーム終了です。
+</p>
+
+<p>
+ゲーム終了後の境界線から北東側の領域が先攻プレーヤーの領域、南西側の領域が後攻プレーヤーの領
+域です（図&#9314;）。各プレーヤーの領域内に含まれる、区画から生じる損得の合計がそのプレーヤーのス
+コアとなります。二人ともゲームにはかなり慣れており、最終的に自分のスコアから相手のスコアをひ
+いた値が一番大きくなるように正確に駒を動かします。
+</p>
+
+<br/>
+
+<p>
+島の大きさとそれぞれの区画から生じる損得が与えられたとき、ゲーム終了時の結果を計算するプログラムを作成せよ。結果は、信夫くんと静夫くんのスコアの差の絶対値とする。
+</p>
+
+<h2>Input</h2>
+
+<p>
+入力は以下の形式で与えられる。
+</p>
+
+<pre>
+<var>W</var> <var>H</var>
+<var>s<sub>1,1</sub></var> <var>s<sub>1,2</sub></var> ... <var>s<sub>1,W</sub></var>
+<var>s<sub>2,1</sub></var> <var>s<sub>2,2</sub></var> ... <var>s<sub>2,W</sub></var>
+:
+<var>s<sub>H,1</sub></var> <var>s<sub>H,2</sub></var> ... <var>s<sub>H,W</sub></var>
+</pre>
+
+<p>
+１行目に島に含まれる東西方向と南北方向の区画の数 <var>W</var>, <var>H</var> (1 &le; <var>W</var>, <var>H</var> &le; 1000) が与えられる。続く <var>H</var> 行に <var>i</var> 行 <var>j</var> 列目の区画から生じる損得 <var>s<sub>i,j</sub></var> (-1000 &le; <var>s<sub>i,j</sub></var> &le; 1000) が与えられる。ただし、<var>i</var> の値が増加する方向を南、<var>j</var> の値が増加する方向を東とする。
+</p>
+
+<h2>Output</h2>
+
+<p>
+信夫くんと静夫くんのスコアの差の絶対値を１行に出力する。
+</p>
+
+<h2>Sample Input 1</h2>
+
+<pre>
+2 1
+-2 1
+</pre>
+
+<h2>Sample Output 1</h2>
+<pre>
+1
+</pre>
+
+<br/>
+
+<h2>Sample Input 2</h2>
+<pre>
+2 2
+2 -3
+3 -1
+</pre>
+
+<h2>Sample Output 2</h2>
+<pre>
+3
+</pre>
+
+<br/>
+
+<h2>Sample Input 3</h2>
+<pre>
+5 4
+5 3 2 -5 2
+2 -4 2 8 -4
+2 3 -7 6 7
+3 -4 10 -3 -3
+</pre>
+
+<h2>Sample Output 3</h2>
+<pre>
+5
+</pre>
+
+
+

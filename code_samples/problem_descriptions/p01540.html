@@ -1,0 +1,116 @@
+
+ 
+<h1>宝探し</h1>
+<p>
+太郎君はある広場にお宝を探しにやってきました。この広場にはたくさんのお宝が埋められていますが、太郎君は最新の機械を持っているので、どこにお宝が埋まっているかをすべて知っています。広場はとても広いので太郎君は領域を決めてお宝を探すことにしましたが、お宝はたくさんあるためどのお宝がその領域の中にあるかすぐにわかりません。そこで太郎君はその領域の中にあるお宝の数を数えることにしました。
+</p>
+
+<h2>Input</h2>
+<blockquote>
+<var>n</var> <var>m</var><br><var>x<sub>1</sub></var> <var>y<sub>1</sub></var><br><var>x<sub>2</sub></var> <var>y<sub>2</sub></var><br>...<br><var>x<sub>n</sub></var> <var>y<sub>n</sub></var><br><var>x<sub>11</sub></var> <var>y<sub>11</sub></var> <var>x<sub>12</sub></var> <var>y<sub>12</sub></var><br><var>x<sub>21</sub></var> <var>y<sub>21</sub></var> <var>x<sub>22</sub></var> <var>y<sub>22</sub></var><br>...<br><var>x<sub>m1</sub></var> <var>y<sub>m1</sub></var> <var>x<sub>m2</sub></var> <var>y<sub>m2</sub></var><br></blockquote>
+
+<ul>
+<li><var>n</var>は広場に埋まっているお宝の数を表す
+</li><li><var>m</var>は調べる領域の数を表す
+</li><li>2行目から<var>n+1</var>行目はそれぞれのお宝が埋まっている座標を表す
+</li><li><var>n+2</var>行目から<var>n+m+1</var>行目はそれぞれの調べる領域を表す
+</li><li>x軸の正の方向が東、y軸の正の方向が北を表す
+</li><li>それぞれの領域は長方形であり、<var>x<sub>i1</sub></var>と<var>y<sub>i1</sub></var>は長方形の南西の頂点の座標、<var>x<sub>i2</sub></var>と<var>y<sub>i2</sub></var>は長方形の北東の頂点の座標を表す
+</li></ul>
+
+
+<h2>Constraints</h2>
+<blockquote>
+<var>1 &le; n &le; 5000</var><br><var>1 &le; m &le; 5&times;10<sup>5</sup></var><br><var>|x<sub>i</sub>|, |y<sub>i</sub>| &le; 10<sup>9</sup> (1 &le; i &le; n)</var><br><var>|x<sub>i1</sub>|, |y<sub>i1</sub>|, |x<sub>i2</sub>|, |y<sub>i2</sub>| &le; 10<sup>9</sup> (1 &le; i &le; m)</var><br><var>x<sub>i1</sub> &le; x<sub>i2</sub>, y<sub>i1</sub> &le; y<sub>i2</sub> (1 &le; i &le; m)</var><br></blockquote>
+
+<ul>
+<li>すべての入力は整数で与えられる
+</li></ul>
+
+
+<h2>Output</h2>
+<blockquote>
+<var>C<sub>1</sub></var><br><var>C<sub>2</sub></var><br>...<br><var>C<sub>m</sub></var><br></blockquote>
+
+<ul>
+<li>それぞれの領域に含まれるお宝の数を各行に出力せよ
+</li></ul>
+
+
+<H2>Sample Input 1</H2>
+
+<pre>3 1
+1 1
+2 4
+5 3
+0 0 5 5
+</pre>
+<H2>Output for the Sample Input 1</H2>
+
+<pre>3
+</pre>
+<p>
+領域の境界線上にあるお宝も領域に含まれるものとみなす
+</p>
+
+<H2>Sample Input 2</H2>
+
+<pre>4 2
+-1 1
+0 3
+4 0
+2 1
+-3 1 5 1
+4 0 4 0
+</pre>
+<H2>Output for the Sample Input 2</H2>
+
+<pre>2
+1
+</pre>
+<p>
+領域は直線や点のようになる場合もある
+</p>
+
+<H2>Sample Input 3</H2>
+
+<pre>2 3
+0 0
+0 0
+-1 -1 1 1
+0 0 2 2
+1 1 4 4
+</pre>
+<H2>Output for the Sample Input 3</H2>
+
+<pre>2
+2
+0
+</pre>
+<p>
+同じ場所に複数のお宝が存在する場合もある
+</p>
+
+<H2>Sample Input 4</H2>
+
+<pre>5 5
+10 5
+-3 -8
+2 11
+6 0
+-1 3
+-3 1 3 13
+-1 -1 9 5
+-3 -8 10 11
+0 0 5 5
+-10 -9 15 10
+</pre>
+<H2>Output for the Sample Input 4</H2>
+
+<pre>2
+2
+5
+0
+4
+</pre>
+

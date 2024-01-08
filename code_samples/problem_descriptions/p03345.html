@@ -1,0 +1,77 @@
+<span class="lang-en">
+<p>Score : <var>300</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>Takahashi, Nakahashi and Hikuhashi have integers <var>A</var>, <var>B</var> and <var>C</var>, respectively.
+After repeating the following operation <var>K</var> times, find the integer Takahashi will get minus the integer Nakahashi will get:</p>
+<ul>
+<li>Each of them simultaneously calculate the sum of the integers that the other two people have, then replace his own integer with the result.</li>
+</ul>
+<p>However, if the absolute value of the answer exceeds <var>10^{18}</var>, print <code>Unfair</code> instead.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 \leq A,B,C \leq 10^9</var></li>
+<li><var>0 \leq K \leq 10^{18}</var></li>
+<li>All values in input are integers.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>A</var> <var>B</var> <var>C</var> <var>K</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the integer Takahashi will get minus the integer Nakahashi will get, after repeating the following operation <var>K</var> times.
+If the absolute value of the answer exceeds <var>10^{18}</var>, print <code>Unfair</code> instead.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>1 2 3 1
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>1
+</pre>
+<p>After one operation, Takahashi, Nakahashi and Hikuhashi have <var>5</var>, <var>4</var> and <var>3</var>, respectively. We should print <var>5-4=1</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>2 3 2 0
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>-1
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>1000000000 1000000000 1000000000 1000000000000000000
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>0
+</pre></section>
+</div>
+</span>

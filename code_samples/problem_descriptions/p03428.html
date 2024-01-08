@@ -1,0 +1,86 @@
+<span class="lang-en">
+<p>Score : <var>600</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>There are <var>N</var> holes in a two-dimensional plane. The coordinates of the <var>i</var>-th hole are <var>(x_i,y_i)</var>.</p>
+<p>Let <var>R=10^{10^{10^{10}}}</var>. Ringo performs the following operation:</p>
+<ul>
+<li>Randomly choose a point from the interior of a circle of radius <var>R</var> centered at the origin, and put Snuke there. Snuke will move to the hole with the smallest Euclidean distance from the point, and fall into that hole. If there are multiple such holes, the hole with the smallest index will be chosen.</li>
+</ul>
+<p>For every <var>i</var> <var>(1 \leq i \leq N)</var>, find the probability that Snuke falls into the <var>i</var>-th hole.</p>
+<p>Here, the operation of randomly choosing a point from the interior of a circle of radius <var>R</var> is defined as follows:</p>
+<ul>
+<li>Pick two real numbers <var>x</var> and <var>y</var> independently according to uniform distribution on <var>[-R,R]</var>.</li>
+<li>If <var>x^2+y^2\leq R^2</var>, the point <var>(x,y)</var> is chosen. Otherwise, repeat picking the real numbers <var>x,y</var> until the condition is met.</li>
+</ul>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>2 \leq N \leq 100</var></li>
+<li><var>|x_i|,|y_i| \leq 10^6(1\leq i\leq N)</var></li>
+<li>All given points are pairwise distinct.</li>
+<li>All input values are integers.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+<var>x_1</var> <var>y_1</var>
+<var>:</var>
+<var>x_N</var> <var>y_N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print <var>N</var> real numbers. The <var>i</var>-th real number must represent the probability that Snuke falls into the <var>i</var>-th hole.</p>
+<p>The output will be judged correct when, for all output values, the absolute or relative error is at most <var>10^{-5}</var>.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>2
+0 0
+1 1
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>0.5
+0.5
+</pre>
+<p>If Ringo put Snuke in the region <var>x+y\leq 1</var>, Snuke will fall into the first hole. The probability of this happening is very close to <var>0.5</var>.
+Otherwise, Snuke will fall into the second hole, the probability of which happening is also very close to <var>0.5</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>5
+0 0
+2 8
+4 5
+2 6
+3 10
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>0.43160120892732328768
+0.03480224363653196956
+0.13880483535586193855
+0.00000000000000000000
+0.39479171208028279727
+</pre></section>
+</div>
+</span>

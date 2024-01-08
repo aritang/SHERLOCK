@@ -1,0 +1,108 @@
+<span class="lang-en">
+<p>Score : <var>400</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>At an arcade, Takahashi is playing a game called <em>RPS Battle</em>, which is played as follows:</p>
+<ul>
+<li>The player plays <var>N</var> rounds of Rock Paper Scissors against the machine. (See Notes for the description of Rock Paper Scissors. A draw also counts as a round.)</li>
+<li>Each time the player wins a round, depending on which hand he/she uses, he/she earns the following score (no points for a draw or a loss):<ul>
+<li><var>R</var> points for winning with Rock;</li>
+<li><var>S</var> points for winning with Scissors;</li>
+<li><var>P</var> points for winning with Paper.</li>
+</ul>
+</li>
+<li>However, in the <var>i</var>-th round, the player cannot use the hand he/she used in the <var>(i-K)</var>-th round. (In the first <var>K</var> rounds, the player can use any hand.)</li>
+</ul>
+<p>Before the start of the game, the machine decides the hand it will play in each round. With supernatural power, Takahashi managed to read all of those hands.</p>
+<p>The information Takahashi obtained is given as a string <var>T</var>. If the <var>i</var>-th character of <var>T</var> <var>(1 \leq i \leq N)</var> is <code>r</code>, the machine will play Rock in the <var>i</var>-th round. Similarly, <code>p</code> and <code>s</code> stand for Paper and Scissors, respectively.</p>
+<p>What is the maximum total score earned in the game by adequately choosing the hand to play in each round?</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Notes</h3><p>In this problem, Rock Paper Scissors can be thought of as a two-player game, in which each player simultaneously forms Rock, Paper, or Scissors with a hand.</p>
+<ul>
+<li>If a player chooses Rock and the other chooses Scissors, the player choosing Rock wins;</li>
+<li>if a player chooses Scissors and the other chooses Paper, the player choosing Scissors wins;</li>
+<li>if a player chooses Paper and the other chooses Rock, the player choosing Paper wins;</li>
+<li>if both players play the same hand, it is a draw.</li>
+</ul>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>2 \leq N \leq 10^5</var></li>
+<li><var>1 \leq K \leq N-1</var></li>
+<li><var>1 \leq R,S,P \leq 10^4</var></li>
+<li><var>N,K,R,S,</var> and <var>P</var> are all integers.</li>
+<li><var>|T| = N</var></li>
+<li><var>T</var> consists of <code>r</code>, <code>p</code>, and <code>s</code>.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var> <var>K</var>
+<var>R</var> <var>S</var> <var>P</var>
+<var>T</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the maximum total score earned in the game.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>5 2
+8 7 6
+rsrpr
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>27
+</pre>
+<p>The machine will play {Rock, Scissors, Rock, Paper, Rock}.</p>
+<p>We can, for example, play {Paper, Rock, Rock, Scissors, Paper} against it to earn <var>27</var> points.
+We cannot earn more points, so the answer is <var>27</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>7 1
+100 10 1
+ssssppr
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>211
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>30 5
+325 234 123
+rspsspspsrpspsppprpsprpssprpsr
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>4996
+</pre></section>
+</div>
+</span>

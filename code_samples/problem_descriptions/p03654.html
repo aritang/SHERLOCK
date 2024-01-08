@@ -1,0 +1,85 @@
+<span class="lang-en">
+<p>Score : <var>1100</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>There is a tree with <var>N</var> vertices, numbered <var>1</var> through <var>N</var>.
+The <var>i</var>-th edge in this tree connects Vertices <var>A_i</var> and <var>B_i</var> and has a length of <var>C_i</var>.</p>
+<p>Joisino created a complete graph with <var>N</var> vertices.
+The length of the edge connecting Vertices <var>u</var> and <var>v</var> in this graph, is equal to the shortest distance between Vertices <var>u</var> and <var>v</var> in the tree above.</p>
+<p>Joisino would like to know the length of the longest Hamiltonian path (see Notes) in this complete graph.
+Find the length of that path.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Notes</h3><p>A <em>Hamiltonian path</em> in a graph is a path in the graph that visits each vertex exactly once.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>2 \leq N \leq 10^5</var></li>
+<li><var>1 \leq A_i &lt; B_i \leq N</var></li>
+<li>The given graph is a tree.</li>
+<li><var>1 \leq C_i \leq 10^8</var></li>
+<li>All input values are integers.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+<var>A_1</var> <var>B_1</var> <var>C_1</var>
+<var>A_2</var> <var>B_2</var> <var>C_2</var>
+<var>:</var>
+<var>A_{N-1}</var> <var>B_{N-1}</var> <var>C_{N-1}</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the length of the longest Hamiltonian path in the complete graph created by Joisino.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>5
+1 2 5
+3 4 7
+2 3 3
+2 5 2
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>38
+</pre>
+<p>The length of the Hamiltonian path <var>5</var> → <var>3</var> → <var>1</var> → <var>4</var> → <var>2</var> is <var>5+8+15+10=38</var>. Since there is no Hamiltonian path with length <var>39</var> or greater in the graph, the answer is <var>38</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>8
+2 8 8
+1 5 1
+4 8 2
+2 5 4
+3 8 6
+6 8 9
+2 7 12
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>132
+</pre></section>
+</div>
+</span>

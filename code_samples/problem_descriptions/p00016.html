@@ -1,0 +1,85 @@
+
+<H1>Treasure Hunt</H1>
+
+<p>
+When a boy was cleaning up after his grand father passing, he found an old paper:
+</p>
+
+<center>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE1_treasure_en"><br>
+</center>
+<br/>
+<!--
+<center>
+<table>
+<tr>
+<td align="top">
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE1_treasure">
+</td>
+<td align="top">
+Stand facing to north from "Sanbonmatsu", and go according to the following steps. You will come across a treasure at the end point.<br>
+<pre>
+30, 10
+50, -40
+20, 15
+.
+.
+</pre>
+</td>
+</tr>
+</table>
+</center>
+-->
+
+<p>
+In addition, other side of the paper says that "go ahead a number of steps equivalent to the first integer, and turn clockwise by degrees equivalent to the second integer". 
+</p>
+<p>
+His grand mother says that Sanbonmatsu was standing at the center of town. However, now buildings are crammed side by side and people can not walk along exactly what the paper says in. Your task is to write a program which hunts for the treature on the paper.
+</p>
+
+<p>
+For simplicity, 1 step is equivalent to 1 meter. Input consists of several pairs of two integers <var>d</var> (the first integer) and <var>t</var> (the second integer) separated by a comma. Input ends with "0, 0". Your program should print the coordinate (<var>x</var>, <var>y</var>) of the end point. There is the treature where x meters to the east and y meters to the north from the center of town.
+</p>
+
+<p>
+You can assume that <var>d</var> &le; 100 and -180 &le; <var>t</var> &le; 180.
+</p>
+
+<H2>Input</H2>
+
+<p>
+A sequence of pairs of integers <var>d</var> and <var>t</var> which end with "<span>0,0</span>".
+</p>
+
+<H2>Output</H2>
+
+<p>
+Print the integer portion of <var>x</var> and <var>y</var> in a line respectively.
+</p>
+
+<H2>Sample Input</H2>
+
+<pre>
+56,65
+97,54
+64,-4
+55,76
+42,-27
+43,80
+87,-86
+55,-6
+89,34
+95,5
+0,0
+</pre>
+
+<H2>Output for the Sample Input</H2>
+
+<pre>
+171
+-302
+</pre>
+
+
+

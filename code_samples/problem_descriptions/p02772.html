@@ -1,0 +1,81 @@
+<span class="lang-en">
+<p>Score: <var>200</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3>
+<p>You are an immigration officer in the Kingdom of AtCoder. The document carried by an immigrant has some number of integers written on it, and you need to check whether they meet certain criteria.</p>
+<p>According to the regulation, the immigrant should be allowed entry to the kingdom if and only if the following condition is satisfied:</p>
+<ul>
+<li>All even numbers written on the document are divisible by <var>3</var> or <var>5</var>.</li>
+</ul>
+<p>If the immigrant should be allowed entry according to the regulation, output <code>APPROVED</code>; otherwise, print <code>DENIED</code>.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Notes</h3>
+<ul>
+<li>The condition in the statement can be rephrased as "If <var>x</var> is an even number written on the document, <var>x</var> is divisible by <var>3</var> or <var>5</var>".
+Here "<a href="https://en.wikipedia.org/wiki/Material_conditional">if</a>" and "<a href="https://en.wikipedia.org/wiki/Logical_disjunction">or</a>" are logical terms.</li>
+</ul>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3>
+<ul>
+<li>All values in input are integers.</li>
+<li><var>1 \leq N \leq 100</var></li>
+<li><var>1 \leq A_i \leq 1000</var></li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3>
+<p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+<var>A_1</var> <var>A_2</var> <var>\dots</var> <var>A_N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3>
+<p>If the immigrant should be allowed entry according to the regulation, print <code>APPROVED</code>; otherwise, print <code>DENIED</code>.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>5
+6 7 9 10 31
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>APPROVED
+</pre>
+<p>The even numbers written on the document are <var>6</var> and <var>10</var>.</p>
+<p>All of them are divisible by <var>3</var> or <var>5</var>, so the immigrant should be allowed entry.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>3
+28 27 24
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>DENIED
+</pre>
+<p><var>28</var> violates the condition, so the immigrant should not be allowed entry.</p></section>
+</div>
+</span>

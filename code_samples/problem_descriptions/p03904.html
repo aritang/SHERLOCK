@@ -1,0 +1,87 @@
+<span class="lang-en">
+<p>Score : <var>1000</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>You are given a string <var>S</var> consisting of digits between <code>1</code> and <code>9</code>, inclusive.
+You will insert at most <var>K</var> commas (<code>,</code>) into this string to separate it into multiple numbers.</p>
+<p>Your task is to minimize the maximum number among those produced by inserting commas. Find minimum possible such value.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>0 ≦ K &lt; |S| ≦ 100,000</var></li>
+<li><var>S</var> consists of digits between <code>1</code> and <code>9</code>, inclusive.</li>
+</ul>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Partial Scores</h3><ul>
+<li>In the test set worth <var>100</var> points, <var>|S| ≦ 2</var>.</li>
+<li>In the test set worth another <var>100</var> points, <var>|S| ≦ 16</var>.</li>
+<li>In the test set worth another <var>200</var> points, <var>|S| ≦ 100</var>.</li>
+<li>In the test set worth another <var>200</var> points, <var>|S| ≦ 2,000</var>.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>The input is given from Standard Input in the following format:</p>
+<pre><var>K</var>
+<var>S</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the minimum possible value.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>2
+15267315
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>315
+</pre>
+<p>When the string is separated into <var>152</var>, <var>67</var> and <var>315</var>, the maximum among these is <var>315</var>, which is the minimum possible value.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>0
+12456174517653111
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>12456174517653111
+</pre>
+<p><var>12456174517653111</var> itself is the answer.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>8
+127356176351764127645176543176531763517635176531278461856198765816581726586715987216581
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>5317635176
+</pre></section>
+</div>
+</span>

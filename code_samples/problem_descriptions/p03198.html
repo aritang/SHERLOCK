@@ -1,0 +1,87 @@
+<span class="lang-en">
+<p>Score : <var>800</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>There are <var>N</var> positive integers <var>A_1, A_2, ..., A_N</var>.
+Takahashi can perform the following operation on these integers any number of times:</p>
+<ul>
+<li>Choose <var>1 \leq i \leq N</var> and multiply the value of <var>A_i</var> by <var>-2</var>.</li>
+</ul>
+<p>Notice that he multiplies it by <strong>minus</strong> two.</p>
+<p>He would like to make <var>A_1 \leq A_2 \leq ... \leq A_N</var> holds.
+Find the minimum number of operations required. If it is impossible, print <code>-1</code>.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 \leq N \leq 200000</var></li>
+<li><var>1 \leq A_i \leq 10^9</var></li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+<var>A_1</var> <var>A_2</var> <var>...</var> <var>A_N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the answer.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>4
+3 1 4 1
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>3
+</pre>
+<p>One possible solution is:</p>
+<ul>
+<li>Choose <var>i=4</var> and multiply the value of <var>A_4</var> by <var>-2</var>. <var>A_1, A_2, A_3, A_4</var> are now <var>3, 1, 4, -2</var>.</li>
+<li>Choose <var>i=1</var> and multiply the value of <var>A_1</var> by <var>-2</var>. <var>A_1, A_2, A_3, A_4</var> are now <var>-6, 1, 4, -2</var>.</li>
+<li>Choose <var>i=4</var> and multiply the value of <var>A_4</var> by <var>-2</var>. <var>A_1, A_2, A_3, A_4</var> are now <var>-6, 1, 4, 4</var>.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>5
+1 2 3 4 5
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>0
+</pre>
+<p><var>A_1 \leq A_2 \leq ... \leq A_N</var> holds before any operation is performed.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>8
+657312726 129662684 181537270 324043958 468214806 916875077 825989291 319670097
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>7
+</pre></section>
+</div>
+</span>

@@ -1,0 +1,77 @@
+<span class="lang-en">
+<p>Score : <var>300</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>Given an integer <var>N</var>, find the base <var>-2</var> representation of <var>N</var>.</p>
+<p>Here, <var>S</var> is the base <var>-2</var> representation of <var>N</var> when the following are all satisfied:</p>
+<ul>
+<li><var>S</var> is a string consisting of <code>0</code> and <code>1</code>.</li>
+<li>Unless <var>S =</var> <code>0</code>, the initial character of <var>S</var> is <code>1</code>.</li>
+<li>Let <var>S = S_k S_{k-1} ... S_0</var>, then <var>S_0 \times (-2)^0 + S_1 \times (-2)^1 + ... + S_k \times (-2)^k = N</var>.</li>
+</ul>
+<p>It can be proved that, for any integer <var>M</var>, the base <var>-2</var> representation of <var>M</var> is uniquely determined.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li>Every value in input is integer.</li>
+<li><var>-10^9 \leq N \leq 10^9</var></li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the base <var>-2</var> representation of <var>N</var>.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>-9
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>1011
+</pre>
+<p>As <var>(-2)^0 + (-2)^1 + (-2)^3 = 1 + (-2) + (-8) = -9</var>, <code>1011</code> is the base <var>-2</var> representation of <var>-9</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>123456789
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>11000101011001101110100010101
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>0
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>0
+</pre></section>
+</div>
+</span>

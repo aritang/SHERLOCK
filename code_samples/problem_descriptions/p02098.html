@@ -1,0 +1,60 @@
+
+
+
+<h1>Problem A: The Mean of Angles</h1>
+
+<h2>Problem</h2>
+<p>
+与えられた2つの角度<var>&theta;<sub>1</sub></var>,<var>&theta;<sub>2</sub></var> のちょうど間の角度を求めよ。ここで、ちょうど間の角度を、下図のように「<var>&theta;<sub>1</sub></var> &plus; <var>t</var> = <var>&theta;<sub>2</sub></var> &minus; <var>t</var> を満たす<var>t</var>のうち絶対値が最も小さいものを<var>t’</var>としたときの<var>&theta;<sub>1</sub></var> &plus; <var>t’</var>」と定義する。
+</p>
+
+<center>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_RitsCamp17Day2_UAPC_A_angle" alt="A image of angles" title="ちょうど間の角度">
+</center>
+
+
+<h2>Input</h2>
+<p>入力は以下の形式で与えられる。</p>
+<pre>
+<var>&theta;<sub>1</sub></var>
+<var>&theta;<sub>2</sub></var>
+</pre>
+
+<h2>Constraints</h2>
+<p>入力は以下の条件を満たす。</p>
+<ul>
+    <li>角度は度数法(degree)で表される</li>
+    <li>0 &le; <var>&theta;<sub>1</sub></var>, <var>&theta;<sub>2</sub></var> &lt; 360</li>
+    <li><var>&theta;<sub>1</sub></var>, <var>&theta;<sub>2</sub></var>は整数</li>
+    <li>|<var>&theta;<sub>1</sub></var> &minus; <var>&theta;<sub>2</sub></var>| &ne; 180</li>
+    <li>解答が[0,0.0001]または[359.999, 360)になるような入力は与えられない</li>
+</ul>
+
+
+<h2>Output</h2>
+<p>
+<var>&theta;<sub>1</sub></var>,<var>&theta;<sub>2</sub></var>のちょうど間の角度を度数法で[0,360)の範囲で1行に出力せよ。ただし0.0001を超える誤差を含んではならない。
+
+</p>
+
+<h2>Sample Input 1</h2>
+<pre>
+10
+20
+</pre>
+
+<h2>Sample Output 1</h2>
+<pre>
+15.0
+</pre>
+
+<h2>Sample Input 2</h2>
+<pre>
+20
+350
+</pre>
+
+<h2>Sample Output 2</h2>
+<pre>
+5.0
+</pre>

@@ -1,0 +1,123 @@
+<span class="lang-en">
+<p>Score : <var>1400</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>There are <var>N</var> turkeys.
+We number them from <var>1</var> through <var>N</var>.</p>
+<p><var>M</var> men will visit here one by one.
+The <var>i</var>-th man to visit will take the following action:</p>
+<ul>
+<li>If both turkeys <var>x_i</var> and <var>y_i</var> are alive: selects one of them with equal probability, then eats it.</li>
+<li>If either turkey <var>x_i</var> or <var>y_i</var> is alive (but not both): eats the alive one.</li>
+<li>If neither turkey <var>x_i</var> nor <var>y_i</var> is alive: does nothing.</li>
+</ul>
+<p>Find the number of pairs <var>(i,\ j)</var> (<var>1 ≤ i &lt; j ≤ N</var>) such that the following condition is held:</p>
+<ul>
+<li>The probability of both turkeys <var>i</var> and <var>j</var> being alive after all the men took actions, is greater than <var>0</var>.</li>
+</ul>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>2 ≤ N ≤ 400</var></li>
+<li><var>1 ≤ M ≤ 10^5</var></li>
+<li><var>1 ≤ x_i &lt; y_i ≤ N</var></li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var> <var>M</var>
+<var>x_1</var> <var>y_1</var>
+<var>x_2</var> <var>y_2</var>
+<var>:</var>
+<var>x_M</var> <var>y_M</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the number of pairs <var>(i,\ j)</var> (<var>1 ≤ i &lt; j ≤ N</var>) such that the condition is held.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>3 1
+1 2
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>2
+</pre>
+<p><var>(i,\ j) = (1,\ 3), (2,\ 3)</var> satisfy the condition.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>4 3
+1 2
+3 4
+2 3
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>1
+</pre>
+<p><var>(i,\ j) = (1,\ 4)</var> satisfies the condition.
+Both turkeys <var>1</var> and <var>4</var> are alive if:</p>
+<ul>
+<li>The first man eats turkey <var>2</var>.</li>
+<li>The second man eats turkey <var>3</var>.</li>
+<li>The third man does nothing.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>3 2
+1 2
+1 2
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>0
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 4</h3><pre>10 10
+8 9
+2 8
+4 6
+4 9
+7 8
+2 8
+1 8
+3 4
+3 4
+2 7
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 4</h3><pre>5
+</pre></section>
+</div>
+</span>

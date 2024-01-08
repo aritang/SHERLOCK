@@ -1,0 +1,57 @@
+
+<H1><font color="#000">Problem A:</font> Rational Irrationals</H1>
+
+<p>
+Rational numbers are numbers represented by ratios of two integers. For a prime number <i>p</i>, one of the elementary theorems in the number theory is that there is no rational number equal to &radic;<i>p</i>. Such numbers are called irrational numbers. It is also known that there are rational numbers arbitrarily close to &radic;<i>p</i>
+</p>
+
+<p>
+Now, given a positive integer <i>n</i>, we define a set <i>Q<sub>n</sub></i> of all rational numbers whose elements are represented by ratios of two positive integers both of which are less than or equal to <i>n</i>. For example, <i>Q</i><sub>4</sub> is a set of 11 rational numbers {1/1, 1/2, 1/3, 1/4, 2/1, 2/3, 3/1, 3/2, 3/4, 4/1, 4/3}. 2/2, 2/4, 3/3, 4/2 and 4/4 are not included here because they are equal to 1/1, 1/2, 1/1, 2/1 and 1/1, respectively.
+</p>
+
+<p>
+Your job is to write a program that reads two integers <i>p</i> and <i>n</i> and reports two rational numbers <i>x / y</i> and <i>u / v</i>, where <i>u / v</i> &lt; &radic;<i>p</i> &lt; <i>x / y</i> and there are no other elements of <i>Q<sub>n</sub></i> between <i>u/v</i> and <i>x/y</i>. When <i>n</i> is greater than &radic;<i>p</i>, such a pair of rational numbers always exists.
+</p>
+
+<H2>Input</H2>
+
+<p>
+The input consists of lines each of which contains two positive integers, a prime number <i>p</i> and an integer <i>n</i> in the following format.
+</p>
+<pre>
+<i>p n</i>
+</pre>
+
+<p>
+They are separated by a space character. You can assume that <i>p</i> and <i>n</i> are less than 10000, and that <i>n</i> is greater than &radic;<i>p</i>. The end of the input is indicated by a line consisting of two zeros.
+</p>
+
+<H2>Output</H2>
+
+<p>
+For each input line, your program should output a line consisting of the two rational numbers <i>x / y</i> and <i>u / v</i> (<i>x / y</i> &gt; <i>u / v</i>) separated by a space character in the following format.
+</p>
+
+<pre>
+<i>x/y u/v</i>
+</pre>
+
+<p>
+They should be irreducible. For example, 6/14 and 15/3 are not accepted. They should be reduced to 3/7 and 5/1, respectively.
+</p>
+
+<H2>Sample Input</H2>
+<pre>
+2 5
+3 10
+5 100
+0 0
+</pre>
+
+<H2>Output for the Sample Input</H2>
+<pre>
+3/2 4/3
+7/4 5/3
+85/38 38/17
+</pre>
+

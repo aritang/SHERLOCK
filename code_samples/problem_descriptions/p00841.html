@@ -1,0 +1,103 @@
+
+<H1><font color="#000">Problem F:</font> Atomic Car Race</H1>
+
+<p>
+In the year 2020, a race of atomically energized cars will be held. Unlike today’s car races, fueling
+is not a concern of racing teams. Cars can run throughout the course without any refueling.
+Instead, the critical factor is tire (tyre). Teams should carefully plan where to change tires of
+their cars.
+</p>
+<p>
+The race is a road race having n checkpoints in the course. Their distances from the start are <i>a</i><sub>1</sub>, <i>a</i><sub>2</sub>, ... , and <i>a<sub>n</sub></i> (in kilometers). The <i>n</i>-th checkpoint is the goal. At the <i>i</i>-th checkpoint (<i>i</i> &lt; <i>n</i>),
+tires of a car can be changed. Of course, a team can choose whether to change or not to change
+tires at each checkpoint. It takes <i>b</i> seconds to change tires (including overhead for braking and
+accelerating). There is no time loss at a checkpoint if a team chooses not to change tires.
+</p>
+<p>
+A car cannot run fast for a while after a tire change, because the temperature of tires is lower
+than the designed optimum. After running long without any tire changes, on the other hand,
+a car cannot run fast because worn tires cannot grip the road surface well. The time to run
+an interval of one kilometer from <i>x</i> to <i>x</i> + 1 is given by the following expression (in seconds).
+Here <i>x</i> is a nonnegative integer denoting the distance (in kilometers) from the latest checkpoint
+where tires are changed (or the start). <i>r</i>, <i>v</i>, <i>e</i> and <i>f</i> are given constants.
+</p>
+
+<pre>
+1/(<i>v</i> - <i>e</i> &times; (<i>x</i> - <i>r</i>)) (if <i>x</i> &ge; <i>r</i>)
+1/(<i>v</i> - <i>f</i> &times; (<i>r</i> - <i>x</i>)) (if <i>x</i> &lt; <i>r</i>)
+</pre>
+
+<p>
+Your mission is to write a program to determine the best strategy of tire changes which minimizes
+the total time to the goal.
+
+</p>
+
+<H2>Input</H2>
+
+<p>
+The input consists of multiple datasets each corresponding to a race situation. The format of a
+dataset is as follows.
+</p>
+
+<pre>
+<i>n</i>
+<i>a</i><sub>1</sub> <i>a</i><sub>2</sub> . . . <i>a<sub>n</sub></i>
+<i>b</i>
+<i>r v e f</i>
+</pre>
+
+<p>
+The meaning of each of the input items is given in the problem statement. If an input line
+contains two or more input items, they are separated by a space.
+</p>
+
+<p>
+<i>n</i> is a positive integer not exceeding 100. Each of <i>a</i><sub>1</sub>, <i>a</i><sub>2</sub>, ... , and <i>a<sub>n</sub></i> is a positive integer satisfying 0 &lt; <i>a</i><sub>1</sub> &lt; <i>a</i><sub>2</sub> &lt; . . . &lt; <i>a<sub>n</sub></i> &le; 10000. <i>b</i> is a positive decimal fraction not exceeding 100.0. <i>r</i> is a
+nonnegative integer satisfying 0 &le; <i>r</i> &le; <i>a<sub>n</sub></i> - 1. Each of <i>v</i>, <i>e</i> and <i>f</i> is a positive decimal fraction.
+You can assume that <i>v</i> - <i>e</i> &times; (<i>a<sub>n</sub></i> - 1 - <i>r</i>) &ge; 0.01 and <i>v</i> - <i>f</i> &times; <i>r</i> &ge; 0.01.
+</p>
+<p>
+The end of the input is indicated by a line with a single zero.
+</p>
+
+
+<H2>Output</H2>
+
+<p>
+For each dataset in the input, one line containing a decimal fraction should be output. The
+decimal fraction should give the elapsed time at the goal (in seconds) when the best strategy is
+taken. An output line should not contain extra characters such as spaces.
+</p>
+<p>
+The answer should not have an error greater than 0.001. You may output any number of digits
+after the decimal point, provided that the above accuracy condition is satisfied.
+</p>
+
+<H2>Sample Input</H2>
+<pre>
+2
+2 3
+1.0
+1 1.0 0.1 0.3
+5
+5 10 15 20 25
+0.15
+1 1.0 0.04 0.5
+10
+1783 3640 3991 4623 5465 5481 6369 6533 6865 8425
+4.172
+72 59.4705 0.0052834 0.0611224
+0
+</pre>
+
+<H2>Output for the Sample Input</H2>
+<pre>
+3.5397
+31.9249
+168.6682
+</pre>
+
+
+
+

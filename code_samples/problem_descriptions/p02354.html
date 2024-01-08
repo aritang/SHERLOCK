@@ -1,0 +1,71 @@
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({ tex2jax: { inlineMath: [["$","$"], ["\\(","\\)"]], processEscapes: true }});
+</script>
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+
+<H1>The Smallest Window I</H1>
+
+<p>
+  For a given array $a_1, a_2, a_3, ... , a_N$ of $N$ elements and an integer $S$, find the smallest sub-array size (smallest window length) where the sum of the sub-array is greater than or equal to $S$. If there is not such sub-array, report 0.
+</p>
+
+<h2>Constraints</h2>
+<ul>
+<li> $1 \leq N \leq 10^5$ </li>
+<li> $1 \leq S \leq 10^9$</li>
+<li> $1 \leq a_i \leq 10^4$</li>
+</ul>
+
+<h2>Input</h2>
+
+<p>The input is given in the following format.</p>
+
+<p>
+$N$ $S$<br>
+$a_1$ $a_2$ ... $a_N$<br>
+</p>
+
+<h2>Output</h2>
+
+<p>
+  Print the smallest sub-array size in a line.
+</p>
+
+<h2>Sample Input 1</h2>
+<pre>
+6 4
+1 2 1 2 3 2
+</pre>
+
+<h2>Sample Output 1</h2>
+<pre>
+2
+</pre>
+
+
+
+<h2>Sample Input 2</h2>
+<pre>
+6 6
+1 2 1 2 3 2
+</pre>
+
+<h2>Sample Output 2</h2>
+<pre>
+3
+</pre>
+
+
+<h2>Sample Input 3</h2>
+<pre>
+3 7
+1 2 3
+</pre>
+
+<h2>Sample Output 3</h2>
+<pre>
+0
+</pre>

@@ -1,0 +1,94 @@
+<span class="lang-en">
+<p>Score : <var>200</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>Akaki, a patissier, can make <var>N</var> kinds of doughnut using only a certain powder called "Okashi no Moto" (literally "material of pastry", simply called Moto below) as ingredient. These doughnuts are called Doughnut <var>1</var>, Doughnut <var>2</var>, <var>...,</var> Doughnut <var>N</var>. In order to make one Doughnut <var>i</var> <var>(1 ≤ i ≤ N)</var>, she needs to consume <var>m_i</var> grams of Moto. She cannot make a non-integer number of doughnuts, such as <var>0.5</var> doughnuts.</p>
+<p>Now, she has <var>X</var> grams of Moto. She decides to make as many doughnuts as possible for a party tonight. However, since the tastes of the guests differ, she will obey the following condition:</p>
+<ul>
+<li>For each of the <var>N</var> kinds of doughnuts, make at least one doughnut of that kind.</li>
+</ul>
+<p>At most how many doughnuts can be made here? She does not necessarily need to consume all of her Moto. Also, under the constraints of this problem, it is always possible to obey the condition.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>2 ≤ N ≤ 100</var></li>
+<li><var>1 ≤ m_i ≤ 1000</var></li>
+<li><var>m_1 + m_2 + ... + m_N ≤ X ≤ 10^5</var></li>
+<li>All values in input are integers.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var> <var>X</var>
+<var>m_1</var>
+<var>m_2</var>
+<var>:</var>
+<var>m_N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the maximum number of doughnuts that can be made under the condition.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>3 1000
+120
+100
+140
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>9
+</pre>
+<p>She has <var>1000</var> grams of Moto and can make three kinds of doughnuts. If she makes one doughnut for each of the three kinds, she consumes <var>120 + 100 + 140 = 360</var> grams of Moto. From the <var>640</var> grams of Moto that remains here, she can make additional six Doughnuts <var>2</var>. This is how she can made a total of nine doughnuts, which is the maximum.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>4 360
+90
+90
+90
+90
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>4
+</pre>
+<p>Making one doughnut for each of the four kinds consumes all of her Moto.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>5 3000
+150
+130
+150
+130
+110
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>26
+</pre></section>
+</div>
+</span>

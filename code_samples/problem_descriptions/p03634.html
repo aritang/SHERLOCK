@@ -1,0 +1,130 @@
+<span class="lang-en">
+<p>Score : <var>400</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>You are given a tree with <var>N</var> vertices.<br/>
+Here, a <em>tree</em> is a kind of graph, and more specifically, a connected undirected graph with <var>N-1</var> edges, where <var>N</var> is the number of its vertices.<br/>
+The <var>i</var>-th edge <var>(1≤i≤N-1)</var> connects Vertices <var>a_i</var> and <var>b_i</var>, and has a length of <var>c_i</var>.</p>
+<p>You are also given <var>Q</var> queries and an integer <var>K</var>. In the <var>j</var>-th query <var>(1≤j≤Q)</var>:</p>
+<ul>
+<li>find the length of the shortest path from Vertex <var>x_j</var> and Vertex <var>y_j</var> via Vertex <var>K</var>.</li>
+</ul>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>3≤N≤10^5</var> </li>
+<li><var>1≤a_i,b_i≤N (1≤i≤N-1)</var> </li>
+<li><var>1≤c_i≤10^9 (1≤i≤N-1)</var> </li>
+<li>The given graph is a tree.</li>
+<li><var>1≤Q≤10^5</var> </li>
+<li><var>1≤K≤N</var> </li>
+<li><var>1≤x_j,y_j≤N (1≤j≤Q)</var> </li>
+<li><var>x_j≠y_j (1≤j≤Q)</var> </li>
+<li><var>x_j≠K,y_j≠K (1≤j≤Q)</var> </li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:  </p>
+<pre><var>N</var>  
+<var>a_1</var> <var>b_1</var> <var>c_1</var>  
+<var>:</var>  
+<var>a_{N-1}</var> <var>b_{N-1}</var> <var>c_{N-1}</var>
+<var>Q</var> <var>K</var>
+<var>x_1</var> <var>y_1</var>
+<var>:</var>  
+<var>x_{Q}</var> <var>y_{Q}</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the responses to the queries in <var>Q</var> lines.<br/>
+In the <var>j</var>-th line <var>j(1≤j≤Q)</var>, print the response to the <var>j</var>-th query.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>5
+1 2 1
+1 3 1
+2 4 1
+3 5 1
+3 1
+2 4
+2 3
+4 5
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>3
+2
+4
+</pre>
+<p>The shortest paths for the three queries are as follows:</p>
+<ul>
+<li>Query <var>1</var>: Vertex <var>2</var> → Vertex <var>1</var> → Vertex <var>2</var> → Vertex <var>4</var> : Length <var>1+1+1=3</var> </li>
+<li>Query <var>2</var>: Vertex <var>2</var> → Vertex <var>1</var> → Vertex <var>3</var> : Length <var>1+1=2</var> </li>
+<li>Query <var>3</var>: Vertex <var>4</var> → Vertex <var>2</var> → Vertex <var>1</var> → Vertex <var>3</var> → Vertex <var>5</var> : Length <var>1+1+1+1=4</var> </li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>7
+1 2 1
+1 3 3
+1 4 5
+1 5 7
+1 6 9
+1 7 11
+3 2
+1 3
+4 5
+6 7
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>5
+14
+22
+</pre>
+<p>The path for each query must pass Vertex <var>K=2</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>10
+1 2 1000000000
+2 3 1000000000
+3 4 1000000000
+4 5 1000000000
+5 6 1000000000
+6 7 1000000000
+7 8 1000000000
+8 9 1000000000
+9 10 1000000000
+1 1
+9 10
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>17000000000
+</pre></section>
+</div>
+</span>

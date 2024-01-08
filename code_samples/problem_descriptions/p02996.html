@@ -1,0 +1,131 @@
+<span class="lang-en">
+<p>Score: <var>400</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3>
+<p>Kizahashi, who was appointed as the administrator of ABC at National Problem Workshop in the Kingdom of AtCoder, got too excited and took on too many jobs.</p>
+<p>Let the current time be time <var>0</var>. Kizahashi has <var>N</var> jobs numbered <var>1</var> to <var>N</var>.</p>
+<p>It takes <var>A_i</var> units of time for Kizahashi to complete Job <var>i</var>. The deadline for Job <var>i</var> is time <var>B_i</var>, and he must complete the job before or at this time.</p>
+<p>Kizahashi cannot work on two or more jobs simultaneously, but when he completes a job, he can start working on another immediately.</p>
+<p>Can Kizahashi complete all the jobs in time? If he can, print <code>Yes</code>; if he cannot, print <code>No</code>.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3>
+<ul>
+<li>All values in input are integers.</li>
+<li><var>1 \leq N \leq 2 \times 10^5</var></li>
+<li><var>1 \leq A_i, B_i \leq 10^9 (1 \leq i \leq N)</var></li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3>
+<p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+<var>A_1</var> <var>B_1</var>
+<var>.</var>
+<var>.</var>
+<var>.</var>
+<var>A_N</var> <var>B_N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3>
+<p>If Kizahashi can complete all the jobs in time, print <code>Yes</code>; if he cannot, print <code>No</code>.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>5
+2 4
+1 9
+1 8
+4 9
+3 12
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>Yes
+</pre>
+<p>He can complete all the jobs in time by, for example, doing them in the following order:</p>
+<ul>
+<li>Do Job <var>2</var> from time <var>0</var> to <var>1</var>.</li>
+<li>Do Job <var>1</var> from time <var>1</var> to <var>3</var>.</li>
+<li>Do Job <var>4</var> from time <var>3</var> to <var>7</var>.</li>
+<li>Do Job <var>3</var> from time <var>7</var> to <var>8</var>.</li>
+<li>Do Job <var>5</var> from time <var>8</var> to <var>11</var>.</li>
+</ul>
+<p>Note that it is fine to complete Job <var>3</var> exactly at the deadline, time <var>8</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>3
+334 1000
+334 1000
+334 1000
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>No
+</pre>
+<p>He cannot complete all the jobs in time, no matter what order he does them in.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>30
+384 8895
+1725 9791
+170 1024
+4 11105
+2 6
+578 1815
+702 3352
+143 5141
+1420 6980
+24 1602
+849 999
+76 7586
+85 5570
+444 4991
+719 11090
+470 10708
+1137 4547
+455 9003
+110 9901
+15 8578
+368 3692
+104 1286
+3 4
+366 12143
+7 6649
+610 2374
+152 7324
+4 7042
+292 11386
+334 5720
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>Yes
+</pre></section>
+</div>
+</span>

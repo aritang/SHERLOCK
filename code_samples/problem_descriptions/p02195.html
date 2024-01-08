@@ -1,0 +1,63 @@
+<h2>Bichrome Tree Connectivity</h2>
+<p>木が与えられます。</p>
+<p>はじめ、すべての頂点は白いです。</p>
+<p>白い頂点の色を反転すると黒になり、黒い頂点の色を反転すると白になります。</p>
+<p>二種類のクエリを処理してください。</p>
+<p>一種類目のクエリでは、頂点<var>v</var>の色を反転します。</p>
+<p>二種類目のクエリでは、白い頂点<var>v</var>から白い頂点とそれらを結ぶ辺だけを使ってたどり着ける頂点の個数を答えます。</p>
+
+<h3>入力</h3>
+<pre>
+<var>N Q</var>
+<var>a_1 b_1</var>
+<var>a_2 b_2</var>
+:
+<var>a_{n-1} b_{n-1}</var>
+<var>t_1 v_1</var>
+<var>t_2 v_2</var>
+:
+<var>t_q v_q</var>
+</pre>
+<p><var>t_i</var>が<var>1</var>のとき一種類目のクエリ、<var>2</var>のとき二種類目のクエリであることを表す。</p>
+
+<h3>出力</h3>
+<pre>
+<var>ans_1</var>
+<var>ans_2</var>
+:
+<var>ans_k</var>
+</pre>
+<p>二種類目のクエリに対する答えを順に出力せよ。</p>
+
+<h3>制約</h3>
+<ul>
+  <li><var>1 \leq N,Q \leq 10^5 </var></li>
+  <li><var>1 \leq a_i,b_i \leq N</var></li>
+  <li><var>1 \leq t_i \leq 2</var></li>
+  <li><var>1 \leq v_i \leq N</var></li>
+  <li>与えられるグラフは木である。</li>
+  <li><var>t_i=2</var>のとき、頂点<var>v_i</var>は必ず白である。</li>
+</ul>
+
+<h3>入力例</h3>
+<pre>
+10 3
+1 2
+2 5
+2 6
+1 4
+1 3
+3 7
+3 8
+3 9
+9 10
+1 3
+2 1
+2 8
+</pre>
+
+<h3>出力例</h3>
+<pre>
+5
+1
+</pre>

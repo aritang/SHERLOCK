@@ -1,0 +1,109 @@
+<span class="lang-en">
+<p>Score : <var>1600</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p><var>A + B</var> balls are arranged in a row.
+The leftmost <var>A</var> balls are colored red, and the rightmost <var>B</var> balls are colored blue.</p>
+<p>You perform the following operation:</p>
+<ul>
+<li>First, you choose two integers <var>s, t</var> such that <var>1 \leq s, t \leq A + B</var>.</li>
+<li>Then, you repeat the following step <var>A + B</var> times:
+In each step, you remove the first ball or the <var>s</var>-th ball (if it exists) or the <var>t</var>-th ball (if it exists, all indices are 1-based) from left in the row, and give it to Snuke.</li>
+</ul>
+<p>In how many ways can you give the balls to Snuke?
+Compute the answer modulo <var>10^9 + 7</var>.</p>
+<p>Here, we consider two ways to be different if for some <var>k</var>, the <var>k</var>-th ball given to Snuke has different colors.
+In particular, the choice of <var>s, t</var> doesn't matter.
+Also, we don't distinguish two balls of the same color.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 \leq A, B \leq 2000</var></li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>A</var> <var>B</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the answer.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>3 3
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>20
+</pre>
+<p>There are <var>20</var> ways to give <var>3</var> red balls and <var>3</var> blue balls.
+It turns out that all of them are possible.</p>
+<p>Here is an example of the operation (<code>r</code> stands for red, <code>b</code> stands for blue):</p>
+<ul>
+<li>You choose <var>s = 3, t = 4</var>.</li>
+<li>Initially, the row looks like <code>rrrbbb</code>.</li>
+<li>You remove <var>3</var>rd ball (<code>r</code>) and give it to Snuke. Now the row looks like <code>rrbbb</code>.</li>
+<li>You remove <var>4</var>th ball (<code>b</code>) and give it to Snuke. Now the row looks like <code>rrbb</code>.</li>
+<li>You remove <var>1</var>st ball (<code>r</code>) and give it to Snuke. Now the row looks like <code>rbb</code>.</li>
+<li>You remove <var>3</var>rd ball (<code>b</code>) and give it to Snuke. Now the row looks like <code>rb</code>.</li>
+<li>You remove <var>1</var>st ball (<code>r</code>) and give it to Snuke. Now the row looks like <code>b</code>.</li>
+<li>You remove <var>1</var>st ball (<code>b</code>) and give it to Snuke. Now the row is empty.</li>
+</ul>
+<p>This way, Snuke receives balls in the order <code>rbrbrb</code>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>4 4
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>67
+</pre>
+<p>There are <var>70</var> ways to give <var>4</var> red balls and <var>4</var> blue balls.
+Among them, only <code>bbrrbrbr</code>, <code>brbrbrbr</code>, and <code>brrbbrbr</code> are impossible.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>7 9
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>7772
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 4</h3><pre>1987 1789
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 4</h3><pre>456315553
+</pre></section>
+</div>
+</span>

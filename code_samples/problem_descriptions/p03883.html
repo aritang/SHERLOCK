@@ -1,0 +1,108 @@
+<span class="lang-en">
+<p>Score : <var>1000</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><style>
+   #nck {
+      width: 30px;
+      height: auto;
+   }
+</style>
+<p>Snuke received <var>N</var> intervals as a birthday present.
+The <var>i</var>-th interval was <var>[-L_i, R_i]</var>.
+It is guaranteed that both <var>L_i</var> and <var>R_i</var> are positive.
+In other words, the origin is strictly inside each interval.</p>
+<p>Snuke doesn't like overlapping intervals, so he decided to move some intervals.
+For any positive integer <var>d</var>, if he pays <var>d</var> dollars, he can choose one of the intervals and move it by the distance of <var>d</var>.
+That is, if the chosen segment is <var>[a, b]</var>, he can change it to either <var>[a+d, b+d]</var> or <var>[a-d, b-d]</var>.</p>
+<p>He can repeat this type of operation arbitrary number of times.
+After the operations, the intervals must be pairwise disjoint (however, they may touch at a point).
+Formally, for any two intervals, the length of the intersection must be zero.</p>
+<p>Compute the minimum cost required to achieve his goal.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 ≤ N ≤ 5000</var></li>
+<li><var>1 ≤ L_i, R_i ≤ 10^9</var></li>
+<li>All values in the input are integers.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>The input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+<var>L_1</var> <var>R_1</var>
+:
+<var>L_N</var> <var>R_N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the minimum cost required to achieve his goal.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>4
+2 7
+2 5
+4 1
+7 5
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>22
+</pre>
+<p>One optimal solution is as follows:</p>
+<ul>
+<li>Move the interval <var>[-2, 7]</var> to <var>[6, 15]</var> with <var>8</var> dollars</li>
+<li>Move the interval <var>[-2, 5]</var> to <var>[-1, 6]</var> with <var>1</var> dollars</li>
+<li>Move the interval <var>[-4, 1]</var> to <var>[-6, -1]</var> with <var>2</var> dollars</li>
+<li>Move the interval <var>[-7, 5]</var> to <var>[-18, -6]</var> with <var>11</var> dollars</li>
+</ul>
+<p>The total cost is <var>8 + 1 + 2 + 11 = 22</var> dollars.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>20
+97 2
+75 25
+82 84
+17 56
+32 2
+28 37
+57 39
+18 11
+79 6
+40 68
+68 16
+40 63
+93 49
+91 10
+55 68
+31 80
+57 18
+34 28
+76 55
+21 80
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>7337
+</pre></section>
+</div>
+</span>

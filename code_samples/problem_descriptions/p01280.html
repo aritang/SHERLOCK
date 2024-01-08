@@ -1,0 +1,78 @@
+
+<H1><font color="#000">Problem H:</font> Galaxy Wide Web Service</H1>
+
+<p>
+The volume of access to a web service varies from time to time in a day. Also, the hours with the highest
+volume of access varies from service to service. For example, a service popular in the United States
+may receive more access in the daytime in the United States, while another service popular in Japan may
+receive more access in the daytime in Japan. When you develop a web service, you have to design the
+system so it can handle all requests made during the busiest hours.
+</p>
+<p>
+You are a lead engineer in charge of a web service in the 30th century. It’s the era of Galaxy Wide Web
+(GWW), thanks to the invention of faster-than-light communication. The service can be accessed from
+all over the galaxy. Thus many intelligent creatures, not limited to human beings, can use the service.
+Since the volume of access to your service is increasing these days, you have decided to reinforce the
+server system. You want to design a new system that handles requests well even during the hours with the
+highest volume of access. However, this is not a trivial task. Residents in each planet have their specific
+length of <i>a day</i>, say, a cycle of life. The length of <i>a day</i> is not always 24 hours. Therefore, a cycle of the
+volume of access are different by planets of users.
+</p>
+<p>
+You have obtained hourly data of the volume of access for all planets where you provide the service.
+Assuming the volume of access follows a daily cycle for each planet, you want to know the highest
+volume of access in one hour. It should be a quite easy task for you, a famous talented engineer in the
+galaxy.
+
+</p>
+
+<H2>Input</H2>
+
+<p>
+The input consists of multiple datasets. Each dataset has the following format:
+</p>
+
+<p>
+<i>N</i><br>
+<i>d</i><sub>1</sub> <i>t</i><sub>1</sub> <i>q</i><sub>1,0</sub> ... <i>q</i><sub>1,<i>d</i><sub>1</sub>-1</sub><br>
+...<br>
+<i>d</i><sub><i>N</i></sub> <i>t</i><sub><i>N</i></sub> <i>q</i><sub><i>N</i>,0</sub> ... <i>q</i><sub><i>N</i>,<i>d</i><sub><i>N</i></sub>-1</sub><br>
+</p>
+
+
+<p>
+<i>N</i> is the number of planets. <i>d<sub>i</sub></i> (1 &le; <i>i</i> &le; <i>N</i>) is the length of a day in the planet <i>i</i>. 
+
+<!-- added at 2013/01/13 -->
+<i>t<sub>i</sub></i> (0 &le; <i>t<sub>i</sub></i> &le; <i>d<sub>i</sub></i> - 1) is the current time of the planet <i>i</i>.
+
+<i>q<sub>i, j</sub></i> is the volume of access on the planet <i>i</i> during from the <i>j</i>-th hour to the (<i>j</i>+1)-th hour.
+</p>
+<p>
+You may assume that <i>N</i> &le; 100, <i>d<sub>i</sub></i> &le; 24, <i>q<sub>i, j</sub></i> &le; 1000000 (1 &le; <i>i</i> &le; <i>N</i>, 0 &le; <i>j</i> &le; <i>d<sub>i</sub></i> - 1).
+</p>
+
+
+<p>
+The last dataset is followed by a line containing one zero. This line is not a part of any dataset and should not be processed.
+</p>
+
+
+<H2>Output</H2>
+
+<p>
+For each dataset, output the maximum volume of access in one hour in a line.
+</p>
+
+<H2>Sample Input</H2>
+<pre>
+2
+4 0 1 2 3 4
+2 0 2 1
+0
+</pre>
+
+<H2>Output for the Sample Input</H2>
+<pre>
+5
+</pre>

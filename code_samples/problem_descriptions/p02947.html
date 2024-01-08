@@ -1,0 +1,90 @@
+<span class="lang-en">
+<p>Score : <var>300</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>We will call a string obtained by arranging the characters contained in a string <var>a</var> in some order, an <em>anagram</em> of <var>a</var>.</p>
+<p>For example, <code>greenbin</code> is an anagram of <code>beginner</code>. As seen here, when the same character occurs multiple times, that character must be used that number of times.</p>
+<p>Given are <var>N</var> strings <var>s_1, s_2, \ldots, s_N</var>. Each of these strings has a length of <var>10</var> and consists of lowercase English characters. Additionally, all of these strings are distinct. Find the number of pairs of integers <var>i, j</var> <var>(1 \leq i &lt; j \leq N)</var> such that <var>s_i</var> is an anagram of <var>s_j</var>.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>2 \leq N \leq 10^5</var></li>
+<li><var>s_i</var> is a string of length <var>10</var>.</li>
+<li>Each character in <var>s_i</var> is a lowercase English letter.</li>
+<li><var>s_1, s_2, \ldots, s_N</var> are all distinct.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+<var>s_1</var>
+<var>s_2</var>
+<var>:</var>
+<var>s_N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the number of pairs of integers <var>i, j</var> <var>(1 \leq i &lt; j \leq N)</var> such that <var>s_i</var> is an anagram of <var>s_j</var>.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>3
+acornistnt
+peanutbomb
+constraint
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>1
+</pre>
+<p><var>s_1 =</var> <code>acornistnt</code> is an anagram of <var>s_3 =</var> <code>constraint</code>. There are no other pairs <var>i, j</var> such that <var>s_i</var> is an anagram of <var>s_j</var>, so the answer is <var>1</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>2
+oneplustwo
+ninemodsix
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>0
+</pre>
+<p>If there is no pair <var>i, j</var> such that <var>s_i</var> is an anagram of <var>s_j</var>, print <var>0</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>5
+abaaaaaaaa
+oneplustwo
+aaaaaaaaba
+twoplusone
+aaaabaaaaa
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>4
+</pre>
+<p>Note that the answer may not fit into a <var>32</var>-bit integer type, though we cannot put such a case here.</p></section>
+</div>
+</span>

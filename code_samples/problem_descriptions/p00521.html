@@ -1,0 +1,177 @@
+
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({ tex2jax: { inlineMath: [["$","$"], ["\\(","\\)"]], processEscapes: true }});
+</script>
+<script language="JavaScript" type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML">
+</script>
+
+
+<H1> JOI 紋章(JOI Emblem)
+</H1>
+<br/>
+
+<p>
+情報オリンピック日本委員会では，台湾大会に向かう選手を応援するために新しいJOI 旗を作成することにした．<br>
+
+JOI 旗は，正方形が縦に $M$ 行，横に $N$ 列並んだ形をしており，各正方形には J，O，I のいずれかの文字が1 つずつ書かれている．
+</p>
+
+<br>
+<center>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_joi_emblem_1">
+</center><br><br>
+
+<p>
+情報オリンピック日本委員会はJOI 旗とは別にJOI 紋章というものを決めている．JOI 紋章は，正方形が縦に2 行，横に2 列並んだ形をしており，各正方形にはJ，O，I のいずれかの文字が1 つずつ書かれている．
+</p>
+
+<br>
+<center>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_joi_emblem_2">
+</center><br><br>
+
+<p>
+JOI 旗に含まれるJOI 紋章の個数とは，JOI 旗に含まれる縦2 行，横2 列の領域のうち，その領域のJ，O，I の配置がJOI 紋章と(回転や裏返しをせずに) 一致しているものの個数のことである．条件を満たす縦2 行，横2 列の領域同士が重なっていてもそれらを別々に数えるものとする．<br>
+
+情報オリンピック日本委員会は古いJOI 旗と1 枚の白紙を持っている．白紙はJOI 旗を構成する正方形1 個分の大きさで，J，O，I のうち好きな1 文字を書き込むことができる．情報オリンピック日本委員会は以下のいずれか1 つの操作をして，新しいJOI 旗を作成することにした．
+</p>
+
+<ul>
+<li>古いJOI 旗に対して何も操作せず，そのまま新しいJOI 旗とする．白紙は使用しない．</li>
+<li>白紙に1 文字書き込み，古いJOI 旗のいずれかの正方形に重ねて貼り付けることで古いJOI 旗のうち1 箇所を変更する．変更後のJOI 旗を新しいJOI 旗とする．</li>
+</ul>
+
+<p>
+情報オリンピック日本委員会は新しいJOI 旗に含まれるJOI 紋章の個数をできるだけ多くしたいと思っている．あなたは新しいJOI 旗に含まれるJOI 紋章の個数の最大値を求めることになった．
+</p>
+
+
+
+
+<h2>課題</h2>
+
+<p>
+古いJOI 旗とJOI 紋章の情報が与えられたとき，新しいJOI 旗に含まれるJOI 紋章の個数の最大値を求めるプログラムを作成せよ．
+</p>
+
+
+<h2>入力</h2>
+<p>
+標準入力から以下のデータを読み込め．
+</p>
+<ul>
+<li>1 行目には2 個の整数 $M, N$ が空白を区切りとして書かれている．これはJOI 旗が正方形が縦に$M$行，横に$N$ 列並んだ形であることを表している．</li>
+<li>続く$M$ 行の各行には，それぞれ$N$ 文字からなる文字列が書かれている．各文字はJ，O，I のいずれかであり，$M$ 行のうち上から$i$ 行目$(1 \leq i \leq M)$ に書かれている文字列の左から$j$ 文字目$(1 \leq j \leq N)$は古いJOI 旗の上から$i$ 行目，左から$j$ 列目の正方形に書かれている文字を表す．</li>
+<li>続く2 行の各行には，それぞれ2 文字からなる文字列が書かれている．各文字はJ，O，I のいずれかであり，2 行のうち上から$i$ 行目$(1 \leq i \leq 2)$ に書かれている文字列の左から$j$ 文字目$(1 \leq j \leq 2)$ はJOI 紋章の上から$i$ 行目，左から$j$ 列目の正方形に書かれている文字を表す．</li>
+</ul>
+
+<h2>出力</h2>
+<p>
+標準出力に，新しいJOI 旗に含まれるJOI 紋章の個数の最大値を表す整数を1 行で出力せよ．
+</p>
+
+<h2>制約</h2>
+
+<p>
+すべての入力データは以下の条件を満たす．
+</p>
+<ul>
+<li>$2 \leq M \leq 1000$</li>
+<li>$2 \leq N \leq 1000$</li>
+</ul>
+
+
+<h2>入出力例</h2>
+
+<h3>入力例 1 </h3>
+
+  <pre>
+3 5
+JOIJO
+IJOOO
+IIJIJ
+JO
+IJ
+</pre>
+
+<h3>出力例 1 </h3>
+
+<pre>
+3
+</pre>
+
+<p>
+古いJOI 旗とJOI 紋章は問題文中の例の通りである．上から2 行目，左から4 列目の正方形を白紙を用いてJ に変更すると，次のような形になる．
+</p>
+
+<br>
+
+<center>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_joi_emblem_3">
+</center><br><br>
+
+<p>
+このように変更した後のJOI 旗には次に示す3 箇所にJOI 紋章と同じ配置の領域がある．
+</p>
+
+<table>
+<tr>
+<td><img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_joi_emblem_4" width="80%"></td>
+<td><img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_joi_emblem_5" width="80%"></td>
+<td><img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_joi_emblem_6" width="80%"></td>
+</tr>
+</table>
+
+<p>
+JOI 紋章と同じ配置の領域が4 箇所以上となる新しいJOI 旗は存在しないので，新しいJOI 旗に含まれるJOI 紋章の個数の最大値は3 である．
+</p>
+
+<br>
+
+  <h3>入力例 2 </h3>  
+
+  <pre>
+2 6
+JOJOJO
+OJOJOJ
+OJ
+JO
+</pre>
+
+  <h3>出力例 2 </h3>  
+
+  <pre>
+2
+</pre>
+
+<p>
+白紙を使用しなくても最大値が得られる場合があることに注意せよ．
+</p>
+<br>
+
+  <h3>入力例 3 </h3>  
+
+  <pre>
+2 2
+JI
+IJ
+JJ
+JJ
+</pre>
+
+  <h3>出力例 3 </h3>  
+
+  <pre>
+0
+</pre>
+
+<p>
+この入出力例の場合，考えられるどの新しいJOI 旗においても，JOI 紋章が1 つも含まれない．
+</p>
+
+<div class="source">
+<p class="source">
+問題文と自動審判に使われるデータは、<a href="http://www.ioi-jp.org">情報オリンピック日本委員会</a>が作成し公開している問題文と採点用テストデータです。
+</p>
+</div>

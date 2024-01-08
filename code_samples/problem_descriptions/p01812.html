@@ -1,0 +1,124 @@
+
+
+
+<h2>真っ暗な部屋</h2>
+
+<p>
+目を覚ますと、A君は真っ暗な部屋の中にいた。
+どうやらA君は <var>N</var> 個の部屋から構成されたダンジョンに迷い込んでしまったようだ。
+あなたはA君がどの部屋に迷い込んだのかを知ることはできなかったが、幸いにもダンジョンのマップを手に入れることができた。
+A君の進むべき道を示し明るい部屋に導こう。
+</p>
+
+
+<p>
+<var>N</var> 個の部屋のうち <var>M</var> 個の部屋が真っ暗な部屋であり、それぞれ <var>D_1</var>, <var>D_2</var>, ..., <var>D_M</var> 番目の部屋が真っ暗な部屋であることが分かっている。
+また、全ての部屋からちょうど <var>K</var> 本の一方通行の道が順に並んでおり、<var>i</var> 番目の部屋から出る道はそれぞれ 
+<var>v_{i,1}</var>, <var>v_{i,2}</var>, ..., <var>v_{i,K}</var> 番目の部屋に繋がっている。
+あなたは、A君に対し今いる部屋から <var>a_1</var>, <var>a_2</var>, ..., <var>a_l</var> 番目の道を順に進ませることができる。
+ただし、A君は明るい部屋に到達したらそれ以降の指示は無視する。
+あなたは、指示の前後においてA君が今いる部屋の情報を知ることはできないため、A君がどの部屋にいたとしても明るい部屋に辿り着けるような指示列を伝えなければならない。
+
+そのような指示のうち、最も短いものの長さを答えよ。
+
+</p>
+
+<h3>Constraints</h3>
+<ul>
+<li><var>2  &le;  N  &le;  100</var></li>
+<li><var>1  &le;  M  &le;  min(16, N &minus; 1)</var></li>
+<li><var>1  &le;  K  &le;  N</var></li>
+<li><var>1  &le;  D_i  &le;  N</var></li>
+<li><var>D_i</var> は全て異なる</li>
+<li><var>1  &le;  v_{i, j}  &le;  N</var></li>
+<li> 全ての暗い部屋は少なくとも1つの明るい部屋に到達可能である </li>
+</ul>
+
+
+<h3>Input Format</h3>
+<p>
+入力は以下の形式で標準入力から与えられる。
+</p>
+<pre>
+<var>N</var> <var>M</var> <var>K</var>
+<var>D_1</var> <var>D_2</var> ... <var>D_M</var>
+<var>v_{1,1}</var> <var>v_{1,2}</var> ... <var>v_{1,K}</var>
+<var>v_{2,1}</var> <var>v_{2,2}</var> ... <var>v_{2,K}</var>
+...
+<var>v_{N,1}</var> <var>v_{N,2}</var> ... <var>v_{N,K}</var>
+</pre>
+
+
+<h3>Output Format</h3>
+<p>
+答えを一行に出力せよ。
+</p>
+
+<h3>Sample Input 1</h3>
+<pre>
+4 2 2
+1 2
+2 4
+3 1
+4 2
+1 3
+</pre>
+
+
+<h3>Sample Output 1</h3>
+<pre>
+2
+</pre>
+<p>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_JAG2015SummerDay2_sample1"/> <br/>
+1, 1 という指示を出すと
+</p>
+<ul>
+<li>A君の初期位置が部屋1である場合、2つ目の移動で部屋3に到達する</li>
+<li>A君の初期位置が部屋2である場合、1つ目の移動で部屋3に到達する</li>
+</ul>
+
+<h3>Sample Input 2</h3>
+<pre>
+3 2 2
+1 2
+2 3
+1 2
+2 1
+</pre>
+
+<h3>Sample Output 2</h3>
+<pre>
+3
+</pre>
+<p>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_JAG2015SummerDay2_sample2"/> <br/>
+2, 1, 2 という指示を出すと
+</p>
+<ul>
+<li>A君の初期位置が部屋1である場合、1つ目の移動で部屋3に到達する</li>
+<li>A君の初期位置が部屋2である場合、3つ目の移動で部屋3に到達する</li>
+</ul>
+
+<h3>Sample Input 3</h3>
+<pre>
+6 3 3
+1 2 3
+4 1 1
+2 5 2
+3 3 6
+4 4 4
+5 5 5
+6 6 6
+</pre>
+
+
+<h3>Sample Output 3</h3>
+<pre>
+3
+</pre>
+<p>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_JAG2015SummerDay2_sample3"/> <br/>
+非連結であるケースや、自己辺、多重辺があるケースに気をつけよう
+</p>
+

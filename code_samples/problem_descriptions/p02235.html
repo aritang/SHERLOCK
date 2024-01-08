@@ -1,0 +1,60 @@
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({ tex2jax: { inlineMath: [["$","$"], ["\\(","\\)"]], processEscapes: true }});
+</script>
+<script language="JavaScript" type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML">
+</script>
+
+<H1>Longest Common Subsequence</H1>
+
+<p>
+For given two sequences $X$ and $Y$, a sequence $Z$ is a common subsequence of $X$ and $Y$ if $Z$ is a subsequence of both $X$ and $Y$. For example, if $X = \{a,b,c,b,d,a,b\}$ and $Y = \{b,d,c,a,b,a\}$, the sequence $\{b,c,a\}$ is a common subsequence of both $X$ and $Y$. On the other hand, the sequence $\{b,c,a\}$ is not a longest common subsequence (LCS) of $X$ and $Y$, since it has length 3 and the sequence $\{b,c,b,a\}$, which is also common to both $X$ and $Y$, has length 4. The sequence $\{b,c,b,a\}$ is an LCS of $X$ and $Y$, since there is no common subsequence of length 5 or greater.
+</p>
+
+<p>
+  Write a program which finds the length of LCS of given two sequences $X$ and $Y$. The sequence consists of alphabetical characters.
+</p>
+
+<H2>Input</H2>
+
+<p>
+  The input consists of multiple datasets. In the first line, an integer $q$ which is the number of datasets is given. In the following $2 \times q$ lines, each dataset which consists of the two sequences $X$ and $Y$ are given.
+</p>
+
+<H2>Output</H2>
+
+<p>
+  For each dataset, print the length of LCS of $X$ and $Y$ in a line.
+</p>
+
+<H2>Constraints</H2>
+
+<ul>
+<li>$1 \leq q \leq 150$</li>
+<li>$1 \leq$ length of $X$ and $Y$ $\leq 1,000$</li>
+<li>$q \leq 20$ if the dataset includes a sequence whose length is more than 100</li>
+</ul>
+
+<H2>Sample Input 1</H2>
+<pre>
+3
+abcbdab
+bdcaba
+abc
+abc
+abc
+bc
+</pre>
+
+<H2>Sample Output 1</H2>
+<pre>
+4
+3
+2
+</pre>
+
+<H2>Reference</H2>
+
+<p>
+Introduction to Algorithms, Thomas H. Cormen, Charles E. Leiserson, Ronald L. Rivest, and Clifford Stein. The MIT Press.
+</p>

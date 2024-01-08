@@ -1,0 +1,82 @@
+
+
+<h1>K - XOR回廊</h1>
+
+  <h2>問題文</h2>
+<p>
+KU大学では一風変わったラリーゲームが人気である．
+このゲームの舞台であるサーキットには，<var>N</var> 個の休憩所と <var>M</var> 個の道があり，<var>i</var> 番目の道は <var>f<sub>i</sub></var> 番目の休憩所と <var>t<sub>i</sub></var> 番目の休憩所の間にある．
+すべての道にはチェックポイントが一つずつ存在し，道 <var>i</var> のチェックポイントを通過するとどちらの向きで通っても <var>p<sub>i</sub></var> の得点がXORで加算される．<strong>XORで</strong>加算される．大事なことなので2回言いました．
+</p>
+<p>
+このゲームでは，同じ休憩所や道を何度通っても良いし，
+ゴールにたどり着いてもそのままラリーを続行することができるが，
+道の途中にあるチェックポイントを迂回して別の休憩所へ行くことは禁止されている．
+そのため，どのような道順をたどれば高い得点を取ることができるかを頑張って考えなければならない点が人気のある所以である．
+</p>
+<p>
+今回は <var>Q</var> 人の参加者がいて，<var>j</var> 番目の参加者は <var>a<sub>j</sub></var> の休憩所からスタートして，ゴールである <var>b<sub>j</sub></var> の休憩所まで行くことになっているようだ．
+運営側の人間としてそれぞれの参加者の最高得点を前もって調べておくことにした．
+</p>
+
+
+<h2>入力形式</h2>
+<p>入力は以下の形式で与えられる．なお休憩所の番号は0-indexedである．</p>
+<pre>
+<var>N</var> <var>M</var> <var>Q</var>
+<var>f<sub>1</sub></var> <var>t<sub>1</sub></var> <var>p<sub>1</sub></var>
+<var>...</var>
+<var>f<sub>M</sub></var> <var>t<sub>M</sub></var> <var>p<sub>M</sub></var>
+<var>a<sub>1</sub></var> <var>b<sub>1</sub></var>
+<var>...</var>
+<var>a<sub>Q</sub></var> <var>b<sub>Q</sub></var>
+</pre>
+
+<h2>出力形式</h2>
+<p>
+<var>Q</var> 行出力し，<var>j</var> 行目には <var>a<sub>j</sub></var> 番目の休憩所から <var>b<sub>j</sub></var> 番目の休憩所への経路で得られる得点の最大値を出力せよ．
+</p>
+
+<h2>制約</h2>
+<ul>
+<li><var>1 &le; N &le; 10<sup>5</sup></var></li>
+<li><var>0 &le; M &le; 2 &times; 10<sup>5</sup></var></li>
+<li><var>1 &le; Q &le; 10<sup>5</sup></var></li>
+<li><var>0 &le; f<sub>i</sub>, t<sub>i</sub> &lt; N</var>, <var>f<sub>i</sub> &ne; t<sub>i</sub></var></li>
+<li><var>0 &le; p<sub>i</sub> &lt; 2<sup>60</sup></var></li>
+<li><var>0 &le; a<sub>j</sub>, b<sub>j</sub> &lt; N</var></li>
+<li>どの休憩所からでも，道を辿っていけば任意の休憩所へたどり着ける．</li>
+<li>休憩所 <var>f<sub>i</sub>,t<sub>i</sub></var> 間を結ぶ道は高々一つしか存在しない．</li>
+<li>入力値はすべて整数である．</li>
+</ul>
+<p>この問題の判定には，60 点分のテストケースのグループが設定されている．このグループに含まれるテストケースは上記の制約に加えて下記の制約も満たす．</p>
+<ul>
+<li><var>M &le; 20</var></li>
+</ul>
+
+
+
+<h2>入出力例</h2>
+<h3>入力例1</h3>
+<pre>
+5 5 3
+0 1 7
+1 2 22
+2 3 128
+3 4 128
+4 2 128
+0 1
+0 0
+3 4
+</pre>
+
+<h3>出力例1</h3>
+<pre>
+135
+128
+128
+</pre>
+
+<hr>
+<address>Writer : 森槙悟</address>
+<address>Tester : 田村和範</address>

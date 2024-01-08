@@ -1,0 +1,95 @@
+<span class="lang-en">
+<p>Score : <var>300</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>There are <var>N</var> observatories in AtCoder Hill, called Obs. <var>1</var>, Obs. <var>2</var>, <var>...</var>, Obs. <var>N</var>. The elevation of Obs. <var>i</var> is <var>H_i</var>.
+There are also <var>M</var> roads, each connecting two different observatories. Road <var>j</var> connects Obs. <var>A_j</var> and Obs. <var>B_j</var>.</p>
+<p>Obs. <var>i</var> is said to be good when its elevation is higher than those of all observatories that can be reached from Obs. <var>i</var> using just one road.
+Note that Obs. <var>i</var> is also good when no observatory can be reached from Obs. <var>i</var> using just one road.</p>
+<p>How many good observatories are there?</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>2 \leq N \leq 10^5</var></li>
+<li><var>1 \leq M \leq 10^5</var></li>
+<li><var>1 \leq H_i \leq 10^9</var></li>
+<li><var>1 \leq A_i,B_i \leq N</var></li>
+<li><var>A_i \neq B_i</var></li>
+<li>Multiple roads may connect the same pair of observatories.</li>
+<li>All values in input are integers.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var> <var>M</var>
+<var>H_1</var> <var>H_2</var> <var>...</var> <var>H_N</var>
+<var>A_1</var> <var>B_1</var>
+<var>A_2</var> <var>B_2</var>
+<var>:</var>
+<var>A_M</var> <var>B_M</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the number of good observatories.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>4 3
+1 2 3 4
+1 3
+2 3
+2 4
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>2
+</pre>
+<ul>
+<li>
+<p>From Obs. <var>1</var>, you can reach Obs. <var>3</var> using just one road. The elevation of Obs. <var>1</var> is not higher than that of Obs. <var>3</var>, so Obs. <var>1</var> is not good.</p>
+</li>
+<li>
+<p>From Obs. <var>2</var>, you can reach Obs. <var>3</var> and <var>4</var> using just one road. The elevation of Obs. <var>2</var> is not higher than that of Obs. <var>3</var>, so Obs. <var>2</var> is not good.</p>
+</li>
+<li>
+<p>From Obs. <var>3</var>, you can reach Obs. <var>1</var> and <var>2</var> using just one road. The elevation of Obs. <var>3</var> is higher than those of Obs. <var>1</var> and <var>2</var>, so Obs. <var>3</var> is good.</p>
+</li>
+<li>
+<p>From Obs. <var>4</var>, you can reach Obs. <var>2</var> using just one road. The elevation of Obs. <var>4</var> is higher than that of Obs. <var>2</var>, so Obs. <var>4</var> is good.</p>
+</li>
+</ul>
+<p>Thus, the good observatories are Obs. <var>3</var> and <var>4</var>, so there are two good observatories.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>6 5
+8 6 9 1 2 1
+1 3
+4 2
+4 3
+4 6
+4 6
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>3
+</pre></section>
+</div>
+</span>

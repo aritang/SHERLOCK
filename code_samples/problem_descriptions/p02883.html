@@ -1,0 +1,100 @@
+<span class="lang-en">
+<p>Score: <var>500</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3>
+<p>Takahashi will take part in an eating contest. Teams of <var>N</var> members will compete in this contest, and Takahashi's team consists of <var>N</var> players numbered <var>1</var> through <var>N</var> from youngest to oldest. The <em>consumption coefficient</em> of Member <var>i</var> is <var>A_i</var>.</p>
+<p>In the contest, <var>N</var> foods numbered <var>1</var> through <var>N</var> will be presented, and the <em>difficulty</em> of Food <var>i</var> is <var>F_i</var>. The details of the contest are as follows:</p>
+<ul>
+<li>A team should assign one member to each food, and should not assign the same member to multiple foods.</li>
+<li>It will take <var>x \times y</var> seconds for a member to finish the food, where <var>x</var> is the consumption coefficient of the member and <var>y</var> is the difficulty of the dish.</li>
+<li>The score of a team is the longest time it takes for an individual member to finish the food.</li>
+</ul>
+<p>Before the contest, Takahashi's team decided to do some training. In one set of training, a member can reduce his/her consumption coefficient by <var>1</var>, as long as it does not go below <var>0</var>. However, for financial reasons, the <var>N</var> members can do at most <var>K</var> sets of training in total.</p>
+<p>What is the minimum possible score of the team, achieved by choosing the amounts of members' training and allocating the dishes optimally?</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3>
+<ul>
+<li>All values in input are integers.</li>
+<li><var>1 \leq N \leq 2 \times 10^5</var></li>
+<li><var>0 \leq K \leq 10^{18}</var></li>
+<li><var>1 \leq A_i \leq 10^6\ (1 \leq i \leq N)</var></li>
+<li><var>1 \leq F_i \leq 10^6\ (1 \leq i \leq N)</var></li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3>
+<p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var> <var>K</var>
+<var>A_1</var> <var>A_2</var> <var>...</var> <var>A_N</var>
+<var>F_1</var> <var>F_2</var> <var>...</var> <var>F_N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3>
+<p>Print the minimum possible score of the team.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>3 5
+4 2 1
+2 3 1
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>2
+</pre>
+<p>They can achieve the score of <var>2</var>, as follows:</p>
+<ul>
+<li>Member <var>1</var> does <var>4</var> sets of training and eats Food <var>2</var> in <var>(4-4) \times 3 = 0</var> seconds.</li>
+<li>Member <var>2</var> does <var>1</var> set of training and eats Food <var>3</var> in <var>(2-1) \times 1 = 1</var> second.</li>
+<li>Member <var>3</var> does <var>0</var> sets of training and eats Food <var>1</var> in <var>(1-0) \times 2 = 2</var> seconds.</li>
+</ul>
+<p>They cannot achieve a score of less than <var>2</var>, so the answer is <var>2</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>3 8
+4 2 1
+2 3 1
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>0
+</pre>
+<p>They can choose not to do exactly <var>K</var> sets of training.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>11 14
+3 1 4 1 5 9 2 6 5 3 5
+8 9 7 9 3 2 3 8 4 6 2
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>12
+</pre></section>
+</div>
+</span>

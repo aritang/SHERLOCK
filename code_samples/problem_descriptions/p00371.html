@@ -1,0 +1,70 @@
+<H1>Lottery Box</H1>
+
+<p>
+A lottery is being held in a corner of the venue of the Aizu festival. Several types of balls are inside the lottery box and each type has its unique integer printed on the surfaces of the balls. An integer <var>T</var> is printed on the lottery box.
+</p>
+
+<p>
+In the lottery, you first declare two integers <var>A</var> and <var>B</var>, and draw up to <var>M</var> balls from the box. Let the sum of the integers printed on the balls be <var>S</var>. You can get a wonderful gift if the following two criteria are met: <var>S</var> divided by <var>T</var> gives a remainder greater than or equal to <var>A</var>, and <var>S</var> divided by <var>T</var> gives a quotient (fractional portion dropped) greater than or equal to <var>B</var>.
+</p>
+
+
+<p>
+  Write a program to determine if you have any chance of getting the gift given the following information: the number of ball types, ball-type specific integers, the maximum number of balls to be drawn from the box, the integer printed on the lottery box, and two integers declared before drawing. Assume that each ball type has sufficient (&ge;M) population in the box. Note also that there may be a chance of getting the gift even without drawing any ball.
+</p>
+
+  
+
+<h2>Input</h2>
+
+<p>
+  The input is given in the following format.
+</p>
+
+<pre>
+<var>N</var> <var>M</var> <var>T</var>
+<var>a_1</var>
+<var>a_2</var>
+:
+<var>a_N</var>
+<var>Q</var>
+<var>A_1</var> <var>B_1</var>
+<var>A_2</var> <var>B_2</var>
+:
+<var>A_Q</var> <var>B_Q</var>
+</pre>
+
+<p>
+The first line provides the number of ball types <var>N</var>(1&le;<var>N</var>&le;10<sup>5</sup>), the maximum number of balls you can draw from the box <var>M</var>(1&le;<var>M</var>&le;10<sup>5</sup>), and the integer printed on the box <var>T</var>(1&le;<var>T</var>&le;1000). Each of the subsequent <var>N</var> lines provides an integer <var>a_i</var> (1&le;<var>a_i</var>&le;10<sup>9</sup>) printed on the <var>i</var>-th ball type. The next line following these provides the number of declarations <var>Q</var> (1&le;<var>Q</var>&le;10<sup>5</sup>). Each of the <var>Q</var> lines following this provides a pair of integers <var>A_i</var> (0 &le; <var>A_i</var> &lt; <var>T</var>), <var>B_i</var> (0 &le; <var>B_i</var> &le; 10<sup>9</sup>) that constitute the <var>i</var>-th declaration.
+</p>
+
+
+<h2>Output</h2>
+
+<p>
+  Output a line for each pair of declaration <var>A</var> and <var>B</var> that contains "<span>yes</span>" if there is a chance of getting the gift or "<span>no</span>" otherwise.
+</p>
+
+<h2>Sample Input 1</h2>
+
+<pre>
+3 2 7
+8
+3
+6
+5
+2 2
+3 2
+4 1
+6 1
+6 0
+</pre>
+
+<h2>Sample Output 1</h2>
+<pre>
+yes
+no
+yes
+no
+yes
+</pre>

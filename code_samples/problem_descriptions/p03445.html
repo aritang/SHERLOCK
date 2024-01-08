@@ -1,0 +1,163 @@
+<span class="lang-en">
+<p>Score : <var>2000</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>You are given an <var>H \times W</var> grid.
+The square at the top-left corner will be represented by <var>(0, 0)</var>, and the square at the bottom-right corner will be represented by <var>(H-1, W-1)</var>.</p>
+<p>Of those squares, <var>N</var> squares <var>(x_1, y_1), (x_2, y_2), ..., (x_N, y_N)</var> are painted black, and the other squares are painted white.</p>
+<p>Let the shortest distance between white squares <var>A</var> and <var>B</var> be the minimum number of moves required to reach <var>B</var> from <var>A</var> <strong>visiting only white squares</strong>, where one can travel to an adjacent square sharing a side (up, down, left or right) in one move.</p>
+<p>Since there are <var>H × W - N</var> white squares in total, there are <var>_{(H×W-N)}C_2</var> ways to choose two of the white squares.</p>
+<p>For each of these <var>_{(H×W-N)}C_2</var> ways, find the shortest distance between the chosen squares, then find the sum of all those distances, modulo <var>1</var> <var>000</var> <var>000</var> <var>007=10^9+7</var>.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 \leq H, W \leq 10^6</var></li>
+<li><var>1 \leq N \leq 30</var></li>
+<li><var>0 \leq x_i \leq H-1</var></li>
+<li><var>0 \leq y_i \leq W-1</var></li>
+<li>If <var>i \neq j</var>, then either <var>x_i \neq x_j</var> or <var>y_i \neq y_j</var>.</li>
+<li>There is at least one white square.</li>
+<li>For every pair of white squares <var>A</var> and <var>B</var>, it is possible to reach <var>B</var> from <var>A</var> visiting only white squares.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>H</var> <var>W</var>
+<var>N</var>
+<var>x_1</var> <var>y_1</var>
+<var>x_2</var> <var>y_2</var>
+<var>:</var>
+<var>x_N</var> <var>y_N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the sum of the shortest distances, modulo <var>10^9+7</var>.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>2 3
+1
+1 1
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>20
+</pre>
+<p>We have the following grid (<code>.</code>: a white square, <code>#</code>: a black square).</p>
+<pre>...
+.#.
+</pre>
+<p>Let us assign a letter to each white square as follows:</p>
+<pre>ABC
+D#E
+</pre>
+<p>Then, we have:</p>
+<ul>
+<li>dist(A, B) = <var>1</var></li>
+<li>dist(A, C) = <var>2</var></li>
+<li>dist(A, D) = <var>1</var></li>
+<li>dist(A, E) = <var>3</var></li>
+<li>dist(B, C) = <var>1</var></li>
+<li>dist(B, D) = <var>2</var></li>
+<li>dist(B, E) = <var>2</var></li>
+<li>dist(C, D) = <var>3</var></li>
+<li>dist(C, E) = <var>1</var></li>
+<li>dist(D, E) = <var>4</var></li>
+</ul>
+<p>where dist(A, B) is the shortest distance between A and B. The sum of these distances is <var>20</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>2 3
+1
+1 2
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>16
+</pre>
+<p>Let us assign a letter to each white square as follows:</p>
+<pre>ABC
+DE#
+</pre>
+<p>Then, we have:</p>
+<ul>
+<li>dist(A, B) = <var>1</var></li>
+<li>dist(A, C) = <var>2</var></li>
+<li>dist(A, D) = <var>1</var></li>
+<li>dist(A, E) = <var>2</var></li>
+<li>dist(B, C) = <var>1</var></li>
+<li>dist(B, D) = <var>2</var></li>
+<li>dist(B, E) = <var>1</var></li>
+<li>dist(C, D) = <var>3</var></li>
+<li>dist(C, E) = <var>2</var></li>
+<li>dist(D, E) = <var>1</var></li>
+</ul>
+<p>The sum of these distances is <var>16</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>3 3
+1
+1 1
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>64
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 4</h3><pre>4 4
+4
+0 1
+1 1
+2 1
+2 2
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 4</h3><pre>268
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 5</h3><pre>1000000 1000000
+1
+0 0
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 5</h3><pre>333211937
+</pre></section>
+</div>
+</span>

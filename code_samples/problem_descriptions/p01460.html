@@ -1,0 +1,125 @@
+<script src="./IMAGE/varmath.js" charset="UTF-8"></script>
+
+<H1>Matrix Operation</H1>
+
+<p>
+You are a student looking for a job.
+Today you  had an employment examination for an IT company.
+They  asked you to write an efficient program to  perform several operations.
+First, they showed you an <var>N \times N</var> square matrix and a list of operations.
+All operations  but one modify the matrix, and the last operation outputs the character in  a specified cell.
+Please remember that you need to  output the final matrix after you  finish all the operations.
+</p>
+
+<p>
+Followings are the detail of the operations:
+</p>
+
+<dl>
+<dt> WR r c v </dt><dd> (Write operation) write a integer v into the cell (r,c) (<var>1 \leq v \leq 1,000,000</var>)</dd>
+<dt> CP r1 c1 r2 c2 </dt><dd> (Copy operation) copy a character in the cell (r1,c1) into the cell (r2,c2)</dd>
+<dt> SR r1 r2 </dt><dd> (Swap Row operation) swap the r1-th row and r2-th row</dd>
+<dt> SC c1 c2 </dt><dd> (Swap Column operation) swap the c1-th column and c2-th column</dd>
+<dt> RL </dt><dd> (Rotate Left operation) rotate the whole matrix in counter-clockwise direction by 90 degrees</dd>
+<dt> RR </dt><dd> (Rotate Right operation) rotate the whole matrix in clockwise direction by 90 degrees</dd>
+<dt> RH </dt><dd> (Reflect Horizontal operation) reverse the order of the rows</dd>
+<dt> RV </dt><dd> (Reflect Vertical operation) reverse the order of the columns</dd>
+</dl>
+
+<p>
+
+
+
+
+
+
+
+
+
+</p>
+
+<H2>Input</H2>
+
+<p>
+First line of each testcase contains nine integers.
+First two integers in the line, N and Q, indicate the size of matrix and the number of queries, respectively <var>(1 \leq N,Q \leq 40,000)</var>.
+Next three integers, A B, and C, are coefficients to calculate values in initial matrix <var>(1 \leq A,B,C \leq 1,000,000)</var>,
+and they are used as follows: <var>A_{r,c} = (r * A + c * B) mod C</var> where r and c are row and column indices, respectively <var>(1\leq r,c\leq N)</var>.
+Last four integers, D, E, F, and G, are coefficients to compute the final hash value mentioned in the next section <var>(1 \leq D \leq E \leq N, 1 \leq F \leq G \leq N, E - D \leq 1,000, G - F \leq 1,000)</var>.
+Each of next Q lines contains one operation in the format as described above.
+</p>
+
+<H2>Output</H2>
+
+<p>
+Output a hash value h computed from the final matrix B by using following pseudo source code.
+</p>
+
+<pre>
+h &lt;- 314159265
+for r = D...E
+  for c = F...G
+    h &lt;- (31 * h + B_{r,c}) mod 1,000,000,007
+</pre>
+
+<p>
+where &quot;&lt;-&quot; is a destructive assignment operator, &quot;for i = S...T&quot; indicates a loop for i from S to T (both inclusive), and &quot;mod&quot; is a remainder operation.
+</p>
+
+<H2>Sample Input 1</H2>
+
+<pre>
+2 1 3 6 12 1 2 1 2
+WR 1 1 1
+</pre>
+
+<H2>Output for the Sample Input 1</H2>
+
+<pre>
+676573821
+</pre>
+
+<H2>Sample Input 2</H2>
+
+<pre>
+2 1 3 6 12 1 2 1 2
+RL
+</pre>
+
+<H2>Output for the Sample Input 2</H2>
+
+<pre>
+676636559
+</pre>
+
+<H2>Sample Input 3</H2>
+
+<pre>
+2 1 3 6 12 1 2 1 2
+RH
+</pre>
+
+<H2>Output for the Sample Input 3</H2>
+
+<pre>
+676547189
+</pre>
+
+<H2>Sample Input 4</H2>
+
+<pre>
+39989 6 999983 999979 999961 1 1000 1 1000
+SR 1 39989
+SC 1 39989
+RL
+RH
+RR
+RV
+</pre>
+
+<H2>Output for the Sample Input 4</H2>
+
+<pre>
+458797120
+</pre>
+

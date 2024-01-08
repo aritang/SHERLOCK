@@ -1,0 +1,70 @@
+<span class="lang-en">
+<p>Score : <var>200</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>It's now the season of TAKOYAKI FESTIVAL!</p>
+<p>This year, <var>N</var> takoyaki (a ball-shaped food with a piece of octopus inside) will be served. The <em>deliciousness</em> of the <var>i</var>-th takoyaki is <var>d_i</var>.</p>
+<p>As is commonly known, when you eat two takoyaki of deliciousness <var>x</var> and <var>y</var> together, you restore <var>x \times y</var> health points.</p>
+<p>There are <var>\frac{N \times (N - 1)}{2}</var> ways to choose two from the <var>N</var> takoyaki served in the festival. For each of these choices, find the health points restored from eating the two takoyaki, then compute the sum of these <var>\frac{N \times (N - 1)}{2}</var> values.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li>All values in input are integers.</li>
+<li><var>2 \leq N \leq 50</var></li>
+<li><var>0 \leq d_i \leq 100</var></li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+<var>d_1</var> <var>d_2</var> <var>...</var> <var>d_N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the sum of the health points restored from eating two takoyaki over all possible choices of two takoyaki from the <var>N</var> takoyaki served.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>3
+3 1 2
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>11
+</pre>
+<p>There are three possible choices:</p>
+<ul>
+<li>Eat the first and second takoyaki. You will restore <var>3</var> health points.</li>
+<li>Eat the second and third takoyaki. You will restore <var>2</var> health points.</li>
+<li>Eat the first and third takoyaki. You will restore <var>6</var> health points.</li>
+</ul>
+<p>The sum of these values is <var>11</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>7
+5 0 7 8 3 3 2
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>312
+</pre></section>
+</div>
+</span>

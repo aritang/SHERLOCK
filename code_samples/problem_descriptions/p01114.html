@@ -1,0 +1,145 @@
+<h3>Equilateral Triangular Fence</h3>
+<!-- end en only -->
+
+
+
+<!-- begin en only -->
+<p>
+Ms. Misumi owns an orchard along a straight road.
+Recently, wild boars have been witnessed strolling around the orchard aiming at pears, and she plans to construct a fence around many of the pear trees.
+</p>
+<p>The orchard contains <i>n</i> pear trees, whose locations are given by the two-dimensional Euclidean coordinates (<i>x</i><sub>1</sub>, <i>y</i><sub>1</sub>),..., (<i>x<sub>n</sub></i>, <i>y<sub>n</sub></i>). For simplicity, we neglect the thickness of pear trees.
+Ms. Misumi's aesthetic tells that the fence has to form a equilateral triangle with one of its edges parallel to the road.
+Its opposite apex, of course,  should be apart from the road.
+The coordinate system for the positions of the pear trees is chosen so that the road is expressed as <i>y</i> = 0, and the pear trees are located at <i>y</i> &#8805; 1.
+</p>
+<p>
+Due to budget constraints, Ms. Misumi decided to allow at most <i>k</i> trees to be left outside of the fence.
+You are to find the shortest possible perimeter of the fence on this condition.
+</p>
+<!-- end en only -->
+
+<!-- begin en only -->
+<p>
+The following figure shows the first dataset of the Sample Input.
+There are four pear trees at (&#8722;1,2), (0,1), (1,2), and (2,1). 
+By excluding (&#8722;1,2) from the fence, we obtain the equilateral triangle with perimeter 6.
+</p>
+<!-- end en only -->
+
+<p style="text-align:center;"> <img src="https://judgeapi.u-aizu.ac.jp/resources/images/ICPCDomestic2018_F1"> </p>
+
+
+
+
+<h3>Input</h3>
+
+
+
+
+<!-- begin en only -->
+<p>
+The input consists of multiple datasets, each in the following format.
+</p>
+<!-- end en only -->
+
+<blockquote>
+<p>
+<i>n</i> <br>
+<i>k</i> <br>
+<i>x</i><sub>1</sub> <i>y</i><sub>1</sub> <br>
+... <br>
+<i>x<sub>n</sub></i> <i>y<sub>n</sub></i> <br>
+</p>
+</blockquote>
+
+<!-- begin en only -->
+<p>
+Each of the datasets consists of <i>n</i>+2 lines.
+<i>n</i> in the first line is the integer representing the number of pear trees; it satisfies 3 &#8804; <i>n</i> &#8804; 10&#8239;000.
+<i>k</i> in the second line is the integer representing the number of pear trees that may be left outside of the fence; it satisfies 1 &#8804; <i>k</i> &#8804; min(<i>n</i>&#8722;2, 5&#8239;000).
+The following <i>n</i> lines have two integers each representing the <i>x-</i> and <i>y-</i> coordinates, in this order, of the locations of pear trees; it satisfies &#8722;10&#8239;000 &#8804; <i>x<sub>i</sub></i> &#8804; 10&#8239;000, 1 &#8804; <i>y<sub>i</sub></i> &#8804; 10&#8239;000.
+No two pear trees are at the same location, i.e., (<i>x<sub>i</sub></i>, <i>y<sub>i</sub></i>)=(<i>x<sub>j</sub></i>, <i>y<sub>j</sub></i>) only if <i>i</i>=<i>j</i>.
+</p>
+<!-- end en only -->
+
+<!-- begin en only -->
+<p>
+The end of the input is indicated by a line containing a zero.
+The number of datasets is at most 100.
+</p>
+<!-- end en only -->
+
+
+
+<h3>Output</h3>
+
+
+
+<!-- begin en only -->
+<p>
+For each dataset, output a single number that represents the shortest possible perimeter of the fence.
+The output must not contain an error greater than 10<sup>&#8722;6</sup>.
+</p>
+<!-- end en only -->
+
+
+
+<h3>Sample Input</h3>
+
+
+<pre>4
+1
+0 1
+1 2
+-1 2
+2 1
+4
+1
+1 1
+2 2
+1 3
+1 4
+4
+1
+1 1
+2 2
+3 1
+4 1
+4
+1
+1 2
+2 1
+3 2
+4 2
+5
+2
+0 1
+0 2
+0 3
+0 4
+0 5
+6
+3
+0 2
+2 2
+1 1
+0 3
+2 3
+1 4
+0
+</pre>
+
+
+<h3>Output for the Sample Input</h3>
+
+
+<pre>6.000000000000
+6.928203230276
+6.000000000000
+7.732050807569
+6.928203230276
+6.000000000000
+</pre>
+
+

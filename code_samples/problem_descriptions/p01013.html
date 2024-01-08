@@ -1,0 +1,69 @@
+
+
+<script src="./IMAGE/varmath.js" charset="UTF-8"></script>
+
+  <h1> Problem H: Cone Cut</h1>
+  <h2> Problem </h2>
+  <p>
+    この問題では3次元空間上のある点<var>X </var>とある点<var>Y </var>を通るような直線を直線<var>XY </var>と書く。
+  </p>
+  <p>
+    3次元空間上に円錐とその円錐内部の点<var>P </var>が与えられる。点<var>P </var>を通り円錐の底面に垂直な直線と円錐の底面との交点を点<var>Q </var>とする。この時、円錐の底面の中心を<var>O </var>とし、直線<var>OQ </var>と円錐の底面の円周との交点を、点<var>Q </var>に近い方から点<var>A </var>、点<var>B </var>とする(ただし、点<var>O </var>と点<var>Q </var>が同一点のときは、点<var>O </var>を通る任意の直線と円錐の底面の円周との交点を点<var>A </var>、点<var>B </var>とする。)。また、円錐の底面を含むような平面において、点<var>O </var>を通り、直線<var>AB </var>と垂直に交わる直線と円錐の底面の円周との交点を点<var>C </var>、点<var>D </var>とする(ただし、点<var>C </var>と点<var>D </var>は入れ替えても問題ない)。<br />
+  </p>
+  <p>
+    以下の図は、円錐の頂点方向から見た円錐の底面の図である。
+  </p>
+  <p>
+    <img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE3_ACPC2013Aizu_aizuicpc_bird" alt="円錐の頂点方向から見た円錐の底面の図"><br />
+  </p>
+  <p>
+    直線<var>AP </var>と直線<var>BP </var>の円錐との交点（直線<var>AP </var>の場合、点<var>A </var>でない方の交点を指す。直線<var>BP </var>も同様。）を点<var>A' </var>、点<var>B' </var>とし、点<var>A' </var>と点<var>B' </var>を通り直線<var>CD </var>と平行な平面<var>S </var>で円錐を切断する。この時、切断後の頂点を含む図形の体積ともう一方の図形の体積を空白区切りで出力せよ。
+  </p>
+  <h2> Input </h2>
+  <p>
+    円錐の頂点の<var>x </var>座標 <var>y </var>座標 <var>z </var>座標<br />
+    円錐の底面の中心の<var>x </var>座標 <var>y </var>座標 <var>z </var>座標 円錐の底面の半径<br />
+    点<var>P </var>の<var>x </var>座標 <var>y </var>座標 <var>z </var>座標<br />
+    <br />
+    各行のそれぞれの値はスペース区切りで与えられる。
+  </p>
+  <h2> Constraint </h2>
+  <p>
+    入力の値はすべて整数であり、その絶対値は1000以下である。<br />
+    円錐の高さとその底面の半径は1以上であり、点<var>P </var>と円錐の距離は10<sup>-5</sup>以上ある。
+  </p>
+  <h2> Output </h2>
+  <p>
+    切断後の頂点を含む図形の体積ともう一方の図形の体積を空白区切りで出力せよ。<br />
+    ただし、10<sup>-5</sup>を超える誤差を含んではいけない。
+  </p>
+  <h2> Sample Input 1</h2>
+<pre>
+0 0 10
+0 0 0 4
+0 0 1
+</pre>
+  <h2> Sample Output 1</h2>
+<pre>
+91.769438 75.782170
+</pre>
+  <h2> Sample Input 2</h2>
+<pre>
+0 0 10
+0 0 0 4
+1 1 1
+</pre>
+  <h2> Sample Output 2</h2>
+<pre>
+84.050413 83.501195
+</pre>
+  <h2> Sample Input 3</h2>
+<pre>
+0 0 0
+8 9 10 5
+1 1 1
+</pre>
+  <h2> Sample Output 3</h2>
+<pre>
+0.071663 409.709196
+</pre>

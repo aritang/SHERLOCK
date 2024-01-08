@@ -1,0 +1,98 @@
+<span class="lang-en">
+<p>Score : <var>1200</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>Takahashi is a magician. He can cast a spell on an integer sequence <var>(a_1,a_2,...,a_M)</var> with <var>M</var> terms, to turn it into another sequence <var>(s_1,s_2,...,s_M)</var>, where <var>s_i</var> is the sum of the first <var>i</var> terms in the original sequence.</p>
+<p>One day, he received <var>N</var> integer sequences, each with <var>M</var> terms, and named those sequences <var>A_1,A_2,...,A_N</var>. He will try to cast the spell on those sequences so that <var>A_1 &lt; A_2 &lt; ... &lt; A_N</var> will hold, where sequences are compared lexicographically.
+Let the action of casting the spell on a selected sequence be one cast of the spell. Find the minimum number of casts of the spell he needs to perform in order to achieve his objective.</p>
+<p>Here, for two sequences <var>a = (a_1,a_2,...,a_M), b = (b_1,b_2,...,b_M)</var> with <var>M</var> terms each, <var>a &lt; b</var> holds lexicographically if and only if there exists <var>i (1 ≦ i ≦ M)</var> such that <var>a_j = b_j (1 ≦ j &lt; i)</var> and <var>a_i &lt; b_i</var>.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 ≦ N ≦ 10^3</var></li>
+<li><var>1 ≦ M ≦ 10^3</var></li>
+<li>Let the <var>j</var>-th term in <var>A_i</var> be <var>A_{(i,j)}</var>, then <var>1 ≦ A_{(i,j)} ≦ 10^9</var>.</li>
+</ul>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Partial Scores</h3><ul>
+<li>In the test set worth <var>200</var> points, Takahashi can achieve his objective by at most <var>10^4</var> casts of the spell, while keeping the values of all terms at most <var>10^9</var>.</li>
+<li>In the test set worth another <var>800</var> points, <var>A_{(i,j)} ≦ 80</var>.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>The input is given from Standard Input in the following format:</p>
+<pre><var>N</var> <var>M</var>
+<var>A_{(1,1)}</var> <var>A_{(1,2)}</var> … <var>A_{(1,M)}</var>
+<var>A_{(2,1)}</var> <var>A_{(2,2)}</var> … <var>A_{(2,M)}</var>
+:
+<var>A_{(N,1)}</var> <var>A_{(N,2)}</var> … <var>A_{(N,M)}</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the minimum number of casts of the spell Takahashi needs to perform. If he cannot achieve his objective, print <code>-1</code> instead.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>3 3
+2 3 1
+2 1 2
+2 6 3
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>1
+</pre>
+<p>Takahashi can achieve his objective by casting the spell on <var>A_2</var> once to turn it into <var>(2 , 3 , 5)</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>3 3
+3 2 10
+10 5 4
+9 1 9
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>-1
+</pre>
+<p>In this case, Takahashi cannot achieve his objective by casting the spell any number of times.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>5 5
+2 6 5 6 9
+2 6 4 9 10
+2 6 8 6 7
+2 1 7 3 8
+2 1 4 8 3
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>11
+</pre></section>
+</div>
+</span>

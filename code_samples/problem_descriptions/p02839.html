@@ -1,0 +1,81 @@
+<span class="lang-en">
+<p>Score : <var>500</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>We have a grid with <var>H</var> horizontal rows and <var>W</var> vertical columns. Let <var>(i,j)</var> denote the square at the <var>i</var>-th row from the top and the <var>j</var>-th column from the left.</p>
+<p>The square <var>(i, j)</var> has two numbers <var>A_{ij}</var> and <var>B_{ij}</var> written on it.</p>
+<p>First, for each square, Takahashi paints one of the written numbers red and the other blue.</p>
+<p>Then, he travels from the square <var>(1, 1)</var> to the square <var>(H, W)</var>. In one move, he can move from a square <var>(i, j)</var> to the square <var>(i+1, j)</var> or the square <var>(i, j+1)</var>. He must not leave the grid.</p>
+<p>Let the <em>unbalancedness</em> be the absolute difference of the sum of red numbers and the sum of blue numbers written on the squares along Takahashi's path, including the squares <var>(1, 1)</var> and <var>(H, W)</var>.</p>
+<p>Takahashi wants to make the unbalancedness as small as possible by appropriately painting the grid and traveling on it.</p>
+<p>Find the minimum unbalancedness possible.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>2 \leq H \leq 80</var></li>
+<li><var>2 \leq W \leq 80</var></li>
+<li><var>0 \leq A_{ij} \leq 80</var></li>
+<li><var>0 \leq B_{ij} \leq 80</var></li>
+<li>All values in input are integers.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>H</var> <var>W</var>
+<var>A_{11}</var> <var>A_{12}</var> <var>\ldots</var> <var>A_{1W}</var>
+<var>:</var>
+<var>A_{H1}</var> <var>A_{H2}</var> <var>\ldots</var> <var>A_{HW}</var>
+<var>B_{11}</var> <var>B_{12}</var> <var>\ldots</var> <var>B_{1W}</var>
+<var>:</var>
+<var>B_{H1}</var> <var>B_{H2}</var> <var>\ldots</var> <var>B_{HW}</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the minimum unbalancedness possible.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>2 2
+1 2
+3 4
+3 4
+2 1
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>0
+</pre>
+<p>By painting the grid and traveling on it as shown in the figure below, the sum of red numbers and the sum of blue numbers are <var>3+3+1=7</var> and <var>1+2+4=7</var>, respectively, for the unbalancedness of <var>0</var>.</p>
+<p><img alt="Figure" src="https://img.atcoder.jp/ghi/a7eefcd144e470dad1d3f833a6806f2c.png"/></p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>2 3
+1 10 80
+80 10 1
+1 2 3
+4 5 6
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>2
+</pre></section>
+</div>
+</span>

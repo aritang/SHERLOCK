@@ -1,0 +1,108 @@
+<span class="lang-en">
+<p>Score : <var>1800</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>We have an <var>N \times M</var> grid. The square at the <var>i</var>-th row and <var>j</var>-th column will be denoted as <var>(i,j)</var>.
+Particularly, the top-left square will be denoted as <var>(1,1)</var>, and the bottom-right square will be denoted as <var>(N,M)</var>.
+Takahashi painted some of the squares (possibly zero) black, and painted the other squares white.</p>
+<p>We will define an integer sequence <var>A</var> of length <var>N</var>, and two integer sequences <var>B</var> and <var>C</var> of length <var>M</var> each, as follows:</p>
+<ul>
+<li><var>A_i(1\leq i\leq N)</var> is the minimum <var>j</var> such that <var>(i,j)</var> is painted black, or <var>M+1</var> if it does not exist.</li>
+<li><var>B_i(1\leq i\leq M)</var> is the minimum <var>k</var> such that <var>(k,i)</var> is painted black, or <var>N+1</var> if it does not exist.</li>
+<li><var>C_i(1\leq i\leq M)</var> is the maximum <var>k</var> such that <var>(k,i)</var> is painted black, or <var>0</var> if it does not exist.</li>
+</ul>
+<p>How many triples <var>(A,B,C)</var> can occur? Find the count modulo <var>998244353</var>.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Notice</h3><p><font color="Red">In this problem, the length of your source code must be at most <var>20000</var> B.
+Note that we will invalidate submissions that exceed the maximum length.</font></p>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 \leq N \leq 8000</var></li>
+<li><var>1 \leq M \leq 200</var></li>
+<li><var>N</var> and <var>M</var> are integers.</li>
+</ul>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Partial Score</h3><ul>
+<li><var>1500</var> points will be awarded for passing the test set satisfying <var>N\leq 300</var>.</li>
+</ul>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var> <var>M</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the number of triples <var>(A,B,C)</var>, modulo <var>998244353</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>2 3
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>64
+</pre>
+<p>Since <var>N=2</var>, given <var>B_i</var> and <var>C_i</var>, we can uniquely determine the arrangement of black squares in each column.
+For each <var>i</var>, there are four possible pairs <var>(B_i,C_i)</var>: <var>(1,1)</var>, <var>(1,2)</var>, <var>(2,2)</var> and <var>(3,0)</var>. Thus, the answer is <var>4^M=64</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>4 3
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>2588
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>17 13
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>229876268
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 4</h3><pre>5000 100
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 4</h3><pre>57613837
+</pre></section>
+</div>
+</span>

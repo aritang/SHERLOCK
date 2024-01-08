@@ -1,0 +1,149 @@
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({ tex2jax: { inlineMath: [["$","$"], ["\\(","\\)"]], processEscapes: true }});
+</script>
+<script type='text/javascript' src='http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
+</script>
+
+
+<h2>Problem J
+Cover the Polygon with Your Disk
+</h2>
+
+<p>
+A convex polygon is drawn on a flat paper sheet. You are trying to place a disk in your hands to cover as large area of the polygon as possible. In other words, the intersection area of the polygon and the disk should be maximized.
+</p>
+
+
+<h3>Input</h3>
+
+<p>
+The input consists of a single test case, formatted as follows. All input items are integers.<br/>
+<br/>
+$n$ $r$<br/>
+$x_1$ $y_1$<br/>
+.<br/>
+.<br/>
+.<br/>
+$x_n$ $y_n$<br/>
+</p>
+
+<p>
+$n$ is the number of vertices of the polygon ($3 \leq n \leq 10$). $r$ is the radius of the disk ($1 \leq r \leq 100$).
+$x_i$ and $y_i$ give the coordinate values of the $i$-th vertex of the polygon ($1 \leq i \leq n$). Coordinate values satisfy $0 \leq x_i \leq 100$ and $0 \leq y_i \leq 100$.
+</p>
+
+<p>
+The vertices are given in counterclockwise order. As stated above, the given polygon is convex. In other words, interior angles at all of its vertices are less than 180$^{\circ}$. Note that the border of a convex polygon never crosses or touches itself.
+</p>
+
+
+
+<h3>Output</h3>
+
+<p>
+Output the largest possible intersection area of the polygon and the disk. The answer should not have an error greater than 0.0001 ($10^{-4}$).
+</p>
+
+
+<h3>Sample Input 1</h3>
+
+<pre>4 4
+0 0
+6 0
+6 6
+0 6</pre>
+
+<h3>Sample Output 1</h3>
+
+<pre>35.759506</pre>
+
+<br/>
+
+<h3>Sample Input 2</h3>
+
+<pre>3 1
+0 0
+2 1
+1 3</pre>
+
+<h3>Sample Output 2</h3>
+
+<pre>2.113100</pre>
+
+<br/>
+
+<h3>Sample Input 3</h3>
+
+<pre>3 1
+0 0
+100 1
+99 1</pre>
+
+<h3>Sample Output 3</h3>
+
+<pre>0.019798</pre>
+
+<br/>
+
+<h3>Sample Input 4</h3>
+
+<pre>4 1
+0 0
+100 10
+100 12
+0 1</pre>
+
+<h3>Sample Output 4</h3>
+
+<pre>3.137569</pre>
+
+<br/>
+
+<h3>Sample Input 5</h3>
+
+<pre>10 10
+0 0
+10 0
+20 1
+30 3
+40 6
+50 10
+60 15
+70 21
+80 28
+90 36</pre>
+
+<h3>Sample Output 5</h3>
+
+<pre>177.728187</pre>
+
+
+
+<br/>
+
+<h3>Sample Input 6</h3>
+
+<pre>10 49
+50 0
+79 10
+96 32
+96 68
+79 90
+50 100
+21 90
+4 68
+4 32
+21 10</pre>
+
+<h3>Sample Output 6</h3>
+
+<pre>7181.603297</pre>
+
+
+
+
+
+
+
+

@@ -1,0 +1,106 @@
+<span class="lang-en">
+<p>Score : <var>600</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>There are <var>N</var> people, conveniently numbered <var>1</var> through <var>N</var>.
+We want to divide them into some number of groups, under the following two conditions:</p>
+<ul>
+<li>
+<p>Every group contains between <var>A</var> and <var>B</var> people, inclusive.</p>
+</li>
+<li>
+<p>Let <var>F_i</var> be the number of the groups containing exactly <var>i</var> people. Then, for all <var>i</var>, either <var>F_i=0</var> or <var>C≤F_i≤D</var> holds.</p>
+</li>
+</ul>
+<p>Find the number of these ways to divide the people into groups.
+Here, two ways to divide them into groups is considered different if and only if there exists two people such that they belong to the same group in exactly one of the two ways.
+Since the number of these ways can be extremely large, print the count modulo <var>10^9+7</var>.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1≤N≤10^3</var></li>
+<li><var>1≤A≤B≤N</var></li>
+<li><var>1≤C≤D≤N</var></li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>The input is given from Standard Input in the following format:</p>
+<pre><var>N</var> <var>A</var> <var>B</var> <var>C</var> <var>D</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the number of ways to divide the people into groups under the conditions, modulo <var>10^9+7</var>.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>3 1 3 1 2
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>4
+</pre>
+<p>There are four ways to divide the people:</p>
+<ul>
+<li><var>(1,2),(3)</var></li>
+<li><var>(1,3),(2)</var></li>
+<li><var>(2,3),(1)</var></li>
+<li><var>(1,2,3)</var></li>
+</ul>
+<p>The following way to divide the people does not count: <var>(1),(2),(3)</var>. This is because it only satisfies the first condition and not the second.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>7 2 3 1 3
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>105
+</pre>
+<p>The only ways to divide the people under the conditions are the ones where there are two groups of two people, and one group of three people.
+There are <var>105</var> such ways.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>1000 1 1000 1 1000
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>465231251
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 4</h3><pre>10 3 4 2 5
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 4</h3><pre>0
+</pre>
+<p>The answer can be <var>0</var>.</p></section>
+</div>
+</span>

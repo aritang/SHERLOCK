@@ -1,0 +1,111 @@
+
+
+<h1>Substring</h1>
+<p>長さnの文字列s=s<sub>1</sub>,s<sub>2</sub>,…,s<sub>n</sub>およびm個のクエリが与えられる。
+各クエリq<sub>k</sub> (1 &le; k &le; m)は、&quot;L++&quot;, &quot;L--&quot;, &quot;R++&quot;, &quot;R--&quot;の4種類のいずれかであり、
+k番目のクエリq<sub>k</sub>に対してl[k]とr[k]を以下で定義する。
+</p>
+<ul><li><p> L++：l[k]=l[k-1]+1,r[k]=r[k-1]
+</p></li><li><p> L--：l[k]=l[k-1]-1,r[k]=r[k-1]
+</p></li><li><p> R++：l[k]=l[k-1],r[k]=r[k-1]+1
+</p></li><li><p> R--：l[k]=l[k-1],r[k]=r[k-1]-1
+</p></li></ul>
+
+<p>但し、l[0]=r[0]=1である。
+</p>
+<p>この時、m個の部分文字列
+s<sub>l[k]</sub>, s<sub>l[k]+1</sub>, …, s<sub>r[k]-1</sub>, s<sub>r[k]</sub> (1 &le; k &le; m)
+について、何種類の文字列が作られるかを答えよ。
+</p>
+
+<h2>Input</h2>
+<p>入力は以下の形式で与えられる
+</p><blockquote>
+n m<br>s<br>q<sub>1</sub><br>q<sub>2</sub><br>…<br>q<sub>m</sub><br></blockquote>
+
+
+<h2>Constraints</h2>
+<ul><li><p> 文字列sは小文字アルファベットからなる
+</p></li><li><p> 1 &le; n &le; 3×10<sup>5</sup>
+</p></li><li><p> 1 &le; m &le; 3×10<sup>5</sup>
+</p></li><li><p> q<sub>k</sub>(1 &le; k &le; m)は、&quot;L++&quot;、&quot;L--&quot;、&quot;R++&quot;、&quot;R--&quot;のいずれか
+</p></li><li><p> 1 &le; l[k] &le; r[k] &le; n (1 &le; k &le; m)
+</p></li></ul>
+
+
+<h2>Output</h2>
+<p>問題の解を1行に出力せよ
+</p>
+
+<h2>Sample Input 1</h2>
+
+<pre>5 4
+abcde
+R++
+R++
+L++
+L--
+</pre>
+
+<h2>Output for the Sample Input 1</h2>
+
+<pre>3
+</pre><ul><li><p>l[1]=1, r[1]=2であり、部分文字列は&quot;ab&quot;である
+</p></li><li><p>l[2]=1, r[2]=3であり、部分文字列は&quot;abc&quot;である
+</p></li><li><p>l[3]=2, r[3]=3であり、部分文字列は&quot;bc&quot;である
+</p></li><li><p>l[4]=1, r[4]=3であり、部分文字列は&quot;abc&quot;である
+</p></li></ul>
+
+<p>よって、生成される文字列は{&quot;ab&quot;,&quot;abc&quot;,&quot;bc&quot;}の3種類である。
+</p>
+
+<h2>Sample Input 2</h2>
+
+<pre>4 6
+abab
+R++
+L++
+R++
+L++
+R++
+L++
+</pre>
+
+<h2>Output for the Sample Input 2</h2>
+
+<pre>4
+</pre><ul><li><p>l[1]=1, r[1]=2であり、部分文字列は&quot;ab&quot;である
+</p></li><li><p>l[2]=2, r[2]=2であり、部分文字列は&quot;b&quot;である
+</p></li><li><p>l[3]=2, r[3]=3であり、部分文字列は&quot;ba&quot;である
+</p></li><li><p>l[4]=3, r[4]=3であり、部分文字列は&quot;a&quot;である
+</p></li><li><p>l[5]=3, r[5]=4であり、部分文字列は&quot;ab&quot;である
+</p></li><li><p>l[6]=4, r[6]=4であり、部分文字列は&quot;b&quot;である
+</p></li></ul>
+
+<p>よって、生成される文字列は{&quot;a&quot;,&quot;ab&quot;,&quot;b&quot;,&quot;ba&quot;}の4種類である。
+</p>
+
+
+<h2>Sample Input 3</h2>
+
+<pre>10 13
+aacacbabac
+R++
+R++
+L++
+R++
+R++
+L++
+L++
+R++
+R++
+L--
+L--
+R--
+R--
+</pre>
+
+<h2>Output for the Sample Input 3</h2>
+
+<pre>11
+</pre>

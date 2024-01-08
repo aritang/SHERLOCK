@@ -1,0 +1,74 @@
+
+<H1><font color="#000">Problem B:</font> Erratic Sleep Habits</H1>
+
+<p>
+Peter is a person with erratic sleep habits. He goes to sleep at twelve o'lock every midnight. He gets
+up just after one hour of sleep on some days; he may even sleep for twenty-three hours on other days.
+His sleeping duration changes in a cycle, where he always sleeps for only one hour on the first day of the
+cycle.
+</p>
+<p>
+Unfortunately, he has some job interviews this month. No doubt he wants to be in time for them. He can
+take anhydrous caffeine to reset his sleeping cycle to the beginning of the cycle anytime. Then he will
+wake up after one hour of sleep when he takes caffeine. But of course he wants to avoid taking caffeine
+as possible, since it may affect his health and accordingly his very important job interviews.
+</p>
+<p>
+Your task is to write a program that reports the minimum amount of caffeine required for Peter to attend
+all his interviews without being late, where the information about the cycle and the schedule of his
+interviews are given. The time for move to the place of each interview should be considered negligible.
+</p>
+
+<H2>Input</H2>
+
+<p>
+The input consists of multiple datasets. Each dataset is given in the following format:
+</p>
+
+<p>
+       <i>T</i><br>
+       <i>t</i><sub>1</sub> <i>t</i><sub>2</sub> ... <i>t<sub>T</sub></i><br>
+       <i>N</i><br>
+       <i>D</i><sub>1</sub> <i>M</i><sub>1</sub><br>
+       <i>D</i><sub>2</sub> <i>M</i><sub>2</sub><br>
+       ...<br>
+       <i>D</i><sub><i>N</i></sub> <i>M</i><sub><i>N</i></sub><br>
+</p>
+
+<p>
+<i>T</i> is the length of the cycle (1 &le; <i>T</i> &le; 30); <i>t<sub>i</sub></i> (for 1 &le; <i>i</i> &le; <i>T</i> ) is the amount of sleep on the <i>i</i>-th day of the
+cycle, given in hours (1 &le; <i>t<sub>i</sub></i> &le; 23); <i>N</i> is the number of interviews (1 &le; <i>N</i> &le; 100); <i>D<sub>j</sub></i> (for 1 &le; <i>j</i> &le; <i>N</i>)
+is the day of the <i>j</i>-th interview (1 &le; <i>D<sub>j</sub></i> &le; 100); <i>M<sub>j</sub></i> (for 1 &le; <i>j</i> &le; <i>N</i>) is the hour when the <i>j</i>-th interview starts (1 &le; <i>M<sub>j</sub></i> &le; 23).
+</p>
+<p>
+The numbers in the input are all integers. <i>t</i><sub>1</sub> is always 1 as stated above. The day indicated by 1 is the
+first day in the cycle of Peter's sleep.
+</p>
+
+<p>
+The last dataset is followed by a line containing one zero. This line is not a part of any dataset and should not be processed.
+</p>
+
+
+<H2>Output</H2>
+
+<p>
+For each dataset, print the minimum number of times Peter needs to take anhydrous caffeine.
+</p>
+
+<H2>Sample Input</H2>
+<pre>
+2
+1 23
+3
+1 1
+2 1
+3 1
+0
+</pre>
+
+<H2>Output for the Sample Input</H2>
+<pre>
+2
+</pre>
+

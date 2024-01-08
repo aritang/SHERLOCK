@@ -1,0 +1,59 @@
+
+<h2>A: Union Ball</h2>
+
+<h3>Problem Statement</h3>
+<p>There are <var>N</var> balls in a box. The <var>i</var>-th ball is labeled with a positive integer <var>A_i</var>.</p>
+
+<p>You can interact with balls in the box by taking actions under the following rules:</p>
+
+<ul>
+<li> If integers on balls in the box are all odd or all even, you cannot take actions anymore.</li>
+<li> Otherwise, you select arbitrary two balls in the box and remove them from the box. Then, you generate a new ball labeled with the sum of the integers on the two balls and put it into the box.</li>
+</ul>
+
+<p>For given balls, what is the maximum number of actions you can take under the above rules?</p>
+
+<h3>Input</h3>
+<pre>
+<var>N</var>
+<var>A_1</var> <var>A_2</var> <var>...</var> <var>A_N</var>
+</pre>
+
+<ul>
+<li> The first line gives an integer <var>N</var> representing the initial number of balls in a box.</li>
+<li> The second line contains <var>N</var> integers, the <var>i</var>-th of which is the integer on the <var>i</var>-th ball.</li>
+</ul>
+
+<h3>Constraints</h3>
+<ul>
+<li> <var>1 \leq N \leq 2 \times 10^5</var></li>
+<li> <var>1 \leq A_i \leq 10^9</var></li>
+<li> Inputs consist only of integers.</li>
+</ul>
+
+<h3>Output</h3>
+<p>Output the maximum number of actions you can take in one line.</p>
+
+<h3>Sample Input 1</h3>
+<pre>
+3
+4 5 6
+</pre>
+<h3>Output for Sample Input 1</h3>
+<pre>2</pre>
+
+<p>
+First, you select and remove balls labeled with <var>4</var> and <var>5</var>, respectively, and add a ball labeled with <var>9</var>.
+Next, you select and remove balls labeled with <var>6</var> and <var>9</var>, respectively, and add a ball labeled with <var>15</var>.
+Now, the balls in the box only have odd numbers. So you cannot take any actions anymore. The number of actions you took is two, and there is no way to achieve three actions or more. Thus the maximum is two and the series of the above actions is one of the optimal ways.
+</p>
+
+<h3>Sample Input 2</h3>
+<pre>
+4
+4 2 4 2
+</pre>
+<h3>Output for Sample Input 2</h3>
+<pre>0</pre>
+
+<p>You cannot take any actions in this case.</p>

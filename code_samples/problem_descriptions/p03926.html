@@ -1,0 +1,101 @@
+<span class="lang-en">
+<p>Score : <var>1600</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>There are <var>N</var> squares in a row, numbered <var>1</var> through <var>N</var> from left to right.
+Snuke and Rng are playing a board game using these squares, described below:</p>
+<ol>
+<li>First, Snuke writes an integer into each square.</li>
+<li>Each of the two players possesses one piece. Snuke places his piece onto square <var>1</var>, and Rng places his onto square <var>2</var>.</li>
+<li>The player whose piece is to the left of the opponent's, moves his piece. The destination must be a square to the right of the square where the piece is currently placed, and must not be a square where the opponent's piece is placed.</li>
+<li>Repeat step <em>3.</em> When the pieces cannot be moved any more, the game ends.</li>
+<li>The score of each player is calculated as the sum of the integers written in the squares where the player has placed his piece before the end of the game.</li>
+</ol>
+<p>Snuke has already written an integer <var>A_i</var> into square <var>i (1≦i≦N-1)</var>, but not into square <var>N</var> yet.
+He has decided to calculate for each of <var>M</var> integers <var>X_1,X_2,...,X_M</var>, if he writes it into square <var>N</var> and the game is played, what the value "(Snuke's score) - (Rng's score)" will be.
+Here, it is assumed that each player moves his piece to maximize the value "(the player's score) - (the opponent's score)".</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>3≦N≦200,000</var></li>
+<li><var>0≦A_i≦10^6</var></li>
+<li>The sum of all <var>A_i</var> is at most <var>10^6</var>.</li>
+<li><var>1≦M≦200,000</var></li>
+<li><var>0≦X_i≦10^9</var></li>
+</ul>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Partial Scores</h3><ul>
+<li><var>700</var> points will be awarded for passing the test set satisfying <var>M=1</var>.</li>
+<li>Additional <var>900</var> points will be awarded for passing the test set without additional constraints.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>The input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+<var>A_1</var> <var>A_2</var> <var>...</var> <var>A_{N-1}</var>
+<var>M</var>
+<var>X_1</var>
+<var>X_2</var>
+<var>:</var>
+<var>X_M</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>For each of the <var>M</var> integers <var>X_1, ..., X_M</var>, print the value "(Snuke's score) - (Rng's score)" if it is written into square <var>N</var>, one per line.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>5
+2 7 1 8
+1
+2
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>0
+</pre>
+<p>The game proceeds as follows, where <code>S</code> represents Snuke's piece, and <code>R</code> represents Rng's.</p>
+<p><img alt="" src="https://atcoder.jp/img/code-festival-2016-final/0c38db3b7902579a8bc2d0798b8dda27.png"/></p>
+<p>Both player scores <var>10</var>, thus "(Snuke's score) - (Rng's score)" is <var>0</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>9
+2 0 1 6 1 1 2 6
+5
+2016
+1
+1
+2
+6
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>2001
+6
+6
+7
+7
+</pre></section>
+</div>
+</span>

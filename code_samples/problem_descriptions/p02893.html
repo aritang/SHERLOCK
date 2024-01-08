@@ -1,0 +1,79 @@
+<span class="lang-en">
+<p>Score : <var>800</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>Given are integers <var>N</var> and <var>X</var>. For each integer <var>k</var> between <var>0</var> and <var>X</var> (inclusive), find the answer to the following question, then compute the sum of all those answers, modulo <var>998244353</var>.</p>
+<ul>
+<li>Let us repeat the following operation on the integer <var>k</var>. Operation: if the integer is currently odd, subtract <var>1</var> from it and divide it by <var>2</var>; otherwise, divide it by <var>2</var> and add <var>2^{N-1}</var> to it. How many operations need to be performed until <var>k</var> returns to its original value? (The answer is considered to be <var>0</var> if <var>k</var> never returns to its original value.)</li>
+</ul>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 \leq N \leq 2\times 10^5</var></li>
+<li><var>0 \leq X &lt; 2^N</var></li>
+<li><var>X</var> is given in binary and has exactly <var>N</var> digits. (In case <var>X</var> has less than <var>N</var> digits, it is given with leading zeroes.)</li>
+<li>All values in input are integers.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+<var>X</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the sum of the answers to the questions for the integers between <var>0</var> and <var>X</var> (inclusive), modulo <var>998244353</var>.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>3
+111
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>40
+</pre>
+<p>For example, for <var>k=3</var>, the operation changes <var>k</var> as follows: <var>1,0,4,6,7,3</var>. Therefore the answer for <var>k=3</var> is <var>6</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>6
+110101
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>616
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>30
+001110011011011101010111011100
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>549320998
+</pre></section>
+</div>
+</span>

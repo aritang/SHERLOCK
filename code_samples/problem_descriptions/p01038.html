@@ -1,0 +1,106 @@
+
+
+<h1>Problem B: Mountain Climbing</h1>
+<h2>Problem</h2>
+
+<p>
+なりよし君は山登りの計画を立てています。計画はとても大切です。高原・盆地が多いのか、峰・窪地が多いのか、山腹があるのか、状況によって用意する荷物も変わってきます。
+</p>
+<p>
+なりよし君が持っている登山ガイドブックには、今回登山に利用する道の一定の距離毎の標高がスタート地点からゴール地点まで順に書かれています。
+</p>
+<p>
+ガイドブックに書かれている標高をスタート地点からゴール地点まで順に
+<var>a<sub>1</sub></var>, <var>a<sub>2</sub></var>, <var>a<sub>3</sub></var>, ..., <var>a<sub>N</sub></var>とし、高原、盆地、山腹、峰、窪地を次のように定義します:
+</p>
+<ul>
+  <li>高原<br/>
+    <var>a<sub>i-1</sub></var> &lt; <var>a<sub>i</sub></var> = <var>a<sub>i+1</sub></var> = ... = <var>a<sub>j</sub></var> &gt; <var>a<sub>j+1</sub></var> (<var>1</var> &lt; <var>i</var> &lt; <var>j</var> &lt; <var>N</var>)
+  </li>
+  <li>盆地<br />
+    <var>a<sub>i-1</sub></var> &gt; <var>a<sub>i</sub></var> = <var>a<sub>i+1</sub></var> = ... = <var>a<sub>j</sub></var> &lt; <var>a<sub>j+1</sub></var> (<var>1</var> &lt; <var>i</var> &lt; <var>j</var> &lt; <var>N</var>)
+  </li>
+  <li>山腹<br />
+    <var>a<sub>i-1</sub></var> &lt; <var>a<sub>i</sub></var> = <var>a<sub>i+1</sub></var> = ... = <var>a<sub>j</sub></var> &lt; <var>a<sub>j+1</sub></var> (<var>1</var> &lt; <var>i</var> &lt; <var>j</var> &lt; <var>N</var>)<br />
+もしくは
+    <var>a<sub>i-1</sub></var> &gt; <var>a<sub>i</sub></var> = <var>a<sub>i+1</sub></var> = ... = <var>a<sub>j</sub></var> &gt; <var>a<sub>j+1</sub></var> (<var>1</var> &lt; <var>i</var> &lt; <var>j</var> &lt; <var>N</var>)<br />
+  </li>
+  <li>峰<br />
+    <var>a<sub>i-1</sub></var> &lt; <var>a<sub>i</sub></var> &gt; <var>a<sub>i+1</sub></var> (<var>1</var> &lt; <var>i</var> &lt; <var>N</var>)<br />
+  </li>
+  <li>窪地<br />
+    <var>a<sub>i-1</sub></var> &gt; <var>a<sub>i</sub></var> &lt; <var>a<sub>i+1</sub></var> (<var>1</var> &lt; <var>i</var> &lt; <var>N</var>)<br />
+  </li>
+</ul>
+
+<figure>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_RitsCamp15_UA_B_kougen.png" />
+<figcaption>高原</figcaption>
+</figure>
+<figure>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_RitsCamp15_UA_B_bonchi.png" />
+<figcaption>盆地</figcaption>
+</figure>
+<figure>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_RitsCamp15_UA_B_sanpuku1.png" />
+<figcaption>山腹</figcaption>
+</figure>
+<figure>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_RitsCamp15_UA_B_sanpuku2.png" />
+<figcaption>山腹</figcaption>
+</figure>
+<figure>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_RitsCamp15_UA_B_mine.png" />
+<figcaption>峰</figcaption>
+</figure>
+<figure>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_RitsCamp15_UA_B_kubochi.png" />
+<figcaption>窪地</figcaption>
+</figure>
+<br />
+<p>
+あなたは、なりよし君の為に、高原・盆地・山腹・峰・窪地、それぞれの数を計算するプログラムを書くことにしました。
+</p>
+<h2>Input</h2>
+
+<p>
+入力は次のような形式で与えられる:
+</p>
+<pre>
+<var>N</var> <var>a<sub>1</sub></var> <var>a<sub>2</sub></var> <var>a<sub>3</sub></var>...<var>a<sub>N</sub></var>
+</pre>
+<p>
+<var>N</var>は与えられる標高の数を表す整数である。
+<var>a<sub>i</sub></var>は標高を表す整数である( 1 &le; i &le; <var>N</var> )。それぞれ空白区切りで与えられる。
+</p>
+<h2>Constraints</h2>
+<p>入力は以下の条件を満たす。</p>
+<ul>
+  <li>1 &le; <var>N</var> &le; 100000</li>
+  <li>-100000 &le; <var>a<sub>i</sub></var> &le; 100000</li>
+</ul>
+
+<h2>Output</h2>
+<p>高原の数、盆地の数、山腹、峰、窪地の数を順番に空白区切りで一行に出力せよ。</p>
+
+<h2>Sample Input 1</h2>
+<pre>
+5 1 2 3 4 3
+</pre>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_RitsCamp15_UA_B_sample01.png" />
+
+<h2>Sample Output 1</h2>
+<pre>
+0 0 0 1 0
+</pre>
+
+<h2>Sample Input 2</h2>
+<pre>
+12 10 5 15 15 20 20 12 12 8 3 3 5
+</pre>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_RitsCamp15_UA_B_sample02.png" />
+
+<h2>Sample Output 2</h2>
+<pre>
+1 1 2 0 1
+</pre>

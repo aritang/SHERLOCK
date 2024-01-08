@@ -1,0 +1,228 @@
+
+
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({ tex2jax: { inlineMath: [["$","$"], ["\\(","\\)"]], processEscapes: true }});
+</script>
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+
+<H1>プログラム停止判定</H1>
+
+<p>
+皆さんは、苦労して作ったプログラムを実行してみたら、無限ループになってしまった経験はありませんか？ プログラムの実行が停止するかどうかを、実行しなくても事前に判定できると便利ですよね。
+</p>
+
+<p>
+残念ながら、皆さんがふだん使っているプログラミング言語では、あらゆるプログラムに対してそのような判定をすることは不可能です。しかし、それよりもはるかに計算能力の低いプログラミング言語なら、その言語で書いたプログラムが停止するかどうかを判定するプログラムを書ける場合があります。
+</p>
+
+<p>
+TinyPowerというプログラミング言語を考えます。この言語のプログラムは行の並びです。プログラムの各行には、先頭に行番号を書き、その後ろに文を一つ書きます。この言語で書ける文の種類は以下の通りです。
+</p>
+
+<center>
+<table width="680">
+  <tr>
+    <th style="text-align:left" width="200">文の種類</th>
+    <th style="text-align:left">動作</th>
+  </tr>
+  <tr>
+    <td>ADD var<sub>1</sub> var<sub>2</sub> var<sub>3</sub></td>
+    <td>変数 var<sub>2</sub> の値と var<sub>3</sub> の値を加算した結果を変数 var<sub>1</sub>に代入する</td>
+  </tr>
+  <tr>
+    <td>ADD var<sub>1</sub> var<sub>2</sub> con</td>
+    <td>変数 var<sub>2</sub> の値と定数 con を加算した結果を変数 var<sub>1</sub> に代入する</td>
+  </tr>
+  <tr>
+    <td>SUB var<sub>1</sub> var<sub>2</sub> var<sub>3</sub></td>
+    <td>変数 var<sub>2</sub> の値から var<sub>3</sub> の値を減算した結果を変数 var<sub>1</sub> に代入する</td>
+  </tr>
+  <tr>
+    <td>SUB var<sub>1</sub> var<sub>2</sub> con</td>
+    <td>変数 var<sub>2</sub> の値から定数 con を減算した結果を変数 var<sub>1</sub> に代入する</td>
+  </tr>
+  <tr>
+    <td>SET var<sub>1</sub> var<sub>2</sub></td>
+    <td>変数 var<sub>2</sub>の値を変数 var<sub>1</sub> に代入する</td>
+  </tr>
+  <tr>
+    <td>SET var<sub>1</sub> con</td>
+    <td>定数 con を変数 var<sub>1</sub> に代入する</td>
+  </tr>
+  <tr>
+    <td>IF var<sub>1</sub> dest</td>
+    <td>変数 var<sub>1</sub> の値が０でないときだけ、行番号 dest にジャンプする</td>
+  </tr>
+  <tr>
+    <td>HALT</td>
+    <td>プログラムを停止させる</td>
+  </tr>
+</table>
+</center>
+<br/>
+
+<p>
+行番号は正の整数で、プログラム中に同じ行番号が２つ以上現れることはありません。変数は英小文字一文字で表し、定数と変数の値は整数です。変数の宣言は不要で、変数の初期値は０です。
+</p>
+
+<p>
+プログラムの実行は先頭の文から始まり、並んでいる順に文が実行されます。ただし、上の表に書かれたように、IF文の変数の値が０でないときは、変数の後ろに書かれた行番号で指定される行にジャンプし、その行に書かれた文から実行を続けます。プログラムは以下のときに停止します。
+</p>
+
+<ul>
+<li> HALT文を実行したとき。</li>
+<li> 負の整数または１６以上の整数を変数に代入しようとしたとき（変数の値は更新されない）。</li>
+<li> プログラムに現れない行番号にジャンプしようとしたとき。</li>
+<li> プログラムの最後の文を実行した後、そこからどの行にもジャンプしないとき。</li>
+</ul>
+
+<p>
+TinyPowerのプログラムが与えられたとき、それが停まるかどうかを判定するプログラムを作成せよ。
+</p>
+
+
+<h2>Input</h2>
+
+<p>
+入力は以下の形式で与えられる。
+</p>
+
+<pre>
+<var>N</var>
+<var>stmt<sub>1</sub></var>
+<var>stmt<sub>2</sub></var>
+:
+<var>stmt<sub>N</sub></var>
+</pre>
+
+<p>
+１行目にプログラムの行数 <var>N</var> (1 &le; <var>N</var> &le; 50) が与えられる。続く <var>N</var> 行に、TinyPowerプログラムの文 <var>stmt<sub>i</sub></var> が与えられる。<var>stmt<sub>i</sub></var> は、以下のいずれかの形式で与えられる。
+</p>
+
+<pre>
+<var>line</var> ADD <var>var<sub>1</sub></var> <var>var<sub>2</sub></var> <var>var<sub>3</sub></var>
+</pre>
+
+<p>または</p>
+
+<pre>
+<var>line</var> ADD <var>var<sub>1</sub></var> <var>var<sub>2</sub></var> <var>con</var>
+</pre>
+
+<p>または</p>
+
+<pre>
+<var>line</var> SUB <var>var<sub>1</sub></var> <var>var<sub>2</sub></var> <var>var<sub>3</sub></var>
+</pre>
+
+<p>または</p>
+
+<pre>
+<var>line</var> SUB <var>var<sub>1</sub></var> <var>var<sub>2</sub></var> <var>con</var>
+</pre>
+
+<p>または</p>
+
+<pre>
+<var>line</var> SET <var>var<sub>1</sub></var> <var>var<sub>2</sub></var>
+</pre>
+
+<p>または</p>
+
+<pre>
+<var>line</var> SET <var>var<sub>1</sub></var> <var>con</var>
+</pre>
+
+<p>または</p>
+
+<pre>
+<var>line</var> IF <var>var<sub>1</sub></var> <var>dest</var>
+</pre>
+
+<p>または</p>
+
+<pre>
+<var>line</var> HALT
+</pre>
+
+
+<p>
+<var>line</var>, <var>dest</var> (1 &le; <var>line</var>, <var>dest</var> &le; 1000) は行番号、<var>var<sub>j</sub></var> (英小文字１文字)は変数、<var>con</var> (0 &le; <var>con</var> &le; 15) は定数を表す。<var>stmt<sub>i</sub></var> 中の区切りは空白１文字とする。なお、プログラム中に変数は必ず１つ以上現れ、異なる変数名は５つまでしか現れないものとする。
+</p>
+
+
+
+
+<h2>Output</h2>
+
+<p>
+プログラムが停止するときは、プログラムに現れる変数の結果を、変数名の辞書順に改行区切りで出力し、停止しないときは「inf」を出力する。変数の結果は、変数名と変数の値を「=」で区切って出力する。
+</p>
+
+<h2>Sample Input 1</h2>
+
+<pre>
+6
+10 SET c 1
+20 SET i 5
+100 ADD s s i
+110 SUB i i c
+120 IF i 100
+200 HALT
+</pre>
+
+<h2>Sample Output 1</h2>
+<pre>
+c=1
+i=0
+s=15
+</pre>
+
+<p>
+入力例１は、１から５までの整数の和を計算し、その結果を変数sに格納したあと、HALT文の実行で停止する。
+</p>
+
+
+<br/>
+
+
+<h2>Sample Input 2</h2>
+<pre>
+3
+10 SET c 1
+120 IF c 10
+20 HALT
+</pre>
+
+<h2>Sample Output 2</h2>
+<pre>
+inf
+</pre>
+
+<p>
+入力例２は、行番号10でcに1を代入し、次の行番号120のIF文で行番号10に戻ることを繰り返すので、停止しない。
+</p>
+
+<br/>
+
+<h2>Sample Input 3</h2>
+
+<pre>
+3
+111 SET c 1
+12 SUB c c 2
+777 SET a 4
+</pre>
+
+<h2>Sample Output 3</h2>
+<pre>
+a=0
+c=1
+</pre>
+
+<p>
+入力例３は、行番号111でcに1を代入し、次の行番号12でcに-1を代入しようとするので、停止する。このときcの値は-1に更新されない。行番号777は実行されないので、aの値は初期値0のままである。
+</p>

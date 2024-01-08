@@ -1,0 +1,88 @@
+
+
+
+<h1>Problem H: Zombie Hunter</h1>
+
+<h2>Problem</h2>
+<p>
+  がっちょ君は人気のゲーム、Zombie Hunterに熱中している。このゲームには、頭、胴、腕、腰、足専用の5種類の防具があり、がっちょ君が操作するプレイヤーキャラクター(PC)は、体の各部に対応する防具をそれぞれ最大1つまで装備することができる。<br>
+また、各防具には重さと防御力が設定されており、PCの装備している防具の重さの合計が<var>A</var>以上<var>B</var>以下であり、かつ防御力の合計も<var>A</var>以上<var>B</var>以下であるとき、そのPCはスキルを発動することができる。
+</p>
+
+<p>
+がっちょ君は<var>N</var>個の防具を所持している。装備する防具を適切に選ぶことで、PCがスキルを発動することができるかを調べて欲しい。<br>
+</p>
+
+<h2>Input</h2>
+<p>入力は以下の形式で与えられる。</p>
+<pre>
+<var>N</var> <var>A</var> <var>B</var>
+<var>t<sub>1</var> <var>x<sub>1</sub></var> <var>y<sub>1</sub></var>
+<var>t<sub>2</var> <var>x<sub>2</sub></var> <var>y<sub>2</sub></var>
+...
+<var>t<sub>N</var> <var>x<sub>N</sub></var> <var>y<sub>N</sub></var>
+</pre>
+<p>
+  入力はすべて整数で与えられる。<br>
+  1行目にがっちょ君が所有している防具の数<var>N</var>, スキルの発動条件に用いられる２つの整数<var>A</var>と<var>B</var>が与えられる。<br>
+  2行目から続く<var>N</var>行に、<var>N</var>個の防具の情報が与えられる。<var>t<sub>i</sub></var>, <var>x<sub>i</sub></var>, <var>y<sub>i</sub></var> はそれぞれ<var>i</var>番目の防具の種類、重さ、防御力を表す。<br><br>
+  防具の種類<var>t<sub>i</sub></var>の値はそれぞれ、1のとき頭の防具、2のとき胴の防具、3のとき腕の防具、4のとき腰の防具、5のとき足の防具であることを示す。
+</p>
+
+<h2>Constraints</h2>
+<p>入力は以下の条件を満たす。</p>
+<ul>
+  <li>1 &le; <var>N</var> &le; 500</li>
+  <li>1 &le; <var>A</var> &le; <var>B</var> &le; 10<sup>12</sup></li>
+  <li>1 &le; <var>t<sub>i</sub></var> &le; 5</li>
+  <li>&minus;10<sup>12</sup> &le; <var>x<sub>i</sub></var>,<var>y<sub>i</sub></var> &le; 10<sup>12</sup></li>
+</ul>
+
+<h2>Output</h2>
+<p>
+  スキルを発動することができる場合は”Yes”、できない場合は”No”を1行に出力せよ。
+</p>
+
+
+<h2>Sample Input 1</h2>
+<pre>
+7 10 11
+1 1 0
+1 0 1
+2 2 2
+3 3 5
+4 1 3
+5 1 3
+5 5 -1
+</pre>
+
+<h2>Sample Output 1</h2>
+<pre>
+Yes
+</pre>
+
+<p>
+頭に(0,1)<br>
+胴に(2,2)<br>
+腕に(3,5)<br>
+腰に(1,3)<br>
+足に(5,-1)<br>
+の防具を装備すると、重さの和が 0&plus;2&plus;3&plus;1&plus;5 = 11、守備力の和が 1&plus;2&plus;5&plus;3&plus;1 = 10 となり、両方の値がA以上でかつB以下となるのでスキルを発動させることができる。<br>
+</p>
+
+<h2>Sample Input 2</h2>
+<pre>
+7 10 10
+1 1 0
+1 0 1
+2 2 2
+3 3 5
+4 1 3
+5 1 3
+5 5 -1
+</pre>
+
+<h2>Sample Output 2</h2>
+<pre>
+No
+</pre>

@@ -1,0 +1,110 @@
+
+<h1>Kagisys</h1>
+<p>ある部屋ではICカードを用いて鍵を開け閉めする電子錠システムを用いている。
+このシステムは以下のように動作する。
+</p>
+<p>各ユーザーが持つICカードを扉にかざすと、そのICカードのIDがシステムに渡される。
+システムはIDが登録されている時、施錠されているなら開錠し、そうでないのなら施錠し、それぞれメッセージが出力される。
+IDが登録されていない場合は、登録されていないというメッセージを出力し、開錠及び施錠はおこなわれない。
+</p>
+<p>さて、現在システムにはN個のID(U<sub>1</sub>, U<sub>2</sub>, ……, U<sub>N</sub>)が登録されており、施錠されている。
+M回ICカードが扉にかざされ、そのIDはそれぞれ順番にT<sub>1</sub>, T<sub>2</sub>, ……, T<sub>M</sub>であるとする。
+この時のシステムがどのようなメッセージを出力するか求めよ。
+</p>
+
+<h2>Input</h2>
+<p>入力は以下の形式で与えられる。
+</p><blockquote>
+N<br>U<sub>1</sub><br>U<sub>2</sub><br>……<br>U<sub>N</sub><br>M<br>T<sub>1</sub><br>T<sub>2</sub><br>……<br>T<sub>M</sub><br></blockquote>
+
+
+<h2>Constraints</h2>
+<ul><li><p>N, Mは整数である
+</p></li><li><p>1 &le; N &le; 256
+</p></li><li><p>U<sub>i</sub>は1文字以上10文字以下の小文字英字のみからなる文字列である
+</p></li><li><p>U<sub>i</sub>はユニークである(i &ne; jならばU<sub>i</sub> &ne; U<sub>j</sub>)
+</p></li><li><p>1 &le; M &le; 256
+</p></li><li><p>T<sub>i</sub>は1文字以上10文字以下の小文字英字のみからなる文字列である
+</p></li></ul>
+
+
+<h2>Output</h2>
+<p>各T<sub>1</sub>, T<sub>2</sub>, ……, T<sub>M</sub>について、
+</p><ul><li><p>開錠された時は、&quot;Opened by &quot;の後に続けてIDを、
+</p></li><li><p>施錠された時は、&quot;Closed by &quot;の後に続けてIDを、
+</p></li><li><p>IDが登録されていないものだった場合は&quot;Unknown &quot;の後に続けてIDを
+それぞれ1行に出力せよ。
+</p></li></ul>
+
+<p>初期状態では施錠された状態である。
+</p>
+
+<h2>Sample Input 1</h2>
+
+<pre>4
+abcd
+efgh
+ijkl
+mnop
+5
+abcd
+abcc
+efgh
+abcd
+mnop
+</pre>
+
+<h2>Output for the Sample Input 1</h2>
+
+<pre>Opened by abcd
+Unknown abcc
+Closed by efgh
+Opened by abcd
+Closed by mnop
+</pre>
+
+<h2>Sample Input 2</h2>
+
+<pre>2
+a
+abcdefghij
+9
+c
+bcdefghijk
+abcdefghij
+b
+a
+b
+a
+bcdefghijk
+c
+</pre>
+
+<h2>Output for the Sample Input 2</h2>
+
+<pre>Unknown c
+Unknown bcdefghijk
+Opened by abcdefghij
+Unknown b
+Closed by a
+Unknown b
+Opened by a
+Unknown bcdefghijk
+Unknown c
+</pre>
+
+<h2>Sample Input 3</h2>
+
+<pre>2
+z
+x
+2
+z
+x
+</pre>
+
+<h2>Output for the Sample Input 3</h2>
+
+<pre>Opened by z
+Closed by x
+</pre>

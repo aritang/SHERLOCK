@@ -1,0 +1,109 @@
+<span class="lang-en">
+<p>Score : <var>1200</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>We have <var>N</var> irregular jigsaw pieces. Each piece is composed of three rectangular parts of width <var>1</var> and various heights joined together. More specifically:</p>
+<ul>
+<li>The <var>i</var>-th piece is a part of height <var>H</var>, with another part of height <var>A_i</var> joined to the left, and yet another part of height <var>B_i</var> joined to the right, as shown below. Here, the bottom sides of the left and right parts are respectively at <var>C_i</var> and <var>D_i</var> units length above the bottom side of the center part.</li>
+</ul>
+<p><img alt="" src="https://atcoder.jp/img/agc017/2b6cd7f4500d3621bc18de407f167522.png"/></p>
+<p>Snuke is arranging these pieces on a square table of side <var>10^{100}</var>. Here, the following conditions must be held:</p>
+<ul>
+<li>All pieces must be put on the table.</li>
+<li>The entire bottom side of the center part of each piece must touch the front side of the table.</li>
+<li>The entire bottom side of the non-center parts of each piece must either touch the front side of the table, or touch the top side of a part of some other piece.</li>
+<li>The pieces must not be rotated or flipped.</li>
+</ul>
+<p>Determine whether such an arrangement is possible.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 \leq N \leq 100000</var></li>
+<li><var>1 \leq H \leq 200</var></li>
+<li><var>1 \leq A_i \leq H</var></li>
+<li><var>1 \leq B_i \leq H</var></li>
+<li><var>0 \leq C_i \leq H - A_i</var></li>
+<li><var>0 \leq D_i \leq H - B_i</var></li>
+<li>All input values are integers.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var> <var>H</var>
+<var>A_1</var> <var>B_1</var> <var>C_1</var> <var>D_1</var>
+<var>A_2</var> <var>B_2</var> <var>C_2</var> <var>D_2</var>
+:
+<var>A_N</var> <var>B_N</var> <var>C_N</var> <var>D_N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>If it is possible to arrange the pieces under the conditions, print <code>YES</code>; if it is impossible, print <code>NO</code>.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>3 4
+1 1 0 0
+2 2 0 1
+3 3 1 0
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>YES
+</pre>
+<p>The figure below shows a possible arrangement.</p>
+<p><img alt="" src="https://atcoder.jp/img/agc017/27db184b6924d4cec5077a54b505706a.png"/></p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>4 2
+1 1 0 1
+1 1 0 1
+1 1 0 1
+1 1 0 1
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>NO
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>10 4
+1 1 0 3
+2 3 2 0
+1 2 3 0
+2 1 0 0
+3 2 0 2
+1 1 3 0
+3 2 0 0
+1 3 2 0
+1 1 1 3
+2 3 0 0
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>YES
+</pre></section>
+</div>
+</span>

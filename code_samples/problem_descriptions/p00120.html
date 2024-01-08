@@ -1,0 +1,80 @@
+
+
+
+<H1>パティシエ</H1>
+
+<p>
+ ケーキ屋さんが、まちまちな大きさのロールケーキをたくさん作りました。あなたは、このケーキを箱に並べる仕事を任されました。
+</p>
+<p>
+ロールケーキはとてもやわらかいので、他のロールケーキが上に乗るとつぶれてしまいます。ですから、図(a) のように全てのロールケーキは必ず箱の底面に接しているように並べなければなりません。並べ替えると必要な幅も変わります。
+</p>
+
+
+
+<center>
+<table>
+<tr><td><img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE1_patisserie1"></td></tr>
+<tr><th>図(a)</th></tr>
+<tr><td></td></tr>
+<tr><td></td></tr>
+<tr><td><img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE1_patisserie2"></td></tr>
+<tr><th>図(b)</th></tr>
+</table>
+</center>
+</br>
+
+<p>
+<var>n</var> 個のロールケーキの半径 <var>r<sub>1</sub></var>, <var>r<sub>2</sub></var>, ...,  <var>r<sub>n</sub></var> と箱の長さを読み込み、それぞれについて、箱の中にうまく収まるかどうか判定し、並べる順番を工夫すると箱に入る場合は "OK"、どう並べても入らない場合には "NA"を出力するプログラムを作成してください。
+</p>
+
+<p>
+ロールケーキの断面は円であり、箱の壁の高さは十分に高いものとします。 ただし、ロールケーキの半径は 3 以上 10 以下の整数とします。つまり、ケーキの半径に極端な差はなく、図(b) のように大きなケーキの間に小さなケーキがはまり込んでしまうことはありません。
+</p>
+
+
+
+<H2>Input</H2>
+
+<p>
+入力は複数のデータセットからなります。各データセットは以下の形式で与えられます。
+</p>
+
+<pre>
+<var>W</var> <var>r<sub>1</sub></var> <var>r<sub>2</sub></var> ... <var>r<sub>n</sub></var>
+</pre>
+
+<p>
+最初に箱の長さを表す整数 <var>W</var> (1 &le; <var>W</var> &le; 1,000) が与えられます。 続いて、空白区切りで各ロールケーキの半径を表す整数 <var>r<sub>i</sub></var> (3 &le; <var>r<sub>i</sub></var> &le; 10) が与えられます。ケーキの個数 <var>n</var> は 12 以下です。
+</p>
+
+<p>
+データセットの数は 50 を超えません。
+</p>
+
+
+<H2>Output</H2>
+
+<p>
+データセットごとに OK または NA を１行に出力してください。
+</p>
+
+<H2>Sample Input</H2>
+
+<pre>
+30 4 5 6
+30 5 5 5
+50 3 3 3 10 10
+49 3 3 3 10 10
+</pre>
+
+<H2>Output for the Sample Input</H2>
+
+<pre>
+OK
+OK
+OK
+NA
+</pre>
+
+

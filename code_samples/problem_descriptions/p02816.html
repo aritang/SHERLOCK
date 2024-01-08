@@ -1,0 +1,127 @@
+<span class="lang-en">
+<p>Score : <var>600</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>Given are two sequences <var>a=\{a_0,\ldots,a_{N-1}\}</var> and <var>b=\{b_0,\ldots,b_{N-1}\}</var> of <var>N</var> non-negative integers each.</p>
+<p>Snuke will choose an integer <var>k</var> such that <var>0 \leq k &lt; N</var> and an integer <var>x</var> not less than <var>0</var>, to make a new sequence of length <var>N</var>, <var>a'=\{a_0',\ldots,a_{N-1}'\}</var>, as follows:</p>
+<ul>
+<li><var>a_i'= a_{i+k \mod N}\ XOR \ x</var></li>
+</ul>
+<p>Find all pairs <var>(k,x)</var> such that <var>a'</var> will be equal to <var>b</var>.</p>
+<details>
+<summary>What is <var>\mbox{ XOR }</var>?</summary>
+<p>
+The XOR of integers <var>A</var> and <var>B</var>, <var>A \mbox{ XOR } B</var>, is defined as follows:
+<ul>
+<li>When <var>A \mbox{ XOR } B</var> is written in base two, the digit in the <var>2^k</var>'s place (<var>k \geq 0</var>) is <var>1</var> if either <var>A</var> or <var>B</var>, but not both, has <var>1</var> in the <var>2^k</var>'s place, and <var>0</var> otherwise.</li>
+</ul>
+For example, <var>3 \mbox{ XOR } 5 = 6</var>. (In base two: <var>011 \mbox{ XOR } 101 = 110</var>.)
+</p>
+</details>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 \leq N \leq 2 \times 10^5</var></li>
+<li><var>0 \leq a_i,b_i &lt; 2^{30}</var></li>
+<li>All values in input are integers.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+<var>a_0</var> <var>a_1</var> <var>...</var> <var>a_{N-1}</var>
+<var>b_0</var> <var>b_1</var> <var>...</var> <var>b_{N-1}</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print all pairs <var>(k, x)</var> such that <var>a'</var> and <var>b</var> will be equal, using one line for each pair, in ascending order of <var>k</var> (ascending order of <var>x</var> for pairs with the same <var>k</var>).</p>
+<p>If there are no such pairs, the output should be empty.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>3
+0 2 1
+1 2 3
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>1 3
+</pre>
+<p>If <var>(k,x)=(1,3)</var>,</p>
+<ul>
+<li>
+<p><var>a_0'=(a_1\ XOR \ 3)=1</var></p>
+</li>
+<li>
+<p><var>a_1'=(a_2\ XOR \ 3)=2</var></p>
+</li>
+<li>
+<p><var>a_2'=(a_0\ XOR \ 3)=3</var></p>
+</li>
+</ul>
+<p>and we have <var>a' = b</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>5
+0 0 0 0 0
+2 2 2 2 2
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>0 2
+1 2
+2 2
+3 2
+4 2
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>6
+0 1 3 7 6 4
+1 5 4 6 2 3
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>2 2
+5 5
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 4</h3><pre>2
+1 2
+0 0
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 4</h3><pre></pre>
+<p>No pairs may satisfy the condition.</p></section>
+</div>
+</span>

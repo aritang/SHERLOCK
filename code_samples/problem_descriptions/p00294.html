@@ -1,0 +1,72 @@
+
+
+
+<h1>鉄道路線II</h1>
+
+<p>
+わたしの住む街には、図のような <var>N</var> 個の駅からなる円環状の鉄道路線があります。この路線の各駅には 0 から <var>N</var>-1 までの番号が順番に割り当てられていて、隣の駅まで100 円で移動することができます。移動はどちらの方向にでも可能です。
+</p>
+
+<center>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_PCK2014_railroad" width="240">
+</center>
+<br>
+
+<p>
+わたしはこの路線上のいくつかの駅で買い物をしたいと思っています。そこで、プログラムを作成して移動費を計算することにしました。ある駅を始点として、買い物をするすべての駅を訪問する最小の費用（円）を求めるプログラムを作成してください。ただし、同じ駅を何度訪問しても良く、どのような順番で駅を訪問しても構いません。
+</p>
+
+<h2>入力</h2>
+<p>
+入力は以下の形式で与えられる。
+</p>
+
+<pre>
+<var>N</var> <var>M</var> <var>p</var>
+<var>d</var><sub>1</sub>
+<var>d</var><sub>2</sub>
+:
+<var>d<sub>M</sub></var>
+</pre>
+
+<p>
+1行目に駅の数 <var>N</var> (2 &le; <var>N</var> &le; 100000)、買い物をする駅の数 <var>M</var> (1 &le; <var>M</var> &le; 10000 かつ <var>M</var> &lt; <var>N</var>)、出発する駅の番号 <var>p</var> (0 &le; <var>p</var> &le; <var>N</var>-1) が与えられる。続く <var>M</var> 行に買い物をする駅の番号 <var>d<sub>i</sub></var> (0 &le; <var>d<sub>i</sub></var> &le; <var>N</var>-1) が与えられる。ただし、<var>d<sub>i</sub></var>は全て異なり、<var>p</var> もまたどの <var>d<sub>i</sub></var> とも異なるものとする。
+</p>
+
+
+<h2>出力</h2>
+<p>
+最小の費用を１行に出力する。
+</p>
+
+<h2>入出力例</h2>
+<br>
+
+
+<h2>入力例１ </h2>
+<pre>
+5 4 0
+1
+2
+3
+4
+</pre>
+
+<h2>出力例１</h2>
+<pre>
+400
+</pre>
+
+
+<h2>入力例２</h2>
+<pre>
+7 2 1
+6
+2
+</pre>
+
+<h2>出力例２</h2>
+<pre>
+400
+</pre>
+

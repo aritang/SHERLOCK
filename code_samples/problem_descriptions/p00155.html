@@ -1,0 +1,118 @@
+
+
+
+<H1>スパイダー人</H1>
+
+<p>
+正義のヒーロー「スパイダー人」は、腕からロープを出してビルからビルへ飛び移ることができます。しかし、ロープが短いので自分からの距離が 50 以下のビルにしか移動できません。それより遠くのビルに移動するには、一旦別のビルに飛び移らなくてはなりません。
+</p>
+
+<br>
+<center>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE1_spider">
+</center>
+<br><br>
+
+<p>
+ビルの数 <var>n</var>、<var>n</var> 個のビルの情報、スパイダー人の移動開始位置及び目的地を入力とし、その移動の最短経路を出力するプログラムを作成してください。どのようにビルを経由しても目標のビルに移動できない場合は NA と出力してください。各ビルは点として扱い、最短距離で移動するビルの経由方法が２つ以上存在することはないものとします。
+</p>
+
+
+<H2>Input</H2>
+<p>
+複数のデータセットの並びが入力として与えられます。入力の終わりはゼロひとつの行で示されます。
+各データセットは以下の形式で与えられます。
+</p>
+
+<pre>
+<var>n</var>
+<var>b<sub>1</sub></var> <var>x<sub>1</sub></var> <var>y<sub>1</sub></var>
+<var>b<sub>2</sub></var> <var>x<sub>2</sub></var> <var>y<sub>2</sub></var>
+:
+<var>b<sub>n</sub></var> <var>x<sub>n</sub></var> <var>y<sub>n</sub></var>
+<var>m</var>
+<var>s<sub>1</sub></var> <var>g<sub>1</sub></var>
+<var>s<sub>2</sub></var> <var>g<sub>2</sub></var>
+:
+<var>s<sub>m</sub></var> <var>g<sub>m</sub></var>
+</pre>
+
+<p>
+１行目にビルの数 <var>n</var> (1 &le; <var>n</var> &le; 100)、続く <var>n</var> 行に <var>i</var> 番目のビルのビル番号 <var>b<sub>i</sub></var> (1 &le; <var>b<sub>i</sub></var> &le; <var>n</var>)、そのビルのx座標とy座標を表す整数 <var>x<sub>i</sub></var>, <var>y<sub>i</sub></var> (-1000 &le; <var>x<sub>i</sub></var>, <var>y<sub>i</sub></var> &le; 1000) が空白区切りで与えられます。
+</p>
+
+<p>
+続く行に移動情報の個数 <var>m</var> (1 &le; <var>m</var> &le; 100)、続く <var>m</var> 行に<var>i</var>  番目の移動情報が与えられます。各移動情報として、移動を開始するビルの番号 <var>s<sub>i</sub></var> と目的地ビルの番号 <var>g<sub>i</sub></var> が空白区切りで与えられます。
+</p>
+
+<p>
+データセットの数は 10 を超えません。
+</p>
+
+<H2>Output</H2>
+<p>
+入力データセットごとに次の形式で出力します。
+</p>
+
+<p>
+<var>i</var> 行目に <var>i</var> 番目の移動情報に対する経路または NA を１行に出力します。各経路は以下の形式で出力します。
+</p>
+
+
+<pre>
+<var>s<sub>i</sub></var> <var>br<sub>i1</sub></var> <var>br<sub>i2</sub></var> ... <var>g<sub>i</sub></var>
+</pre>
+
+<p>
+<var>br<sub>ij</sub></var> は <var>i</var> 番目の移動情報における、<var>j</var> 番目に経由するビルの番号を表します。
+</p>
+
+<H2>Sample Input</H2>
+
+<pre>
+4
+1 0 0
+2 30 0
+3 60 40
+4 0 60
+2
+1 3
+1 4
+22
+1 0 0
+2 150 40
+3 30 20
+4 180 150
+5 40 80
+6 130 130
+7 72 28
+8 172 118
+9 50 50
+10 160 82
+11 90 105
+12 144 131
+13 130 64
+14 80 140
+15 38 117
+16 190 90
+17 60 100
+18 100 70
+19 130 100
+20 71 69
+21 200 110
+22 120 150
+1
+1 22
+0
+</pre>
+
+<H2>Output for the Sample Input</H2>
+
+<pre>
+1 2 3
+NA
+1 3 9 20 11 6 22
+</pre>
+
+
+

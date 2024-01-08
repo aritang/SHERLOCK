@@ -1,0 +1,61 @@
+<span class="lang-en">
+<p>Score : <var>600</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>Consider the following arithmetic progression with <var>n</var> terms:</p>
+<ul>
+<li><var>x, x + d, x + 2d, \ldots, x + (n-1)d</var></li>
+</ul>
+<p>What is the product of all terms in this sequence?
+Compute the answer modulo <var>1\ 000\ 003</var>.</p>
+<p>You are given <var>Q</var> queries of this form.
+In the <var>i</var>-th query, compute the answer in case <var>x = x_i, d = d_i, n = n_i</var>.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 \leq Q \leq 10^5</var></li>
+<li><var>0 \leq x_i, d_i \leq 1\ 000\ 002</var></li>
+<li><var>1 \leq n_i \leq 10^9</var></li>
+<li>All values in input are integers.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>Q</var>
+<var>x_1</var> <var>d_1</var> <var>n_1</var>
+<var>:</var>
+<var>x_Q</var> <var>d_Q</var> <var>n_Q</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print <var>Q</var> lines.</p>
+<p>In the <var>i</var>-th line, print the answer for the <var>i</var>-th query.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>2
+7 2 4
+12345 67890 2019
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>9009
+916936
+</pre>
+<p>For the first query, the answer is <var>7 \times 9 \times 11 \times 13 = 9009</var>.
+Don't forget to compute the answer modulo <var>1\ 000\ 003</var>.</p></section>
+</div>
+</span>

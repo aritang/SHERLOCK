@@ -1,0 +1,93 @@
+<span class="lang-en">
+<p>Score : <var>700</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>You are given four integers: <var>H</var>, <var>W</var>, <var>h</var> and <var>w</var> (<var>1 ≤ h ≤ H</var>, <var>1 ≤ w ≤ W</var>).
+Determine whether there exists a matrix such that all of the following conditions are held, and construct one such matrix if the answer is positive:</p>
+<ul>
+<li>The matrix has <var>H</var> rows and <var>W</var> columns.</li>
+<li>Each element of the matrix is an integer between <var>-10^9</var> and <var>10^9</var> (inclusive).</li>
+<li>The sum of all the elements of the matrix is positive.</li>
+<li>The sum of all the elements within every subrectangle with <var>h</var> rows and <var>w</var> columns in the matrix is negative.</li>
+</ul>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 ≤ h ≤ H ≤ 500</var></li>
+<li><var>1 ≤ w ≤ W ≤ 500</var></li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>H</var> <var>W</var> <var>h</var> <var>w</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>If there does not exist a matrix that satisfies all of the conditions, print <code>No</code>.</p>
+<p>Otherwise, print <code>Yes</code> in the first line, and print a matrix in the subsequent lines in the following format:</p>
+<pre><var>a_{11}</var> <var>...</var> <var>a_{1W}</var>
+<var>:</var>
+<var>a_{H1}</var> <var>...</var> <var>a_{HW}</var>
+</pre>
+<p>Here, <var>a_{ij}</var> represents the <var>(i,\ j)</var> element of the matrix.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>3 3 2 2
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>Yes
+1 1 1
+1 -4 1
+1 1 1
+</pre>
+<p>The sum of all the elements of this matrix is <var>4</var>, which is positive.
+Also, in this matrix, there are four subrectangles with <var>2</var> rows and <var>2</var> columns as shown below. For each of them, the sum of all the elements inside is <var>-1</var>, which is negative.</p>
+<div style="text-align: center;">
+<img alt="bbdb651fa1f05996886da9f0c4d8090a.png" src="https://atcoder.jp/img/agc016/bbdb651fa1f05996886da9f0c4d8090a.png">
+</img></div>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>2 4 1 2
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>No
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>3 4 2 3
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>Yes
+2 -5 8 7
+3 -5 -4 -5
+2 1 -1 7
+</pre></section>
+</div>
+</span>

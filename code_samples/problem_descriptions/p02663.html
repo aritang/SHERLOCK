@@ -1,0 +1,66 @@
+<span class="lang-en">
+<p>Score : <var>100</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>In this problem, we use the <var>24</var>-hour clock.</p>
+<p>Takahashi gets up exactly at the time <var>H_1</var> : <var>M_1</var> and goes to bed exactly at the time <var>H_2</var> : <var>M_2</var>. (See Sample Inputs below for clarity.)
+He has decided to study for <var>K</var> consecutive minutes while he is up.
+What is the length of the period in which he can start studying?</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>0 \le H_1, H_2 \le 23</var></li>
+<li><var>0 \le M_1, M_2 \le 59</var></li>
+<li>The time <var>H_1</var> : <var>M_1</var> comes before the time <var>H_2</var> : <var>M_2</var>.</li>
+<li><var>K \ge 1</var></li>
+<li>Takahashi is up for at least <var>K</var> minutes.</li>
+<li>All values in input are integers (without leading zeros).</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>H_1</var> <var>M_1</var> <var>H_2</var> <var>M_2</var> <var>K</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the length of the period in which he can start studying, as an integer.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>10 0 15 0 30
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>270
+</pre>
+<p>Takahashi gets up at exactly ten in the morning and goes to bed at exactly three in the afternoon.
+It takes <var>30</var> minutes to do the study, so he can start it in the period between ten o'clock and half-past two. The length of this period is <var>270</var> minutes, so we should print <var>270</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>10 0 12 0 120
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>0
+</pre>
+<p>Takahashi gets up at exactly ten in the morning and goes to bed at exactly noon. It takes <var>120</var> minutes to do the study, so he has to start it at exactly ten o'clock. Thus, we should print <var>0</var>.</p></section>
+</div>
+</span>

@@ -1,0 +1,69 @@
+
+<H1>Standard Deviation</H1><br>
+
+<p>
+  You have final scores of an examination for <var>n</var> students. Calculate standard deviation of the scores <var>s<sub>1</sub></var>, <var>s<sub>2</sub></var> ... <var>s<sub>n</sub></var>.
+</p>
+
+<p>
+The variance &alpha;<sup>2</sup> is defined by  
+</p>
+
+<p>
+&alpha;<sup>2</sup>  = (&sum;<sup>n</sup><sub><i>i</i>=1</sub>(s<sub><i>i</i></sub> - m)<sup>2</sup>)/n
+</p>
+
+<p>
+  where <var>m</var> is an average of <var>s<sub>i</sub></var>.
+
+  The standard deviation of the scores is the square root of their variance.
+  </p>
+
+<H2>Input</H2>
+
+<p>
+  The input consists of multiple datasets. Each dataset is given in the following format:
+</p>
+
+<pre>
+<var>n</var>
+<var>s</var><sub>1</sub> <var>s</var><sub>2</sub> ... <var>s</var><sub><var>n</var></sub>
+</pre>
+
+<p>
+  The input ends with single zero for <var>n</var>.
+</p>
+
+<H2>Output</H2>
+
+<p>
+  For each dataset, print the standard deviation in a line. The output should not contain an absolute error greater than 10<sup>-4</sup>.
+</p>
+
+
+<H2>Constraints</H2>
+
+
+<ul>
+<li><var>n</var> &le; 1000</li>
+<li>0 &le; <var>s<sub>i</sub></var> &le; 100 </li>
+</ul>
+
+
+<H2>Sample Input</H2>
+
+<pre>
+5
+70 80 100 90 20
+3
+80 80 80
+0
+</pre>
+
+<H2>Sample Output</H2>
+
+<pre>
+27.85677655
+0.00000000
+</pre>
+

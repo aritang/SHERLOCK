@@ -1,0 +1,178 @@
+
+<h1><font color="#000000">Problem D:</font> Discrete Speed</h1>
+
+
+<p>
+Consider car trips in a country where there is no friction.
+Cars in this country do not have engines.
+Once a car started to move at a speed, it keeps moving at the same speed.
+There are acceleration devices on some points on the road,
+where a car can increase or decrease its speed by 1.
+It can also keep its speed there.
+Your job in this problem is to write a program
+which determines the route with the shortest time
+to travel from a starting city to a goal city.
+</p>
+
+<p>
+There are several cities in the country,
+and a road network connecting them.
+Each city has an acceleration device.
+As mentioned above, if a car arrives at a city at a speed <i>v </i>,
+it leaves the city at one of <i>v </i>- 1, <i>v </i>, or <i>v </i>+ 1.
+The first road leaving the starting city must be run at the speed 1.
+Similarly, the last road arriving at the goal city must be run at the speed 1.
+
+</p>
+
+<p>
+The starting city and the goal city are given.
+The problem is to find the best route which leads to the goal city
+going through several cities on the road network.
+When the car arrives at a city, it cannot immediately go back the road
+it used to reach the city.  No U-turns are allowed.
+Except this constraint, one can choose any route on the road network.
+It is allowed to visit the same city or use the same road multiple times.
+The starting city and the goal city may be visited during the trip.
+</p>
+
+<p>
+For each road on the network, its distance and speed limit are given.
+A car must run a road at a speed less than or equal to its speed limit.
+The time needed to run a road is the distance divided by the speed.
+The time needed within cities including that for acceleration or deceleration should be ignored. </li></ul>
+
+
+<h3>Input</h3>
+
+<p>
+The input consists of multiple datasets, each in the following format.
+</p>
+
+
+<blockquote>
+<i>n </i> <i>m </i><br>
+<i>s </i> <i>g </i><br>
+
+<i>x</i><sub> 1</sub> <i>y</i><sub> 1</sub> <i>d</i><sub> 1</sub> <i>c</i><sub> 1</sub><br>
+...<br>
+
+<i>x<sub>m</sub> </i> <i>y<sub>m</sub> </i> <i>d<sub>m</sub> </i> <i>c<sub>m</sub> </i><br>
+</blockquote>
+
+<!-- begin en only -->
+<p>
+Every input item in a dataset is a non-negative integer.
+Input items in the same line are separated by a space.
+</p>
+
+<p>
+The first line gives the size of the road network.
+<i>n </i> is the number of cities in the network.
+You can assume that the number of cities is between 2 and 30, inclusive.
+<i>m </i> is the number of roads between cities, which may be zero.
+</p>
+
+<p>
+
+The second line gives the trip.
+<i>s </i> is the city index of the starting city.
+<i>g </i> is the city index of the goal city.
+<i>s </i> is not equal to <i>g </i>.
+You can assume that all city indices in a dataset (including the above two)
+are between 1 and <i>n </i>, inclusive.
+</p>
+
+<p>
+
+The following <i>m </i> lines give the details of roads between cities.
+The <i>i </i>-th road connects two cities with city indices
+<i>x<sub>i</sub> </i> and <i>y<sub>i</sub> </i>,
+and has a distance <i>d<sub>i</sub> </i> (1 &le; <i>i </i>&le; <i>m </i>).
+You can assume that the distance is between 1 and 100, inclusive.
+The speed limit of the road is specified by <i>c<sub>i</sub> </i>.
+You can assume that the speed limit is between 1 and 30, inclusive.
+
+</p>
+
+<p>
+No two roads connect the same pair of cities.
+A road never connects a city with itself.
+Each road can be traveled in both directions.
+</p>
+
+<p>
+The last dataset is followed by a line containing two zeros
+(separated by a space).
+</p>
+
+
+
+
+<h3>Output</h3>
+
+<p> 
+For each dataset in the input, one line should be output as specified below.
+An output line should not contain extra characters such as spaces.
+</p>
+
+<p>
+If one can travel from the starting city to the goal city,
+the time needed for the best route (a route with the shortest time)
+should be printed.
+The answer should not have an error greater than 0.001.
+You may output any number of digits after the decimal point,
+provided that the above accuracy condition is satisfied.
+</p>
+
+<p>
+If it is impossible to reach the goal city,
+the string "<tt>unreachable</tt>" should be printed.
+Note that all the letters of "<tt>unreachable</tt>" are in lowercase.
+
+</p>
+
+
+<h3>Sample Input</h3>
+
+
+<pre>
+2 0
+1 2
+5 4
+1 5
+1 2 1 1
+2 3 2 2
+3 4 2 2
+4 5 1 1
+6 6
+1 6
+1 2 2 1
+2 3 2 1
+3 6 2 1
+1 4 2 30
+4 5 3 30
+5 6 2 30
+6 7
+1 6
+1 2 1 30
+2 3 1 30
+3 1 1 30
+3 4 100 30
+4 5 1 30
+5 6 1 30
+6 4 1 30
+0 0
+</pre>
+
+<h3>Output for the Sample Input</h3>
+
+
+<pre>
+unreachable
+4.00000
+5.50000
+11.25664
+</pre>
+
+

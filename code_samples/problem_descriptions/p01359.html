@@ -1,0 +1,117 @@
+
+<H1><font color="#000">Problem A:</font> Era Name</H1>
+
+<p>
+As many of you know, we have two major calendar systems used in Japan today. One of them
+is Gregorian calendar which is widely used across the world. It is also known as “Western
+calendar” in Japan.
+</p>
+<p>
+The other calendar system is era-based calendar, or so-called “Japanese calendar.” This system
+comes from ancient Chinese systems. Recently in Japan it has been a common way to associate
+dates with the Emperors. In the era-based system, we represent a year with an era name given
+at the time a new Emperor assumes the throne. If the era name is “A”, the first regnal year
+will be “A 1”, the second year will be “A 2”, and so forth.
+</p>
+
+<p>
+Since we have two different calendar systems, it is often needed to convert the date in one
+calendar system to the other. In this problem, you are asked to write a program that converts
+western year to era-based year, given a database that contains association between several
+western years and era-based years.
+</p>
+<p>
+For the simplicity, you can assume the following:
+</p>
+<ol>
+   <li> A new era always begins on January 1st of the corresponding Gregorian year.</li>
+   <li> The first year of an era is described as 1.</li>
+   <li> There is no year in which more than one era switch takes place.</li>
+</ol>
+<p>
+Please note that, however, the database you will see may be incomplete. In other words, some
+era that existed in the history may be missing from your data. So you will also have to detect
+the cases where you cannot determine exactly which era the given year belongs to.
+
+</p>
+
+<H2>Input</H2>
+
+<p>
+The input contains multiple test cases. Each test case has the following format:
+</p>
+
+<p>
+     <i>N Q</i><br>
+     <i>EraName</i><sub>1</sub> <i>EraBasedYear</i><sub>1</sub> <i>WesternYear</i><sub>1</sub><br>
+     .<br>
+     .<br>
+     .<br>
+     <i>EraName</i><sub><i>N</i></sub> <i>EraBasedYear</i><sub><i>N</i></sub> <i>WesternYear</i><sub><i>N</i></sub><br>
+<i>Query</i><sub>1</sub>
+.<br>
+.<br>
+.<br>
+<i>Query</i><sub><i>Q</i></sub>
+
+</p>
+
+<p>
+The first line of the input contains two positive integers <i>N</i> and <i>Q</i> (1 &le; <i>N</i> &le; 1000, 1 &le; <I>Q</i> &le; 1000).
+<i>N</i> is the number of database entries, and Q is the number of queries.
+</p>
+
+<p>
+Each of the following N lines has three components: era name, era-based year number and the
+corresponding western year (1 &le; <i>EraBasedYear</i><sub><i>i</i></sub> &le; <i>WesternYear</i><sub><i>i</i></sub> &le; 10<sup>9</sup> ). Each of era names
+consist of at most 16 Roman alphabet characters. Then the last <i>Q</i> lines of the input specifies
+queries (1 &le; <i>Query</i><sub><i>i</i></sub> &le; 10<sup>9</sup> ), each of which is a western year to compute era-based representation.
+</p>
+<p>
+The end of input is indicated by a line containing two zeros. This line is not part of any dataset
+and hence should not be processed.
+</p>
+
+<p>
+You can assume that all the western year in the input is positive integers, and that there is no
+two entries that share the same era name.
+
+</p>
+
+<p>
+
+
+</p>
+
+
+<H2>Output</H2>
+
+<p>
+For each query, output in a line the era name and the era-based year number corresponding to
+the western year given, separated with a single whitespace. In case you cannot determine the
+era, output “<span>Unknown</span>” without quotes.
+</p>
+
+<H2>Sample Input</H2>
+<pre>
+4 3
+meiji 10 1877
+taisho 6 1917
+showa 62 1987
+heisei 22 2010
+1868
+1917
+1988
+1 1
+universalcentury 123 2168
+2010
+0 0
+</pre>
+
+<H2>Output for the Sample Input</H2>
+<pre>
+meiji 1
+taisho 6
+Unknown
+Unknown
+</pre>

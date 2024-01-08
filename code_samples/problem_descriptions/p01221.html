@@ -1,0 +1,172 @@
+
+<H1><font color="#000">Problem F:</font> Two-finger Programming</H1>
+
+<p>
+Franklin Jenkins is a programmer, but he isn’t good at typing keyboards. So he always uses only ‘f’
+and ‘j’ (keys on the home positions of index fingers) for variable names. He insists two characters are
+enough to write programs, but naturally his friends don’t agree with him: they say it makes programs too
+long.
+</p>
+<p>
+He asked you to show any program can be converted into not so long one with the <i>f-j names</i>. Your task
+is to answer the shortest length of the program after all variables are renamed into the f-j names, for each
+given program.
+</p>
+<p>
+Given programs are written in the language specified below.
+</p>
+<p>
+A block (a region enclosed by curly braces: ‘{’ and ‘}’) forms a scope for variables. Each scope can have
+zero or more scopes inside. The whole program also forms the global scope, which contains all scopes
+on the top level (i.e., out of any blocks).
+</p>
+<p>
+Each variable belongs to the innermost scope which includes its declaration, and is valid from the decla-
+ration to the end of the scope. Variables are never redeclared while they are valid, but may be declared
+again once they have become invalid. The variables that belong to different scopes are regarded as differ-
+ent even if they have the same name. Undeclared or other invalid names never appear in expressions.
+</p>
+<p>
+The tokens are defined by the rules shown below. All whitespace characters (spaces, tabs, linefeeds, and
+carrige-returns) before, between, and after tokens are ignored.
+</p>
+
+<pre>
+<i>token</i>:
+     <i>identifier</i> | <i>keyword</i> | <i>number</i> | <i>operator</i> | <i>punctuation</i>
+<i>identifier</i>:
+     [a-z]+ (one or more lowercase letters)
+<i>keyword</i>:
+     [A-Z]+ (one or more uppercase letters)
+<i>number</i>:
+     [0-9]+ (one or more digits)
+<i>operator</i>:
+     ‘=’ | ‘+’ | ‘-’ | ‘*’ | ‘/’ | ‘&’ | ‘|’ | ‘^’ | ‘<’ | ‘>’
+<i>punctuation</i>:
+     ‘{’ | ‘}’ | ‘(’ | ‘)’ | ‘;’
+</pre>
+
+<p>
+The syntax of the language is defined as follows.
+</p>
+
+<pre>
+<i>program</i>:
+     <i>statement-list</i>
+<i>statement-list</i>:
+     <i>statement</i>
+     <i>statement-list statement</i>
+<i>statement</i>:
+     <i>variable-declaration</i>
+     <i>if-statement</i>
+     <i>while-statement</i>
+     <i>expression-statement</i>
+     <i>block-statement</i>
+<i>variable-declaration</i>:
+      “VAR” <i>identifier</i> ‘;’
+<i>if-statement</i>:
+      “IF” ‘(’ <i>expression</i> ‘)’ <i>block-statement</i>
+<i>while-statement</i>:
+      “WHILE” ‘(’ <i>expression</i> ‘)’ <i>block-statement</i>
+<i>expression-statement</i>:
+      <i>expression</i> ‘;’
+<i>block-statement</i>:
+      ‘{’ <i>statement-listoptional</i> ‘}’
+<i>expression</i>:
+      <i>identifier</i>
+      <i>number</i>
+      <i>expression operator expression</i>
+</pre>
+
+<H2>Input</H2>
+
+<p>
+The input consists of multiple data sets.
+</p>
+<p>
+Each data set gives a well-formed program according to the specification above. The first line contains
+a positive integer <i>N</i>, which indicates the number of lines in the program. The following <i>N</i> lines contain
+the program body.
+</p>
+<p>
+There are no extra characters between two adjacent data sets.
+</p>
+<p>
+A single line containing a zero indicates the end of the input, and you must not process this line as part
+of any data set.
+</p>
+<p>
+Each line contains up to 255 characters, and all variable names are equal to or less than 16 characters
+long. No program contains more than 1000 variables nor 100 scopes (including the global scope).
+
+</p>
+
+<H2>Output</H2>
+
+<p>
+For each data set, output in one line the minimum program length after all the variables are renamed into
+the f-j name. Whitespace characters must not counted for the program length. You are not allowed to
+perform any operations on the programs other than renaming the variables.
+
+</p>
+
+<H2>Sample Input</H2>
+<pre>
+14
+VAR ga;
+VAR gb;
+IF(ga > gb) {
+  VAR saa;
+  VAR sab;
+  IF(saa > ga) {
+    saa = sab;
+  }
+}
+WHILE(gb > ga) {
+  VAR sba;
+  sba = ga;
+  ga = gb;
+}
+7
+VAR thisisthelongest;
+IF(thisisthelongest / 0) {
+  VARone;
+  one = thisisthelongest + 1234567890123456789012345;
+}
+VAR another;
+32 = another;
+0
+
+</pre>
+
+<H2>Output for the Sample Input</H2>
+<pre>
+73
+59
+</pre>
+<br><br>
+<p>The two programs should be translated as follows:</p>
+
+<pre>
+VAR f;
+VAR ff;
+IF(f > ff) {
+  VAR j;
+  VAR fj;
+  IF(j > f) {
+    j = fj;
+  }
+}
+WHILE(ff > f) {
+  VAR j;
+  j = f;
+  f = ff;
+}
+VAR j;
+IF(j / 0) {
+  VARf;
+  f = j + 1234567890123456789012345;
+}
+VAR f;
+32 = f;
+</pre>

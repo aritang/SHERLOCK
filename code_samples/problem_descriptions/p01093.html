@@ -1,0 +1,79 @@
+
+<h3>Selection of Participants of an Experiment</h3>
+
+<p>
+Dr. Tsukuba has devised a new method of programming training.
+In order to evaluate the effectiveness of this method,
+he plans to carry out a control experiment.
+Having two students as the participants of the experiment,
+one of them will be trained under the conventional method
+and the other under his new method.
+Comparing the final scores of these two,
+he will be able to judge the effectiveness of his method.
+</p>
+
+<p>
+It is important to select two students having the closest possible scores,
+for making the comparison fair.
+He has a list of the scores of all students
+who can participate in the experiment.
+You are asked to write a program which selects two of them
+having the smallest difference in their scores.
+</p>
+
+
+<h3>Input</h3>
+
+<p>
+The input consists of multiple datasets, each in the following format.
+</p>
+
+<p>
+
+<i>n</i><br>
+<i>a</i><sub>1</sub> <i>a</i><sub>2</sub> &hellip; <i>a<sub>n</sub></i>
+
+</p>
+
+<p>
+A dataset consists of two lines.
+The number of students <i>n</i> is given in the first line.
+<i>n</i> is an integer satisfying 2 &le; <i>n</i> &le; 1000.
+The second line gives scores of <i>n</i> students.
+<i>a<sub>i</sub></i> (1 &le; <i>i</i> &le; <i>n</i>) is the score of the <i>i</i>-th student, which is a non-negative integer not greater than 1,000,000.
+</p>
+
+<p>
+The end of the input is indicated by a line containing a zero.
+The sum of <i>n</i>'s of all the datasets does not exceed 50,000.
+</p>
+
+
+<h3>Output</h3>
+
+<p>
+For each dataset, select two students with the smallest difference in their scores,
+and output in a line (the absolute value of) the difference.
+</p>
+
+
+<h3>Sample Input</h3>
+
+<pre>
+5
+10 10 10 10 10
+5
+1 5 8 9 11
+7
+11 34 83 47 59 29 70
+0
+</pre>
+
+<h3>Output for the Sample Input</h3>
+
+
+<pre>
+0
+1
+5
+</pre>

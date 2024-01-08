@@ -1,0 +1,106 @@
+<span class="lang-en">
+<p>Score : <var>900</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>There are <var>N</var> pinholes on the <var>xy</var>-plane. The <var>i</var>-th pinhole is located at <var>(x_i,y_i)</var>.</p>
+<p>We will denote the Manhattan distance between the <var>i</var>-th and <var>j</var>-th pinholes as <var>d(i,j)(=|x_i-x_j|+|y_i-y_j|)</var>.</p>
+<p>You have a peculiar pair of compasses, called <em>Manhattan Compass</em>.
+This instrument always points at two of the pinholes.
+The two legs of the compass are indistinguishable, thus we do not distinguish the following two states: the state where the compass points at the <var>p</var>-th and <var>q</var>-th pinholes, and the state where it points at the <var>q</var>-th and <var>p</var>-th pinholes.</p>
+<p>When the compass points at the <var>p</var>-th and <var>q</var>-th pinholes and <var>d(p,q)=d(p,r)</var>, one of the legs can be moved so that the compass will point at the <var>p</var>-th and <var>r</var>-th pinholes.</p>
+<p>Initially, the compass points at the <var>a</var>-th and <var>b</var>-th pinholes.
+Find the number of the pairs of pinholes that can be pointed by the compass.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>2≦N≦10^5</var></li>
+<li><var>1≦x_i, y_i≦10^9</var></li>
+<li><var>1≦a &lt; b≦N</var></li>
+<li>When <var>i ≠ j</var>, <var>(x_i, y_i) ≠ (x_j, y_j)</var></li>
+<li><var>x_i</var> and <var>y_i</var> are integers.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>The input is given from Standard Input in the following format:</p>
+<pre><var>N</var> <var>a</var> <var>b</var>
+<var>x_1</var> <var>y_1</var>
+:
+<var>x_N</var> <var>y_N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the number of the pairs of pinholes that can be pointed by the compass.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>5 1 2
+1 1
+4 3
+6 1
+5 5
+4 8
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>4
+</pre>
+<p>Initially, the compass points at the first and second pinholes.</p>
+<p>Since <var>d(1,2) = d(1,3)</var>, the compass can be moved so that it will point at the first and third pinholes.</p>
+<p>Since <var>d(1,3) = d(3,4)</var>, the compass can also point at the third and fourth pinholes.</p>
+<p>Since <var>d(1,2) = d(2,5)</var>, the compass can also point at the second and fifth pinholes.</p>
+<p>No other pairs of pinholes can be pointed by the compass, thus the answer is <var>4</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>6 2 3
+1 3
+5 3
+3 5
+8 4
+4 7
+2 5
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>4
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>8 1 2
+1 5
+4 3
+8 2
+4 7
+8 8
+3 3
+6 6
+4 8
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>7
+</pre></section>
+</div>
+</span>

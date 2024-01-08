@@ -1,0 +1,143 @@
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({ tex2jax: { inlineMath: [["$","$"], ["\\(","\\)"]], processEscapes: true }});
+</script>
+<script type='text/javascript' src='http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
+</script>
+
+
+<h2>Problem E
+Infallibly Crack Perplexing Cryptarithm
+</h2>
+
+<p>
+  You are asked to crack an encrypted equation over binary numbers.
+</p>
+
+<p>
+  The original equation consists only of binary digits ("0" and "1"), operator symbols ("+", "-", and "*"), parentheses ("(" and ")"), and an equal sign ("="). The encryption replaces some occurrences of characters in an original arithmetic equation by letters. Occurrences of one character are replaced, if ever, by the same letter. Occurrences of two different characters are never replaced by the same letter. Note that the encryption does not always replace all the occurrences of the same character; some of its occurrences may be replaced while others may be left as they are. Some characters may be left unreplaced. Any character in the Roman alphabet, in either lowercase or uppercase, may be used as a replacement letter. Note that cases are significant, that is, "a" and "A" are different letters. Note that not only digits but also operator symbols, parentheses and even the equal sign are possibly replaced.
+</p>
+
+<p>
+  The arithmetic equation is derived from the start symbol of $Q$ of the following context-free grammar.<br/>
+  <br/>
+
+  $Q ::= E=E$<br/>
+  $E ::= T | E+T | E-T$<br/>
+  $T ::= F | T*F $<br/>
+  $F ::= N | -F | (E) $<br/>
+  $N ::= 0 | 1B $<br/>
+  $B ::= \epsilon | 0B | 1B$<br/>
+  <br/>
+Here, $\epsilon$ means empty.
+</p>
+
+<p>
+  As shown in this grammar, the arithmetic equation should have one equal sign. Each side of the equation is an expression consisting of numbers, additions, subtractions, multiplications, and negations. Multiplication has precedence over both addition and subtraction, while negation precedes multiplication. Multiplication, addition and subtraction are left associative. For example, <span>x-y+z</span> means <span>(x-y)+z</span>, not <span>x-(y+z)</span>. Numbers are in binary notation, represented by a sequence of binary digits, 0 and 1. Multi-digit numbers always start with 1. Parentheses and negations may appear redundantly in the equation, as in <span>((--x+y))+z</span>.
+</p>
+
+<p>
+Write a program that, for a given encrypted equation, counts the number of different possible original correct equations. Here, an equation should conform to the grammar and it is correct when the computed values of the both sides are equal.
+</p>
+
+<p>
+  For Sample Input 1, C must be = because any equation has one <span>=</span> between two expressions. Then, because <span>A</span> and <span>M</span> should be different, although there are equations conforming to the grammar, none of them can be correct.
+</p>
+
+<p>
+  For Sample Input 2, the only possible correct equation is <span>-0=0</span>.
+</p>
+
+<p>
+For Sample Input 3 (B-A-Y-L-zero-R), there are three different correct equations, <span>0=-(0)</span>, <span>0=(-0)</span>, and <span>-0=(0)</span>. Note that one of the two occurrences of zero is not replaced with a letter in the encrypted equation.
+</p>
+
+
+<h3>Input</h3>
+
+<p>
+The input consists of a single test case which is a string of Roman alphabet characters, binary digits, operator symbols, parentheses and equal signs. The input string has at most 31 characters.
+</p>
+
+
+
+<h3>Output</h3>
+
+<p>
+Print in a line the number of correct equations that can be encrypted into the input string.
+</p>
+
+
+
+<h3>Sample Input 1</h3>
+
+<pre>ACM</pre>
+
+<h3>Sample Output 1</h3>
+
+<pre>0</pre>
+
+<br/>
+
+<h3>Sample Input 2</h3>
+
+<pre>icpc</pre>
+
+<h3>Sample Output 2</h3>
+
+<pre>1</pre>
+
+<br/>
+
+<h3>Sample Input 3</h3>
+
+<pre>BAYL0R</pre>
+
+<h3>Sample Output 3</h3>
+
+<pre>3</pre>
+
+<br/>
+
+<h3>Sample Input 4</h3>
+
+<pre>-AB+AC-A</pre>
+
+<h3>Sample Output 4</h3>
+
+<pre>1</pre>
+
+<br/>
+
+<h3>Sample Input 5</h3>
+
+<pre>abcdefghi</pre>
+
+<h3>Sample Output 5</h3>
+
+<pre>0</pre>
+
+<br/>
+
+<h3>Sample Input 6</h3>
+
+<pre>111-10=1+10*10</pre>
+
+<h3>Sample Output 6</h3>
+
+<pre>1</pre>
+
+<br/>
+
+<h3>Sample Input 7</h3>
+
+<pre>0=10-1</pre>
+
+<h3>Sample Output 7</h3>
+
+<pre>0</pre>
+
+
+
+
+

@@ -1,0 +1,102 @@
+
+<H1>Stable Sort</H1>
+
+<p>
+Let's arrange a deck of cards. There are totally 36 cards of 4 suits(S, H, C, D) and 9 values (1, 2, ... 9). For example, 'eight of heart' is represented by <span>H8</span> and 'one of diamonds' is represented by <span>D1</span>.
+</p>
+
+<p>
+Your task is to write a program which sorts a given set of cards in ascending order by their values using the Bubble Sort algorithms and the Selection Sort algorithm respectively. These algorithms should be based on the following pseudocode:
+</p>
+
+<pre>
+BubbleSort(C)
+1 for i = 0 to C.length-1
+2     for j = C.length-1 downto i+1
+3         if C[j].value < C[j-1].value
+4             swap C[j] and C[j-1]
+</pre>
+
+<pre>
+SelectionSort(C)
+1 for i = 0 to C.length-1
+2     mini = i
+3     for j = i to C.length-1
+4         if C[j].value < C[mini].value
+5             mini = j
+6     swap C[i] and C[mini]
+</pre>
+
+<p>
+Note that, indices for array elements are based on 0-origin.
+</p
+
+<p>
+For each algorithm, report the stability of the output for the given input (instance). Here, 'stability of the output' means that: cards with the same value appear in the output in the same order as they do in the input (instance).
+</p>
+
+<!--
+<p>
+Note that, cards with same values but different suits must be appear in the same order of the input sequence.
+</p>
+-->
+
+<H2>Input</H2>
+
+<p>
+The first line contains an integer <i>N</i>, the number of cards.
+</p>
+
+<p>
+<i>N</i> cards are given in the following line. Each card is represented by two characters. Two consecutive cards are separated by a space character.
+</p>
+
+<H2>Output</H2>
+
+<p>
+In the first line, print the arranged cards provided by the Bubble Sort algorithm. Two consecutive cards should be separated by a space character.
+</p>
+
+<p>
+In the second line, print the stability ("<span>Stable</span>" or "<span>Not stable</span>") of this output.
+</p>
+
+<p>
+In the third line, print the arranged cards provided by the Selection Sort algorithm. Two consecutive cards should be separated by a space character.
+</p>
+
+<p>
+In the fourth line, print the stability ("<span>Stable</span>" or "<span>Not stable</span>") of this output.
+</p>
+
+<H2>Constraints</H2>
+
+<p>
+1 &le; <i>N</i> &le; 36
+</p>
+
+<H2>Sample Input 1</H2>
+<pre>
+5
+H4 C9 S4 D2 C3
+</pre>
+<H2>Sample Output 1</H2>
+<pre>
+D2 C3 H4 S4 C9
+Stable
+D2 C3 S4 H4 C9
+Not stable
+</pre>
+
+<H2>Sample Input 2</H2>
+<pre>
+2
+S1 H1
+</pre>
+<H2>Sample Output 2</H2>
+<pre>
+S1 H1
+Stable
+S1 H1
+Stable
+</pre>

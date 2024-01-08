@@ -1,0 +1,82 @@
+<span class="lang-en">
+<p>Score : <var>300</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>Takahashi, Aoki and Snuke love cookies. They have <var>A</var>, <var>B</var> and <var>C</var> cookies, respectively. Now, they will exchange those cookies by repeating the action below:</p>
+<ul>
+<li>Each person simultaneously divides his cookies in half and gives one half to each of the other two persons.</li>
+</ul>
+<p>This action will be repeated until there is a person with odd number of cookies in hand.</p>
+<p>How many times will they repeat this action?
+Note that the answer may not be finite.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 ≤ A,B,C ≤ 10^9</var></li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>A</var> <var>B</var> <var>C</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the number of times the action will be performed by the three people, if this number is finite.
+If it is infinite, print <code>-1</code> instead.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>4 12 20
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>3
+</pre>
+<p>Initially, Takahashi, Aoki and Snuke have <var>4</var>, <var>12</var> and <var>20</var> cookies. Then,</p>
+<ul>
+<li>After the first action, they have <var>16</var>, <var>12</var> and <var>8</var>.</li>
+<li>After the second action, they have <var>10</var>, <var>12</var> and <var>14</var>.</li>
+<li>After the third action, they have <var>13</var>, <var>12</var> and <var>11</var>.</li>
+</ul>
+<p>Now, Takahashi and Snuke have odd number of cookies, and therefore the answer is <var>3</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>14 14 14
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>-1
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>454 414 444
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>1
+</pre></section>
+</div>
+</span>

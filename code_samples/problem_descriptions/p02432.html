@@ -1,0 +1,97 @@
+<h1>Deque</h1>
+ 
+<p>
+  For a dynamic array $A = \{a_0, a_1, ...\}$ of integers, perform a sequence of the following operations:
+</p>
+
+<ul>
+  <li>push($d$, $x$): Add element $x$ at the begining of $A$, if $d = 0$. Add element $x$ at the end of $A$, if $d = 1$.</li>
+  <li>randomAccess($p$): Print element $a_p$.</li>
+  <li>pop($d$): Delete the first element of $A$, if $d = 0$. Delete the last element of $A$, if $d = 1$.</li>
+</ul>
+
+<p>
+  $A$ is a 0-origin array and it is empty in the initial state.
+</p>
+
+
+<h2>Input</h2>
+
+<p>
+  The input is given in the following format.
+</p>
+
+<pre>
+$q$
+$query_1$
+$query_2$
+:
+$query_q$
+</pre>
+
+<p>
+Each query $query_i$ is given by
+</p>
+
+<pre>
+0 $d$ $x$
+</pre>
+
+<p>or</p>
+
+<pre>
+1 $p$
+</pre>
+
+<p>or</p>
+
+<pre>
+2 $d$
+</pre>
+
+<p>
+  where the first digits <span>0</span>, <span>1</span> and <span>2</span> represent push, randomAccess and pop operations respectively.
+</p>
+
+<p>
+ randomAccess and pop operations will not be given for an empty array.  
+</p>
+
+<h2>Output</h2>
+<p>
+  For each randomAccess, print $a_p$ in a line.
+</p>
+
+<h2>Constraints</h2>
+<ul>
+  <li>$1 \leq q \leq 400,000$</li>
+  <li>$0 \leq p < $ the size of $A$</li>
+  <li>$-1,000,000,000 \leq x \leq 1,000,000,000$</li>
+</ul>
+
+<h2>Sample Input 1</h2>
+
+<pre>
+11
+0 0 1
+0 0 2
+0 1 3
+1 0
+1 1
+1 2
+2 0
+2 1
+0 0 4
+1 0
+1 1
+</pre>
+
+<h2>Sample Output 1</h2>
+
+<pre>
+2
+1
+3
+4
+1
+</pre>

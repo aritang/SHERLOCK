@@ -1,0 +1,87 @@
+<span class="lang-en">
+<p>Score : <var>200</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>A sequence <var>a=\{a_1,a_2,a_3,......\}</var> is determined as follows:</p>
+<ul>
+<li>
+<p>The first term <var>s</var> is given as input.</p>
+</li>
+<li>
+<p>Let <var>f(n)</var> be the following function: <var>f(n) = n/2</var> if <var>n</var> is even, and <var>f(n) = 3n+1</var> if <var>n</var> is odd.</p>
+</li>
+<li>
+<p><var>a_i = s</var> when <var>i = 1</var>, and <var>a_i = f(a_{i-1})</var> when <var>i &gt; 1</var>.</p>
+</li>
+</ul>
+<p>Find the minimum integer <var>m</var> that satisfies the following condition:</p>
+<ul>
+<li>There exists an integer <var>n</var> such that <var>a_m = a_n (m &gt; n)</var>.</li>
+</ul>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 \leq s \leq 100</var></li>
+<li>All values in input are integers.</li>
+<li>It is guaranteed that all elements in <var>a</var> and the minimum <var>m</var> that satisfies the condition are at most <var>1000000</var>.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>s</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the minimum integer <var>m</var> that satisfies the condition.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>8
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>5
+</pre>
+<p><var>a=\{8,4,2,1,4,2,1,4,2,1,......\}</var>. As <var>a_5=a_2</var>, the answer is <var>5</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>7
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>18
+</pre>
+<p><var>a=\{7,22,11,34,17,52,26,13,40,20,10,5,16,8,4,2,1,4,2,1,......\}</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>54
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>114
+</pre></section>
+</div>
+</span>

@@ -1,0 +1,152 @@
+
+
+
+<h1>Problem L: RedBlue</h1>
+
+<h2>Story</h2>
+<p>
+天空都市AIZUのUZIA高校では、競技プログラミングの部活動がとても盛んである。
+この部活には、<var>n</var>人のRed Coderと<var>n</var>人のBlue Coderが所属している。
+</p>
+
+<p>
+ある日の部活の時間に、Red CoderとBlue Coderでペアを組み、この部活から<var>n</var>組、KCPというコンテストに参加することとなった。この高校では、ペアを組む学生同士は握手するという習わしがあるので、部員たちは今すぐ自分のパートナーを見つけることにした。
+</p>
+<p>
+部員たちは全速力で走るため、まっすぐにしか進めない。また、部員たちは、それぞれの部員が移動する距離の総和をできるだけ小さくしたいと思っている。
+</p>
+
+<p>
+なお、部室には2つの円形のテーブルが置いてある。
+</p>
+
+<h2>Problem</h2>
+<p>
+二次元平面上に2つの円、<var>n</var>個の赤色の点、<var>n</var>個の青色の点がある。
+2つの円の中心座標はそれぞれ(<var>x<sub>1</sub></var>, <var>y<sub>1</sub></var>), (<var>x<sub>2</sub></var>, <var>y<sub>2</sub></var>)であり、半径はそれぞれ<var>r<sub>1</sub></var>, <var>r<sub>2</sub></var>である。
+赤い点<var>i</var>は、座標(<var>rx<sub>i</sub></var>, <var>ry<sub>i</sub></var>)にあり、青い点<var>j</var>は、座標(<var>bx<sub>j</sub></var>, <var>by<sub>j</sub></var>)にある。
+</p>
+
+<p>
+あなたは、以下の操作を<var>n</var>回繰り返す必要がある。<br>
+まだ選ばれていない点の中から、赤色の点と青色の点を１つずつ選んで、2点の共通の目的地を設定し、その目的地に向かって2点をそれぞれまっすぐ移動させる。
+目的地は二次元平面上であれば、どこに設定しても構わない。ただし、選んだ2点は移動の際に円の内部を通過することはできないので、そのような移動が発生する目的地を設定することはできない。
+</p>
+
+<p>
+<var>n</var>回の操作をしたときの移動距離の総和を最小化せよ。
+<var>n</var>回の操作を行えない場合は、代わりに"Impossible" (""は除く) と出力せよ。
+</p>
+
+<h2>Input</h2>
+<p>入力は以下の形式で与えられる。</p>
+<pre>
+<var>n</var>
+<var>x<sub>1</sub></var> <var>y<sub>1</sub></var> <var>r<sub>1</sub></var>
+<var>x<sub>2</sub></var> <var>y<sub>2</sub></var> <var>r<sub>2</sub></var>
+<var>rx<sub>1</sub></var> <var>ry<sub>1</sub></var>
+<var>rx<sub>2</sub></var> <var>ry<sub>2</sub></var>
+...
+<var>rx<sub>n</sub></var> <var>ry<sub>n</sub></var>
+<var>bx<sub>1</sub></var> <var>by<sub>1</sub></var>
+<var>bx<sub>2</sub></var> <var>by<sub>2</sub></var>
+...
+<var>bx<sub>n</sub></var> <var>by<sub>n</sub></var></pre>
+<p>
+入力は全て整数で与えられる。<br>
+1行目に<var>n</var>が与えられる。<br>
+2行目に<var>x<sub>1</sub></var>, <var>y<sub>1</sub></var>, <var>r<sub>1</sub></var>が空白区切りで与えられる。<br>
+3行目に<var>x<sub>2</sub></var>, <var>y<sub>2</sub></var>, <var>r<sub>2</sub></var>が空白区切りで与えられる。<br>
+4から3+<var>n</var>行に赤い点の座標(<var>rx<sub>i</sub></var>, <var>ry<sub>i</sub></var>)が空白区切りで与えられる。<br>
+4+<var>n</var>から3+2&times;<var>n</var>行に青い点の座標(<var>bx<sub>j</sub></var>, <var>by<sub>j</sub></var>)が空白区切りで与えられる。
+</p>
+
+<h2>Constraints</h2>
+<p>入力は以下の条件を満たす。</p>
+<ul>
+<li>1 &le; <var>n</var> &le; 100</li>
+<li>-1000 &le; <var>x<sub>i</sub></var>, <var>y<sub>i</sub></var> &le; 1000</li>
+<li>1 &le; <var>r<sub>i</sub></var> &le; 50</li>
+<li>-1000 &le; <var>rx<sub>i</sub></var>, <var>ry<sub>i</sub></var>, <var>bx<sub>i</sub></var>, <var>by<sub>i</sub></var> &le; 1000</li>
+<li>同じ座標に複数の点が存在していることはない</li>
+<li>任意の円の半径を絶対値10<sup>-9</sup>以内で変化させても、高々絶対値10<sup>-3</sup>しか変化しない</li>
+<li>任意の円の半径を絶対値10<sup>-9</sup>以内で変化させても、"Impossible"なケースは"Impossible"のままである</li>
+<li>解は10000を超えない</li>
+<li>どの点も、円から10<sup>-3</sup>以上離れていて、点が円周上に存在したり、点が円に内包されることはない</li>
+<li>2つの円は共通面積を持たず、10<sup>-3</sup>以上離れていることが保証される</li>
+</ul>
+
+<h2>Output</h2>
+<p>
+<var>n</var>回の操作をしたときの移動距離の総和の最小値を1行に出力せよ。なお、出力はジャッジ解の出力との絶対誤差が10<sup>-2</sup>以内であれば許容される。<br>
+<var>n</var>回の操作を行えない場合は、代わりに"Impossible" (""は除く) と出力せよ。
+</p>
+
+<h2>Sample Input 1</h2>
+<pre>
+2
+3 3 2
+8 3 2
+0 3
+3 7
+8 0
+8 7
+</pre>
+
+<h2>Sample Output 1</h2>
+<pre>
+13.8190642862
+</pre>
+<p><img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE3_ACPC2016Day2AIZU_L_sample1" alt="Sample1の図示"></p>
+
+<h2>Sample Input 2</h2>
+<pre>
+2
+3 3 2
+8 3 2
+3 0
+3 7
+8 0
+8 7
+</pre>
+
+<h2>Sample Output 2</h2>
+<pre>
+10.0000000000
+</pre>
+<p><img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE3_ACPC2016Day2AIZU_L_sample2" alt="Sample2の図示"></p>
+
+<h2>Sample Input 3</h2>
+<pre>
+2
+3 3 2
+8 3 2
+0 0
+0 5
+11 0
+11 5
+</pre>
+
+<h2>Sample Output 3</h2>
+<pre>
+22.0000000000
+</pre>
+<p><img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE3_ACPC2016Day2AIZU_L_sample3" alt="Sample3の図示"></p>
+
+<h2>Sample Input 4</h2>
+<pre>
+1
+10 10 10
+31 10 10
+15 19
+26 1
+</pre>
+
+<h2>Sample Output 4</h2>
+<pre>
+Impossible
+</pre>
+<p>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE3_ACPC2016Day2AIZU_L_sample4" alt="Sample4の図示"><br>
+点同士をつなぐことはできません。
+</p>

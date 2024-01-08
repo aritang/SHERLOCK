@@ -1,0 +1,80 @@
+<span class="lang-en">
+<p>Score : <var>200</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>You are given a string <var>S</var> of length <var>N</var> consisting of lowercase English letters.
+We will cut this string at one position into two strings <var>X</var> and <var>Y</var>.
+Here, we would like to maximize the number of different letters contained in both <var>X</var> and <var>Y</var>.
+Find the largest possible number of different letters contained in both <var>X</var> and <var>Y</var> when we cut the string at the optimal position.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>2 \leq N \leq 100</var></li>
+<li><var>|S| = N</var></li>
+<li><var>S</var> consists of lowercase English letters.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+<var>S</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the largest possible number of different letters contained in both <var>X</var> and <var>Y</var>.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>6
+aabbca
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>2
+</pre>
+<p>If we cut the string between the third and fourth letters into <var>X =</var> <code>aab</code> and <var>Y =</var> <code>bca</code>, the letters contained in both <var>X</var> and <var>Y</var> are <code>a</code> and <code>b</code>.
+There will never be three or more different letters contained in both <var>X</var> and <var>Y</var>, so the answer is <var>2</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>10
+aaaaaaaaaa
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>1
+</pre>
+<p>However we divide <var>S</var>, only <code>a</code> will be contained in both <var>X</var> and <var>Y</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>45
+tgxgdqkyjzhyputjjtllptdfxocrylqfqjynmfbfucbir
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>9
+</pre></section>
+</div>
+</span>

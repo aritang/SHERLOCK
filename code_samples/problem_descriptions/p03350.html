@@ -1,0 +1,98 @@
+<span class="lang-en">
+<p>Score : <var>2300</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>You are given a set <var>S</var> of strings consisting of <code>0</code> and <code>1</code>, and an integer <var>K</var>.</p>
+<p>Find the longest string that is a subsequence of <var>K</var> or more different strings in <var>S</var>.
+If there are multiple strings that satisfy this condition, find the lexicographically smallest such string.</p>
+<p>Here, <var>S</var> is given in the format below:</p>
+<ul>
+<li>The data directly given to you is an integer <var>N</var>, and <var>N+1</var> strings <var>X_0,X_1,...,X_N</var>. For every <var>i</var> <var>(0\leq i\leq N)</var>, the length of <var>X_i</var> is <var>2^i</var>.</li>
+<li>For every pair of two integers <var>(i,j)</var> <var>(0\leq i\leq N,0\leq j\leq 2^i-1)</var>, the <var>j</var>-th character of <var>X_i</var> is <code>1</code> if and only if the binary representation of <var>j</var> with <var>i</var> digits (possibly with leading zeros) belongs to <var>S</var>. Here, the first and last characters in <var>X_i</var> are called the <var>0</var>-th and <var>(2^i-1)</var>-th characters, respectively.</li>
+<li><var>S</var> does not contain a string with length <var>N+1</var> or more.</li>
+</ul>
+<p>Here, a string <var>A</var> is a subsequence of another string <var>B</var> when there exists a sequence of integers <var>t_1 &lt; ... &lt; t_{|A|}</var> such that, for every <var>i</var> <var>(1\leq i\leq |A|)</var>, the <var>i</var>-th character of <var>A</var> and the <var>t_i</var>-th character of <var>B</var> is equal.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>0 \leq N \leq 20</var></li>
+<li><var>X_i(0\leq i\leq N)</var> is a string of length <var>2^i</var> consisting of <code>0</code> and <code>1</code>.</li>
+<li><var>1 \leq K \leq |S|</var></li>
+<li><var>K</var> is an integer.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var> <var>K</var>
+<var>X_0</var>
+<var>:</var>
+<var>X_N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the lexicographically smallest string among the longest strings that are subsequences of <var>K</var> or more different strings in <var>S</var>.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>3 4
+1
+01
+1011
+01001110
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>10
+</pre>
+<p>The following strings belong to <var>S</var>: the empty string, <code>1</code>, <code>00</code>, <code>10</code>, <code>11</code>, <code>001</code>, <code>100</code>, <code>101</code> and <code>110</code>.
+The lexicographically smallest string among the longest strings that are subsequences of four or more of them is <code>10</code>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>4 6
+1
+01
+1011
+10111010
+1101110011111101
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>100
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>2 5
+0
+11
+1111
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>
+</pre>
+<p>The answer is the empty string.</p></section>
+</div>
+</span>

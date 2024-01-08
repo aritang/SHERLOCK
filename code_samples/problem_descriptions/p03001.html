@@ -1,0 +1,61 @@
+<span class="lang-en">
+<p>Score : <var>300</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>There is a rectangle in a coordinate plane. The coordinates of the four vertices are <var>(0,0)</var>, <var>(W,0)</var>, <var>(W,H)</var>, and <var>(0,H)</var>.
+You are given a point <var>(x,y)</var> which is within the rectangle or on its border. We will draw a straight line passing through <var>(x,y)</var> to cut the rectangle into two parts. Find the maximum possible area of the part whose area is not larger than that of the other. Additionally, determine if there are multiple ways to cut the rectangle and achieve that maximum.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 \leq W,H \leq 10^9</var></li>
+<li><var>0\leq x\leq W</var></li>
+<li><var>0\leq y\leq H</var></li>
+<li>All values in input are integers.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>W</var> <var>H</var> <var>x</var> <var>y</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the maximum possible area of the part whose area is not larger than that of the other, followed by <code>1</code> if there are multiple ways to cut the rectangle and achieve that maximum, and <code>0</code> otherwise.</p>
+<p>The area printed will be judged correct when its absolute or relative error is at most <var>10^{-9}</var>.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>2 3 1 2
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>3.000000 0
+</pre>
+<p>The line <var>x=1</var> gives the optimal cut, and no other line does.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>2 2 1 1
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>2.000000 1
+</pre></section>
+</div>
+</span>

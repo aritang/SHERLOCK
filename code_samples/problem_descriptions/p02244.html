@@ -1,0 +1,59 @@
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({ tex2jax: { inlineMath: [["$","$"], ["\\(","\\)"]], processEscapes: true }});
+</script>
+<script language="JavaScript" type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML">
+</script>
+
+<H1>8 Queens Problem</H1>
+
+
+<p>
+  The goal of 8 Queens Problem is to put eight queens on a chess-board such that none of them threatens any of others. A queen threatens the squares in the same row, in the same column, or on the same diagonals as shown in the following figure.
+</p>
+
+<center>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_ALDS1_13_A_8queens">
+</center><br>
+
+<p>
+  For a given chess board where $k$ queens are already placed, find the solution of the 8 queens problem.
+</p>
+
+<H2>Input</H2>
+
+<p>
+  In the first line, an integer $k$ is given. In the following $k$ lines, each square where a queen is already placed is given by two integers $r$ and $c$. $r$ and $c$ respectively denotes the row number and the column number. The row/column numbers start with 0.
+</p>
+
+
+<H2>Output</H2>
+
+<p>
+Print a $8 \times 8$ chess board by strings where a square with a queen is represented by '<span>Q</span>' and an empty square is represented by '<span>.</span>'.
+</p>
+
+<H2>Constraints</H2>
+
+<ul>
+  <li>There is exactly one solution</li>
+</ul>
+
+<H2>Sample Input 1</H2>
+<pre>
+2
+2 2
+5 3
+</pre>
+
+<H2>Sample Output 1</H2>
+<pre>
+......Q.
+Q.......
+..Q.....
+.......Q
+.....Q..
+...Q....
+.Q......
+....Q...
+</pre>

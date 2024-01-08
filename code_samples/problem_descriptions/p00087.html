@@ -1,0 +1,139 @@
+
+
+
+<H1>未熟者の数式</H1>
+
+
+<p>博士 : ピーター君、ついにやったよ。</p>
+<p>ピーター : またですか。今度はどんなくだらない発明ですか。</p>
+<p>博士 : ついに数式を計算機で処理する画期的な方法を思いついたんだ。この表をみてごらん。
+</p>
+
+<center>
+<table border=1>
+<tr><td width=200 align=center>通常の記法</td><td width=200 align=center>博士の「画期的な」記法</td></tr>
+<tr><td>1 + 2</td><td>1 2 +</td></tr>
+<tr><td>3 * 4 + 7</td><td>3 4 * 7 +</td></tr>
+<tr><td>10 / ( 2 - 12 )	</td><td>10 2 12 - /</td></tr>
+<tr><td>( 3 - 4 ) * ( 7 + 2 * 3 )</td><td>3 4 - 7 2 3 * + *</td></tr>
+</table>
+</center>
+<br/>
+
+<p>ピーター : はぁ。</p>
+<p>博士 : ふっふっふ。これだけでは、未熟者の君には何のことだかわからないだろうねえ。ここからが肝心なんじゃ。</p>
+<p>ピーター : っていうか・・・。</p>
+<p>博士 : 計算機にはスタックというデータ構造があることは君も知っているね。ほれ、「先入れ後出し」のあれじゃよ。</p>
+<p>ピーター : はい。知ってますが、あの・・・。</p>
+<p>博士 : この画期的な記法はあのスタックを使うんじゃ。例えばこの 10 2 12 - / だが、次のように処理する。
+</p>
+
+
+<center>
+<table>
+<tr><td width="100">処理対象</td><td width=80 align=center>10</td><td width=80 align=center>2</td><td width=80 align=center>12</td><td width=80 align=center>-</td><td width=80 align=center>/</td></tr>
+<tr><td>        </td><td align=center>↓</td><td align=center>↓</td><td align=center>↓</td><td align=center>↓2-12</td><td align=center>↓10/-10</td></tr>
+
+<tr><td>スタック</td><td align=center>
+
+<table border=1> 
+<tr><td>.</td></tr>
+<tr><td>.</td></tr>
+<tr><td width=40>10</td></tr>
+
+</table>
+
+</td><td align=center>
+
+<table border=1> 
+<tr><td>.</td></tr>
+<tr><td width=40>2</td></tr>
+<tr><td>10</td></tr>
+</table>
+
+</td><td align=center>
+
+<table border=1> 
+<tr><td width=40>12</td></tr>
+<tr><td>2</td></tr>
+<tr><td>10</td></tr>
+</table>
+
+
+</td><td align=center>
+
+<table border=1> 
+<tr><td>.</td></tr>
+<tr><td width=40>-10</td></tr>
+<tr><td>10</td></tr>
+</table>
+
+
+
+</td><td align=center>
+
+<table border=1> 
+<tr><td>.</td></tr>
+<tr><td>.</td></tr>
+<tr><td width=40>-1</td></tr>
+</table>
+
+</td></tr>
+
+
+<tr>
+
+</tr>
+</table>
+</center>
+
+<br>
+
+
+<p>博士 : どうじゃな。括弧も演算子の優先順位も気にする必要がないじゃろう？語順も「10 を 2 から 12 を引いたもので割る。」となり、何となく彼の極東の島国の言葉、日本語と似ておるじゃろうて。
+       この画期的な発明さえあれば、我が研究室は安泰じゃて。ファファファ。</p>
+<p>ピーター : っていうか博士。これって日本にいたとき会津大学の基礎コースで習いましたよ。「逆ポーランド記法」とかいって、みんな簡単にプログラムしてました。</p>
+<p>博士 : ・・・。</p>
+
+
+<p>
+ということで、ピーター君に変わって博士に、このプログラムを教える事になりました。「逆ポーランド記法」で書かれた数式を入力とし、計算結果を出力するプログラムを作成してください。
+</p>
+
+
+<H2>入力</H2>
+
+<p>複数のデータセットが与えられます。各データセットでは、逆ポーランド記法による数式（整数と演算記号が空白文字１文字（半角）で区切られた80文字以内の文字列）が １ 行に与えられます。
+ある値を 0 や 0 に限りなく近い値で割るような数式は与えられません。
+</p>
+
+<p>
+データセットの数は 50 を超えません。
+</p>
+
+
+
+<H2>出力</H2>
+
+<p>各データセットごとに、計算結果（実数）を１行に出力してください。なお、計算結果は 0.00001 以下の誤差を含んでもよい。
+</p>
+
+<H2>Sample Input</H2>
+
+<pre>
+10 2 12 - /
+3 4 - 7 2 3 * + *
+-1 -2 3 + +
+</pre>
+
+
+<H2>Output for the Sample Input</H2>
+
+<pre>
+-1.000000
+-13.000000
+0.000000
+</pre>
+
+
+

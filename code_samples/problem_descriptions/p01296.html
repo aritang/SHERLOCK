@@ -1,0 +1,86 @@
+
+<H1><font color="#000">Problem D:</font> Futon</H1>
+
+<p>
+The sales department of Japanese Ancient Giant Corp. is visiting a hot spring resort for their
+recreational trip. For deepening their friendships, they are staying in one large room of a
+Japanese-style hotel called a ryokan.
+</p>
+
+<p>
+In the ryokan, people sleep in Japanese-style beds called futons. They all have put their futons
+on the floor just as they like. Now they are ready for sleeping but they have one concern: they
+don’t like to go into their futons with their legs toward heads — this is regarded as a bad custom
+in Japanese tradition. However, it is not obvious whether they can follow a good custom. You
+are requested to write a program answering their question, as a talented programmer.
+</p>
+
+<p>
+Here let's model the situation. The room is considered to be a grid on an <i>xy</i>-plane. As usual,
+<i>x</i>-axis points toward right and <i>y</i>-axis points toward up. Each futon occupies two adjacent cells.
+People put their pillows on either of the two cells. Their heads come to the pillows; their foots
+come to the other cells. If the cell of some person's foot becomes adjacent to the cell of another
+person's head, regardless their directions, then it is considered as a bad case. Otherwise people
+are all right.
+</p>
+
+<H2>Input</H2>
+
+<p>
+The input is a sequence of datasets. Each dataset is given in the following format:
+</p>
+
+<p>
+       <i>n</i><br>
+       <i>x</i><sub>1</sub> <i>y</i><sub>1</sub> <i>dir</i><sub>1</sub><br>
+       ...<br>
+       <i>x<sub>n</sub></i> <i>y<sub>n</sub></i> <i>dir<sub>n</sub></i><br>
+</p>
+<p>
+<i>n</i> is the number of futons (1 &le; <i>n</i> &le; 20,000); (<i>x<sub>i</sub></i>, <i>y<sub>i</sub></i>) denotes the coordinates of the left-bottom
+corner of the <i>i</i>-th futon; <i>dir<sub>i</sub></i> is either '<span>x</span>' or  '<span>y</span>' and denotes the direction of the <i>i</i>-th futon,
+where '<span>x</span>' means the futon is put horizontally and '<span>y</span>' means vertically. All coordinate values are
+non-negative integers not greater than 10<sup>9</sup> .
+</p>
+<p>
+It is guaranteed that no two futons in the input overlap each other.
+</p>
+<p>
+The input is terminated by a line with a single zero. This is not part of any dataset and thus
+should not be processed.
+
+</p>
+
+
+<H2>Output</H2>
+
+<p>
+For each dataset, print "<span>Yes</span>" in a line if it is possible to avoid a bad case, or "<span>No</span>" otherwise.
+</p>
+
+<H2>Sample Input</H2>
+<pre>
+4
+0 0 x
+2 0 x
+0 1 x
+2 1 x
+4
+1 0 x
+0 1 x
+2 1 x
+1 2 x
+4
+0 0 x
+2 0 y
+0 1 y
+1 2 x
+0
+</pre>
+
+<H2>Output for the Sample Input</H2>
+<pre>
+Yes
+No
+Yes
+</pre>

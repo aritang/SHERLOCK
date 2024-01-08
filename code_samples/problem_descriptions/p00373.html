@@ -1,0 +1,81 @@
+<H1>Aerial Photos</H1>
+
+<p>
+Hideyo has come by two aerial photos of the same scale and orientation. You can see various types of buildings, but some areas are hidden by clouds. Apparently, they are of the same area, and the area covered by the second photograph falls entirely within the first. However, because they were taken at different time points, different shapes and distribution of clouds obscure identification where the area in the second photograph is located in the first. There may even be more than one area within the first that the second fits equally well.
+</p>
+
+<p>
+  A set of pixel information is given for each of the photographs. Write a program to extract candidate sub-areas within the first photograph that compare with the second equally well and output the number of the candidates.
+</p>
+
+<h2>Input</h2>
+
+<p>
+The input is given in the following format.
+</p>
+
+<pre>
+<var>AW</var> <var>AH</var> <var>BW</var> <var>BH</var>
+<var>arow<sub>1</sub></var>
+<var>arow<sub>2</sub></var>
+:
+<var>arow<sub>AH</sub></var>
+<var>brow<sub>1</sub></var>
+<var>brow<sub>2</sub></var>
+:
+<var>brow<sub>BH</sub></var>
+</pre>
+
+<p>
+The first line provides the number of pixels in the horizontal and the vertical direction <var>AW</var> (1 &le; <var>AW</var> &le; 800) and <var>AH</var> (1 &le; <var>AH</var> &le; 800) for the first photograph, followed by those for the second <var>BW</var> (1 &le; <var>BW</var> &le; 100) and <var>BH</var> (1 &le; <var>BH</var> &le; 100) (<var>AW</var> &ge; <var>BW</var> and<var>AH</var> &ge; <var>BH</var>). Each of the subsequent <var>AH</var> lines provides pixel information (<var>arow<sub>i</sub></var>) of the <var>i</var>-th row from the top of the first photograph. Each of the <var>B</var>H lines that follows provides pixel information (<var>brow<sub>i</sub></var>) of the <var>i</var>-th row from the top of the second photograph.
+
+</p>
+
+<p>
+  Each of the pixel information <var>arow<sub>i</sub></var> and <var>brow<sub>i</sub></var> is a string of length <var>AW</var> and <var>BW</var>, respectively, consisting of upper/lower-case letters, numeric characters, or "<span>?</span>". Each one character represents a pixel, whereby upper/lower-case letters and numeric characters represent a type of building, and "<span>?</span>" indicates a cloud-covered area.
+</p>
+
+
+<h2>Output</h2>
+
+<p>
+  Output the number of the candidates.
+</p>
+
+<h2>Sample Input 1</h2>
+
+<pre>
+5 5 3 3
+AF??z
+W?p88
+???Hk
+pU?m?
+F???c
+F??
+p?8
+?H?
+</pre>
+
+<h2>Sample Output 1</h2>
+<pre>
+4
+</pre>
+
+
+<h2>Sample Input 2</h2>
+
+<pre>
+6 5 4 2
+aaaaaa
+aaaaaa
+aaaaaa
+aaaaaa
+aaaaaa
+aaaa
+aaaa
+</pre>
+
+<h2>Sample Output 2</h2>
+<pre>
+12
+</pre>

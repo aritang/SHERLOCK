@@ -1,0 +1,119 @@
+<span class="lang-en">
+<p>Score : <var>500</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3>
+<p>There are <var>N</var> squares numbered <var>1</var> to <var>N</var> from left to right.
+Each square has a character written on it, and Square <var>i</var> has a letter <var>s_i</var>. Besides, there is initially one golem on each square.</p>
+<p>Snuke cast <var>Q</var> spells to move the golems.</p>
+<p>The <var>i</var>-th spell consisted of two characters <var>t_i</var> and <var>d_i</var>, where <var>d_i</var> is <code>L</code> or <code>R</code>.
+When Snuke cast this spell, for each square with the character <var>t_i</var>, all golems on that square moved to the square adjacent to the left if <var>d_i</var> is <code>L</code>, and moved to the square adjacent to the right if <var>d_i</var> is <code>R</code>.</p>
+<p>However, when a golem tried to move left from Square <var>1</var> or move right from Square <var>N</var>, it disappeared.</p>
+<p>Find the number of golems remaining after Snuke cast the <var>Q</var> spells.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 \leq N,Q \leq 2 \times 10^{5}</var></li>
+<li><var>|s| = N</var></li>
+<li><var>s_i</var> and <var>t_i</var> are uppercase English letters.</li>
+<li><var>d_i</var> is <code>L</code> or <code>R</code>.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var> <var>Q</var>
+<var>s</var>
+<var>t_1</var> <var>d_1</var>
+<var>\vdots</var>
+<var>t_{Q}</var> <var>d_Q</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the answer.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>3 4
+ABC
+A L
+B L
+B R
+A R
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>2
+</pre>
+<ul>
+<li>Initially, there is one golem on each square.</li>
+<li>In the first spell, the golem on Square <var>1</var> tries to move left and disappears.</li>
+<li>In the second spell, the golem on Square <var>2</var> moves left.</li>
+<li>In the third spell, no golem moves.</li>
+<li>In the fourth spell, the golem on Square <var>1</var> moves right.</li>
+<li>After the four spells are cast, there is one golem on Square <var>2</var> and one golem on Square <var>3</var>, for a total of two golems remaining.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>8 3
+AABCBDBA
+A L
+B R
+A R
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>5
+</pre>
+<ul>
+<li>After the three spells are cast, there is one golem on Square <var>2</var>, two golems on Square <var>4</var> and two golems on Square <var>6</var>, for a total of five golems remaining.</li>
+<li>Note that a single spell may move multiple golems.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>10 15
+SNCZWRCEWB
+B R
+R R
+E R
+W R
+Z L
+S R
+Q L
+W L
+B R
+C L
+A L
+N L
+E R
+Z L
+S L
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>3
+</pre></section>
+</div>
+</span>

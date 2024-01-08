@@ -1,0 +1,154 @@
+<h1>Problem J: Yu-kun Likes To Play Darts</h1>
+<h2>Background</h2>
+<p>
+会津大学付属幼稚園はプログラミングが大好きな子供が集まる幼稚園である。園児の一人であるゆう君は、プログラミングと同じくらいダーツが大好きだ。
+そんなゆう君は最近ダーツにはまっていたが、普通のダーツに飽きてしまったため独自のダーツボードを作ることにした。
+</p>
+<p>
+ダーツについては<a href="http://ja.wikipedia.org/wiki/ダーツ">ダーツ</a>を参照。
+</p>
+
+
+<h2>Problem</h2>
+<p>
+ゆう君が考えたダーツの内容は以下の通りだ。
+</p>
+<p>
+無限に広いダーツボードには得点の書かれた多角形が幾つかある。
+プレイヤーはダーツの矢を1本だけ持っている。
+プレイヤーは矢を投げ、いずれかの多角形に矢を刺すことでそこに書かれている得点を得る。
+それ以外に刺さった場合は得点は得られない。
+</p>
+<p>
+ゆう君は矢を投げる位置を決めたのだが、正確に刺さるとは限らない。
+ダーツボードを2次元平面とし、ゆう君が狙う位置を点(<var>cx</var>,<var>cy</var>)とする。
+ゆう君の投げた矢が刺さる場所は、点(<var>cx</var>,<var>cy</var>)を中心とする半径<var>r</var>の円に含まれる任意の点から一様な確率で選ばれる。
+ばれる点の座標は整数である必要はない。
+</p>
+
+<p>
+ダーツボードの情報とゆう君が狙う位置(<var>cx</var>,<var>cy</var>)、半径<var>r</var>が与えれるので、ゆう君が獲得することの出来る得点の期待値を答えよ。
+</p>
+
+<h2>Input</h2>
+
+<pre>
+<var>n</var> <var>cx</var> <var>cy</var> <var>r</var>
+0番目の多角形の情報
+1番目の多角形の情報
+...
+<var>(n-1)</var>番目の多角形の情報
+</pre>
+
+<p>
+<var>n</var>はダーツボード上にある多角形の数である。
+多角形の情報は以下の形式で与えられる。
+</p>
+
+<pre>
+<var>p</var> <var>score</var>
+<var>x<sub>0</sub></var> <var>y<sub>0</sub></var>
+<var>x<sub>1</sub></var> <var>y<sub>1</sub></var>
+...
+<var>x<sub>(p-1)</sub></var> <var>y<sub>(p-1)</sub></var>
+</pre>
+
+<p>
+<var>p</var>は多角形の頂点数を表し、<var>score</var>は多角形に書かれている得点を表す。
+多角形の各線分は(<var>x<sub>i</sub></var>,<var>y<sub>i</sub></var>)と(<var>x<sub>i+1</sub></var>,<var>y<sub>i+1</sub></var>) ( <var>i</var> &lt; <var>p</var>-1 )の頂点を繋いだ線分と、(<var>x<sub>p-1</sub></var>,<var>y<sub>p-1</sub></var>)と(<var>x<sub>0</sub></var>,<var>y<sub>0</sub></var>)の頂点を繋いだ線分である。
+</pre>
+
+
+<h2>Constraints</h2>
+<!-- 多角形をカットするのであれば、nを減らすこと -->
+<p>入力は以下の条件を満たす。</p>
+<ul>
+<li>入力は全て整数で与えられる</li>
+<li>1 &le; <var>n</var> &le; 50</li>
+<li>0 &le; <var>cx</var>, <var>cy</var>, <var>x</var>, <var>y</var> &le; 1000</li>
+<li>1 &le; <var>r</var> &le; 100</var>
+<li>3 &le; <var>p</var> &le; 10</li>
+<li>1 &le; <var>score</var> &le; 100</li>
+<li>多角形の頂点は、隣り合った頂点を時計回り、または反時計回りに訪問するような順番で与えられる</li>
+<li>多角形の辺が別の多角形の辺と共通な点をもつことはない</li>
+<li>多角形が別の多角形を内包することはない</li>
+<li>矢が多角形の辺上に刺さった場合、得点は得られないものとする</li>
+</ul>
+
+<h2>Output</h2>
+<p>
+ゆう君が獲得することの出来る得点の期待値を1行で出力せよ。小数点以下は何桁数字を出力しても構わない。ただし、解答の誤差は0.000001(10<sup>-6</sup>)を超えてはならない。
+</p>
+
+<h2>Sample Input 1</h2>
+<pre>
+1 2 2 1
+4 1
+0 0
+2 0
+2 2
+0 2
+</pre>
+
+<h2>Sample Output 1</h2>
+<pre>
+0.2500000000
+</pre>
+
+<h2>Sample Input 2</h2>
+<pre>
+1 2 2 1
+4 1
+0 0
+5 0
+5 5
+0 5
+</pre>
+
+<h2>Sample Output 2</h2>
+<pre>
+1.0000000000
+</pre>
+
+<h2>Sample Input 3</h2>
+<pre>
+4 3 3 2
+3 1
+1 1
+3 3
+1 5
+4 2
+2 0
+5 0
+4 2
+3 2
+3 3
+4 3
+6 1
+6 5
+4 4
+3 4
+4 4
+5 6
+2 6
+</pre>
+
+<h2>Sample Output 3</h2>
+<pre>
+1.0574955319
+</pre>
+
+<h2>Sample Input 4</h2>
+<pre>
+1 10 10 1
+4 10
+0 0
+1 0
+1 1
+0 1
+</pre>
+
+<h2>Sample Output 4</h2>
+<pre>
+0.0000000000
+</pre>

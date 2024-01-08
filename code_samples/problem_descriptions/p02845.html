@@ -1,0 +1,90 @@
+<span class="lang-en">
+<p>Score: <var>500</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3>
+<p><var>N</var> people are standing in a queue, numbered <var>1, 2, 3, ..., N</var> from front to back. Each person wears a hat, which is red, blue, or green.</p>
+<p>The person numbered <var>i</var> says:</p>
+<ul>
+<li>"In front of me, exactly <var>A_i</var> people are wearing hats with the same color as mine."</li>
+</ul>
+<p>Assuming that all these statements are correct, find the number of possible combinations of colors of the <var>N</var> people's hats.</p>
+<p>Since the count can be enormous, compute it modulo <var>1000000007</var>.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3>
+<ul>
+<li><var>1 \leq N \leq 100000</var></li>
+<li><var>0 \leq A_i \leq N-1</var></li>
+<li>All values in input are integers.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3>
+<p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+<var>A_1</var> <var>A_2</var> <var>A_3</var> <var>...</var> <var>A_N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3>
+<p>Print the number of possible combinations of colors of the <var>N</var> people's hats, modulo <var>1000000007</var>.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>6
+0 1 2 3 4 5
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>3
+</pre>
+<p>We have three possible combinations, as follows:</p>
+<ul>
+<li>Red, Red, Red, Red, Red, Red</li>
+<li>Blue, Blue, Blue, Blue, Blue, Blue</li>
+<li>Green, Green, Green, Green, Green, Green</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>3
+0 0 0
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>6
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>54
+0 0 1 0 1 2 1 2 3 2 3 3 4 4 5 4 6 5 7 8 5 6 6 7 7 8 8 9 9 10 10 11 9 12 10 13 14 11 11 12 12 13 13 14 14 15 15 15 16 16 16 17 17 17
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>115295190
+</pre></section>
+</div>
+</span>

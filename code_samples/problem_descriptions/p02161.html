@@ -1,0 +1,99 @@
+<h1>Problem M: 1333</h1>
+
+<h2>Problem</h2>
+<p>
+  長さ$N$の文字列$S$が与えられる。
+  以下のクエリを$Q$回処理せよ。<br>
+
+  <br>クエリ<br>
+  $S[L: R]$を$S$の$L$文字目から$R$文字目まで（両端を含む）からなる文字列とする。<br>
+  $ S[L: R] $を適当な文字列$A,B,C,X$を用いて$AXBXCX(1 \leq |A|,|B|,|C|,|X|)$ と表すことを考え、そのような$X$の中で最長のものの長さを出力する。<br>
+  ただし、そのような$X$が存在しない場合は代わりに0を出力する。<br>
+  
+</p>
+
+<h2>Input</h2>
+<p>入力は以下の形式で与えられる。</p>
+<pre>
+$N$ $Q$
+$S$
+$L_1$ $R_1$
+$L_2$ $R_2$
+$\vdots$
+$L_Q$ $R_Q$
+</pre>
+<p>
+  $N,Q,L,R$はすべて整数で与えられる。<br>
+  1行目に$N$, $Q$が空白区切りで与えられる。<br>
+  2行目に文字列$S$が与えられる。<br>
+  2+$i(1\leq i \leq Q)$行目に$L_i$, $R_i$が空白区切りで与えられる。これらは$i$番目のクエリにおける$L,R$を表す。<br>
+</p>
+
+<h2>Constraints</h2>
+<p>入力は以下の条件を満たす。</p>
+<ul>
+  <li>$1 \leq N, Q\leq 2 \times 10^5 $</li>
+  <li>$S$の各文字は小文字アルファベットからなる</li>
+  <li>$1 \leq L_i \leq R_i \leq N $</li>
+</ul>
+
+
+<h2>Output</h2>
+<p>
+各クエリについて、最長の$X$の長さを一行に出力せよ。<br>
+</p>
+
+<h2>Sample Input 1</h2>
+<pre>
+12 3
+itisansansan
+1 12
+5 12
+6 7
+</pre>
+
+<h2>Sample Output 1</h2>
+<pre>
+2
+1
+0
+</pre>
+<p>
+一つ目のクエリにおいて、$A=itis, B=s, C=s, X=an$とおくと、$S[1:12]=AXBXCX$となる。
+</p>
+
+<h2>Sample Input 2</h2>
+<pre>
+20 2
+sensanbyakusanjuusan
+1 20
+1 14
+</pre>
+
+<h2>Sample Output 2</h2>
+<pre>
+3
+1
+</pre>
+
+<h2>Sample Input 3</h2>
+<pre>
+21 6
+aaaabaaaabaaaaaaaaaab
+1 21
+10 21
+10 18
+4 16
+11 21
+1 6
+</pre>
+
+<h2>Sample Output 3</h2>
+<pre>
+4
+0
+2
+2
+0
+1
+</pre>

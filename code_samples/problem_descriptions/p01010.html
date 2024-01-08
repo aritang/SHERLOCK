@@ -1,0 +1,95 @@
+
+
+<script src="./IMAGE/varmath.js" charset="UTF-8"></script>
+
+<h1>Problem E: Light Source</h1>
+<h2>Problem</h2>
+
+<!--
+<p>
+<var>n</var>個の円状の光源がある。ある光源が光を受けた場合、その光源の中心点から扇状に光が放出される。光源が光を受けるとは、光となる扇形が光源となる円を完全に覆うことをいう。また、光源を覆う事によって光は遮られず、扇形に覆われていない円の部分が存在する場合、光を受けたと見なされない。光を受けた光源から放出される光の強さは、受けた光の強さと同じになる。円を全て囲うように受けた光が複数存在する場合、放出される光の強さはそれらの合計となる。ただし、放出される光の強さには上限があり、上限を超えた場合、光の強さは上限と同値になる。
+</p>
+-->
+
+<p>
+二次元平面上に<var>n</var>個の円状の光源が配置されている。ある光源が光を受けると、下図のようにその光源の中心点から扇状に光が放出される。
+<br/>
+<br/>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE3_ACPC2013Aizu_aizuicpc_shape"><br/>
+光源の中心点は(<var>x</var>,<var>y</var>)、半径は<var>r</var>で表される。
+光となる扇形は角<var>&beta;</var>を中心に-<var>&theta;</var>/2, +<var>&theta;</var>/2の方向へ対称に広がり、その半径は<var>&alpha;</var>である。
+</p>
+
+<p>
+光源の円が扇型の光に完全に覆われるとき、光源はその光を受けたとみなされる。光源から放出される光の強さは、受けた光の強さの合計となる。ただし、放出される光の強さには上限があり、上限を超えた場合、光の強さは上限値と同じになる。なお、ある光や光源によって光が遮られることはない。
+</p>
+
+<p>
+ある地点に存在する光源を目的光源とする。目的光源では光が放出されず、受ける光の強さに制限はない。
+あなたは座標(0,0)から、ある強さの扇形の光を、任意の方向に１度だけ放出することができる。目的光源が受ける光の強さの合計の最大値を求めるプログラムを作成せよ。ただし、全ての光源において、放出された光が元の光源に戻るような入力データは与えられないと仮定してよい。また、この問題では、領域の境界からの距離が0.000001以内の場合、領域上とみなすことにする。
+</p>
+
+<h2>Input</h2>
+
+
+<pre>
+<var>n</var>
+<var>&theta;<sub>0</sub></var> <var>&alpha;<sub>0</sub></var> <var>power</var>
+<var>x<sub>1</sub></var> <var>y<sub>1</sub></var> <var>r<sub>1</sub></var> <var>&theta;<sub>1</sub></var> <var>&alpha;<sub>1</sub></var> <var>&beta;<sub>1</sub></var> <var>maxpower<sub>1</sub></var>
+.
+.
+<var>x<sub>n</sub></var> <var>y<sub>n</sub></var> <var>r<sub>n</sub></var> <var>&theta;<sub>n</sub></var> <var>&alpha;<sub>n</sub></var> <var>&beta;<sub>n</sub></var> <var>maxpower<sub>n</sub></var>
+<var>x<sub>n+1</sub></var> <var>y<sub>n+1</sub></var> <var>r<sub>n+1</sub></var>
+</pre>
+
+<p>
+1行目には目的光源を除く光源の数<var>n</var>が与えられる。<br />
+2行目に最初に光を放出する座標(0,0)の情報、3行目からn+2行目に目的でない光源の情報、n+3行目に目的光源の情報がそれぞれ空白区切りで与えられる。<br />
+各情報に対して、<var>x<sub>i</sub></var>,<var>y<sub>i</sub></var>は光源の中心点の座標、<var>r<sub>i</sub></var>は光源の半径、<var>&theta;<sub>i</sub></var>は光が広がる角度、<var>&alpha;<sub>i</sub></var>は光の半径、<var>&beta;<sub>i</sub></var>は光が向かう方向を表す。2行目の<var>power</var>は最初に放出される光の強さ、3行目からn+2行目の<var>maxpower<sub>i</sub></var>は放出される光の上限を表す。<br />
+光の方向<var>&beta;<sub>i</sub></var>はx軸の正の向きから反時計回りに回転し、各角度の単位は度とする。<br />
+</p>
+
+<h2>Constraints</h2>
+<p>入力は以下の条件を満たす。</p>
+<ul>
+
+<li>入力は全て整数からなる</li>
+<li>1 &le; <var>n</var> &le; 100</li>
+<li>-1000 &le; <var>x<sub>i</sub></var>,<var>y<sub>i</sub></var> &le; 1000</li>
+<li>1 &le; <var>r<sub>i</sub></var> &le; 1000</li>
+<li>1 &le; <var>&theta;<sub>i</sub></var> &le; 180</li>
+<li>1 &le; <var>&alpha;<sub>i</sub></var> &le; 1000</li>
+<li>0 &le; <var>&beta;<sub>i</sub></var> &lt; 360</li>
+<li>0 &le; <var>power</var>,<var>maxpower<sub>i</sub></var> &le; 1000</li>
+
+</ul>
+
+<h2>Output</h2>
+<p>目的光源を全て囲うような光の強さの合計の最大値を1行に出力せよ。</p>
+
+<h2>Sample Input 1</h2>
+<pre>
+1
+90 10 20
+3 3 1 90 10 315 10
+6 0 1
+</pre>
+
+<h2>Sample Output 1</h2>
+<pre>
+30
+</pre>
+
+<h2>Sample Input 2</h2>
+<pre>
+2
+90 10 10
+-3 0 1 45 10 90 10
+-6 0 2 30 3 180 10
+-9 0 1
+</pre>
+
+<h2>Sample Output 2</h2>
+<pre>
+10
+</pre>

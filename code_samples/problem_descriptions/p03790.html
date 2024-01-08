@@ -1,0 +1,148 @@
+<span class="lang-en">
+<p>Score : <var>1700</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>There is a railroad in Takahashi Kingdom.
+The railroad consists of <var>N</var> sections, numbered <var>1</var>, <var>2</var>, ..., <var>N</var>, and <var>N+1</var> stations, numbered <var>0</var>, <var>1</var>, ..., <var>N</var>. Section <var>i</var> directly connects the stations <var>i-1</var> and <var>i</var>.
+A train takes exactly <var>A_i</var> minutes to run through section <var>i</var>, regardless of direction.
+Each of the <var>N</var> sections is either single-tracked over the whole length, or double-tracked over the whole length.
+If <var>B_i = 1</var>, section <var>i</var> is single-tracked; if <var>B_i = 2</var>, section <var>i</var> is double-tracked.
+Two trains running in opposite directions can cross each other on a double-tracked section, but not on a single-tracked section.
+Trains can also cross each other at a station.</p>
+<p>Snuke is creating the timetable for this railroad. In this timetable, the trains on the railroad run every <var>K</var> minutes, as shown in the following figure. Here, bold lines represent the positions of trains running on the railroad. (See Sample 1 for clarification.)</p>
+<p><img alt="" src="https://atcoder.jp/img/agc011/a5c221ce77ab6ee8aee48e75a4e5c969.png"/></p>
+<p>When creating such a timetable, find the minimum sum of the amount of time required for a train to depart station <var>0</var> and reach station <var>N</var>, and the amount of time required for a train to depart station <var>N</var> and reach station <var>0</var>.
+It can be proved that, if there exists a timetable satisfying the conditions in this problem, this minimum sum is always an integer.</p>
+<p>Formally, the times at which trains arrive and depart must satisfy the following:</p>
+<ul>
+<li>Each train either departs station <var>0</var> and is bound for station <var>N</var>, or departs station <var>N</var> and is bound for station <var>0</var>.</li>
+<li>Each train takes exactly <var>A_i</var> minutes to run through section <var>i</var>. For example, if a train bound for station <var>N</var> departs station <var>i-1</var> at time <var>t</var>, the train arrives at station <var>i</var> exactly at time <var>t+A_i</var>.</li>
+<li>Assume that a train bound for station <var>N</var> arrives at a station at time <var>s</var>, and departs the station at time <var>t</var>. Then, the next train bound for station <var>N</var> arrives at the station at time <var>s+K</var>, and departs the station at time <var>t+K</var>. Additionally, the previous train bound for station <var>N</var> arrives at the station at time <var>s-K</var>, and departs the station at time <var>t-K</var>. This must also be true for trains bound for station <var>0</var>.</li>
+<li>Trains running in opposite directions must not be running on the same single-tracked section (except the stations at both ends) at the same time.</li>
+</ul>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 \leq N \leq 100000</var></li>
+<li><var>1 \leq K \leq 10^9</var></li>
+<li><var>1 \leq A_i \leq 10^9</var></li>
+<li><var>A_i</var> is an integer.</li>
+<li><var>B_i</var> is either <var>1</var> or <var>2</var>.</li>
+</ul>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Partial Score</h3><ul>
+<li>In the test set worth <var>500</var> points, all the sections are single-tracked. That is, <var>B_i = 1</var>.</li>
+<li>In the test set worth another <var>500</var> points, <var>N \leq 200</var>.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>The input is given from Standard Input in the following format:</p>
+<pre><var>N</var> <var>K</var>
+<var>A_1</var> <var>B_1</var>
+<var>A_2</var> <var>B_2</var>
+:
+<var>A_N</var> <var>B_N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print an integer representing the minimum sum of the amount of time required for a train to depart station <var>0</var> and reach station <var>N</var>, and the amount of time required for a train to depart station <var>N</var> and reach station <var>0</var>.
+If it is impossible to create a timetable satisfying the conditions, print <var>-1</var> instead.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>3 10
+4 1
+3 1
+4 1
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>26
+</pre>
+<p>For example, the sum of the amount of time in question will be <var>26</var> minutes in the following timetable:</p>
+<p><img alt="" src="https://atcoder.jp/img/agc011/a5c221ce77ab6ee8aee48e75a4e5c969.png"/></p>
+<p>In this timetable, the train represented by the red line departs station <var>0</var> at time <var>0</var>, arrives at station <var>1</var> at time <var>4</var>, departs station <var>1</var> at time <var>5</var>, arrives at station <var>2</var> at time <var>8</var>, and so on.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>1 10
+10 1
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>-1
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>6 4
+1 1
+1 1
+1 1
+1 1
+1 1
+1 1
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>12
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 4</h3><pre>20 987654321
+129662684 2
+162021979 1
+458437539 1
+319670097 2
+202863355 1
+112218745 1
+348732033 1
+323036578 1
+382398703 1
+55854389 1
+283445191 1
+151300613 1
+693338042 2
+191178308 2
+386707193 1
+204580036 1
+335134457 1
+122253639 1
+824646518 2
+902554792 2
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 4</h3><pre>14829091348
+</pre></section>
+</div>
+</span>

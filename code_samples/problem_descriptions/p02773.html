@@ -1,0 +1,122 @@
+<span class="lang-en">
+<p>Score: <var>300</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3>
+<p>We have <var>N</var> voting papers. The <var>i</var>-th vote <var>(1 \leq i \leq N)</var> has the string <var>S_i</var> written on it.</p>
+<p>Print all strings that are written on the most number of votes, in lexicographical order.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3>
+<ul>
+<li><var>1 \leq N \leq 2 \times 10^5</var></li>
+<li><var>S_i</var> <var>(1 \leq i \leq N)</var> are strings consisting of lowercase English letters.</li>
+<li>The length of <var>S_i</var> <var>(1 \leq i \leq N)</var> is between <var>1</var> and <var>10</var> (inclusive).</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3>
+<p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+<var>S_1</var>
+<var>:</var>
+<var>S_N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3>
+<p>Print all strings in question in lexicographical order.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>7
+beat
+vet
+beet
+bed
+vet
+bet
+beet
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>beet
+vet
+</pre>
+<p><code>beet</code> and <code>vet</code> are written on two sheets each, while <code>beat</code>, <code>bed</code>, and <code>bet</code> are written on one vote each. Thus, we should print the strings <code>beet</code> and <code>vet</code>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>8
+buffalo
+buffalo
+buffalo
+buffalo
+buffalo
+buffalo
+buffalo
+buffalo
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>buffalo
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>7
+bass
+bass
+kick
+kick
+bass
+kick
+kick
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>kick
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 4</h3><pre>4
+ushi
+tapu
+nichia
+kun
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 4</h3><pre>kun
+nichia
+tapu
+ushi
+</pre></section>
+</div>
+</span>

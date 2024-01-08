@@ -1,0 +1,88 @@
+<span class="lang-en">
+<p>Score: <var>400</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3>
+<p>AtCoder Inc. has decided to lock the door of its office with a <var>3</var>-digit PIN code.</p>
+<p>The company has an <var>N</var>-digit lucky number, <var>S</var>. Takahashi, the president, will erase <var>N-3</var> digits from <var>S</var> and concatenate the remaining <var>3</var> digits without changing the order to set the PIN code.</p>
+<p>How many different PIN codes can he set this way?</p>
+<p>Both the lucky number and the PIN code may begin with a <var>0</var>.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3>
+<ul>
+<li><var>4 \leq N \leq 30000</var></li>
+<li><var>S</var> is a string of length <var>N</var> consisting of digits.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3>
+<p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+<var>S</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3>
+<p>Print the number of different PIN codes Takahashi can set.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>4
+0224
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>3
+</pre>
+<p>Takahashi has the following options:</p>
+<ul>
+<li>Erase the first digit of <var>S</var> and set <code>224</code>.</li>
+<li>Erase the second digit of <var>S</var> and set <code>024</code>.</li>
+<li>Erase the third digit of <var>S</var> and set <code>024</code>.</li>
+<li>Erase the fourth digit of <var>S</var> and set <code>022</code>.</li>
+</ul>
+<p>Thus, he can set three different PIN codes: <code>022</code>, <code>024</code>, and <code>224</code>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>6
+123123
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>17
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>19
+3141592653589793238
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>329
+</pre></section>
+</div>
+</span>

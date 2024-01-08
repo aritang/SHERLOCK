@@ -1,0 +1,66 @@
+
+<h2>E: Red Black Balloons</h2>
+<h3>Story</h3>
+<p>Homura-chan's dream comes true. It means ICPC Asia regional contest 20xx will be held in Sapporo! Homura-chan has been working hard for the preparation. And finally, it's the previous day of the contest. Homura-chan started to stock balloons to be delivered to contestants who get accepted. However, she noticed that there were only two colors of balloons: red and black.</p>
+
+<h3>Problem Statement</h3>
+<p>ICPC Asia regional contest in Sapporo plans to provide <var>N</var> problems to contestants. Homura-chan is a professional of contest preparation, so she already knows how many contestants would get acceptance for each problem (!!), <var>a_i</var> contestants for the <var>i</var>-th problem. You can assume the prediction is perfectly accurate. Ideally, Homura-chan would assign a distinct color of a balloon to each problem respectively. But you know, she has only two colors red and black now. Thus, Homura-chan comes up with the idea to differentiate the size of balloons in <b><var>K</var> levels</b>, that is, each problem has a balloon with a distinct pair of (color, size).</p>
+
+<p>Homura-chan now has <var>r_i</var> red balloons with size <var>i</var> (<var>1 \leq i \leq K</var>) and <var>b_j</var> black balloons with size <var>j</var> (<var>1 \leq j \leq K</var>). Suppose we assign a pair <var>(c_i, s_i)</var> of a color <var>c_i</var> (red or black) and a size <var>s_i</var> to the <var>i</var>-th problem, for each <var>i</var>. As noted, we have to assign distinct pairs to each problem, more precisely, <var>(c_i, s_i) \neq (c_j, s_j)</var> holds for <var>i \neq j</var>. Moreover, the number of balloons with <var>(c_i, s_i)</var> must be no less than <var>a_i</var>. In the case that there are no such assignments, Homura-chan can change the size of balloons by her magic power. Note that Homura-chan doesn't know magic to change the color of balloons, so it's impossible.</p>
+
+<p>Your task is to write a program computing the minimum number of balloons whose size is changed by Homura-chan's magic to realize an assignment satisfying the above-mentioned conditions. If there is no way to achieve such an assignment even if Homura-chan changes the size of balloons infinitely, output <code>-1</code> instead.</p>
+
+<h3>Input</h3>
+<pre>
+<var>N</var> <var>K</var>
+<var>a_1 ... a_N</var>
+<var>r_1 ... r_K</var>
+<var>b_1 ... b_K</var>
+</pre>
+
+<h3>Constraints</h3>
+<ul>
+<li> <var>1 \leq N,K \leq 60</var></li>
+<li> <var>N \leq 2K</var></li>
+<li> <var>1 \leq a_i \leq 50</var> <var>(1 \leq i \leq N) </var></li>
+<li> <var>1 \leq r_j,b_j \leq 50</var> <var>(1 \leq j \leq K) </var></li>
+<li> Inputs consist only of integers.</li>
+</ul>
+
+<h3>Output</h3>
+<p>Output the minimum number of balloons whose size is changed to achieve an assignment in a line. If there are no ways to achieve assignments, output <code>-1</code> instead.</p>
+
+<h3>Sample Input 1</h3>
+<pre>
+3 2
+6 5 4
+8 1
+7 1
+</pre>
+
+<h3>Output for Sample Input 1</h3>
+<pre>3</pre>
+
+<p>Homura-chan changes the size of three red balloons from 1 to 2.  Then she can assign (black,1) to the problem 1, (red,1) to the problem 2, and (red,2) to the problem 3.</p>
+
+<h3>Sample Input 2</h3>
+<pre>
+2 1
+50 50
+2
+3
+</pre>
+
+<h3>Output for Sample Input 2</h3>
+<pre>-1</pre>
+
+<h3>Sample Input 3</h3>
+<pre>
+4 3
+3 10 28 43
+40 18 2
+26 7 11
+</pre>
+
+<h3>Output for Sample Input 3</h3>
+<pre>5</pre>

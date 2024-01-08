@@ -1,0 +1,80 @@
+<!--<h1> Salary Calculation</h1>-->
+<h1>Payroll</h1>
+
+<p>
+  PCK company has $N$ salaried staff and they have specific ID numbers that run from $0$ to $N-1$. The company provides $N$ types of work that are also identified by ID numbers from $0$ to $N-1$. The time required to complete work $j$ is $t_j$.
+</p>
+
+<p>
+To get each of the working staff to learn as many types of work as possible, the company shifts work assignment in the following fashion.
+</p>
+
+<ul>
+<li>
+On the $d$-th day of a shift (the first day is counted as $0$th day), work $j$ is assigned to the staff $(j + d) \% N$, where the notation $p \% q$ indicates the remainder when $p$ is divided by $q$.
+  </li>
+</ul>
+
+<p>
+Salaries in the PCK company are paid on a daily basis based on the hourly rate. When a staff whose hourly rate is $a$ carries out work $j$, his/her salary will amount to $a \times t_j$. The initial hourly rate for a staff $i$ is $s_i$ yen. To boost staff’s motivation, the company employs a unique scheme for raising hourly rates. The promotion scheme table of the company contains a list of factors $f_k$ ($0 \leq k \leq M-1$), and the hourly rate of a staff is raised based on the following rule.
+</p>
+<ul>
+  <li>
+    At the completion of the $d$-th day’s work (the first day is counted as the $0$th day), the hourly rate of the staff with ID number $d \% N$ is raised by $f_{(d \% M)}$ yen. The salary raise takes effect after the day’s pay has been made.
+  </li>
+  
+</ul>
+<p>
+  As the person in charge of accounting in PCK company, you have to calculate the total amount of pay for $D$ days from the $0$-th day.
+</p>
+
+<p>
+  Make a program to work out the total amount of salary given the following information: initial hourly rate of each staff, hours required to complete a job, a table of promotion coefficients, and the number of days. Because the total may become excessively large, report the remainder when the total salary amount is divided by $1,000,000,007(= 10^9 + 7)$.
+</p>
+
+<h2>Input</h2>
+<p>
+  The input is given in the following format.
+</p>
+
+<pre>
+$N$ $M$ $D$
+$s_0$ $s_1$ $...$ $s_{N-1}$
+$t_0$ $t_1$ $...$ $t_{N-1}$
+$f_0$ $f_1$ $...$ $f_{M-1}$
+</pre>
+
+<p>
+The first line provides the number of working staff and types of work $N$ ($1 \leq N \leq 100$), the number of factors $M$ ($1 \leq M \leq 100$)and the number of days $D$ ($1 \leq D \leq 10^{15}$). Note that $M + N$ is equal to or less than 100. The second line provides the initial hourly rate for each staff $s_i$ ($1 \leq s_i \leq 10^8$) as integers. The third line provides the hours $t_j$ ($1 \leq t_j \leq 10^8$) required to complete each type of job as integers. The fourth line lists the factors $f_k$ ($1 \leq f_k \leq 10^8$) in the promotion scheme table.
+</p>
+
+<h2>Output</h2>
+<p>
+  Output the total amount of the salary.
+</p>
+
+<h2>Sample Input 1</h2>
+<pre>
+3 2 2
+3 2 1
+1 2 3
+1 2
+</pre>
+
+<h2>Sample Output 1</h2>
+<pre>
+26
+</pre>
+
+<h2>Sample Input 2</h2>
+<pre>
+3 2 5
+3 2 1
+1 2 3
+1 2
+</pre>
+
+<h2>Sample Output 2</h2>
+<pre>
+91 
+</pre>

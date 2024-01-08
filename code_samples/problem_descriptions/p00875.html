@@ -1,0 +1,109 @@
+
+<H1><font color="#000">Problem B:</font> Repeated Substitution with Sed</H1>
+
+<p>
+Do you know "sed," a tool provided with Unix? Its most popular use is to substitute every
+occurrence of a string <i.&alpha;</i> contained in the input string (actually each input line) with another
+string <i>&beta;</i>. More precisely, it proceeds as follows.
+</p>
+
+<ol>
+   <li> Within the input string, every non-overlapping (but possibly adjacent) occurrences of <i>&alpha;</i> are
+      marked. If there is more than one possibility for non-overlapping matching, the leftmost
+      one is chosen.</li>
+   <li> Each of the marked occurrences is substituted with <i>&beta;</i> to obtain the output string; other
+      parts of the input string remain intact.</li>
+</ol>
+
+<p>
+For example, when <i>&alpha;</i> is "<span>aa</span>" and <i>&beta;</i> is "<span>bca</span>", an input string "<span>aaxaaa</span>" will produce "<span>bcaxbcaa</span>",
+but not "<span>aaxbcaa</span>" nor "<span>bcaxabca</span>". Further application of the same substitution to the string
+"<span>bcaxbcaa</span>" will result in "<spna>bcaxbcbca</span>", but this is another substitution, which is counted as the
+second one.
+</p>
+<p>
+In this problem, a set of substitution pairs (<i>&alpha;<sub>i</sub></i>, <i>&beta;<sub>i</sub></i>) (<i>i</i> = 1, 2, ... , <i>n</i>), an initial string <i>&gamma;</i>, and a
+final string <i>&delta;</i> are given, and you must investigate how to produce <i>&delta;</i> from <i>&gamma;</i> with a minimum
+number of substitutions. A single substitution (<i>&alpha;<sub>i</sub></i>, <i>&beta;<sub>i</sub></i>) here means simultaneously substituting
+all the non-overlapping occurrences of <i>&alpha;<sub>i</sub></i>, in the sense described above, with <i>&beta;<sub>i</sub></i>.
+</p>
+
+<p>
+You may use a specific substitution (<i>&alpha;<sub>i</sub></i>, <i>&beta;<sub>i</sub></i> ) multiple times, including zero times.
+</p>
+
+<H2>Input</H2>
+
+<p>
+The input consists of multiple datasets, each in the following format.
+</p>
+
+<p>
+      <i>n</i><br>
+      <i>&alpha;</i><sub>1</sub> <i>&beta;</i><sub>1</sub><br>
+      <i>&alpha;</i><sub>2</sub> <i>&beta;</i><sub>2</sub><br>
+      .<br>
+      .<br>
+      .<br>
+      <i>&alpha;</i><sub><i>n</i></sub> <i>&beta;</i><sub><i>n</i></sub><br>
+      <i>&gamma;</i></br>
+      <i>&delta;</i></br>
+</p>
+
+<p>
+<i>n</i> is a positive integer indicating the number of pairs. <i>&alpha;<sub>i</sub></i> and <i>&beta;<sub>i</sub></i> are separated by a single space.
+You may assume that 1 &le; |<i>&alpha;<sub>i</sub></i>| &lt; |<i>&beta;<sub>i</sub></i>| &le; 10 for any <i>i</i> (|<i>s</i>| means the length of the string <i>s</i>),
+
+<i>&alpha;<sub>i</sub></i> &ne; <i>&alpha;<sub>j</sub></i> for any <i>i</i> &ne; <i>j</i>, <i>n</i> &le; 10 and 1 &le; |<i>&gamma;</i>| &lt; |<i>&delta;</i>| &le; 10. All the strings consist solely of lowercase
+letters. The end of the input is indicated by a line containing a single zero.
+</p>
+
+<H2>Output</H2>
+
+<p>
+For each dataset, output the minimum number of substitutions to obtain <i>&delta;</i> from <i>&gamma;</i>. If <i>&delta;</i> cannot
+be produced from <i>&gamma;</i> with the given set of substitutions, output <span>-1</span>.
+
+</p>
+
+<H2>Sample Input</H2>
+<pre>
+2
+a bb
+b aa
+a
+bbbbbbbb
+1
+a aa
+a
+aaaaa
+3
+ab aab
+abc aadc
+ad dee
+abc
+deeeeeeeec
+10
+a abc
+b bai
+c acf
+d bed
+e abh
+f fag
+g abe
+h bag
+i aaj
+j bbb
+a
+abacfaabe
+0
+</pre>
+
+<H2>Output for the Sample Input</H2>
+<pre>
+3
+-1
+7
+4
+</pre>
+

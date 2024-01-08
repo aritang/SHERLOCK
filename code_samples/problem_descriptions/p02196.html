@@ -1,0 +1,50 @@
+<h2>Queries with Six Inequeties</h2>
+<p>四つの整数の組<var>(a,b,c,d)</var>の集合が与えられます。</p>
+<p><var>j</var>番目のクエリでは、<var>x_j &lt; a_i &lt; y_j &lt; b_i</var>かつ<var>z_j &lt; c_i &lt; w_j &lt; d_i</var>なる<var>i</var>が存在するか判定します。</p>
+
+<h3>入力</h3>
+<pre>
+<var>N Q</var>
+<var>a_1 b_1 c_1 d_1</var>
+<var>a_2 b_2 c_2 d_2</var>
+:
+<var>a_n b_n c_n d_n</var>
+<var>x_1 y_1 z_1 w_1</var>
+<var>x_2 y_2 z_2 w_2</var>
+:
+<var>x_q y_q z_q w_q</var>
+</pre>
+
+<h3>出力</h3>
+<pre>
+<var>ans_1</var>
+<var>ans_2</var>
+:
+<var>ans_q</var>
+</pre>
+<p><var>j</var>行目には、<var>j</var>番目のクエリに対する答えを出力せよ。</p>
+<p>条件を満たす添字<var>i</var>が存在するなら<code>Yes</code>、存在しないなら<code>No</code>を出力する。</p>
+
+<h3>制約</h3>
+<ul>
+  <li><var>1 \leq N,Q \leq 10^5 </var></li>
+  <li><var>1 \leq a_i &lt; b_i \leq 10^5</var></li>
+  <li><var>1 \leq c_i &lt; d_i \leq 10^5</var></li>
+  <li><var>1 \leq x_j &lt; y_j \leq 10^5</var></li>
+  <li><var>1 \leq z_j &lt; w_j \leq 10^5</var></li>
+</ul>
+
+<h3>入力例</h3>
+<pre>
+2 2
+14 86 9 121
+3 34 3 34
+1 14 5 14
+1 9 1 9
+</pre>
+
+<h3>出力例</h3>
+<pre>
+No
+Yes
+</pre>

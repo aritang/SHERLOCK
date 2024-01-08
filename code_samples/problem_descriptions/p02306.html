@@ -1,0 +1,64 @@
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({ tex2jax: { inlineMath: [["$","$"], ["\\(","\\)"]], processEscapes: true }});
+</script>
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+
+<H1>Incircle of a Triangle</H1>
+
+<p>
+Write a program which prints the central coordinate ($cx$,$cy$) and the radius $r$ of a incircle of a triangle which is constructed by three points ($x_1$, $y_1$), ($x_2$, $y_2$) and ($x_3$, $y_3$) on the plane surface.
+</p>
+
+<h2>Input</h2>
+
+<p>The input is given in the following format</p>
+
+<pre>
+$x_1$ $y_1$
+$x_2$ $y_2$
+$x_3$ $y_3$
+</pre>
+
+<p>
+All the input are integers.
+</p>
+
+<h2>Constraints</h2>
+<ul>
+  <li>$-10000 \leq x_i, y_i \leq 10000$</li>
+  <li>The three points are not on the same straight line</li>
+</ul>
+
+
+<h2>Output</h2>
+
+<p>
+Print  $cx$, $cy$ and $r$ separated by a single space in a line. The output values should be in a decimal fraction with an error less than 0.000001.
+</p>
+
+<h2>Sample Input 1</h2>
+
+<pre>
+1 -2
+3 2
+-2 0
+</pre>
+
+<h2>Sample Output 1</h2>
+<pre>
+0.53907943898209422325 -0.26437392711448356856 1.18845545916395465278
+</pre>
+
+<h2>Sample Input 2</h2>
+<pre>
+0 3
+4 0
+0 0
+</pre>
+
+<h2>Sample Output 2</h2>
+<pre>
+1.00000000000000000000 1.00000000000000000000 1.00000000000000000000
+</pre>

@@ -1,0 +1,99 @@
+<span class="lang-en">
+<p>Score : <var>800</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>There is a directed graph with <var>N</var> vertices and <var>N</var> edges. The vertices are numbered <var>1, 2, ..., N</var>.</p>
+<p>The graph has the following <var>N</var> edges: <var>(p_1, 1), (p_2, 2), ..., (p_N, N)</var>, and the graph is weakly connected. Here, an edge from Vertex <var>u</var> to Vertex <var>v</var> is denoted by <var>(u, v)</var>, and a weakly connected graph is a graph which would be connected if each edge was bidirectional.</p>
+<p>We would like to assign a value to each of the vertices in this graph so that the following conditions are satisfied. Here, <var>a_i</var> is the value assigned to Vertex <var>i</var>.</p>
+<ul>
+<li>Each <var>a_i</var> is a non-negative integer.</li>
+<li>For each edge <var>(i, j)</var>, <var>a_i \neq a_j</var> holds.</li>
+<li>For each <var>i</var> and each integer <var>x(0 ≤ x &lt; a_i)</var>, there exists a vertex <var>j</var> such that the edge <var>(i, j)</var> exists and <var>x = a_j</var> holds.</li>
+</ul>
+<p>Determine whether there exists such an assignment.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>2 ≤ N ≤ 200</var> <var>000</var></li>
+<li><var>1 ≤ p_i ≤ N</var></li>
+<li><var>p_i \neq i</var></li>
+<li>The graph is weakly connected.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+<var>p_1</var> <var>p_2</var> ... <var>p_N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>If the assignment is possible, print <code>POSSIBLE</code>; otherwise, print <code>IMPOSSIBLE</code>.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>4
+2 3 4 1
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>POSSIBLE
+</pre>
+<p>The assignment is possible: {<var>a_i</var>} = {<var>0, 1, 0, 1</var>} or {<var>a_i</var>} <var>=</var> {<var>1, 0, 1, 0</var>}.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>3
+2 3 1
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>IMPOSSIBLE
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>4
+2 3 1 1
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>POSSIBLE
+</pre>
+<p>The assignment is possible: {<var>a_i</var>} <var>=</var> {<var>2, 0, 1, 0</var>}.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 4</h3><pre>6
+4 5 6 5 6 4
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 4</h3><pre>IMPOSSIBLE
+</pre></section>
+</div>
+</span>

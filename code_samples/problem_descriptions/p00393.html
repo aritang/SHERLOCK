@@ -1,0 +1,54 @@
+<h1>Beautiful Sequence</h1>
+<p>
+Alice is spending his time on an independent study to apply to the Nationwide Mathematics Contest. This year’s theme is "Beautiful Sequence." As Alice is interested in the working of computers, she wants to create a beautiful sequence using only 0 and 1. She defines a "Beautiful" sequence of length $N$ that consists only of 0 and 1 if it includes $M$ successive array of 1s as its sub-sequence.
+  
+</p>
+<p>
+  Using his skills in programming, Alice decided to calculate how many "Beautiful sequences" she can generate and compile a report on it.
+</p>
+
+<p>
+  Make a program to evaluate the possible number of "Beautiful sequences" given the sequence length $N$ and sub-sequence length $M$ that consists solely of 1. As the answer can be extremely large, divide it by $1,000,000,007 (= 10^9 + 7)$ and output the remainder.
+  </p>
+
+<h2>Input</h2>
+<p>
+  The input is given in the following format.
+</p>
+<pre>
+$N$ $M$  
+</pre>
+<p>
+The input line provides the length of sequence $N$ ($1 \leq N \leq 10^5$) and the length $M$ ($1 \leq M \leq N$) of the array that solely consists of 1s.
+</p>
+
+<h2>Output</h2>
+<p>
+  Output the number of Beautiful sequences in a line.
+</p>
+
+
+<h2>Sample Input 1</h2>
+<pre>
+4 3
+</pre>
+<h2>Sample Output 1</h2>
+<pre>
+3
+</pre>
+<p>
+  The sequences with length 4 that include 1s in successive array of length 3 are: 0111, 1110 and 1111.
+</p>
+
+<h2>Sample Input 2</h2>
+<pre>
+4 2
+</pre>
+<h2>Sample Output 2</h2>
+<pre>
+8
+</pre>
+<p>
+  The sequences with length 4 that include 1s in successive array of length 2 are: 0011, 0110, 0111, 1011, 1100, 1101, 1110 and 1111.
+</p>
+

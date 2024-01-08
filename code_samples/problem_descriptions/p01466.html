@@ -1,0 +1,131 @@
+
+<script src="./IMAGE/varmath.js" charset="UTF-8"></script>
+
+<H1>World Trip</H1>
+
+<p>
+Kita_masa is planning a trip around the world.
+This world has <var>N</var> countries and the country <var>i</var> has <var>M_i</var> cities.
+Kita_masa wants to visit every city exactly once, and return back to the starting city.
+</p>
+
+<p>
+In this world, people can travel only by airplane.
+There are two kinds of airlines: domestic and international lines.
+Since international airports require special facilities such as customs and passport control,
+only a few cities in each country have international airports.
+</p>
+
+<p>
+You are given a list of all flight routes in this world and prices for each route.
+Now it's time to calculate the cheapest route for Kita_masa's world trip!
+</p>
+
+<H2>Input</H2>
+
+<p>
+
+
+</p>
+
+<p>
+The first line contains two integers <var>N</var> and <var>K</var>, which represent the number of countries and the number of flight routes, respectively.
+The second line contains <var>N</var> integers, and the <var>i</var>-th integer <var>M_i</var> represents the number of cities in the country <var>i</var>.
+The third line contains <var>N</var> integers too, and the <var>i</var>-th integer <var>F_i</var> represents the number of international airports in the country <var>i</var>.
+Each of the following <var>K</var> lines contains five integers [Country 1] [City 1] [Country 2] [City 2] [Price].
+This means that, there is a bi-directional flight route between the [City 1] in [Country 1] and the [City 2] in [Country 2], and its price is [Price].
+</p>
+
+<p>
+Note that cities in each country are numbered from 1, and the cities whose city number is smaller or equal to <var>F_i</var> have international airports.
+That is, if there is a flight route between the city <var>c_1</var> in the country <var>n_1</var> and the city <var>c_2</var> in the country <var>n_2</var> with <var>n_1 \neq n_2</var>, it must be <var>c_1 \leq F_{n_1}</var> and <var>c_2 \leq F_{n_2}</var>.
+You can assume that there's no flight route which departs from one city and flies back to the same city, and that at most one flight route exists in this world for each pair of cities.
+</p>
+
+<p>
+The following constraints hold for each dataset:
+</p>
+
+<ul>
+<li> <var>1 \leq N \leq 15</var></li>
+<li> <var>1 \leq M_i \leq 15</var></li>
+<li> <var>1 \leq F_i \leq 4</var></li>
+<li> <var>sum(F_i) \leq 15</var></li>
+<li> <var>1 \leq Price \leq 10,000</var></li>
+</ul>
+
+<H2>Output</H2>
+
+<p>
+Print a line that contains a single integer representing the minimum price to make a world trip.
+</p>
+
+<p>
+If such a trip is impossible, print -1 instead.
+</p>
+
+<H2>Sample Input 1</H2>
+
+<pre>
+4 6
+1 1 1 1
+1 1 1 1
+1 1 2 1 1
+1 1 3 1 2
+1 1 4 1 1
+2 1 3 1 1
+2 1 4 1 2
+3 1 4 1 1
+</pre>
+
+<H2>Output for the Sample Input 1</H2>
+
+<pre>
+4
+</pre>
+
+<H2>Sample Input 2</H2>
+
+<pre>
+2 16
+4 4
+2 2
+1 1 1 2 1
+1 1 1 3 2
+1 1 1 4 1
+1 2 1 3 1
+1 2 1 4 2
+1 3 1 4 1
+2 1 2 2 1
+2 1 2 3 2
+2 1 2 4 1
+2 2 2 3 1
+2 2 2 4 2
+2 3 2 4 1
+1 1 2 1 1
+1 1 2 2 2
+1 2 2 1 2
+1 2 2 2 1
+</pre>
+
+<H2>Output for the Sample Input 2</H2>
+
+<pre>
+8
+</pre>
+
+<H2>Sample Input 3</H2>
+
+<pre>
+2 2
+2 1
+1 1
+1 1 1 2 1
+1 1 2 1 1
+</pre>
+
+<H2>Output for the Sample Input 3</H2>
+
+<pre>
+-1
+</pre>

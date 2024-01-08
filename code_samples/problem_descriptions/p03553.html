@@ -1,0 +1,97 @@
+<span class="lang-en">
+<p>Score : <var>700</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>We have <var>N</var> gemstones labeled <var>1</var> through <var>N</var>.</p>
+<p>You can perform the following operation any number of times (possibly zero).</p>
+<ul>
+<li>Select a positive integer <var>x</var>, and smash all the gems labeled with multiples of <var>x</var>.</li>
+</ul>
+<p>Then, for each <var>i</var>, if the gem labeled <var>i</var> remains without getting smashed, you will receive <var>a_i</var> yen (the currency of Japan).
+However, <var>a_i</var> may be negative, in which case you will be charged money.</p>
+<p>By optimally performing the operation, how much yen can you earn?</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li>All input values are integers.</li>
+<li><var>1 \leq N \leq 100</var></li>
+<li><var>|a_i| \leq 10^9</var></li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+<var>a_1</var> <var>a_2</var> <var>...</var> <var>a_N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the maximum amount of money that can be earned.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>6
+1 2 -6 4 5 3
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>12
+</pre>
+<p>It is optimal to smash Gem <var>3</var> and <var>6</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>6
+100 -100 -100 -100 100 -100
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>200
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>5
+-1 -2 -3 -4 -5
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>0
+</pre>
+<p>It is optimal to smash all the gems.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 4</h3><pre>2
+-1000 100000
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 4</h3><pre>99000
+</pre></section>
+</div>
+</span>

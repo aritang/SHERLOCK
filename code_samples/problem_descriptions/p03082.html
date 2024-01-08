@@ -1,0 +1,93 @@
+<span class="lang-en">
+<p>Score : <var>600</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3>
+<p>Snuke has a blackboard and a set <var>S</var> consisting of <var>N</var> integers.
+The <var>i</var>-th element in <var>S</var> is <var>S_i</var>.</p>
+<p>He wrote an integer <var>X</var> on the blackboard, then performed the following operation <var>N</var> times:</p>
+<ul>
+<li>Choose one element from <var>S</var> and remove it.</li>
+<li>Let <var>x</var> be the number written on the blackboard now, and <var>y</var> be the integer removed from <var>S</var>. Replace the number on the blackboard with <var>x \bmod {y}</var>.</li>
+</ul>
+<p>There are <var>N!</var> possible orders in which the elements are removed from <var>S</var>.
+For each of them, find the number that would be written on the blackboard after the <var>N</var> operations, and compute the sum of all those <var>N!</var> numbers modulo <var>10^{9}+7</var>.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li>All values in input are integers.</li>
+<li><var>1 \leq N \leq 200</var></li>
+<li><var>1 \leq S_i, X \leq 10^{5}</var></li>
+<li><var>S_i</var> are pairwise distinct.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var> <var>X</var>
+<var>S_1</var> <var>S_2</var> <var>\ldots</var> <var>S_{N}</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the answer.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>2 19
+3 7
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>3
+</pre>
+<ul>
+<li>There are two possible orders in which we remove the numbers from <var>S</var>.</li>
+<li>If we remove <var>3</var> and <var>7</var> in this order, the number on the blackboard changes as follows: <var>19 \rightarrow 1 \rightarrow 1</var>.</li>
+<li>If we remove <var>7</var> and <var>3</var> in this order, the number on the blackboard changes as follows: <var>19 \rightarrow 5 \rightarrow 2</var>.</li>
+<li>The output should be the sum of these: <var>3</var>.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>5 82
+22 11 6 5 13
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>288
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>10 100000
+50000 50001 50002 50003 50004 50005 50006 50007 50008 50009
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>279669259
+</pre>
+<ul>
+<li>Be sure to compute the sum modulo <var>10^{9}+7</var>.</li>
+</ul></section>
+</div>
+</span>

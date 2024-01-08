@@ -1,0 +1,114 @@
+<span class="lang-en">
+<p>Score : <var>400</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>Kenkoooo is planning a trip in Republic of Snuke.
+In this country, there are <var>n</var> cities and <var>m</var> trains running.
+The cities are numbered <var>1</var> through <var>n</var>, and the <var>i</var>-th train connects City <var>u_i</var> and <var>v_i</var> bidirectionally.
+Any city can be reached from any city by changing trains.</p>
+<p>Two currencies are used in the country: yen and snuuk.
+Any train fare can be paid by both yen and snuuk.
+The fare of the <var>i</var>-th train is <var>a_i</var> yen if paid in yen, and <var>b_i</var> snuuk if paid in snuuk.</p>
+<p>In a city with a money exchange office, you can change <var>1</var> yen into <var>1</var> snuuk.
+However, when you do a money exchange, you have to change all your yen into snuuk.
+That is, if Kenkoooo does a money exchange when he has <var>X</var> yen, he will then have <var>X</var> snuuk.
+Currently, there is a money exchange office in every city, but the office in City <var>i</var> will shut down in <var>i</var> years and can never be used in and after that year.</p>
+<p>Kenkoooo is planning to depart City <var>s</var> with <var>10^{15}</var> yen in his pocket and head for City <var>t</var>, and change his yen into snuuk in some city while traveling.
+It is acceptable to do the exchange in City <var>s</var> or City <var>t</var>.</p>
+<p>Kenkoooo would like to have as much snuuk as possible when he reaches City <var>t</var> by making the optimal choices for the route to travel and the city to do the exchange.
+For each <var>i=0,...,n-1</var>, find the maximum amount of snuuk that Kenkoooo has when he reaches City <var>t</var> if he goes on a trip from City <var>s</var> to City <var>t</var> after <var>i</var> years.
+You can assume that the trip finishes within the year.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>2 \leq n \leq 10^5</var></li>
+<li><var>1 \leq m \leq 10^5</var></li>
+<li><var>1 \leq s,t \leq n</var></li>
+<li><var>s \neq t</var></li>
+<li><var>1 \leq u_i &lt; v_i \leq n</var></li>
+<li><var>1 \leq a_i,b_i \leq 10^9</var></li>
+<li>If <var>i\neq j</var>, then <var>u_i \neq u_j </var> or <var>v_i \neq v_j</var>.</li>
+<li>Any city can be reached from any city by changing trains.</li>
+<li>All values in input are integers.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>n</var> <var>m</var> <var>s</var> <var>t</var>
+<var>u_1</var> <var>v_1</var> <var>a_1</var> <var>b_1</var>
+<var>:</var>
+<var>u_m</var> <var>v_m</var> <var>a_m</var> <var>b_m</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print <var>n</var> lines.
+In the <var>i</var>-th line, print the maximum amount of snuuk that Kenkoooo has when he reaches City <var>t</var> if he goes on a trip from City <var>s</var> to City <var>t</var> after <var>i-1</var> years.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>4 3 2 3
+1 4 1 100
+1 2 1 10
+1 3 20 1
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>999999999999998
+999999999999989
+999999999999979
+999999999999897
+</pre>
+<p>After <var>0</var> years, it is optimal to do the exchange in City <var>1</var>.<br/>
+After <var>1</var> years, it is optimal to do the exchange in City <var>2</var>.<br/>
+Note that City <var>1</var> can still be visited even after the exchange office is closed.
+Also note that, if it was allowed to keep <var>1</var> yen when do the exchange in City <var>2</var> and change the remaining yen into snuuk, we could reach City <var>3</var> with <var>999999999999998</var> snuuk, but this is NOT allowed.<br/>
+After <var>2</var> years, it is optimal to do the exchange in City <var>3</var>.<br/>
+After <var>3</var> years, it is optimal to do the exchange in City <var>4</var>.
+Note that the same train can be used multiple times.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>8 12 3 8
+2 8 685087149 857180777
+6 7 298270585 209942236
+2 4 346080035 234079976
+2 5 131857300 22507157
+4 8 30723332 173476334
+2 6 480845267 448565596
+1 4 181424400 548830121
+4 5 57429995 195056405
+7 8 160277628 479932440
+1 6 475692952 203530153
+3 5 336869679 160714712
+2 7 389775999 199123879
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>999999574976994
+999999574976994
+999999574976994
+999999574976994
+999999574976994
+999999574976994
+999999574976994
+999999574976994
+</pre></section>
+</div>
+</span>

@@ -1,0 +1,82 @@
+<span class="lang-en">
+<p>Score : <var>200</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>Alice, Bob and Charlie are playing <em>Card Game for Three</em>, as below:</p>
+<ul>
+<li>At first, each of the three players has a deck consisting of some number of cards. Each card has a letter <code>a</code>, <code>b</code> or <code>c</code> written on it. The orders of the cards in the decks cannot be rearranged.</li>
+<li>The players take turns. Alice goes first.</li>
+<li>If the current player's deck contains at least one card, discard the top card in the deck. Then, the player whose name begins with the letter on the discarded card, takes the next turn. (For example, if the card says <code>a</code>, Alice takes the next turn.)</li>
+<li>If the current player's deck is empty, the game ends and the current player wins the game.</li>
+</ul>
+<p>You are given the initial decks of the players.
+More specifically, you are given three strings <var>S_A</var>, <var>S_B</var> and <var>S_C</var>. The <var>i</var>-th <var>(1≦i≦|S_A|)</var> letter in <var>S_A</var> is the letter on the <var>i</var>-th card in Alice's initial deck. <var>S_B</var> and <var>S_C</var> describes Bob's and Charlie's initial decks in the same way.</p>
+<p>Determine the winner of the game.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1≦|S_A|≦100</var></li>
+<li><var>1≦|S_B|≦100</var></li>
+<li><var>1≦|S_C|≦100</var></li>
+<li>Each letter in <var>S_A</var>, <var>S_B</var>, <var>S_C</var> is <code>a</code>, <code>b</code> or <code>c</code>.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>The input is given from Standard Input in the following format:</p>
+<pre><var>S_A</var>
+<var>S_B</var>
+<var>S_C</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>If Alice will win, print <code>A</code>. If Bob will win, print <code>B</code>. If Charlie will win, print <code>C</code>.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>aca
+accc
+ca
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>A
+</pre>
+<p>The game will progress as below:</p>
+<ul>
+<li>Alice discards the top card in her deck, <code>a</code>. Alice takes the next turn.</li>
+<li>Alice discards the top card in her deck, <code>c</code>. Charlie takes the next turn.</li>
+<li>Charlie discards the top card in his deck, <code>c</code>. Charlie takes the next turn.</li>
+<li>Charlie discards the top card in his deck, <code>a</code>. Alice takes the next turn.</li>
+<li>Alice discards the top card in her deck, <code>a</code>. Alice takes the next turn.</li>
+<li>Alice's deck is empty. The game ends and Alice wins the game.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>abcb
+aacb
+bccc
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>C
+</pre></section>
+</div>
+</span>

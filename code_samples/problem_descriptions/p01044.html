@@ -1,0 +1,184 @@
+
+<h1>Problem H： Puzzle and Hexagons</h1>
+
+<h2>Backgorund</h2>
+<p>
+超大人気ゲーム「パズル&amp;ヘキサゴンズ」がついにリリースされた。このゲームは超面白すぎてドハマりする人が続出。あまりの熱中度に医師から中毒認定を受ける者も続出した。世界各国の有志達はこのゲームの中毒者達を助けるために「パズル&amp;ヘキサゴンズ」のシミュレータを作り、危険な実機でのプレイを避けるよう促そうとした。あなたにはシミュレータ作りに協力して欲しい。
+</p>
+
+<h2>Problem</h2>
+<p>
+正六角形のマスを縦に<var>H</var>個、横に<var>W</var>個敷き詰めた盤面が与えられる。
+Fig.1は<var>H</var>=4,<var>W</var>=7の時の盤面とそれに対応するマスの座標(<var>x</var>,<var>y</var>)を示す。
+</p>
+<center>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_RitsCamp15_UA_H_img2.png" width="480"><br>
+Fig.1
+</center>
+
+<p>
+初期状態で各マスには色のついたブロックが存在する。
+ブロックの色は以下のようにアルファベット一文字で表現される。
+</p>
+
+<ul>
+<li>'R' ・・・赤</li>
+<li>'G' ・・・緑</li>
+<li>'B' ・・・青</li>
+<li>'P' ・・・紫</li>
+<li>'Y' ・・・黄</li>
+<li>'E' ・・・水</li>
+</ul>
+
+
+<p>
+次に操作の数<var>Q</var>が与えられる。
+</p>
+
+<p>
+各操作では回転の中心座標(<var>x</var>,<var>y</var>)が与えられ、そのマスの周囲にある6つのブロックを時計回りに一つ回転させることを示す。(Fig.2 参照)。
+このとき、ブロックが存在しないマスも空のブロックが存在すると考えて時計回りに一つ回転させる。
+ただし、指定された座標とその周辺の６つのマスの内いずれか一つでも<var>H</var>×<var>W</var>の盤面の中に存在していない場合は回転を行わない。
+</p>
+<center>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_RitsCamp15_UA_H_img1.png" width="400"><br>
+Fig.2</center>
+
+<p>
+次に以下の処理ができなくなるまで繰り返す。
+</p>
+
+<ol>
+  <li>Fig.3において、ブロックAの位置からB, C, Dの位置のいずれのマスにもブロックが存在しないとき、ブロックAはCの位置に落下する。マスB, Dが存在しない場合はブロックも存在しないと考え、マスCが存在しない場合は落下の処理を行わない。</li>
+<li>1の処理が可能なブロックが存在する場合は1に戻る。</li>
+<li>同じ色のブロックが3つ以上繋がっている場合、そのブロックは全て消滅する。
+2つのブロックが繋がるとはマスの一辺を共有することである。</li>
+</ol>
+<p>
+注意：この一連の処理は、操作が一つも与えられていない状態（初期状態）でも行われる。
+</p>
+<center>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_RitsCamp15_UA_H_img4.png" width="600"><br>
+Fig.3</center>
+
+
+<p>
+全ての操作を実行した後の最終的な盤面を出力せよ。
+</p>
+
+<h2>Input</h2>
+<p>
+入力は以下の形式で与えられる。
+</p>
+
+<pre>
+<var>H</var> <var>W</var>
+<var>F</var><sub>0,</sub><var><sub>H&minus;1</sub></var> <var>F</var><sub>1,</sub><var><sub>H&minus;1</sub></var> … <var>F</var><var><sub>W&minus;1,</sub></var><var><sub>H&minus;1</sub></var>
+<var>F</var><sub>0,</sub><var><sub>H&minus;2</sub></var> <var>F</var><sub>1,</sub><var><sub>H&minus;2</sub></var> … <var>F</var><var><sub>W&minus;1,</sub></var><var><sub>H&minus;2</sub></var>
+.
+.
+.
+<var>F</var><sub>0,</sub><sub>0</sub> <var>F</var><sub>1,</sub><sub>0</sub> … <var>F</var><var><sub>W&minus;1,</sub></var><sub>0</sub>
+<var>Q</var>
+<var>x</var><sub>0</sub> <var>y</var><sub>0</sub>
+<var>x</var><sub>1</sub> <var>y</var><sub>1</sub>
+.
+.
+.
+<var>x</var><var><sub>Q&minus;1</sub></var> <var>y</var><var><sub>Q&minus;1</sub></var>
+</pre>
+
+<p>
+1行目に、盤面の縦と横のサイズを表す2つの整数<var>H</var>と<var>W</var>が与えられる。
+2行目から<var>H</var>+1行目に、各添字に対応する盤面の色を表す文字列が与えられる。
+<var>H</var>+2行目に、操作の数<var>Q</var>が与えられる。
+続く<var>Q</var>行に回転の中心のマスの座標を表す<var>x</var>と<var>y</var>が与えられる。
+</p>
+
+<h2>Constraints</h2>
+
+<ul>
+<li>3 &le; <var>H</var> &le; 50</li>
+<li>3 &le; <var>W</var> &le; 50</li>
+<li>0 &le; <var>x</var> &lt; <var>W</var></li>
+<li>0 &le; <var>y</var> &lt; <var>H</var></li>
+<li>1 &le; <var>Q</var> &le; 100</li>
+<li><var>F<sub>i,</sub><sub>j</sub></var> ( 0 &le; <var>i</var> &lt; W , 0 &le; <var>j</var> &lt; H ) は'R','G','B','P','Y','E'のいずれかである。</li>
+</ul>
+
+
+<h2>Output</h2>
+<p>
+全ての操作を行った後の盤面を<var>H</var>行で出力せよ。
+ただし、ブロックが無いマスは'.'で表すこと。
+</p>
+
+<h2>Sample Input1</h2>
+<pre>
+3 3
+RGR
+RBP
+YEB
+1
+1 1
+</pre>
+
+<h2>Sample Output1</h2>
+<pre>
+…
+YBG
+EBP
+</pre>
+
+<p>
+Fig.4はSample Input1における状態の遷移を表したものである。
+</p>
+
+<center>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_RitsCamp15_UA_H_img5.png"><br>
+Fig.4</center>
+
+
+<h2>Sample Input2</h2>
+<pre>
+4 5
+BYYGG
+RRRRR
+RRBRR
+YYGGB
+2
+3 1
+3 1
+</pre>
+
+<h2>Sample Output2</h2>
+<pre>
+.....
+.....
+.....
+B.BGB
+</pre>
+
+<h2>Sample Input3</h2>
+<pre>
+4 4
+BEEP
+ERYY
+BBRP
+RBYP
+1
+1 2
+</pre>
+
+<h2>Sample Output3</h2>
+<pre>
+....
+....
+....
+.B..
+</pre>
+
+<p>
+盤面の初期状態ですでに消えるブロックがあること注意。
+両端にあるブロックの落下処理に注意。
+</p>

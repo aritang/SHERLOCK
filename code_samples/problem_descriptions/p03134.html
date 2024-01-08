@@ -1,0 +1,77 @@
+<span class="lang-en">
+<p>Score : <var>900</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>There are <var>N</var> Snukes lining up in a row.
+You are given a string <var>S</var> of length <var>N</var>. The <var>i</var>-th Snuke from the front has two red balls if the <var>i</var>-th character in <var>S</var> is <code>0</code>; one red ball and one blue ball if the <var>i</var>-th character in <var>S</var> is <code>1</code>; two blue balls if the <var>i</var>-th character in <var>S</var> is <code>2</code>.</p>
+<p>Takahashi has a sequence that is initially empty. Find the number of the possible sequences he may have after repeating the following procedure <var>2N</var> times, modulo <var>998244353</var>:</p>
+<ul>
+<li>Each Snuke who has one or more balls simultaneously chooses one of his balls and hand it to the Snuke in front of him, or hand it to Takahashi if he is the first Snuke in the row.</li>
+<li>Takahashi receives the ball and put it to the end of his sequence.</li>
+</ul>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 \leq |S| \leq 2000</var></li>
+<li><var>S</var> consists of <code>0</code>,<code>1</code> and <code>2</code>.</li>
+</ul>
+<p>Note that the integer <var>N</var> is not directly given in input; it is given indirectly as the length of the string <var>S</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>S</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the number of the possible sequences Takahashi may have after repeating the procedure <var>2N</var> times, modulo <var>998244353</var>.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>02
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>3
+</pre>
+<p>There are three sequences that Takahashi may have: <code>rrbb</code>, <code>rbrb</code> and <code>rbbr</code>, where <code>r</code> and <code>b</code> stand for red and blue balls, respectively.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>1210
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>55
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>12001021211100201020
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>543589959
+</pre></section>
+</div>
+</span>

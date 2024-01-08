@@ -1,0 +1,136 @@
+
+
+
+<H1> IOIOI  </H1>
+
+<h2>問題</h2>
+<p>
+ 整数 <i>n</i> (1 &le; <i>n</i>) に対し, <i>n</i> + 1 個の <span>I</span> と <i>n</i> 個の <span>O</span> を <span>I</span> から始めて交互に並べてできる文字列を <i>P<sub>n</sub></I> とする.ここで <span>I</span> と <span>O</span> はそれぞれ英大文字のアイとオーである.
+</p>
+
+<br><center>
+<table>
+<tr><td width="40"><i>P</i><sub>1</sub></td><td><span>IOI</span></td></tr>
+<tr><td><i>P</i><sub>2</sub></td><td><span>IOIOI</span></td></tr>
+<tr><td><i>P</i><sub>3</sub></td><td><span>IOIOIOI</span></td></tr>
+<tr><td></td><td>.<td></tr>
+<tr><td></td><td>.<td></tr>
+<tr><td></td><td>.<td></tr>
+<tr><td><i>P</i><sub><i>n</i></sub></td><td><span>IOIOIO ... OI</span> (<span>O</span> が <i>n</i> 個)</td></tr>
+
+</table>
+<br>
+<p>
+図 1-1 本問で考える文字列 <i>P<sub>n</sub></i>
+</p>
+
+</center>
+<br>
+
+
+<p>
+ 整数 <i>n</i> と, I と O のみからなる文字列 <i>s</i> が与えられた時, <i>s</i> の中に <i>P<sub>n</sub></i> が何ヶ所含まれているかを出力するプログラムを作成せよ.
+</p>
+
+<h2>例</h2>
+
+<p>
+ <i>n</i> が 1, <i>s</i> が <span>OOIOIOIOIIOII</span> の場合, <i>P</i><sub>1</sub> は <span>IOI</span> であり,下図 1-2 に示した 4ヶ所に含まれている.よって,出力は 4 である.
+</p>
+
+<center>
+<span>
+OO<u>IOI</u>OIOIIOII<br>
+OOIO<u>IOI</u>OIIOII<br>
+OOIOIO<u>IOI</u>IOII<br>
+OOIOIOIOI<u>IOI</u>I<br>
+</span>
+	      </center>
+<br>
+
+<center>
+              図 1-2  <i>n</i> が 1, <i>s</i> が <span>OOIOIOIOIIOII</span> の場合の例
+</center>
+<br>
+
+<p>
+<i>n</i> が 2, <i>s</i> が <span>OOIOIOIOIIOII</span> の場合, <i>P</i><sub>2</sub> は <span>IOIOI</span> であり,下図 1-3 に示した 2ヶ所に含まれている.よって,出力は 2 である.
+</p>
+
+<center>
+<span>
+OO<u>IOIOI</u>OIIOII<br>
+OOIO<u>IOIOI</u>IOII<br>
+</span>
+	      </center>
+<br>
+
+<center>
+              図 1-3  <i>n</i> が 2, <i>s</i> が <span>OOIOIOIOIIOII</span> の場合の例
+</center>
+<br>
+
+
+<h2>入力</h2>
+
+<p>
+<!-- 入力ファイルのファイル名は input.txt である.<br>-->
+入力は複数のデータセットからなる．各データセットは以下の形式で与えられる．
+</p>
+<p>
+ 1 行目には整数 <i>n</i> (1 &le; <i>n</i> &le; 1000000) が書かれている.<br>
+ 2 行目には整数 <i>m</i> (1 &le; <i>m</i> &le; 1000000) が書かれている. <i>m</i> は <i>s</i> の文字数を表す.<br>
+ 3 行目には文字列 <i>s</i> が書かれている. <i>s</i> は <span>I</span> と <span>O</span> のみからなる.
+</p>
+
+<p>
+ 全ての採点用データで, 2<i>n</i> + 1 &le; <i>m</i> である.採点用データのうち, 配点の 50% 分については, <i>n</i> &le; 100, <i>m</i> &le; 10000 を満たす.
+</p>
+
+<p>
+<i>n</i> が 0 のとき入力の終了を示す. データセットの数は 10 を超えない．
+</p>
+
+
+<h2>出力</h2>
+<p>
+<!-- 出力ファイルのファイル名は output.txt である.<br>
+ output.txt は,文字列 <i>s</i> に文字列 <i>P<sub>n</sub></i> が何ヶ所含まれるかを表す 1 つの整数を含む 1 行からなる.
+ -->
+データセットごとに,文字列 <i>s</i> に文字列 <i>P<sub>n</sub></i> が何ヶ所含まれるかを表す 1 つの整数を1 行に出力する. <i>s</i> に <i>P<sub>n</sub></i> が含まれていない場合は,整数として <span>0</span> を出力せよ.
+</p>
+
+
+<h2>入出力例</h2>
+
+
+<h3>入力例</h3>
+
+<pre>
+1
+13
+OOIOIOIOIIOII
+2
+13
+OOIOIOIOIIOII
+0
+</pre>
+
+<h3>出力例</h3>
+
+<pre>
+4
+2
+</pre>
+
+<div class="source">
+<p class="source">
+上記問題文と自動審判に使われるデータは、<a href="http://www.ioi-jp.org">情報オリンピック日本委員会</a>が作成し公開している問題文と採点用テストデータです。
+</p>
+</div>
+
+
+
+
+
+

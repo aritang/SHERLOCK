@@ -1,0 +1,98 @@
+
+
+
+<h1>Problem A: 青春18きっぷ 2013</h1>
+<h2>Problem Statement</h2>
+<p>
+会津合宿に参加予定の高槻さんは、家が貧乏であまりお金を持っていない。そのため、青春18きっぷを使用して、お金を節約しようとしている。18きっぷは、これ1枚だけで、鈍行列車ならば1日中乗り放題、改札の出入りも自由という優れものである（詳しい利用ルールについては省略）。
+</p>
+
+<p>
+18きっぷの魅力は、乗り換えを行う駅で、空いている時間を使って、ご当地のお土産等を見てまわれる点である。彼女は、せっかくの機会なので、旅の途中でいろいろな駅を見て回りたいと考えている。ただし、次の電車に乗り遅れては困るため、乗り換え駅に到着した時刻から、乗り換え駅を出発する時刻までの間がT分以上のときだけ、その駅を見て回ることにした。
+</p>
+
+<p>
+高槻さんの18きっぷを使った乗り換え計画が与えられるので、見て回れる駅の名前と時間を出力せよ。一番最初に出発する駅と、一番最後に到着する駅は、見て回る候補には入らないことに注意してほしい。
+</p>
+
+<h2>Input</h2>
+各データセットは、以下の形式で入力される。
+
+<pre>N T
+st_time1 st_name1 ar_time1 ar_name1
+st_time2 st_name2 ar_time2 ar_name2
+...
+st_timeN st_nameN ar_timeN ar_nameN
+</pre>
+
+<p>
+Nは列車に乗車する回数を表わす整数、Tは乗り換え駅を見て回れる許容時間(分)を表わす整数である。続いて、N行にわたって、列車の出発と到着のペアが与えられる。各行の入力は、st_timeiの時刻ちょうどにst_nameiの駅を高槻さんの乗る列車が出発することを、ar_timeiの時刻ちょうどにar_nameiの駅に高槻さんの乗る列車が到着することを意味する。
+</p>
+
+<h2>Constraints</h2>
+<ul>
+<li>1 <= N <= 10</li>
+<li>1 <= T <= 180</li>
+<li>st_timei、ar_timei</li>
+  <ul>
+  <li>"HH:MM"により表わされ、HHには00以上23以下、MMには00以上59以下の2桁の数値が入る。HHが時間で、MMが分である。</li>
+  <li>00:00 <= st_time1 < ar_time1 < st_time2 < ar_time2 < ... < st_timeN < ar_timeN <= 23:59</li>
+  </ul>
+<li>st_namei、ar_namei</li>
+  <ul>
+  <li>アルファベット大文字・小文字により表わされる文字列である。</li>
+  <li>1 <= 文字列の長さ <= 50</li>
+  <li>i番目の到着駅ar_nameiと、i+1番目の出発駅st_namei+1の名前は一致する。</li>
+  <li>st_name1、ar_nameN、乗り換えの駅の名前は、それぞれ異なる文字列である。</li>
+  </ul>
+</ul>
+
+<h2>Output</h2>
+<p>
+各データセットについて、以下の形式で出力を行う。
+</p>
+
+<pre>M
+stay_name1 stay_time1
+stay_name2 stay_time2
+...
+stay_nameM stay_timeM
+</pre>
+
+<p>
+M（0 <= M <= N - 1）は、見て回れる駅の数を表わす整数である。続いて、M行にわたって、見て回れる駅のリストを時刻の昇順に出力する。各行は、stay_nameiの駅をstay_timei分間見て回れることを意味する。
+</p>
+
+<h2>Sample Input 1</h2>
+<pre>8 24
+05:30 Kyoto 06:37 Maibara
+06:50 Maibara 07:36 Tsuruga
+07:42 Tsuruga 10:03 Kanazawa
+10:58 Kanazawa 12:07 Toyama
+12:15 Toyama 14:12 Naoetsu
+14:29 Naoetsu 15:57 Nagaoka
+16:11 Nagaoka 17:14 Niitsu
+17:38 Niitsu 20:06 AizuWakamatsu
+</pre>
+
+<h2>Output for the Sample Input 1</h2>
+<pre>2
+Kanazawa 55
+Niitsu 24
+</pre>
+
+<p>Kanazawa駅は、10:03に到着し10:58に出発するため、乗り換えに55分の空き時間がある。Niitsu駅は、17:14に到着し17:38に出発するため、乗り換えに24分の空き時間がある。どちらも、入力で指定された24分以上の空き時間があるため、出力する。
+</p>
+
+<h2>Sample Input 2</h2>
+<pre>1 180
+10:44 Koriyama 11:52 AizuWakamatsu
+</pre>
+
+<h2>Output for the Sample Input 2</h2>
+<pre>0
+</pre>
+
+<p>
+乗り換え駅は1つもないため、0と出力する。
+</p>

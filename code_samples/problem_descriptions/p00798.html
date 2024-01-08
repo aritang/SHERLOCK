@@ -1,0 +1,121 @@
+
+<H1><font color="#000">Problem C:</font> Push!!</H1>
+
+<p>
+Mr. Schwarz was a famous powerful pro wrestler. He starts a part time job as a warehouseman.
+His task is to move a cargo to a goal by repeatedly pushing the cargo in the warehouse, of course,
+without breaking the walls and the pillars of the warehouse.
+</p>
+<p>
+There may be some pillars in the warehouse. Except for the locations of the pillars, the floor of
+the warehouse is paved with square tiles whose size fits with the cargo. Each pillar occupies the
+same area as a tile.
+</p>
+
+<center>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE1_push">
+</center>
+
+<p>
+Initially, the cargo is on the center of a tile. With one push, he can move the cargo onto the
+center of an adjacent tile if he is in proper position. The tile onto which he will move the cargo
+must be one of (at most) four tiles (i.e., east, west, north or south) adjacent to the tile where
+the cargo is present.
+</p>
+
+<p>
+To push, he must also be on the tile adjacent to the present tile. He can only push the cargo in
+the same direction as he faces to it and he cannot pull it. So, when the cargo is on the tile next
+to a wall (or a pillar), he can only move it along the wall (or the pillar). Furthermore, once he
+places it on a corner tile, he cannot move it anymore.
+</p>
+<p>
+He can change his position, if there is a path to the position without obstacles (such as the cargo
+and pillars) in the way. The goal is not an obstacle. In addition, he can move only in the four
+directions (i.e., east, west, north or south) and change his direction only at the center of a tile.
+</p>
+<p>
+As he is not so young, he wants to save his energy by keeping the number of required pushes
+as small as possible. But he does not mind the count of his pedometer, because walking is very
+light exercise for him.
+</p>
+<p>
+Your job is to write a program that outputs the minimum number of pushes required to move
+the cargo to the goal, if ever possible.
+</p>
+
+
+<H2>Input</H2>
+
+<p>
+The input consists of multiple maps, each representing the size and the arrangement of the
+warehouse. A map is given in the following format.
+</p>
+
+<pre>
+<i>w h</i>
+<i>d</i><sub>11</sub> <i>d</i><sub>12</sub> <i>d</i><sub>13</sub> ... <i>d</i><sub>1<i>w</i></sub>
+<i>d</i><sub>21</sub> <i>d</i><sub>22</sub> <i>d</i><sub>23</sub> ... <i>d</i><sub>2<i>w</i></sub>
+         ...
+<i>d</i><sub><i>h</i>1</sub> <i>d</i><sub><i>h</i>2</sub> <i>d</i><sub><i>h</i>3</sub> ... <i>d</i><sub><i>h</i><i>w</i></sub>
+</pre>
+
+<p>
+The integers w and h are the lengths of the two sides of the floor of the warehouse in terms of
+widths of floor tiles. <i>w</i> and <i>h</i> are less than or equal to 7. The integer <i>d<sub>ij</sub></i> represents what is
+initially on the corresponding floor area in the following way.
+</p>
+    <p>     0: nothing (simply a floor tile)</p>
+    <p>     1: a pillar</p>
+    <p>     2: the cargo</p>
+    <p>     3: the goal</p>
+    <p>     4: the warehouseman (Mr. Schwarz)</p>
+<p>
+Each of the integers 2, 3 and 4 appears exactly once as <i>d<sub>ij</sub></i> in the map. Integer numbers in an
+input line are separated by at least one space character. The end of the input is indicated by a
+line containing two zeros.
+</p>
+
+<H2>Output</H2>
+
+<p>
+For each map, your program should output a line containing the minimum number of pushes.
+If the cargo cannot be moved to the goal, -1 should be output instead.
+</p>
+
+<H2>Sample Input</H2>
+<pre>
+5 5
+0 0 0 0 0
+4 2 0 1 1
+0 1 0 0 0
+1 0 0 0 3
+1 0 0 0 0
+5 3
+4 0 0 0 0
+2 0 0 0 0
+0 0 0 0 3
+7 5
+1 1 4 1 0 0 0
+1 1 2 1 0 0 0
+3 0 0 0 0 0 0
+0 1 0 1 0 0 0
+0 0 0 1 0 0 0
+6 6
+0 0 0 0 0 3
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 2 0 0 0 0
+4 0 0 0 0 0
+0 0
+</pre>
+
+<H2>Output for the Sample Input</H2>
+<pre>
+5
+-1
+11
+8
+</pre>
+

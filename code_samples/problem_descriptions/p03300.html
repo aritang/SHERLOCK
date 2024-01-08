@@ -1,0 +1,91 @@
+<span class="lang-en">
+<p>Score : <var>1600</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>You are given a string <var>S</var> of length <var>2N</var>, containing <var>N</var> occurrences of <code>a</code> and <var>N</var> occurrences of <code>b</code>.</p>
+<p>You will choose some of the characters in <var>S</var>. Here, for each <var>i = 1,2,...,N</var>, it is not allowed to choose exactly one of the following two: the <var>i</var>-th occurrence of <code>a</code> and the <var>i</var>-th occurrence of <code>b</code>. (That is, you can only choose both or neither.) Then, you will concatenate the chosen characters (without changing the order).</p>
+<p>Find the lexicographically largest string that can be obtained in this way.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 \leq N \leq 3000</var></li>
+<li><var>S</var> is a string of length <var>2N</var> containing <var>N</var> occurrences of <code>a</code> and <var>N</var> occurrences of <code>b</code>.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+<var>S</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the lexicographically largest string that satisfies the condition.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>3
+aababb
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>abab
+</pre>
+<p>A subsequence of <var>T</var> obtained from taking the first, third, fourth and sixth characters in <var>S</var>, satisfies the condition.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>3
+bbabaa
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>bbabaa
+</pre>
+<p>You can choose all the characters.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>6
+bbbaabbabaaa
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>bbbabaaa
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 4</h3><pre>9
+abbbaababaababbaba
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 4</h3><pre>bbaababababa
+</pre></section>
+</div>
+</span>

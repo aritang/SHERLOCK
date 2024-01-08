@@ -1,0 +1,78 @@
+<span class="lang-en">
+<p>Score : <var>400</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>We have <var>N</var> dice arranged in a line from left to right. The <var>i</var>-th die from the left shows <var>p_i</var> numbers from <var>1</var> to <var>p_i</var> with equal probability when thrown.</p>
+<p>We will choose <var>K</var> adjacent dice, throw each of them independently, and compute the sum of the numbers shown. Find the maximum possible value of the expected value of this sum.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 ≤ K ≤ N ≤ 200000</var></li>
+<li><var>1 ≤ p_i ≤ 1000</var></li>
+<li>All values in input are integers.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var> <var>K</var>
+<var>p_1</var> ... <var>p_N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the maximum possible value of the expected value of the sum of the numbers shown.</p>
+<p>Your output will be considered correct when its absolute or relative error from our answer is at most <var>10^{-6}</var>.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>5 3
+1 2 2 4 5
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>7.000000000000
+</pre>
+<p>When we throw the third, fourth, and fifth dice from the left, the expected value of the sum of the numbers shown is <var>7</var>. This is the maximum value we can achieve.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>4 1
+6 6 6 6
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>3.500000000000
+</pre>
+<p>Regardless of which die we choose, the expected value of the number shown is <var>3.5</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>10 4
+17 13 13 12 15 20 10 13 17 11
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>32.000000000000
+</pre></section>
+</div>
+</span>

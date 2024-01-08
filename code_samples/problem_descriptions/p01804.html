@@ -1,0 +1,203 @@
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+});
+</script>
+<script type="text/javascript" async
+        src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+
+<!-- begin en only -->
+<h3><u>Falling Block Puzzle</u></h3>
+<!-- end en only -->
+<!-- begin ja only -->
+<h3><u>ブロック落とし</u></h3>
+<!-- end ja only -->
+
+
+<!-- end en only -->
+<!-- begin ja only -->
+<p>あなたはある落ち物パズルで遊んでいる．
+このパズルのフィールドは，下図のように各段に立方体のセルが2マス×2マスに並び，段が上に無限に並んでいる形をしている．
+</p>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_JAGDomestic2015_c-field" height="253" width="114" />
+<p>それぞれのセルは，セルにぴったり収まるブロックが1つ存在するか，何もないかのどちらかである．
+このパズルは以下のように進行する．
+</p>
+<ol><li> 初期状態としていくつかのブロックが設置されている．
+</li><li> 2マス×2マス×2マスに収まるブロックの塊を上から落とす．ただし，落とす前に，ブロックがフィールドからはみ出さないようにして塊を水平方向に平行移動することができる．
+</li><li> 落としたブロックのうち，ある1つの下面が，すでに置かれているブロックまたはフィールドの底に着いた時点で，すべてのブロックの落下が止まり停止する．
+</li><li> それぞれの段について，4マス全てが埋まっていればその段のブロックは消滅し，その上にあるブロックが1段ずつ落下する．落下後のそれぞれのブロックの下のセルにブロックがなかったとしても，それ以上落下することはない．
+</li><li> 2に戻る．
+</li></ol>
+
+<p>初期状態で置かれているブロックと，落とす塊がいくつか与えられるので，与えられる順に全ての塊を落とすことで，最大いくつの段を消すことができるかを求めるプログラムを作れ．
+</p>
+
+
+<!-- end ja only -->
+
+<h3>Input</h3>
+
+<!-- begin ja only -->
+<p>入力は100個以下のデータセットからなる．各データセットは以下の形をしている．
+</p>
+<blockquote>(初期状態のブロックの高さ <var>H</var> ) (落とす塊の数 <var>N</var> )<br>(初期状態の1段目)<br>...<br>(初期状態の <var>H</var> 段目)<br>(1個目の落とす塊)<br>...<br>( <var>N</var> 個目の落とす塊)</blockquote>
+
+<p>各データセットの1行目には初期状態のブロックの高さ <var>H</var> (1 &le; <var>H</var> &le; 10)と落とす塊の数 <var>N</var> (1 &le; <var>N</var> &le; 3)が指定されている．
+続いて初期状態のそれぞれ段の情報が以下の形式で与えられる．
+</p>
+<blockquote><var>c</var><sub>11</sub> <var>c</var><sub>12</sub><br><var>c</var><sub>21</sub> <var>c</var><sub>22</sub></blockquote>
+
+<p><var>c<sub>ij</sub></var>はそれぞれのセルの情報を表し，'<samp>#</samp>'はブロックが存在することを，'<samp>.</samp>'はブロックがないことを表す．1段目から <var>H</var> 段目までのそれぞれの段について，全てのセルにブロックが存在したり，全てのセルにブロックがなかったりすることはないと仮定して良い．
+続いてそれぞれの落とす塊の情報が以下の形式で与えられる．
+</p>
+<blockquote><var>b</var><sub>111</sub> <var>b</var><sub>112</sub><br><var>b</var><sub>121</sub> <var>b</var><sub>122</sub><br><var>b</var><sub>211</sub> <var>b</var><sub>212</sub><br><var>b</var><sub>221</sub> <var>b</var><sub>222</sub></blockquote>
+
+<p>初期状態の形式と同様に'<samp>#</samp>'はブロックが存在することを，'<samp>.</samp>'はブロックがないことを表す．それぞれの塊には少なくとも1つのブロックが含まれる．塊に含まれるブロックは角や辺のみで接していることがあり，面で繋がっているとは限らない．
+</p>
+<p>初期状態・ブロックの塊の入力の添え字の対応は以下の図を参照すること．
+</p>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_JAGDomestic2015_c-format" height="431" width="205" />
+<p>入力の終わりは，2つのゼロからなる1行で示される．
+</p>
+<p>なお，下図は，後に示す Sample Input 中の最初のデータセットを表している．このデータセットでは，ブロックの塊を斜めに平行移動した後に落下させることで1つの段を消すことができる．
+</p>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_JAGDomestic2015_c-sample0" height="377" width="137" />
+
+
+<!-- end ja only -->
+
+<h3>Output</h3>
+
+<!-- begin ja only -->
+<p>各データセットに対して，最大でいくつの段を消すことができるかを1行に出力せよ．
+</p>
+
+
+<!-- end ja only -->
+
+<h3>Sample Input</h3>
+
+<pre>1 1
+##
+#.
+..
+..
+#.
+..
+1 1
+.#
+#.
+#.
+..
+..
+.#
+2 2
+##
+#.
+##
+#.
+..
+.#
+##
+#.
+#.
+..
+#.
+..
+1 3
+#.
+..
+##
+##
+##
+##
+##
+##
+##
+##
+##
+##
+##
+##
+10 3
+##
+#.
+##
+#.
+##
+.#
+##
+.#
+#.
+##
+#.
+##
+.#
+##
+.#
+##
+.#
+#.
+.#
+#.
+#.
+.#
+#.
+.#
+#.
+..
+#.
+..
+#.
+..
+#.
+..
+10 3
+##
+.#
+##
+..
+##
+#.
+.#
+..
+##
+.#
+.#
+##
+.#
+##
+#.
+##
+##
+.#
+..
+.#
+#.
+#.
+.#
+#.
+#.
+#.
+#.
+..
+..
+..
+..
+.#
+0 0</pre>
+
+<h3>Output for Sample Input</h3>
+
+<pre>1
+0
+3
+6
+6
+0</pre>

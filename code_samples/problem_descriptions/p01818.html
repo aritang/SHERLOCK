@@ -1,0 +1,77 @@
+
+
+
+<h2>Leapfrog</h2>
+
+<h3>Problem Statement</h3>
+<p><var>N</var> 個のマスが円状に並んでいる。マスは時計回りに <var>1,\ 2,\ </var> ... <var>,\ N</var> と番号が振られている。各 <var>i</var> (<var>1 &le;  i &le;  N&minus;1</var>) について、<var>i</var> 番目のマスと <var>i+1</var> 番目のマスは隣り合う。また、<var>N</var> 番目のマスと <var>1</var> 番目のマスは隣り合う。</p>
+<p>これらのうち <var>M</var> 個のマスには、互いに区別できない駒が <var>1</var> 個ずつ置かれている。はじめ、<var>x_1,\ x_2,\ </var> ... <var>,\ x_M</var> 番目のマスに駒が置かれている。次の操作を何回か行い、<var>y_1,\ y_2,\ </var> ... <var>,\ y_M</var> 番目のマスに駒が置かれているようにしたい。</p>
+<ul><li>時計回りまたは反時計回りに連続する <var>3</var> 個のマスを選び、順に <var>A,\ B,\ C</var> とおく。<var>A</var> と <var>B</var> にそれぞれ駒があり <var>C</var> に駒がないならば、<var>A</var> の駒を <var>C</var> へ移動する。</li></ul>
+
+
+<center>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_JAG2015SummerDay2_leapfrog">
+</center>
+
+<p><var>y_1,\ y_2,\ </var> ... <var>,\ y_M</var> 番目のマスに駒が置かれているようにできるか判定せよ。できるならば、必要な操作の回数の最小値を求めよ。</p>
+
+<h3>Constraints</h3>
+<ul>
+<li><var>3 &le;  N &le;  3,000</var></li>
+<li><var>1 &le;  M &le;  N</var></li>
+<li><var>1 &le;  x_1&lt;x_2&lt;</var> ... <var>&lt;x_M &le;  N</var></li>
+<li><var>1 &le;  y_1&lt;y_2&lt;</var> ... <var>&lt;y_M &le;  N</var></li>
+</ul>
+
+<h3>Input Format</h3>
+<p>入力は以下の形式で標準入力から与えられる。</p>
+<pre>
+<var>N</var> <var>M</var>
+<var>x_1</var> <var>x_2</var> ... <var>x_M</var>
+<var>y_1</var> <var>y_2</var> ... <var>y_M</var>
+</pre>
+
+<h3>Output Format</h3>
+<p><var>y_1,\ y_2,\ </var> ... <var>,\ y_M</var> 番目のマスに駒が置かれているようにできるならば、必要な操作の回数の最小値を一行に出力せよ。できないならば、代わりに <code>-1</code> を一行に出力せよ。</p>
+
+<h3>Sample Input 1</h3>
+<pre>
+7 2
+1 2
+5 6
+</pre>
+
+<h3>Sample Output 1</h3>
+<pre>
+3
+</pre>
+<p>次のように <var>3</var> 回の操作を行えばよい。</p>
+<ul>
+<li><var>2</var> 番目のマスの駒を <var>7</var> 番目のマスへ移動する。</li>
+<li><var>1</var> 番目のマスの駒を <var>6</var> 番目のマスへ移動する。</li>
+<li><var>7</var> 番目のマスの駒を <var>5</var> 番目のマスへ移動する。</li>
+</ul>
+
+<h3>Sample Input 2</h3>
+<pre>
+3 1
+1
+2
+</pre>
+
+<h3>Sample Output 2</h3>
+<pre>
+-1
+</pre>
+
+<h3>Sample Input 3</h3>
+<pre>
+2999 3
+1 2 3
+2 3 4
+</pre>
+
+<h3>Sample Output 3</h3>
+<pre>
+4491004
+</pre>

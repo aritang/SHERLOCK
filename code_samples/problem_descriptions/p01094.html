@@ -1,0 +1,98 @@
+
+<h3>Look for the Winner!</h3>
+
+<p>
+The citizens of TKB City are famous for their deep love in elections and vote counting.
+Today they hold an election for the next chairperson of the electoral commission.
+Now the voting has just been closed and the counting is going to start.
+The TKB citizens have strong desire to know the winner as early as possible during vote counting.
+</p>
+
+<p>
+The election candidate receiving the most votes shall be the next chairperson.
+Suppose for instance that we have three candidates <i>A</i>, <i>B</i>, and <i>C</i> and ten votes.
+Suppose also that we have already counted six of the ten votes and the vote counts of <i>A</i>, <i>B</i>, and <i>C</i> are four, one, and one, respectively.
+At this moment, every candidate has a chance to receive four more votes and so everyone can still be the winner.
+However, if the next vote counted is cast for <i>A</i>, <i>A</i> is ensured to be the winner since <i>A</i> already has five votes and <i>B</i> or <i>C</i> can have at most four votes at the end.
+In this example, therefore, the TKB citizens can know the winner just when the seventh vote is counted. 
+</p>
+
+<p>
+Your mission is to write a program that receives every vote counted, one by one, identifies the winner, and determines when the winner gets ensured.
+</p>
+
+
+
+<h3>Input</h3>
+
+
+<p>
+The input consists of at most 1500 datasets, each consisting of two lines in the following format.
+</p>
+
+<p>
+
+<i>n</i><br>
+<i>c</i><sub>1</sub> <i>c</i><sub>2</sub> &hellip; <i>c<sub>n</sub></i><br>
+
+</p>
+
+<p>
+<i>n</i> in the first line represents the number of votes, and is a positive integer no greater than 100.
+The second line represents the <i>n</i> votes, separated by a space.
+Each <i>c<sub>i</sub></i> (1 &le; <i>i</i> &le; <i>n</i>) is a single uppercase letter, <i>i.e.</i> one of 'A' through 'Z'.
+This represents the election candidate for which the <i>i</i>-th vote was cast.
+Counting shall be done in the given order from <i>c</i><sub>1</sub> to <i>c<sub>n</sub></i>.
+</p>
+
+<p>
+You should assume that at least two stand as candidates even when all the votes are cast for one candidate.
+</p>
+
+<p>
+The end of the input is indicated by a line containing a zero.
+</p>
+
+
+<h3>Output</h3>
+
+
+<p>
+For each dataset, unless the election ends in a tie, output a single line containing an uppercase letter <i>c</i> and an integer <i>d</i> separated by a space:
+<i>c</i> should represent the election winner and <i>d</i> should represent after counting how many votes the winner is identified.
+Otherwise, that is, if the election ends in a tie, output a single line containing `TIE'.
+</p>
+
+<h3>Sample Input</h3>
+
+<pre>
+1
+A
+4
+A A B B
+5
+L M N L N
+6
+K K K K K K
+6
+X X X Y Z X
+10
+A A A B A C A C C B
+10
+U U U U U V V W W W
+0
+</pre>
+
+
+<h3>Output for the Sample Input</h3>
+
+
+<pre>
+A 1
+TIE
+TIE
+K 4
+X 5
+A 7
+U 8
+</pre>

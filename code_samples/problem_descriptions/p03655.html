@@ -1,0 +1,97 @@
+<span class="lang-en">
+<p>Score : <var>1600</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>Joisino is planning on touring Takahashi Town.
+The town is divided into square sections by north-south and east-west lines.
+We will refer to the section that is the <var>x</var>-th from the west and the <var>y</var>-th from the north as <var>(x,y)</var>.</p>
+<p>Joisino thinks that a <em>touring plan</em> is good if it satisfies the following conditions:</p>
+<ul>
+<li>
+<p>Let <var>(p,q)</var> be the section where she starts the tour. Then, <var>X_1 \leq p \leq X_2</var> and <var>Y_1 \leq q \leq Y_2</var> hold.</p>
+</li>
+<li>
+<p>Let <var>(s,t)</var> be the section where she has lunch. Then, <var>X_3 \leq s \leq X_4</var> and <var>Y_3 \leq t \leq Y_4</var> hold.</p>
+</li>
+<li>
+<p>Let <var>(u,v)</var> be the section where she ends the tour. Then, <var>X_5 \leq u \leq X_6</var> and <var>Y_5 \leq v \leq Y_6</var> hold.</p>
+</li>
+<li>
+<p>By repeatedly moving to the adjacent section (sharing a side), she travels from the starting section to the ending section in the shortest distance, passing the lunch section on the way.</p>
+</li>
+</ul>
+<p>Two touring plans are considered different if at least one of the following is different: the starting section, the lunch section, the ending section, and the sections that are visited on the way.
+Joisino would like to know how many different good touring plans there are.
+Find the number of the different good touring plans.
+Since it may be extremely large, find the count modulo <var>10^9+7</var>.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 \leq X_1 \leq X_2 &lt; X_3 \leq X_4 &lt; X_5 \leq X_6 \leq 10^6</var></li>
+<li><var>1 \leq Y_1 \leq Y_2 &lt; Y_3 \leq Y_4 &lt; Y_5 \leq Y_6 \leq 10^6</var></li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>X_1</var> <var>X_2</var> <var>X_3</var> <var>X_4</var> <var>X_5</var> <var>X_6</var>
+<var>Y_1</var> <var>Y_2</var> <var>Y_3</var> <var>Y_4</var> <var>Y_5</var> <var>Y_6</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the number of the different good touring plans, modulo <var>10^9+7</var>.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>1 1 2 2 3 4
+1 1 2 2 3 3
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>10
+</pre>
+<p>The starting section will always be <var>(1,1)</var>, and the lunch section will always be <var>(2,2)</var>.
+There are four good touring plans where <var>(3,3)</var> is the ending section, and six good touring plans where <var>(4,3)</var> is the ending section.
+Therefore, the answer is <var>6+4=10</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>1 2 3 4 5 6
+1 2 3 4 5 6
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>2346
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>77523 89555 420588 604360 845669 973451
+2743 188053 544330 647651 709337 988194
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>137477680
+</pre></section>
+</div>
+</span>

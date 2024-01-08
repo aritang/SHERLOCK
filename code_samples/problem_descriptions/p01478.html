@@ -1,0 +1,53 @@
+
+
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({ tex2jax: { inlineMath: [["$","$"], ["\\(","\\)"]], skipTags: ["script","noscript","style","textarea","code"], processEscapes: true }});
+</script>
+<script language="JavaScript" type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+
+
+<h2>問題文</h2>
+
+<p>$1,2,...,N$ を並べ替えた順列がある。2つの異なる数字 $i$, $j$ を選んで入れ替えることを繰り返してソートされた状態( $1,2,...,N$ の順番に並んだ状態)にしたい。
+数字 $i$, $j$ を入れ替える度にコストが $c_{i,j}$ 必要になる。</p>
+<p>順列 $p$ に対して、 $p$ をソートするのに必要な最小コストを $f(p)$ とする。
+$f(p)$ のとりうる最大値を求めよ。</p>
+
+<h2>入力</h2>
+
+<p>入力は以下のフォーマットに従う。与えられる数は全て整数である。</p>
+<pre>$N$
+$c_{1,1}$ $c_{1,2}$ $...$ $c_{1,N}$
+$c_{2,1}$ $c_{2,2}$ $...$ $c_{2,N}$
+$...$
+$c_{N,1}$ $c_{N,2}$ $...$ $c_{N,N}$</pre>
+
+<h2>制約</h2>
+
+<ul><li>$2 \leq N \leq 8$</li>
+<li>$0 \leq c_{i,j} \leq 10^5$</li>
+<li>$c_{i,j} = c_{j,i}$</li>
+<li>$c_{i,i} = 0$</li></ul>
+
+<h2>出力</h2>
+
+<p>最大値を1行に出力せよ。</p>
+
+<h2>Sample Input 1</h2>
+
+<pre>3
+0 1 3
+1 0 8
+3 8 0</pre>
+
+
+<h2>Output for the Sample Input 1</h2>
+
+<pre>5</pre>
+<p>もっとも必要コストが大きい順列は$\{1,3,2\}$で、</p>
+<ol><li>1,2を入れ替えて$\{2,3,1\}$とする。</li>
+<li>1,3を入れ替えて$\{2,1,3\}$とする。</li>
+<li>1,2を入れ替えて$\{1,2,3\}$とする。</li></ol>
+<p>以上の操作によりコスト5でソートでき、またこれが最善であることが証明できる。
+他の順列もコスト5以下でソートできることを示すことができる。</p>

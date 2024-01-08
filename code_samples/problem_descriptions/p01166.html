@@ -1,0 +1,137 @@
+
+<H1><font color="#000">Problem D:</font> So Sleepy</H1>
+
+<p>
+You have an appointment to meet a friend of yours today, but you are so sleepy because you
+didn’t sleep well last night.
+</p>
+<p>
+As you will go by trains to the station for the rendezvous, you can have a sleep on a train. You
+can start to sleep as soon as you get on a train and keep asleep just until you get off. However,
+because of your habitude, you can sleep only on one train on your way to the destination.
+</p>
+<p>
+Given the time schedule of trains as well as your departure time and your appointed time, your
+task is to write a program which outputs the longest possible time duration of your sleep in a
+train, under the condition that you can reach the destination by the appointed time.
+
+</p>
+
+<H2>Input</H2>
+
+<p>
+The input consists of multiple datasets. Each dataset looks like below:
+</p>
+
+<pre>
+<i>S T</i>
+<i>D Time<sub>D</sub> A Time<sub>A</sub></i>
+<i>N</i><sbu>1</sub>
+<i>K</i><sub>1,1</sub> <i>Time</i><sub>1,1</sub>
+...
+<i>K</i><sub>1,<i>N</i><sub>1</sub></sub> <i>Time</i><sub>1,<i>N</i><sub>1</sub></sub>
+<i>N<sub>2</sub></i>
+<i>K</i><sub>2,1</sub> <i>Time</i><sub>2,1</sub>
+...
+<i>K</i><sub>2,<i>N</i><sub>2</sub></sub> <i>Time</i><sub>2,<i>N</i><sub>2</sub></sub>
+...
+<i>N<sub>T</sub></i>
+<i>K</i><sub><i>T</i>,1</sub> <i>Time</i><sub><i>T</i>,1</sub>
+...
+<i>K</i><sub><i>T</i>,<i>N</i><sub><i>T</i></sub></sub> <i>Time</i><sub><i>T</i>,<i>N</i><sub><i>T</i></sub></sub>
+</pre>
+
+
+
+<p>
+The first line of each dataset contains S (1 &le; S &le; 1000) and <i>T</i> (0 &le; <i>T</i> &le; 100), which denote
+the numbers of stations and trains respectively. The second line contains the departure station
+(<i>D</i>), the departure time (<i>Time<sub>D</sub></i> ), the appointed station (<i>A</i>), and the appointed time (<i>Time<sub>A</sub></i> ), in this order. Then <i>T</i> sets of time schedule for trains follow. On the first line of the <i>i</i>-th set,
+there will be <i>N<sub>i</sub></i> which indicates the number of stations the <i>i</i>-th train stops at. Then <i>N<sub>i</sub></i> lines
+follow, each of which contains the station identifier (<i>K<sub>i,j</sub></i> ) followed by the time when the train
+stops at (i.e. arrives at and/or departs from) that station (<i>Time<sub>i,j</sub></i> ).
+</p>
+
+<p>
+Each station has a unique identifier, which is an integer between 1 and <i>S</i>. Each time is given
+in the format <i>hh</i>:<i>mm</i>, where <i>hh</i> represents the two-digit hour ranging from “00” to “23”, and
+<i>mm</i> represents the two-digit minute from “00” to “59”.
+The input is terminated by a line that contains two zeros.
+</p>
+<p>
+You may assume the following:
+</p>
+<ul>
+    <li> each train stops at two stations or more; </li>
+    <li> each train never stops at the same station more than once;</li>
+    <li> a train takes at least one minute from one station to the next;</li>
+    <li> all the times that appear in each dataset are those of the same day; and</li>
+    <li> as being an expert in transfer, you can catch other trains that depart at the time just you
+      arrive the station.</li>
+</ul>
+
+
+<H2>Output</H2>
+
+<p>
+For each dataset, your program must output the maximum time in minutes you can sleep if you
+can reach to the destination station in time, or “impossible” (without the quotes) otherwise.
+</p>
+
+<H2>Sample Input</H2>
+<pre>
+3 1
+1 09:00 3 10:00
+3
+1 09:10
+2 09:30
+3 09:40
+3 2
+1 09:00 1 10:00
+3
+1 09:10
+2 09:30
+3 09:40
+3
+3 09:20
+2 09:30
+1 10:00
+1 0
+1 09:00 1 10:00
+1 0
+1 10:00 1 09:00
+3 1
+1 09:00 3 09:35
+3
+1 09:10
+2 09:30
+3 09:40
+4 3
+1 09:00 4 11:00
+3
+1 09:10
+2 09:20
+4 09:40
+3
+1 10:30
+3 10:40
+4 10:50
+4
+1 08:50
+2 09:30
+3 10:30
+4 11:10
+0 0
+</pre>
+
+<H2>Output for the Sample Input</H2>
+<pre>
+30
+30
+0
+impossible
+impossible
+60
+</pre>
+
+

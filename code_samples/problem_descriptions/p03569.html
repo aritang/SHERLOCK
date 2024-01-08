@@ -1,0 +1,101 @@
+<span class="lang-en">
+<p>Score : <var>400</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>We have a string <var>s</var> consisting of lowercase English letters.
+Snuke can perform the following operation repeatedly:</p>
+<ul>
+<li>Insert a letter <code>x</code> to any position in <var>s</var> of his choice, including the beginning and end of <var>s</var>.</li>
+</ul>
+<p>Snuke's objective is to turn <var>s</var> into a palindrome.
+Determine whether the objective is achievable. If it is achievable, find the minimum number of operations required.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Notes</h3><p>A <em>palindrome</em> is a string that reads the same forward and backward.
+For example, <code>a</code>, <code>aa</code>, <code>abba</code> and  <code>abcba</code> are palindromes, while <code>ab</code>, <code>abab</code> and <code>abcda</code> are not.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 \leq |s| \leq 10^5</var></li>
+<li><var>s</var> consists of lowercase English letters.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>s</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>If the objective is achievable, print the number of operations required.
+If it is not, print <code>-1</code> instead.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>xabxa
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>2
+</pre>
+<p>One solution is as follows (newly inserted <code>x</code> are shown in bold):</p>
+<p>xabxa → xa<strong>x</strong>bxa → xaxbxa<strong>x</strong></p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>ab
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>-1
+</pre>
+<p>No sequence of operations can turn <var>s</var> into a palindrome.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>a
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>0
+</pre>
+<p><var>s</var> is a palindrome already at the beginning.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 4</h3><pre>oxxx
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 4</h3><pre>3
+</pre>
+<p>One solution is as follows:</p>
+<p>oxxx → <strong>x</strong>oxxx → <strong>x</strong>xoxxx → <strong>x</strong>xxoxxx</p></section>
+</div>
+</span>

@@ -1,0 +1,154 @@
+
+
+
+
+<!-- - - - - - begin nicebody - - - - - -->
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+});
+</script>
+<script type="text/javascript" async
+        src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+<h1>C: 足し算掛け算 / AddMul</h1>
+
+
+
+<h2>問題文</h2>
+
+<p>
+情太くんは <code>a</code> から <code>z</code> までの文字と，
+足し算の記号 <code>+</code> しか知りません．
+情太くんには姉の立子さんがいます．
+立子さんはそれに加えて，掛け算 <code>*</code> と括弧 <code>(</code>，<code>)</code>，
+そして <code>1</code> 以上 <code>9</code> 以下の整数 (数字) も知っています．
+しかし，括弧を多重に使用すること，括弧の中で掛け算を行うことは知りません．
+</p>
+
+<p>
+例えば，次のような数式があったとします．
+</p>
+    <ol>
+        <li><code>a+a+a</code></li>
+        <li><code>a+4*(b+c)</code></li>
+        <li><code>a+3*(b+2*(c+d))</code></li>
+        <li><code>a-b</code></li>
+        <li><code>a/b</code></li>
+        <li><code>11*a</code></li>
+    </ol>
+<p>
+このうち，情太くんは 1. のみ，立子さんは 1. と 2. を書くことができます．
+3. から 6. は二人とも書くことができません．
+</p>
+
+<p>
+    ある日，情太くんは文字列としての長さが $n$ の多項式 $S$ を書きました．
+    ショートコーダーの立子さんは，掛け算と括弧と <code>1</code> 以上 <code>9</code>
+    以下の整数を使って，$S$ を文字列としてより短い恒等な多項式 $T$ に書きなおしてやりたいと思っています．
+    しかし，そう簡単ではないようです．
+</p>
+
+<p>
+さて，立子さんのかわりに，文字列として最も短い $T$ を作り，
+その長さを出力するプログラムを書いてください．
+</p>
+
+<h2>入力</h2>
+
+<p>
+$N$<br>
+$S$<br>
+</p>
+
+<h2>制約</h2>
+
+<p>
+$1 \leq N \leq 499$<br>
+$N$ は奇数である<br>
+$S$ は <code>a</code> から <code>z</code> までのアルファベット小文字と
+<code>+</code> のみからなる<br>
+$S$ の最初の文字はアルファベットであり，その後 <code>+</code>
+とアルファベット $1$ 文字が交互に並ぶ<br>
+$S$ に同じアルファベットは $9$ 個以下しか含まれない<br>
+</p>
+
+<h2>出力</h2>
+
+<p>
+答えを $1$ 行で出力してください．
+</p>
+
+<h2>サンプル</h2>
+
+<h3>サンプル入力1</h3>
+
+<pre>
+5
+a+a+a
+</pre>
+
+<h3>サンプル出力1</h3>
+
+<pre>
+3
+</pre>
+
+<p>
+<code>a*3</code> の $3$ 文字が最短です．
+</p>
+
+<h3>サンプル入力2</h3>
+
+<pre>
+9
+a+a+b+a+b
+</pre>
+
+<h3>サンプル出力2</h3>
+
+<pre>
+7
+</pre>
+
+<p>
+<code>a*3+2*b</code> または <code>a*3+b+b</code> の $7$ 文字が最短です．
+</p>
+
+<h3>サンプル入力3</h3>
+
+<pre>
+11
+a+a+b+a+b+b
+</pre>
+
+<h3>サンプル出力3</h3>
+
+<pre>
+7
+</pre>
+
+<p>
+<code>(a+b)*3</code> で $7$ 文字
+</p>
+
+<h3>サンプル入力4</h3>
+
+<pre>
+3
+a+a
+</pre>
+
+<h3>サンプル出力4</h3>
+
+<pre>
+3
+</pre>
+
+<p>
+<code>a+a</code> または <code>a*2</code> で $3$ 文字
+</p>
+
+<!-- - - - - - end nicebody - - - - - -->

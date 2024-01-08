@@ -1,0 +1,76 @@
+<span class="lang-en">
+<p>Score : <var>100</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>Consider placing <var>N</var> flags on a line. Flags are numbered through <var>1</var> to <var>N</var>.</p>
+<p>Flag <var>i</var> can be placed on the coordinate <var>X_i</var> or <var>Y_i</var>.
+For any two different flags, the distance between them should be at least <var>D</var>.</p>
+<p>Decide whether it is possible to place all <var>N</var> flags. If it is possible, print such a configulation.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 \leq N \leq 1000</var></li>
+<li><var>0 \leq D \leq 10^9</var></li>
+<li><var>0 \leq X_i &lt; Y_i \leq 10^9</var></li>
+<li>All values in Input are integer.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var> <var>D</var>
+<var>X_1</var> <var>Y_1</var>
+<var>X_2</var> <var>Y_2</var>
+<var>\vdots</var>
+<var>X_N</var> <var>Y_N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print <code>No</code> if it is impossible to place <var>N</var> flags.</p>
+<p>If it is possible, print <code>Yes</code> first.
+After that, print <var>N</var> lines. <var>i</var>-th line of them should contain the coodinate of flag <var>i</var>.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>3 2
+1 4
+2 5
+0 6
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>Yes
+4
+2
+0
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>3 3
+1 4
+2 5
+0 6
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>No
+</pre></section>
+</div>
+</span>

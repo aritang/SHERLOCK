@@ -1,0 +1,132 @@
+<span class="lang-en">
+<p>Score : <var>1500</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>We have a grid with <var>3</var> rows and <var>N</var> columns.
+The cell at the <var>i</var>-th row and <var>j</var>-th column is denoted (<var>i</var>, <var>j</var>).
+Initially, each cell (<var>i</var>, <var>j</var>) contains the integer <var>i+3j-3</var>.</p>
+<div style="text-align: center;">
+<img src="https://atcoder.jp/img/agc006/0322a46da4f0298345d1574383f0d83e.png">
+<p>A grid with <var>N=5</var> columns</p>
+</img></div>
+<p>Snuke can perform the following operation any number of times:</p>
+<ul>
+<li>Choose a <var>3×3</var> subrectangle of the grid. The placement of integers within the subrectangle is now rotated by <var>180°</var>.</li>
+</ul>
+<div style="text-align: center;">
+<img src="https://atcoder.jp/img/agc006/a18e112da218b4ecd3c2b3fdfcf15d94.png">
+<p>An example sequence of operations (each chosen subrectangle is colored blue)</p>
+</img></div>
+<p>Snuke's objective is to manipulate the grid so that each cell (<var>i</var>, <var>j</var>) contains the integer <var>a_{i,j}</var>.
+Determine whether it is achievable.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>5≤N≤10^5</var></li>
+<li><var>1≤a_{i,j}≤3N</var></li>
+<li>All <var>a_{i,j}</var> are distinct.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>The input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+<var>a_{1,1}</var> <var>a_{1,2}</var> <var>...</var> <var>a_{1,N}</var>
+<var>a_{2,1}</var> <var>a_{2,2}</var> <var>...</var> <var>a_{2,N}</var>
+<var>a_{3,1}</var> <var>a_{3,2}</var> <var>...</var> <var>a_{3,N}</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>If Snuke's objective is achievable, print <code>Yes</code>. Otherwise, print <code>No</code>.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>5
+9 6 15 12 1
+8 5 14 11 2
+7 4 13 10 3
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>Yes
+</pre>
+<p>This case corresponds to the figure in the problem statement.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>5
+1 2 3 4 5
+6 7 8 9 10
+11 12 13 14 15
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>No
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>5
+1 4 7 10 13
+2 5 8 11 14
+3 6 9 12 15
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>Yes
+</pre>
+<p>The objective is already achieved with the initial placement of the integers.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 4</h3><pre>6
+15 10 3 4 9 16
+14 11 2 5 8 17
+13 12 1 6 7 18
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 4</h3><pre>Yes
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 5</h3><pre>7
+21 12 1 16 13 6 7
+20 11 2 17 14 5 8
+19 10 3 18 15 4 9
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 5</h3><pre>No
+</pre></section>
+</div>
+</span>

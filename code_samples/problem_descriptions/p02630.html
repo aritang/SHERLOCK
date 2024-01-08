@@ -1,0 +1,116 @@
+<span class="lang-en">
+<p>Score : <var>400</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>You have a sequence <var>A</var> composed of <var>N</var> positive integers: <var>A_{1}, A_{2}, \cdots, A_{N}</var>.</p>
+<p>You will now successively do the following <var>Q</var> operations:</p>
+<ul>
+<li>In the <var>i</var>-th operation, you replace every element whose value is <var>B_{i}</var> with <var>C_{i}</var>.</li>
+</ul>
+<p>For each <var>i</var> <var>(1 \leq i \leq Q)</var>, find <var>S_{i}</var>: the sum of all elements in <var>A</var> just after the <var>i</var>-th operation.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li>All values in input are integers.</li>
+<li><var> 1 \leq N, Q, A_{i}, B_{i}, C_{i} \leq 10^{5} </var></li>
+<li><var> B_{i} \neq C_{i} </var></li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+<var>A_{1}</var> <var>A_{2}</var> <var>\cdots</var> <var>A_{N}</var>
+<var>Q</var>
+<var>B_{1}</var> <var>C_{1}</var>
+<var>B_{2}</var> <var>C_{2}</var>
+<var>\vdots</var>
+<var>B_{Q}</var> <var>C_{Q}</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print <var>Q</var> integers <var>S_{i}</var> to Standard Output in the following format:</p>
+<pre><var>S_{1}</var>
+<var>S_{2}</var>
+<var>\vdots</var>
+<var>S_{Q}</var>
+</pre>
+<p>Note that <var>S_{i}</var> may not fit into a <var>32</var>-bit integer.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>4
+1 2 3 4
+3
+1 2
+3 4
+2 4
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>11
+12
+16
+</pre>
+<p>Initially, the sequence <var>A</var> is <var>1,2,3,4</var>.</p>
+<p>After each operation, it becomes the following:</p>
+<ul>
+<li><var>2, 2, 3, 4</var></li>
+<li><var>2, 2, 4, 4</var></li>
+<li><var>4, 4, 4, 4</var></li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>4
+1 1 1 1
+3
+1 2
+2 1
+3 5
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>8
+4
+4
+</pre>
+<p>Note that the sequence <var>A</var> may not contain an element whose value is <var>B_{i}</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>2
+1 2
+3
+1 100
+2 100
+100 1000
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>102
+200
+2000
+</pre></section>
+</div>
+</span>

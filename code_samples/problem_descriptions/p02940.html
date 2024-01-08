@@ -1,0 +1,75 @@
+<span class="lang-en">
+<p>Score : <var>800</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>We have <var>3N</var> colored balls with IDs from <var>1</var> to <var>3N</var>.
+A string <var>S</var> of length <var>3N</var> represents the colors of the balls. The color of Ball <var>i</var> is red if <var>S_i</var> is <code>R</code>, green if <var>S_i</var> is <code>G</code>, and blue if <var>S_i</var> is <code>B</code>. There are <var>N</var> red balls, <var>N</var> green balls, and <var>N</var> blue balls.</p>
+<p>Takahashi will distribute these <var>3N</var> balls to <var>N</var> people so that each person gets one red ball, one blue ball, and one green ball.
+The people want balls with IDs close to each other, so he will additionally satisfy the following condition:</p>
+<ul>
+<li>Let <var>a_j &lt; b_j &lt; c_j</var> be the IDs of the balls received by the <var>j</var>-th person in ascending order.</li>
+<li>Then, <var>\sum_j (c_j-a_j)</var> should be as small as possible.</li>
+</ul>
+<p>Find the number of ways in which Takahashi can distribute the balls. Since the answer can be enormous, compute it modulo <var>998244353</var>.
+We consider two ways to distribute the balls different if and only if there is a person who receives different sets of balls.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 \leq N \leq 10^5</var></li>
+<li><var>|S|=3N</var></li>
+<li><var>S</var> consists of <code>R</code>, <code>G</code>, and <code>B</code>, and each of these characters occurs <var>N</var> times in <var>S</var>.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+<var>S</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the number of ways in which Takahashi can distribute the balls, modulo <var>998244353</var>.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>3
+RRRGGGBBB
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>216
+</pre>
+<p>The minimum value of <var>\sum_j (c_j-a_j)</var> is <var>18</var> when the balls are, for example, distributed as follows:</p>
+<ul>
+<li>The first person gets Ball <var>1</var>, <var>5</var>, and <var>9</var>.</li>
+<li>The second person gets Ball <var>2</var>, <var>4</var>, and <var>8</var>.</li>
+<li>The third person gets Ball <var>3</var>, <var>6</var>, and <var>7</var>.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>5
+BBRGRRGRGGRBBGB
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>960
+</pre></section>
+</div>
+</span>

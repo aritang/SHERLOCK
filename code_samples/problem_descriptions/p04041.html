@@ -1,0 +1,94 @@
+<span class="lang-en">
+<p>Score : <var>700</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p><em>Haiku is a short form of Japanese poetry. A Haiku consists of three phrases with 5, 7 and 5 syllables, in this order.</em></p>
+<p>Iroha is looking for <em><var>X,Y,Z</var>-Haiku</em> (defined below) in integer sequences.</p>
+<p>Consider all integer sequences of length <var>N</var> whose elements are between <var>1</var> and <var>10</var>, inclusive. Out of those <var>10^N</var> sequences, how many contain an <var>X,Y,Z</var>-Haiku?</p>
+<p>Here, an integer sequence <var>a_0, a_1, ..., a_{N-1}</var> is said to <em>contain an <var>X,Y,Z</var>-Haiku</em> if and only if there exist four indices <var>x, y, z, w (0 ≦ x &lt; y &lt; z &lt; w ≦ N)</var> such that all of the following are satisfied:</p>
+<ul>
+<li><var>a_x + a_{x+1} + ... + a_{y-1} = X</var></li>
+<li><var>a_y + a_{y+1} + ... + a_{z-1} = Y</var></li>
+<li><var>a_z + a_{z+1} + ... + a_{w-1} = Z</var></li>
+</ul>
+<p>Since the answer can be extremely large, print the number modulo <var>10^9+7</var>.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>3 ≦ N ≦ 40</var></li>
+<li><var>1 ≦ X ≦ 5</var></li>
+<li><var>1 ≦ Y ≦ 7</var></li>
+<li><var>1 ≦ Z ≦ 5</var></li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>The input is given from Standard Input in the following format:</p>
+<pre><var>N</var> <var>X</var> <var>Y</var> <var>Z</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the number of the sequences that contain an <var>X,Y,Z</var>-Haiku, modulo <var>10^9+7</var>.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>3 5 7 5
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>1
+</pre>
+<p>Here, the only sequence that contains a <var>5,7,5</var>-Haiku is <var>[5, 7, 5]</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>4 5 7 5
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>34
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>37 4 2 3
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>863912418
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 4</h3><pre>40 5 7 5
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 4</h3><pre>562805100
+</pre></section>
+</div>
+</span>

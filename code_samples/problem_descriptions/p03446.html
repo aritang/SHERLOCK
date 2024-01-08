@@ -1,0 +1,93 @@
+<span class="lang-en">
+<p>Score : <var>2100</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>We have a rectangular parallelepiped of dimensions <var>A×B×C</var>, divided into <var>1×1×1</var> small cubes.
+The small cubes have coordinates from <var>(0, 0, 0)</var> through <var>(A-1, B-1, C-1)</var>.</p>
+<p>Let <var>p</var>, <var>q</var> and <var>r</var> be integers. Consider the following set of <var>abc</var> small cubes:</p>
+<p><var>\{(\ (p + i)</var> mod <var>A</var>, <var>(q + j)</var> mod <var>B</var>, <var>(r + k)</var> mod <var>C\ )</var> <var>|</var> <var>i</var>, <var>j</var> and <var>k</var> are integers satisfying <var>0</var> <var>≤</var> <var>i</var> <var>&lt;</var> <var>a</var>, <var>0</var> <var>≤</var> <var>j</var> <var>&lt;</var> <var>b</var>, <var>0</var> <var>≤</var> <var>k</var> <var>&lt;</var> <var>c</var> <var>\}</var></p>
+<p>A set of small cubes that can be expressed in the above format using some integers <var>p</var>, <var>q</var> and <var>r</var>, is called a <em>torus cuboid</em> of size <var>a×b×c</var>.</p>
+<p>Find the number of the sets of torus cuboids of size <var>a×b×c</var> that satisfy the following condition, modulo <var>10^9+7</var>:</p>
+<ul>
+<li>No two torus cuboids in the set have intersection.</li>
+<li>The union of all torus cuboids in the set is the whole rectangular parallelepiped of dimensions <var>A×B×C</var>.</li>
+</ul>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1</var> <var>≤</var> <var>a</var> <var>&lt;</var> <var>A</var> <var>≤</var> <var>100</var></li>
+<li><var>1</var> <var>≤</var> <var>b</var> <var>&lt;</var> <var>B</var> <var>≤</var> <var>100</var></li>
+<li><var>1</var> <var>≤</var> <var>c</var> <var>&lt;</var> <var>C</var> <var>≤</var> <var>100</var></li>
+<li>All input values are integers.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>a</var> <var>b</var> <var>c</var> <var>A</var> <var>B</var> <var>C</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the number of the sets of torus cuboids of size <var>a×b×c</var> that satisfy the condition, modulo <var>10^9+7</var>.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>1 1 1 2 2 2
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>1
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>2 2 2 4 4 4
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>744
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>2 3 4 6 7 8
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>0
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 4</h3><pre>2 3 4 98 99 100
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 4</h3><pre>471975164
+</pre></section>
+</div>
+</span>

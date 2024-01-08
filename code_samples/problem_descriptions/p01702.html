@@ -1,0 +1,105 @@
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({ tex2jax: { inlineMath: [["$","$"], ["\\(","\\)"]], processEscapes: true }});
+</script>
+<script language="JavaScript" type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+
+<meta http-equiv="X-UA-Compatible" CONTENT="IE=EmulateIE7" /><style type="text/css">blockquote {
+  font-family: Menlo, Monaco, "Courier New", monospace;
+  color: #333333;
+  display: block;
+  padding: 8.5px;
+  margin: 0 0 9px;
+  font-size: 12px;
+  line-height: 18px;
+  background-color: #f5f5f5;
+  border: 1px solid #ccc;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  white-space: pre;
+  white-space: pre-wrap;
+  word-break: break-all;
+  word-wrap: break-word;
+}</style><div class="part"><h3>Problem Statement</h3>
+<p>In the headquarter building of ICPC (International Company of Plugs &amp; Connectors), there are $M$ light bulbs and they are controlled by $N$ switches.
+Each light bulb can be turned on or off by exactly one switch.
+Each switch may control multiple light bulbs.
+When you operate a switch, all the light bulbs controlled by the switch change their states.
+You lost the table that recorded the correspondence between the switches and the light bulbs, and want to restore it.
+</p>
+<p>You decided to restore the correspondence by the following procedure.
+</p><ul><li>At first, every switch is off and every light bulb is off.
+</li><li>You operate some switches represented by $S_1$.
+</li><li>You check the states of the light bulbs represented by $B_1$.
+</li><li>You operate some switches represented by $S_2$.
+</li><li>You check the states of the light bulbs represented by $B_2$.
+</li><li>...
+</li><li>You operate some switches represented by $S_Q$.
+</li><li>You check the states of the light bulbs represented by $B_Q$.
+</li></ul>
+
+<p>After you operate some switches and check the states of the light bulbs, the states of the switches and the light bulbs are kept for next operations.
+</p>
+<p>Can you restore the correspondence between the switches and the light bulbs using the information about the switches you have operated and the states of the light bulbs you have checked?
+</p>
+
+</div><div class="part"><h3>Input</h3>
+
+<p>The input consists of multiple datasets.
+The number of dataset is no more than $50$ and the file size is no more than $10\mathrm{MB}$.
+Each dataset is formatted as follows.
+</p>
+<blockquote style="font-size:14pt">$N$ $M$ $Q$<br>$S_1$ $B_1$<br>:<br>:<br>$S_Q$ $B_Q$</blockquote>
+
+<p>The first line of each dataset contains three integers $N$ ($1 \le N \le 36$), $M$ ($1 \le M \le 1{,}000$), $Q$ ($0 \le Q \le 1{,}000$), which denote the number of switches, the number of light bulbs and the number of operations respectively.
+The following $Q$ lines describe the information about the switches you have operated and the states of the light bulbs you have checked.
+The $i$-th of them contains two strings $S_i$ and $B_i$ of lengths $N$ and $M$ respectively.
+Each $S_i$ denotes the set of the switches you have operated: $S_{ij}$ is either $0$ or $1$, which denotes the $j$-th switch is not operated or operated respectively.
+Each $B_i$ denotes the states of the light bulbs: $B_{ij}$ is either $0$ or $1$, which denotes the $j$-th light bulb is off or on respectively.
+</p>
+<p>You can assume that there exists a correspondence between the switches and the light bulbs which is consistent with the given information.
+</p>
+<p>The end of input is indicated by a line containing three zeros.
+</p>
+
+</div><div class="part"><h3>Output</h3>
+
+<p>For each dataset, output the correspondence between the switches and the light bulbs consisting of $M$ numbers written in base-$36$.
+In the base-$36$ system for this problem, the values $0$-$9$ and $10$-$35$ are represented by the characters '<samp>0</samp>'-'<samp>9</samp>' and '<samp>A</samp>'-'<samp>Z</samp>' respectively.
+The $i$-th character of the correspondence means the number of the switch controlling the $i$-th light bulb.
+If you cannot determine which switch controls the $i$-th light bulb, output '<samp>?</samp>' as the $i$-th character instead of the number of a switch.
+</p>
+
+</div><div class="part"><h3>Sample Input</h3>
+
+<pre>3 10 3
+000 0000000000
+110 0000001111
+101 1111111100
+2 2 0
+1 1 0
+2 1 1
+01 1
+11 11 10
+10000000000 10000000000
+11000000000 01000000000
+01100000000 00100000000
+00110000000 00010000000
+00011000000 00001000000
+00001100000 00000100000
+00000110000 00000010000
+00000011000 00000001000
+00000001100 00000000100
+00000000110 00000000010
+0 0 0</pre>
+</div><div class="part"><h3>Output for the Sample Input</h3>
+
+
+<pre>2222221100
+??
+0
+1
+0123456789A</pre>
+</div>

@@ -1,0 +1,77 @@
+<span class="lang-en">
+<p>Score : <var>200</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>There is a string <var>S</var> consisting of digits <code>1</code>, <code>2</code>, <var>...</var>, <code>9</code>.
+Lunlun, the Dachshund, will take out three consecutive digits from <var>S</var>, treat them as a single integer <var>X</var> and bring it to her master. (She cannot rearrange the digits.)</p>
+<p>The master's favorite number is <var>753</var>. The closer to this number, the better.
+What is the minimum possible (absolute) difference between <var>X</var> and <var>753</var>?</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>S</var> is a string of length between <var>4</var> and <var>10</var> (inclusive).</li>
+<li>Each character in <var>S</var> is <code>1</code>, <code>2</code>, <var>...</var>, or <code>9</code>.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>S</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the minimum possible difference between <var>X</var> and <var>753</var>.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>1234567876
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>34
+</pre>
+<p>Taking out the seventh to ninth characters results in <var>X = 787</var>, and the difference between this and <var>753</var> is <var>787 - 753 = 34</var>. The difference cannot be made smaller, no matter where <var>X</var> is taken from.</p>
+<p>Note that the digits cannot be rearranged. For example, taking out <code>567</code> and rearranging it to <code>765</code> is not allowed.</p>
+<p>We cannot take out three digits that are not consecutive from <var>S</var>, either. For example, taking out the seventh digit <code>7</code>, the ninth digit <code>7</code> and the tenth digit <code>6</code> to obtain <code>776</code> is not allowed.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>35753
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>0
+</pre>
+<p>If <code>753</code> itself can be taken out, the answer is <var>0</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>1111111111
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>642
+</pre>
+<p>No matter where <var>X</var> is taken from, <var>X = 111</var>, with the difference <var>753 - 111 = 642</var>.</p></section>
+</div>
+</span>

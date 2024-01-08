@@ -1,0 +1,68 @@
+
+
+
+<h1>電子蝿</h1>
+
+<p>
+ ある計算機学者が電子空間に棲息する電子蝿という奇妙な生命体を見つけました。電子蝿の行動を観察しているうちに、この空間の (<var>x</var>, <var>y</var>, <var>z</var>) 地点にいる電子蝿は、次に以下の規則で示される (<var>x'</var>, <var>y'</var>, <var>z'</var>)に移動することが分かりました。
+</p>
+
+<center>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE1_electroFly">
+</center>
+<br/>
+
+<p>
+ ただし、<var>a</var><sub>1</sub>, <var>m</var><sub>1</sub>, <var>a</var><sub>2</sub>, <var>m</var><sub>2</sub>, <var>a</var><sub>3</sub>, <var>m</var><sub>3</sub> は電子蝿の個体ごとに定まる正の整数です。<var>A</var> mod <var>B</var> は正の整数 <var>A</var> を正の整数 <var>B</var> で割ったときの余りです。
+</p>
+
+<p>
+ さらに観察をすると、ある種の電子蝿は (1,1,1) に置いてからしばらくすると、必ず (1,1,1) に戻ってくることがわかりました。このような蝿を戻り蝿と名付けました<sup>(1)</sup> 。
+</p>
+
+<p>
+戻り蝿のデータを入力とし、(1,1,1) に戻ってくる最小の移動回数 (&gt;0) を出力するプログラムを作成してください。なお 1&lt; <var>a</var><sub>1</sub>, <var>m</var><sub>1</sub>, <var>a</var><sub>2</sub>, <var>m</var><sub>2</sub>, <var>a</var><sub>3</sub>, <var>m</var><sub>3</sub> &lt; 2<sup>15</sup> とします。
+
+</p>
+
+<p>
+<sup>(1)</sup>  <var>a</var><sub>1</sub> と <var>m</var><sub>1</sub>, <var>a</var><sub>2</sub> と <var>m</var><sub>2</sub>, <var>a</var><sub>3</sub> と <var>m</var><sub>3</sub> がそれぞれ互いに素 (公約数が 1) である時に戻ります。
+</p>
+
+<H2>Input</H2>
+
+<p>
+複数のデータセットが与えられます。各データセットは以下の形式で与えられます。
+</p>
+
+<pre>
+<var>a</var><sub>1</sub> <var>m</var><sub>1</sub> <var>a</var><sub>2</sub> <var>m</var><sub>2</sub> <var>a</var><sub>3</sub> <var>m</var><sub>3</sub>
+</pre>
+
+<p>
+入力は６つの 0 を含む行で終わります。データセットの数は 50 を超えません。
+</p>
+
+<H2>Output</H2>
+
+<p>
+各データセットごとに、(1,1,1) に戻ってくる最小の移動回数(整数)を１行に出力してください。
+</p>
+
+<H2>Sample Input</H2>
+
+<pre>
+2 5 3 7 6 13
+517 1024 746 6561 4303 3125
+0 0 0 0 0 0
+</pre>
+
+<H2>Output for the Sample Input</H2>
+
+<pre>
+12
+116640000
+</pre>
+
+
+

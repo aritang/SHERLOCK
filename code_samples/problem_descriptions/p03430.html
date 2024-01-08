@@ -1,0 +1,67 @@
+<span class="lang-en">
+<p>Score : <var>900</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>Takahashi has decided to give a string to his mother.</p>
+<p>The <em>value</em> of a string <var>T</var> is the length of the longest common subsequence of <var>T</var> and <var>T'</var>, where <var>T'</var> is the string obtained by reversing <var>T</var>.
+That is, the value is the longest length of the following two strings that are equal: a subsequence of <var>T</var> (possibly non-contiguous), and a subsequence of <var>T'</var> (possibly non-contiguous).</p>
+<p>Takahashi has a string <var>S</var>. He wants to give her mother a string of the highest possible value, so he would like to change at most <var>K</var> characters in <var>S</var> to any other characters in order to obtain a string of the highest possible value.
+Find the highest possible value achievable.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 \leq |S| \leq 300</var></li>
+<li><var>0 \leq K \leq |S|</var></li>
+<li><var>S</var> consists of lowercase English letters.</li>
+<li><var>K</var> is an integer.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>S</var>
+<var>K</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the highest possible value achievable.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>abcabcabc
+1
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>7
+</pre>
+<p>Changing the first character to <code>c</code> results in <code>cbcabcabc</code>.
+Let this tring be <var>T</var>, then one longest common subsequence of <var>T</var> and <var>T'</var> is <code>cbabcbc</code>, whose length is <var>7</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>atcodergrandcontest
+3
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>15
+</pre></section>
+</div>
+</span>

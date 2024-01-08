@@ -1,0 +1,97 @@
+<span class="lang-en">
+<p>Score : <var>1900</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>Ringo has a tree with <var>N</var> vertices.
+The <var>i</var>-th of the <var>N-1</var> edges in this tree connects Vertex <var>A_i</var> and Vertex <var>B_i</var> and has a weight of <var>C_i</var>.
+Additionally, Vertex <var>i</var> has a weight of <var>X_i</var>.</p>
+<p>Here, we define <var>f(u,v)</var> as the distance between Vertex <var>u</var> and Vertex <var>v</var>, plus <var>X_u + X_v</var>.</p>
+<p>We will consider a complete graph <var>G</var> with <var>N</var> vertices.
+The cost of its edge that connects Vertex <var>u</var> and Vertex <var>v</var> is <var>f(u,v)</var>.
+Find the minimum spanning tree of <var>G</var>.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>2 \leq N \leq 200,000</var></li>
+<li><var>1 \leq X_i \leq 10^9</var></li>
+<li><var>1 \leq A_i,B_i \leq N</var></li>
+<li><var>1 \leq C_i \leq 10^9</var></li>
+<li>The given graph is a tree.</li>
+<li>All input values are integers.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+<var>X_1</var> <var>X_2</var> <var>...</var> <var>X_N</var>
+<var>A_1</var> <var>B_1</var> <var>C_1</var>
+<var>A_2</var> <var>B_2</var> <var>C_2</var>
+<var>:</var>
+<var>A_{N-1}</var> <var>B_{N-1}</var> <var>C_{N-1}</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the cost of the minimum spanning tree of <var>G</var>.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>4
+1 3 5 1
+1 2 1
+2 3 2
+3 4 3
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>22
+</pre>
+<p>We connect the following pairs: Vertex <var>1</var> and <var>2</var>, Vertex <var>1</var> and <var>4</var>, Vertex <var>3</var> and <var>4</var>. The costs are <var>5</var>, <var>8</var> and <var>9</var>, respectively, for a total of <var>22</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>6
+44 23 31 29 32 15
+1 2 10
+1 3 12
+1 4 16
+4 5 8
+4 6 15
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>359
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>2
+1000000000 1000000000
+2 1 1000000000
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>3000000000
+</pre></section>
+</div>
+</span>

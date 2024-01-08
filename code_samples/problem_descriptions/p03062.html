@@ -1,0 +1,85 @@
+<span class="lang-en">
+<p>Score : <var>400</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>There are <var>N</var> integers, <var>A_1, A_2, ..., A_N</var>, arranged in a row in this order.</p>
+<p>You can perform the following operation on this integer sequence any number of times:</p>
+<p><strong>Operation</strong>: Choose an integer <var>i</var> satisfying <var>1 \leq i \leq N-1</var>. Multiply both <var>A_i</var> and <var>A_{i+1}</var> by <var>-1</var>.</p>
+<p>Let <var>B_1, B_2, ..., B_N</var> be the integer sequence after your operations.</p>
+<p>Find the maximum possible value of <var>B_1 + B_2 + ... + B_N</var>.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li>All values in input are integers.</li>
+<li><var>2 \leq N \leq 10^5</var></li>
+<li><var>-10^9 \leq A_i \leq 10^9</var></li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+<var>A_1</var> <var>A_2</var> <var>...</var> <var>A_N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the maximum possible value of <var>B_1 + B_2 + ... + B_N</var>.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>3
+-10 5 -4
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>19
+</pre>
+<p>If we perform the operation as follows:</p>
+<ul>
+<li>Choose <var>1</var> as <var>i</var>, which changes the sequence to <var>10, -5, -4</var>.</li>
+<li>Choose <var>2</var> as <var>i</var>, which changes the sequence to <var>10, 5, 4</var>.</li>
+</ul>
+<p>we have <var>B_1 = 10, B_2 = 5, B_3 = 4</var>. The sum here, <var>B_1 + B_2 + B_3 = 10 + 5 + 4 = 19</var>, is the maximum possible result.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>5
+10 -4 -8 -11 3
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>30
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>11
+-1000000000 1000000000 -1000000000 1000000000 -1000000000 0 1000000000 -1000000000 1000000000 -1000000000 1000000000
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>10000000000
+</pre>
+<p>The output may not fit into a <var>32</var>-bit integer type.</p></section>
+</div>
+</span>

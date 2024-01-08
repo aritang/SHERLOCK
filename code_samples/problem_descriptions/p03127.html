@@ -1,0 +1,83 @@
+<span class="lang-en">
+<p>Score : <var>300</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>There are <var>N</var> monsters, numbered <var>1, 2, ..., N</var>.</p>
+<p>Initially, the health of Monster <var>i</var> is <var>A_i</var>.</p>
+<p>Below, a monster with at least <var>1</var> health is called alive.</p>
+<p>Until there is only one alive monster, the following is repeated:</p>
+<ul>
+<li>A random alive monster attacks another random alive monster.</li>
+<li>As a result, the health of the monster attacked is reduced by the amount equal to the current health of the monster attacking.</li>
+</ul>
+<p>Find the minimum possible final health of the last monster alive.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li>All values in input are integers.</li>
+<li><var>2 \leq N \leq 10^5</var></li>
+<li><var>1 \leq A_i \leq 10^9</var></li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+<var>A_1</var> <var>A_2</var> <var>...</var> <var>A_N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the minimum possible final health of the last monster alive.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>4
+2 10 8 40
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>2
+</pre>
+<p>When only the first monster keeps on attacking, the final health of the last monster will be <var>2</var>, which is minimum.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>4
+5 13 8 1000000000
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>1
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>3
+1000000000 1000000000 1000000000
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>1000000000
+</pre></section>
+</div>
+</span>

@@ -1,0 +1,128 @@
+
+<h1>Problem J: Yu-kun Likes a lot of Money</h1>
+
+<h2>Background</h2>
+<p>
+会津大学付属幼稚園はプログラミングが大好きな子供が集まる幼稚園である。園児の一人であるゆう君は、プログラミングと同じくらいお金が大好きだ。ゆう君は、今日もお金を稼ぐために財宝の眠る島を訪れた。ゆう君は事前に財宝のありかの描かれた地図を手に入れている。その地図をもとに出来るだけ多くのお金を稼ぎたい。ゆう君は最大でどのくらいお金を手に入れることができるだろうか？
+</p>
+
+<h2>Problem</h2>
+<p>
+地図、ゆう君の初期位置、財宝の種類とそれらから得られるお金、そして小さい岩を破壊するために必要な費用の情報が与えられる。地図の情報は <var>h</var>マス &times; <var>w</var>マスのフィールドとして与えられる。地図の各マスに書かれている文字とその意味は次の通りである。
+</p>
+
+<ul>
+<li>'@' : ゆう君が最初にいる位置を表す。ゆう君が移動した後は道と同じように扱う。</li>
+<li>'.' : 道を表す。このマスは自由に通ることができ費用もかからない。</li>
+<li>'#' : 大きな岩を表す。このマスは通ることができない。</li>
+<li>'*' : 小さな岩を表す。一定の金額を支払うことで壊すことができる。壊した後は道になる。</li>
+<li>'0','1',...,'9','a','b',...,'z','A','B',...,'Z' : 財宝があるマスを表す。このマスを訪れることでそこに書かれている文字に対応する財宝の金額分のお金を得る。ただしお金を得ることが出来るのは最初に訪れた時のみである。</li>
+</ul>
+
+<p>
+ゆう君は１回の移動で隣接する上下左右のいずれかのマスに移動することができる。
+ただし、地図の外へ出るような移動はできない。
+</p>
+
+<p>
+後払いをすることができるため、小さな岩を壊す際にそれに必要な金額をその時に所持している必要はない。そのため、ゆう君は最終的に小さな岩を壊す際にかかった金額の総和以上のお金を得ている必要がある。
+</p>
+
+<p>
+ゆう君が得られる最大の金額を出力せよ。
+</p>
+
+
+<h2>Input</h2>
+<p>
+入力は以下の形式で与えられる。
+</p>
+
+<pre>
+<var>h</var> <var>w</var> <var>n</var> <var>r</var>
+<var>c<sub>1,1</sub></var> <var>c<sub>1,2</sub></var> … <var>c<sub>1,w</sub></var>
+<var>c<sub>2,1</sub></var> <var>c<sub>2,2</sub></var> … <var>c<sub>2,w</sub></var>
+…
+<var>c<sub>h,1</sub></var> <var>c<sub>h,2</sub></var> … <var>c<sub>h,w</sub></var>
+<var>m<sub>1</sub></var> <var>v<sub>1</sub></var>
+<var>m<sub>2</sub></var> <var>v<sub>2</sub></var>
+…
+<var>m<sub>n</sub></var> <var>v<sub>n</sub></var>
+</pre>
+
+<p>
+１行目に地図の縦の長さ<var>h</var>,横の長さ<var>w</var>,地図に含まれる財宝の数<var>n</var>,小さな岩を破壊するためにかかる費用<var>r</var>が空白区切りで与えられる。
+</p>
+
+<p>
+続く<var>h</var>行に地図を表す各マスの情報<var>c<sub>i,j</sub></var>が<var>w</var>個与えられる。 ( 1 &le; <var>i</var> &le; <var>h</var>, 1 &le; <var>j</var> &le; <var>w</var> )
+</p>
+
+<p>
+続く<var>n</var>行に財宝の種類<var>m<sub>k</sub></var> とその財宝の金額<var>v<sub>k</sub></var>が空白区切りで与えられる。 ( 1 &le; <var>k</var> &le; <var>n</var> )
+</p>
+
+<h2>Constraints</h2>
+<p>
+入力は以下の制約を満たす。
+</p>
+<ul>
+<li>1 &le; <var>h</var>,<var>w</var> &le; 8</li>
+<li>0 &le; <var>n</var> &le; min(<var>h</var>&times;<var>w</var> -1,62) ただし、min(<var>a</var>,<var>b</var>)は<var>a</var>,<var>b</var>の最小値を表す</li>
+<li> 1 &le; <var>v<sub>i</sub></var> &le; 10<sup>5</sup> ( 1 &le; <var>i</var> &le; <var>n</var> )</li>
+<li>1 &le; <var>r</var> &le; 10<sup>5</sup></li>
+<li><var>c<sub>j,k</sub></var>, <var>m<sub>l</sub></var> を除く全ての入力は整数として与えられる ( 1 &le; <var>j</var> &le; <var>h</var>, 1 &le; <var>k</var> &le; <var>w</var>, 1 &le; <var>l</var> &le; <var>n</var> )</li>
+<li>地図にはちょうどひとつ'@'が書かれている</li>
+<li>地図にはちょうど<var>n</var>個の財宝が書かれている</li>
+<li>地図に書かれている財宝の種類は入力で与えられた<var>m<sub>l</sub></var>のいずれかである</li>
+<li>地図に同じ種類の財宝が２つ以上現れることはない</li>
+</ul>
+
+<h2>Output</h2>
+<p>
+ゆう君が得られる最大のお金の金額を1行に出力せよ。
+</p>
+
+<h2>Sample Input1</h2>
+
+<pre>
+3 3 1 10
+@0.
+...
+...
+0 100
+</pre>
+
+<h2>Sample Output1</h2>
+<pre>
+100
+</pre>
+
+<h2>Sample Input2</h2>
+<pre>
+3 3 1 10
+@#b
+.#.
+.#.
+b 100
+</pre>
+
+<h2>Sample Output2</h2>
+<pre>
+0
+</pre>
+
+<h2>Sample Input3</h2>
+<pre>
+3 3 1 20
+@*C
+..*
+...
+C 10
+</pre>
+
+<h2>Sample Output3</h2>
+<pre>
+0
+</pre>
+

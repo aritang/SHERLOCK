@@ -1,0 +1,94 @@
+<span class="lang-en">
+<p>Score : <var>400</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>There are <var>N</var> towns located in a line, conveniently numbered <var>1</var> through <var>N</var>. Takahashi the merchant is going on a travel from town <var>1</var> to town <var>N</var>, buying and selling apples.</p>
+<p>Takahashi will begin the travel at town <var>1</var>, with no apple in his possession. The actions that can be performed during the travel are as follows:</p>
+<ul>
+<li><em>Move</em>: When at town <var>i</var> (<var>i &lt; N</var>), move to town <var>i + 1</var>.</li>
+<li><em>Merchandise</em>: Buy or sell an arbitrary number of apples at the current town. Here, it is assumed that one apple can always be bought and sold for <var>A_i</var> yen (the currency of Japan) at town <var>i</var> (<var>1 ≦ i ≦ N</var>), where <var>A_i</var> are distinct integers. Also, you can assume that he has an infinite supply of money.</li>
+</ul>
+<p>For some reason, there is a constraint on merchandising apple during the travel: the sum of the number of apples bought and the number of apples sold during the whole travel, must be at most <var>T</var>. (Note that a single apple can be counted in both.)</p>
+<p>During the travel, Takahashi will perform actions so that the <em>profit</em> of the travel is maximized. Here, the profit of the travel is the amount of money that is gained by selling apples, minus the amount of money that is spent on buying apples. Note that we are not interested in apples in his possession at the end of the travel.</p>
+<p>Aoki, a business rival of Takahashi, wants to trouble Takahashi by manipulating the market price of apples. Prior to the beginning of Takahashi's travel, Aoki can change <var>A_i</var> into another arbitrary non-negative integer <var>A_i'</var> for any town <var>i</var>, any number of times. The cost of performing this operation is <var>|A_i - A_i'|</var>. After performing this operation, different towns may have equal values of <var>A_i</var>.</p>
+<p>Aoki's objective is to decrease Takahashi's expected profit by at least <var>1</var> yen. Find the minimum total cost to achieve it. You may assume that Takahashi's expected profit is initially at least <var>1</var> yen.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 ≦ N ≦ 10^5</var></li>
+<li><var>1 ≦ A_i ≦ 10^9</var> (<var>1 ≦ i ≦ N</var>)</li>
+<li><var>A_i</var> are distinct.</li>
+<li><var>2 ≦ T ≦ 10^9</var></li>
+<li>In the initial state, Takahashi's expected profit is at least <var>1</var> yen.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>The input is given from Standard Input in the following format:</p>
+<pre><var>N</var> <var>T</var>
+<var>A_1</var> <var>A_2</var> <var>...</var> <var>A_N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the minimum total cost to decrease Takahashi's expected profit by at least <var>1</var> yen.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>3 2
+100 50 200
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>1
+</pre>
+<p>In the initial state, Takahashi can achieve the maximum profit of <var>150</var> yen as follows:</p>
+<ol>
+<li>Move from town <var>1</var> to town <var>2</var>.</li>
+<li>Buy one apple for <var>50</var> yen at town <var>2</var>.</li>
+<li>Move from town <var>2</var> to town <var>3</var>.</li>
+<li>Sell one apple for <var>200</var> yen at town <var>3</var>.</li>
+</ol>
+<p>If, for example, Aoki changes the price of an apple at town <var>2</var> from <var>50</var> yen to <var>51</var> yen, Takahashi will not be able to achieve the profit of <var>150</var> yen. The cost of performing this operation is <var>1</var>, thus the answer is <var>1</var>.</p>
+<p>There are other ways to decrease Takahashi's expected profit, such as changing the price of an apple at town <var>3</var> from <var>200</var> yen to <var>199</var> yen.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>5 8
+50 30 40 10 20
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>2
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>10 100
+7 10 4 5 9 3 6 8 2 1
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>2
+</pre></section>
+</div>
+</span>

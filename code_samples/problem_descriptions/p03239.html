@@ -1,0 +1,100 @@
+<span class="lang-en">
+<p>Score : <var>200</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>When Mr. X is away from home, he has decided to use his smartwatch to search the best route to go back home, to participate in ABC.</p>
+<p>You, the smartwatch, has found <var>N</var> routes to his home.</p>
+<p>If Mr. X uses the <var>i</var>-th of these routes, he will get home in time <var>t_i</var> at cost <var>c_i</var>.</p>
+<p>Find the smallest cost of a route that takes not longer than time <var>T</var>.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li>All values in input are integers.</li>
+<li><var>1 \leq N \leq 100</var></li>
+<li><var>1 \leq T \leq 1000</var></li>
+<li><var>1 \leq c_i \leq 1000</var></li>
+<li><var>1 \leq t_i \leq 1000</var></li>
+<li>The pairs <var>(c_i, t_i)</var> are distinct.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var> <var>T</var>
+<var>c_1</var> <var>t_1</var>
+<var>c_2</var> <var>t_2</var>
+<var>:</var>
+<var>c_N</var> <var>t_N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the smallest cost of a route that takes not longer than time <var>T</var>.</p>
+<p>If there is no route that takes not longer than time <var>T</var>, print <code>TLE</code> instead.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>3 70
+7 60
+1 80
+4 50
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>4
+</pre>
+<ul>
+<li>The first route gets him home at cost <var>7</var>.</li>
+<li>The second route takes longer than time <var>T = 70</var>.</li>
+<li>The third route gets him home at cost <var>4</var>.</li>
+</ul>
+<p>Thus, the cost <var>4</var> of the third route is the minimum.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>4 3
+1 1000
+2 4
+3 1000
+4 500
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>TLE
+</pre>
+<p>There is no route that takes not longer than time <var>T = 3</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>5 9
+25 8
+5 9
+4 10
+1000 1000
+6 1
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>5
+</pre></section>
+</div>
+</span>

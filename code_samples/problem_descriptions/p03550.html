@@ -1,0 +1,96 @@
+<span class="lang-en">
+<p>Score : <var>500</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>We have a deck consisting of <var>N</var> cards. Each card has an integer written on it. The integer on the <var>i</var>-th card from the top is <var>a_i</var>.</p>
+<p>Two people X and Y will play a game using this deck. Initially, X has a card with <var>Z</var> written on it in his hand, and Y has a card with <var>W</var> written on it in his hand. Then, starting from X, they will alternately perform the following action:</p>
+<ul>
+<li>Draw some number of cards from the top of the deck. Then, discard the card in his hand and keep the last drawn card instead. Here, at least one card must be drawn.</li>
+</ul>
+<p>The game ends when there is no more card in the deck. The score of the game is the absolute difference of the integers written on the cards in the two players' hand.</p>
+<p>X will play the game so that the score will be maximized, and Y will play the game so that the score will be minimized. What will be the score of the game?</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li>All input values are integers.</li>
+<li><var>1 \leq N \leq 2000</var></li>
+<li><var>1 \leq Z, W, a_i \leq 10^9</var></li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var> <var>Z</var> <var>W</var>
+<var>a_1</var> <var>a_2</var> <var>...</var> <var>a_N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the score.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>3 100 100
+10 1000 100
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>900
+</pre>
+<p>If X draws two cards first, Y will draw the last card, and the score will be <var>|1000 - 100| = 900</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>3 100 1000
+10 100 100
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>900
+</pre>
+<p>If X draws all the cards first, the score will be <var>|1000 - 100| = 900</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>5 1 1
+1 1 1 1 1
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>0
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 4</h3><pre>1 1 1
+1000000000
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 4</h3><pre>999999999
+</pre></section>
+</div>
+</span>

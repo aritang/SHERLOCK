@@ -1,0 +1,80 @@
+
+
+<h1>Reverse Sort</h1>
+<p>1 &sim; NまでのN個の数字の順列A<sub>1</sub>, A<sub>2</sub>, ……, A<sub>N</sub>が与えられる。
+この順列に対して区間[i, j](1 &le; i &le; j &le; N)の数字の順序を逆順にする操作reverse(i, j)を行うことが出来る。
+例えば、[1, 2, 3, 4, 5]に対してreverse(2, 4)を適用すると[1, 4, 3, 2, 5]となる。
+最小で何回の操作を行えば順列を昇順にソートされた状態にすることが出来るか計算せよ。
+</p>
+
+<h2>Input</h2>
+<p>入力は以下の形式で与えられる。
+</p><blockquote>
+N<br>A<sub>1</sub> A<sub>2</sub> …… A<sub>N</sub><br></blockquote>
+
+
+<h2>Constraints</h2>
+<ul><li><p>Nは整数である
+</p></li><li><p>2 &le; N &le; 10
+</p></li></ul>
+
+
+<h2>Output</h2>
+<p>問題の解を1行に出力せよ。
+</p>
+
+<h2>Sample Input 1</h2>
+
+<pre>5
+1 4 3 5 2
+</pre>
+
+<h2>Output for the Sample Input 1</h2>
+
+<pre>2
+</pre><ul><li><p>reverse(4,5):1 4 3 2 5
+</p></li><li><p>reverse(2,4):1 2 3 4 5
+</p></li></ul>
+
+<p>のようにすればよい。
+</p>
+
+<h2>Sample Input 2</h2>
+
+<pre>5
+3 1 5 2 4
+</pre>
+<h2>Output for the Sample Input 2</h2>
+
+<pre>4
+</pre><p>例えば
+</p><ul><li><p>reverse(1,2):1 3 5 2 4
+</p></li><li><p>reverse(3,5):1 3 4 2 5
+</p></li><li><p>reverse(2,4):1 2 4 3 5
+</p></li><li><p>reverse(3,4):1 2 3 4 5
+</p></li></ul>
+
+<p>のようにすればよい。
+</p>
+
+<h2>Sample Input 3</h2>
+
+<pre>3
+1 2 3
+</pre>
+
+<h2>Output for the Sample Input 3</h2>
+
+<pre>0
+</pre>
+
+<h2>Sample Input 4</h2>
+
+<pre>10
+3 1 5 2 7 4 9 6 10 8
+</pre>
+
+<h2>Output for the Sample Input 4</h2>
+
+<pre>9
+</pre>

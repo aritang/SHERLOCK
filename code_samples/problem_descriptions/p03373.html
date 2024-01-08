@@ -1,0 +1,74 @@
+<span class="lang-en">
+<p>Score : <var>300</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>"Pizza At", a fast food chain, offers three kinds of pizza: "A-pizza", "B-pizza" and "AB-pizza". A-pizza and B-pizza are completely different pizzas, and AB-pizza is one half of A-pizza and one half of B-pizza combined together. The prices of one A-pizza, B-pizza and AB-pizza are <var>A</var> yen, <var>B</var> yen and <var>C</var> yen (yen is the currency of Japan), respectively.</p>
+<p>Nakahashi needs to prepare <var>X</var> A-pizzas and <var>Y</var> B-pizzas for a party tonight. He can only obtain these pizzas by directly buying A-pizzas and B-pizzas, or buying two AB-pizzas and then rearrange them into one A-pizza and one B-pizza. At least how much money does he need for this? It is fine to have more pizzas than necessary by rearranging pizzas.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 ≤ A, B, C ≤ 5000</var></li>
+<li><var>1 ≤ X, Y ≤ 10^5</var></li>
+<li>All values in input are integers.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>A</var> <var>B</var> <var>C</var> <var>X</var> <var>Y</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the minimum amount of money required to prepare <var>X</var> A-pizzas and <var>Y</var> B-pizzas.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>1500 2000 1600 3 2
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>7900
+</pre>
+<p>It is optimal to buy four AB-pizzas and rearrange them into two A-pizzas and two B-pizzas, then buy additional one A-pizza.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>1500 2000 1900 3 2
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>8500
+</pre>
+<p>It is optimal to directly buy three A-pizzas and two B-pizzas.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>1500 2000 500 90000 100000
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>100000000
+</pre>
+<p>It is optimal to buy <var>200000</var> AB-pizzas and rearrange them into <var>100000</var> A-pizzas and <var>100000</var> B-pizzas. We will have <var>10000</var> more A-pizzas than necessary, but that is fine.</p></section>
+</div>
+</span>

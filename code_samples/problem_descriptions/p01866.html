@@ -1,0 +1,111 @@
+
+
+
+<!-- - - - - - begin nicebody - - - - - -->
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+});
+</script>
+<script type="text/javascript" async
+        src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+<h1>B: ハミング距離 / Hamming Distance</h1>
+
+
+<h2>問題文</h2>
+
+<p>
+Leading-zeros を含めた桁数が $N$ の，符号なし $2$ 進数表記された整数 $X$ がある．
+$X$ とのハミング距離が $D$ となる $N$ 桁で $2$ 進数表記できる非負整数のうち，
+値が最大のものを出力せよ．
+</p>
+
+<p>
+$2$ 進数表記された整数間のハミング距離とは，
+$2$ つの数において値が異なる桁の数である．例えば $000$ と $110$ のハミング距離は $2$ である．
+</p>
+
+<h2>入力</h2>
+
+<p>
+$N$<br>
+$X$<br>
+$D$<br>
+</p>
+
+<h2>制約</h2>
+
+<p>
+$1 \leq N \leq 1000$<br>
+$0 \leq D \leq N$<br>
+入力は全て非負整数である<br>
+</p>
+
+<h2>出力</h2>
+
+<p>
+答えの整数を符号なし $2$ 進数表記で $1$ 行に出力せよ．
+</p>
+
+<h2>サンプル</h2>
+
+<h3>サンプル入力1</h3>
+
+<pre>
+5
+00001
+3
+</pre>
+
+<h3>サンプル出力1</h3>
+
+<pre>
+11101
+</pre>
+
+<h3>サンプル入力2</h3>
+
+<pre>
+7
+0110100
+4
+</pre>
+
+<h3>サンプル出力2</h3>
+
+<pre>
+1111111
+</pre>
+
+<h3>サンプル入力3</h3>
+
+<pre>
+18
+110001001110100100
+6
+</pre>
+
+<h3>サンプル出力3</h3>
+
+<pre>
+111111111111100100
+</pre>
+
+<h3>サンプル入力4</h3>
+
+<pre>
+3
+000
+0
+</pre>
+
+<h3>サンプル出力4</h3>
+
+<pre>
+000
+</pre>
+
+<!-- - - - - - end nicebody - - - - - -->

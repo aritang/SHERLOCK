@@ -1,0 +1,98 @@
+
+
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({ tex2jax: { inlineMath: [["$","$"], ["\\(","\\)"]], processEscapes: true }});
+</script>
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+
+<H1>実数既約分数化</H1>
+
+<p>
+  実数のうち、小数部が循環するものと有限桁のものは分数として表すことができます。
+</p>
+
+<br/>
+
+<p>
+分数で表すことができる実数が与えられたとき、その実数と等しい既約分数（それ以上約分できない分数）を出力するプログラムを作成せよ。
+</p>
+
+
+<h2>Input</h2>
+
+<p>
+  入力は以下の形式で与えられる。
+</p>
+
+<pre>
+<var>str</var>
+</pre>
+
+<p>
+  １行に、変換したい実数を表す文字列 <var>str</var> が与えられる。実数の値は 0 より大きい。文字列は数字か「.」、「(」、「)」を含む、長さが 3 以上 8 以下の文字列である。「.」は小数点、「(」は数字の循環の始まり、「)」は数字の循環の終わりを示す。整数部にも小数部にも、必ず１桁以上の数字が与えられるとする。ただし、循環小数が与えられた場合、文字列は以下の条件を満たす。
+</p>
+<ul>
+<li> 循環の始まりと終わりのペアは、小数点の右側に一度だけ現れる。 </li>
+<li> 循環の終わりを示す「)」は、文字列の末尾に現れる。</li>
+<li> 循環の始まりと終わりの間には、必ず１桁以上の数字が与えられる。</li>
+</ul>
+  
+<h2>Output</h2>
+
+<p>
+実数を既約分数で表した形式（分子の整数に続けて「/」区切りで分母の整数を並べたもの）で出力する。
+</p>
+
+
+<h2>Sample Input 1</h2>
+
+<pre>
+0.(3)
+</pre>
+
+<h2>Sample Output 1</h2>
+<pre>
+1/3
+</pre>
+
+<br/>
+
+<h2>Sample Input 2</h2>
+<pre>
+1.0
+</pre>
+
+<h2>Sample Output 2</h2>
+<pre>
+1/1
+</pre>
+
+<br/>
+
+
+<h2>Sample Input 3</h2>
+<pre>
+5.2(143)
+</pre>
+
+<h2>Sample Output 3</h2>
+<pre>
+52091/9990
+</pre>
+
+<br/>
+
+<h2>Sample Input 4</h2>
+<pre>
+0.0739
+</pre>
+
+<h2>Sample Output 4</h2>
+<pre>
+739/10000
+</pre>
+
+<br/>

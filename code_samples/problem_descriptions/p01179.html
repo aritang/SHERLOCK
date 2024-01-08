@@ -1,0 +1,114 @@
+
+<H1><font color="#000">Problem I:</font> Cousin's Aunt</H1>
+
+<p>
+Sarah is a girl who likes reading books.
+</p>
+<p>
+One day, she wondered about the relationship of a family in a mystery novel. The story said,
+</p>
+
+<ul>
+<li>B is A’s father’s brother’s son, and</li>
+<li>C is B’s aunt.</li>
+</ul>
+
+<p>
+Then she asked herself, “So how many degrees of kinship are there between A and C?”
+</p>
+<p>
+There are two possible relationships between B and C, that is, C is either B’s father’s sister or
+B’s mother’s sister in the story. If C is B’s father’s sister, C is in the third degree of kinship to
+A (A’s father’s sister). On the other hand, if C is B’s mother’s sister, C is in the fifth degree of
+kinship to A (A’s father’s brother’s wife’s sister).
+</p>
+<p>
+You are a friend of Sarah’s and good at programming. You can help her by writing a general
+program to calculate the maximum and minimum degrees of kinship between A and C under
+given relationship.
+</p>
+<p>
+The relationship of A and C is represented by a sequence of the following basic relations: father,
+mother, son, daughter, husband, wife, brother, sister, grandfather, grandmother, grandson,
+granddaughter, uncle, aunt, nephew, and niece. Here are some descriptions about these relations:
+</p>
+
+<ul>
+<li><i>X</i>’s brother is equivalent to <i>X</i>’s father’s or mother’s son not identical to <i>X</i>.</li>
+<li><i>X</i>’s grandfather is equivalent to <i>X</i>’s father’s or mother’s father.</li>
+<li><i>X</i>’s grandson is equivalent to <i>X</i>’s son’s or daughter’s son.</li>
+<li><i>X</i>’s uncle is equivalent to <i>X</i>’s father’s or mother’s brother.</li>
+<li><i>X</i>’s nephew is equivalent to <i>X</i>’s brother’s or sister’s son.</li>
+<li>Similar rules apply to sister, grandmother, granddaughter, aunt and niece.</li>
+</ul>
+
+<p>
+In this problem, you can assume there are none of the following relations in the family: adoptions,
+marriages between relatives (i.e. the family tree has no cycles), divorces, remarriages, bigamous
+marriages and same-sex marriages.
+</p>
+
+<p>
+The degree of kinship is defined as follows:
+</p>
+
+<ul>
+<li> The distance from <i>X</i> to <i>X</i>’s father, <i>X</i>’s mother, <i>X</i>’s son or <i>X</i>’s daughter is one.</li>
+<li> The distance from <i>X</i> to <i>X</i>’s husband or <i>X</i>’s wife is zero.</li>
+<li> The degree of kinship between <i>X</i> and <i>Y</i> is equal to the shortest distance from <i>X</i> to <i>Y</i>
+  deduced from the above rules.</li>
+</ul>
+
+<H2>Input</H2>
+
+<p>
+The input contains multiple datasets. The first line consists of a positive integer that indicates
+the number of datasets.
+</p>
+<p>
+Each dataset is given by one line in the following format:
+</p>
+<pre>
+      C is A(’s <i>relation</i>)*
+</pre>
+<p>
+Here, <i>relation</i> is one of the following:
+</p>
+<pre>
+father, mother, son, daughter, husband, wife, brother,
+sister, grandfather, grandmother, grandson, granddaughter, uncle, aunt, nephew, niece.
+</pre>
+<p>
+An asterisk denotes zero or more occurance of portion surrounded by the parentheses. The
+number of relations in each dataset is at most ten.
+</p>
+
+<H2>Output</H2>
+
+<p>
+For each dataset, print a line containing the maximum and minimum degrees of kinship separated
+by exact one space. No extra characters are allowed of the output.
+</p>
+
+<H2>Sample Input</H2>
+<pre>
+7
+C is A’s father’s brother’s son’s aunt
+C is A’s mother’s brother’s son’s aunt
+C is A’s son’s mother’s mother’s son
+C is A’s aunt’s niece’s aunt’s niece
+C is A’s father’s son’s brother
+C is A’s son’s son’s mother
+C is A
+</pre>
+
+<H2>Output for the Sample Input</H2>
+<pre>
+5 3
+5 1
+2 2
+6 0
+2 0
+1 1
+0 0
+</pre>

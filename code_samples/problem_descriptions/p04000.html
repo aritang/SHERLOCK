@@ -1,0 +1,139 @@
+<span class="lang-en">
+<p>Score : <var>400</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>We have a grid with <var>H</var> rows and <var>W</var> columns. At first, all cells were painted white.</p>
+<p>Snuke painted <var>N</var> of these cells. The <var>i</var>-th ( <var>1 \leq i \leq N</var> ) cell he painted is the cell at the <var>a_i</var>-th row and <var>b_i</var>-th column.</p>
+<p>Compute the following:</p>
+<ul>
+<li>For each integer <var>j</var> ( <var>0 \leq j \leq 9</var> ), how many subrectangles of size <var>3×3</var> of the grid contains exactly <var>j</var> black cells, after Snuke painted <var>N</var> cells?</li>
+</ul>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>3 \leq H \leq 10^9</var></li>
+<li><var>3 \leq W \leq 10^9</var></li>
+<li><var>0 \leq N \leq min(10^5,H×W)</var></li>
+<li><var>1 \leq a_i \leq H</var> <var>(1 \leq i \leq N)</var></li>
+<li><var>1 \leq b_i \leq W</var> <var>(1 \leq i \leq N)</var></li>
+<li><var>(a_i, b_i) \neq (a_j, b_j)</var> <var>(i \neq j)</var></li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>The input is given from Standard Input in the following format:</p>
+<pre><var>H</var> <var>W</var> <var>N</var>
+<var>a_1</var> <var>b_1</var>
+:
+<var>a_N</var> <var>b_N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print <var>10</var> lines.
+The <var>(j+1)</var>-th ( <var>0 \leq j \leq 9</var> ) line should contain the number of the subrectangles of size <var>3×3</var> of the grid that contains exactly <var>j</var> black cells.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>4 5 8
+1 1
+1 4
+1 5
+2 3
+3 1
+3 2
+3 4
+4 4
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>0
+0
+0
+2
+4
+0
+0
+0
+0
+0
+</pre>
+<p><img alt="" src="https://atcoder.jp/img/arc061/30326702be007759dce81231012a8353.png"/></p>
+<p>There are six subrectangles of size <var>3×3</var>. Two of them contain three black cells each, and the remaining four contain four black cells each.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>10 10 20
+1 1
+1 4
+1 9
+2 5
+3 10
+4 2
+4 7
+5 9
+6 4
+6 6
+6 7
+7 1
+7 3
+7 7
+8 1
+8 5
+8 10
+9 2
+10 4
+10 9
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>4
+26
+22
+10
+2
+0
+0
+0
+0
+0
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>1000000000 1000000000 0
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>999999996000000004
+0
+0
+0
+0
+0
+0
+0
+0
+0
+</pre></section>
+</div>
+</span>

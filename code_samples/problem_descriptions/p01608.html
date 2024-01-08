@@ -1,0 +1,54 @@
+
+
+
+<h2>1</h2>
+
+
+<h2>Problem Statement</h2>
+
+<p>長さ<var>n</var>のビット列がある．</p>
+<p>左から<var>i</var>番目のビットが1のとき，スコアを<var>a_i</var>点得られる．<br />
+左から<var>i</var>番目のビットを中心に距離<var>w</var>以内にある1の個数(<var>=|\{j \in \{1,...,n\}∩\{i-w,...,i+w\} | 左から</var>j<var>番目のビットが1\}|</var>)が奇数のとき，スコアを<var>b_i</var>点得られる．</p>
+<p>スコアを最も多く得られるようなビット列を求めよ．</p>
+
+<h2>Input</h2>
+
+<p>入力は以下の形式に従う．与えられる数は全て整数である．</p>
+<pre><var>n</var> <var>w</var>
+<var>a_1</var> <var>...</var> <var>a_n</var>
+<var>b_1</var> <var>...</var> <var>b_n</var></pre>
+
+<h2>Constraints</h2>
+
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li><var>1≦n≦1,000</var></li>
+<li><var>1≦w≦1,000</var></li>
+<li><var>0≦a_i≦10^5</var></li>
+<li><var>0≦b_i≦10^5</var></li></ul>
+
+<h2>Output</h2>
+
+<p>最も多くスコアを得られるビット列を1行に出力せよ．<br />
+そのような解が複数ある場合はどれを出力してもよい．</p>
+
+<h2>Sample Input 1</h2>
+
+<pre>4 1
+3 1 2 7
+13 8 25 9</pre>
+
+<h2>Output for the Sample Input 1</h2>
+
+<pre>1001</pre>
+<p>3+7+13+8+25+9=65点が得られる．</p>
+
+<h2>Sample Input 2</h2>
+
+<pre>2 1
+1 1
+3 3</pre>
+
+
+<h2>Output for the Sample Input 2</h2>
+
+<pre>10</pre>
+<p>01と出力してもよい．</p>

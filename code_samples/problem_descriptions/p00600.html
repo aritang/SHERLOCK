@@ -1,0 +1,66 @@
+
+<H1><font color="#000000">Problem F:</font> Computation of Minimum Length of Pipeline</H1>
+
+<p>
+The Aizu Wakamatsu city office decided to lay a hot water pipeline covering the whole area of the city to heat houses. The pipeline starts from some hot springs and connects every district in the city. The pipeline can fork at a hot spring or a district, but no cycle is allowed. The city office wants to minimize the length of pipeline in order to build it at the least possible expense.
+</p>
+
+<p>
+Write a program to compute the minimal length of the pipeline. The program reads an input that consists of the following three parts:
+</p>
+
+<H2>Input</H2>
+
+
+<ul>
+<li>The first part consists of two positive integers in one line, which represent the number <i>s</i> of hot springs and the number <i>d</i> of districts in the city, respectively.</li>
+<li>The second part consists of <i>s</i> lines: each line contains <i>d</i> non-negative integers. The <i>i</i>-th integer in the <i>j</i>-th line represents the distance between the <i>j</i>-th hot spring and the <i>i</i>-th district if it is non-zero. If zero it means they are not connectable due to an obstacle between them.</li>
+<li>The third part consists of <i>d</i>-1 lines. The <i>i</i>-th line has <i>d - i</i> non-negative integers. The <i>i</i>-th integer in the <i>j</i>-th line represents the distance between the <i>j</i>-th and the (<i>i</i> + <i>j</i>)-th districts if it is non-zero. The meaning of zero is the same as mentioned above.</li>
+</ul>
+
+<p>
+For the sake of simplicity, you can assume the following:
+</p>
+
+
+<ul>
+<li>The number of hot springs and that of districts do not exceed 50.</li>
+<li>Each distance is no more than 100.</li>
+<li>Each line in the input file contains at most 256 characters.</li>
+<li>Each number is delimited by either whitespace or tab.</li>
+</ul>
+
+
+<p>
+The input has several test cases. The input terminate with a line which has two 0. The number of test cases is less than 20.
+</p>
+
+<H2>Output</H2>
+
+<p>
+Output the minimum length of pipeline for each test case.
+</p>
+
+<H2>Sample Input</H2>
+<pre>
+3 5
+12 8 25 19 23
+9 13 16 0 17
+20 14 16 10 22
+17 27 18 16
+9 7 0
+19 5
+21
+0 0
+</pre>
+
+<H2>Output for the Sample Input</H2>
+<pre>
+38
+</pre>
+
+
+<H2>Hint</H2>
+<p>
+The first line correspondings to the first part: there are three hot springs and five districts. The following three lines are the second part: the distances between a hot spring and a district. For instance, the distance between the first hot spring and the third district is 25. The last four lines are the third part: the distances between two districts. For instance, the distance between the second and the third districts is 9. The second hot spring and the fourth district are not connectable The second and the fifth districts are not connectable, either.
+</p>

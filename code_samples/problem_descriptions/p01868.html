@@ -1,0 +1,117 @@
+
+
+
+<!-- - - - - - begin nicebody - - - - - -->
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+});
+</script>
+<script type="text/javascript" async
+        src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+<h1>D: スキャナー / Scanner</h1>
+
+
+<h2>問題文</h2>
+
+<p>
+ここに $N$ 枚の紙がある。あなたは $3$ 台のスキャナーを並列に用いることで、
+全ての紙をスキャンしたいと考えている。それぞれの紙はスキャンにかかる時間が決まっており、
+$i$ 番目の紙をスキャンするのにかかる時間は $T_i$ である。
+紙をスキャンする順番は任意であるが、$1$ 台のスキャナーで複数の紙を同時にスキャンすることはできない。
+</p>
+
+<p>
+全ての紙のスキャンが終了し、スキャンを行っているスキャナーがなくなるまでにかかる時間を最小化しなさい。
+</p>
+
+<h2>入力</h2>
+
+<p>
+$N$<br>
+$T_1$<br>
+$T_2$<br>
+$T_3$<br>
+$\vdots$<br>
+$T_N$<br>
+</p>
+
+<h2>制約</h2>
+
+<p>
+$1 \leq N \leq 50$<br>
+$1 \leq T_i \leq 50$<br>
+入力は全て整数<br>
+</p>
+
+<h2>出力</h2>
+
+<p>
+答えを $1$ 行で出力してください．
+</p>
+
+<h2>サンプル</h2>
+
+<h3>サンプル入力1</h3>
+
+<pre>
+4
+1
+1
+1
+1
+</pre>
+
+<h3>サンプル出力1</h3>
+
+<pre>
+2
+</pre>
+
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE3_RUPC20160306_D1">
+
+<h3>サンプル入力2</h3>
+
+<pre>
+9
+15
+20
+27
+4
+10
+7
+34
+30
+36
+</pre>
+
+<h3>サンプル出力2</h3>
+
+<pre>
+61
+</pre>
+
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE3_RUPC20160306_D2">
+
+<h3>サンプル入力3</h3>
+
+<pre>
+6
+20
+18
+46
+16
+9
+48
+</pre>
+
+<h3>サンプル出力3</h3>
+
+<pre>
+55
+</pre>
+
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE3_RUPC20160306_D3">

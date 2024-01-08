@@ -1,0 +1,72 @@
+<h2>C: 短絡評価</h2>
+<h3>問題</h3>
+
+<p>
+直大くんと北大くんはゲームをしています。
+北大くんは、まず以下の BNF で表される論理式を生成します。
+</p>
+<pre>
+&lt;formula&gt;  ::= &lt;or-expr&gt;
+&lt;or-expr&gt;  ::= &lt;and-expr&gt;
+             | &lt;or-expr&gt; "|" &lt;and-expr&gt;
+&lt;and-expr&gt; ::= &lt;term&gt;
+             | &lt;and-expr&gt; "&amp;" &lt;term&gt;
+&lt;term&gt;     ::= "(" &lt;or-expr&gt; ")" | "?"
+</pre>
+
+<p>
+<code>&amp;</code> は論理積を、<code>|</code> は論理和を表し、<code>&amp;</code> の方が <code>|</code> より先に評価されます。
+</p>
+
+<p>直大くんは、この論理式を（文字列として見て）左から読んでいき、<code>?</code> を見つけたとき以下の行動をします。</p>
+
+<ul>
+<li>その <code>?</code> を <code>0</code> にしても <code>1</code> にしても論理式の評価結果が変わらないことが確定しているなら、何もせず読み進める。</li>
+<li>そうでないなら、北大くんに 1 円払い、その <code>?</code> を <code>0</code> または <code>1</code> に書き換える。</li>
+</ul>
+
+<p>論理式は以下のように評価されます。いわゆる普通の論理式です。</p>
+<pre>
+(0 &amp; ?) == 0
+(1 &amp; 0) == 0
+(1 &amp; 1) == 1
+(0 | 0) == 0
+(0 | 1) == 1
+(1 | ?) == 1
+</pre>
+
+<p>直大くんが論理式の評価結果を確定させるために支払う必要がある最小金額はいくらでしょう？ 評価結果を <code>0</code> にする場合と <code>1</code> にする場合でそれぞれ求めてください。</p>
+
+
+<h3>入力形式</h3>
+<p>上の BNF に従う論理式が一行で与えられます。</p>
+
+<h3>制約</h3>
+<p>論理式の長さは <var>2\times 10^5</var> を超えない。</p>
+
+<h3>出力形式</h3>
+<p>評価結果を <code>0</code>、<code>1</code> にするために必要な最小金額を空白区切りで出力してください。</p>
+
+<h3>入力例1</h3>
+<pre>?&amp;?|?&amp;?|?&amp;?</pre>
+
+<h3>出力例1</h3>
+<pre>3 2</pre>
+<p>
+<code>0</code> にしたい場合は <code>0 0 0</code> で書き換えて <code>0&amp;?|0&amp;?|0&amp;?</code> とし、
+<code>1</code> にしたい場合は <code>1 1</code> で書き換えて <code>1&amp;1|?&amp;?|?&amp;?</code> とするのが最適です。
+</p>
+
+<h3>入力例2</h3>
+<pre>?&amp;?&amp;?|?&amp;?&amp;?</pre>
+
+<h3>出力例2</h3>
+<pre>2 3</pre>
+
+<p>それぞれ <code>0&amp;?&amp;?|0&amp;?&amp;?</code>、<code>1&amp;1&amp;1|?&amp;?&amp;?</code> となります。</p>
+
+<h3>入力例3</h3>
+<pre>(?|?|?)&amp;?&amp;?&amp;?&amp;?|?&amp;?|?&amp;?</pre>
+
+<h3>出力例3</h3>
+<pre>4 4</pre>

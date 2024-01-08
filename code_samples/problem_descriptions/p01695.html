@@ -1,0 +1,168 @@
+
+
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({ tex2jax: { inlineMath: [["$","$"], ["\\(","\\)"]], processEscapes: true }});
+</script>
+<script language="JavaScript" type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+
+
+<!-- begin en only -->
+<h3><u>JAG-channel</u></h3>
+<!-- end en only -->
+<!-- begin ja only -->
+<!--<h3><u>JAG-channel</u></h3>-->
+<!-- end ja only -->
+
+<!-- begin en only -->
+<!-- end en only -->
+<!-- begin ja only -->
+<p>ネイサン・O・デイビスはJAG-channelという電子掲示板を運営している．
+彼は現在，スレッドビューという新機能の追加に取り組んでいる．
+</p>
+<p>他の多くの電子掲示板と同じように，JAG-channelはスレッドベースである．
+ここで，スレッドとは，一連の投稿からなる一つの会話のまとまりを指す．
+投稿には，以下の2種類が存在する．
+</p><ul><li>新しいスレッドを作る最初の投稿
+</li><li>すでにあるスレッドの過去の投稿への返信
+</li></ul>
+
+<p>スレッドビューは，投稿間の返信・被返信関係による論理的な構造を表す，ツリー状のビューである．
+それぞれの投稿はツリーのノードとなり，その投稿に対する返信を子ノードとして持つ．
+ある投稿に対する直接・間接の返信が，全体として部分木となることに注意してほしい．
+</p>
+<p>例を見てみよう．例えば，
+"<samp>hoge</samp>"という最初の投稿に対して
+"<samp>fuga</samp>"と"<samp>piyo</samp>"という2つの返信が付き，
+"<samp>fuga</samp>"に対してさらに"<samp>foobar</samp>"と"<samp>jagjag</samp>"という返信が付き，
+"<samp>jagjag</samp>"に対して"<samp>zigzag</samp>"という返信が付いたとする．
+このスレッドのツリーは次のようになる．
+</p>
+<pre>hoge
+├─fuga
+│　├─foobar
+│　└─jagjag
+│　　　└─zigzag
+└─piyo</pre>
+
+<p>ネイサン・O・デイビスはプログラマーを雇って機能を実装させていたが，このプログラマーが最後の段階で失踪してしまった．
+このプログラマーは，スレッドのツリーを作り，それを簡易フォーマットで表示するところまで完成させている．
+この簡易フォーマットでは，返信の深さが '<samp>.</samp>' (半角ドット) で表され，ある投稿に対する返信は，元の投稿より1つ多くの '<samp>.</samp>' が左につく．また，ある投稿に対する返信は必ず元の投稿よりも下に来る．返信元の投稿と返信の間には，返信元の投稿に対する他の返信 (および，それに対する直接・間接の返信) が現れることがあるが，それ以外の投稿が両者の間に現れることはない．
+上のツリーの簡易フォーマット表示は次のようになる．
+</p>
+<pre>hoge
+.fuga
+..foobar
+..jagjag
+...zigzag
+.piyo</pre>
+<p>あなたの仕事は，この簡易フォーマット表示を受け取り，見やすく整形することである．
+すなわち，
+</p>
+<ul><li>各投稿のすぐ左の '<samp>.</samp>' (各投稿の左についた '<samp>.</samp>' のうち，もっとも右のもの) を '<samp>+</samp>' (半角プラス)，
+</li><li>同じ投稿に対する直接の返信について，それぞれのすぐ左にある '<samp>+</samp>' の間に位置する '<samp>.</samp>' を '<samp>|</samp>' (半角縦線)，
+</li><li>それ以外の '<samp>.</samp>' は '<samp> </samp>' (半角スペース)
+</li></ul>
+
+<p>に置き換えて欲しい．
+</p>
+<p>上の簡易フォーマット表示に対する整形済みの表示は次のようになる．
+</p>
+<pre>hoge
++fuga
+|+foobar
+|+jagjag
+| +zigzag
++piyo</pre>
+
+
+<!-- end ja only -->
+
+<h3>Input</h3>
+
+<!-- begin ja only -->
+<p>入力は複数のデータセットから構成される．各データセットの形式は次の通りである．
+</p><blockquote>$n$<br>$s_1$<br>$s_2$<br>...<br>$s_n$</blockquote>
+
+<p>$n$ は簡易フォーマット表示の行数を表す整数であり，$1$ 以上 $1{,}000$ 以下と仮定してよい．
+続く $n$ 行にはスレッドツリーの簡易フォーマット表示が記載されている．
+$s_i$ は簡易フォーマット表示の $i$ 行目を表し，いくつかの '<samp>.</samp>' と，それに続く $1$ 文字以上 $50$ 文字以下のアルファベット小文字で構成された文字列からなる．
+$s_1$ はスレッドの最初の投稿であり，'<samp>.</samp>' を含まない．
+$s_2$, ..., $s_n$ はそのスレッドでの返信であり，必ず1つ以上の '<samp>.</samp>' を含む．
+</p>
+<p>$n=0$ は入力の終わりを示す．これはデータセットには含めない．
+</p>
+
+
+<!-- end ja only -->
+
+<h3>Output</h3>
+
+<!-- begin ja only -->
+<p>各データセットに対する整形済みの表示を各 $n$ 行で出力せよ．
+</p>
+
+
+<!-- end ja only -->
+
+<h3>Sample Input</h3>
+
+<pre>6
+hoge
+.fuga
+..foobar
+..jagjag
+...zigzag
+.piyo
+8
+jagjag
+.hogehoge
+..fugafuga
+...ponyoponyo
+....evaeva
+....pokemon
+...nowawa
+.buhihi
+8
+hello
+.goodmorning
+..howareyou
+.goodafternoon
+..letshavealunch
+.goodevening
+.goodnight
+..gotobed
+3
+caution
+.themessagelengthislessthanorequaltofifty
+..sothelengthoftheentirelinecanexceedfiftycharacters
+0</pre>
+
+<h3>Output for Sample Input</h3>
+
+<pre>hoge
++fuga
+|+foobar
+|+jagjag
+| +zigzag
++piyo
+jagjag
++hogehoge
+|+fugafuga
+| +ponyoponyo
+| |+evaeva
+| |+pokemon
+| +nowawa
++buhihi
+hello
++goodmorning
+|+howareyou
++goodafternoon
+|+letshavealunch
++goodevening
++goodnight
+ +gotobed
+caution
++themessagelengthislessthanorequaltofifty
+ +sothelengthoftheentirelinecanexceedfiftycharacters</pre>
+

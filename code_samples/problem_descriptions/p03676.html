@@ -1,0 +1,133 @@
+<span class="lang-en">
+<p>Score : <var>600</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>You are given an integer sequence of length <var>n+1</var>, <var>a_1,a_2,...,a_{n+1}</var>, which consists of the <var>n</var> integers <var>1,...,n</var>.
+It is known that each of the <var>n</var> integers <var>1,...,n</var> appears at least once in this sequence.</p>
+<p>For each integer <var>k=1,...,n+1</var>, find the number of the different subsequences (not necessarily contiguous) of the given sequence with length <var>k</var>, modulo <var>10^9+7</var>.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Notes</h3><ul>
+<li>
+<p>If the contents of two subsequences are the same, they are not separately counted even if they originate from different positions in the original sequence.</p>
+</li>
+<li>
+<p>A subsequence of a sequence <var>a</var> with length <var>k</var> is a sequence obtained by selecting <var>k</var> of the elements of <var>a</var> and arranging them without changing their relative order. For example, the sequences <var>1,3,5</var> and <var>1,2,3</var> are subsequences of <var>1,2,3,4,5</var>, while <var>3,1,2</var> and <var>1,10,100</var> are not.</p>
+</li>
+</ul>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 \leq n \leq 10^5</var></li>
+<li><var>1 \leq a_i \leq n</var></li>
+<li>Each of the integers <var>1,...,n</var> appears in the sequence.</li>
+<li><var>n</var> and <var>a_i</var> are integers.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>n</var>
+<var>a_1</var> <var>a_2</var> ... <var>a_{n+1}</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print <var>n+1</var> lines.
+The <var>k</var>-th line should contain the number of the different subsequences of the given sequence with length <var>k</var>, modulo <var>10^9+7</var>.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>3
+1 2 1 3
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>3
+5
+4
+1
+</pre>
+<p>There are three subsequences with length <var>1</var>: <var>1</var> and <var>2</var> and <var>3</var>.</p>
+<p>There are five subsequences with length <var>2</var>: <var>1,1</var> and <var>1,2</var> and <var>1,3</var> and <var>2,1</var> and <var>2,3</var>.</p>
+<p>There are four subsequences with length <var>3</var>: <var>1,1,3</var> and <var>1,2,1</var> and <var>1,2,3</var> and <var>2,1,3</var>.</p>
+<p>There is one subsequence with length <var>4</var>: <var>1,2,1,3</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>1
+1 1
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>1
+1
+</pre>
+<p>There is one subsequence with length <var>1</var>: <var>1</var>.</p>
+<p>There is one subsequence with length <var>2</var>: <var>1,1</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>32
+29 19 7 10 26 32 27 4 11 20 2 8 16 23 5 14 6 12 17 22 18 30 28 24 15 1 25 3 13 21 19 31 9
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>32
+525
+5453
+40919
+237336
+1107568
+4272048
+13884156
+38567100
+92561040
+193536720
+354817320
+573166440
+818809200
+37158313
+166803103
+166803103
+37158313
+818809200
+573166440
+354817320
+193536720
+92561040
+38567100
+13884156
+4272048
+1107568
+237336
+40920
+5456
+528
+33
+1
+</pre>
+<p>Be sure to print the numbers modulo <var>10^9+7</var>.</p></section>
+</div>
+</span>

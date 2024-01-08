@@ -1,0 +1,131 @@
+<span class="lang-en">
+<p>Score : <var>150</var> points</p>
+<div id="task-statement">
+<script src="http://atcoder.jp/js/varmath.js"></script>
+<div class="part">
+<section>
+<h3>Problem Statement</h3>
+<p>
+            Gorillas in Kyoto University are good at math.
+            They are currently trying to solve problems to find the value of an expression that contains two functions, <code>_</code> , <code>^</code>.
+            Each of these functions takes two input values. <code>_</code> function returns the smaller of the two input values and <code>^</code> function returns the larger.
+            Gorillas know that integers in the expression are non-negative and less than or equal to <var>99</var>,
+            but can not find out the length of the expression until they read a terminal symbol <code>?</code> that represents the end of the expression. The number of characters included in each expression is less than or equal to 1000, but they do not even know this fact.
+            Ai, a smart gorilla, noticed that she may be able to know the value of the expression even if they don't read the whole expression.
+          </p>
+<p>
+            For example,
+          </p>
+<p>Assume you read the following sentence from the left.</p>
+<pre>^(41,3)?</pre>
+<p>When you read the sixth character, that is, when you read the following expression,</p>
+<pre>^(41,3</pre>
+<p>you can tell the second input value of the funcion is whether <var>3</var> or an integer between <var>30</var> and <var>39</var>, and the value turns out <var>41</var>. </p>
+<p>
+            Since Ai wants to solve problems earlier than other gorillas, she decided to solve the problems such that she reads as fewer characters as possible from the left.
+            For each expression, Find the value of the expression and the minimum number of characters Ai needs to read to know the value.
+          </p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3>
+<ul>
+<li><var>1 \leq Q \leq 200</var></li>
+<li>The number of characters each expression contains is less than or equal to <var>1000</var>. </li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3>
+<p>The input consists of multiple test cases and is given from Standard Input in the following format:</p>
+<pre>
+<var>Q</var>
+<var>statement_1</var>
+...
+<var>statement_Q</var>
+</pre>
+</section>
+</div>
+</div>
+<p>Each <var>statement_i</var> <var>(1 \leq i \leq Q)</var> is given in the following BNF format.</p>
+<pre>
+<var>&lt;statement&gt;</var> ::= <var>&lt;expression&gt;</var> <code>?</code>
+<var>&lt;expression&gt;</var> ::= (<code>^</code> | <code>_</code>)  <code>(</code> <var>&lt;expression&gt;</var> <code>,</code> <var>&lt;expression&gt;</var> <code>)</code> | <var>&lt;number&gt; </var>
+<var>&lt;number&gt;</var> :: = <code>0</code> | <code>1</code> | <code>2</code> | ... | <code>98</code> | <code>99</code>
+</pre>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Output</h3>
+<p>
+              Output consists of <var>Q</var> lines.
+              On line <var>i</var> <var>(1 \leq i \leq Q)</var>, print the value of the expression and the number of character Ai needs to read for the test case <var>i</var> separated by space.
+            </p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3>
+<pre>
+4
+_(4,51)?
+^(99,_(3,67))?
+_(0,87)?
+3?
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3>
+<pre>
+4 5
+99 4
+0 3
+3 2
+</pre>
+<ul>
+<li>For the first test case, when you read the fifth character, that is, when you read <code>_(4,5</code>, you will know the value is <var>4</var>. </li>
+<li>For the second test case, when you read the fourth character, that is, when you read <code>^(99</code>, you will know the value is <var>99</var>. </li>
+<li>For the third test case, when you read the third character, that is, when you read <code>_(0</code>, you will know the value is <var>0</var>. </li>
+<li>For the fourth test case, you will not know the value is <var>3</var> untill you read the terminal symbol.</li>
+</ul>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3>
+<pre>
+7
+_(23,^(_(22,40),4))?
+_(0,99)?
+^(99,_(^(19,2),5))?
+_(^(43,20),^(30,29))?
+^(_(20,3),_(50,41))?
+^(_(20,3),_(3,41))?
+^(_(20,3),_(4,41))?
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3>
+<pre>
+22 18
+0 3
+99 4
+30 17
+41 17
+3 14
+4 15
+</pre>
+</section>
+</div>
+</div>
+</span>

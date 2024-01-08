@@ -1,0 +1,102 @@
+<span class="lang-en">
+<p>Score : <var>200</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>Some number of chocolate pieces were prepared for a training camp.
+The camp had <var>N</var> participants and lasted for <var>D</var> days.
+The <var>i</var>-th participant (<var>1 \leq i \leq N</var>) ate one chocolate piece on each of the following days in the camp: the <var>1</var>-st day, the <var>(A_i + 1)</var>-th day, the <var>(2A_i + 1)</var>-th day, and so on.
+As a result, there were <var>X</var> chocolate pieces remaining at the end of the camp. During the camp, nobody except the participants ate chocolate pieces.</p>
+<p>Find the number of chocolate pieces prepared at the beginning of the camp.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 \leq N \leq 100</var></li>
+<li><var>1 \leq D \leq 100</var></li>
+<li><var>1 \leq X \leq 100</var></li>
+<li><var>1 \leq A_i \leq 100</var> (<var>1 \leq i \leq N</var>)</li>
+<li>All input values are integers.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+<var>D</var> <var>X</var>
+<var>A_1</var>
+<var>A_2</var>
+<var>:</var>
+<var>A_N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Find the number of chocolate pieces prepared at the beginning of the camp.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>3
+7 1
+2
+5
+10
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>8
+</pre>
+<p>The camp has <var>3</var> participants and lasts for <var>7</var> days.
+Each participant eats chocolate pieces as follows:</p>
+<ul>
+<li>The first participant eats one chocolate piece on Day <var>1</var>, <var>3</var>, <var>5</var> and <var>7</var>, for a total of four.</li>
+<li>The second participant eats one chocolate piece on Day <var>1</var> and <var>6</var>, for a total of two.</li>
+<li>The third participant eats one chocolate piece only on Day <var>1</var>, for a total of one.</li>
+</ul>
+<p>Since the number of pieces remaining at the end of the camp is one, the number of pieces prepared at the beginning of the camp is <var>1 + 4 + 2 + 1 = 8</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>2
+8 20
+1
+10
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>29
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>5
+30 44
+26
+18
+81
+18
+6
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>56
+</pre></section>
+</div>
+</span>

@@ -1,0 +1,96 @@
+<span class="lang-en">
+<p>Score : <var>400</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>There are <var>N</var> dishes of cuisine placed in front of Takahashi and Aoki.
+For convenience, we call these dishes Dish <var>1</var>, Dish <var>2</var>, ..., Dish <var>N</var>.</p>
+<p>When Takahashi eats Dish <var>i</var>, he earns <var>A_i</var> points of <em>happiness</em>; when Aoki eats Dish <var>i</var>, she earns <var>B_i</var> points of happiness.</p>
+<p>Starting from Takahashi, they alternately choose one dish and eat it, until there is no more dish to eat.
+Here, both of them choose dishes so that the following value is maximized: "the sum of the happiness he/she will earn in the end" minus "the sum of the happiness the other person will earn in the end".</p>
+<p>Find the value: "the sum of the happiness Takahashi earns in the end" minus "the sum of the happiness Aoki earns in the end".</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 \leq N \leq 10^5</var></li>
+<li><var>1 \leq A_i \leq 10^9</var></li>
+<li><var>1 \leq B_i \leq 10^9</var></li>
+<li>All values in input are integers.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+<var>A_1</var> <var>B_1</var>
+<var>:</var>
+<var>A_N</var> <var>B_N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the value: "the sum of the happiness Takahashi earns in the end" minus "the sum of the happiness Aoki earns in the end".</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>3
+10 10
+20 20
+30 30
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>20
+</pre>
+<p>In this sample, both of them earns <var>10</var> points of happiness by eating Dish <var>1</var>, <var>20</var> points by eating Dish <var>2</var>, and <var>30</var> points by eating Dish <var>3</var>.</p>
+<p>In this case, since Takahashi and Aoki have the same "taste", each time they will choose the dish with which they can earn the greatest happiness. Thus, first Takahashi will choose Dish <var>3</var>, then Aoki will choose Dish <var>2</var>, and finally Takahashi will choose Dish <var>1</var>, so the answer is <var>(30 + 10) - 20 = 20</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>3
+20 10
+20 20
+20 30
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>20
+</pre>
+<p>In this sample, Takahashi earns <var>20</var> points of happiness by eating any one of the dishes <var>1, 2</var> and <var>3</var>, but Aoki earns <var>10</var> points of happiness by eating Dish <var>1</var>, <var>20</var> points by eating Dish <var>2</var>, and <var>30</var> points by eating Dish <var>3</var>.</p>
+<p>In this case, since only Aoki has likes and dislikes, each time they will choose the dish with which Aoki can earn the greatest happiness. Thus, first Takahashi will choose Dish <var>3</var>, then Aoki will choose Dish <var>2</var>, and finally Takahashi will choose Dish <var>1</var>, so the answer is <var>(20 + 20) - 20 = 20</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>6
+1 1000000000
+1 1000000000
+1 1000000000
+1 1000000000
+1 1000000000
+1 1000000000
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>-2999999997
+</pre>
+<p>Note that the answer may not fit into a <var>32</var>-bit integer.</p></section>
+</div>
+</span>

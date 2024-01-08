@@ -1,0 +1,85 @@
+<span class="lang-en">
+<p>Score : <var>200</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>There are <var>K</var> pieces of cakes.
+Mr. Takahashi would like to eat one cake per day, taking <var>K</var> days to eat them all.</p>
+<p>There are <var>T</var> types of cake, and the number of the cakes of type <var>i</var> (<var>1 ≤ i ≤ T</var>) is <var>a_i</var>.  </p>
+<p>Eating the same type of cake two days in a row would be no fun,
+so Mr. Takahashi would like to decide the order for eating cakes that minimizes the number of days on which he has to eat the same type of cake as the day before.  </p>
+<p>Compute the minimum number of days on which the same type of cake as the previous day will be eaten.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 ≤ K ≤ 10000</var></li>
+<li><var>1 ≤ T ≤ 100</var></li>
+<li><var>1 ≤ a_i ≤ 100</var></li>
+<li><var>a_1 + a_2 + ... + a_T = K</var></li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>The input is given from Standard Input in the following format:</p>
+<pre><var>K</var> <var>T</var>
+<var>a_1</var> <var>a_2</var> <var>...</var> <var>a_T</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the minimum number of days on which the same type of cake as the previous day will be eaten.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>7 3
+3 2 2
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>0
+</pre>
+<p>For example, if Mr. Takahashi eats cakes in the order of <var>2, 1, 2, 3, 1, 3, 1</var>, he can avoid eating the same type of cake as the previous day.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>6 3
+1 4 1
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>1
+</pre>
+<p>There are <var>6</var> cakes.
+For example, if Mr. Takahashi eats cakes in the order of <var>2, 3, 2, 2, 1, 2</var>, he has to eat the same type of cake (i.e., type <var>2</var>) as the previous day only on the fourth day.
+Since this is the minimum number, the answer is <var>1</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>100 1
+100
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>99
+</pre>
+<p>Since Mr. Takahashi has only one type of cake, he has no choice but to eat the same type of cake as the previous day from the second day and after.</p></section>
+</div>
+</span>

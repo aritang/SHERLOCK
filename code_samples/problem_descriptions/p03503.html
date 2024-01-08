@@ -1,0 +1,97 @@
+<span class="lang-en">
+<p>Score : <var>300</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>Joisino is planning to open a shop in a shopping street.</p>
+<p>Each of the five weekdays is divided into two periods, the morning and the evening. For each of those ten periods, a shop must be either open during the whole period, or closed during the whole period. Naturally, a shop must be open during at least one of those periods.</p>
+<p>There are already <var>N</var> stores in the street, numbered <var>1</var> through <var>N</var>.</p>
+<p>You are given information of the business hours of those shops, <var>F_{i,j,k}</var>. If <var>F_{i,j,k}=1</var>, Shop <var>i</var> is open during Period <var>k</var> on Day <var>j</var> (this notation is explained below); if <var>F_{i,j,k}=0</var>, Shop <var>i</var> is closed during that period. Here, the days of the week are denoted as follows. Monday: Day <var>1</var>, Tuesday: Day <var>2</var>, Wednesday: Day <var>3</var>, Thursday: Day <var>4</var>, Friday: Day <var>5</var>. Also, the morning is denoted as Period <var>1</var>, and the afternoon is denoted as Period <var>2</var>.</p>
+<p>Let <var>c_i</var> be the number of periods during which both Shop <var>i</var> and Joisino's shop are open. Then, the profit of Joisino's shop will be <var>P_{1,c_1}+P_{2,c_2}+...+P_{N,c_N}</var>.</p>
+<p>Find the maximum possible profit of Joisino's shop when she decides whether her shop is open during each period, making sure that it is open during at least one period.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1≤N≤100</var></li>
+<li><var>0≤F_{i,j,k}≤1</var></li>
+<li>For every integer <var>i</var> such that <var>1≤i≤N</var>, there exists at least one pair <var>(j,k)</var> such that <var>F_{i,j,k}=1</var>.</li>
+<li><var>-10^7≤P_{i,j}≤10^7</var></li>
+<li>All input values are integers.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+<var>F_{1,1,1}</var> <var>F_{1,1,2}</var> <var>...</var> <var>F_{1,5,1}</var> <var>F_{1,5,2}</var>
+<var>:</var>
+<var>F_{N,1,1}</var> <var>F_{N,1,2}</var> <var>...</var> <var>F_{N,5,1}</var> <var>F_{N,5,2}</var>
+<var>P_{1,0}</var> <var>...</var> <var>P_{1,10}</var>
+<var>:</var>
+<var>P_{N,0}</var> <var>...</var> <var>P_{N,10}</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the maximum possible profit of Joisino's shop.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>1
+1 1 0 1 0 0 0 1 0 1
+3 4 5 6 7 8 9 -2 -3 4 -2
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>8
+</pre>
+<p>If her shop is open only during the periods when Shop <var>1</var> is opened, the profit will be <var>8</var>, which is the maximum possible profit.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>2
+1 1 1 1 1 0 0 0 0 0
+0 0 0 0 0 1 1 1 1 1
+0 -2 -2 -2 -2 -2 -1 -1 -1 -1 -1
+0 -2 -2 -2 -2 -2 -1 -1 -1 -1 -1
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>-2
+</pre>
+<p>Note that a shop must be open during at least one period, and the profit may be negative.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>3
+1 1 1 1 1 1 0 0 1 1
+0 1 0 1 1 1 1 0 1 0
+1 0 1 1 0 1 0 1 0 1
+-8 6 -2 -8 -8 4 8 7 -6 2 2
+-9 2 0 1 7 -5 0 -2 -6 5 5
+6 -6 7 -9 6 -5 8 0 -9 -7 -7
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>23
+</pre></section>
+</div>
+</span>

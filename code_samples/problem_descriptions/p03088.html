@@ -1,0 +1,81 @@
+<span class="lang-en">
+<p>Score : <var>400</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>You are given an integer <var>N</var>. Find the number of strings of length <var>N</var> that satisfy the following conditions, modulo <var>10^9+7</var>:</p>
+<ul>
+<li>The string does not contain characters other than <code>A</code>, <code>C</code>, <code>G</code> and <code>T</code>.</li>
+<li>The string does not contain <code>AGC</code> as a substring.</li>
+<li>The condition above cannot be violated by swapping two adjacent characters once.</li>
+</ul>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Notes</h3><p>A substring of a string <var>T</var> is a string obtained by removing zero or more characters from the beginning and the end of <var>T</var>.</p>
+<p>For example, the substrings of <code>ATCODER</code> include <code>TCO</code>, <code>AT</code>, <code>CODER</code>, <code>ATCODER</code> and <code></code> (the empty string), but not <code>AC</code>.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>3 \leq N \leq 100</var></li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the number of strings of length <var>N</var> that satisfy the following conditions, modulo <var>10^9+7</var>.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>3
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>61
+</pre>
+<p>There are <var>4^3 = 64</var> strings of length <var>3</var> that do not contain characters other than <code>A</code>, <code>C</code>, <code>G</code> and <code>T</code>. Among them, only <code>AGC</code>, <code>ACG</code> and <code>GAC</code> violate the condition, so the answer is <var>64 - 3 = 61</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>4
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>230
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>100
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>388130742
+</pre>
+<p>Be sure to print the number of strings modulo <var>10^9+7</var>.</p></section>
+</div>
+</span>

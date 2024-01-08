@@ -1,0 +1,77 @@
+<span class="lang-en">
+<p>Score : <var>300</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>In some other world, today is Christmas Eve.</p>
+<p>There are <var>N</var> trees planted in Mr. Takaha's garden. The height of the <var>i</var>-th tree <var>(1 \leq i \leq N)</var> is <var>h_i</var> meters.</p>
+<p>He decides to choose <var>K</var> trees from these trees and decorate them with electric lights. To make the scenery more beautiful, the heights of the decorated trees should be as close to each other as possible.</p>
+<p>More specifically, let the height of the tallest decorated tree be <var>h_{max}</var> meters, and the height of the shortest decorated tree be <var>h_{min}</var> meters. The smaller the value <var>h_{max} - h_{min}</var> is, the better. What is the minimum possible value of <var>h_{max} - h_{min}</var>?</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>2 \leq K &lt; N \leq 10^5</var></li>
+<li><var>1 \leq h_i \leq 10^9</var></li>
+<li><var>h_i</var> is an integer.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var> <var>K</var>
+<var>h_1</var>
+<var>h_2</var>
+<var>:</var>
+<var>h_N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the minimum possible value of <var>h_{max} - h_{min}</var>.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>5 3
+10
+15
+11
+14
+12
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>2
+</pre>
+<p>If we decorate the first, third and fifth trees, <var>h_{max} = 12, h_{min} = 10</var> so <var>h_{max} - h_{min} = 2</var>. This is optimal.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>5 3
+5
+7
+5
+7
+7
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>0
+</pre>
+<p>If we decorate the second, fourth and fifth trees, <var>h_{max} = 7, h_{min} = 7</var> so <var>h_{max} - h_{min} = 0</var>. This is optimal.</p>
+<p>There are not too many trees in these sample inputs, but note that there can be at most one hundred thousand trees (we just can't put a sample with a hundred thousand lines here).</p></section>
+</div>
+</span>

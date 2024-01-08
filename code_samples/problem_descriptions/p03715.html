@@ -1,0 +1,111 @@
+<span class="lang-en">
+<p>Score : <var>400</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>There is a bar of chocolate with a height of <var>H</var> blocks and a width of <var>W</var> blocks.
+Snuke is dividing this bar into exactly three pieces.
+He can only cut the bar along borders of blocks, and the shape of each piece must be a rectangle.</p>
+<p>Snuke is trying to divide the bar as evenly as possible.
+More specifically, he is trying to minimize <var>S_{max}</var> - <var>S_{min}</var>, where <var>S_{max}</var> is the area (the number of blocks contained) of the largest piece, and <var>S_{min}</var> is the area of the smallest piece.
+Find the minimum possible value of <var>S_{max} - S_{min}</var>.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>2 ≤ H, W ≤ 10^5</var></li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>H</var> <var>W</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the minimum possible value of <var>S_{max} - S_{min}</var>.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>3 5
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>0
+</pre>
+<p>In the division below, <var>S_{max} - S_{min} = 5 - 5 = 0</var>.</p>
+<div style="text-align: center;">
+<img alt="2a9b2ef47b750c0b7ba3e865d4fb4203.png" src="https://atcoder.jp/img/arc074/2a9b2ef47b750c0b7ba3e865d4fb4203.png">
+</img></div>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>4 5
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>2
+</pre>
+<p>In the division below, <var>S_{max} - S_{min} = 8 - 6 = 2</var>.</p>
+<div style="text-align: center;">
+<img alt="a42aae7aaaadc4640ac5cdf88684d913.png" src="https://atcoder.jp/img/arc074/a42aae7aaaadc4640ac5cdf88684d913.png">
+</img></div>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>5 5
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>4
+</pre>
+<p>In the division below, <var>S_{max} - S_{min} = 10 - 6 = 4</var>.</p>
+<div style="text-align: center;">
+<img alt="eb0ad0cb3185b7ae418e21c472ff7f26.png" src="https://atcoder.jp/img/arc074/eb0ad0cb3185b7ae418e21c472ff7f26.png"/>
+</div>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 4</h3><pre>100000 2
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 4</h3><pre>1
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 5</h3><pre>100000 100000
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 5</h3><pre>50000
+</pre></section>
+</div>
+</span>

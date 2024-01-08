@@ -1,0 +1,148 @@
+<span class="lang-en">
+<p>Score : <var>1900</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>Snuke has found two trees <var>A</var> and <var>B</var>, each with <var>N</var> vertices numbered <var>1</var> to <var>N</var>.
+The <var>i</var>-th edge of <var>A</var> connects Vertex <var>a_i</var> and <var>b_i</var>, and the <var>j</var>-th edge of <var>B</var> connects Vertex <var>c_j</var> and <var>d_j</var>.
+Also, all vertices of <var>A</var> are initially painted white.</p>
+<p>Snuke would like to perform the following operation on <var>A</var> zero or more times so that <var>A</var> coincides with <var>B</var>:</p>
+<ul>
+<li>Choose a leaf vertex that is painted white. (Let this vertex be <var>v</var>.)</li>
+<li>Remove the edge incident to <var>v</var>, and add a new edge that connects <var>v</var> to another vertex.</li>
+<li>Paint <var>v</var> black.</li>
+</ul>
+<p>Determine if <var>A</var> can be made to coincide with <var>B</var>, ignoring color. If the answer is yes, find the minimum number of operations required.</p>
+<p>You are given <var>T</var> cases of this kind. Find the answer for each of them.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 \leq T \leq 20</var></li>
+<li><var>3 \leq N \leq 50</var></li>
+<li><var>1 \leq a_i,b_i,c_i,d_i \leq N</var></li>
+<li>All given graphs are trees.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>T</var>
+<var>case_1</var>
+<var>:</var>
+<var>case_{T}</var>
+</pre>
+<p>Each case is given in the following format:</p>
+<pre><var>N</var>
+<var>a_1</var> <var>b_1</var>
+<var>:</var>
+<var>a_{N-1}</var> <var>b_{N-1}</var>
+<var>c_1</var> <var>d_1</var>
+<var>:</var>
+<var>c_{N-1}</var> <var>d_{N-1}</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>For each case, if <var>A</var> can be made to coincide with <var>B</var> ignoring color, print the minimum number of operations required, and print <code>-1</code> if it cannot.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>2
+3
+1 2
+2 3
+1 3
+3 2
+6
+1 2
+2 3
+3 4
+4 5
+5 6
+1 2
+2 4
+4 3
+3 5
+5 6
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>1
+-1
+</pre>
+<ul>
+<li>The graph in each case is shown below.</li>
+<li>In case <var>1</var>, <var>A</var> can be made to coincide with <var>B</var> by choosing Vertex <var>1</var>, removing the edge connecting <var>1</var> and <var>2</var>, and adding an edge connecting <var>1</var> and <var>3</var>. Note that Vertex <var>2</var> is not a leaf vertex and thus cannot be chosen.</li>
+</ul>
+<div style="text-align: center;">
+<img alt="3f020b4a4e883680357cc55adb571fbc.png" src="https://img.atcoder.jp/agc027/3f020b4a4e883680357cc55adb571fbc.png">
+</img></div>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>3
+8
+2 7
+4 8
+8 6
+7 1
+7 3
+5 7
+7 8
+4 2
+5 2
+1 2
+8 1
+3 2
+2 6
+2 7
+4
+1 2
+2 3
+3 4
+3 4
+2 1
+3 2
+9
+5 3
+4 3
+9 3
+6 8
+2 3
+1 3
+3 8
+1 7
+4 1
+2 8
+9 6
+3 6
+3 5
+1 8
+9 7
+1 6
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>6
+0
+7
+</pre>
+<ul>
+<li><var>A</var> may coincide with <var>B</var> from the beginning.</li>
+</ul></section>
+</div>
+</span>

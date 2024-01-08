@@ -1,0 +1,106 @@
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({ tex2jax: { inlineMath: [["$","$"], ["\\(","\\)"]], processEscapes: true }});
+</script>
+<script type='text/javascript' src='http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
+</script>
+
+
+<h2>Problem J
+New Game AI</h2>
+
+<p>
+Aoba is a beginner programmer who works for a game company. She was appointed to develop a battle strategy for the enemy AI (Artificial Intelligence) in a new game. In this game, each character has two parameters, hit point ($hp$) and defence point ($dp$). No two characters have the same $hp$ and $dp$ at the same time. The player forms a party by selecting one or more characters to battle with the enemy. Aoba decided to develop a strategy in which the AI attacks the weakest character in the party: that is, the AI attacks the character with the minimum hit point in the party (or, if there are several such characters, the character with the minimum defense point among them). She wrote a function <i>selectTarget</i>($v$) that takes an array of characters representing a party and returns a character that her AI will attack.
+</p>
+
+<p>
+However, the project manager Ms. Yagami was not satisfied with the behavior of her AI. Ms. Yagami said this AI was not interesting.
+</p>
+
+<p>
+Aoba struggled a lot, and eventually she found that it is interesting if she substitutes one of the constant zeros in her program with a constant $C$. The rewritten program is as follows. Note that <i>Character</i> is a type representing a character and has fields $hp$ and $dp$ which represent the hit point and the defense point of the character respectively.
+</p>
+
+<pre>
+int C = &lt;constant integer&gt;;
+
+Character selectTarget(Character v[]) {
+  int n = length(v);
+  int r = 0;
+  for (int i = 1; i &lt; n; i++) {
+    if (abs(v[r].hp - v[i].hp) > C) {
+      if (v[r].hp &gt; v[i].hp) r = i;
+    } else {
+      if (v[r].dp &gt; v[i].dp) r = i;
+    }
+  }
+  return v[r];
+}
+</pre>
+
+<p>
+By the way, this function may return different characters according to the order of the characters in $v$, even if $v$ contains the same set of characters. Ms. Yagami wants to know how many characters in a party may become the target of the new AI. Aoba's next task is to write a program that takes a given party $v$ and a constant $C$, and then counts the number of characters that may become the return value of <i>selectTarget</i>($v$) if $v$ is re-ordered.
+</p>
+
+<h3>Input</h3>
+
+<p>
+The input consists of a single test case. The first line contains two integers $N$ $(1 \leq N \leq 50,000)$ and $C$ $(0 \leq C \leq 10^9)$. The first integer $N$ represents the size of $v$. The second integer $C$ represents the constant $C$ in Aoba's program. The <i>i</i>-th line of the following $N$ lines contains two integers $hp_i$ and $dp_i$ $(0 \leq hp_i, dp_i \leq 10^9)$. $hp_i$ represents the hit point of the $i$-th character in $v$, and $dp_i$ represents the defense point of the $i$-th character in $v$. You can assume that $hp_i \ne hp_j$ or $dpi \ne dp_j$ if $i \ne j$ for any $1 \leq i, j \leq N$.
+</p>
+
+<h3>Output</h3>
+
+<p>
+Display the number of characters that may become the return value of <i>selectTarget</i>($v$), if $v$ is shuffled in an arbitrary order.
+</p>
+
+
+<h3>Sample Input 1</h3>
+
+<pre>5 3
+1 5
+3 4
+5 3
+7 2
+9 1</pre>
+
+<h3>Output for the Sample Input 1</h3>
+
+<pre>5</pre>
+
+<h3>Sample Input 2</h3>
+
+<pre>3 2
+1 2
+3 1
+5 1</pre>
+
+<h3>Output for the Sample Input 2</h3>
+
+<pre>2</pre>
+
+<h3>Sample Input 3</h3>
+
+<pre>4 1
+2 0
+0 4
+1 1
+5 9</pre>
+
+<h3>Output for the Sample Input 3</h3>
+
+<pre>3</pre>
+
+
+<h3>Sample Input 4</h3>
+
+<pre>5 9
+4 10
+12 4
+2 14
+9 19
+7 15</pre>
+
+<h3>Output for the Sample Input 4</h3>
+
+<pre>3</pre>

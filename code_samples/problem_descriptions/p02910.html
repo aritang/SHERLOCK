@@ -1,0 +1,109 @@
+<span class="lang-en">
+<p>Score: <var>200</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3>
+<p>Takahashi will do a tap dance. The dance is described by a string <var>S</var> where each character is <code>L</code>, <code>R</code>, <code>U</code>, or <code>D</code>. These characters indicate the positions on which Takahashi should step. He will follow these instructions one by one in order, starting with the first character.</p>
+<p><var>S</var> is said to be <em>easily playable</em> if and only if it satisfies both of the following conditions:</p>
+<ul>
+<li>Every character in an odd position (<var>1</var>-st, <var>3</var>-rd, <var>5</var>-th, <var>\ldots</var>) is <code>R</code>, <code>U</code>, or <code>D</code>.</li>
+<li>Every character in an even position (<var>2</var>-nd, <var>4</var>-th, <var>6</var>-th, <var>\ldots</var>) is <code>L</code>, <code>U</code>, or <code>D</code>.</li>
+</ul>
+<p>Your task is to print <code>Yes</code> if <var>S</var> is easily playable, and <code>No</code> otherwise.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3>
+<ul>
+<li><var>S</var> is a string of length between <var>1</var> and <var>100</var> (inclusive).</li>
+<li>Each character of <var>S</var> is <code>L</code>, <code>R</code>, <code>U</code>, or <code>D</code>.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3>
+<p>Input is given from Standard Input in the following format:</p>
+<pre><var>S</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3>
+<p>Print <code>Yes</code> if <var>S</var> is easily playable, and <code>No</code> otherwise.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>RUDLUDR
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>Yes
+</pre>
+<p>Every character in an odd position (<var>1</var>-st, <var>3</var>-rd, <var>5</var>-th, <var>7</var>-th) is <code>R</code>, <code>U</code>, or <code>D</code>.</p>
+<p>Every character in an even position (<var>2</var>-nd, <var>4</var>-th, <var>6</var>-th) is <code>L</code>, <code>U</code>, or <code>D</code>.</p>
+<p>Thus, <var>S</var> is easily playable.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>DULL
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>No
+</pre>
+<p>The <var>3</var>-rd character is not <code>R</code>, <code>U</code>, nor <code>D</code>, so <var>S</var> is not easily playable.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>UUUUUUUUUUUUUUU
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>Yes
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 4</h3><pre>ULURU
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 4</h3><pre>No
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 5</h3><pre>RDULULDURURLRDULRLR
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 5</h3><pre>Yes
+</pre></section>
+</div>
+</span>

@@ -1,0 +1,141 @@
+
+<H1>Problem F: Cutting a Chocolate</H1>
+<p>
+Turtle Shi-ta and turtle Be-ko decided to divide a chocolate.
+The shape of the chocolate is rectangle. The corners of the chocolate are put on (0,0), (<i>w</i>,0), (<i>w</i>,<i>h</i>) and (0,<i>h</i>).
+The chocolate has lines for cutting.
+They cut the chocolate only along some of these lines.
+</p>
+
+<p>
+The lines are expressed as follows.
+There are <i> m </i> points on the line connected between (0,0) and (0,<i>h</i>), and between (<i>w</i>,0)  and (<i>w</i>,<i>h</i>).
+Each <i>i</i>-th point, ordered by <i>y</i> value (<i>i</i> = 0 then <i>y</i> =0), is connected as cutting line.
+These lines do not share any point where 0 &lt; <i>x</i> &lt; <i>w</i> .
+They can share points where <i>x</i> = 0 or <i>x</i> = <i>w </i>.
+However, (0, <i>l<sub>i</sub></i> )  =  (0,<i>l<sub>j</sub></i> )  and  (<i>w</i>,<i>r<sub>i</sub></i> )  =  (<i>w</i>,<i>r<sub>j</sub></i> )   implies <i> i </i> = <i> j </i> .
+The following figure shows the example of the chocolate.
+</p>
+<center><img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_uapc2011_F1"></center>
+
+
+<p>
+There are <i> n </i> special almonds, so delicious but high in calories on the chocolate.
+Almonds are circle but their radius is too small. You can ignore radius of almonds.
+The position of almond is expressed as  (<i>x</i>,<i>y</i>)  coordinate.
+</p>
+
+<p>
+Two turtles are so selfish. Both of them have requirement for cutting.
+</p>
+
+<p>
+Shi-ta's requirement is that the piece for her is continuous.
+It is possible for her that she cannot get any chocolate.
+Assume that the minimum index of the piece is <i> i </i> and the maximum is <i> k </i>.
+She must have all pieces between <i> i </i> and <i> k </i>.
+For example,  chocolate piece 1,2,3 is continuous but 1,3 or 0,2,4 is not continuous.
+</p>
+
+<p>
+Be-ko requires that the area of her chocolate is at least <i> S </i>.
+She is worry about her weight. So she wants the number of almond on her chocolate is as few as possible.
+</p>
+
+<p>
+They doesn't want to make remainder of the chocolate because the chocolate is expensive.
+</p>
+
+<p>
+Your task is to compute the minumum number of Beko's almonds if both of their requirment are satisfied.
+</p>
+
+<H2>Input</H2>
+<p>
+Input consists of multiple test cases.<br>
+Each dataset is given in the following format.
+</p>
+<pre>
+<i>n</i> <i>m</i> <i>w</i> <i>h</i> <i>S</i>
+<i>l<sub>0</sub></i> <i>r<sub>0</sub></i>
+...
+<i>l<sub>m-1</sub></i> <i>r<sub>m-1</sub></i>
+<i>x<sub>0</sub></i> <i>y<sub>0</sub></i>
+...
+<i>x<sub>n-1</sub></i> <i>y<sub>n-1</sub></i>
+</pre>
+<p>
+The last line contains five 0s.
+<i>n</i> is the number of almonds.
+<i>m</i> is the number of lines.
+<i>w</i> is the width of the chocolate.
+<i>h</i> is the height of the chocolate.
+<i>S</i> is the area that Be-ko wants to eat.
+Input is integer except <i>x<sub>i</sub></i> <i>y<sub>i</sub></i>.
+</p>
+
+<p>
+Input satisfies following constraints.<br>
+1 &le; <i>n</i> &le; 30000<br>
+1 &le; <i>m</i> &le; 30000<br>
+1 &le; <i>w</i> &le; 200<br>
+1 &le; <i>h</i> &le; 1000000<br>
+0 &le; <i>S</i> &le; <i>w*h</i><br>
+</p>
+
+<p>
+If <i>i</i> &lt; <i> j </i> then <i> l<sub>i</sub> </i>  &le; <i> l<sub>j</sub> </i>  and <i> r<sub>i</sub> </i> &le; <i>r<sub>j</sub></i> and then <i> i </i>-th lines and <i> j </i>-th lines share at most 1 point.
+It is assured that <i>l<sub>m-1</sub></i> and <i>r<sub>m-1</sub></i> are <i>h</i>.
+<i>x<sub>i</sub> </i>  <i>y<sub>i</sub></i> is floating point number with ten digits.
+It is assured that they are inside of the chocolate.
+It is assured that the distance between points and any lines is at least 0.00001.
+</p>
+
+<h2>Output</h2>
+<p>
+You should output the minumum number of almonds for Be-ko.
+</p>
+
+<h2>Sample input</h2>
+<pre>
+2 3 10 10 50
+3 3
+6 6
+10 10
+4.0000000000 4.0000000000
+7.0000000000 7.0000000000
+2 3 10 10 70
+3 3
+6 6
+10 10
+4.0000000000 4.0000000000
+7.0000000000 7.0000000000
+2 3 10 10 30
+3 3
+6 6
+10 10
+4.0000000000 4.0000000000
+7.0000000000 7.0000000000
+2 3 10 10 40
+3 3
+6 6
+10 10
+4.0000000000 4.0000000000
+7.0000000000 7.0000000000
+2 3 10 10 100
+3 3
+6 6
+10 10
+4.0000000000 4.0000000000
+7.0000000000 7.0000000000
+0 0 0 0 0
+</pre>
+
+<h2>Sample output</h2>
+<pre>
+1
+1
+0
+1
+2
+</pre>

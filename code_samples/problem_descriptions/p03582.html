@@ -1,0 +1,71 @@
+<span class="lang-en">
+<p>Score : <var>1600</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>For a string <var>S</var>, let <var>f(S)</var> be the lexicographically smallest cyclic shift of <var>S</var>.
+For example, if <var>S = </var><code>babca</code>, <var>f(S) = </var><code>ababc</code> because this is the smallest among all cyclic shifts (<code>babca</code>, <code>abcab</code>, <code>bcaba</code>, <code>cabab</code>, <code>ababc</code>).</p>
+<p>You are given three integers <var>X, Y</var>, and <var>Z</var>.
+You want to construct a string <var>T</var> that consists of exactly <var>X</var> <code>a</code>s, exactly <var>Y</var> <code>b</code>s, and exactly <var>Z</var> <code>c</code>s.
+If there are multiple such strings, you want to choose one that maximizes <var>f(T)</var> lexicographically.</p>
+<p>Compute the lexicographically largest possible value of <var>f(T)</var>.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 \leq X + Y + Z \leq 50</var></li>
+<li><var>X, Y, Z</var> are non-negative integers.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>X</var> <var>Y</var> <var>Z</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the answer.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>2 2 0
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>abab
+</pre>
+<p><var>T</var> must consist of two <code>a</code>s and two <code>b</code>s.</p>
+<ul>
+<li>If <var>T = </var><code>aabb</code>, <var>f(T) = </var><code>aabb</code>.</li>
+<li>If <var>T = </var><code>abab</code>, <var>f(T) = </var><code>abab</code>.</li>
+<li>If <var>T = </var><code>abba</code>, <var>f(T) = </var><code>aabb</code>.</li>
+<li>If <var>T = </var><code>baab</code>, <var>f(T) = </var><code>aabb</code>.</li>
+<li>If <var>T = </var><code>baba</code>, <var>f(T) = </var><code>abab</code>.</li>
+<li>If <var>T = </var><code>bbaa</code>, <var>f(T) = </var><code>aabb</code>.</li>
+</ul>
+<p>Thus, the largest possible <var>f(T)</var> is <code>abab</code>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>1 1 1
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>acb
+</pre></section>
+</div>
+</span>

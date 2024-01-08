@@ -1,0 +1,82 @@
+<span class="lang-en">
+<p>Score : <var>800</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>You are given a string <var>S</var> consisting of lowercase English letters.
+Determine whether we can turn <var>S</var> into a palindrome by repeating the operation of swapping two adjacent characters. If it is possible, find the minimum required number of operations.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 \leq |S| \leq 2 × 10^5</var></li>
+<li><var>S</var> consists of lowercase English letters.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>S</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>If we cannot turn <var>S</var> into a palindrome, print <code>-1</code>. Otherwise, print the minimum required number of operations.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>eel
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>1
+</pre>
+<p>We can turn <var>S</var> into a palindrome by the following operation:</p>
+<ul>
+<li>Swap the <var>2</var>-nd and <var>3</var>-rd characters. <var>S</var> is now <code>ele</code>.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>ataatmma
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>4
+</pre>
+<p>We can turn <var>S</var> into a palindrome by the following operation:</p>
+<ul>
+<li>Swap the <var>5</var>-th and <var>6</var>-th characters. <var>S</var> is now <code>ataamtma</code>.</li>
+<li>Swap the <var>4</var>-th and <var>5</var>-th characters. <var>S</var> is now <code>atamatma</code>.</li>
+<li>Swap the <var>3</var>-rd and <var>4</var>-th characters. <var>S</var> is now <code>atmaatma</code>.</li>
+<li>Swap the <var>2</var>-nd and <var>3</var>-rd characters. <var>S</var> is now <code>amtaatma</code>.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>snuke
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>-1
+</pre>
+<p>We cannot turn <var>S</var> into a palindrome.</p></section>
+</div>
+</span>

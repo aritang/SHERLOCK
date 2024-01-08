@@ -1,0 +1,98 @@
+
+
+
+
+<h1 id="f-tree-木">F : Tree / 木</h1>
+<h2 id="問題文">問題文</h2>
+<p>大きさ <var>N</var> の根付き木がある。 各頂点には <var>0</var> から <var>N&minus;1</var> までの番号が付けられ、根が <var>0</var>である。 任意の辺の両端の頂点について、割り当てられた整数は根に近いほうが小さい。初めは全ての辺の重みは <var>0</var> である。</p>
+<p>この木に対する <var>Q</var> 個のクエリを順に処理せよ。クエリには以下の <var>2</var> 種類がある。</p>
+<ul>
+<li>頂点 <var>u</var>, <var>v</var> の距離(パスに含まれる辺の重みの和)を求める。</li>
+<li>頂点 <var>v</var> の子孫(自身を含まない)に接続する辺の重みを全て <var>x</var> 増加させる。</li>
+</ul>
+<h2 id="入力">入力</h2>
+<p>入力は以下の形式からなる。</p>
+<pre><var>N</var> <var>Q</var>
+<var>a_0</var> <var>b_0</var>
+<var>…</var>
+<var>a_{N&minus;2}</var> <var>b_{N&minus;2}</var>
+<var>q_0</var>
+<var>…</var>
+<var>q_{Q&minus;1}</var>
+</pre>
+
+<p><var>a_i,b_i</var> は <var>i</var> 番目の辺が結ぶ頂点である。 <var>q_i</var> は <var>i</var> 番目のクエリを表す <var>3</var> つの整数であり、次のうちいずれかである。</p>
+<ul>
+<li><var>0 \ u_i \ v_i</var> : 頂点 <var>u_i, v_i</var> の距離を求める。</li>
+<li><var>1 \ v_i \ x_i</var> : 頂点 <var>v_i</var> の子孫に接続する辺の重みを全て <var>x_i</var> 増加させる。</li>
+</ul>
+<h2 id="制約">制約</h2>
+<ul>
+<li>入力はすべて整数である</li>
+<li><var>2 \&le; N \&le; 150\,000</var></li>
+<li><var>1 \&le; Q \&le; 150\,000</var></li>
+<li><var>0 \&le; a_{i},b_{i},u_{i},v_{i} \&le; N&minus;1</var></li>
+<li><var>a_{i} &lt; b_{i}</var></li>
+<li><var>0 \&le; x_{i} \&le; 300</var></li>
+</ul>
+<h2 id="出力">出力</h2>
+<p>距離を求めるクエリのたびに、結果を1行で出力せよ。</p>
+<h2 id="注意">注意</h2>
+<p>この問題では入出力が非常に大きくなりうるので高速な関数を使用してほしい。</p>
+<h2 id="サンプル">サンプル</h2>
+<h3 id="サンプル入力1">サンプル入力1</h3>
+<pre>9 6
+0 1
+0 2
+0 3
+1 4
+1 5
+4 6
+5 7
+5 8
+1 0 1
+1 1 2
+0 6 3
+1 5 5
+1 8 4
+0 4 3
+</pre>
+
+
+
+<h3 id="サンプル出力1">サンプル出力1</h3>
+<pre>8
+5</pre>
+
+<p>図のようになる。</p>
+<div class="figure">
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_RUPC2015_F1" />
+</div>
+<h3 id="サンプル入力2">サンプル入力2</h3>
+<pre>13 7
+0 1
+1 2
+2 3
+1 4
+3 5
+1 6
+2 7
+0 8
+7 9
+5 10
+8 11
+1 12
+1 2 143
+0 8 7
+0 10 6
+1 1 42
+1 6 37
+0 3 6
+1 6 38
+</pre>
+
+<h3 id="サンプル出力2">サンプル出力2</h3>
+<pre>143
+429
+269
+</pre>

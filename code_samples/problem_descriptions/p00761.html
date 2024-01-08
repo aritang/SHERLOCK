@@ -1,0 +1,147 @@
+
+<h1>Recurring Decimals</h1>
+<!-- end en only -->
+
+
+
+<!-- begin en only -->
+<p>
+A decimal representation of an integer can be transformed to another integer by rearranging the order of digits.
+Let us make a sequence using this fact.
+</p>
+<p>
+A non-negative integer <i>a</i><sub>0</sub> and the number of digits <i>L</i> are given first.
+Applying the following rules, we obtain <i>a</i><sub><i>i</i>+1</sub> from <i>a</i><sub><i>i</i></sub>.
+
+<ol>
+  <li> Express the integer <i>a</i><sub><i>i</i></sub> in decimal notation with <i>L</i> digits. Leading zeros are added if necessary. For example, the decimal notation with six digits of the number 2012 is 002012.
+  </li>
+  <li> Rearranging the digits, find the largest possible integer and the smallest possible integer;
+    In the example above, the largest possible integer is 221000 and the smallest is 000122 = 122.
+  </li>
+  <li> A new integer <i>a</i><sub><i>i</i>+1</sub> is obtained by subtracting the smallest possible integer from the largest.
+    In the example above, we obtain 220878 subtracting 122 from 221000.
+  </li>
+</ol>
+</p>
+
+<p>
+When you repeat this calculation, you will get a sequence of integers 
+<i>a</i><sub>0</sub> , 
+<i>a</i><sub>1</sub> , 
+<i>a</i><sub>2</sub> , ... .
+</p>
+
+<p>
+For example, starting with the integer 83268 and with the number of digits 6,
+you will get the following sequence of integers
+<i>a</i><sub>0</sub> , 
+<i>a</i><sub>1</sub> , 
+<i>a</i><sub>2</sub> , ... .
+</p>
+<!-- end en only -->
+
+<blockquote>
+<i>a</i><sub>0</sub> = 083268<br>
+<i>a</i><sub>1</sub> = 886320 &minus; 023688 = 862632<br>
+<i>a</i><sub>2</sub> = 866322 &minus; 223668 = 642654<br>
+<i>a</i><sub>3</sub> = 665442 &minus; 244566 = 420876<br>
+<i>a</i><sub>4</sub> = 876420 &minus; 024678 = 851742<br>
+<i>a</i><sub>5</sub> = 875421 &minus; 124578 = 750843<br>
+<i>a</i><sub>6</sub> = 875430 &minus; 034578 = 840852<br>
+<i>a</i><sub>7</sub> = 885420 &minus; 024588 = 860832<br>
+<i>a</i><sub>8</sub> = 886320 &minus; 023688 = 862632<br>
+&nbsp;&nbsp;&nbsp;&hellip;<br>
+</blockquote>
+
+<!-- begin en only -->
+<p>
+Because the number of digits to express integers is fixed, 
+you will encounter occurrences of the same integer in the sequence
+<i>a</i><sub>0</sub> , 
+<i>a</i><sub>1</sub> , 
+<i>a</i><sub>2</sub> , ...
+eventually.
+
+Therefore you can always find a pair of <i>i</i>&nbsp; and <i>j</i>&nbsp; 
+that satisfies the condition <i>a</i><sub><i>i</i></sub> = <i>a</i><sub><i>j</i></sub> &nbsp;
+(<i>i</i>&nbsp; &gt; <i>j</i>&nbsp; ).
+In the example above, the pair (<i>i</i>&nbsp;= 8, <i>j</i>&nbsp;= 1) satisfies the condition because <i>a</i><sub>8</sub> = <i>a</i><sub>1</sub> = 862632.
+</p>
+
+<p>
+Write a program that,
+given an initial integer <i>a</i><sub>0</sub> and a number of digits <i>L</i>,
+finds the smallest <i>i</i> that satisfies the condition <i>a</i><sub><i>i</i></sub> = <i>a</i><sub><i>j</i></sub>  &nbsp; (<i>i</i>&nbsp; &gt; <i>j</i>&nbsp; ).
+
+</p>
+<!-- end en only -->
+
+
+
+<h3>Input</h3>
+
+
+<!-- begin en only -->
+<p>
+The input consists of multiple datasets.
+A dataset is a line containing two integers <i>a</i><sub>0</sub>&nbsp; and <i>L</i>&nbsp;
+separated by a space.
+<i>a</i><sub>0</sub>&nbsp; and <i>L</i>&nbsp; 
+represent the initial integer of the sequence and the number of digits, respectively,
+where  
+1 &le; <i>L</i>&nbsp; &le; 6
+and 
+0 &le; <i>a</i><sub>0</sub>&nbsp; &lt; 10<sup><i>L</i></sup> .
+</p>
+<p>
+The end of the input is indicated by a line containing two zeros;
+it is not a dataset.
+</p>
+<!-- end en only -->
+
+
+
+<h3>Output</h3>
+
+<!-- begin en only -->
+<p>
+For each dataset, 
+find the smallest number <i>i</i>&nbsp; 
+that satisfies the condition
+<i>a</i><sub><i>i</i></sub> = <i>a</i><sub><i>j</i></sub>  &nbsp; (<i>i</i>&nbsp; &gt; <i>j</i>&nbsp; )
+and print a line containing three integers,
+<i>j</i>&nbsp;, 
+<i>a</i><sub><i>i</i></sub> &nbsp; and
+<i>i</i>&nbsp; &minus; <i>j</i>.
+Numbers should be separated by a space.
+Leading zeros should be suppressed.
+Output lines should not contain extra characters.
+</p>
+<p>
+You can assume that the above <i>i</i>&nbsp; is not
+greater than 20.
+</p>
+<!-- end en only -->
+
+<h3>Sample Input</h3>
+
+<pre>
+2012 4
+83268 6
+1112 4
+0 1
+99 2
+0 0
+</pre>
+
+
+<h3>Output for the Sample Input</h3>
+
+<pre>
+3 6174 1
+1 862632 7
+5 6174 1
+0 0 1
+1 0 1
+</pre>

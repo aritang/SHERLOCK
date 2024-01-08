@@ -1,0 +1,120 @@
+<span class="lang-en">
+<p>Score : <var>500</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>In Takahashi Kingdom, which once existed, there are <var>N</var> cities, and some pairs of cities are connected bidirectionally by roads.
+The following are known about the road network:</p>
+<ul>
+<li>People traveled between cities only through roads. It was possible to reach any city from any other city, via intermediate cities if necessary.</li>
+<li>Different roads may have had different lengths, but all the lengths were positive integers.</li>
+</ul>
+<p>Snuke the archeologist found a table with <var>N</var> rows and <var>N</var> columns, <var>A</var>, in the ruin of Takahashi Kingdom.
+He thought that it represented the shortest distances between the cities along the roads in the kingdom.</p>
+<p>Determine whether there exists a road network such that for each <var>u</var> and <var>v</var>, the integer <var>A_{u, v}</var> at the <var>u</var>-th row and <var>v</var>-th column of <var>A</var> is equal to the length of the shortest path from City <var>u</var> to City <var>v</var>.
+If such a network exist, find the shortest possible total length of the roads.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 \leq N \leq 300</var></li>
+<li>If <var>i ≠ j</var>, <var>1 \leq A_{i, j} = A_{j, i} \leq 10^9</var>.</li>
+<li><var>A_{i, i} = 0</var></li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Inputs</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+<var>A_{1, 1}</var> <var>A_{1, 2}</var> <var>...</var> <var>A_{1, N}</var>
+<var>A_{2, 1}</var> <var>A_{2, 2}</var> <var>...</var> <var>A_{2, N}</var>
+<var>...</var>
+<var>A_{N, 1}</var> <var>A_{N, 2}</var> <var>...</var> <var>A_{N, N}</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Outputs</h3><p>If there exists no network that satisfies the condition, print <code>-1</code>.
+If it exists, print the shortest possible total length of the roads.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>3
+0 1 3
+1 0 2
+3 2 0
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>3
+</pre>
+<p>The network below satisfies the condition:</p>
+<ul>
+<li>City <var>1</var> and City <var>2</var> is connected by a road of length <var>1</var>.</li>
+<li>City <var>2</var> and City <var>3</var> is connected by a road of length <var>2</var>.</li>
+<li>City <var>3</var> and City <var>1</var> is not connected by a road.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>3
+0 1 3
+1 0 1
+3 1 0
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>-1
+</pre>
+<p>As there is a path of length <var>1</var> from City <var>1</var> to City <var>2</var> and City <var>2</var> to City <var>3</var>, there is a path of length <var>2</var> from City <var>1</var> to City <var>3</var>.
+However, according to the table, the shortest distance between City <var>1</var> and City <var>3</var> must be <var>3</var>.</p>
+<p>Thus, we conclude that there exists no network that satisfies the condition.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>5
+0 21 18 11 28
+21 0 13 10 26
+18 13 0 23 13
+11 10 23 0 17
+28 26 13 17 0
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>82
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 4</h3><pre>3
+0 1000000000 1000000000
+1000000000 0 1000000000
+1000000000 1000000000 0
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 4</h3><pre>3000000000
+</pre></section>
+</div>
+</span>

@@ -1,0 +1,100 @@
+<span class="lang-en lang-child hidden-lang">
+<div class="part">
+				Max Score: $800$ Points <br/>
+<section>
+<h3>Problem Statement</h3>
+					There is an undirected connected graph with $N$ vertices and $N-1$ edges. The <var>i</var>-th edge connects <var>u_i</var> and <var>v_i</var>.<br/>
+<br/>
+					E869120 the coder moves in the graph as follows:<br/>
+<ul>
+<li>He move to adjacent vertex, but he can't a visit vertex two or more times.</li>
+<li>He ends move when there is no way to move.</li>
+<li>Otherwise, he moves randomly. (equal probability) If he has $p$ way to move this turn, he choose each vertex with $1/p$ probability.</li>
+</ul>
+<div align="left" class="img-nocaption">
+<img src="https://atcoder.jp/img/s8pc-4/5973dad11843e9098d9225dd431c9084.png" width="500"/>
+</div>
+
+					Calculate the expected value of the number of turns, when E869120 starts from vertex <var>i</var>, for all <var>i (1 ≤ i ≤ N)</var>. <br/>
+</section>
+</div>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3>
+						The input is given from standard input in the following format. <br/>
+<br/>
+<pre>
+<var>N</var>
+<var>u_1</var> <var>v_1</var>
+<var>u_2</var> <var>v_2</var>
+ :
+<var>u_{N-1}</var> <var>v_{N-1}</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3>
+						In <var>i</var>-th <var>(1 ≤ i ≤ N)</var> line, print the expected vaule of the number of turns E869120 moves.<br/>
+						The relative error or absolute error of output should be within <var>10^{-6}</var>. <br/>
+</section>
+<section>
+<h3>Constraints</h3>
+<ul>
+<li>$1 \le N \le 150,000$</li>
+<li>The graph is connected.</li>
+</ul>
+</section>
+<section>
+<h3>Subtasks</h3>
+<p>Subtask 1 [ $190$ points ]</p>
+<ul>
+<li>There is no vertex which degree is more than 2.</li>
+<li>This means the graph looks like a list.</li>
+</ul>
+<br/>
+<p>Subtask 2 [ $220$ points ]</p>
+<ul>
+<li><var>1 ≤ N ≤ 1000</var>.</li>
+</ul>
+<br/>
+<p>Subtask 3 [ $390$ points ]</p>
+<ul>
+<li>There are no additional constraints.</li>
+</ul>
+<br/>
+</section>
+</div>
+</div>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3>
+<pre>
+4
+1 2
+2 3
+2 4
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3>
+<pre>
+2.0
+1.0
+2.0
+2.0
+</pre>
+</section>
+</div>
+<div class="part">
+<h3>Sample Input 2</h3>
+<pre>
+4
+1 2
+2 4
+4 3
+</pre>
+</div></span>

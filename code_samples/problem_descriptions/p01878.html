@@ -1,0 +1,100 @@
+
+
+
+<h2>G: 運命力 - Destiny Draw -</h2>
+
+<h3>問題</h3>
+<p>
+Mr. D はカードゲームで勝負をすることになった。
+このカードゲームでは、 <var>N</var> 枚のカードの山を用いる。
+また、山のカードには、上から順に <var>1, 2, 3,</var> ... <var>, N</var> の番号がついている。
+</p>
+
+<p>
+D で始まるものすべてを背負う彼に敗北は許されないが、不幸にも Mr. D はカードゲームが不得手である。
+そこで、自分が引くカードをコントロールすることで勝利を手にすることにした。
+</p>
+
+<p>
+Mr. D は <var>K</var> 種類のシャッフルが可能である。
+<var>K</var> 種類のうち <var>i</var> 番目のシャッフルでは上から <var>a_i</var> 枚目から <var>a_i+b_i &minus; 1</var>枚目までのちょうど <var>b_i</var> 枚を引き抜き、上に重ねる。
+<var>i</var>番目のシャッフルを<var>1</var> 回するとき、それぞれ <var>t_i</var> 秒を要する。
+</p>
+
+<p>ちょうど <var>T</var> 秒のシャッフルの後、一番上のカードを <var>C</var> にする方法は何通りあるか。 数が多くなる可能性があるので、 <var>10^9+7</var> で割った余りを出力せよ。</p>
+
+<h3>入力形式</h3>
+<p>入力は次の形式で与えられる。</p>
+
+<pre>
+<var>N</var> <var>K</var> <var>C</var> <var>T</var>
+<var>a_1</var> <var>b_1</var> <var>t_1</var>
+<var>a_2</var> <var>b_2</var> <var>t_2</var>
+...
+<var>a_K</var> <var>b_K</var> <var>t_K</var>
+</pre>
+
+<ul>
+<li><var>N</var> は整数で <var>2 \&le; N \&le; 40</var> を満たす。</li>
+<li><var>K</var> は整数で <var>1 \&le; K \&le; \frac{N (N+1)}{2}</var> を満たす</li>
+<li><var>C</var> は整数で <var>1 \&le; C \&le; N</var> を満たす</li>
+<li><var>T</var> は整数で <var>1 \&le; T \&le; 1,000,000</var> を満たす</li>
+<li><var>a_i</var> (<var>i = 1, 2,</var> ... <var>, K</var>) は整数で <var>1 \&le; a_i \&le; N</var> を満たす</li>
+<li><var>b_i</var> (<var>i = 1, 2,</var> ... <var>, K</var>) は整数で <var>1 \&le; b_i \&le; N &minus; a_i + 1</var> を満たす</li>
+<li><var>a_i = a_j</var> かつ <var>b_i = b_j</var> を満たすとき <var>i = j</var> に限定される</li>
+<li><var>t_i</var> は整数で <var>1 \&le; t_i \&le; 5</var> を満たす</li>
+</ul>
+
+<h3>出力形式</h3>
+<p>答えを <var>10^9+7</var> で割った余りを一行で出力せよ。</p>
+
+<h3>入力例1</h3>
+<pre>
+4 1 1 6
+3 2 3
+</pre>
+
+<h3>出力例1</h3>
+<pre>1</pre>
+
+<h3>入力例2</h3>
+<pre>
+4 1 1 5
+3 2 3
+</pre>
+
+<h3>出力例2</h3>
+<pre>0</pre>
+
+<h3>入力例3</h3>
+<pre>
+6 2 2 5
+1 2 1
+2 5 3
+</pre>
+
+<h3>出力例3</h3>
+<pre>3</pre>
+
+<p>ちょうど <var>5</var> 秒で一番上のカードを <var>2</var> にする方法は以下の <var>3</var> 通りである。</p>
+<pre>
+1→1→2
+1→2→1
+2→1→1
+</pre>
+
+<h3>入力例4</h3>
+<pre>
+6 8 3 10
+1 4 5
+1 3 3
+1 6 5
+1 2 2
+1 1 4
+2 5 1
+4 3 1
+2 1 3
+</pre>
+
+<h3>出力例4</h3>
+<pre>3087</pre>

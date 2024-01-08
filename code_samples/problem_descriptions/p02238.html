@@ -1,0 +1,115 @@
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({ tex2jax: { inlineMath: [["$","$"], ["\\(","\\)"]], processEscapes: true }});
+</script>
+<script language="JavaScript" type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML">
+</script>
+
+<H1>Depth First Search</H1>
+
+<p>
+  Depth-first search (DFS) follows the strategy to search ”deeper” in the graph whenever possible. In DFS, edges are recursively explored out of the most recently discovered vertex $v$ that still has unexplored edges leaving it. When all of $v$'s edges have been explored, the search ”backtracks” to explore edges leaving the vertex from which $v$ was discovered.
+</p>
+
+<p>
+  This process continues until all the vertices that are reachable from the original source vertex have been discovered. If any undiscovered vertices remain, then one of them is selected as a new source and the search is repeated from that source.
+</p>
+
+
+<p>
+  DFS timestamps each vertex as follows:
+</p>
+
+<ul>
+<li>$d[v]$ records when $v$ is first discovered.</li>
+<li>$f[v]$ records when the search finishes examining $v$’s adjacency list.</li>
+</ul>
+
+<p>
+  Write a program which reads a directed graph $G = (V, E)$ and demonstrates DFS on the graph based on the following rules:
+</p>
+
+<ul>
+<li>$G$ is given in an adjacency-list. Vertices are identified by IDs $1, 2,... n$ respectively.</li>
+<li>IDs in the adjacency list are arranged in ascending order.</li>
+<li>The program should report the discover time and the finish time for each vertex.</li>
+<li>When there are several candidates to visit during DFS, the algorithm should select the vertex with the smallest ID.</li>
+<li>The timestamp starts with 1.</li>
+</ul>
+
+<H2>Input</H2>
+
+<p>
+  In the first line, an integer $n$ denoting the number of vertices of $G$ is given. In the next $n$ lines, adjacency lists of $u$ are given in the following format:
+</p>
+
+<p>
+$u$ $k$ $v_1$ $v_2$ ... $v_k$
+</p>
+
+<p>
+$u$ is ID of the vertex and $k$ denotes its degree. $v_i$ are IDs of vertices adjacent to $u$.
+</p>
+
+<H2>Output</H2>
+
+<p>
+  For each vertex, print $id$, $d$ and $f$ separated by a space character in a line. $id$ is ID of the vertex, $d$ and $f$ is the discover time and the finish time respectively. Print in order of vertex IDs.
+</p>
+
+<H2>Constraints</H2>
+
+<ul>
+<li>$1 \leq n \leq 100$</li>
+</ul>
+
+<H2>Sample Input 1</H2>
+<pre>
+4
+1 1 2
+2 1 4
+3 0
+4 1 3
+</pre>
+
+<H2>Sample Output 1</H2>
+<pre>
+1 1 8
+2 2 7
+3 4 5
+4 3 6
+</pre>
+
+<H2>Sample Input 2</H2>
+<pre>
+6
+1 2 2 3
+2 2 3 4
+3 1 5
+4 1 6
+5 1 6
+6 0
+</pre>
+
+<H2>Sample Output 2</H2>
+<pre>
+1 1 12
+2 2 11
+3 3 8
+4 9 10
+5 4 7
+6 5 6
+</pre>
+
+<center>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_ALDS1_11_B_2">
+<p>
+  This is example for Sample Input 2 (discover/finish)
+</p>
+</center>
+
+<H2>Reference</H2>
+
+<p>
+Introduction to Algorithms, Thomas H. Cormen, Charles E. Leiserson, Ronald L. Rivest, and Clifford Stein. The MIT Press.
+</p>

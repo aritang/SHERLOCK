@@ -1,0 +1,83 @@
+<span class="lang-en">
+<p>Score : <var>1500</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><style>
+   #nck {
+      width: 30px;
+      height: auto;
+   }
+</style>
+<p>Snuke received two matrices <var>A</var> and <var>B</var> as birthday presents.
+Each of the matrices is an <var>N</var> by <var>N</var> matrix that consists of only <var>0</var> and <var>1</var>.</p>
+<p>Then he computed the product of the two matrices, <var>C = AB</var>.
+Since he performed all computations in modulo two, <var>C</var> was also an <var>N</var> by <var>N</var> matrix that consists of only <var>0</var> and <var>1</var>.
+For each <var>1 ≤ i, j ≤ N</var>, you are given <var>c_{i, j}</var>, the <var>(i, j)</var>-element of the matrix <var>C</var>.</p>
+<p>However, Snuke accidentally ate the two matrices <var>A</var> and <var>B</var>, and now he only knows <var>C</var>.
+Compute the number of possible (ordered) pairs of the two matrices <var>A</var> and <var>B</var>, modulo <var>10^9+7</var>.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 ≤ N ≤ 300</var></li>
+<li><var>c_{i, j}</var> is either <var>0</var> or <var>1</var>.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>The input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+<var>c_{1, 1}</var> <var>...</var> <var>c_{1, N}</var>
+:
+<var>c_{N, 1}</var> <var>...</var> <var>c_{N, N}</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the number of possible (ordered) pairs of two matrices <var>A</var> and <var>B</var> (modulo <var>10^9+7</var>).</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>2
+0 1
+1 0
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>6
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>10
+1 0 0 1 1 1 0 0 1 0
+0 0 0 1 1 0 0 0 1 0
+0 0 1 1 1 1 1 1 1 1
+0 1 0 1 0 0 0 1 1 0
+0 0 1 0 1 1 1 1 1 1
+1 0 0 0 0 1 0 0 0 0
+1 1 1 0 1 0 0 0 0 1
+0 0 0 1 0 0 1 0 1 0
+0 0 0 1 1 1 0 0 0 0
+1 0 1 0 0 1 1 1 1 1
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>741992411
+</pre></section>
+</div>
+</span>

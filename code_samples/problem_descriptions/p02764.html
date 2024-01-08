@@ -1,0 +1,81 @@
+<span class="lang-en">
+<p>Score : <var>600</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>Takahashi wants to grill <var>N</var> pieces of meat on a grilling net, which can be seen as a two-dimensional plane. The coordinates of the <var>i</var>-th piece of meat are <var>\left(x_i, y_i\right)</var>, and its <em>hardness</em> is <var>c_i</var>.</p>
+<p>Takahashi can use one heat source to grill the meat. If he puts the heat source at coordinates <var>\left(X, Y\right)</var>, where <var>X</var> and <var>Y</var> are real numbers, the <var>i</var>-th piece of meat will be ready to eat in <var>c_i \times \sqrt{\left(X - x_i\right)^2 + \left(Y-y_i\right)^2}</var> seconds.</p>
+<p>Takahashi wants to eat <var>K</var> pieces of meat. Find the time required to have <var>K</var> or more pieces of meat ready if he put the heat source to minimize this time.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li>All values in input are integers.</li>
+<li><var>1 \leq N \leq 60</var></li>
+<li><var>1 \leq K \leq N</var></li>
+<li><var>-1000 \leq x_i , y_i \leq 1000</var></li>
+<li><var>\left(x_i, y_i\right) \neq \left(x_j, y_j\right) \left(i \neq j \right)</var></li>
+<li><var>1 \leq c_i \leq 100</var></li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var> <var>K</var>
+<var>x_1</var> <var>y_1</var> <var>c_1</var>
+<var>\vdots</var>
+<var>x_N</var> <var>y_N</var> <var>c_N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the answer.</p>
+<p>It will be considered correct if its absolute or relative error from our answer is at most <var>10^{-6}</var>.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>4 3
+-1 0 3
+0 0 3
+1 0 2
+1 1 40
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>2.4
+</pre>
+<p>If we put the heat source at <var>\left(-0.2, 0\right)</var>, the <var>1</var>-st, <var>2</var>-nd, and <var>3</var>-rd pieces of meat will be ready to eat within <var>2.4</var> seconds. This is the optimal place to put the heat source.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>10 5
+-879 981 26
+890 -406 81
+512 859 97
+362 -955 25
+128 553 17
+-885 763 2
+449 310 57
+-656 -204 11
+-270 76 40
+184 170 16
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>7411.2252
+</pre></section>
+</div>
+</span>

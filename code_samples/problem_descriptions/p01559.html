@@ -1,0 +1,114 @@
+
+
+<h1>MinimumCostPath</h1>
+<p>NxNの方眼がある。
+</p>
+<p><img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE_mcp_grid" height="140px"><br>
+(N=3の場合の図)
+</p>
+<p>隣接するマス目に移動するにはコストが1かかる。ただし、斜めに移動することは出来ない。
+また障害物があるマス目がM個あり、そのマスに入ることは許されない。
+マス(1, 1)からマス(N, N)に最小のコストで移動する方法は何通りあるか。
+答えは大きくなることがありうるので、1000000009(=10<sup>9</sup>+9)でMODを取って出力せよ。
+</p>
+
+<h2>Input</h2>
+<p>入力は以下の形式で与えられる
+</p><blockquote>
+N M<br>X<sub>1</sub> Y<sub>1</sub><br>X<sub>2</sub> Y<sub>2</sub><br>……<br>X<sub>M</sub> Y<sub>M</sub><br></blockquote>
+<p>X<sub>i</sub>, Y<sub>i</sub>は(X<sub>i</sub>, Y<sub>i</sub>)に障害物があることを表す
+</p>
+
+<h2>Constraints</h2>
+<ul><li><p>2 &le; N &le; 10<sup>6</sup>
+</p></li><li><p> 0 &le; M &le; 50
+</p></li><li><p> 1 &le; X<sub>i</sub> , Y<sub>i</sub> &le; N
+</p></li><li><p> i &ne; jならば (X<sub>i</sub>, Y<sub>i</sub>) &ne; (X<sub>j</sub>, Y<sub>j</sub>)
+</p></li><li><p> (X<sub>i</sub>, Y<sub>i</sub>) &ne; (1, 1)
+</p></li><li><p> (X<sub>i</sub>, Y<sub>i</sub>) &ne; (N, N)
+</p></li></ul>
+
+
+<h2>Output</h2>
+<p>1行に経路の総数を出力せよ。ただし、マス(1, 1)からマス(N, N)に移動する経路が存在しない場合は0と出力せよ。
+</p>
+
+<h2>Sample Input 1</h2>
+
+<pre>3 0
+</pre>
+
+<h2>Output for the Sample Input 1</h2>
+
+<pre>6
+</pre>
+
+以下の図に対応する。<br>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE_mcp_1" height="140px">
+
+
+
+<h2>Sample Input 2</h2>
+
+<pre>3 1
+2 2
+</pre>
+
+<h2>Output for the Sample Input 2</h2>
+
+<pre>2
+</pre>
+以下の図に対応する。<br>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE_mcp_2" height="140px">
+
+<h2>Sample Input 3</h2>
+
+<pre>5 8
+4 3
+2 1
+4 2
+4 4
+3 4
+2 2
+2 4
+1 4
+</pre>
+
+<h2>Output for the Sample Input 3</h2>
+
+<pre>1
+</pre>
+以下の図に対応する。<br>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE_mcp_3" height="270px">
+
+<h2>Sample Input 4</h2>
+
+<pre>1000 10
+104 87
+637 366
+393 681
+215 604
+707 876
+943 414
+95 327
+93 415
+663 596
+661 842
+</pre>
+
+<h2>Output for the Sample Input 4</h2>
+
+<pre>340340391
+</pre>
+
+<h2>Sample Input 5</h2>
+
+<pre>2 2
+1 2
+2 1
+</pre>
+
+<h2>Output for the Sample Input 5</h2>
+
+<pre>0
+</pre>

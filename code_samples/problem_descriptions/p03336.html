@@ -1,0 +1,98 @@
+<span class="lang-en">
+<p>Score : <var>2400</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>Takahashi and Aoki love calculating things, so they will play with numbers now.</p>
+<p>First, they came up with one positive integer each. Takahashi came up with <var>X</var>, and Aoki came up with <var>Y</var>.
+Then, they will enjoy themselves by repeating the following operation <var>K</var> times:</p>
+<ul>
+<li>Compute the bitwise AND of the number currently kept by Takahashi and the number currently kept by Aoki. Let <var>Z</var> be the result.</li>
+<li>Then, add <var>Z</var> to both of the numbers kept by Takahashi and Aoki.</li>
+</ul>
+<p>However, it turns out that even for the two math maniacs this is just too much work.
+Could you find the number that would be kept by Takahashi and the one that would be kept by Aoki eventually?</p>
+<p>Note that input and output are done in binary.
+Especially, <var>X</var> and <var>Y</var> are given as strings <var>S</var> and <var>T</var> of length <var>N</var> and <var>M</var> consisting of <code>0</code> and <code>1</code>, respectively, whose initial characters are guaranteed to be <code>1</code>.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 ≤ K ≤ 10^6</var></li>
+<li><var>1 ≤ N,M ≤ 10^6</var></li>
+<li>The initial characters of <var>S</var> and <var>T</var> are <code>1</code>.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var> <var>M</var> <var>K</var>
+<var>S</var>
+<var>T</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>In the first line, print the number that would be kept by Takahashi eventually; in the second line, print the number that would be kept by Aoki eventually.
+Those numbers should be represented in binary and printed as strings consisting of <code>0</code> and <code>1</code> that begin with <code>1</code>.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>2 3 3
+11
+101
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>10000
+10010
+</pre>
+<p>The values of <var>X</var> and <var>Y</var> after each operation are as follows:</p>
+<ul>
+<li>After the first operation: <var>(X,Y)=(4,6)</var>.</li>
+<li>After the second operation: <var>(X,Y)=(8,10)</var>.</li>
+<li>After the third operation: <var>(X,Y)=(16,18)</var>.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>5 8 3
+10101
+10101001
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>100000
+10110100
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>10 10 10
+1100110011
+1011001101
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>10000100000010001000
+10000100000000100010
+</pre></section>
+</div>
+</span>

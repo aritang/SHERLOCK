@@ -1,0 +1,97 @@
+<span class="lang-en">
+<p>Score : <var>600</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>We have one slime.</p>
+<p>You can set the <em>health</em> of this slime to any integer value of your choice.</p>
+<p>A slime reproduces every second by spawning another slime that has strictly less health. You can freely choose the health of each new slime. The first reproduction of our slime will happen in one second.</p>
+<p>Determine if it is possible to set the healths of our first slime and the subsequent slimes spawn so that the multiset of the healths of the <var>2^N</var> slimes that will exist in <var>N</var> seconds equals a multiset <var>S</var>.</p>
+<p>Here <var>S</var> is a multiset containing <var>2^N</var> (possibly duplicated) integers: <var>S_1,~S_2,~...,~S_{2^N}</var>.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li>All values in input are integers.</li>
+<li><var>1 \leq N \leq 18</var></li>
+<li><var>1 \leq S_i \leq 10^9</var></li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+<var>S_1</var> <var>S_2</var> <var>...</var> <var>S_{2^N}</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>If it is possible to set the healths of the first slime and the subsequent slimes spawn so that the multiset of the healths of the <var>2^N</var> slimes that will exist in <var>N</var> seconds equals <var>S</var>, print <code>Yes</code>; otherwise, print <code>No</code>.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>2
+4 2 3 1
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>Yes
+</pre>
+<p>We will show one way to make the multiset of the healths of the slimes that will exist in <var>2</var> seconds equal to <var>S</var>.</p>
+<p>First, set the health of the first slime to <var>4</var>.</p>
+<p>By letting the first slime spawn a slime whose health is <var>3</var>, the healths of the slimes that exist in <var>1</var> second can be <var>4,~3</var>.</p>
+<p>Then, by letting the first slime spawn a slime whose health is <var>2</var>, and letting the second slime spawn a slime whose health is <var>1</var>, the healths of the slimes that exist in <var>2</var> seconds can be <var>4,~3,~2,~1</var>, which is equal to <var>S</var> as multisets.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>2
+1 2 3 1
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>Yes
+</pre>
+<p><var>S</var> may contain multiple instances of the same integer.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>1
+1 1
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>No
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 4</h3><pre>5
+4 3 5 3 1 2 7 8 7 4 6 3 7 2 3 6 2 7 3 2 6 7 3 4 6 7 3 4 2 5 2 3
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 4</h3><pre>No
+</pre></section>
+</div>
+</span>

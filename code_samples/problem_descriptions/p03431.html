@@ -1,0 +1,108 @@
+<span class="lang-en">
+<p>Score : <var>1200</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>In Republic of AtCoder, Snuke Chameleons (Family: Chamaeleonidae, Genus: Bartaberia) are very popular pets.
+Ringo keeps <var>N</var> Snuke Chameleons in a cage.</p>
+<p>A Snuke Chameleon that has not eaten anything is blue. It changes its color according to the following rules:</p>
+<ul>
+<li>A Snuke Chameleon that is blue will change its color to red when the number of red balls it has eaten becomes strictly larger than the number of blue balls it has eaten.</li>
+<li>A Snuke Chameleon that is red will change its color to blue when the number of blue balls it has eaten becomes strictly larger than the number of red balls it has eaten.</li>
+</ul>
+<p>Initially, every Snuke Chameleon had not eaten anything. Ringo fed them by repeating the following process <var>K</var> times:</p>
+<ul>
+<li>Grab either a red ball or a blue ball.</li>
+<li>Throw that ball into the cage. Then, one of the chameleons eats it.</li>
+</ul>
+<p>After Ringo threw in <var>K</var> balls, all the chameleons were red. We are interested in the possible ways Ringo could have thrown in <var>K</var> balls. How many such ways are there? Find the count modulo <var>998244353</var>. Here, two ways to throw in balls are considered different when there exists <var>i</var> such that the color of the ball that are thrown in the <var>i</var>-th throw is different.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 \leq N,K \leq 5 \times 10^5</var></li>
+<li><var>N</var> and <var>K</var> are integers.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var> <var>K</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the possible ways Ringo could have thrown in <var>K</var> balls, modulo <var>998244353</var>.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>2 4
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>7
+</pre>
+<p>We will use <code>R</code> to represent a red ball, and <code>B</code> to represent a blue ball. There are seven ways to throw in balls that satisfy the condition: <code>BRRR</code>, <code>RBRB</code>, <code>RBRR</code>, <code>RRBB</code>, <code>RRBR</code>, <code>RRRB</code> and <code>RRRR</code>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>3 7
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>57
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>8 3
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>0
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 4</h3><pre>8 10
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 4</h3><pre>46
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 5</h3><pre>123456 234567
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 5</h3><pre>857617983
+</pre></section>
+</div>
+</span>

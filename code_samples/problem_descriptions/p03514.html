@@ -1,0 +1,70 @@
+<span class="lang-en">
+<p>Score : <var>100</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>We have <var>2N</var> pots. The market price of the <var>i</var>-th pot <var>(1 ≤ i ≤ 2N)</var> is <var>p_i</var> yen (the currency of Japan).</p>
+<p>Now, you and Lunlun the dachshund will alternately take one pot. You will go first, and we will continue until all the pots are taken by you or Lunlun. Since Lunlun does not know the market prices of the pots, she will always choose a pot randomly from the remaining pots with equal probability. You know this behavior of Lunlun, and the market prices of the pots.</p>
+<p>Let the sum of the market prices of the pots you take be <var>S</var> yen. Your objective is to maximize the expected value of <var>S</var>. Find the expected value of <var>S</var> when the optimal strategy is adopted.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 ≤ N ≤ 10^5</var></li>
+<li><var>1 ≤ p_i ≤ 2 × 10^5</var></li>
+<li>All input values are integers.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+<var>p_1</var>
+<var>:</var>
+<var>p_{2N}</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the expected value of <var>S</var> when the strategy to maximize the expected value of <var>S</var> is adopted. The output is considered correct if its absolute or relative error from the judge's output is at most <var>10^{-9}</var>.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>1
+150000
+108
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>150000.0
+</pre>
+<p>Naturally, you should choose the <var>150000</var> yen pot.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>2
+50000
+50000
+100000
+100000
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>183333.3333333333
+</pre>
+<p>First, you will take one of the <var>100000</var> yen pots. The other <var>100000</var> yen pot will become yours if it is not taken in Lunlun's next turn, with probability <var>2/3</var>. If it is taken, you will have to settle for a <var>50000</var> yen pot. Thus, the expected value of <var>S</var> when the optimal strategy is adopted is <var>2/3 × (100000 + 100000) + 1/3 × (100000 + 50000) = 183333.3333…</var></p></section>
+</div>
+</span>

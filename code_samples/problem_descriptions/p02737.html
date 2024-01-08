@@ -1,0 +1,119 @@
+<span class="lang-en">
+<p>Score : <var>900</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>Given are simple undirected graphs <var>X</var>, <var>Y</var>, <var>Z</var>, with <var>N</var> vertices each and <var>M_1</var>, <var>M_2</var>, <var>M_3</var> edges, respectively.
+The vertices in <var>X</var>, <var>Y</var>, <var>Z</var> are respectively called <var>x_1, x_2, \dots, x_N</var>, <var>y_1, y_2, \dots, y_N</var>, <var>z_1, z_2, \dots, z_N</var>.
+The edges in <var>X</var>, <var>Y</var>, <var>Z</var> are respectively <var>(x_{a_i}, x_{b_i})</var>, <var>(y_{c_i}, y_{d_i})</var>, <var>(z_{e_i}, z_{f_i})</var>.</p>
+<p>Based on <var>X</var>, <var>Y</var>, <var>Z</var>, we will build another undirected graph <var>W</var> with <var>N^3</var> vertices.
+There are <var>N^3</var> ways to choose a vertex from each of the graphs <var>X</var>, <var>Y</var>, <var>Z</var>. Each of these choices corresponds to the vertices in <var>W</var> one-to-one. Let <var>(x_i, y_j, z_k)</var> denote the vertex in <var>W</var> corresponding to the choice of <var>x_i, y_j, z_k</var>.</p>
+<p>We will span edges in <var>W</var> as follows:</p>
+<ul>
+<li>For each edge <var>(x_u, x_v)</var> in <var>X</var> and each <var>w, l</var>, span an edge between <var>(x_u, y_w, z_l)</var> and <var>(x_v, y_w, z_l)</var>.</li>
+<li>For each edge <var>(y_u, y_v)</var> in <var>Y</var> and each <var>w, l</var>, span an edge between <var>(x_w, y_u, z_l)</var> and <var>(x_w, y_v, z_l)</var>.</li>
+<li>For each edge <var>(z_u, z_v)</var> in <var>Z</var> and each <var>w, l</var>, span an edge between <var>(x_w, y_l, z_u)</var> and <var>(x_w, y_l, z_v)</var>.</li>
+</ul>
+<p>Then, let the weight of the vertex <var>(x_i, y_j, z_k)</var> in <var>W</var> be <var>1,000,000,000,000,000,000^{(i +j + k)} = 10^{18(i + j + k)}</var>. Find the maximum possible total weight of the vertices in an <a href="https://en.wikipedia.org/wiki/Independent_set_(graph_theory)">independent set</a> in <var>W</var>, and print that total weight modulo <var>998,244,353</var>.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>2 \leq N \leq 100,000</var></li>
+<li><var>1 \leq M_1, M_2, M_3 \leq 100,000</var></li>
+<li><var>1 \leq a_i, b_i, c_i, d_i, e_i, f_i \leq N</var></li>
+<li><var>X</var>, <var>Y</var>, and <var>Z</var> are simple, that is, they have no self-loops and no multiple edges.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+<var>M_1</var>
+<var>a_1</var> <var>b_1</var>
+<var>a_2</var> <var>b_2</var>
+<var>\vdots</var>
+<var>a_{M_1}</var> <var>b_{M_1}</var>
+<var>M_2</var>
+<var>c_1</var> <var>d_1</var>
+<var>c_2</var> <var>d_2</var>
+<var>\vdots</var>
+<var>c_{M_2}</var> <var>d_{M_2}</var>
+<var>M_3</var>
+<var>e_1</var> <var>f_1</var>
+<var>e_2</var> <var>f_2</var>
+<var>\vdots</var>
+<var>e_{M_3}</var> <var>f_{M_3}</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the maximum possible total weight of an independent set in <var>W</var>, modulo <var>998,244,353</var>.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>2
+1
+1 2
+1
+1 2
+1
+1 2
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>46494701
+</pre>
+<p>The maximum possible total weight of an independent set is that of the set <var>(x_2, y_1, z_1)</var>, <var>(x_1, y_2, z_1)</var>, <var>(x_1, y_1, z_2)</var>, <var>(x_2, y_2, z_2)</var>. The output should be <var>(3 \times 10^{72} + 10^{108})</var> modulo <var>998,244,353</var>, which is <var>46,494,701</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>3
+3
+1 3
+1 2
+3 2
+2
+2 1
+2 3
+1
+2 1
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>883188316
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>100000
+1
+1 2
+1
+99999 100000
+1
+1 100000
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>318525248
+</pre></section>
+</div>
+</span>

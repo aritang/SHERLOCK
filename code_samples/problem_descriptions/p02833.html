@@ -1,0 +1,75 @@
+<span class="lang-en">
+<p>Score : <var>500</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>For an integer <var>n</var> not less than <var>0</var>, let us define <var>f(n)</var> as follows:</p>
+<ul>
+<li><var>f(n) = 1</var> (if <var>n &lt; 2</var>)</li>
+<li><var>f(n) = n f(n-2)</var> (if <var>n \geq 2</var>)</li>
+</ul>
+<p>Given is an integer <var>N</var>. Find the number of trailing zeros in the decimal notation of <var>f(N)</var>.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>0 \leq N \leq 10^{18}</var></li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the number of trailing zeros in the decimal notation of <var>f(N)</var>.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>12
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>1
+</pre>
+<p><var>f(12) = 12 × 10 × 8 × 6 × 4 × 2 = 46080</var>, which has one trailing zero.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>5
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>0
+</pre>
+<p><var>f(5) = 5 × 3 × 1 = 15</var>, which has no trailing zeros.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>1000000000000000000
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>124999999999999995
+</pre></section>
+</div>
+</span>

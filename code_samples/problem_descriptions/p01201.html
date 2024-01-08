@@ -1,0 +1,146 @@
+
+<H1><font color="#000"></font>Exact Arithmetic</H1>
+<!-- Problem H -->
+<p>
+                                                                 
+Let <i>X</i> be a set of all rational numbers and all numbers of form <i>q</i>&radic;<i>r</i>, where <i>q</i> is a non-zero rational number and <i>r</i>
+is an integer greater than 1. Here <i>r</i> must not have a quadratic number except for 1 as its divisor. Also, let <i>X</i><sup>*</sup> be a
+set of all numbers which can be expressed as a sum of one or more elements in <i>X</i>.
+</p>
+
+<p>
+A machine <i>Y</i> is a stack-based calculator which operates on the values in <i>X</i><sup>*</sup> and has the instructions shown in the table below.
+</p>
+
+<center>
+<table border="1" cellspacing="0" cellpadding="4">
+
+<tr>
+<td><p>push <i>n</i></p></td>
+<td><p>Pushes an integer specified in the operand onto the stack.</p></td>
+</tr>
+
+<tr>
+<td><p>add</p></td>
+<td><p>Pops two values <i>x</i><sub>1</sub> and <i>x</i><sub>2</sub> from the top of the stack in this order, then pushes (<i>x</i><sub>2</sub> + <i>x</i><sub>1</sub>).</p></td>
+</tr>
+<tr>
+<td><p>sub</p></td>
+<td><p>Pops two values <i>x</i><sub>1</sub> and <i>x</i><sub>2</sub> from the top of the stack in this order, then pushes (<i>x</i><sub>2</sub> - <i>x</i><sub>1</sub> ).</p></td>
+</tr>
+<tr>
+<td><p>mul</p></td>
+<td><p>Pops two values <i>x</i><sub>1</sub> and <i>x</i><sub>2</sub> from the top of the stack in this order, then pushes (<i>x</i><sub>2</sub> &times <i>x</i><sub>1</sub> ).
+</p></td>
+</tr>
+<tr>
+<td><p>div</p></td>
+<td><p>Pops two values <i>x</i><sub>1</sub> and <i>x</i><sub>2</sub> from the top of the stack in this order, then pushes (<i>x</i><sub>2</sub> &divide; <i>x</i><sub>1</sub>).
+<i>x</i><sub>1</sub> must be a non-zero value in <i>X</i> (<i>not</i> <i>X</i><sup>*</sup>).
+</p></td>
+</tr>
+<tr>
+<td><p>sqrt</p></td>
+<td><p>Pops one value <i>x</i> from the stack and pushes the square root of <i>x</i>. <i>x</i> must be a non-negative rational number.
+</p></td>
+</tr>
+<tr>
+<td><p>disp</p></td>
+<td><p>Pops one value <i>x</i> from the stack, and outputs the string representation of the value <i>x</i> to the display. The representation rules are stated later.
+</p></td>
+</tr>
+<tr>
+<td><p>stop</p></td>
+<td><p>Terminates calculation. The stack must be empty when this instruction is called.
+</p></td>
+</tr>
+</table>
+<p>Table 1: Instruction Set for the Machine Y</p>
+</center>
+
+<p>
+A sufficient number of values must exist in the stack on execution of every instruction. In addition, due to the
+limitation of the machine Y, no more values can be pushed when the stack already stores as many as 256 values.
+Also, there exist several restrictions on values to be pushed onto the stack:
+</p>
+
+<ul>
+<li> For rational numbers, neither numerator nor denominator in the irreducible form may exceed 32,768 in its absolute value.</li>
+<li> For any element in <i>X</i> of the form <i>q</i>&radic;<i>r</i> = (<i>a</i>/<i>b</i>)&radic;<i>r</i>, |<i>a</i>&radic;<i>r</i>| &le; 32,768 and |<i>b</i>| &le; 32,768.</li>
+<li> For any element in <i>X</i><sup>*</sup>, each term in the sum must satisfy the above conditions.
+</ul>
+
+<p>
+The rules for the string representations of the values (on the machine Y) are as follows:
+</p>
+
+<ul>
+<li> A rational number is represented as either an integer or an irreducible fraction with a denominator greater
+  than 1. A fraction is represented as "&lt;<i>numerator</i>&gt;/&lt;<i>denominator</i>&gt;". A sign symbol - precedes in case of a negative number.</li>
+<li> A number of the form <i>q</i>&radic;<i>r</i> is represented as "&lt;<i>string representation of q</i>&gt;<sup>*</sup>sqrt(<i>r</i>)" except for the case
+  with <i>q</i> = &plusmn;1, in which the number is represented as "sqrt(<i>r</i>)" (<i>q</i> = 1) or "-sqrt(<i>r</i>)" (<i>q</i> = -1).</li>
+<li> For the sum of two or more elements of <i>X</i>, string representations of all the (non-zero) elements are con-
+  nected using the binary operator +. In this case, all terms with the same rooted number are merged into a
+  single term, and the terms must be shown in the ascending order of its root component. For the purpose of
+  this rule, all rational numbers are regarded to accompany &radic;1.</li>
+<li> There is exactly one space character before and after each of the binary operator +. No space character appears at any other place.</li>
+</ul>
+
+<p>
+The followings are a few examples of valid string representations:
+</p>
+
+<pre>
+0
+1
+-1/10
+2*sqrt(2) + 1/2*sqrt(3) + -1/2*sqrt(5)
+1/2 + sqrt(10) + -sqrt(30)
+</pre>
+
+<p>
+Your task is to write a program that simulates the machine Y.
+</p>
+
+<H2>Input</H2>
+
+<p>
+The input is a sequence of instructions. Each line contains a single instruction. You may assume that every
+instruction is called in a legal way. The instruction stop appears only once, at the end of the entire input.
+
+</p>
+
+<H2>Output</H2>
+
+<p>
+Output the strings which the machine Y will display. Write each string in a line.
+</p>
+
+<H2>Sample Input</H2>
+<pre>
+push 1
+push 2
+sqrt
+div
+push 1
+push 3
+sqrt
+div
+add
+disp
+push 8
+sqrt
+push 3
+push 2
+sqrt
+mul
+add
+disp
+stop
+</pre>
+
+<H2>Output for the Sample Input</H2>
+<pre>
+1/2*sqrt(2) + 1/3*sqrt(3)
+5*sqrt(2)
+</pre>

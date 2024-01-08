@@ -1,0 +1,237 @@
+
+
+<h1><font color="#000">Problem E:</font> Earth Observation with a Mobile Robot Team</h1>
+
+<p>
+A new type of mobile robot has been developed for environmental earth
+observation.
+It moves around on the ground, acquiring and recording various sorts of
+observational data using high precision sensors.
+Robots of this type have short range wireless communication devices and can
+exchange observational data with ones nearby.
+They also have large capacity memory units, on which they record data
+observed by themselves and those received from others.
+</p>
+
+<p>
+Figure 1 illustrates the current positions of three robots A, B, and C and
+the geographic coverage of their wireless devices.
+Each circle represents the wireless coverage of a robot, with its
+center representing the position of the robot.
+In this figure, two robots A and B are in the positions where A can
+transmit data to B, and vice versa.
+In contrast, C cannot communicate with A or B, since it is too remote
+from them.
+Still, however, once B moves towards C as in Figure 2, B and C can
+start communicating with each other.
+In this manner, B can relay observational data from A to C.
+Figure 3 shows another example, in which data propagate among several robots 
+instantaneously.
+</p>
+
+<center>
+<table>
+<tr>
+  <td ALIGN="center"><img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE1_earth1"></td>
+</tr>
+<tr>
+  <td ALIGN="center">Figure 1: The initial configuration of three robots</td>
+</tr>
+</table>
+</center>
+
+<center>
+<table>
+<tr>
+  <td ALIGN="center"><img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE1_earth2"></td>
+</tr>
+<tr>
+  <td ALIGN="center">Figure 2: Mobile relaying</td>
+</tr>
+</table>
+</center>
+
+<center>
+<table>
+<tr>
+  <td ALIGN="center"><img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE1_earth3"></td>
+</tr>
+<tr>
+  <td ALIGN="center">Figure 3: Instantaneous relaying among multiple robots</td>
+</tr>
+</table>
+</center>
+
+<p>
+As you may notice from these examples, if a team of robots move
+properly, observational data quickly spread over a large number of them.
+Your mission is to write a program that simulates how information
+spreads among robots.
+Suppose that, regardless of data size, the time necessary for
+communication is negligible.
+</p>
+
+<h2>Input</h2>
+
+<p>
+The input consists of multiple datasets, each in the following format.
+</p>
+
+<blockquote>
+<i>N</i> <i>T</i> <i>R</i><br>
+<i>nickname and travel route of the first robot</i><br>
+<i>nickname and travel route of the second robot</i><br>
+...<br>
+<i>nickname and travel route of the N-th robot</i><br>
+</blockquote>
+
+<p>
+The first line contains three integers <i>N</i>, <i>T</i>, and
+<i>R</i> that are the number of robots, the length of the simulation
+period, and the maximum distance wireless signals can reach,
+respectively, and satisfy that 1 &lt;=<i>N</i> &lt;= 100, 1 &lt;=
+<i>T</i> &lt;= 1000, and 1 &lt;= <i>R</i> &lt;= 10.
+</p>
+
+<p>
+The <i>nickname and travel route</i> of each robot are given in the
+following format.
+</p>
+
+</p>
+<blockquote>
+<i>nickname</i><br>
+<i>t</i><sub>0</sub> <i>x</i><sub>0</sub> <i>y</i><sub>0</sub><br>
+<i>t</i><sub>1</sub> <i>vx</i><sub>1</sub> <i>vy</i><sub>1</sub><br>
+<i>t</i><sub>2</sub> <i>vx</i><sub>2</sub> <i>vy</i><sub>2</sub><br>
+...<br>
+<i>t</i><sub><i>k</i></sub> <i>vx</i><sub><i>k</i></sub> <i>vy</i><sub><i>k</i> </sub><br>
+</blockquote>
+
+<p>
+<i>Nickname</i> is a character string of length between one and eight that
+only contains lowercase letters.
+No two robots in a dataset may have the same nickname.
+Each of the lines following <i>nickname</i> contains three integers,
+satisfying the following conditions.
+</p>
+
+<blockquote>
+0 = <i>t</i><sub>0</sub> &lt; <i>t</i><sub>1</sub> &lt; ... &lt; <i>t</i><sub><i>k</i></sub> = <i>T</i><br>
+-10 &lt;= <i>vx</i><sub>1</sub>, <i>vy</i><sub>1</sub>,  ..., <i>vx</i><sub><i>k</i></sub>, <i>vy</i><sub><i>k</i></sub>&lt;= 10<br>
+</blockquote>
+
+<p>
+A robot moves around on a two dimensional plane.
+(<i>x</i><sub>0</sub>, <i>y</i><sub>0</sub>) is the location of the
+robot at time 0.
+From time <i>t</i><sub><i>i</i>-1</sub> to <i>t</i><sub><i>i</i></sub> (0
+&lt; <i>i</i> &lt;= <i>k</i>), the velocities in the <i>x</i> and
+<i>y</i> directions are <i>vx</i><sub><i>i</i></sub> and
+<i>vy</i><sub><i>i</i></sub>, respectively.
+Therefore, the travel route of a robot is piecewise linear.
+Note that it may self-overlap or self-intersect.
+</p>
+
+<p>
+You may assume that each dataset satisfies the following conditions.
+</p>
+
+<ul>
+<li>
+The distance between any two robots at time 0 is not exactly <i>R.</i>
+<li>
+The <i>x</i>- and <i>y</i>-coordinates
+of each robot are always between -500 and 500, inclusive.
+<li>
+Once any robot approaches within <i>R</i> + 10<sup>-6</sup> of any
+other, the distance between them will become smaller than
+<i>R</i> - 10<sup>-6</sup> while maintaining the velocities.
+<li>
+Once any robot moves away up to <i>R</i> - 10<sup>-6</sup> of any
+other, the distance between them will become larger than <i>R</i>
++ 10<sup>-6</sup> while maintaining the velocities.
+<li>
+If any pair of robots mutually enter the wireless area of the
+opposite ones at time <i>t</i> and any pair, which may share one or
+two members with the aforementioned pair, mutually leave the wireless
+area of the opposite ones at time <i>t'</i>, the difference between
+<i>t</i> and <i>t'</i> is no smaller than 10<sup>-6</sup> time unit, that is,
+|<i>t</i> - <i>t'</i> | &gt;= 10<sup>-6</sup>.
+</ul>
+
+<p>
+A dataset may include two or more robots that share the same location
+at the same time.
+However, you should still consider that they can move with the
+designated velocities.
+</p>
+
+<p>
+The end of the input is indicated by a line containing three zeros.
+</p>
+
+<h2>Output</h2>
+<p> 
+For each dataset in the input, your program 
+should print the nickname of each robot that have got until time
+<i>T</i> the observational data originally acquired by the first robot
+at time 0. 
+Each nickname should be written in a separate line in dictionary order
+without any superfluous characters such as leading or trailing spaces.
+</p>
+
+<h2>Sample Input</h2>
+<pre>
+3 5 10
+red
+0 0 0
+5 0 0
+green
+0 5 5
+5 6 1
+blue
+0 40 5
+5 0 0
+3 10 5
+atom
+0 47 32
+5 -10 -7
+10 1 0
+pluto
+0 0 0
+7 0 0
+10 3 3
+gesicht
+0 25 7
+5 -7 -2
+10 -1 10
+4 100 7
+impulse
+0 -500 0
+100 10 1
+freedom
+0 -491 0
+100 9 2
+destiny
+0 -472 0
+100 7 4
+strike
+0 -482 0
+100 8 3
+0 0 0
+</pre>
+
+<h2>Output for the Sample Input</h2>
+<pre>
+blue
+green
+red
+atom
+gesicht
+pluto
+freedom
+impulse
+strike
+</pre>
+

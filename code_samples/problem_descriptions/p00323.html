@@ -1,0 +1,80 @@
+
+
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({ tex2jax: { inlineMath: [["$","$"], ["\\(","\\)"]], processEscapes: true }});
+</script>
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+
+<H1>貴金属リサイクル</H1>
+
+<p>
+会津特産の貴金属であるアイヅニウムをリサイクルするＰＣＫ社は、全国各地にネットワークを持ち、たくさんの回収車でアイヅニウムを集めてきます。この会社は、処理の効率化のために、塊の重さと個数の単位を規格で定めています。
+</p>
+
+<p>
+塊の重さには「ボッコ」という単位を使います。<var>x</var> ボッコのアイヅニウムの重さは 2<sup><var>x</var></sup>グラムです。宝石で例えると、「カラット」のようなものです。また、塊の個数には「マルグ」という単位を使います。<var>y</var> マルグは 2<sup><var>y</var></sup> 個です。１箱に入っている品物の個数である「ダース」のようなものです。ただし、<var>x</var> と <var>y</var> は ０ 以上の整数でなければいけません。
+</p>
+
+<p>
+回収車 <var>i</var> は、 <var>a<sub>i</sub></var> ボッコの重さのアイヅニウムを <var>b<sub>i</sub></var> マルグずつ集めます。こうして集まったアイヅニウムを、炉の中に入れて溶かし、いくつかのアイヅニウムの塊を再生しますが、なるべくアイヅニウムの塊の数が少なくなるようにします。このとき、集めてきたアイヅニウムの重さの合計と、再生してできるアイヅニウムの重さの合計は変わりません。
+</p>
+
+<p>
+回収車が集めたアイヅニウムの塊のボッコ単位の重さとマルグ単位の個数が与えられたとき、再生後のアイヅニウムの塊の数が最小になるような結果を求めるプログラムを作成せよ。
+</p>
+
+
+<h2>Input</h2>
+
+<p>
+入力は以下の形式で与えられる。
+</p>
+
+<pre>
+<var>N</var>
+<var>a<sub>1</sub></var> <var>b<sub>1</sub></var>
+<var>a<sub>2</sub></var> <var>b<sub>2</sub></var>
+:
+<var>a<sub>N</sub></var> <var>b<sub>N</sub></var>
+</pre>
+
+<p>
+１行目に、回収車の数 <var>N</var> (1 &le; <var>N</var> &le; 100000) が与えられる。続く <var>N</var> 行に、回収車 <var>i</var> が回収したアイヅニウムの塊の、「ボッコ」単位の重さを表す整数 <var>a<sub>i</sub></var> (0 &le; <var>a<sub>i</sub></var> &le; 100000) と「マルグ」単位の個数を表す整数 <var>b<sub>i</sub></var> (0 &le; <var>b<sub>i</sub></var> &le; 100000) が与えられる。
+</p>
+
+<h2>Output</h2>
+
+<p>
+再生した後に得られるアイヅニウムの塊の数が最小になるような、ボッコ単位の重さとマルグ単位の個数を、重さの小さい順に出力する。
+</p>
+
+<h2>Sample Input 1</h2>
+
+<pre>
+3
+2 1
+1 3
+2 2
+</pre>
+
+<h2>Sample Output 1</h2>
+<pre>
+3 0
+5 0
+</pre>
+<br/>
+
+
+<h2>Sample Input 2</h2>
+<pre>
+1
+100000 2
+</pre>
+
+<h2>Sample Output 2</h2>
+<pre>
+100002 0
+</pre>

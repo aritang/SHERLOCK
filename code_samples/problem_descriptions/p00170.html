@@ -1,0 +1,111 @@
+
+
+
+
+<H1>ランチ</H1>
+
+<p>
+お昼に食べるお弁当を作るために、お店で食べ物を買いました。お店では、食べ物を入れるのに細長い袋しかもらえなかったので、すべての食べ物を縦に積んで袋に入れる必要があります。袋が倒れにくいように、できるだけ重い物を下にして詰めたいのですが、食べ物の中にはやわらかい物もあって、上に重い物を乗せるとつぶれてしまいます。
+</p>
+
+<!--
+そこで、それぞれの食べ物がつぶれないように、かつ出来るだけ重い物が下になるように食べ物を積みたいと思います。
+-->
+
+<p>
+そこで、食べ物の情報を入力とし、全ての食べ物がつぶれず、かつ全体の重心が最も低くなるような積み方を出力するプログラムを作成してください。それぞれの食べ物ごとに、名前 <var>f</var>、重さ <var>w</var>、上に載せて耐えられる重さ <var>s</var>  が指定されます。
+「全ての食べ物がつぶれない」というのは、下から順に、（<var>f<sub>1</sub></var>、<var>f<sub>2</sub></var>、... 、<var>f<sub>n</sub></var>）と <var>n</var> 個の食べ物を積んだ時、すべての <var>f</var> について、<br/>
+<br/>
+
+<var>s<sub>f<sub>i</sub></sub> &ge; w<sub>f<sub>i+1</sub></sub> + w<sub>f<sub>i+2</sub></sub> + </var> ... <var> + w<sub>f<sub>n</sub></sub></var>
+<br/>
+<br/>
+
+であることを意味します。また、全体の重心 <var>G</var> は、<br/>
+<br/>
+<var>G = (1 &times; w<sub>f<sub>1</sub></sub> + 2 &times; w<sub>f<sub>2</sub></sub> + </var> ... <var> + n &times; w<sub>f<sub>n</sub></sub>)</var> / <var>(w<sub>f<sub>1</sub></sub> + w<sub>f<sub>2</sub></sub>+</var> ... <var>+w<sub>f<sub>n</sub></sub></var>)
+<br/>
+<br/>
+とします。ただし、解はちょうど1つだけ存在するものとします。
+</p>
+
+
+
+
+
+<H2>Input</H2>
+
+<p>
+複数のデータセットの並びが入力として与えられます。入力の終わりはゼロひとつの行で示されます。各データセットは以下の形式で与えられます。
+</p>
+
+<pre>
+<var>n</var>
+<var>f<sub>1</sub></var> <var>w<sub>1</sub></var> <var>s<sub>1</sub></var>
+<var>f<sub>2</sub></var> <var>w<sub>2</sub></var> <var>s<sub>2</sub></var>
+:
+<var>f<sub>n</sub></var> <var>w<sub>n</sub></var> <var>s<sub>n</sub></var>
+</pre>
+
+<p>
+１行目に食べ物の個数 <var>n</var> (1 &le; <var>n</var> &le; 10)、続く <var>n</var> 行に <var>i</var> 番目の食べ物の名前 <var>f<sub>i</sub></var> (20 文字以内の半角英文字列)、重さ <var>w<sub>i</sub></var> (1 &le; <var>w<sub>i</sub></var> &le; 1000)、耐えられる重さ <var>s<sub>i</sub></var> (1 &le; <var>s<sub>i</sub></var> &le; 1000) が空白区切りで与えられます。
+</p>
+
+<p>
+データセットの数は 20 を超えません。
+</p>
+
+<H2>Output</H2>
+
+<p>
+データセットごとに、次の形式で食べ物の名前を下から積み上げる順に出力します。<br/>
+<br/>
+
+1 行目: 1 番下の食べ物の名前（半角英文字列） <br/>
+2 行目: 下から2 番目の食べ物の名前<br/>
+：<br/>
+<var>n</var> 行目: 1 番上の食べ物の名前<br/>
+</p>
+
+
+<H2>Sample Input</H2>
+
+<pre>
+4
+sandwich 80 120
+apple 50 200
+cheese 20 40
+cake 100 100
+9
+onigiri 80 300
+onigiri 80 300
+anpan 70 280
+mikan 50 80
+kanzume 100 500
+chocolate 50 350
+cookie 30 80
+purin 40 400
+cracker 40 160
+0
+</pre>
+
+<H2>Output for the Sample Input</H2>
+
+<pre>
+apple
+cake
+sandwich
+cheese
+kanzume
+purin
+chocolate
+onigiri
+onigiri
+anpan
+mikan
+cracker
+cookie
+</pre>
+
+
+

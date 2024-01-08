@@ -1,0 +1,90 @@
+<span class="lang-en">
+<p>Score : <var>100</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>Three people, A, B and C, are trying to communicate using transceivers.
+They are standing along a number line, and the coordinates of A, B and C are <var>a</var>, <var>b</var> and <var>c</var> (in meters), respectively.
+Two people can directly communicate when the distance between them is at most <var>d</var> meters.
+Determine if A and C can communicate, either directly or indirectly.
+Here, A and C can indirectly communicate when A and B can directly communicate and also B and C can directly communicate.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1</var> <var>≤</var> <var>a,b,c</var> <var>≤</var> <var>100</var></li>
+<li><var>1</var> <var>≤</var> <var>d</var> <var>≤</var> <var>100</var></li>
+<li>All values in input are integers.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>a</var> <var>b</var> <var>c</var> <var>d</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>If A and C can communicate, print <code>Yes</code>; if they cannot, print <code>No</code>.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>4 7 9 3
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>Yes
+</pre>
+<p>A and B can directly communicate, and also B and C can directly communicate, so we should print <code>Yes</code>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>100 10 1 2
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>No
+</pre>
+<p>They cannot communicate in this case.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>10 10 10 1
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>Yes
+</pre>
+<p>There can be multiple people at the same position.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 4</h3><pre>1 100 2 10
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 4</h3><pre>Yes
+</pre></section>
+</div>
+</span>

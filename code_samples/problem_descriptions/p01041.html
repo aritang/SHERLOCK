@@ -1,0 +1,138 @@
+
+
+<h1>Problem E: Distinct Dictionary</h1>
+<h2>Background</h2>
+<p>
+辞書をこよなく愛する者がいた。彼らは自分だけの辞書を作ることが大好きである。
+そこであなたは彼らの辞書に、自由にカスタマイズする機能を付け加えてあげることにした。
+</p>
+<h2>Problem</h2>
+<p>
+初めに、何の単語も入っていない空の辞書が存在する。
+<var>N</var>個の文字列<var>S<sub>id</sub></var>と<var>Q</var>個のクエリが与えられる。
+各クエリはクエリの種類<var>k</var>と文字列を指す<var>id</var>で与えられる。
+クエリの種類は以下の3つである。
+</p>
+<ul>
+<li><var>k</var>=1のとき<var>S<sub>id</sub></var>を辞書に追加する。</li>
+<li><var>k</var>=2のとき<var>S<sub>id</sub></var>を辞書から削除する。</li>
+<li><var>k</var>=3のとき辞書に追加された文字列の中で<var>S<sub>id</sub></var>を先頭からの部分文字列に含み且つ辞書順最小の文字列の<var>id</var>を出力する。無い場合は-1を出力する。</li>
+</ul>
+
+<p>
+各クエリに答えるプログラムを書いてほしい。
+</p>
+
+<p>
+注意：
+入力のサイズが大きいので高速な入力に対応する形式を推奨する。
+</p>
+
+<h2>Input</h2>
+<p>
+入力は以下の形式で与えられる。
+</p>
+
+<pre>
+<var>N</var>
+<var>S<sub>1</sub></var>
+<var>S<sub>2</sub></var>
+.
+.
+.
+<var>S<sub>N</sub></var>
+<var>Q</var>
+<var>k<sub>1</sub></var> <var>id<sub>1</sub></var>
+<var>k<sub>2</sub></var> <var>id<sub>2</sub></var>
+.
+.
+.
+<var>k<sub>Q</sub></var> <var>id<sub>Q</sub></var>
+</pre>
+
+<p>
+1行目に、1つの整数<var>N</var>が与えられる。2行目から<var>N</var>+1行に、<var>N</var>個の文字列<var>S<sub>id</sub></var>が与えられる。
+<var>N</var>+2行目にクエリの数<var>Q</var>が与えられ、続く<var>Q</var>行に各クエリの種類を表す<var>k</var>と文字列を指す<var>id</var>が与えれる。
+</p>
+
+<h2>Constraints</h2>
+
+<ul>
+<li>文字列は全て異なる。</li>
+<li><var>N</var>個の文字列<var>S<sub>id</sub></var>の長さの合計は10<sup>6</sup>を超えない。</li>
+<li>既に辞書に追加されている文字列が再び追加されるような入力は存在しない。</li>
+<li>辞書に追加されていない文字列を削除するような入力は存在しない。</li>
+<li>与えられる文字列に含まれる文字は英小文字のみである。</li>
+<li>1 &le; <var>N</var> &le; 10<sup>5</sup></li>
+<li>1 &le; <var>id</var> &le; <var>N</var></li>
+<li>1 &le; <var>Q</var> &le; 10<sup>5</sup></li>
+<li>1 &le; |<var>S<sub>id</sub></var>| &le; 10<sup>5</sup> (ただし、|<var>s</var>|は文字列<var>s</var>の長さを表す。)</li> 
+</ul>
+
+<h2>Output</h2>
+<p>
+クエリごとに解答を一行に出力せよ。
+</p>
+
+<h2>Sample Input1</h2>
+<pre>
+3
+apple
+app
+banana
+9
+1 1
+3 1
+3 2
+3 3
+2 1
+1 2
+3 1
+3 2
+3 3
+</pre>
+<h2>Sample Output1</h2>
+<pre>
+1
+1
+-1
+-1
+2
+-1
+</pre>
+
+<h2>Sample Input2</h2>
+<pre>
+7
+aaaab
+aaa
+aaaa
+aaaaaabc
+abbbbbc
+ab
+abbb
+13
+1 1
+3 2
+1 4
+3 2
+1 3
+3 2
+2 3
+3 3
+1 5
+1 7
+3 6
+2 5
+3 6
+</pre>
+
+<h2>Sample Output2</h2>
+<pre>
+1
+4
+3
+4
+7
+7
+</pre>

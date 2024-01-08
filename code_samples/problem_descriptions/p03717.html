@@ -1,0 +1,133 @@
+<span class="lang-en">
+<p>Score : <var>800</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>There are <var>N</var> squares arranged in a row.
+The squares are numbered <var>1</var>, <var>2</var>, <var>...</var>, <var>N</var>, from left to right.</p>
+<p>Snuke is painting each square in red, green or blue.
+According to his aesthetic sense, the following <var>M</var> conditions must all be satisfied.
+The <var>i</var>-th condition is:</p>
+<ul>
+<li>There are exactly <var>x_i</var> different colors among squares <var>l_i</var>, <var>l_i + 1</var>, <var>...</var>, <var>r_i</var>.</li>
+</ul>
+<p>In how many ways can the squares be painted to satisfy all the conditions?
+Find the count modulo <var>10^9+7</var>.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 ≤ N ≤ 300</var></li>
+<li><var>1 ≤ M ≤ 300</var></li>
+<li><var>1 ≤ l_i ≤ r_i ≤ N</var></li>
+<li><var>1 ≤ x_i ≤ 3</var></li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var> <var>M</var>
+<var>l_1</var> <var>r_1</var> <var>x_1</var>
+<var>l_2</var> <var>r_2</var> <var>x_2</var>
+<var>:</var>
+<var>l_M</var> <var>r_M</var> <var>x_M</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the number of ways to paint the squares to satisfy all the conditions, modulo <var>10^9+7</var>.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>3 1
+1 3 3
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>6
+</pre>
+<p>The six ways are:</p>
+<ul>
+<li>RGB</li>
+<li>RBG</li>
+<li>GRB</li>
+<li>GBR</li>
+<li>BRG</li>
+<li>BGR</li>
+</ul>
+<p>where R, G and B correspond to red, green and blue squares, respectively.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>4 2
+1 3 1
+2 4 2
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>6
+</pre>
+<p>The six ways are:</p>
+<ul>
+<li>RRRG</li>
+<li>RRRB</li>
+<li>GGGR</li>
+<li>GGGB</li>
+<li>BBBR</li>
+<li>BBBG</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>1 3
+1 1 1
+1 1 2
+1 1 3
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>0
+</pre>
+<p>There are zero ways.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 4</h3><pre>8 10
+2 6 2
+5 5 1
+3 5 2
+4 7 3
+4 4 1
+2 3 1
+7 7 1
+1 5 2
+1 7 3
+3 4 2
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 4</h3><pre>108
+</pre></section>
+</div>
+</span>

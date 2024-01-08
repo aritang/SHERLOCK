@@ -1,0 +1,76 @@
+<span class="lang-en">
+<p>Score : <var>100</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>There are a total of <var>A + B</var> cats and dogs.
+Among them, <var>A</var> are known to be cats, but the remaining <var>B</var> are not known to be either cats or dogs.</p>
+<p>Determine if it is possible that there are exactly <var>X</var> cats among these <var>A + B</var> animals.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 \leq A \leq 100</var></li>
+<li><var>1 \leq B \leq 100</var></li>
+<li><var>1 \leq X \leq 200</var></li>
+<li>All values in input are integers.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>A</var> <var>B</var> <var>X</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>If it is possible that there are exactly <var>X</var> cats, print <code>YES</code>; if it is impossible, print <code>NO</code>.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>3 5 4
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>YES
+</pre>
+<p>If there are one cat and four dogs among the <var>B = 5</var> animals, there are <var>X = 4</var> cats in total.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>2 2 6
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>NO
+</pre>
+<p>Even if all of the <var>B = 2</var> animals are cats, there are less than <var>X = 6</var> cats in total.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>5 3 2
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>NO
+</pre>
+<p>Even if all of the <var>B = 3</var> animals are dogs, there are more than <var>X = 2</var> cats in total.</p></section>
+</div>
+</span>

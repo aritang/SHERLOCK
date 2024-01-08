@@ -1,0 +1,109 @@
+<span class="lang-en">
+<p>Score : <var>400</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>Snuke lives in another world, where slimes are real creatures and kept by some people.
+Slimes come in <var>N</var> colors. Those colors are conveniently numbered <var>1</var> through <var>N</var>.
+Snuke currently has no slime. His objective is to have slimes of all the colors together.</p>
+<p>Snuke can perform the following two actions:</p>
+<ul>
+<li>
+<p>Select a color <var>i</var> (<var>1≤i≤N</var>), such that he does not currently have a slime in color <var>i</var>, and catch a slime in color <var>i</var>. This action takes him <var>a_i</var> seconds.</p>
+</li>
+<li>
+<p>Cast a spell, which changes the color of all the slimes that he currently has. The color of a slime in color <var>i</var> (<var>1≤i≤N-1</var>) will become color <var>i+1</var>, and the color of a slime in color <var>N</var> will become color <var>1</var>. This action takes him <var>x</var> seconds.</p>
+</li>
+</ul>
+<p>Find the minimum time that Snuke needs to have slimes in all <var>N</var> colors.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>2≤N≤2,000</var></li>
+<li><var>a_i</var> are integers.</li>
+<li><var>1≤a_i≤10^9</var></li>
+<li><var>x</var> is an integer.</li>
+<li><var>1≤x≤10^9</var></li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>The input is given from Standard Input in the following format:</p>
+<pre><var>N</var> <var>x</var>
+<var>a_1</var> <var>a_2</var> <var>...</var> <var>a_N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Find the minimum time that Snuke needs to have slimes in all <var>N</var> colors.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>2 10
+1 100
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>12
+</pre>
+<p>Snuke can act as follows:</p>
+<ul>
+<li>Catch a slime in color <var>1</var>. This takes <var>1</var> second.</li>
+<li>Cast the spell. The color of the slime changes: <var>1</var> → <var>2</var>. This takes <var>10</var> seconds.</li>
+<li>Catch a slime in color <var>1</var>. This takes <var>1</var> second.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>3 10
+100 1 100
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>23
+</pre>
+<p>Snuke can act as follows:</p>
+<ul>
+<li>Catch a slime in color <var>2</var>. This takes <var>1</var> second.</li>
+<li>Cast the spell. The color of the slime changes: <var>2</var> → <var>3</var>. This takes <var>10</var> seconds.</li>
+<li>Catch a slime in color <var>2</var>. This takes <var>1</var> second.</li>
+<li>Cast the soell. The color of each slime changes: <var>3</var> → <var>1</var>, <var>2</var> → <var>3</var>. This takes <var>10</var> seconds.</li>
+<li>Catch a slime in color <var>2</var>. This takes <var>1</var> second.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>4 10
+1 2 3 4
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>10
+</pre>
+<p>Snuke can act as follows:</p>
+<ul>
+<li>Catch a slime in color <var>1</var>. This takes <var>1</var> second.</li>
+<li>Catch a slime in color <var>2</var>. This takes <var>2</var> seconds.</li>
+<li>Catch a slime in color <var>3</var>. This takes <var>3</var> seconds.</li>
+<li>Catch a slime in color <var>4</var>. This takes <var>4</var> seconds.</li>
+</ul></section>
+</div>
+</span>

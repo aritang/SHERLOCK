@@ -1,0 +1,74 @@
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({ tex2jax: { inlineMath: [["$","$"], ["\\(","\\)"]], processEscapes: true }});
+</script>
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+<H1>Integral</H1>
+
+<p>
+Write a program which computes the area of a shape represented by the following three lines:<br/>
+<br/>
+$y = x^2$<br/>
+$y = 0$<br/>
+$x = 600$<br/>
+<br/>
+<!--<center><img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE1_integralF1"></center>-->
+</p>
+
+<p>
+It is clear that the area is $72000000$, if you use an integral you learn in high school. On the other hand, we can obtain an approximative area of the shape by adding up areas of many rectangles in the shape as shown in the following figure:
+</p>
+
+<center><img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE1_integral"><br/>
+$f(x) = x^2$<br/>
+<br/>
+</center>
+<!--
+<center>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE1_integralF2"> 
+</center>
+-->
+
+<p>
+The approximative area $s$ where the width of the rectangles is $d$ is:<br/>
+<br/>
+area of rectangle where its width is $d$ and height is $f(d)$ $+$ <br/>
+area of rectangle where its width is $d$ and height is $f(2d)$ $+$ <br/>
+area of rectangle where its width is $d$ and height is $f(3d)$ $+$ <br/>
+...<br/>
+area of rectangle where its width is $d$ and height is $f(600 - d)$  <br/>
+</p>
+
+<p>
+The more we decrease $d$, the higer-precision value which is close to $72000000$ we could obtain. Your program should read the integer $d$ which is a divisor of $600$, and print the area $s$.
+</p>
+
+<H2>Input</H2>
+
+<p>
+The input consists of several datasets. Each dataset consists of an integer $d$ in a line. The number of datasets is less than or equal to 20.
+</p>
+
+<H2>Output</H2>
+
+<p>
+For each dataset, print the area $s$ in a line.
+</p>
+
+<H2>Sample Input</H2>
+
+<pre>
+20
+10
+</pre>
+
+<H2>Output for the Sample Input</H2>
+
+<pre>
+68440000
+70210000
+</pre>
+
+

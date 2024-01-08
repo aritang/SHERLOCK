@@ -1,0 +1,78 @@
+
+
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: { inlineMath: [['\\(','\\)']] }
+  });
+</script>
+<script type='text/javascript' src='http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
+
+<h1 class="ndoc-heading1">Problem I: Reverse Game</h1>
+<p class="ndoc-top">
+あるところにオセロが趣味な女の子がいました。時間があるときに家族とオセロを楽しんでいます。</p>
+<p class="ndoc-top">
+ある日、女の子はいつものようにオセロで遊ぼうとしました。ところが、みんな忙しくて誰も遊んでくれませんでした。
+そこでオセロのボードとこまを使って１人で遊べるゲームを考え出しました。</p>
+<h2 class="ndoc-heading2">問題</h2>
+<p class="ndoc-top">
+縦\( R \)マス、横\( C \)マスのマス目全てにオセロの駒が上面が黒あるいは白になるように配置されている。</p>
+<p class="ndoc-top">
+以下の図のように「あるマスを選んで、その上下左右斜め方向にある駒を全て裏返す」という操作を繰り返し行うことを考える。
+全ての駒の上面を白にするような操作の仕方の個数を求めよ。 ただし、以下の条件を満たす必要がある。</p>
+<ul class="ndoc-indent">
+<li>同じマスに二度操作を行うことはできない</li>
+<li>操作の順序は区別しない</li>
+<li>全ての駒の上面が白になってから操作を続けることは可能である</li>
+</ul>
+<p class="ndoc-top"><img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_uecpc2013_files_rev" height="300px"></p>
+<h2 class="ndoc-heading2">入力</h2>
+<p class="ndoc-top">1行目に整数\( R \)と整数\( C \)がそれぞれ空白区切りで与えられる。</p>
+<p class="ndoc-top">続けて\( R \)行に、それぞれ\( C \)個の整数値(0か1)が与えられる。\( r \)行目の\(
+c \)個目の整数は、マス目(r,c)の状態を表す。</p>
+<p class="ndoc-top">1は上面が黒であることを、0は上面が白であることを表す。</p>
+<h2 class="ndoc-heading2">出力</h2>
+<p class="ndoc-top">盤面の全ての駒の上面を白にすることができるなら、そのような操作の仕方の個数を\(
+1000000009 (= 10 ^ 9 + 9) \)で割った余りを1行に出力せよ。</p>
+<p class="ndoc-top">盤面の全ての駒の上面を白にすることができないなら、\( 0 \)と1行に出力せよ。</p>
+<h2 class="ndoc-heading2">制約</h2>
+
+<ul class="ndoc-indent">
+<li>\(1 \leq R \leq 50, 1 \leq C \leq 50\)</li>
+</ul>
+<h2 class="ndoc-heading2">サンプル入出力</h2>
+<h3 class="ndoc-heading3">入力1</h3>
+
+<pre>
+1 3
+1 1 1
+</pre>
+<h3 class="ndoc-heading3">出力1</h3>
+
+<pre>
+4
+</pre>
+<p>\( \{(1,1)\}, \{(1,2)\}, \{(1,3)\}, \{(1,1),(1,2),(1,3)\} \)の4通りである。</p>
+<h3 class="ndoc-heading3">入力2</h3>
+
+<pre>
+1 3
+1 0 1
+</pre>
+<h3 class="ndoc-heading3">出力2</h3>
+
+<pre>
+0
+</pre>
+<h3 class="ndoc-heading3">入力3</h3>
+
+<pre>
+2 4
+0 1 0 1
+1 0 1 0
+</pre>
+<h3 class="ndoc-heading3">出力3</h3>
+
+<pre>
+1
+</pre>

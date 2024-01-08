@@ -1,0 +1,110 @@
+<span class="lang-en">
+<p>Score : <var>700</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>We have a tree with <var>N</var> vertices. Vertex <var>1</var> is the root of the tree, and the parent of Vertex <var>i</var> (<var>2 \leq i \leq N</var>) is Vertex <var>P_i</var>.</p>
+<p>To each vertex in the tree, Snuke will allocate a color, either black or white, and a non-negative integer weight.</p>
+<p>Snuke has a favorite integer sequence, <var>X_1, X_2, ..., X_N</var>, so he wants to allocate colors and weights so that the following condition is satisfied for all <var>v</var>.</p>
+<ul>
+<li>The total weight of the vertices with the same color as <var>v</var> among the vertices contained in the subtree whose root is <var>v</var>, is <var>X_v</var>.</li>
+</ul>
+<p>Here, <em>the subtree whose root is</em> <var>v</var> is the tree consisting of Vertex <var>v</var> and all of its descendants.</p>
+<p>Determine whether it is possible to allocate colors and weights in this way.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 \leq N \leq 1</var> <var>000</var></li>
+<li><var>1 \leq P_i \leq i - 1</var></li>
+<li><var>0 \leq X_i \leq 5</var> <var>000</var></li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Inputs</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+<var>P_2</var> <var>P_3</var> <var>...</var> <var>P_N</var>
+<var>X_1</var> <var>X_2</var> <var>...</var> <var>X_N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Outputs</h3><p>If it is possible to allocate colors and weights to the vertices so that the condition is satisfied, print <code>POSSIBLE</code>; otherwise, print <code>IMPOSSIBLE</code>.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>3
+1 1
+4 3 2
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>POSSIBLE
+</pre>
+<p>For example, the following allocation satisfies the condition:</p>
+<ul>
+<li>Set the color of Vertex <var>1</var> to white and its weight to <var>2</var>.</li>
+<li>Set the color of Vertex <var>2</var> to black and its weight to <var>3</var>.</li>
+<li>Set the color of Vertex <var>3</var> to white and its weight to <var>2</var>.</li>
+</ul>
+<p>There are also other possible allocations.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>3
+1 2
+1 2 3
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>IMPOSSIBLE
+</pre>
+<p>If the same color is allocated to Vertex <var>2</var> and Vertex <var>3</var>, Vertex <var>2</var> cannot be allocated a non-negative weight.</p>
+<p>If different colors are allocated to Vertex <var>2</var> and <var>3</var>, no matter which color is allocated to Vertex <var>1</var>, it cannot be allocated a non-negative weight.</p>
+<p>Thus, there exists no allocation of colors and weights that satisfies the condition.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>8
+1 1 1 3 4 5 5
+4 1 6 2 2 1 3 3
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>POSSIBLE
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 4</h3><pre>1
+
+0
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 4</h3><pre>POSSIBLE
+</pre></section>
+</div>
+</span>

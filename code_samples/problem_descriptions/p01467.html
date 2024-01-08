@@ -1,0 +1,68 @@
+
+
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({ tex2jax: { inlineMath: [["$","$"], ["\\(","\\)"]], skipTags: ["script","noscript","style","textarea","code"], processEscapes: true }});
+</script>
+<script language="JavaScript" type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+
+<h2>問題文</h2>
+
+<p>2つの整数 $A$，$B$ がある。
+十進数での筆算によって $A - B$ を求める処理を以下に示す。</p>
+<p>　1. $A$，$B$ を十進数で表現する。添字は下位から順に $0,1,2,...,n-1$ とし、 $A = A_{n-1} A_{n-2} ... A_{0}$，$B = B_{n-1} B_{n-2} ... B_{0}$ とする。 $n$ は十進数で表現した時の$A$の桁数とする。 $B$ の桁数が $n$ より小さいとき、上位桁に $0$ を補う。<br />
+　2. $borrow_{0} = 0$ とする。<br />
+　3. 以下の処理を $i = 0$ から $n-1$ まで繰り返す。<br />
+　　3.1. $A_{i} - borrow_{i} \geq B_{i}$ ならば、 $C_{i} = A_{i} - borrow_{i} - B_{i}$ ， $borrow_{i+1} = 0$とする。<br />
+　　3.2. $A_{i} - borrow_{i} \lt B_{i}$ ならば、 $C_{i} = A_{i} - borrow_{i} + 10 - B_{i}$ ， $borrow_{i+1} = 1$とする。</p>
+<p>$A - B$ の計算結果は $C_{n-1} C_{n-2} ... C_{0}$ となる。ただし、最上位に連続する $0$ は取り除く。</p>
+<p>繰り下がりを忘れると3.2の処理での $borrow_{i+1} = 1$ が $borrow_{i+1} = 0$ となる。
+最大 $K$ 回繰り下がりを忘れたときの計算結果の最大値を求めよ。</p>
+
+<h2>入力</h2>
+
+<p>入力は以下の形式に従う。与えられる数は全て整数である。<br>
+<br>
+<pre>$A$ $B$ $K$</pre>
+
+<h2>制約</h2>
+
+<ul><li>$1 \leq B \lt A \leq 10^9$</li>
+<li>$1 \leq K \leq 9$</li></ul>
+
+<h2>出力</h2>
+
+<p>計算結果の最大値を1行に出力せよ。</p>
+
+<h2>Sample Input 1</h2>
+
+<pre>99 98 1</pre>
+
+<h2>Output for the Sample Input 1</h2>
+
+<pre>1</pre>
+
+<h2>Sample Input 2</h2>
+
+<pre>100 2 3</pre>
+
+<h2>Output for the Sample Input 2</h2>
+
+<pre>198</pre>
+
+<h2>Sample Input 3</h2>
+
+<pre>538 84 1</pre>
+
+<h2>Output for the Sample Input 3</h2>
+
+<pre>554</pre>
+
+<h2>Sample Input 4</h2>
+
+<pre>2012 1987 1</pre>
+
+
+<h2>Output for the Sample Input 4</h2>
+
+<pre>1025</pre>

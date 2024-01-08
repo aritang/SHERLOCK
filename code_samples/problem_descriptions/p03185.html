@@ -1,0 +1,86 @@
+<span class="lang-en">
+<p>Score : <var>100</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>There are <var>N</var> stones, numbered <var>1, 2, \ldots, N</var>.
+For each <var>i</var> (<var>1 \leq i \leq N</var>), the height of Stone <var>i</var> is <var>h_i</var>.
+Here, <var>h_1 &lt; h_2 &lt; \cdots &lt; h_N</var> holds.</p>
+<p>There is a frog who is initially on Stone <var>1</var>.
+He will repeat the following action some number of times to reach Stone <var>N</var>:</p>
+<ul>
+<li>If the frog is currently on Stone <var>i</var>, jump to one of the following: Stone <var>i + 1, i + 2, \ldots, N</var>. Here, a cost of <var>(h_j - h_i)^2 + C</var> is incurred, where <var>j</var> is the stone to land on.</li>
+</ul>
+<p>Find the minimum possible total cost incurred before the frog reaches Stone <var>N</var>.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li>All values in input are integers.</li>
+<li><var>2 \leq N \leq 2 \times 10^5</var></li>
+<li><var>1 \leq C \leq 10^{12}</var></li>
+<li><var>1 \leq h_1 &lt; h_2 &lt; \cdots &lt; h_N \leq 10^6</var></li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var> <var>C</var>
+<var>h_1</var> <var>h_2</var> <var>\ldots</var> <var>h_N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the minimum possible total cost incurred.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>5 6
+1 2 3 4 5
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>20
+</pre>
+<p>If we follow the path <var>1</var> → <var>3</var> → <var>5</var>, the total cost incurred would be <var>((3 - 1)^2 + 6) + ((5 - 3)^2 + 6) = 20</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>2 1000000000000
+500000 1000000
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>1250000000000
+</pre>
+<p>The answer may not fit into a 32-bit integer type.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>8 5
+1 3 4 5 10 11 12 13
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>62
+</pre>
+<p>If we follow the path <var>1</var> → <var>2</var> → <var>4</var> → <var>5</var> → <var>8</var>, the total cost incurred would be <var>((3 - 1)^2 + 5) + ((5 - 3)^2 + 5) + ((10 - 5)^2 + 5) + ((13 - 10)^2 + 5) = 62</var>.</p></section>
+</div>
+</span>

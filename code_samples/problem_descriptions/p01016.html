@@ -1,0 +1,85 @@
+<h1>Problem A: Password</h1>
+
+<p>
+太郎君は、自分のパソコンを持っていて、ログイン時のパスワードを設定していた。しかし、不注意にも太郎君はそのパスワードを忘れてしまった。そこで、パスワードをメモした紙があることを思い出し、紙を見つけた太郎君はそれを見て驚いた。なんと紙は切れていて断片しか存在せず、ところどころに汚れがあり、読めなくなっていたのだ。太郎君はそのメモを参考にパスワードを推測することにした。
+</p>
+
+<h2>Problem</h2>
+<p>
+二つの文字列A, Bが与えられる。文字列Aの中に文字列Bが含まれているかどうかを判定し、含まれている場合は"Yes"を、そうでなければ"No"を出力せよ。
+文字列Aにはアルファベットの大文字のみが含まれており、文字列Bにはアルファベットの大文字に加えて、'_'(半角アンダーバー)が含まれている。半角アンダーバーは任意の１文字を表す。
+</p>
+
+<h2>Input</h2>
+<p>
+文字列 A<br>
+文字列 B
+</p>
+
+<h2>Constraints</h2>
+
+<ul>
+<li>A,Bの文字列の長さはどちらも1文字以上1000文字以下である。</li>
+<li>Bの文字列の長さがAの文字列の長さを超えることはない。</li>
+</ul>
+
+
+<h2>Output</h2>
+<p>
+"Yes"または"No"を1行で出力せよ。
+</p>
+
+<h2>Sample Input 1</h2>
+<pre>
+ABCDE
+ABC
+</pre>
+
+<h2>Sample Output 1</h2>
+<pre>
+Yes
+</pre>
+
+<h2>Sample Input 2</h2>
+<pre>
+KUSATSU
+KSATSU
+</pre>
+
+<h2>Sample Output 2</h2>
+<pre>
+No
+</pre>
+
+<h2>Sample Input 3</h2>
+<pre>
+ABCABC
+ACBA_B
+</pre>
+
+<h2>Sample Output 3</h2>
+<pre>
+No
+</pre>
+
+<h2>Sample Input 4</h2>
+<pre>
+RUPCUAPC
+__PC
+</pre>
+
+<h2>Sample Output 4</h2>
+<pre>
+Yes
+</pre>
+
+<h2>Sample Input 5</h2>
+<pre>
+AIZU 
+_A
+</pre>
+
+<h2>Sample Output 5</h2>
+<pre>
+No
+</pre>

@@ -1,0 +1,106 @@
+<span class="lang-en">
+<p>Score : <var>200</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>There is an image with a height of <var>H</var> pixels and a width of <var>W</var> pixels. Each of the pixels is represented by either <code>.</code> or <code>*</code>. The character representing the pixel at the <var>i</var>-th row from the top and the <var>j</var>-th column from the left, is denoted by <var>C_{i,j}</var>.</p>
+<p>Extend this image vertically so that its height is doubled. That is, print a image with a height of <var>2H</var> pixels and a width of <var>W</var> pixels where the pixel at the <var>i</var>-th row and <var>j</var>-th column is equal to <var>C_{(i+1)/2,j}</var> (the result of division is rounded down).</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1≦H, W≦100</var></li>
+<li><var>C_{i,j}</var> is either <code>.</code> or <code>*</code>.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>The input is given from Standard Input in the following format:</p>
+<pre><var>H</var> <var>W</var>
+<var>C_{1,1}...C_{1,W}</var>
+:
+<var>C_{H,1}...C_{H,W}</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the extended image.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>2 2
+*.
+.*
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>*.
+*.
+.*
+.*
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>1 4
+***.
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>***.
+***.
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>9 20
+.....***....***.....
+....*...*..*...*....
+...*.....**.....*...
+...*.....*......*...
+....*.....*....*....
+.....**..*...**.....
+.......*..*.*.......
+........**.*........
+.........**.........
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>.....***....***.....
+.....***....***.....
+....*...*..*...*....
+....*...*..*...*....
+...*.....**.....*...
+...*.....**.....*...
+...*.....*......*...
+...*.....*......*...
+....*.....*....*....
+....*.....*....*....
+.....**..*...**.....
+.....**..*...**.....
+.......*..*.*.......
+.......*..*.*.......
+........**.*........
+........**.*........
+.........**.........
+.........**.........
+</pre></section>
+</div>
+</span>

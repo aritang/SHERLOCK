@@ -1,0 +1,66 @@
+<span class="lang-en">
+<p>Score : <var>300</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p><var>N</var> persons are standing in a row. The height of the <var>i</var>-th person from the front is <var>A_i</var>.</p>
+<p>We want to have each person stand on a stool of some heights - at least zero - so that the following condition is satisfied for every person:</p>
+<p>Condition: Nobody in front of the person is taller than the person. Here, the height of a person includes the stool.</p>
+<p>Find the minimum total height of the stools needed to meet this goal.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 \leq N \leq 2\times 10^5</var></li>
+<li><var>1 \leq A_i \leq 10^9</var></li>
+<li>All values in input are integers.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+<var>A_1</var> <var>\ldots</var> <var>A_N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the minimum total height of the stools needed to meet the goal.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>5
+2 1 5 4 3
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>4
+</pre>
+<p>If the persons stand on stools of heights <var>0</var>, <var>1</var>, <var>0</var>, <var>1</var>, and <var>2</var>, respectively, their heights will be <var>2</var>, <var>2</var>, <var>5</var>, <var>5</var>, and <var>5</var>, satisfying the condition.</p>
+<p>We cannot meet the goal with a smaller total height of the stools.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>5
+3 3 3 3 3
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>0
+</pre>
+<p>Giving a stool of height <var>0</var> to everyone will work.</p></section>
+</div>
+</span>

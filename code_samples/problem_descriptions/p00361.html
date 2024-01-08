@@ -1,0 +1,85 @@
+<!--<H1>Modification of Road Network</H1>-->
+<h1>Road Improvement</h1>
+
+<p>
+Aizu is a country famous for its rich tourism resources and has <var>N</var> cities, each of which is uniquely identified with a number (0 to <var>N</var>-1). It has a road network consisting of <var>M</var> one-way roads connecting a city to another.
+</p>
+
+<p>
+  All the roads connecting the cities in Aizu have a row of cherry trees along their routes. For enhancing the cherry-viewing experience, a proposal was made to modify the road network so that a tourist can travel around all the roads. To achieve this target, it was decided to construct several one-way roads, each connecting two cities and abiding by the following rules.
+</p>
+
+<ul>
+<li>The newly constructed road is for one-way traffic</li>
+<li>Starting from any city, a tourist is able to make a roundtrip and return to the city, whereby he/she drives all the roads exhaustively, including the newly constructed ones. Multiple passages of some of the roads are allowed.</li>
+</ul>
+
+<p>
+  You, as a tourism promotion officer, are assigned with the task of writing a program for the road construction project.
+</p>
+
+<p>
+  Write a program to determine the minimum number of roads to be constructed given the road network information in Aizu.
+</p>
+
+
+<h2>Input</h2>
+
+<p>
+  The input is given in the following format.
+</p>
+<pre>
+<var>N</var> <var>M</var>
+<var>s_1</var> <var>t_1</var>
+<var>s_2</var> <var>t_2</var>
+:
+<var>s_M</var> <var>t_M</var>
+</pre>
+
+<p>
+The first line provides the number of cities <var>N</var> (1 &le; <var>N</var> &le; 10<sup>4</sup>) and roads <var>M</var> (0 &le; <var>M</var> &le; 10<sup>5</sup>). Each of the subsequent <var>M</var> lines provides the numbers assigned to start and destination cities for the <var>i</var>-th road: <var>s_i</var>, <var>t_i</var> (0 &le; <var>s_i</var>, <var>t_i</var> &le; <var>N</var>-1) , where <var>s_i &ne; t_i</var>. (no duplicate appearance of a road)
+  
+</p>
+
+<h2>Output</h2>
+
+<p>
+  Output the minimum number of roads to be newly constructed.
+</p>
+
+<h2>Sample Input 1</h2>
+
+<pre>
+6 7
+0 2
+2 1
+1 0
+2 3
+4 3
+4 5
+5 4
+</pre>
+
+<h2>Sample Output 1</h2>
+<pre>
+2
+</pre>
+
+<h2>Sample Input 2</h2>
+<pre>
+6 9
+0 2
+2 1
+1 0
+2 3
+4 3
+4 5
+5 4
+5 2
+3 4
+</pre>
+
+<h2>Sample Output 2</h2>
+<pre>
+0
+</pre>

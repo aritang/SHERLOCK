@@ -1,0 +1,107 @@
+<span class="lang-en">
+<p>Score : <var>1800</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>Given are integer sequences <var>A</var> and <var>B</var> of length <var>3N</var>. Each of these two sequences contains three copies of each of <var>1, 2, \dots, N</var>.
+In other words, <var>A</var> and <var>B</var> are both arrangements of <var>(1, 1, 1, 2, 2, 2, \dots, N, N, N)</var>.</p>
+<p>Tak can perform the following operation to the sequence <var>A</var> arbitrarily many times:</p>
+<ul>
+<li>Pick a value from <var>1, 2, \dots, N</var> and call it <var>x</var>. <var>A</var> contains exactly three copies of <var>x</var>. Remove the middle element of these three. After that, append <var>x</var> to the beginning or the end of <var>A</var>.</li>
+</ul>
+<p>Check if he can turn <var>A</var> into <var>B</var>. If he can, print the minimum required number of operations to achieve that.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 \leq N \leq 33</var></li>
+<li><var>A</var> and <var>B</var> are both arrangements of <var>(1, 1, 1, 2, 2, 2, \dots, N, N, N)</var>.</li>
+<li>All values in input are integers.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+<var>A_1</var> <var>A_2</var> ... <var>A_{3N}</var>
+<var>B_1</var> <var>B_2</var> ... <var>B_{3N}</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>If Tak can turn <var>A</var> into <var>B</var>, print the minimum required number of operations to achieve that. Otherwise, print <var>-1</var>.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>3
+2 3 1 1 3 2 2 1 3
+1 2 2 3 1 2 3 1 3
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>4
+</pre>
+<p>For example, Tak can perform operations as follows:</p>
+<ul>
+<li><code>2 3 1 1 3 2 2 1 3</code> (The initial state)</li>
+<li><code>2 2 3 1 1 3 2 1 3</code> (Pick <var>x = 2</var> and append it to the beginning)</li>
+<li><code>2 2 3 1 3 2 1 3 1</code> (Pick <var>x = 1</var> and append it to the end)</li>
+<li><code>1 2 2 3 1 3 2 3 1</code> (Pick <var>x = 1</var> and append it to the beginning)</li>
+<li><code>1 2 2 3 1 2 3 1 3</code> (Pick <var>x = 3</var> and append it to the end)</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>3
+1 1 1 2 2 2 3 3 3
+1 1 1 2 2 2 3 3 3
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>0
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>3
+2 3 3 1 1 1 2 2 3
+3 2 2 1 1 1 3 3 2
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>-1
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 4</h3><pre>8
+3 6 7 5 4 8 4 1 1 3 8 7 3 8 2 4 7 5 2 2 6 5 6 1
+7 5 8 1 3 6 7 5 4 8 1 3 3 8 2 4 2 6 5 6 1 4 7 2
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 4</h3><pre>7
+</pre></section>
+</div>
+</span>

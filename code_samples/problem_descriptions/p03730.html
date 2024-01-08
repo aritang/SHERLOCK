@@ -1,0 +1,104 @@
+<span class="lang-en">
+<p>Score : <var>200</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>We ask you to select some number of positive integers, and calculate the sum of them.</p>
+<p>It is allowed to select as many integers as you like, and as large integers as you wish.
+You have to follow these, however: each selected integer needs to be a multiple of <var>A</var>, and you need to select at least one integer.</p>
+<p>Your objective is to make the sum congruent to <var>C</var> modulo <var>B</var>.
+Determine whether this is possible.</p>
+<p>If the objective is achievable, print <code>YES</code>. Otherwise, print <code>NO</code>.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 ≤ A ≤ 100</var></li>
+<li><var>1 ≤ B ≤ 100</var></li>
+<li><var>0 ≤ C &lt; B</var></li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>A</var> <var>B</var> <var>C</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print <code>YES</code> or <code>NO</code>.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>7 5 1
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>YES
+</pre>
+<p>For example, if you select <var>7</var> and <var>14</var>, the sum <var>21</var> is congruent to <var>1</var> modulo <var>5</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>2 2 1
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>NO
+</pre>
+<p>The sum of even numbers, no matter how many, is never odd.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>1 100 97
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>YES
+</pre>
+<p>You can select <var>97</var>, since you may select multiples of <var>1</var>, that is, all integers.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 4</h3><pre>40 98 58
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 4</h3><pre>YES
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 5</h3><pre>77 42 36
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 5</h3><pre>NO
+</pre></section>
+</div>
+</span>

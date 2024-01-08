@@ -1,0 +1,136 @@
+<span class="lang-en">
+<p>Score : <var>800</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>We have a tree with <var>N</var> vertices. The vertices are numbered <var>1, 2, ..., N</var>. The <var>i</var>-th (<var>1 ≦ i ≦ N - 1</var>) edge connects the two vertices <var>A_i</var> and <var>B_i</var>.</p>
+<p>Takahashi wrote integers into <var>K</var> of the vertices. Specifically, for each <var>1 ≦ j ≦ K</var>, he wrote the integer <var>P_j</var> into vertex <var>V_j</var>. The remaining vertices are left empty. After that, he got tired and fell asleep.</p>
+<p>Then, Aoki appeared. He is trying to surprise Takahashi by writing integers into all empty vertices so that the following condition is satisfied:</p>
+<ul>
+<li>Condition: For any two vertices directly connected by an edge, the integers written into these vertices differ by exactly <var>1</var>.</li>
+</ul>
+<p>Determine if it is possible to write integers into all empty vertices so that the condition is satisfied. If the answer is positive, find one specific way to satisfy the condition.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 ≦ N ≦ 10^5</var></li>
+<li><var>1 ≦ K ≦ N</var></li>
+<li><var>1 ≦ A_i, B_i ≦ N</var> (<var>1 ≦ i ≦ N - 1</var>)</li>
+<li><var>1 ≦ V_j ≦ N</var> (<var>1 ≦ j ≦ K</var>) (21:18, a mistake in this constraint was corrected)</li>
+<li><var>0 ≦ P_j ≦ 10^5</var> (<var>1 ≦ j ≦ K</var>)</li>
+<li>The given graph is a tree.</li>
+<li>All <var>v_j</var> are distinct.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>The input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+<var>A_1</var> <var>B_1</var>
+<var>A_2</var> <var>B_2</var>
+<var>:</var>
+<var>A_{N-1}</var> <var>B_{N-1}</var>
+<var>K</var>
+<var>V_1</var> <var>P_1</var>
+<var>V_2</var> <var>P_2</var>
+<var>:</var>
+<var>V_K</var> <var>P_K</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>If it is possible to write integers into all empty vertices so that the condition is satisfied, print <code>Yes</code>. Otherwise, print <code>No</code>.</p>
+<p>If it is possible to satisfy the condition, print <var>N</var> lines in addition. The <var>v</var>-th (<var>1 ≦ v ≦ N</var>) of these <var>N</var> lines should contain the integer that should be written into vertex <var>v</var>. If there are multiple ways to satisfy the condition, any of those is accepted.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>5
+1 2
+3 1
+4 3
+3 5
+2
+2 6
+5 7
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>Yes
+5
+6
+6
+5
+7
+</pre>
+<p>The figure below shows the tree when Takahashi fell asleep. For each vertex, the integer written beside it represents the index of the vertex, and the integer written into the vertex is the integer written by Takahashi.</p>
+<div style="text-align: center;">
+<img alt="6da26f89839711a520acdf5c3e1cc309.png" src="https://atcoder.jp/img/arc063/6da26f89839711a520acdf5c3e1cc309.png">
+</img></div>
+<p>Aoki can, for example, satisfy the condition by writing integers into the remaining vertices as follows:</p>
+<div style="text-align: center;">
+<img alt="1858d5af5a2c0e51aca39a39d765debb.png" src="https://atcoder.jp/img/arc063/1858d5af5a2c0e51aca39a39d765debb.png">
+</img></div>
+<p>This corresponds to Sample Output 1. Note that other outputs that satisfy the condition will also be accepted, such as:</p>
+<pre>Yes
+7
+6
+8
+7
+7
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>5
+1 2
+3 1
+4 3
+3 5
+3
+2 6
+4 3
+5 7
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>No
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>4
+1 2
+2 3
+3 4
+1
+1 0
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>Yes
+0
+-1
+-2
+-3
+</pre>
+<p>The integers written by Aoki may be negative or exceed <var>10^6</var>.</p></section>
+</div>
+</span>

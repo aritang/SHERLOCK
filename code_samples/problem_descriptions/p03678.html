@@ -1,0 +1,84 @@
+<span class="lang-en">
+<p>Score : <var>1100</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>We will call a string that can be obtained by concatenating two equal strings an <em>even</em> string.
+For example, <code>xyzxyz</code> and <code>aaaaaa</code> are even, while <code>ababab</code> and <code>xyzxy</code> are not.</p>
+<p>For a non-empty string <var>S</var>, we will define <var>f(S)</var> as the shortest even string that can be obtained by appending one or more characters to the end of <var>S</var>.
+For example, <var>f(</var><code>abaaba</code><var>)=</var><code>abaababaab</code>.
+It can be shown that <var>f(S)</var> is uniquely determined for a non-empty string <var>S</var>.</p>
+<p>You are given an even string <var>S</var> consisting of lowercase English letters.
+For each letter in the lowercase English alphabet, find the number of its occurrences from the <var>l</var>-th character through the <var>r</var>-th character of <var>f^{10^{100}} (S)</var>.</p>
+<p>Here, <var>f^{10^{100}} (S)</var> is the string <var>f(f(f( ... f(S) ... )))</var> obtained by applying <var>f</var> to <var>S</var> <var>10^{100}</var> times.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>2 \leq |S| \leq 2\times 10^5</var></li>
+<li><var>1 \leq l \leq r \leq 10^{18}</var></li>
+<li><var>S</var> is an even string consisting of lowercase English letters.</li>
+<li><var>l</var> and <var>r</var> are integers.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>S</var>
+<var>l</var> <var>r</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print <var>26</var> integers in a line with spaces in between.
+The <var>i</var>-th integer should be the number of the occurrences of the <var>i</var>-th letter in the lowercase English alphabet from the <var>l</var>-th character through the <var>r</var>-th character of <var>f^{10^{100}} (S)</var>.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>abaaba
+6 10
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>3 2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+</pre>
+<p>Since <var>f(</var><code>abaaba</code><var>)=</var><code>abaababaab</code>, the first ten characters in <var>f^{10^{100}}(S)</var> is also <code>abaababaab</code>. Thus, the sixth through the tenth characters are <code>abaab</code>. In this string, <code>a</code> appears three times, <code>b</code> appears twice and no other letters appear, and thus the output should be <var>3</var> and <var>2</var> followed by twenty-four <var>0</var>s.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>xx
+1 1000000000000000000
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1000000000000000000 0 0
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>vgxgpuamkvgxgvgxgpuamkvgxg
+1 1000000000000000000
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>87167725689669676 0 0 0 0 0 282080685775825810 0 0 0 87167725689669676 0 87167725689669676 0 0 87167725689669676 0 0 0 0 87167725689669676 141040342887912905 0 141040342887912905 0 0
+</pre></section>
+</div>
+</span>

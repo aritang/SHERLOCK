@@ -1,0 +1,135 @@
+
+<H1><font color="#000"></font>Philosopher's Stone</H1>
+<!-- Problem G-->
+<p>
+In search for wisdom and wealth, Alchemy, the art of transmutation, has long been pursued by people.
+The crucial point of Alchemy was considered to find the recipe for <i>philosopher’s stone</i>, which will be a
+catalyst to produce gold and silver from common metals, and even medicine giving eternal life.
+</p>
+<p>
+Alchemists owned Alchemical Reactors, symbols of their profession. Each recipe of Alchemy went like
+this: gather appropriate materials; melt then mix them in your Reactor for an appropriate period; then
+you will get the desired material along with some waste.
+</p>
+<p>
+A long experience presented two natural laws, which are widely accepted among Alchemists. One is the
+law of conservation of mass, that is, no reaction can change the total mass of things taking part. Because
+of this law, in any Alchemical reaction, mass of product is not greater than the sum of mass of materials.
+The other is the law of the directionality in Alchemical reactions. This law implies, if the matter A
+produces the matter B, then the matter A can never be produced using the matter B.
+</p>
+<p>
+One night, Demiurge, the Master of Alchemists, revealed the recipe of philosopher’s stone to have every
+Alchemist’s dream realized. Since this night, this ultimate recipe, which had been sought for centuries,
+has been an open secret.
+</p>
+<p>
+Alice and Betty were also Alchemists who had been seeking the philosopher’s stone and who were told
+the ultimate recipe in that night. In addition, they deeply had wanted to complete the philosopher’s stone
+earlier than any other Alchemists, so they began to solve the way to complete the recipe in the shortest
+time.
+</p>
+<p>
+Your task is write a program that computes the smallest number of days needed to complete the philoso-
+pher’s stone, given the recipe of philosopher’s stone and materials in their hands.
+</p>
+
+<H2>Input</H2>
+
+<p>
+The input consists of a number of test cases.
+</p>
+<p>
+Each test case starts with a line containing a single integer <i>n</i>, then <i>n</i> recipes follow.
+</p>
+<p>
+Each recipe starts with a line containing a string, the name of the product. Then a line with two integers
+<i>m</i> and <i>d</i> is given, where <i>m</i> is the number of materials and <i>d</i> is the number of days needed to finish the
+reaction. Each of the following <i>m</i> lines specify the name and amount of a material needed for reaction.
+</p>
+<p>
+Those <i>n</i> recipes are followed by a list of materials the two Alchemists initially have. The first line
+indicates the size of the list. Then pairs of the material name and the amount are given, each pair in one
+line.
+</p>
+<p>
+Every name contains printable characters of the ASCII code, i.e. no whitespace or control characters.
+No two recipe will produce the item of the same name. Each test case always include one recipe for
+“philosopher’s-stone,” which is wanted to be produced. Some empty lines may occur in the input
+for human-readability.
+</p>
+
+
+<H2>Output</H2>
+
+<p>
+For each case, output a single line containing the shortest day needed to complete producing the philoso-
+pher’s stone, or “impossible” in case production of philosopher’s stone is impossible.
+</p>
+<p>
+As there are two Alchemists, they can control two reaction in parallel. A reaction can start whenever the
+materials in recipe and at least one Alchemist is available. Time spent in any acts other than reaction,
+such as rests, meals, cleaning reactors, or exchanging items, can be regarded as negligibly small.
+</p>
+
+<H2>Sample Input</H2>
+<pre>
+3
+philosopher’s-stone
+4 10
+tongue 1
+tear 1
+dunkelheit 1
+aroma-materia 1
+
+aroma-materia
+4 5
+solt 1
+holy-water 1
+golden-rock 1
+neutralizer 2
+
+neutralizer
+1 1
+red-rock 5
+
+7
+tongue 1
+tear 1
+dunkelheit 1
+solt 2
+holy-water 3
+golden-rock 2
+red-rock 10
+
+2
+philosopher’s-stone
+5 3
+ninjin 1
+jagaimo 3
+tamanegi 1
+barmont 12
+
+barmont
+3 1
+curry 5
+komugiko 20
+batar 10
+
+7
+ninjin 3
+jagaimo 2
+tamanegi 5
+curry 150
+komugiko 750
+batar 200
+
+0
+</pre>
+
+<H2>Output for the Sample Input</H2>
+<pre>
+16
+impossible
+</pre>
+

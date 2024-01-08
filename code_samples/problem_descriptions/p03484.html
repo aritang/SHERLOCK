@@ -1,0 +1,110 @@
+<span class="lang-en">
+<p>Score : <var>900</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>Takahashi has decided to make a <em>Christmas Tree</em> for the Christmas party in AtCoder, Inc.</p>
+<p>A Christmas Tree is a tree with <var>N</var> vertices numbered <var>1</var> through <var>N</var> and <var>N-1</var> edges, whose <var>i</var>-th edge <var>(1\leq i\leq N-1)</var> connects Vertex <var>a_i</var> and <var>b_i</var>.</p>
+<p>He would like to make one as follows:</p>
+<ul>
+<li>Specify two non-negative integers <var>A</var> and <var>B</var>.</li>
+<li>Prepare <var>A</var> <em>Christmas Paths</em> whose lengths are at most <var>B</var>. Here, a Christmas Path of length <var>X</var> is a graph with <var>X+1</var> vertices and <var>X</var> edges such that, if we properly number the vertices <var>1</var> through <var>X+1</var>, the <var>i</var>-th edge <var>(1\leq i\leq X)</var> will connect Vertex <var>i</var> and <var>i+1</var>.</li>
+<li>Repeat the following operation until he has one connected tree:<ul>
+<li>Select two vertices <var>x</var> and <var>y</var> that belong to different connected components. Combine <var>x</var> and <var>y</var> into one vertex. More precisely, for each edge <var>(p,y)</var> incident to the vertex <var>y</var>, add the edge <var>(p,x)</var>. Then, delete the vertex <var>y</var> and all the edges incident to <var>y</var>.</li>
+</ul>
+</li>
+<li>Properly number the vertices in the tree.</li>
+</ul>
+<p>Takahashi would like to find the lexicographically smallest pair <var>(A,B)</var> such that he can make a Christmas Tree, that is, find the smallest <var>A</var>, and find the smallest <var>B</var> under the condition that <var>A</var> is minimized.</p>
+<p>Solve this problem for him.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>2 \leq N \leq 10^5</var></li>
+<li><var>1 \leq a_i,b_i \leq N</var></li>
+<li>The given graph is a tree.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+<var>a_1</var> <var>b_1</var>
+:
+<var>a_{N-1}</var> <var>b_{N-1}</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>For the lexicographically smallest <var>(A,B)</var>, print <var>A</var> and <var>B</var> with a space in between.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>7
+1 2
+2 3
+2 4
+4 5
+4 6
+6 7
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>3 2
+</pre>
+<p>We can make a Christmas Tree as shown in the figure below:</p>
+<p><img alt="" src="https://img.atcoder.jp/arc088/96f78221624d6a13628f6052f5db697d.png"/></p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>8
+1 2
+2 3
+3 4
+4 5
+5 6
+5 7
+5 8
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>2 5
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>10
+1 2
+2 3
+3 4
+2 5
+6 5
+6 7
+7 8
+5 9
+10 5
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>3 4
+</pre></section>
+</div>
+</span>

@@ -1,0 +1,108 @@
+<span class="lang-en">
+<p>Score : <var>600</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>On the <var>x</var><var>y</var>-plane, Snuke is going to travel from the point <var>(x_s, y_s)</var> to the point <var>(x_t, y_t)</var>.
+He can move in arbitrary directions with speed <var>1</var>.
+Here, we will consider him as a point without size.</p>
+<p>There are <var>N</var> circular barriers deployed on the plane.
+The center and the radius of the <var>i</var>-th barrier are <var>(x_i, y_i)</var> and <var>r_i</var>, respectively.
+The barriers may overlap or contain each other.</p>
+<p>A point on the plane is exposed to cosmic rays if the point is not within any of the barriers.</p>
+<p>Snuke wants to avoid exposure to cosmic rays as much as possible during the travel.
+Find the minimum possible duration of time he is exposed to cosmic rays during the travel.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li>All input values are integers.</li>
+<li><var>-10^9 ≤ x_s, y_s, x_t, y_t ≤ 10^9</var></li>
+<li><var>(x_s, y_s)</var> ≠ <var>(x_t, y_t)</var></li>
+<li><var>1≤N≤1,000</var></li>
+<li><var>-10^9 ≤ x_i, y_i ≤ 10^9</var></li>
+<li><var>1 ≤ r_i ≤ 10^9</var></li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>The input is given from Standard Input in the following format:</p>
+<pre><var>x_s</var> <var>y_s</var> <var>x_t</var> <var>y_t</var>
+<var>N</var>
+<var>x_1</var> <var>y_1</var> <var>r_1</var>
+<var>x_2</var> <var>y_2</var> <var>r_2</var>
+<var>:</var>
+<var>x_N</var> <var>y_N</var> <var>r_N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the minimum possible duration of time Snuke is exposed to cosmic rays during the travel.
+The output is considered correct if the absolute or relative error is at most <var>10^{-9}</var>.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>-2 -2 2 2
+1
+0 0 1
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>3.6568542495
+</pre>
+<p>An optimal route is as follows:</p>
+<div style="text-align: center;">
+<img alt="e9c630751968b7051df5750b7ddc0e07.png" src="https://atcoder.jp/img/arc064/e9c630751968b7051df5750b7ddc0e07.png">
+</img></div>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>-2 0 2 0
+2
+-1 0 2
+1 0 2
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>0.0000000000
+</pre>
+<p>An optimal route is as follows:</p>
+<div style="text-align: center;">
+<img alt="fb82f6f4df5b22cffb868ce6333277aa.png" src="https://atcoder.jp/img/arc064/fb82f6f4df5b22cffb868ce6333277aa.png">
+</img></div>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>4 -2 -2 4
+3
+0 0 2
+4 0 1
+0 4 1
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>4.0000000000
+</pre>
+<p>An optimal route is as follows:</p>
+<div style="text-align: center;">
+<img alt="d09006720c225cbe69eae3fd9c186e67.png" src="https://atcoder.jp/img/arc064/d09006720c225cbe69eae3fd9c186e67.png"/>
+</div></section>
+</div>
+</span>

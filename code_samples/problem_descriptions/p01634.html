@@ -1,0 +1,66 @@
+
+
+
+<h1 class="ndoc-heading1">Problem A: Register Phase</h1>
+<p class="ndoc-top">
+インターネットをより安全に活用するために、堅牢なパスワードを使うことは重要である。それと同時に、同じパスワードを使い回さないことも非常に重要である。どんなに強いパスワードを使っていても、一箇所で平文が流出してしまえば、破るのは非常に容易になってしまう。もちろん、全てのアプリケーションがパスワードをハッシュ化し、SALTを適切に使用していれば流出してもそのような被害は発生しないが、いまだにパスワードを平文で保存しているアプリケーションはあるのである。</p>
+<p class="ndoc-top">さて、そろそろコンテストが始まる。チームのアカウントを登録しなくては…。</p>
+<h2 class="ndoc-heading2">問題</h2>
+<p class="ndoc-top">
+パスワードを表す文字列が与えられる。その文字列が以下の条件を全て満たすか調べ、満たす場合は<span style=
+"font-family: monospace;">"VALID"</span>と、ひとつでも満たさない項目がある場合は<span style="font-family: monospace;">"INVALID"</span>と出力せよ。</p>
+<ul class="ndoc-indent">
+<li>文字列長が6以上である</li>
+<li>数字を一つ以上含んでいる</li>
+<li>大文字英字を一つ以上含んでいる</li>
+<li>小文字英字を一つ以上含んでいる</li>
+</ul>
+<h2 class="ndoc-heading2">入力</h2>
+<p class="ndoc-top">パスワードを表す文字列が一行に与えられる。</p>
+<h2 class="ndoc-heading2">出力</h2>
+<p class="ndoc-top">パスワードを表す文字列が問題の条件を全て満たすなら<span style=
+"font-family: monospace;">"VALID"</span>と、満たさない条件があるなら<span style=
+"font-family: monospace;">"INVALID"</span>と、一行に出力せよ。</p>
+<h2 class="ndoc-heading2">制約</h2>
+<ul class="ndoc-indent">
+<li>パスワードを表す文字列は1文字以上20文字以内である</li>
+<li>パスワードを表す文字列は英大文字、英小文字、数字のみを含む</li>
+</ul>
+<h2 class="ndoc-heading2">入出力例</h2>
+<h3 class="ndoc-heading3">入力1</h3>
+<pre>
+password
+</pre>
+<h3 class="ndoc-heading3">出力1</h3>
+<pre>
+INVALID
+</pre>
+<p>世界中で広く使われているパスワードである。</p>
+<h3 class="ndoc-heading3">入力2</h3>
+<pre>
+AizuCamp2013
+</pre>
+<h3 class="ndoc-heading3">出力2</h3>
+<pre>
+VALID
+</pre>
+<p>素晴しいパスワードである。</p>
+
+<h3 class="ndoc-heading3">入力3</h3>
+<pre>
+1234
+</pre>
+<h3 class="ndoc-heading3">出力3</h3>
+<pre>
+INVALID
+</pre>
+<p>暗証番号として広く使われている。</p>
+<h3 class="ndoc-heading3">入力4</h3>
+<pre>
+NaBiO3
+</pre>
+<h3 class="ndoc-heading3">出力4</h3>
+<pre>
+VALID
+</pre>
+<p>ぎりぎり6文字以上である。</p>

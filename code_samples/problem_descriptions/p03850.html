@@ -1,0 +1,82 @@
+<span class="lang-en">
+<p>Score : <var>900</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>Joisino has a formula consisting of <var>N</var> terms: <var>A_1</var> <var>op_1</var> <var>A_2</var> <var>...</var> <var>op_{N-1}</var> <var>A_N</var>.
+Here, <var>A_i</var> is an integer, and <var>op_i</var> is an binary operator either <code>+</code> or <code>-</code>.
+Because Joisino loves large numbers, she wants to maximize the evaluated value of the formula by inserting an arbitrary number of pairs of parentheses (possibly zero) into the formula.
+Opening parentheses can only be inserted immediately before an integer, and closing parentheses can only be inserted immediately after an integer.
+It is allowed to insert any number of parentheses at a position.
+Your task is to write a program to find the maximum possible evaluated value of the formula after inserting an arbitrary number of pairs of parentheses.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1≦N≦10^5</var></li>
+<li><var>1≦A_i≦10^9</var></li>
+<li><var>op_i</var> is either <code>+</code> or <code>-</code>.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>The input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+<var>A_1</var> <var>op_1</var> <var>A_2</var> <var>...</var> <var>op_{N-1}</var> <var>A_N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the maximum possible evaluated value of the formula after inserting an arbitrary number of pairs of parentheses.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>3
+5 - 1 - 3
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>7
+</pre>
+<p>The maximum possible value is: <var>5 - (1 - 3) = 7</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>5
+1 - 2 + 3 - 4 + 5
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>5
+</pre>
+<p>The maximum possible value is: <var>1 - (2 + 3 - 4) + 5 = 5</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>5
+1 - 20 - 13 + 14 - 5
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>13
+</pre>
+<p>The maximum possible value is: <var>1 - (20 - (13 + 14) - 5) = 13</var>.</p></section>
+</div>
+</span>

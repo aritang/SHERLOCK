@@ -1,0 +1,175 @@
+
+
+
+<H1>Square Carpets</H1>
+
+<P>
+Mr. Frugal bought a new house.
+He feels deeply in love with his new house
+because it has a comfortable living room
+in which he can put himself completely at ease.
+He thinks his new house is a really good buy.
+</P>
+
+<P>
+But, to his disappointment, 
+the floor of its living room has some scratches on it.
+</P>
+
+<P>
+The floor has a rectangle shape, covered with square panels.
+He wants to replace all the scratched panels with flawless panels, 
+but he cannot afford to do so.
+Then, he decides to cover all the scratched panels 
+with carpets.
+</P>
+
+<P>
+The features of the carpets he can use are as follows.
+</P>
+
+<OL>
+<LI> Carpets are square-shaped.
+<LI> Carpets may overlap each other.
+<LI> Carpets cannot be folded.
+<LI> Different sizes of carpets are available.
+Lengths of sides of carpets are multiples of that of the panels.
+</OL>
+
+<P>
+The carpets must cover all the scratched panels,
+but must not cover any of the flawless ones.
+</P>
+
+<P>
+For example, 
+if the scratched panels are as shown in Figure 1, 
+at least 6 carpets are needed.
+</P>
+
+<CENTER>
+<TABLE>
+<TR>
+  <TD ALIGN="center"><img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE1_carpets"></TD>
+</TR>
+<TR>
+  <TD ALIGN="center">Figure 1: Example Covering</TD>
+</TR>
+</TABLE>
+</CENTER>
+
+<P>
+As carpets cost the same irrespective of their sizes, 
+Mr. Frugal would like to use as few number of carpets as possible.
+</P>
+
+<P>
+Your job is to write a program which tells the minimum number 
+of the carpets to cover all the scratched panels.
+</P>
+
+
+<H2>Input</H2>
+
+<P>
+The input consists of multiple data sets.
+
+As in the following, the end of the input is indicated by a line
+containing two zeros.
+</P>
+
+
+<BLOCKQUOTE>
+<I>DataSet</I><SUB>1</SUB><BR>
+<I>DataSet</I><SUB>2</SUB><BR>
+...<BR>
+<I>DataSet</I><SUB><I>n</I></SUB><BR>
+<TT>0</TT> <TT>0</TT>
+</BLOCKQUOTE>
+
+
+<P>
+Each data set (<I>DataSet</I><SUB><I>i</I></SUB>) represents the
+state of a floor. The format of a data set is as follows.
+</P>
+
+<BLOCKQUOTE>
+<I>W</I> <I>H</I><BR>
+<I>P</I><SUB>11</SUB> <I>P</I><SUB>12</SUB> <I>P</I><SUB>13</SUB> ... <I>P</I><SUB>1<I>W</I></SUB><BR>
+<I>P</I><SUB>21</SUB> <I>P</I><SUB>22</SUB> <I>P</I><SUB>23</SUB> ... <I>P</I><SUB>2<I>W</I></SUB><BR>
+...<BR>
+<I>P</I><SUB><I>H</I>1</SUB> <I>P</I><SUB><I>H</I>2</SUB>
+<I>P</I><SUB><I>H</I>3</SUB> ... <I>P</I><SUB><I>HW</I></SUB><BR>
+</BLOCKQUOTE>
+
+
+<P>
+The positive integers <I>W</I> and <I>H</I> are the numbers of panels
+on the living room
+in the x- and y- direction, respectively.
+The values of <I>W</I> and <I>H</I> are no more than 10.
+The integer <I>P</I><SUB><I>yx</I></SUB> represents the state of the panel.
+The value of <I>P</I><SUB><I>yx</I></SUB> means,
+</P>
+
+<BLOCKQUOTE>
+<TT>0</TT>: flawless panel (must not be covered),<BR>
+<TT>1</TT>: scratched panel (must be covered). 
+</BLOCKQUOTE>
+
+
+<H2>Output</H2>
+
+<P>
+For each data set,
+your program should output a line containing one integer which 
+represents the minimum number of the carpets to cover 
+all of the scratched panels.
+</P>
+
+<H2>Sample Input</H2>
+<PRE>
+4 3
+0 1 1 1
+1 1 1 1
+1 1 1 1
+8 5
+0 1 1 1 1 1 1 1
+1 1 1 1 1 1 1 1
+1 1 1 1 1 1 1 1
+1 1 1 0 1 1 1 1
+0 1 1 1 0 1 1 1
+8 8
+0 1 1 0 0 1 1 0
+1 1 1 1 1 1 1 1
+1 1 1 1 1 1 1 1
+0 1 1 0 0 1 1 0
+0 1 1 0 0 1 1 0
+1 1 1 1 1 1 1 1
+1 1 1 1 1 1 1 1
+0 1 1 0 0 1 1 0
+10 10
+1 1 1 1 1 1 1 1 1 1
+1 1 1 1 1 1 1 1 1 1
+1 1 0 1 1 0 1 1 0 1
+1 1 1 1 1 1 1 1 1 1
+1 1 1 1 1 1 1 1 1 1
+1 1 0 1 1 0 1 1 0 1
+1 1 1 1 1 1 1 1 1 1
+1 1 1 1 1 1 1 1 1 1
+1 1 0 1 1 0 1 1 0 1
+1 1 1 1 1 1 1 1 1 1
+0 0
+</PRE>
+
+
+<H2>Output for the Sample Input</H2>
+
+<PRE>
+2
+6
+14
+29
+</PRE>
+
+

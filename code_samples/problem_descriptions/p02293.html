@@ -1,0 +1,71 @@
+
+<H1>Parallel/Orthogonal</H1>
+<br/>
+
+<p>
+For given two lines <var>s1</var> and <var>s2</var>, print "2" if they are parallel, "1" if they are orthogonal, or "0" otherwise.
+</p>
+
+<p>
+<var>s1</var> crosses points <var>p0</var> and <var>p1</var>, and
+<var>s2</var> crosses points <var>p2</var> and <var>p3</var>.
+</p>
+
+<H2>Input</H2>
+
+<p>
+The entire input looks like:
+</p>
+
+<pre>
+<var>q</var> (the number of queries)
+1st query
+2nd query
+...
+<var>q</var>th query
+</pre>
+
+<p>
+Each query consists of integer coordinates of the points <var>p0</var>, <var>p1</var>, <var>p2</var>, <var>p3</var> in the following format:
+</p>
+
+<pre>
+<var>x<sub>p0</sub></var> <var>y<sub>p0</sub></var> <var>x<sub>p1</sub></var> <var>y<sub>p1</sub></var> <var>x<sub>p2</sub></var> <var>y<sub>p2</sub></var> <var>x<sub>p3</sub></var> <var>y<sub>p3</sub></var>
+</pre>
+
+
+<H2>Output</H2>
+
+<p>
+For each query, print "2", "1" or "0".
+</p>
+
+<H2>Constraints</H2>
+
+<ul>
+<li>
+1 &le; <var>q</var> &le; 1000
+</li>
+<li>
+-10000 &le; <var>x<sub>p<sub>i</sub></sub></var>, <var>y<sub>p<sub>i</sub></sub></var> &le; 10000
+</li>
+<li>
+<var>p0 &ne; p1</var> and
+<var>p2 &ne; p3</var>.
+</li>
+</ul>
+
+<H2>Sample Input 1</H2>
+<pre>
+3
+0 0 3 0 0 2 3 2
+0 0 3 0 1 1 1 4
+0 0 3 0 1 1 2 2
+</pre>
+<H2>Sample Output 1</H2>
+<pre>
+2
+1
+0
+</pre>
+<br/>

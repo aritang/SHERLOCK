@@ -1,0 +1,83 @@
+<span class="lang-en">
+<p>Score: <var>1000</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3>
+<p>Find the number of sequences of <var>N</var> non-negative integers <var>A_1, A_2, ..., A_N</var> that satisfy the following conditions:</p>
+<ul>
+<li><var>L \leq A_1 + A_2 + ... + A_N \leq R</var></li>
+<li>When the <var>N</var> elements are sorted in non-increasing order, the <var>M</var>-th and <var>(M+1)</var>-th elements are equal.</li>
+</ul>
+<p>Since the answer can be enormous, print it modulo <var>10^9+7</var>.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3>
+<ul>
+<li>All values in input are integers.</li>
+<li><var>1 \leq M &lt; N \leq 3 \times 10^5</var></li>
+<li><var>1 \leq L \leq R \leq 3 \times 10^5</var></li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3>
+<p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var> <var>M</var> <var>L</var> <var>R</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3>
+<p>Print the number of sequences of <var>N</var> non-negative integers, modulo <var>10^9+7</var>.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>4 2 3 7
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>105
+</pre>
+<p>The sequences of non-negative integers that satisfy the conditions are:</p>
+<p><var>\begin{eqnarray} &amp;(1, 1, 1, 0), (1, 1, 1, 1), (2, 1, 1, 0), (2, 1, 1, 1), (2, 2, 2, 0), (2, 2, 2, 1), \\ &amp;(3, 0, 0, 0), (3, 1, 1, 0), (3, 1, 1, 1), (3, 2, 2, 0), (4, 0, 0, 0), (4, 1, 1, 0), \\ &amp;(4, 1, 1, 1), (5, 0, 0, 0), (5, 1, 1, 0), (6, 0, 0, 0), (7, 0, 0, 0)\end{eqnarray}</var></p>
+<p>and their permutations, for a total of <var>105</var> sequences.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>2 1 4 8
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>3
+</pre>
+<p>The three sequences that satisfy the conditions are <var>(2, 2)</var>, <var>(3, 3)</var>, and <var>(4, 4)</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>141592 6535 89793 238462
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>933832916
+</pre></section>
+</div>
+</span>

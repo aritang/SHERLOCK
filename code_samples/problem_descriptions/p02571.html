@@ -1,0 +1,65 @@
+<span class="lang-en">
+<p>Score : <var>200</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>Given are two strings <var>S</var> and <var>T</var>.</p>
+<p>Let us change some of the characters in <var>S</var> so that <var>T</var> will be a substring of <var>S</var>.</p>
+<p>At least how many characters do we need to change?</p>
+<p>Here, a substring is a consecutive subsequence. For example, <code>xxx</code> is a substring of <code>yxxxy</code>, but not a substring of <code>xxyxx</code>.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li>The lengths of <var>S</var> and <var>T</var> are each at least <var>1</var> and at most <var>1000</var>.</li>
+<li>The length of <var>T</var> is at most that of <var>S</var>.</li>
+<li><var>S</var> and <var>T</var> consist of lowercase English letters.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>S</var>
+<var>T</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the minimum number of characters in <var>S</var> that need to be changed.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>cabacc
+abc
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>1
+</pre>
+<p>For example, changing the fourth character <code>a</code> in <var>S</var> to <code>c</code> will match the second through fourth characters in <var>S</var> to <var>T</var>.</p>
+<p>Since <var>S</var> itself does not have <var>T</var> as its substring, this number of changes - one - is the minimum needed.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>codeforces
+atcoder
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>6
+</pre></section>
+</div>
+</span>

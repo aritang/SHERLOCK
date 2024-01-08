@@ -1,0 +1,87 @@
+<span class="lang-en">
+<p>Score : <var>400</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>We have <var>N</var> integers. The <var>i</var>-th integer is <var>A_i</var>.</p>
+<p>Find <var>\sum_{i=1}^{N-1}\sum_{j=i+1}^{N} (A_i \mbox{ XOR } A_j)</var>, modulo <var>(10^9+7)</var>.</p>
+<details>
+<summary>What is <var>\mbox{ XOR }</var>?</summary>
+<p>
+The XOR of integers <var>A</var> and <var>B</var>, <var>A \mbox{ XOR } B</var>, is defined as follows:
+<ul>
+<li>When <var>A \mbox{ XOR } B</var> is written in base two, the digit in the <var>2^k</var>'s place (<var>k \geq 0</var>) is <var>1</var> if either <var>A</var> or <var>B</var>, but not both, has <var>1</var> in the <var>2^k</var>'s place, and <var>0</var> otherwise.</li>
+</ul>
+For example, <var>3 \mbox{ XOR } 5 = 6</var>. (In base two: <var>011 \mbox{ XOR } 101 = 110</var>.)
+</p>
+</details>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>2 \leq N \leq 3 \times 10^5</var></li>
+<li><var>0 \leq A_i &lt; 2^{60}</var></li>
+<li>All values in input are integers.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+<var>A_1</var> <var>A_2</var> <var>...</var> <var>A_N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the value <var>\sum_{i=1}^{N-1}\sum_{j=i+1}^{N} (A_i \mbox{ XOR } A_j)</var>, modulo <var>(10^9+7)</var>.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>3
+1 2 3
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>6
+</pre>
+<p>We have <var>(1\mbox{ XOR } 2)+(1\mbox{ XOR } 3)+(2\mbox{ XOR } 3)=3+2+1=6</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>10
+3 1 4 1 5 9 2 6 5 3
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>237
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>10
+3 14 159 2653 58979 323846 2643383 27950288 419716939 9375105820
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>103715602
+</pre>
+<p>Print the sum modulo <var>(10^9+7)</var>.</p></section>
+</div>
+</span>

@@ -1,0 +1,81 @@
+<span class="lang-en">
+<p>Score : <var>400</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>There are <var>N</var> empty boxes arranged in a row from left to right.
+The integer <var>i</var> is written on the <var>i</var>-th box from the left <var>(1 \leq i \leq N)</var>.</p>
+<p>For each of these boxes, Snuke can choose either to put a ball in it or to put nothing in it.</p>
+<p>We say a set of choices to put a ball or not in the boxes is good when the following condition is satisfied:</p>
+<ul>
+<li>For every integer <var>i</var> between <var>1</var> and <var>N</var> (inclusive), the total number of balls contained in the boxes with multiples of <var>i</var> written on them is congruent to <var>a_i</var> modulo <var>2</var>.</li>
+</ul>
+<p>Does there exist a good set of choices? If the answer is yes, find one good set of choices.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li>All values in input are integers.</li>
+<li><var>1 \leq N \leq 2 \times 10^5</var></li>
+<li><var>a_i</var> is <var>0</var> or <var>1</var>.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+<var>a_1</var> <var>a_2</var> <var>...</var> <var>a_N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>If a good set of choices does not exist, print <code>-1</code>.</p>
+<p>If a good set of choices exists, print one such set of choices in the following format:</p>
+<pre><var>M</var>
+<var>b_1</var> <var>b_2</var> <var>...</var> <var>b_M</var>
+</pre>
+<p>where <var>M</var> denotes the number of boxes that will contain a ball, and <var>b_1,\ b_2,\ ...,\ b_M</var> are the integers written on these boxes, in any order.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>3
+1 0 0
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>1
+1
+</pre>
+<p>Consider putting a ball only in the box with <var>1</var> written on it.</p>
+<ul>
+<li>There are three boxes with multiples of <var>1</var> written on them: the boxes with <var>1</var>, <var>2</var>, and <var>3</var>. The total number of balls contained in these boxes is <var>1</var>.</li>
+<li>There is only one box with a multiple of <var>2</var> written on it: the box with <var>2</var>. The total number of balls contained in these boxes is <var>0</var>.</li>
+<li>There is only one box with a multiple of <var>3</var> written on it: the box with <var>3</var>. The total number of balls contained in these boxes is <var>0</var>.</li>
+</ul>
+<p>Thus, the condition is satisfied, so this set of choices is good.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>5
+0 0 0 0 0
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>0
+</pre>
+<p>Putting nothing in the boxes can be a good set of choices.</p></section>
+</div>
+</span>

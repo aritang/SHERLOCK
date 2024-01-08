@@ -1,0 +1,94 @@
+<span class="lang-en">
+<p>Score : <var>400</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>The <em>ABC number</em> of a string <var>T</var> is the number of triples of integers <var>(i, j, k)</var> that satisfy all of the following conditions:</p>
+<ul>
+<li><var>1 ≤ i &lt; j &lt; k ≤ |T|</var> (<var>|T|</var> is the length of <var>T</var>.)</li>
+<li><var>T_i =</var> <code>A</code> (<var>T_i</var> is the <var>i</var>-th character of <var>T</var> from the beginning.)</li>
+<li><var>T_j =</var> <code>B</code></li>
+<li><var>T_k =</var> <code>C</code></li>
+</ul>
+<p>For example, when <var>T =</var> <code>ABCBC</code>, there are three triples of integers <var>(i, j, k)</var> that satisfy the conditions: <var>(1, 2, 3), (1, 2, 5), (1, 4, 5)</var>. Thus, the ABC number of <var>T</var> is <var>3</var>.</p>
+<p>You are given a string <var>S</var>. Each character of <var>S</var> is <code>A</code>, <code>B</code>, <code>C</code> or <code>?</code>.</p>
+<p>Let <var>Q</var> be the number of occurrences of <code>?</code> in <var>S</var>. We can make <var>3^Q</var> strings by replacing each occurrence of <code>?</code> in <var>S</var> with <code>A</code>, <code>B</code> or <code>C</code>. Find the sum of the ABC numbers of all these strings.</p>
+<p>This sum can be extremely large, so print the sum modulo <var>10^9 + 7</var>.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>3 ≤ |S| ≤ 10^5</var></li>
+<li>Each character of <var>S</var> is <code>A</code>, <code>B</code>, <code>C</code> or <code>?</code>.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>S</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the sum of the ABC numbers of all the <var>3^Q</var> strings, modulo <var>10^9 + 7</var>.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>A??C
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>8
+</pre>
+<p>In this case, <var>Q = 2</var>, and we can make <var>3^Q = 9</var> strings by by replacing each occurrence of <code>?</code> with <code>A</code>, <code>B</code> or <code>C</code>. The ABC number of each of these strings is as follows:</p>
+<ul>
+<li><code>AAAC</code>: <var>0</var></li>
+<li><code>AABC</code>: <var>2</var></li>
+<li><code>AACC</code>: <var>0</var></li>
+<li><code>ABAC</code>: <var>1</var></li>
+<li><code>ABBC</code>: <var>2</var></li>
+<li><code>ABCC</code>: <var>2</var></li>
+<li><code>ACAC</code>: <var>0</var></li>
+<li><code>ACBC</code>: <var>1</var></li>
+<li><code>ACCC</code>: <var>0</var></li>
+</ul>
+<p>The sum of these is <var>0 + 2 + 0 + 1 + 2 + 2 + 0 + 1 + 0 = 8</var>, so we print <var>8</var> modulo <var>10^9 + 7</var>, that is, <var>8</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>ABCBC
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>3
+</pre>
+<p>When <var>Q = 0</var>, we print the ABC number of <var>S</var> itself, modulo <var>10^9 + 7</var>. This string is the same as the one given as an example in the problem statement, and its ABC number is <var>3</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>????C?????B??????A???????
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>979596887
+</pre>
+<p>In this case, the sum of the ABC numbers of all the <var>3^Q</var> strings is <var>2291979612924</var>, and we should print this number modulo <var>10^9 + 7</var>, that is, <var>979596887</var>.</p></section>
+</div>
+</span>

@@ -1,0 +1,126 @@
+<span class="lang-en">
+<p>Score : <var>600</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>There are <var>2N</var> balls, <var>N</var> white and <var>N</var> black, arranged in a row. The integers from <var>1</var> through <var>N</var> are written on the white balls, one on each ball, and they are also written on the black balls, one on each ball.
+The integer written on the <var>i</var>-th ball from the left (<var>1</var> <var>≤</var> <var>i</var> <var>≤</var> <var>2N</var>) is <var>a_i</var>, and the color of this ball is represented by a letter <var>c_i</var>.
+<var>c_i</var> <var>=</var> <code>W</code> represents the ball is white; <var>c_i</var> <var>=</var> <code>B</code> represents the ball is black.</p>
+<p>Takahashi the human wants to achieve the following objective:</p>
+<ul>
+<li>For every pair of integers <var>(i,j)</var> such that <var>1</var> <var>≤</var> <var>i</var> <var>&lt;</var> <var>j</var> <var>≤</var> <var>N</var>, the white ball with <var>i</var> written on it is to the left of the white ball with <var>j</var> written on it.</li>
+<li>For every pair of integers <var>(i,j)</var> such that <var>1</var> <var>≤</var> <var>i</var> <var>&lt;</var> <var>j</var> <var>≤</var> <var>N</var>, the black ball with <var>i</var> written on it is to the left of the black ball with <var>j</var> written on it.</li>
+</ul>
+<p>In order to achieve this, he can perform the following operation:</p>
+<ul>
+<li>Swap two adjacent balls.</li>
+</ul>
+<p>Find the minimum number of operations required to achieve the objective.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1</var> <var>≤</var> <var>N</var> <var>≤</var> <var>2000</var></li>
+<li><var>1</var> <var>≤</var> <var>a_i</var> <var>≤</var> <var>N</var></li>
+<li><var>c_i</var> <var>=</var> <code>W</code> or <var>c_i</var> <var>=</var> <code>B</code>.</li>
+<li>If <var>i</var> <var>≠</var> <var>j</var>, <var>(a_i,c_i)</var> <var>≠</var> <var>(a_j,c_j)</var>.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+<var>c_1</var> <var>a_1</var>
+<var>c_2</var> <var>a_2</var>
+<var>:</var>
+<var>c_{2N}</var> <var>a_{2N}</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the minimum number of operations required to achieve the objective.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>3
+B 1
+W 2
+B 3
+W 1
+W 3
+B 2
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>4
+</pre>
+<p>The objective can be achieved in four operations, for example, as follows:</p>
+<ul>
+<li>Swap the black <var>3</var> and white <var>1</var>.</li>
+<li>Swap the white <var>1</var> and white <var>2</var>.</li>
+<li>Swap the black <var>3</var> and white <var>3</var>.</li>
+<li>Swap the black <var>3</var> and black <var>2</var>.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>4
+B 4
+W 4
+B 3
+W 3
+B 2
+W 2
+B 1
+W 1
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>18
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>9
+W 3
+B 1
+B 4
+W 1
+B 5
+W 9
+W 2
+B 6
+W 5
+B 3
+W 8
+B 9
+W 7
+B 2
+B 8
+W 4
+W 6
+B 7
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>41
+</pre></section>
+</div>
+</span>

@@ -1,0 +1,107 @@
+<span class="lang-en">
+<p>Score : <var>2100</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>Snuke has a board with an <var>N \times N</var> grid, and <var>N \times N</var> tiles.</p>
+<p>Each side of a square that is part of the perimeter of the grid is attached with a socket.
+That is, each side of the grid is attached with <var>N</var> sockets, for the total of <var>4 \times N</var> sockets.
+These sockets are labeled as follows:</p>
+<ul>
+<li>The sockets on the top side of the grid: <var>U1, U2, ..., UN</var> from left to right</li>
+<li>The sockets on the bottom side of the grid: <var>D1, D2, ..., DN</var> from left to right</li>
+<li>The sockets on the left side of the grid: <var>L1, L2, ..., LN</var> from top to bottom</li>
+<li>The sockets on the right side of the grid: <var>R1, R2, ..., RN</var> from top to bottom</li>
+</ul>
+<figure id="socket_id">
+<img src="https://atcoder.jp/img/code-festival-2016-final/916ffede6e718801d689f189e658a9bb.png">
+<figcaption>Figure: The labels of the sockets</figcaption>
+</img></figure>
+<p>Snuke can insert a tile from each socket into the square on which the socket is attached.
+When the square is already occupied by a tile, the occupying tile will be pushed into the next square, and when the next square is also occupied by another tile, that another occupying tile will be pushed as well, and so forth.
+Snuke cannot insert a tile if it would result in a tile pushed out of the grid.
+The behavior of tiles when a tile is inserted is demonstrated in detail at Sample Input/Output <var>1</var>.</p>
+<p>Snuke is trying to insert the <var>N \times N</var> tiles one by one from the sockets, to reach the state where every square contains a tile.
+Here, he must insert exactly <var>U_i</var> tiles from socket <var>Ui</var>, <var>D_i</var> tiles from socket <var>Di</var>, <var>L_i</var> tiles from socket <var>Li</var> and <var>R_i</var> tiles from socket <var>Ri</var>.
+Determine whether it is possible to insert the tiles under the restriction. If it is possible, in what order the tiles should be inserted from the sockets?</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1≦N≦300</var></li>
+<li><var>U_i,D_i,L_i</var> and <var>R_i</var> are non-negative integers.</li>
+<li>The sum of all values <var>U_i,D_i,L_i</var> and <var>R_i</var> is equal to <var>N \times N</var>.</li>
+</ul>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Partial Scores</h3><ul>
+<li><var>2000</var> points will be awarded for passing the test set satisfying <var>N≦40</var>.</li>
+<li>Additional <var>100</var> points will be awarded for passing the test set without additional constraints.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>The input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+<var>U_1</var> <var>U_2</var> <var>...</var> <var>U_N</var>
+<var>D_1</var> <var>D_2</var> <var>...</var> <var>D_N</var>
+<var>L_1</var> <var>L_2</var> <var>...</var> <var>L_N</var>
+<var>R_1</var> <var>R_2</var> <var>...</var> <var>R_N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>If it is possible to insert the tiles so that every square will contain a tile, print the labels of the sockets in the order the tiles should be inserted from them, one per line. If it is impossible, print <code>NO</code> instead. If there exists more than one solution, print any of those.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>3
+0 0 1
+1 1 0
+3 0 1
+0 1 1
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>L1
+L1
+L1
+L3
+D1
+R2
+U3
+R3
+D2
+</pre>
+<p>Snuke can insert the tiles as shown in the figure below. An arrow indicates where a tile is inserted from, a circle represents a tile, and a number written in a circle indicates how many tiles are inserted before and including the tile.</p>
+<p><img alt="" src="https://atcoder.jp/img/code-festival-2016-final/252110b5818dc7d972f77d90f99cb8cb.png"/></p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>2
+2 0
+2 0
+0 0
+0 0
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>NO
+</pre></section>
+</div>
+</span>

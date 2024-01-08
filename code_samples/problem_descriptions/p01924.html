@@ -1,0 +1,97 @@
+
+
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({ tex2jax: { inlineMath: [["$","$"], ["\\(","\\)"]], processEscapes: true }});
+</script>
+<script language="JavaScript" type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+
+<h3>海岸線</h3>
+
+<p>海岸には毎秒波が押し寄せる．基準点 <i>P</i> を超えて何 m の地点まで波が押し寄せたかを，<i>T</i> 秒の間だけ毎秒観測し記録したデータがある．データは <i>T</i> 個の整数 <i>x<sub>1</sub></i>, <i>...</i>, <i>x<sub>T</sub></i> からなり，各 <i>i  (1 &le; i &le; T)</i> に対し，観測を始めてから <i>i</i> 秒後には地点 <i>P</i> からちょうど <i>x<sub>i</sub></i> m の地点までの波が押し寄せ，海水に浸っていたことを表す．
+</p>
+
+<p>海岸は，最後に海水に浸ってから <i>D</i> 秒後に乾くことが分かっている．ここで，乾くまでの時間は最後に海水に浸った時間のみに依存し，それ以前に波に浸っていた回数や時間には依存しないことに注意せよ．
+</p>
+
+<p>基準点 <i>P</i> から，陸の方向に距離 <i>L</i> だけ離れた地点が，観測を開始してから 1 秒後と <i>T</i> 秒後の間に少なくとも何秒間濡れていたかを求めよ．ただし，時刻 0 で海岸は乾いていたことがわかっている．
+</p>
+
+<p>以下に，Sample Input 第1ケースの図を示す．
+</p>
+
+<div style="text-align:center">
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_JAGDomestic2017_fig_b_0" witdh="300" height="300">
+<p>図B1: Sample Input 第1ケースの場合
+</p>
+</div>
+
+<h3>Input</h3>
+
+<blockquote></blockquote>
+<p>入力データセットは複数のケースから構成される．データセットの個数は最大でも 40 個を超えない．各ケースは次のような形式である．
+</p><blockquote><i>T</i> <i>D</i> <i>L</i><br><i>x<sub>1</sub></i><br>...<br><i>x<sub>T</sub></i><br></blockquote>
+<p>1 行目には <i>T, D, L  (1 &le; T, D, L &le; 100,</sub>000)</i> が半角スペース区切りで与えられる．続く <i>T</i> 行のうち <i>i  (1 &le; i &le; T)</i> 行目には <i>x<sub>i</sub>  (0 &le; x<sub>i</sub> &le; 100,</sub>000)</i> が与えられる．これらは全て整数である．
+</p><blockquote></blockquote>
+<p>データセットの終わりは，3 つの 0 からなる行で表される．
+</p><blockquote></blockquote>
+
+
+
+<h3>Output</h3>
+
+<blockquote></blockquote>
+<p>各ケースに対し，基準点 <i>P</i> から，陸の方向に距離 <i>L</i> だけ離れた地点が 1 秒後から <i>T</i> 秒後の間で確実に濡れていた時間 (秒) を 1 行で出力せよ．
+</p><blockquote></blockquote>
+
+
+<h3>Sample Input</h3>
+
+<pre>5 2 3
+3
+5
+1
+2
+3
+3 100 100
+3
+3
+4
+20 3 8
+3
+2
+6
+1
+9
+1
+8
+4
+2
+2
+8
+1
+8
+8
+2
+5
+3
+4
+3
+8
+7 2 2
+0
+2
+5
+2
+5
+2
+1
+0 0 0
+</pre>
+
+<h3>Output for Sample Input</h3>
+
+<pre>3
+0
+11
+5</pre>

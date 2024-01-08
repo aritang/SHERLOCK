@@ -1,0 +1,122 @@
+
+
+
+
+
+
+
+
+
+<h2>
+Problem C: Seishun 18 Kippu
+</h2>
+<p>
+R大学のとある学生sirokurostoneはA津大学で行われる合宿に参加しようとしていた。
+他のメンバーは新幹線を使用する予定なのだが、sirokurostoneは青春18切符を使って向かおうとしていた。
+同じく青春18切符使いのとある2D好きな人物も合宿に参加しようとしていた。
+</p>
+
+<p>
+どうせならと一緒に行こうと考えたsirokurostoneは途中の駅で2D好きな彼を拾って向かおうと考えた。
+sirokurostoneはR大学を出る前に遅延状況を確認してすこしでも時間のかからないルートを通ってA津大学のある駅に着きたいと考えている。
+sirokurostoneはルートが確定した後に2D好きな彼にもその情報を伝えるつもりである。
+しかし、sirokurostoneは遅延状況を見てもどのルートを通れば早くA津大学のある駅に到着できるか分からず困っている。
+</p>
+
+<p>
+そこで、あなたの仕事はsirokurostoneに代わって遅延状況からどれくらいでA津大学のある駅に着くのかを求めることである。
+</p>
+
+<p>
+各駅間には、駅間の距離と遅延予想時間がある。
+電車は動き始めてから40km/hを維持するものとする。
+地点aと地点bの間の移動時間は、
+<ul>
+ <li>
+距離/40+遅延予想時間</li>
+</ul>
+で求めることができる。
+各駅での停車時間は無視してよいものとする。
+</p>
+
+<h2>
+Input
+</h2>
+<p>
+複数のデータセットの並びが入力として与えられる。
+データセット数は50以下であることが保障されている。
+各データセットは、次の形式をしている。
+</p>
+
+<pre>
+<i>n</i> <i>m</i>
+<i>s</i> <i>p</i> <i>g</i>
+<i>a<sub>1</sub></i> <i>b<sub>1</sub></i> <i>d<sub>1</sub></i> <i>t<sub>1</sub></i>
+...
+<i>a<sub>i</sub></i> <i>b<sub>i</sub></i> <i>d<sub>i</sub></i> <i>t<sub>i</sub></i>
+...
+<i>a<sub>m</sub></i> <i>b<sub>m</sub></i> <i>d<sub>m</sub></i> <i>t<sub>m</sub></i>
+</pre>
+
+<p>
+整数<i>n</i>(<i>3 &le; n &le; 500</i>)と<i>m</i>(<i>2 &le; m &le; 5000</i>)は、それぞれ駅の数、各駅間の線路の数の合計を表す。
+<i>s</i>、<i>p</i>、<i>g</i>は、それぞれsirokurostoneが乗る駅、2D好きな人物が乗る駅、A津大学がある駅の場所を示す文字列である。
+<i>s</i>、<i>p</i>、<i>g</i>はそれぞれ違う文字列である。
+</p>
+
+<p>
+続く<i>m</i>行は、駅間情報を表す。
+<i>a<sub>i</sub></i>、<i>b<sub>i</sub></i>は、線路がつなぐ駅を示す文字列である。
+<i>a<sub>i</sub></i>と<i>b<sub>i</sub></i>は、双方向に行き来することができる。
+<i>a<sub>i</sub></i>と<i>b<sub>i</sub></i>が一致することはない。
+整数<i>d<sub>i</sub></i>(<i>40 &le; d<sub>i</sub> &le; 10000</i>)は、<i>a<sub>i</sub></i>と<i>b<sub>i</sub></i>の距離を表す。
+<i>d<sub>i</sub></i>は40の倍数であることが保証されている。
+整数<i>t<sub>i</sub></i>(<i>0 &le; t<sub>i</sub> &le; 20</i>)は、<i>a<sub>i</sub></i>と<i>b<sub>i</sub></i>の間の遅延予想時間を示す。
+</p>
+
+<p>
+駅名を表す文字列は、全てアルファベットの小文字および大文字からなる20文字以下の文字列であらわされる。
+駅と駅の間の線路は高々1本である。
+</p>
+
+<p>
+入力の終わりは2つのゼロを含む行で表される。
+</p>
+
+<h2>
+Output
+</h2>
+<p>
+入力データセットごとに、A津大学がある駅への到達時間(単位:時間)を出力せよ。
+sirokurostoneが乗る駅から2D好きな人が乗る駅までの経路と、2D好きな人物が乗る駅からA津大学がある駅の場所までの経路があることが保証されている。
+</p>
+
+<h2>
+Sample Input
+</h2>
+<pre>
+4 4
+A B G
+A B 40 3
+B C 80 0
+A G 40 0
+B G 80 0
+5 6
+Kusatsu Tokyo Aizu
+Tokyo Nagoya 120 3
+Kusatsu Nagoya 40 0
+Kusatsu Kanazawa 40 0
+Kanazawa Aizu 40 0
+Tokyo Kanazawa 40 0
+Tokyo Aizu 80 4 
+0 0
+
+</pre>
+
+<h2>
+Output for Sample Input
+</h2>
+<pre>
+5
+4
+</pre>

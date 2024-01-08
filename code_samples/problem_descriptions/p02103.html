@@ -1,0 +1,80 @@
+
+
+
+<h1>Problem F: Great Devil Sakanikia</h1>
+<h2>Problem</h2>
+
+<p>
+大悪魔サカーニャは今日も天敵の猫に襲われていた。<br>
+いつもやられている訳にはいかないので、秘密兵器を購入した。<br>
+この秘密兵器は、巨大な岩を生成することで猫の移動経路を塞ぎ、猫がこちらに近づけないようにすることができる。<br>
+</p>
+<p>
+今、サカーニャと一匹の猫がマス(0,0),(<var>n</var>&minus;1,0),(<var>n</var>&minus;1,<var>m</var>&minus;1),(0,<var>m</var>&minus;1)で囲まれた長方形の閉区間内にいる。<br>
+マス(0,0)に猫、マス(<var>n</var>&minus;1,<var>m</var>&minus;1)にサカーニャがいる。<br>
+猫は上下左右の隣接したマスに移動することができるが、区間外に出ることはできない。<br>
+いくつかのマスは、穴や障害物の影響で侵入することができない。<br>
+サカーニャは、あるマスに1つ岩を生成することでそのマスに猫が侵入できなくすることができる。<br>
+ただし、マス(0,0)とマス(<var>n</var>&minus;1,<var>m</var>&minus;1)に岩を生成することはできない。
+</p>
+<p>
+マス(0,0)からマス(<var>n</var>&minus;1,<var>m</var>&minus;1)までの移動経路を塞ぐために必要な、生成する岩の数の最小値を求めよ。
+</p>
+
+<h2>Input</h2>
+
+<pre>
+<var>n</var> <var>m</var> <var>k</var>
+<var>x</var><sub>1</sub> <var>y</var><sub>1</sub>
+...
+<var>x<sub>k</sub></var> <var>y<sub>k</sub></var>
+</pre>
+
+<p>
+入力はすべて整数で与えられる。<br>
+1行目にマスの大きさを表す２つの整数<var>n</var>と<var>m</var>、侵入できないマスの数<var>k</var>が空白区切りで与えられる。<br>
+2行目から<var>k</var>行に侵入できないマスの座標が与えられる。
+</p>
+
+<h2>Constraints</h2>
+<p>
+入力は以下の条件を満たす。
+</p>
+<ul>
+  <li>2 &le; <var>n</var>,<var>m</var> &le; 10<sup>5</sup></li>
+  <li>0 &le; <var>k</var> &le; min(<var>n</var>&times;<var>m</var>&minus;2,10<sup>5</sup>)</li>
+  <li>0 &le; <var>x<sub>i</sub></var> &le; <var>n</var> &minus; 1</li>
+  <li>0 &le; <var>y<sub>i</sub></var> &le; <var>m</var> &minus; 1</li>
+  <li>(<var>x<sub>i</sub></var>,<var>y<sub>i</sub></var>) &ne; (<var>x<sub>j</sub></var>,<var>y<sub>j</sub></var>) (<var>i</var> &ne; <var>j</var>)</li>
+  <li>(<var>x<sub>i</sub></var>,<var>y<sub>i</sub></var>) &ne; (0,0) &ne; (<var>n</var>&minus;1,<var>m</var>&minus;1)</li>
+</ul>
+
+<h2>Output</h2>
+<p>
+マス(0,0)からマス(<var>n</var>&minus;1,<var>m</var>&minus;1)までの移動経路を塞ぐために必要な、生成する岩の数の最小値を1行に出力せよ。<br>
+</p>
+
+<h2>Sample Input 1</h2>
+<pre>
+3 5 2
+0 2
+2 2
+</pre>
+
+<h2>Sample Output 1</h2>
+<pre>
+1
+</pre>
+
+<h2>Sample Input 2</h2>
+<pre>
+5 5 3
+0 2
+2 2
+4 1
+</pre>
+
+<h2>Sample Output 2</h2>
+<pre>
+2
+</pre>

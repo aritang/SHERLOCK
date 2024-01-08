@@ -1,0 +1,66 @@
+<span class="lang-en">
+<p>Score : <var>100</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>You are given a directed graph with <var>N</var> vertices and <var>M</var> edges, not necessarily simple. The <var>i</var>-th edge is oriented from the vertex <var>a_i</var> to the vertex <var>b_i</var>.
+Divide this graph into strongly connected components and print them in their topological order.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 \leq N \leq 500,000</var></li>
+<li><var>1 \leq M \leq 500,000</var></li>
+<li><var>0 \leq a_i, b_i &lt; N</var></li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var> <var>M</var>
+<var>a_0</var> <var>b_0</var>
+<var>a_1</var> <var>b_1</var>
+:
+<var>a_{M - 1}</var> <var>b_{M - 1}</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print <var>1+K</var> lines, where <var>K</var> is the number of strongly connected components.
+Print <var>K</var> on the first line. 
+Print the information of each strongly connected component in next <var>K</var> lines in the following format, where <var>l</var> is the number of vertices in the strongly connected component and <var>v_i</var> is the index of the vertex in it.</p>
+<pre><var>l</var> <var>v_0</var> <var>v_1</var> ... <var>v_{l-1}</var>
+</pre>
+<p>Here, for each edge <var>(a_i, b_i)</var>, <var>b_i</var> should not appear in <strong>earlier</strong> line than <var>a_i</var>.</p>
+<p>If there are multiple correct output, print any of them.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>6 7
+1 4
+5 2
+3 0
+5 5
+4 1
+0 3
+4 2
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>4
+1 5
+2 4 1
+1 2
+2 3 0
+</pre></section>
+</div>
+</span>

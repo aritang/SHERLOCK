@@ -1,0 +1,127 @@
+
+<h3>A Die Maker</h3>
+
+
+<p>
+The work of die makers starts early in the morning.
+</p>
+
+<p>
+You are a die maker.
+You receive orders from customers, and make various kinds of dice every day.
+Today, you received an order of a cubic die with six numbers
+<i>t</i><sub>1</sub>, <i>t</i><sub>2</sub>, ..., <i>t</i><sub>6</sub> on whichever faces.
+</p>
+
+<p>
+For making the ordered die, you use a tool of flat-board shape.
+You initially have a die with a zero on each face.
+If you rotate the die by 90 degrees on the tool towards one of northward, southward, eastward, and southward,
+the number on the face that newly touches the tool is increased by one.
+By rotating the die towards appropriate directions repeatedly,
+you may obtain the ordered die.
+</p>
+
+<p>
+The final numbers on the faces of the die
+is determined by the sequence of directions towards which you rotate the die.
+We call the string that represents the sequence of directions an <i>operation sequence.</i>
+Formally, we define operation sequences as follows.
+An operation sequence consists of <i>n</i> characters, where <i>n</i> is the number of rotations made.
+If you rotate the die eastward in the <i>i</i>-th rotation,
+the <i>i</i>-th character of the operation sequence is <code>E</code>.
+Similarly, if you rotate it westward, it is <code>W</code>,
+if southward, it is <code>S</code>, otherwise,
+if northward, it is <code>N</code>.
+For example, the operation sequence <code>NWS</code> represents
+the sequence of three rotations, northward first, westward next,
+and finally southward.
+</p>
+
+<p>
+Given six integers of the customer's order,
+compute an operation sequence that makes a die to order.
+If there are two or more possibilities, you should compute the earliest operation sequence in dictionary order.
+</p>
+
+
+<h3>Input</h3>
+
+<p>
+The input consists of multiple datasets.
+The number of datasets does not exceed 40.
+Each dataset has the following form.
+</p>
+
+<blockquote>
+<i>t</i><sub>1</sub> <i>t</i><sub>2</sub> <i>t</i><sub>3</sub> <i>t</i><sub>4</sub> <i>t</i><sub>5</sub> <i>t</i><sub>6</sub><br>
+<i>p</i> <i>q</i>
+</blockquote>
+
+
+<p>
+<i>t</i><sub>1</sub>, <i>t</i><sub>2</sub>, ..., <i>t</i><sub>6</sub> are integers that represent the order from the customer.
+Further, <i>p</i> and <i>q</i> are positive integers that specify the output range of the operation sequence (see the details below).
+</p>
+
+<p>
+Each dataset satisfies
+0 &#8804; <i>t</i><sub>1</sub> &#8804; <i>t</i><sub>2</sub> &#8804; ... &#8804; <i>t</i><sub>6</sub> &#8804; 5,000
+and
+1 &#8804; <i>p</i> &#8804; <i>q</i> &#8804; <i>t</i><sub>1</sub>+<i>t</i><sub>2</sub>+...+<i>t</i><sub>6</sub>.
+A line containing six zeros denotes the end of the input.
+</p>
+
+
+<h3>Output</h3>
+
+<p>
+For each dataset,
+print the subsequence,
+from the <i>p</i>-th position to the <i>q</i>-th position, inclusively,
+of the operation sequence that is the earliest in dictionary order.
+If it is impossible to make the ordered die, print <code>impossible</code>.
+</p>
+
+<p>
+Here, dictionary order is recursively defined as follows.
+The empty string comes the first in dictionary order.
+For two nonempty strings <i>x</i> = <i>x</i><sub>1</sub> ... <i>x</i><sub><i>k</i></sub> and <i>y</i> = <i>y</i><sub>1</sub> ... <i>y</i><sub><i>l</i></sub>, the string <i>x</i> precedes the string <i>y</i> in dictionary order if
+</p>
+
+<ul>
+<li> <i>x</i><sub>1</sub> precedes <i>y</i><sub>1</sub> in alphabetical order ('A' to 'Z'), or </li>
+<li> <i>x</i><sub>1</sub> and <i>y</i><sub>1</sub> are the same character and <i>x</i><sub>2</sub> ... <i>x</i><sub><i>k</i></sub> precedes <i>y</i><sub>2</sub> ... <i>y</i><sub><i>l</i></sub> in dictionary order.</li>
+</ul>
+
+
+
+<h3>Sample Input</h3>
+
+<pre>1 1 1 1 1 1
+1 6
+1 1 1 1 1 1
+4 5
+0 0 0 0 0 2
+1 2
+0 0 2 2 2 4
+5 9
+1 2 3 4 5 6
+15 16
+0 1 2 3 5 9
+13 16
+2 13 22 27 31 91
+100 170
+0 0 0 0 0 0
+</pre>
+
+<h3>Output for the Sample Input</h3>
+
+<pre>EEENEE
+NE
+impossible
+NSSNW
+EN
+EWNS
+SNSNSNSNSNSNSNSNSNSNSNSSNSNSNSNSNSNSNSNSNSNSNSNSNSNSNSNSNSNSNSNSNSNWEWE
+</pre>

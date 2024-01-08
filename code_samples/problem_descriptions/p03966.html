@@ -1,0 +1,95 @@
+<span class="lang-en">
+<p>Score : <var>300</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>AtCoDeer the deer is seeing a quick report of election results on TV.
+Two candidates are standing for the election: Takahashi and Aoki.
+The report shows the ratio of the current numbers of votes the two candidates have obtained, but not the actual numbers of votes.
+AtCoDeer has checked the report <var>N</var> times, and when he checked it for the <var>i</var>-th <var>(1≦i≦N)</var> time, the ratio was <var>T_i:A_i</var>.
+It is known that each candidate had at least one vote when he checked the report for the first time.</p>
+<p>Find the minimum possible total number of votes obtained by the two candidates when he checked the report for the <var>N</var>-th time.
+It can be assumed that the number of votes obtained by each candidate never decreases.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1≦N≦1000</var></li>
+<li><var>1≦T_i,A_i≦1000 (1≦i≦N)</var></li>
+<li><var>T_i</var> and <var>A_i</var> <var>(1≦i≦N)</var> are coprime.</li>
+<li>It is guaranteed that the correct answer is at most <var>10^{18}</var>.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>The input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+<var>T_1</var> <var>A_1</var>
+<var>T_2</var> <var>A_2</var>
+<var>:</var>
+<var>T_N</var> <var>A_N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the minimum possible total number of votes obtained by Takahashi and Aoki when AtCoDeer checked the report for the <var>N</var>-th time.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>3
+2 3
+1 1
+3 2
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>10
+</pre>
+<p>When the numbers of votes obtained by the two candidates change as <var>2,3 → 3,3 → 6,4</var>, the total number of votes at the end is <var>10</var>, which is the minimum possible number.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>4
+1 1
+1 1
+1 5
+1 100
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>101
+</pre>
+<p>It is possible that neither candidate obtained a vote between the moment when he checked the report, and the moment when he checked it for the next time.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>5
+3 10
+48 17
+31 199
+231 23
+3 2
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>6930
+</pre></section>
+</div>
+</span>

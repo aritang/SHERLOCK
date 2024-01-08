@@ -1,0 +1,93 @@
+<span class="lang-en">
+<p>Score : <var>700</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>We have a string <var>s</var> consisting of lowercase English letters.
+Snuke is partitioning <var>s</var> into some number of non-empty substrings.
+Let the subtrings obtained be <var>s_1</var>, <var>s_2</var>, <var>...</var>, <var>s_N</var> from left to right. (Here, <var>s = s_1 + s_2 + ... + s_N</var> holds.)
+Snuke wants to satisfy the following condition:</p>
+<ul>
+<li>For each <var>i</var> (<var>1 \leq i \leq N</var>), it is possible to permute the characters in <var>s_i</var> and obtain a palindrome.</li>
+</ul>
+<p>Find the minimum possible value of <var>N</var> when the partition satisfies the condition.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 \leq |s| \leq 2 \times 10^5</var></li>
+<li><var>s</var> consists of lowercase English letters.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>s</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the minimum possible value of <var>N</var> when the partition satisfies the condition.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>aabxyyzz
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>2
+</pre>
+<p>The solution is to partition <var>s</var> as <code>aabxyyzz</code> = <code>aab</code> + <code>xyyzz</code>.
+Here, <code>aab</code> can be permuted to form a palindrome <code>aba</code>, and <code>xyyzz</code> can be permuted to form a palindrome <code>zyxyz</code>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>byebye
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>1
+</pre>
+<p><code>byebye</code> can be permuted to form a palindrome <code>byeeyb</code>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>abcdefghijklmnopqrstuvwxyz
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>26
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 4</h3><pre>abcabcxabcx
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 4</h3><pre>3
+</pre>
+<p>The solution is to partition <var>s</var> as <code>abcabcxabcx</code> = <code>a</code> + <code>b</code> + <code>cabcxabcx</code>.</p></section>
+</div>
+</span>

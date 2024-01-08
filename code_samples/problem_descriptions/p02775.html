@@ -1,0 +1,78 @@
+<span class="lang-en">
+<p>Score: <var>500</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3>
+<p>In the Kingdom of AtCoder, only banknotes are used as currency. There are <var>10^{100}+1</var> kinds of banknotes, with the values of <var>1, 10, 10^2, 10^3, \dots, 10^{(10^{100})}</var>. You have come shopping at a mall and are now buying a takoyaki machine with a value of <var>N</var>. <em>(Takoyaki is the name of a Japanese snack.)</em></p>
+<p>To make the payment, you will choose some amount of money which is at least <var>N</var> and give it to the clerk. Then, the clerk gives you back the change, which is the amount of money you give minus <var>N</var>.</p>
+<p>What will be the minimum possible number of total banknotes used by you and the clerk, when both choose the combination of banknotes to minimize this count?</p>
+<p>Assume that you have sufficient numbers of banknotes, and so does the clerk.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3>
+<ul>
+<li><var>N</var> is an integer between <var>1</var> and <var>10^{1,000,000}</var> (inclusive).</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3>
+<p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3>
+<p>Print the minimum possible number of total banknotes used by you and the clerk.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>36
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>8
+</pre>
+<p>If you give four banknotes of value <var>10</var> each, and the clerk gives you back four banknotes of value <var>1</var> each, a total of eight banknotes are used.</p>
+<p>The payment cannot be made with less than eight banknotes in total, so the answer is <var>8</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>91
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>3
+</pre>
+<p>If you give two banknotes of value <var>100, 1</var>, and the clerk gives you back one banknote of value <var>10</var>, a total of three banknotes are used.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>314159265358979323846264338327950288419716939937551058209749445923078164062862089986280348253421170
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>243
+</pre></section>
+</div>
+</span>

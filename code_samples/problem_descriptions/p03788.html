@@ -1,0 +1,93 @@
+<span class="lang-en">
+<p>Score : <var>900</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>Takahashi has a lot of peculiar devices.
+These cylindrical devices receive balls from left and right.
+Each device is in one of the two states A and B, and for each state, the device operates as follows:</p>
+<ul>
+<li>When a device in state A receives a ball from either side (left or right), the device throws out the ball from the same side, then immediately goes into state B.</li>
+<li>When a device in state B receives a ball from either side, the device throws out the ball from the other side, then immediately goes into state A.</li>
+</ul>
+<p>The transition of the state of a device happens momentarily and always completes before it receives another ball.</p>
+<p>Takahashi built a contraption by concatenating <var>N</var> of these devices. In this contraption,</p>
+<ul>
+<li>A ball that was thrown out from the right side of the <var>i</var>-th device from the left (<var>1 \leq i \leq N-1</var>) immediately enters the <var>(i+1)</var>-th device from the left side.</li>
+<li>A ball that was thrown out from the left side of the <var>i</var>-th device from the left (<var>2 \leq i \leq N</var>) immediately enters the <var>(i-1)</var>-th device from the right side.</li>
+</ul>
+<p>The initial state of the <var>i</var>-th device from the left is represented by the <var>i</var>-th character in a string <var>S</var>.
+From this situation, Takahashi performed the following <var>K</var> times: put a ball into the leftmost device from the left side, then wait until the ball comes out of the contraption from either end.
+Here, it can be proved that the ball always comes out of the contraption after a finite time.
+Find the state of each device after <var>K</var> balls are processed.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 \leq N \leq 200,000</var></li>
+<li><var>1 \leq K \leq 10^9</var></li>
+<li><var>|S|=N</var></li>
+<li>Each character in <var>S</var> is either <code>A</code> or <code>B</code>.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>The input is given from Standard Input in the following format:</p>
+<pre><var>N</var> <var>K</var>
+<var>S</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print a string that represents the state of each device after <var>K</var> balls are processed.
+The string must be <var>N</var> characters long, and the <var>i</var>-th character must correspond to the state of the <var>i</var>-th device from the left.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>5 1
+ABAAA
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>BBAAA
+</pre>
+<p>In this input, we put a ball into the leftmost device from the left side, then it is returned from the same place.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>5 2
+ABAAA
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>ABBBA
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>4 123456789
+AABB
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>BABA
+</pre></section>
+</div>
+</span>

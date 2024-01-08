@@ -1,0 +1,78 @@
+<span class="lang-en">
+<p>Score : <var>500</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>You have a string <var>S</var> of length <var>N</var>.
+Initially, all characters in <var>S</var> are <code>1</code>s.</p>
+<p>You will perform queries <var>Q</var> times.
+In the <var>i</var>-th query, you are given two integers <var>L_i, R_i</var> and a character <var>D_i</var> (which is a digit).
+Then, you must replace all characters from the <var>L_i</var>-th to the <var>R_i</var>-th (inclusive) with <var>D_i</var>.</p>
+<p>After each query, read the string <var>S</var> as a decimal integer, and print its value modulo <var>998,244,353</var>.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 \leq N, Q \leq 200,000</var></li>
+<li><var>1 \leq L_i \leq R_i \leq N</var></li>
+<li><var>1 \leq D_i \leq 9</var></li>
+<li>All values in input are integers.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var> <var>Q</var>
+<var>L_1</var> <var>R_1</var> <var>D_1</var>
+<var>:</var>
+<var>L_Q</var> <var>R_Q</var> <var>D_Q</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print <var>Q</var> lines.
+In the <var>i</var>-th line print the value of <var>S</var> after the <var>i</var>-th query, modulo <var>998,244,353</var>.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>8 5
+3 6 2
+1 4 7
+3 8 3
+2 2 2
+4 5 1
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>11222211
+77772211
+77333333
+72333333
+72311333
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>200000 1
+123 456 7
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>641437905
+</pre>
+<p>Don't forget to take the modulo.</p></section>
+</div>
+</span>

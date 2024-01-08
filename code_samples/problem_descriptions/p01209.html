@@ -1,0 +1,60 @@
+
+<H1><font color="#000">Problem C:</font> !</H1>
+
+<p>
+You are one of ICPC participants and in charge of developing a library for multiprecision numbers
+and radix conversion. You have just finished writing the code, so next you have to test if it
+works correctly. You decided to write a simple, well-known factorial function for this purpose:
+</p>
+
+<center>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE1_exclamation">
+</center>
+
+<p>
+Your task is to write a program that shows the number of trailing zeros when you compute <i>M</i>!
+in base <i>N</i>, given <i>N</i> and <i>M</i>.
+</p>
+
+<H2>Input</H2>
+
+<p>
+The input contains multiple data sets. Each data set is described by one line in the format
+below:
+</p>
+<pre>
+      <i>N M</i>
+</pre>
+<p>
+where <i>N</i> is a decimal number between 8 and 36 inclusive, and <i>M</i> is given in the string repre-
+sentation in base <i>N</i>. Exactly one white space character appears between them.
+</p>
+<p>
+The string representation of <i>M</i> contains up to 12 characters in base <i>N</i>. In case <i>N</i> is greater
+than 10, capital letters A, B, C, ... may appear in the string representation, and they represent
+10, 11, 12, ..., respectively.
+</p>
+<p>
+The input is terminated by a line containing two zeros. You should not process this line.
+</p>
+
+<H2>Output</H2>
+
+<p>
+For each data set, output a line containing a decimal integer, which is equal to the number of
+trailing zeros in the string representation of <i>M</i>! in base <i>N</i>.
+</p>
+
+<H2>Sample Input</H2>
+<pre>
+10 500
+16 A
+0 0
+</pre>
+
+<H2>Output for the Sample Input</H2>
+<pre>
+124
+2
+</pre>
+

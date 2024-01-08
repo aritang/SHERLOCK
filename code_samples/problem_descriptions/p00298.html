@@ -1,0 +1,140 @@
+
+
+
+<h1>力持ち</h1>
+
+<p>
+力持ちたちが集う力持ち学園がありました。力持ち学園の運動会では、力持ちたちが隊列を組んで行進します。
+</p>
+<p>
+力持ちたちは常に自分たちの力を誇示したい一方で、彼らの大半は自分で歩きたくありません。そこで彼らの一部が一番下になり、その上に大勢の人を縦一列に持ちあげて歩くことで、実際に歩く人数を減らそうと考えました。
+</p>
+
+<p>
+はじめに、<var>N</var> 人の力持ちは地面の上に横一列に並んでいて、それぞれ左側から １,２,３,..., <var>N</var> と通し番号で呼ばれています。通し番号 <var>i</var> の力持ちの体重は <var>w<sub>i</sub></var> で最大 <var>c<sub>i</sub></var> の重量まで持つことができます。
+</p>
+<p>
+力持ちは、以下の条件をすべて満たすときだけ、隣に立っている左右どちらかの力持ちを持ちあげることができます。
+</p>
+<ul>
+<li> 自分の上下には力持ちはいない。つまり、誰かに持ち上げられてもいないし、誰かを持ちあげてもいない。</li>
+<li> 隣の力持ちの体重が、自分が持つことのできる最大の重量以下である。ただし、隣の力持ちが既に誰かを持ち上げているなら、縦に積み上がった力持ちたちの体重の合計が、自分が持つことのできる最大の重量以下でなければならない。</li>
+</ul>
+
+<p>
+例えば、次のような３人の力持ちの隊列を考えてみましょう。
+</p>
+
+<center>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_PCK2014_mightyMan1" width="240">
+</center>
+<br>
+
+<p>
+下図のように、２の力持ちが持つことのできる重さが <var>w<sub>3</sub></var> 以上のとき、２の力持ちは３の力持ちを持ちあげることができます。続いて、１の力持ちが持つことのできる重さが <var>w<sub>2</sub></var> + <var>w<sub>3</sub></var> 以上のとき、１の力持ちは２の力持ちを持ちあげることができます。
+</p>
+
+<center>
+<table>
+<tr>
+<td><img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_PCK2014_mightyMan2"  width="240"></td>
+<td>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&rarr;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</td>
+<td><img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_PCK2014_mightyMan3"  width="240"></td>
+</tr>
+</table>
+</center>
+<br>
+
+<p>
+また、下図のように３の力持ちが２の力持ちを持ちあげた場合は、１の力持ちの隣が、２の力持ちを持った３の力持ちになるので、１の力持ちは３の力持ちを持ちあげることができます。 
+</p>
+
+<center>
+<table>
+<tr>
+<td><img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_PCK2014_mightyMan4"  width="240"></td>
+<td>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&rarr;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</td>
+<td><img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_PCK2014_mightyMan5"  width="240"></td>
+</tr>
+</table>
+</center>
+
+<br>
+
+<p>
+２の力持ちが、下の図のように１と３の力持ちを両方持つことはできません。
+</p>
+
+<center>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_PCK2014_mightyMan6"  width="240">
+</center>
+<br>
+
+<p>
+力持ち学園の専属プログラマーとして、一番下で歩くことになる最小の人数を求めてください。
+</p>
+
+<h2>入力</h2>
+<p>
+入力は以下の形式で与えられる。 
+</p>
+
+<pre>
+<var>N</var>
+<var>c<sub>1</sub></var> <var>w<sub>1</sub></var>
+<var>c<sub>2</sub></var> <var>w<sub>2</sub></var>
+:
+<var>c<sub>N</sub></var> <var>w<sub>N</sub></var>
+</pre>
+
+<p>
+1 行目に力持ちの人数 <var>N</var> (1 &le; <var>N</var> &le; 1000) が与えられる。続く <var>N</var> 行に <var>i</var> 番目の力持ちが持てる重量の最大値 <var>c<sub>i</sub></var> (1 &le; <var>c<sub>i</sub></var> &le; 100000) と体重 <var>w<sub>i</sub></var> (1 &le; <var>w<sub>i</sub></var> &le; 100000) が与えられる。
+</p>
+
+<h2>出力</h2>
+<p>
+最小の人数を１行に出力する。
+</p>
+
+<h2>入出力例 </h2>
+<br>
+
+<h2>入力例１ </h2>
+<pre>
+3
+150 120
+100 50
+80 100
+</pre>
+
+<h2>出力例１</h2>
+<pre>
+1
+</pre>
+<br>
+
+<h2>入力例２</h2>
+<pre>
+8
+50 100
+20 20
+30 20
+90 50
+140 30
+30 60
+59 120
+10 10
+</pre>
+
+<h2>出力例２</h2>
+<pre>
+3 
+</pre>

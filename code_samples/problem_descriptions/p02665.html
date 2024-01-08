@@ -1,0 +1,117 @@
+<span class="lang-en">
+<p>Score : <var>600</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>Given is an integer sequence of length <var>N+1</var>: <var>A_0, A_1, A_2, \ldots, A_N</var>. Is there a binary tree of depth <var>N</var> such that, for each <var>d = 0, 1, \ldots, N</var>, there are exactly <var>A_d</var> leaves at depth <var>d</var>? If such a tree exists, print the maximum possible number of vertices in such a tree; otherwise, print <var>-1</var>.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Notes</h3><ul>
+<li>A binary tree is a rooted tree such that each vertex has at most two direct children.</li>
+<li>A leaf in a binary tree is a vertex with zero children.</li>
+<li>The depth of a vertex <var>v</var> in a binary tree is the distance from the tree's root to <var>v</var>. (The root has the depth of <var>0</var>.)</li>
+<li>The depth of a binary tree is the maximum depth of a vertex in the tree.</li>
+</ul>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>0 \leq N \leq 10^5</var></li>
+<li><var>0 \leq A_i \leq 10^{8}</var> (<var>0 \leq i \leq N</var>)</li>
+<li><var>A_N \geq 1</var></li>
+<li>All values in input are integers.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+<var>A_0</var> <var>A_1</var> <var>A_2</var> <var>\cdots</var> <var>A_N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the answer as an integer.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>3
+0 1 1 2
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>7
+</pre>
+<p>Below is the tree with the maximum possible number of vertices. It has seven vertices, so we should print <var>7</var>.
+<div style="text-align: center;">
+<img alt="0d8d99d13df036f23b0c9fcec52b842b.png" src="https://img.atcoder.jp/nomura2020/0d8d99d13df036f23b0c9fcec52b842b.png">
+</img></div></p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>4
+0 0 1 0 2
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>10
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>2
+0 3 1
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>-1
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 4</h3><pre>1
+1 1
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 4</h3><pre>-1
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 5</h3><pre>10
+0 0 1 1 2 3 5 8 13 21 34
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 5</h3><pre>264
+</pre></section>
+</div>
+</span>

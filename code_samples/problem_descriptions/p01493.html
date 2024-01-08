@@ -1,0 +1,98 @@
+
+
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({ tex2jax: { inlineMath: [["$","$"], ["\\(","\\)"]], processEscapes: true }});
+</script>
+<script type='text/javascript' src='http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
+</script>
+
+<h2>Problem H:
+DisconnectedGame
+</h2>
+
+<p>
+  Taro と Hanako がゲームをしている.
+</p>
+
+<p>
+  最初に, 非連結な無向グラフ(二重辺や self loop を含まない) が与えられる. Taro と Hanako は交互に操作を行う. 操作では, 辺で直接つながれていない異なる2 頂点を選び, その間に辺を加える. グラフを連結にしたほうが負けである.
+</p>
+
+<p>
+  グラフには $V$ 個の頂点がある. $V \times V$ の行列が与えられる. 行列の $(i, j)$-成分が'Y' であるとき $i$ と $j$ の間には辺があり, 'N' であるときは辺が無い.
+</p>
+
+<p>
+  両者が最善に操作をしたとき, どちらが勝つかを出力せよ.
+</p>
+
+<h3>Constraints</h3>
+
+<ul>
+<li>$V$ will be between 2 and 1,000, inclusive.</li>
+<li>$a_{i,i}$ will be 'N'.</li>
+<li>$a_{i,j}$ will be 'Y' or 'N'.</li>
+<li>$a_{i,j}$ will be equal to $a_{j,i}$.</li>
+<li>The graph will not be connected.</li>
+</ul>
+
+<h3>Input</h3>
+
+<p>
+  入力は以下の形式で与えられる:<br>
+  <br>
+  
+$V$<br>
+$a_{1,1}$ ... $a_{1,V}$<br>
+...<br>
+$a_{V,1}$ ... $a_{V,V}$<br>
+</p>
+
+
+<h3>Output</h3>
+
+<p>
+Taro が勝つ場合には "Taro" (quotes for clarity), Hanako が勝つ場合には "Hanako" (quotes for clarity) と 1 行に出力せよ.
+</p>
+
+
+<h3>Sample Input 1</h3>
+
+<pre>3
+NNN
+NNN
+NNN</pre>
+
+<h3>Sample Output 1</h3>
+
+<pre>Taro</pre>
+
+<h3>Sample Input 2</h3>
+
+<pre>5
+NNYNN
+NNNNN
+YNNNN
+NNNNY
+NNNYN</pre>
+
+<h3>Sample Output 2</h3>
+
+<pre>Hanako</pre>
+
+<h3>Sample Input 3</h3>
+
+<pre>8
+NYNNNNNN
+YNNYNNYN
+NNNNNNNY
+NYNNNNYN
+NNNNNNNN
+NNNNNNNN
+NYNYNNNN
+NNYNNNNN</pre>
+
+<h3>Sample Output 3</h3>
+
+<pre>Taro</pre>

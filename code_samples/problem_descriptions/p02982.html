@@ -1,0 +1,96 @@
+<span class="lang-en">
+<p>Score : <var>200</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>There are <var>N</var> points in a <var>D</var>-dimensional space.</p>
+<p>The coordinates of the <var>i</var>-th point are <var>(X_{i1}, X_{i2}, ..., X_{iD})</var>.</p>
+<p>The distance between two points with coordinates <var>(y_1, y_2, ..., y_D)</var> and <var>(z_1, z_2, ..., z_D)</var> is <var>\sqrt{(y_1 - z_1)^2 + (y_2 - z_2)^2 + ... + (y_D - z_D)^2}</var>.</p>
+<p>How many pairs <var>(i, j)</var> <var>(i &lt; j)</var> are there such that the distance between the <var>i</var>-th point and the <var>j</var>-th point is an integer?</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li>All values in input are integers.</li>
+<li><var>2 \leq N \leq 10</var></li>
+<li><var>1 \leq D \leq 10</var></li>
+<li><var>-20 \leq X_{ij} \leq 20</var></li>
+<li>No two given points have the same coordinates. That is, if <var>i \neq j</var>, there exists <var>k</var> such that <var>X_{ik} \neq X_{jk}</var>.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var> <var>D</var>
+<var>X_{11}</var> <var>X_{12}</var> <var>...</var> <var>X_{1D}</var>
+<var>X_{21}</var> <var>X_{22}</var> <var>...</var> <var>X_{2D}</var>
+<var>\vdots</var>
+<var>X_{N1}</var> <var>X_{N2}</var> <var>...</var> <var>X_{ND}</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the number of pairs <var>(i, j)</var> <var>(i &lt; j)</var> such that the distance between the <var>i</var>-th point and the <var>j</var>-th point is an integer.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>3 2
+1 2
+5 5
+-2 8
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>1
+</pre>
+<p>The number of pairs with an integer distance is one, as follows:</p>
+<ul>
+<li>The distance between the first point and the second point is <var>\sqrt{|1-5|^2 + |2-5|^2} = 5</var>, which is an integer.</li>
+<li>The distance between the second point and the third point is <var>\sqrt{|5-(-2)|^2 + |5-8|^2} = \sqrt{58}</var>, which is not an integer.</li>
+<li>The distance between the third point and the first point is <var>\sqrt{|-2-1|^2+|8-2|^2} = 3\sqrt{5}</var>, which is not an integer.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>3 4
+-3 7 8 2
+-12 1 10 2
+-2 8 9 3
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>2
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>5 1
+1
+2
+3
+4
+5
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>10
+</pre></section>
+</div>
+</span>

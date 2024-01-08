@@ -1,0 +1,141 @@
+<span class="lang-en">
+<p>Score : <var>1200</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>There are <var>N</var> apartments along a number line, numbered <var>1</var> through <var>N</var>.
+Apartment <var>i</var> is located at coordinate <var>X_i</var>.
+Also, the office of AtCoder Inc. is located at coordinate <var>S</var>.
+Every employee of AtCoder lives in one of the <var>N</var> apartments.
+There are <var>P_i</var> employees who are living in Apartment <var>i</var>.</p>
+<p>All employees of AtCoder are now leaving the office all together.
+Since they are tired from work, they would like to get home by the company's bus.
+AtCoder owns only one bus, but it can accommodate all the employees.
+This bus will leave coordinate <var>S</var> with all the employees and move according to the following rule:</p>
+<ul>
+<li>
+<p>Everyone on the bus casts a vote on which direction the bus should proceed, positive or negative. (The bus is autonomous and has no driver.) Each person has one vote, and abstaining from voting is not allowed. Then, the bus moves a distance of <var>1</var> in the direction with the greater number of votes. If a tie occurs, the bus moves in the negative direction. If there is an apartment at the coordinate of the bus after the move, all the employees who live there get off.</p>
+</li>
+<li>
+<p>Repeat the operation above as long as there is one or more employees on the bus.</p>
+</li>
+</ul>
+<p>For a specific example, see Sample Input 1.</p>
+<p>The bus takes one seconds to travel a distance of <var>1</var>.
+The time required to vote and get off the bus is ignorable.</p>
+<p>Every employee will vote so that he himself/she herself can get off the bus at the earliest possible time.
+Strictly speaking, when a vote is taking place, each employee see which direction results in the earlier arrival at his/her apartment, assuming that all the employees follow the same strategy in the future.
+Based on this information, each employee makes the optimal choice, but if either direction results in the arrival at the same time, he/she casts a vote to the negative direction.</p>
+<p>Find the time the bus will take from departure to arrival at the last employees' apartment.
+It can be proved that, given the positions of the apartments, the numbers of employees living in each apartment and the initial position of the bus, the future movement of the bus is uniquely determined, and the process will end in a finite time.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 \leq N \leq 10^5</var></li>
+<li><var>1 \leq S \leq 10^9</var></li>
+<li><var>1 \leq X_1 &lt; X_2 &lt; ... &lt; X_N \leq 10^9</var></li>
+<li><var>X_i \neq S</var> ( <var>1 \leq i \leq N</var> )</li>
+<li><var>1 \leq P_i \leq 10^9</var> ( <var>1 \leq i \leq N</var> )</li>
+<li>All values in input are integers.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var> <var>S</var>
+<var>X_1</var> <var>P_1</var>
+<var>X_2</var> <var>P_2</var>
+<var>:</var>
+<var>X_N</var> <var>P_N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the number of seconds the bus will take from departure to arrival at the last employees' apartment.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>3 2
+1 3
+3 4
+4 2
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>4
+</pre>
+<p>Assume that the bus moves in the negative direction first.
+Then, the coordinate of the bus changes from <var>2</var> to <var>1</var>, and the employees living in Apartment <var>1</var> get off.
+The movement of the bus after that is obvious: it just continues moving in the positive direction.
+Thus, if the bus moves in the negative direction first, the coordinate of the bus changes as <var>2 → 1 → 2 → 3 → 4</var> from departure.
+The time it takes to get home for the employees living in Apartment <var>1</var>, <var>2</var>, <var>3</var> are <var>1</var>, <var>3</var>, <var>4</var> seconds, respectively.</p>
+<p>Next, assume that the bus moves in the positive direction first.
+Then, the coordinate of the bus changes from <var>2</var> to <var>3</var>, and the employees living in Apartment <var>2</var> get off.
+Afterwards, the bus starts heading to Apartment <var>1</var>, because there are more employees living in Apartment <var>1</var> than in Apartment <var>3</var>.
+Then, after arriving at Apartment <var>1</var>, the bus heads to Apartment <var>3</var>.
+Thus, if the bus moves in the positive direction first, the coordinate of the bus changes as <var>2 → 3 → 2 → 1 → 2 → 3 → 4</var> from departure.
+The time it takes to get home for the employees living in Apartment <var>1</var>, <var>2</var>, <var>3</var> are <var>3</var>, <var>1</var>, <var>6</var> seconds, respectively.</p>
+<p>Therefore, in the beginning, the employees living in Apartment <var>1</var> or <var>3</var> will try to move the bus in the negative direction.
+On the other hand, the employees living in Apartment <var>2</var> will try to move the bus in the positive direction in the beginning.
+There are a total of <var>3 + 2 = 5</var> employees living in Apartment <var>1</var> and <var>3</var> combined, which is more than those living in Apartment <var>2</var>, which is <var>4</var>.
+Thus, the bus will move in the negative direction first, and the coordinate of the bus will change as <var>2 → 1 → 2 → 3 → 4</var> from departure.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>6 4
+1 10
+2 1000
+3 100000
+5 1000000
+6 10000
+7 100
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>21
+</pre>
+<p>Since the numbers of employees living in different apartments are literally off by a digit, the bus consistently head to the apartment where the most number of employees on the bus lives.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>15 409904902
+94198000 15017
+117995501 7656764
+275583856 313263626
+284496300 356635175
+324233841 607
+360631781 148
+472103717 5224
+497641071 34695
+522945827 816241
+554305668 32
+623788284 22832
+667409501 124410641
+876731548 12078
+904557302 291749534
+918215789 5
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>2397671583
+</pre></section>
+</div>
+</span>

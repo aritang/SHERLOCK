@@ -1,0 +1,98 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<body>
+<h1> Chicken or the Egg</h1>
+<p>
+Time Limit: 8 sec / Memory Limit: 64 MB
+</p>
+<h2> A: 卵が先か鶏が先か</h2>
+<p>
+2012/2/8 <br/>
+
+卵が先か鶏が先かという問題はいまだかつて誰もわからなかった．
+しかし今回の琵琶湖遺跡で発掘で獲得した文書にはその答えが記されているという．<br/>
+
+</p>
+<p>
+2012/2/9 <br/>
+
+文書はchickenとeggという単語のみで構成されていた．このままでは答えがわからない．
+</p>
+<p>
+2012/2/10 <br/>
+
+さらに文書を読み進めると，文書中の単語の順番は産まれた順番を表していることがわかった．
+&quot;eggchicken&quot;とあった場合は，先に鶏が産まれ，その後に鶏が卵を産んだということを示している． 
+</p>
+<p>
+2012/2/11 <br/>
+
+&quot;eggchickenchickenegg&quot;という文を見つけた．
+この文では，先に卵が産まれ，その卵から鶏が産まれる．
+さらに昨日のルールでいくと，この鶏が鶏を産むということになってしまう．
+鶏は卵を産まなければならないのに，これはおかしい．
+</p>
+<p>
+2012/2/12 <br/>
+
+調査をする内に，文は同一単語が連続で出てきたときに分割されることがわかった．
+&quot;eggchickenchickenegg&quot;であれば，&quot;eggchicken&quot;と&quot;chickenegg&quot;という文に分割される．
+複数の文がある場合は，先頭の単語から順番に同じ時代に産まれたことを表すらしい．
+さっきの例だと，&quot;eggchicken&quot;の一つ目の単語eggと，&quot;chickenegg&quot;の一つ目の単語chickenは，同じ時代に産まれたことを表すようだ．
+さらに，これらを産んだchickenとeggも同じ時代に産まれたことを表す．
+ん？これだと結局鶏か卵かどっちが先に産まれたかわからないじゃないか． 
+</p>
+<p>
+2012/2/13 <br/>
+
+どうやら同じ時代として産まれたものの内，より文の前方に書かれた方が先に産まれたようだ．
+昨日の例だと，chickenの方が文の前方にあるから，結局鶏が最初に産まれたことになるらしい．
+解読のルールを理解することができた．これで安心だ．
+いや，まだぼう大な量の文書を解読せねばならないのだ．早く解読を急がねば． 
+</p>
+<p>
+2012/3/15 <br/>
+
+もう寿命が近いそうだ．手も足もロクに動かない．
+この文書も結局時間が足りず解読できなかった．
+この際誰でもいいから，去る前にどちらが先だったかを私に教えてくれないだろうか…．
+</p>
+<p>
+あなたは親族に依頼を受けてやってきた人です．
+おじいさんの最後の願いを叶えるために解読してください．
+</p>
+<h2> Input</h2>
+<p>
+文字列 <i>s</i> が1行与えられる． 文字列 <i>s</i> はeggとchickenの二つの単語で構成されており，文字列内に含まれる単語数は1以上1000以下である．
+</p>
+<h2> Output</h2>
+<p>
+eggかchickenのいずれかを出力せよ．
+</p>
+<h2> Sample Input 1</h2>
+<pre>
+eggchickenegg
+</pre>
+<h2> Sample Output 1</h2>
+<pre>
+egg
+</pre>
+<h2> Sample Input 2</h2>
+<pre>
+chickeneggeggchicken
+</pre>
+<h2> Sample Output 2</h2>
+<pre>
+egg
+</pre>
+<h2> Sample Input 3</h2>
+<pre>
+eggeggchicken
+</pre>
+<h2> Sample Output 3</h2>
+<pre>
+chicken
+</pre>
+</body>
+</html>

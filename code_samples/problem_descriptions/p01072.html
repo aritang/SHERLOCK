@@ -1,0 +1,136 @@
+
+
+
+<h1>Problem A: Plants</h1>
+
+<h2>Problem</h2>
+
+<p>がっちょ君は横<var>W</var>個&times;縦<var>H</var>個のマスで区切られた畑を所有している。<var>x</var>列目<var>y</var>行目のマスをマス <var>(x, y)</var> と呼ぶことにする。いくつかのマスの土地には高さ0cmの植物が1本だけ植えてあり、その他のマスの土地には何も植えられていない。
+</p>
+<p>
+がっちょ君はある時刻に畑に肥料をまく。肥料がまかれたマスに植物が植えられているとき、その植物の高さが1cm伸びる。植物が植えられていないときは、何もおこらない。植物が伸びるのにかかる時間はとても短いので無視できる。がっちょ君は同じ時刻に複数のマスに肥料をまくことができる。ただし、同じ時刻に同じマスに2度以上肥料をまくことはない。
+</p>
+<p>
+がっちょ君が肥料をまいた記録が与えられたとき、時刻<var>T</var>時点での畑の植物の高さの和を計算せよ。
+</p>
+
+<h2>Input</h2>
+<p>入力は以下の形式で与えられる。</p>
+<pre>
+<var>W</var> <var>H</var> <var>T</var>
+<var>p</var>
+<var>x<sub>0</sub></var> <var>y<sub>0</sub></var> <var>t<sub>0</sub></var>
+<var>x<sub>1</sub></var> <var>y<sub>1</sub></var> <var>t<sub>1</sub></var>
+...
+<var>x<sub>p&minus;1</sub></var> <var>y<sub>p&minus;1</sub></var> <var>t<sub>p&minus;1</sub></var>
+<var>s<sub>0,0</sub></var> <var>s<sub>1,0</sub></var> … <var>s<sub>W&minus;1,0</sub></var>
+<var>s<sub>0,1</sub></var> <var>s<sub>1,1</sub></var> … <var>s<sub>W&minus;1,1</sub></var>
+...
+<var>s<sub>0,H&minus;1</sub></var> <var>s<sub>1,H&minus;1</sub></var> … <var>s<sub>W&minus;1,H&minus;1</sub></var>
+</pre>
+
+<p>
+1行目に畑の横幅<var>W</var>、畑の縦幅<var>H</var>、時刻<var>T</var>が与えられる。がっちょ君は時刻<var>T</var>までに肥料をまきおえる。<br>
+2行目にがっちょ君が肥料をまいた回数<var>p</var>が与えられる。<br>
+3行目から2+<var>p</var>行目までに与えられる３つの整数は、がっちょ君が時刻<var>t<sub>i</sub></var>にマス(<var>x<sub>i</sub></var>, <var>y<sub>i</sub></var>)に肥料をまいたことを表す。<br>
+3+<var>p</var>行目から2+<var>p</var>+<var>H</var>行目までは、最初の畑のそれぞれのマスに植物が植えられているかどうかを表す<var>W</var>&times;<var>H</var>個の整数が与えられる。<var>s<sub>j,k</sub></var>が1のときマス(<var>j</var>, <var>k</var>)に高さ0cmの植物が1本だけ植えられていることを表し、<var>s<sub>j,k</sub></var>が0のときマス(<var>j</var>, <var>k</var>)に植物は1本も植えられていないことを表す。<br>
+</p>
+
+<h2>Constraints</h2>
+<ul>
+<li>1 &le; <var>W</var>, <var>H</var>, <var>T</var> &le; 50</li>
+<li>0 &le; <var>p</var> &le; min(<var>W</var>&times;<var>H</var>&times;<var>T</var>, 50)</li>
+<li>0 &le; <var>x<sub>i</sub></var> &lt; <var>W</var></li>
+<li>0 &le; <var>y<sub>i</sub></var> &lt; <var>H</var></li>
+<li>0 &le; <var>t<sub>i</sub></var> &lt; <var>T</var></li>
+<li><var>s<sub>j,k</sub></var> = 0または1</li>
+</ul>
+
+<h2>Output</h2>
+<p>
+時刻<var>T</var>での畑の植物の高さの和を1行に出力せよ。
+</p>
+
+<h2>Sample Input 1</h2>
+<pre>
+3 3 3
+5
+2 0 0
+0 1 0
+1 1 1
+1 2 1
+2 2 0
+0 0 0
+0 1 0
+0 0 0
+</pre>
+
+<h2>Sample Output 1</h2>
+<pre>
+1
+</pre>
+
+<p><img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE3_ACPC2016Day2AIZU_A_sample1" alt="Sample1" style="width: 640px"></p>
+
+<h2>Sample Input 2</h2>
+<pre>
+2 3 4
+2
+0 0 0
+1 1 3
+1 0
+0 0
+0 0
+</pre>
+
+<h2>Sample Output 2</h2>
+<pre>
+1
+</pre>
+
+<h2>Sample Input 3</h2>
+<pre>
+3 8 6
+6
+0 4 3
+2 5 3
+0 2 3
+2 2 5
+1 1 3
+2 2 1
+1 1 1
+1 1 1
+1 1 1
+1 0 1
+0 1 1
+1 1 0
+1 0 1
+0 1 0
+</pre>
+
+<h2>Sample Output 3</h2>
+<pre>
+4
+</pre>
+
+<h2>Sample Input 4</h2>
+<pre>
+8 3 3
+7
+0 1 1
+5 1 0
+4 0 2
+3 2 0
+3 1 1
+3 0 1
+5 1 1
+1 0 1 1 0 0 1 0
+0 0 1 1 0 1 0 1
+0 1 0 0 0 1 0 1
+</pre>
+
+<h2>Sample Output 4</h2>
+<pre>
+4
+</pre>
+<p><img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE3_ACPC2016Day2AIZU_A_sample4" alt="Sample4" style="width: 640px"></p>

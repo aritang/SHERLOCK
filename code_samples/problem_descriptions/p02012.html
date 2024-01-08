@@ -1,0 +1,69 @@
+<h1>Problem I. Sum of QQ</h1>
+<!--
+Time Limit: 2 sec
+Memory Limit: 512 MB
+  -->
+<p>
+  You received a card with an integer $S$ and a <i>multiplication table</i> of infinite size. All the elements in the table are integers, and an integer at the $i$-th row from the top and the $j$-th column from the left is $A_{i,j} = i \times j$ ($i,j \geq 1$). The table has infinite size, i.e., the number of the rows and the number of the columns are infinite.
+</p>
+
+<p>
+  You love rectangular regions of the table in which the sum of numbers is $S$. Your task is to count the number of integer tuples $(a, b, c, d)$ that satisfies $1 \leq a \leq b, 1 \leq c \leq d$ and $\sum_{i=a}^b \sum_{j=c}^d A_{i,j} = S$.
+</p>
+
+<h2>Input</h2>
+<p>
+  The input consists of a single test case of the following form.
+</p>
+
+<pre>
+$S$  
+</pre>
+
+<p>
+  The first line consists of one integer $S$ ($1 \leq S \leq 10^5$), representing the summation of rectangular regions you have to find.
+</p>
+
+<h2>Output</h2>
+<p>
+  Print the number of rectangular regions whose summation is $S$ in one line.
+</p>
+
+<h2>Examples</h2>
+
+<h2>Sample Input 1</h2>
+<pre>
+25
+</pre>
+<h2>Output for Sample Input 1</h2>
+<pre>
+10
+</pre>
+
+<h2>Sample Input 2</h2>
+<pre>
+1
+</pre>
+<h2>Output for Sample Input 2</h2>
+<pre>
+1
+</pre>
+
+<h2>Sample Input 3</h2>
+<pre>
+5
+</pre>
+<h2>Output for Sample Input 3</h2>
+<pre>
+4
+</pre>
+
+<h2>Sample Input 4</h2>
+<pre>
+83160
+</pre>
+
+<h2>Output for Sample Input 4</h2>
+<pre>
+5120
+</pre>

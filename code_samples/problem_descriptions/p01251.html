@@ -1,0 +1,97 @@
+
+<H1><font color="#000">Problem B:</font> Left Hand Rule</H1>
+
+<p>
+The left-hand rule, which is also known as the wall follower, is a well-known strategy that solves a two-
+dimensional maze. The strategy can be stated as follows: once you have entered the maze, walk around
+with keeping your left hand in contact with the wall until you reach the goal. In fact, it is proven that this
+strategy solves some kind of mazes.
+</p>
+<p>
+Your task is to write a program that determines whether the given maze is solvable by using the left-hand
+rule and (if the maze is solvable) the number of steps to reach the exit. Moving to a cell from the entrance
+or the adjacent (north, south, east or west) cell is counted as a step.
+</p>
+<p>
+In this problem, the maze is represented by a collection of walls placed on the two-dimensional grid.
+We use an ordinary Cartesian coordinate system; the positive <i>x</i>-axis points right and the positive <i>y</i>-axis
+points up. Each wall is represented by a line segment which is parallel to the <i>x</i>-axis or the <i>y</i>-axis, such
+that both ends of each wall are located on integer coordinates. The size of the maze is given by <i>W</i> and <i>H</i>
+that indicate the width and the height of the maze, respectively. A rectangle whose vertices are on (0, 0),
+(<i>W</i>, 0), (<i>W</i>, <i>H</i>) and (0, <i>H</i>) forms the outside boundary of the maze. The outside of the maze is always
+surrounded by walls except for the entrance of the maze. The entrance is represented by a line segment
+whose ends are (<i>x<sub>E</sub></i>, <i>y<sub>E</sub></i>) and (<i>x<sub>E</sub></i>', <i>y<sub>E</sub></i>'). The entrance has a unit length and is located somewhere on one
+edge of the boundary. The exit is a unit square whose bottom left corner is located on (<i>x<sub>X</sub></i>, <i>y<sub>X</sub></i>).
+</p>
+<p>
+A few examples of mazes are illustrated in the figure below. They correspond to the datasets in the sample
+input.
+</p>
+
+<center>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE1_leftHandRule">
+<p>Figure 1: Example Mazes (shaded squares indicate the exits)</p>
+</center>
+
+
+<H2>Input</H2>
+
+<p>
+The input consists of multiple datasets.
+</p>
+<p>
+Each dataset is formatted as follows:
+</p>
+<pre>
+      <i>W H N</i>
+      <i>x</i><sub>1</sub> <i>y</i><sub>1</sub> <i>x</i><sub>1</sub>' <i>y</i><sub>1</sub>'
+      <i>x</i><sub>2</sub> <i>y</i><sub>2</sub> <i>x</i><sub>2</sub>' <i>y</i><sub>2</sub>'
+      ...
+      <i>x</i><sub><i>N</i></sub> <i>y</i><sub><i>N</i></sub> <i>x</i><sub><i>N</i></sub>' <i>y</i><sub><i>N</i></sub>'
+      <i>x</i><sub><i>E</i></sub> <i>y</i><sub><i>E</i></sub> <i>x</i><sub><i>E</i></sub>' <i>y</i><sub><i>E</i></sub>' <i>x<sub>X</sub></i> <i>y<sub>X</sub></i>
+</pre>
+
+<p>
+<i>W</i> and <i>H</i> (0 &lt; <i>W</i>, <i>H</i> &le; 100) indicate the size of the maze. <i>N</i> is the number of walls inside the maze.
+The next <i>N</i> lines give the positions of the walls, where (<i>x<sub>i</sub></i>, <i>y<sub>i</sub></i>) and (<i>x<sub>i</sub></i>', <i>y<sub>i</sub></i>') denote two ends of each wall
+(1 &le; <i>i</i> &le; <i>N</i>). The last line gives the positions of the entrance and the exit. You can assume that all the
+coordinates given in the input are integer coordinates and located inside the boundary of the maze. You
+can also assume that the wall description is not redundant, i.e. an endpoint of a wall is not shared by any
+other wall that is parallel to it.
+</p>
+<p>
+The input is terminated by a line with three zeros.
+</p>
+
+<H2>Output</H2>
+
+<p>
+For each dataset, print a line that contains the number of steps required to reach the exit. If the given
+maze is unsolvable, print “<span>Impossible</span>” instead of the number of steps.
+
+</p>
+
+<H2>Sample Input</H2>
+<pre>
+3 3 3
+1 0 1 2
+1 2 2 2
+2 2 2 1
+0 0 1 0 1 1
+3 3 4
+1 0 1 2
+1 2 2 2
+2 2 2 1
+2 1 1 1
+0 0 1 0 1 1
+3 3 0
+0 0 1 0 1 1
+0 0 0
+</pre>
+
+<H2>Output for the Sample Input</H2>
+<pre>
+9
+Impossible
+Impossible
+</pre>

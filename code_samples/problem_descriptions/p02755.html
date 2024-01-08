@@ -1,0 +1,83 @@
+<span class="lang-en">
+<p>Score : <var>300</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>Find the price of a product before tax such that, when the consumption tax rate is <var>8</var> percent and <var>10</var> percent, the amount of consumption tax levied on it is <var>A</var> yen and <var>B</var> yen, respectively. (Yen is the currency of Japan.)</p>
+<p>Here, the price before tax must be a positive integer, and the amount of consumption tax is rounded down to the nearest integer.</p>
+<p>If multiple prices satisfy the condition, print the lowest such price; if no price satisfies the condition, print <code>-1</code>.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 \leq A \leq B \leq 100</var></li>
+<li><var>A</var> and <var>B</var> are integers.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>A</var> <var>B</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>If there is a price that satisfies the condition, print an integer representing the lowest such price; otherwise, print <code>-1</code>.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>2 2
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>25
+</pre>
+<p>If the price of a product before tax is <var>25</var> yen, the amount of consumption tax levied on it is:</p>
+<ul>
+<li>When the consumption tax rate is <var>8</var> percent: <var>\lfloor 25 \times 0.08 \rfloor = \lfloor 2 \rfloor = 2</var> yen.</li>
+<li>When the consumption tax rate is <var>10</var> percent: <var>\lfloor 25 \times 0.1 \rfloor = \lfloor 2.5 \rfloor = 2</var> yen.</li>
+</ul>
+<p>Thus, the price of <var>25</var> yen satisfies the condition. There are other possible prices, such as <var>26</var> yen, but print the minimum such price, <var>25</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>8 10
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>100
+</pre>
+<p>If the price of a product before tax is <var>100</var> yen, the amount of consumption tax levied on it is:</p>
+<ul>
+<li>When the consumption tax rate is <var>8</var> percent: <var>\lfloor 100 \times 0.08 \rfloor = 8</var> yen.</li>
+<li>When the consumption tax rate is <var>10</var> percent: <var>\lfloor 100 \times 0.1 \rfloor = 10</var> yen.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>19 99
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>-1
+</pre>
+<p>There is no price before tax satisfying this condition, so print <code>-1</code>.</p></section>
+</div>
+</span>

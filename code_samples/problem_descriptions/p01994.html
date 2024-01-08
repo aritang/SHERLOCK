@@ -1,0 +1,74 @@
+<h2>F： 01 文字列と窓 (Binary String with Slit)</h2>
+
+<h3>問題</h3>
+<p>文字の種類が <var>0</var> と <var>1</var> のみからなる文字列 <var>S</var> が与えられます。以下の操作を繰り返すことで、<var>S</var> を <var>T</var> に変えたいです。</p>
+<ul>
+<li> 文字列 <var>S</var> 中の最も右側に登場する <var>1</var> を含むように、幅 <var>2</var> のスリットを置く。スリット内には連続した <var>2</var> 文字を必ず含まなければならない。つまり、文字列の端 <var>1</var> 文字のみを含むように置くことはできない。<var>2</var> 通り置ける場合も考えられるが、この場合はどちらの方法で置いても構わない。</li>
+</ul>
+
+<object data="https://judgeapi.u-aizu.ac.jp/resources/images/HUPC2018_acpc-slit-001.png" type="image/png" width="400"></object>
+
+<ul>
+<li> スリット中の <var>2</var> 文字を <var>2</var> 桁の二進数と捉えるとき、元の数値との差の絶対値が <var>1</var> になるようにスリット中の文字を変更する。ただし、スリット中の文字の両方が <var>0</var> になってはならない。つまり、変更後のスリット内の数値は <var>1</var> から <var>3</var> までのいずれかとなる。</li>
+</ul>
+
+<object data="https://judgeapi.u-aizu.ac.jp/resources/images/HUPC2018_acpc-slit-002.png" type="image/png" width="600"></object>
+
+
+<p>クエリが <var>Q</var> 回与えられます。<var>i</var> 番目のクエリで <var>1</var> を少なくとも一つ含む文字列 <var>S_i, T_i</var> が与えられるので、<var>S_i</var> を <var>T_i</var> に変えるために必要な操作回数の最小値を、それぞれのクエリについて求めてください。</p>
+
+<h3>入力形式</h3>
+<pre>
+<var>Q</var>
+<var>S_1</var> <var>T_1</var>
+<var>...</var>
+<var>S_Q</var> <var>T_Q</var>
+</pre>
+
+<p><var>1</var> 行目では、クエリの個数 <var>Q</var> が与えられる。</p>
+
+<p><var>2</var> 行目以降 <var>Q</var> 行は、クエリが与えられる。 <var>i+1</var> 行目では <var>S_i</var> と <var>T_i</var> が空白区切りで与えられる。</p>
+
+<h3>制約</h3>
+<ul>
+<li> <var>1 \leq Q \leq 10^5</var></li>
+<li> <var>2 \leq |S_i| = |T_i| \leq 50</var></li>
+<li> <var>S_i, T_i</var> は <code>0</code> と <code>1</code> のみからなる文字列である。</li>
+<li> <var>S_i, T_i</var> はともに <code>1</code> を少なくとも 1 つ含む文字列である。</li>
+</ul>
+
+<h3>出力形式</h3>
+<p>出力は <var>Q</var> 行からなる。</p>
+
+<p><var>i</var> 行目には、<var>i</var> 番目のクエリに対する結果を出力せよ。</p>
+
+<h3>入力例1</h3>
+<pre>
+4
+101 110
+101 101
+1010 1101
+11011001 10010101
+</pre>
+
+
+<h3>出力例1</h3>
+<pre>
+1
+0
+3
+12
+</pre>
+
+<ul>
+<li> <var>1</var> 個目のクエリでは、<var>S =</var> <code>101</code> を <var>T =</var> <code>110</code> と一致させるために必要な操作回数の最小値を求める必要があります。以下の画像のように、 <var>S</var> の中に登場する <code>1</code> の中で最も右にあるものが含まれるようにスリットを置き、スリット中の文字列を書き換えることで <var>1</var> 回の操作で <var>S</var> と <var>T</var> を一致させることができます。</li>
+</ul>
+
+<object data="https://judgeapi.u-aizu.ac.jp/resources/images/HUPC2018_acpc-slit-003.png" type="image/png" width="250"></object>
+
+<ul>
+<li> <var>2</var> 個目のクエリでは、はじめから <var>S</var> と <var>T</var> が一致しているため、操作の必要がありません。</li>
+<li> <var>3</var> 個目のクエリについて、以下の画像のように文字列を変更させると <var>3</var> 回の操作で <var>S</var> と <var>T</var> を一致させることができます。</li>
+</ul>
+
+<object data="https://judgeapi.u-aizu.ac.jp/resources/images/HUPC2018_acpc-slit-004.png" type="image/png" width="250"></object>

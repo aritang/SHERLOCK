@@ -1,0 +1,100 @@
+<span class="lang-en">
+<p>Score : <var>300</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>We have <var>N</var> switches with "on" and "off" state, and <var>M</var> bulbs. The switches are numbered <var>1</var> to <var>N</var>, and the bulbs are numbered <var>1</var> to <var>M</var>.</p>
+<p>Bulb <var>i</var> is connected to <var>k_i</var> switches: Switch <var>s_{i1}</var>, <var>s_{i2}</var>, <var>...</var>, and <var>s_{ik_i}</var>. It is lighted when the number of switches that are "on" among these switches is congruent to <var>p_i</var> modulo <var>2</var>.</p>
+<p>How many combinations of "on" and "off" states of the switches light all the bulbs?</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 \leq N, M \leq 10</var></li>
+<li><var>1 \leq k_i \leq N</var></li>
+<li><var>1 \leq s_{ij} \leq N</var></li>
+<li><var>s_{ia} \neq s_{ib} (a \neq b)</var></li>
+<li><var>p_i</var> is <var>0</var> or <var>1</var>.</li>
+<li>All values in input are integers.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var> <var>M</var>
+<var>k_1</var> <var>s_{11}</var> <var>s_{12}</var> <var>...</var> <var>s_{1k_1}</var>
+<var>:</var>
+<var>k_M</var> <var>s_{M1}</var> <var>s_{M2}</var> <var>...</var> <var>s_{Mk_M}</var>
+<var>p_1</var> <var>p_2</var> <var>...</var> <var>p_M</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the number of combinations of "on" and "off" states of the switches that light all the bulbs.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>2 2
+2 1 2
+1 2
+0 1
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>1
+</pre>
+<ul>
+<li>Bulb <var>1</var> is lighted when there is an even number of switches that are "on" among the following: Switch <var>1</var> and <var>2</var>.</li>
+<li>Bulb <var>2</var> is lighted when there is an odd number of switches that are "on" among the following: Switch <var>2</var>.</li>
+</ul>
+<p>There are four possible combinations of states of (Switch <var>1</var>, Switch <var>2</var>): (on, on), (on, off), (off, on) and (off, off). Among them, only (on, on) lights all the bulbs, so we should print <var>1</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>2 3
+2 1 2
+1 1
+1 2
+0 0 1
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>0
+</pre>
+<ul>
+<li>Bulb <var>1</var> is lighted when there is an even number of switches that are "on" among the following: Switch <var>1</var> and <var>2</var>.</li>
+<li>Bulb <var>2</var> is lighted when there is an even number of switches that are "on" among the following: Switch <var>1</var>.</li>
+<li>Bulb <var>3</var> is lighted when there is an odd number of switches that are "on" among the following: Switch <var>2</var>.</li>
+</ul>
+<p>Switch <var>1</var> has to be "off" to light Bulb <var>2</var> and Switch <var>2</var> has to be "on" to light Bulb <var>3</var>, but then Bulb <var>1</var> will not be lighted. Thus, there are no combinations of states of the switches that light all the bulbs, so we should print <var>0</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>5 2
+3 1 2 5
+2 2 3
+1 0
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>8
+</pre></section>
+</div>
+</span>

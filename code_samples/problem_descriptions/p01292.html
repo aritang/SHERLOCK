@@ -1,0 +1,104 @@
+
+<H1><font color="#000">Problem J:</font> Secret Operation</H1>
+
+<p>
+Mary Ice is a member of a spy group. She is about to carry out a secret operation with her colleague.
+</p>
+<p>
+She has got into a target place just now, but unfortunately the colleague has not reached there yet. She
+needs to hide from her enemy George Water until the colleague comes. Mary may want to make herself
+appear in George’s sight as short as possible, so she will give less chance for George to find her.
+</p>
+<p>
+You are requested to write a program that calculates the time Mary is in George’s sight before her colleague arrives, given the information about moves of Mary and George as well as obstacles blocking their
+sight.
+</p>
+<p>
+Read the Input section for the details of the situation.
+</p>
+
+<H2>Input</H2>
+
+<p>
+The input consists of multiple datasets. Each dataset has the following format:
+</p>
+
+<p>
+<i>Time R</i><br>
+<i>L</i><br>
+<i>MaryX</i><sub>1</sub> <i>MaryY</i><sub>1</sub> <i>MaryT</i><sub>1</sub><br>
+<i>MaryX</i><sub>2</sub> <i>MaryY</i><sub>2</sub> <i>MaryT</i><sub>2</sub><br>
+...<br>
+<i>MaryX</i><sub><i>L</i></sub> <i>MaryY</i><sub><i>L</i></sub> <i>MaryT</i><sub><i>L</i></sub><br>
+<i>M</i><br>
+<i>GeorgeX</i><sub>1</sub> <i>GeorgeY</i><sub>1</sub> <i>GeorgeT</i><sub>1</sub><br>
+<i>GeorgeX</i><sub>2</sub> <i>GeorgeY</i><sub>2</sub> <i>GeorgeT</i><sub>2</sub><br>
+...<br>
+<i>GeorgeX</i><sub><i>M</i></sub> <i>GeorgeY</i><sub><i>M</i></sub> <i>GeorgeT</i><sub><i>M</i></sub><br>
+<i>N</i>
+<i>BlockSX</i><sub>1</sub> <i>BlockSY</i><sub>1</sub> <i>BlockTX</i><sub>1</sub> <i>BlockTY</i><sub>1</sub><br>
+<i>BlockSX</i><sub>2</sub> <i>BlockSY</i><sub>2</sub> <i>BlockTX</i><sub>2</sub> <i>BlockTY</i><sub>2</sub><br>
+...<br>
+<i>BlockSX</i><sub><i>N</i></sub> <i>BlockSY</i><sub><i>N</i></sub> <i>BlockTX</i><sub><i>N</i></sub> <i>BlockTY</i><sub><i>N</i></sub><br>
+</p>
+
+
+<p>
+The first line contains two integers. Time (0 &le; <i>Time</i> &le; 100) is the time Mary's colleague reaches the
+place. <i>R</i> (0 &lt; <i>R</i> &lt; 30000) is the distance George can see - he has a sight of this distance and of 45
+degrees left and right from the direction he is moving. In other words, Mary is found by him if and only
+if she is within this distance from him and in the direction different by not greater than 45 degrees from
+his moving direction and there is no obstacles between them.
+</p>
+<p>
+The description of Mary's move follows. Mary moves from (<i>MaryX<sub>i</sub></i>, <i>MaryY<sub>i</sub></i>) to (<i>MaryX</i><sub><i>i</i>+1</sub>, <i>MaryY</i><sub><i>i</i>+1</sub>)
+straight and at a constant speed during the time between <i>MaryT<sub>i</sub></i> and <i>MaryT</i><sub><i>i</i>+1</sub>, for each 1 &le; <i>i</i> &le; <i>L</i> - 1.
+The following constraints apply: 2 &le; <i>L</i> &le; 20, <i>MaryT</i><sub>1</sub> = 0 and <i>MaryT<sub>L</sub></i> = <i>Time</i>, and <i>MaryT<sub>i</sub></i> &lt; <i>MaryT</i><sub><i>i</i>+1</sub>
+for any 1 &le; <i>i</i> &le; <i>L</i> - 1.
+</p>
+
+<p>
+The description of George's move is given in the same way with the same constraints, following Mary's.
+In addition, (<i>GeorgeX<sub>j</sub></i>, <i>GeorgeY<sub>j</sub></i> ) and (<i>GeorgeX</i><sub><i>j</i>+1</sub>, <i>GeorgeY</i><sub><i>j</i>+1</sub>) do not coincide for any 1 &le; <i>j</i> &le; <i>M</i> - 1. In other words, George is always moving in some direction.
+</p>
+
+<p>
+Finally, there comes the information of the obstacles. Each obstacle has a rectangular shape occupying
+(<i>BlockSX<sub>k</sub></i>, <i>BlockSY<sub>k</sub></i>) to (<i>BlockTX<sub>k</sub></i>, <i>BlockTY<sub>k</sub></i>). No obstacle touches or crosses with another. The number of obstacles ranges from 0 to 20 inclusive.
+</p>
+
+<p>
+All the coordinates are integers not greater than 10000 in their absolute values. You may assume that, if
+the coordinates of Mary's and George's moves would be changed within the distance of 10<sup>-6</sup>, the solution would be changed by not greater than 10<sup>-6</sup>.
+</p>
+
+<p>
+The last dataset is followed by a line containing two zeros. This line is not a part of any dataset and should not be processed.
+</p>
+
+
+<H2>Output</H2>
+
+<p>
+For each dataset, print the calculated time in a line. The time may be printed with any number of digits after the decimal
+point, but should be accurate to 10<sup>-4</sup> .
+
+</p>
+
+<H2>Sample Input</H2>
+<pre>
+50 100
+2
+50 50 0
+51 51 50
+2
+0 0 0
+1 1 50
+0
+0 0
+</pre>
+
+<H2>Output for the Sample Input</H2>
+<pre>
+50
+</pre>

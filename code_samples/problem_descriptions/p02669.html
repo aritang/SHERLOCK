@@ -1,0 +1,85 @@
+<span class="lang-en">
+<p>Score : <var>400</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>You start with the number <var>0</var> and you want to reach the number <var>N</var>.</p>
+<p>You can change the number, paying a certain amount of coins, with the following operations:</p>
+<ul>
+<li>Multiply the number by <var>2</var>, paying <var>A</var> coins.</li>
+<li>Multiply the number by <var>3</var>, paying <var>B</var> coins.</li>
+<li>Multiply the number by <var>5</var>, paying <var>C</var> coins.</li>
+<li>Increase or decrease the number by <var>1</var>, paying <var>D</var> coins.</li>
+</ul>
+<p>You can perform these operations in arbitrary order and an arbitrary number of times.</p>
+<p>What is the minimum number of coins you need to reach <var>N</var>?</p>
+<p><strong>You have to solve <var>T</var> testcases.</strong></p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 \le T \le 10</var></li>
+<li><var>1 \le N \le 10^{18}</var></li>
+<li><var>1 \le A, B, C, D \le 10^9</var></li>
+<li>All numbers <var>N, A, B, C, D</var> are integers.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>The input is given from Standard Input. The first line of the input is</p>
+<pre><var>T</var>
+</pre>
+<p>Then, <var>T</var> lines follow describing the <var>T</var> testcases.
+Each of the <var>T</var> lines has the format</p>
+<pre><var>N</var> <var>A</var> <var>B</var> <var>C</var> <var>D</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>For each testcase, print the answer on Standard Output followed by a newline.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>5
+11 1 2 4 8
+11 1 2 2 8
+32 10 8 5 4
+29384293847243 454353412 332423423 934923490 1
+900000000000000000 332423423 454353412 934923490 987654321
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>20
+19
+26
+3821859835
+23441258666
+</pre>
+<p>For the first testcase, a sequence of moves that achieves the minimum cost of <var>20</var> is:</p>
+<ul>
+<li>Initially <var>x = 0</var>.</li>
+<li>Pay <var>8</var> to increase by <var>1</var> (<var>x = 1</var>).</li>
+<li>Pay <var>1</var> to multiply by <var>2</var> (<var>x = 2</var>).</li>
+<li>Pay <var>1</var> to multiply by <var>2</var> (<var>x = 4</var>).</li>
+<li>Pay <var>2</var> to multiply by <var>3</var> (<var>x = 12</var>).</li>
+<li>Pay <var>8</var> to decrease by <var>1</var> (<var>x = 11</var>).</li>
+</ul>
+<p>For the second testcase, a sequence of moves that achieves the minimum cost of <var>19</var> is:</p>
+<ul>
+<li>Initially <var>x = 0</var>.</li>
+<li>Pay <var>8</var> to increase by <var>1</var> (<var>x = 1</var>).</li>
+<li>Pay <var>1</var> to multiply by <var>2</var> (<var>x = 2</var>).</li>
+<li>Pay <var>2</var> to multiply by <var>5</var> (<var>x = 10</var>).</li>
+<li>Pay <var>8</var> to increase by <var>1</var> (<var>x = 11</var>).</li>
+</ul></section>
+</div>
+</span>

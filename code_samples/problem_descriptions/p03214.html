@@ -1,0 +1,80 @@
+<span class="lang-en">
+<p>Score : <var>200</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3>
+<p>Niwango-kun is an employee of Dwango Co., Ltd.<br/>
+One day, he is asked to generate a thumbnail from a video a user submitted.<br/>
+To generate a thumbnail, he needs to select a frame of the video according to the following procedure:</p>
+<ul>
+<li>Get an integer <var>N</var> and <var>N</var> integers <var>a_0, a_1, ..., a_{N-1}</var> as inputs. <var>N</var> denotes the number of the frames of the video, and each <var>a_i</var> denotes the representation of the <var>i</var>-th frame of the video.</li>
+<li>Select <var>t</var>-th frame whose representation <var>a_t</var> is nearest to the average of all frame representations.</li>
+<li>If there are multiple such frames, select the frame with the smallest index.</li>
+</ul>
+<p>Find the index <var>t</var> of the frame he should select to generate a thumbnail.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3>
+<ul>
+<li><var>1 \leq N \leq 100</var></li>
+<li><var>1 \leq a_i \leq 100</var></li>
+<li>All numbers given in input are integers</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3>
+<p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+<var>a_{0}</var> <var>a_{1}</var> <var>...</var> <var>a_{N-1}</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3>
+<p>Print the answer.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3>
+<pre>3
+1 2 3
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3>
+<pre>1
+</pre>
+<p>Since the average of frame representations is <var>2</var>, Niwango-kun needs to select the index <var>1</var>, whose representation is <var>2</var>, that is, the nearest value to the average.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3>
+<pre>4
+2 5 2 5
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3>
+<pre>0
+</pre>
+<p>The average of frame representations is <var>3.5</var>.<br/>
+In this case, every frame has the same distance from its representation to the average.<br/>
+Therefore, Niwango-kun should select index <var>0</var>, the smallest index among them.</p></section>
+</div>
+</span>

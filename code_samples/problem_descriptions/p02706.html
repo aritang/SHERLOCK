@@ -1,0 +1,95 @@
+<span class="lang-en">
+<p>Score : <var>200</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>Takahashi has <var>N</var> days of summer vacation.</p>
+<p>His teacher gave him <var>M</var> summer assignments. It will take <var>A_i</var> days for him to do the <var>i</var>-th assignment.</p>
+<p>He cannot do multiple assignments on the same day, or hang out on a day he does an assignment.</p>
+<p>What is the maximum number of days Takahashi can hang out during the vacation if he finishes all the assignments during this vacation?</p>
+<p>If Takahashi cannot finish all the assignments during the vacation, print <code>-1</code> instead.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 \leq N \leq 10^6</var></li>
+<li><var>1 \leq M \leq 10^4</var></li>
+<li><var>1 \leq A_i \leq 10^4</var></li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var> <var>M</var>
+<var>A_1</var> <var>...</var> <var>A_M</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the maximum number of days Takahashi can hang out during the vacation, or <code>-1</code>.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>41 2
+5 6
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>30
+</pre>
+<p>For example, he can do the first assignment on the first <var>5</var> days, hang out on the next <var>30</var> days, and do the second assignment on the last <var>6</var> days of the vacation. In this way, he can safely spend <var>30</var> days hanging out.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>10 2
+5 6
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>-1
+</pre>
+<p>He cannot finish his assignments.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>11 2
+5 6
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>0
+</pre>
+<p>He can finish his assignments, but he will have no time to hang out.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 4</h3><pre>314 15
+9 26 5 35 8 9 79 3 23 8 46 2 6 43 3
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 4</h3><pre>9
+</pre></section>
+</div>
+</span>

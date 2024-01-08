@@ -1,0 +1,61 @@
+
+<H1>Closest Pair</H1>
+
+<p>
+For given <var>n</var> points in metric space, find the distance of the closest points.
+</p>
+
+<H2>Input</H2>
+
+<pre>
+<var>n</var>
+<var>x<sub>0</sub></var> <var>y<sub>0</sub></var>
+<var>x<sub>1</sub></var> <var>y<sub>1</sub></var>
+:
+<var>x<sub>n-1</sub></var> <var>y<sub>n-1</sub></var>
+</pre>
+
+<p>
+The first integer <var>n</var> is the number of points.
+</p>
+
+<p>
+In the following <var>n</var> lines, the coordinate of the <var>i</var>-th point is given by two real numbers <var>x<sub>i</sub></var> and <var>y<sub>i</sub></var>. Each value is a real number with at most 6 digits after the decimal point.
+</p>
+
+<H2>Output</H2>
+
+<p>
+Print the distance in a line. The output values should be in a decimal fraction with an error less than 0.000001.
+</p>
+
+<H2>Constraints</H2>
+
+<ul>
+<li>2 &le; <var>n</var> &le; 100,000</li>
+<li>-100 &le; <var>x</var>, <var>y</var> &le; 100</li>
+</ul>
+
+<H2>Sample Input 1</H2>
+<pre>
+2
+0.0 0.0
+1.0 0.0
+</pre>
+<H2>Sample Output 1</H2>
+<pre>
+1.000000
+</pre>
+<br/>
+
+<H2>Sample Input 2</H2>
+<pre>
+3
+0.0 0.0
+2.0 0.0
+1.0 1.0
+</pre>
+<H2>Sample Output 2</H2>
+<pre>
+1.41421356237
+</pre>

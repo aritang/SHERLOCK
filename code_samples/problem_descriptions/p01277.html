@@ -1,0 +1,148 @@
+
+<H1><font color="#000">Problem E:</font> Symmetry</H1>
+
+<p>
+Open Binary and Object Group organizes a programming contest every year. Mr. Hex belongs to this
+group and joins the judge team of the contest. This year, he created a geometric problem with its solution
+for the contest. The problem required a set of points forming a line-symmetric polygon for the input.
+Preparing the input for this problem was also his task. The input was expected to cover all edge cases, so
+he spent much time and attention to make them satisfactory.
+</p>
+<p>
+However, since he worked with lots of care and for a long time, he got tired before he finished. So He
+might have made mistakes - there might be polygons not meeting the condition. It was not reasonable to
+prepare the input again from scratch. The judge team thus decided to find all line-asymmetric polygons
+in his input and fix them as soon as possible. They asked a programmer, just you, to write a program to
+find incorrect polygons.
+</p>
+<p>
+You can assume the following:
+</p>
+<ul>
+    <li> Edges of the polygon must not cross or touch each other except for the end points of adjacent
+       edges.</li>
+    <li> It is acceptable for the polygon to have adjacent three vertexes on a line, but in such a case, there
+       must be the vertex symmetric to each of them.</li>
+</ul>
+
+
+<H2>Input</H2>
+
+<!--
+<p>
+The input consists of multiple datasets. Each dataset has the following format:
+</p>
+
+-->
+<p>
+The input consists of a set of points in the following format.
+</p>
+
+<p>
+<i>N</i><br>
+<i>x</i><sub>1</sub> <i>y</i><sub>1</sub><br>
+<i>x</i><sub>2</sub> <i>y</i><sub>2</sub><br>
+...<br>
+<i>x</i><sub><i>N</i></sub> <i>y</i><sub><i>N</i></sub><br>
+</p>
+
+
+<p>
+The first line of the input contains an integer <i>N</i> (3 &le; <i>N</i> &le; 1000), which denotes the number of points.
+The following <i>N</i> lines describe each point. The <i>i</i>-th line contains two integers <i>x</i><sub>1</sub>, <i>y</i><sub>1</sub> (-10000 &le; <i>x<sub>i</sub></i>, <i>y<sub>i</sub></i> &le; 10000), which denote the coordinates of the <i>i</i>-th point.
+</p>
+<p>
+Note that, although the points are the vertexes of a polygon, they are given in an artibrary order, not
+necessarily clockwise or counterclockwise.
+</p>
+
+<!--
+<p>
+The last dataset is followed by a line containing one zero. This line is not a part of any dataset and should not be processed.
+</p>
+-->
+
+
+<H2>Output</H2>
+
+<p>
+Output "<span>Yes</span>" in a line if the points can form a line-symmetric polygon, otherwise output "<span>No</span>".
+</p>
+
+<H2>Sample Input 1</H2>
+<pre>
+4
+0 1
+1 0
+0 0
+1 1
+</pre>
+
+<H2>Sample Output 1</H2>
+<pre>
+Yes
+</pre>
+<br/>
+
+<H2>Sample Input 2</H2>
+<pre>
+4
+0 1
+1 -1
+0 0
+1 1
+</pre>
+
+<H2>Sample Output 2</H2>
+<pre>
+No
+</pre>
+<br/>
+
+<H2>Sample Input 3</H2>
+<pre>
+9
+-1 1
+0 1
+1 1
+-1 0
+0 0
+1 0
+-1 -1
+0 -1
+1 -1
+</pre>
+
+<H2>Sample Output 3</H2>
+<pre>
+No
+</pre>
+<br/>
+
+
+<H2>Sample Input 4</H2>
+<pre>
+3
+-1 -1
+0 0
+1 1
+</pre>
+<H2>Sample Output 4</H2>
+<pre>
+No
+</pre>
+<br/>
+
+<H2>Sample Input 5</H2>
+<pre>
+4
+0 2
+0 0
+-1 0
+1 0
+</pre>
+
+<H2>Sample Output 5</H2>
+<pre>
+Yes
+</pre>

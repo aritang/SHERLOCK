@@ -1,0 +1,83 @@
+<H1>Lake Survery</H1>
+
+<p>
+  The Onogawa Expedition is planning to conduct a survey of the Aizu nature reserve. The expedition planner wants to take the shortest possible route from the start to end point of the survey, while the expedition has to go around the coast of the Lake of Onogawa en route. The expedition walks along the coast of the lake, but can not wade across the lake.
+</p>
+
+<p>
+  Based on the base information including the start and end point of the survey and the area of Lake Onogawa as convex polygon data, make a program to find the shortest possible route for the expedition and calculate its distance. Note that the expedition can move along the polygonal lines passing through the nodes, but never enter within the area enclosed by the polygon.
+</p>
+
+
+<h2>Input</h2>
+
+<p>
+  The input is given in the following format.
+</p>
+
+<pre>
+<var>x_s</var> <var>y_s</var>
+<var>x_g</var> <var>y_g</var>
+<var>N</var>
+<var>x_1</var> <var>y_1</var>
+<var>x_2</var> <var>y_2</var>
+:
+<var>x_N</var> <var>y_N</var>
+</pre>
+
+<p>
+The first line provides the start point of the survey <var>x_s,y_s</var> (0&le;<var>x_s,y_s</var>&le;10<sup>4</sup>), and the second line provides the end point <var>x_g,y_g</var> (0 &le; <var>x_g,y_g</var> &le; 10<sup>4</sup>) all in integers. The third line provides the number of apexes <var>N</var> (3 &le; <var>N</var> &le; 100) of the polygon that represents the lake, and each of the subsequent <var>N</var> lines provides the coordinate of the <var>i</var>-th apex <var>x_i,y_i</var> (0 &le; <var>x_i,y_i</var> &le; 10<sup>4</sup>) in counter-clockwise order. These data satisfy the following criteria:
+
+
+</p>
+<ul>
+<li>Start and end points of the expedition are not within the area enclosed by the polygon nor on boundaries.</li>
+<li>Start and end points of the expedition are not identical, i.e., <var>x_s &ne; x_g</var> or <var>y_s &ne; y_g</var>.</li>
+<li>No duplicate coordinates are given, i.e., if <var>i &ne; j</var> then <var>x_i &ne; x_r</var> or <var>y_i &ne; y_j</var>.</li>
+<li>The area enclosed by the polygon has a positive value.</li>
+<li>Any three coordinates that define an area are not aligned on a line.</li>
+</ul>
+
+
+<h2>Output</h2>
+
+<p>
+
+Output the distance of the shortest possible expedition route. Any number of decimal places can be selected as long as the error does not exceed &plusmn; 10<sup>-3</sup>.
+  
+</p>
+
+<h2>Sample Input 1</h2>
+
+<pre>
+0 0
+4 0
+4
+1 1
+2 1
+3 3
+1 2
+</pre>
+
+<h2>Sample Output 1</h2>
+<pre>
+4.472136
+</pre>
+
+
+<h2>Sample Input 2</h2>
+
+<pre>
+4 4
+0 0
+4
+1 1
+3 1
+3 3
+1 3
+</pre>
+
+<h2>Sample Output 2</h2>
+<pre>
+6.32455
+</pre>

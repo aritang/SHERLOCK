@@ -1,0 +1,98 @@
+<span class="lang-en">
+<p>Score: <var>400</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3>
+<p>Print a sequence <var>a_1, a_2, ..., a_N</var> whose length is <var>N</var> that satisfies the following conditions:</p>
+<ul>
+<li><var>a_i</var> <var>(1 \leq i \leq N)</var> is a prime number at most <var>55</var> <var>555</var>.</li>
+<li>The values of <var>a_1, a_2, ..., a_N</var> are all different.</li>
+<li>In every choice of five different integers from <var>a_1, a_2, ..., a_N</var>, the sum of those integers is a composite number.</li>
+</ul>
+<p>If there are multiple such sequences, printing any of them is accepted.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Notes</h3>
+<p>An integer <var>N</var> not less than <var>2</var> is called a prime number if it cannot be divided evenly by any integers except <var>1</var> and <var>N</var>, and called a composite number otherwise.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3>
+<ul>
+<li><var>N</var> is an integer between <var>5</var> and <var>55</var> (inclusive).</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3>
+<p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3>
+<p>Print <var>N</var> numbers <var>a_1, a_2, a_3, ..., a_N</var> in a line, with spaces in between.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>5
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>3 5 7 11 31
+</pre>
+<p>Let us see if this output actually satisfies the conditions.<br/>
+First, <var>3</var>, <var>5</var>, <var>7</var>, <var>11</var> and <var>31</var> are all different, and all of them are prime numbers.<br/>
+The only way to choose five among them is to choose all of them, whose sum is <var>a_1+a_2+a_3+a_4+a_5=57</var>, which is a composite number.<br/>
+There are also other possible outputs, such as <code>2 3 5 7 13</code>, <code>11 13 17 19 31</code> and <code>7 11 5 31 3</code>.  </p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>6
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>2 3 5 7 11 13
+</pre>
+<ul>
+<li><var>2</var>, <var>3</var>, <var>5</var>, <var>7</var>, <var>11</var>, <var>13</var> are all different prime numbers.</li>
+<li><var>2+3+5+7+11=28</var> is a composite number.</li>
+<li><var>2+3+5+7+13=30</var> is a composite number.</li>
+<li><var>2+3+5+11+13=34</var> is a composite number.</li>
+<li><var>2+3+7+11+13=36</var> is a composite number.</li>
+<li><var>2+5+7+11+13=38</var> is a composite number.</li>
+<li><var>3+5+7+11+13=39</var> is a composite number.</li>
+</ul>
+<p>Thus, the sequence <code>2 3 5 7 11 13</code> satisfies the conditions.  </p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>8
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>2 5 7 13 19 37 67 79
+</pre></section>
+</div>
+</span>

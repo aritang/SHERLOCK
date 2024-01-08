@@ -1,0 +1,102 @@
+<span class="lang-en">
+<p>Score: <var>400</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3>
+<p>To become a millionaire, M-kun has decided to make money by trading in the next <var>N</var> days. Currently, he has <var>1000</var> yen and no stocks - only one kind of stock is issued in the country where he lives.</p>
+<p>He is famous across the country for his ability to foresee the future. He already knows that the price of one stock in the next <var>N</var> days will be as follows:</p>
+<ul>
+<li><var>A_1</var> yen on the <var>1</var>-st day, <var>A_2</var> yen on the <var>2</var>-nd day, ..., <var>A_N</var> yen on the <var>N</var>-th day.</li>
+</ul>
+<p>In the <var>i</var>-th day, M-kun can make the following trade <strong>any number of times</strong> (possibly zero), <strong>within the amount of money and stocks that he has at the time</strong>.</p>
+<ul>
+<li>Buy stock: Pay <var>A_i</var> yen and receive one stock.</li>
+<li>Sell stock: Sell one stock for <var>A_i</var> yen.</li>
+</ul>
+<p>What is the maximum possible amount of money that M-kun can have in the end by trading optimally?</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3>
+<ul>
+<li><var>2 \leq N \leq 80</var></li>
+<li><var>100 \leq A_i \leq 200</var></li>
+<li>All values in input are integers.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3>
+<p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+<var>A_1</var> <var>A_2</var> <var>\cdots</var> <var>A_N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3>
+<p>Print the maximum possible amount of money that M-kun can have in the end, as an integer.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>7
+100 130 130 130 115 115 150
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>1685
+</pre>
+<p>In this sample input, M-kun has seven days of trading. One way to have <var>1685</var> yen in the end is as follows:</p>
+<ul>
+<li>Initially, he has <var>1000</var> yen and no stocks.</li>
+<li>Day <var>1</var>: Buy <var>10</var> stocks for <var>1000</var> yen. Now he has <var>0</var> yen.</li>
+<li>Day <var>2</var>: Sell <var>7</var> stocks for <var>910</var> yen. Now he has <var>910</var> yen.</li>
+<li>Day <var>3</var>: Sell <var>3</var> stocks for <var>390</var> yen. Now he has <var>1300</var> yen.</li>
+<li>Day <var>4</var>: Do nothing.</li>
+<li>Day <var>5</var>: Buy <var>1</var> stock for <var>115</var> yen. Now he has <var>1185</var> yen.</li>
+<li>Day <var>6</var>: Buy <var>10</var> stocks for <var>1150</var> yen. Now he has <var>35</var> yen.</li>
+<li>Day <var>7</var>: Sell <var>11</var> stocks for <var>1650</var> yen. Now he has <var>1685</var> yen.</li>
+</ul>
+<p>There is no way to have <var>1686</var> yen or more in the end, so the answer is <var>1685</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>6
+200 180 160 140 120 100
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>1000
+</pre>
+<p>In this sample input, it is optimal to do nothing throughout the six days, after which we will have <var>1000</var> yen.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>2
+157 193
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>1216
+</pre>
+<p>In this sample input, it is optimal to buy <var>6</var> stocks in Day <var>1</var> and sell them in Day <var>2</var>, after which we will have <var>1216</var> yen.</p></section>
+</div>
+</span>

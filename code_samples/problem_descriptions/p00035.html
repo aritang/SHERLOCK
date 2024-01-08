@@ -1,0 +1,64 @@
+
+
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({ tex2jax: { inlineMath: [["$","$"], ["\\(","\\)"]], processEscapes: true }});
+</script>
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+<H1>凸？</H1>
+
+<p>
+平面上の異なる 4 点　$A (x_a, y_a)$, $B (x_b, y_b)$, $C (x_c, y_c)$, $D(x_d, y_d)$ の座標を読み込んで、それら 4 点を頂点とした四角形 $ABCD$ に凹みがなければ YES、凹みがあれば NO と出力するプログラムを作成してください。
+</p>
+
+<p>
+凹みのある四角形とは図 1 のような四角形です。
+</p>
+
+<center>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE1_isConvex">
+</center>
+<br/>
+
+<H2>Input</H2>
+
+<p>
+複数のデータセットが与えられます。各データセットの形式は以下のとおりです。<br/>
+<br/>
+$x_a$,$y_a$,$x_b$,$y_b$,$x_c$,$y_c$,$x_d$,$y_d$
+</p>
+
+<p>
+$x_a$, $y_a$, $x_b$, $y_b$, $x_c$, $y_c$, $x_d$, $y_d$ はそれぞれ -100 以上 100 以下であり、実数で与えられます。
+</p>
+
+<p>
+1 直線上に 3 つ以上点が並ぶことはないものとします。また、入力順に点を結んでいけば、四角形になる順番に点の座標が入力されるものとします。（つまり、図 2 のような形になる順番で点が与えられることはありません。)
+</p>
+
+<p>
+データセットの数は 100 を超えません。
+</p>
+
+<H2>Output</H2>
+
+<p>
+各データセットごとに、YES または NO を１行に出力します。
+</p>
+
+<H2>Sample Input</H2>
+
+<pre>
+0.0,0.0,1.0,0.0,1.0,1.0,0.0,1.0
+0.0,0.0,3.0,0.0,1.0,1.0,1.0,3.0
+</pre>
+
+<H2>Output for the Sample Input</H2>
+
+<pre>
+YES
+NO
+</pre>
+

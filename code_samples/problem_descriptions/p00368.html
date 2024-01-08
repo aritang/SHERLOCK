@@ -1,0 +1,65 @@
+<H1>Checkered Pattern</H1>
+
+<p>
+You have a cross-section paper with W x H squares, and each of them is painted either in white or black. You want to re-arrange the squares into a neat checkered pattern, in which black and white squares are arranged alternately both in horizontal and vertical directions (the figure shown below is a checkered patter with <var>W = 5</var> and <var>H = 5</var>). To achieve this goal, you can perform the following two operations as many times you like in an arbitrary sequence: swapping of two arbitrarily chosen columns, and swapping of two arbitrarily chosen rows.
+</p>
+
+<center>
+  <img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_PCK2017_checkerBoard" width="280">
+</center><br/>
+
+<p>
+  Create a program to determine, starting from the given cross-section paper, if you can re-arrange them into a checkered pattern.
+</p>
+
+<h2>Input</h2>
+
+<p>
+  The input is given in the following format.
+</p>
+
+<pre>
+<var>W</var> <var>H</var>
+<var>c<sub>1,1</sub></var> <var>c<sub>1,2</sub></var> ... <var>c<sub>1,W</sub></var>
+<var>c<sub>2,1</sub></var> <var>c<sub>2,2</sub></var> ... <var>c<sub>2,W</sub></var>
+:
+<var>c<sub>H,1</sub></var> <var>c<sub>H,2</sub></var> ... <var>c<sub>H,W</sub></var>
+</pre>
+
+<p>
+  The first line provides the number of squares in horizontal direction <var>W</var> (2&le;<var>W</var>&le;1000) and those in vertical direction <var>H</var>(2&le;<var>H</var>&le;1000). Each of subsequent <var>H</var> lines provides an array of <var>W</var> integers <var>c<sub>i,j</sub></var> corresponding to a square of <var>i</var>-th row and <var>j</var>-th column. The color of the square is white if <var>c<sub>i,j</sub></var> is 0, and black if it is 1. 
+</p>
+
+
+<h2>Output</h2>
+
+<p>
+Output "yes" if the goal is achievable and "no" otherwise.
+</p>
+
+<h2>Sample Input 1</h2>
+
+<pre>
+3 2
+1 1 0
+0 0 1
+</pre>
+
+<h2>Sample Output 1</h2>
+<pre>
+yes
+</pre>
+
+
+<h2>Sample Input 2</h2>
+
+<pre>
+2 2
+0 0
+1 1
+</pre>
+
+<h2>Sample Output 2</h2>
+<pre>
+no
+</pre>

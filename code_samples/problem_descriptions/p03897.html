@@ -1,0 +1,85 @@
+<span class="lang-en">
+<p>Score : <var>100</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>We have an <var>N×N</var> checkerboard.</p>
+<p>From the square at the upper left corner, a square that is <var>i</var> squares to the right and <var>j</var> squares below is denoted as <var>(i, j)</var>. Particularly, the square at the upper left corner is denoted as <var>(0, 0)</var>.</p>
+<p>Each square <var>(i, j)</var> such that <var>i+j</var> is even, is colored black, and the other squares are colored white.</p>
+<p>We will satisfy the following condition by painting some of the white squares:</p>
+<ul>
+<li>Any black square can be reached from square <var>(0, 0)</var> by repeatedly moving to a black square that shares a side with the current square.</li>
+</ul>
+<p>Achieve the objective by painting at most <var>170000</var> squares black.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 \leq N \leq 1,000</var></li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>The input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the squares to paint in the following format:</p>
+<pre><var>K</var>
+<var>x_1</var> <var>y_1</var>
+<var>x_2</var> <var>y_2</var>
+:
+<var>x_K</var> <var>y_K</var>
+</pre>
+<p>This means that a total of <var>K</var> squares are painted black, the <var>i</var>-th of which is <var>(x_i, y_i)</var>.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Judging</h3><p>The output is considered correct only if all of the following conditions are satisfied:</p>
+<ul>
+<li><var>0 \leq K \leq 170000</var></li>
+<li><var>0 \leq x_i, y_i \leq N-1</var></li>
+<li>For each <var>i</var>, <var>x_i + y_i</var> is odd.</li>
+<li>If <var>i \neq j</var>, then <var>(x_i, y_i) \neq (x_j, y_j)</var>.</li>
+<li>The condition in the statement is satisfied by painting all specified squares.</li>
+</ul>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>2
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>1
+1 0
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>4
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>3
+0 1
+2 1
+2 3
+</pre></section>
+</div>
+</span>

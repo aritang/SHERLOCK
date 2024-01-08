@@ -1,0 +1,113 @@
+
+
+
+<script language="JavaScript" type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML">
+</script>
+
+<h1>Problem J: Demon's Plan</h1>
+
+<h2>BackGround</h2>
+<p>
+    デーモンズプランでは慾を司る108体の悪魔が日夜プログラミングコンテストでしのぎを削っている。主催であるパトローンは、全ての慾が集う場所”リクス＝マグナ”に悪魔たちを招待しようとしている。
+    パトローンはまだ招待を送っていない悪魔に招待を送りたいが、悪魔は世界各地におり、自分で行くのは面倒くさいので自身の使い魔達にやらせることにした。
+    パトローンは気が利くので使い魔同士がより平等に働くようにどの使い魔がどの悪魔を担当するかを割り振ろうとしている。
+</p>
+
+<h2>Problem</h2>
+<p>
+    <var>N</var>体の使い魔と<var>M</var>体の悪魔がいる。
+    使い魔<sub><var>i</var></sub> と 悪魔<sub><var>j</var></sub> の距離は <var>H<sub>i j</sub></var>である。
+</p>
+<p>
+    各悪魔に必ず1人の使い魔を向かわせたい。どの使い魔がどの悪魔を訪問するかは以下の条件に従って割り振ることにした。
+</p>
+<ol>
+    <li>使い魔1体あたりの訪問する悪魔の数の差の最大を最小化する。</li>
+    <li>1を満たした上で訪問する悪魔と担当する使い魔の距離の最大を最小化する。</li>
+</ol>
+<p>
+    1行目に使い魔1体あたりの訪問する悪魔の数の差の最大を、2行目に悪魔と担当する使い魔の距離の最大を出力せよ。
+</p>
+
+<h2>Input</h2>
+<p>
+    入力は以下の形式で与えられる。
+</p>
+<pre>
+<var>N</var> <var>M</var>
+<var>H<sub>0 0</sub></var> <var>H<sub>0 1</sub></var> … <var>H<sub>0 M&minus;1</sub></var>
+<var>H<sub>1 0</sub></var> <var>H<sub>1 1</sub></var> … <var>H<sub>1 M&minus;1</sub></var>
+.
+.
+<var>H<sub>N&minus;1 0</sub></var> <var>H<sub>N&minus;1 1</sub></var> … <var>H<sub>N&minus;1 M&minus;1</sub></var>
+</pre>
+<p>
+    1行目に使い魔の数<var>N</var>と悪魔の数<var>M</var>が整数で空白区切りで与えられる。
+    続く<var>N</var>行に使い魔と悪魔の距離が整数で与えられる。<var>H<sub>ij</sub></var>は使い魔<sub>i</sub>と悪魔<sub>j</sub>の距離を表す。
+</p>
+
+
+<h2>Constraints</h2>
+<ul>
+    <li>
+        1 &le; <var>N</var> &le; 108
+    </li>
+    <li>
+        1 &le; <var>M</var> &le; 108
+    </li>
+    <li>
+        1 &le; <var>H<sub>i j</sub></var> &le; 10<sup>9</sup> ( 0 &le; <var>i</var> &lt; <var>N</var>, 0 &le; <var>j</var> &lt; <var>M</var> ) ( 使い魔<var>i</var>から悪魔<var>j</var>までの距離 )
+    </li>
+</ul>
+
+<h2>Output</h2>
+<p>
+    問題文の条件に従い、1行目に使い魔1体あたりの訪問する悪魔の数の差の最大を、2行目に悪魔と担当する使い魔の距離の最大を出力せよ。
+</p>
+
+
+<h2>Sample Input 1</h2>
+<pre>
+3 3
+1 2 3
+2 1 2
+3 2 1
+</pre>
+
+<h2>Sample Output 1</h2>
+<pre>
+0
+1
+</pre>
+
+<p>
+    使い魔<sub>0</sub> - 悪魔<sub>0</sub>     <br />
+    使い魔<sub>1</sub> - 悪魔<sub>1</sub>     <br />
+    使い魔<sub>2</sub> - 悪魔<sub>2</sub>     <br />
+    と割り振ることで訪問する悪魔の数の差が0になり、担当使い魔と悪魔の距離の最大が1になり最適な組み合わせになる。
+</p>
+
+
+
+
+<h2>Sample Input 2</h2>
+<pre>
+3 5
+1 2 3 4 5
+5 4 3 2 1
+4 3 2 1 5
+</pre>
+
+<h2>Sample Output 2</h2>
+<pre>
+1
+2
+</pre>
+<p>
+    使い魔<sub>0</sub> - 悪魔<sub>0</sub>   <br />
+    使い魔<sub>0</sub> - 悪魔<sub>1</sub>   <br />
+    使い魔<sub>1</sub> - 悪魔<sub>4</sub>   <br />
+    使い魔<sub>2</sub> - 悪魔<sub>3</sub>   <br />
+    使い魔<sub>2</sub> - 悪魔<sub>2</sub>   <br />
+    と割り振ることで訪問する悪魔の差が1になり、担当使い魔と悪魔の距離の最大が2になり最適な組み合わせになる。
+</p>

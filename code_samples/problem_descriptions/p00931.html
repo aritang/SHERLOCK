@@ -1,0 +1,139 @@
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({ tex2jax: { inlineMath: [["$","$"], ["\\(","\\)"]], processEscapes: true }});
+</script>
+<script type='text/javascript' src='http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
+</script>
+
+<h2>Problem H:
+Cornering at Poles
+</h2>
+
+<p>
+  You are invited to a robot contest. In the contest, you are given a disc-shaped robot that is placed on a flat field. A set of poles are standing on the ground. The robot can move in all directions, but must avoid the poles. However, the robot can make turns around the poles touching them.
+</p>
+
+<p>
+  Your mission is to find the shortest path of the robot to reach the given goal position. The length of the path is defined by the moving distance of the center of the robot. Figure H.1 shows the shortest path for a sample layout. In this figure, a red line connecting a pole pair means that the distance between the poles is shorter than the diameter of the robot and the robot cannot go through between them.
+</p>
+
+<center>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_ICPCAsia2014_H1" width="600"><br>
+<p>Figure H.1. The shortest path for a sample layout</p>
+</center>
+
+<h3>Input</h3>
+
+<p>
+  The input consists of a single test case.<br>
+  <br>
+$N$ $G_x$ $G_y$<br>
+$x_1$ $y_1$<br>
+.<br>
+.<br>
+.<br>
+$x_N$ $y_N$<br>
+<br>
+
+The first line contains three integers. $N$ represents the number of the poles ($1 \leq N \leq 8$). $(G_x, G_y)$ represents the goal position. The robot starts with its center at $(0, 0)$, and the robot accomplishes its task when the center of the robot reaches the position $(G_x, G_y)$. You can assume that the starting and goal positions are not the same.
+</p>
+
+<p>
+  Each of the following $N$ lines contains two integers. $(x_i, y_i)$ represents the standing position of the $i$-th pole. Each input coordinate of $(G_x, G_y)$ and $(x_i, y_i)$ is between $−1000$ and $1000$, inclusive. The radius of the robot is $100$, and you can ignore the thickness of the poles. No pole is standing within a $100.01$ radius from the starting or goal positions. For the distance $d_{i,j}$ between the $i$-th and $j$-th poles $(i \ne j)$, you can assume $1 \leq d_{i,j} < 199.99$ or $200.01 < d_{i,j}$.
+																																																															 </p>
+
+<p>
+Figure H.1 shows the shortest path for Sample Input 1 below, and Figure H.2 shows the shortest paths for the remaining Sample Inputs.
+</p>
+
+<center>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_ICPCAsia2014_H2" width="640"><br>
+<p>Figure H.2. The shortest paths for the sample layouts</p>
+</center>
+
+
+<h3>Output</h3>
+
+<p>
+Output the length of the shortest path to reach the goal. If the robot cannot reach the goal, output 0.0. The output should not contain an error greater than 0.0001.
+</p>
+
+
+
+<h3>Sample Input 1</h3>
+
+<pre>8 900 0
+40 100
+70 -80
+350 30
+680 -20
+230 230
+300 400
+530 130
+75 -275</pre>
+
+<h3>Sample Output 1</h3>
+
+<pre>1210.99416</pre>
+
+<h3>Sample Input 2</h3>
+
+<pre>1 0 200
+120 0</pre>
+
+<h3>Sample Output 2</h3>
+
+<pre>200.0</pre>
+
+<h3>Sample Input 3</h3>
+
+<pre>3 110 110
+0 110
+110 0
+200 10</pre>
+
+<h3>Sample Output 3</h3>
+
+<pre>476.95048</pre>
+
+<h3>Sample Input 4</h3>
+
+<pre>4 0 200
+90 90
+-90 90
+-90 -90
+90 -90</pre>
+
+<h3>Sample Output 4</h3>
+
+<pre>0.0</pre>
+
+<h3>Sample Input 5</h3>
+
+<pre>2 0 -210
+20 -105
+-5 -105</pre>
+
+<h3>Sample Output 5</h3>
+
+<pre>325.81116</pre>
+
+<h3>Sample Input 6</h3>
+
+<pre>8 680 -50
+80 80
+80 -100
+480 -120
+-80 -110
+240 -90
+-80 100
+-270 100
+-420 -20</pre>
+
+<h3>Sample Output 6</h3>
+
+<pre>1223.53071</pre>
+
+
+
+

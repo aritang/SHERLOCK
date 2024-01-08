@@ -1,0 +1,96 @@
+
+
+
+<h2>K-th String</h2>
+
+
+<h2>Problem Statement</h2>
+
+<p>長さ<var>N</var>の文字列<var>S</var>に対する接尾辞配列<var>SA</var>を，以下の手順で得られる<var>N</var>以下の正整数の順列として定義する．<br />
+<var>S</var>の<var>i</var>文字目から<var>j</var>文字目までの部分文字列を<var>S[i..j]</var>と表す．ただし添字は1-indexedである．</p>
+<ol class="list1" style="padding-left:16px;margin-left:16px"><li>各接尾辞<var>S[i..N] (i=1,2,...,N)</var>を辞書式順序（昇順）で整列する．</li>
+<li>整列した各接尾辞の開始位置<var>i</var>を順に並べる．</li></ol>
+<p>たとえば，<var>S</var>=&quot;mississippi&quot;の接尾辞配列<var>SA</var>は，以下のようになる．</p>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE3_Rits_Camp13_Day2_K_mississippi">
+<br/>
+<br/>
+<!--
+<pre>  i | S[i] | SA[i] | S[SA[i]..N-1]
+----+------+-------+-----------------
+  1 |    m |    11 | i
+  2 |    i |     8 | ippi
+  3 |    s |     5 | issippi
+  4 |    s |     2 | ississippi
+  5 |    i |     1 | mississippi
+  6 |    s |    10 | pi
+  7 |    s |     9 | ppi
+  8 |    i |     7 | sippi
+  9 |    p |     4 | sissippi
+ 10 |    p |     6 | ssippi
+ 11 |    i |     3 | ssissippi</pre>
+-->
+<p>入力として，長さ<var>N</var>の文字列に対する接尾辞配列<var>SA</var>が与えられる．<br />
+<var>SA</var>が得られるような文字列のうち，辞書式順序で<var>K</var>番目(1-indexed)のものを求めよ．<br />
+ただし，元の文字列は，アルファベット順に'a'から数えて高々<var>A</var>個の文字のみからなる．</p>
+
+<h2>Input</h2>
+
+<p>入力は以下の形式に従う．与えられる数は全て整数である．</p>
+<pre><var>N</var> <var>A</var> <var>K</var>
+<var>SA_1</var>
+<var>SA_2</var>
+...
+<var>SA_N</var></pre>
+
+<h2>Constraints</h2>
+
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li><var>1≦N≦10^5</var></li>
+<li><var>1≦A≦26</var></li>
+<li><var>1≦K≦10^{18}</var></li>
+<li><var>1≦SA_i≦N</var></li>
+<li><var>i \neq j</var> ならば <var>SA_i \neq SA_j</var></li></ul>
+
+<h2>Output</h2>
+
+<p><var>SA</var>が得られるような辞書式順序で<var>K</var>番目の文字列を1行に出力せよ．<br />
+<var>K</var>番目の文字列が存在しない場合，&quot;Impossible&quot;と出力せよ．</p>
+
+<h2>Sample Input 1</h2>
+
+<pre>3 4 2
+2
+1
+3</pre>
+
+<h2>Output for the Sample Input 1</h2>
+
+<pre>bad</pre>
+<p><var>A</var>=4の場合，<var>SA</var>={2,1,3}となる文字列は&quot;bac&quot;,&quot;bad&quot;,&quot;cad&quot;,&quot;cbd&quot;の4通り．<br />
+したがって，辞書式順序で2番目の&quot;bad&quot;が答えとなる．</p>
+
+<h2>Sample Input 2</h2>
+
+<pre>18 26 10275802967
+10
+14
+9
+13
+7
+8
+2
+6
+11
+18
+12
+1
+4
+3
+16
+5
+17
+15</pre>
+
+
+<h2>Output for the Sample Input 2</h2>
+
+<pre>ritsumeicampdaytwo</pre>

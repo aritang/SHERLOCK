@@ -1,0 +1,74 @@
+
+
+
+<h2>E - Disappear Drive / 消えるドライヴ</h2>
+
+<h3>Story</h3>
+<p>Dのひとはバスケットボールが好きだが、シュートが好きなため、他のテクニックはからっきしである。ドリブルは特に苦手で、相手の守備範囲に入ると必ずボールを奪われてしまう。そこでどんな相手も必ず抜き去る必殺のドリブルを編み出すことにした。努力の末、彼は遂に消えるドライヴ、&quot;ディスアピアドライヴ&quot;を完成させた。</p>
+<p>ディスアピアドライヴは、相手を挑発することで集中力を奪い視線を外す&quot;ディスディレクション&quot;により隙を作り、その隙に次元(ディメンジョン)の壁を超えて相手の守備範囲をすり抜けてしまう完全無欠のドライヴである。しかし、次元の壁を超えることは体への負担が大きいため、次元を超えられる回数には制限がある。また、常に集中力を使うため、通常の移動を含め、方向転換が<var>1</var>度までしかできない。コート上でどのように動けば、ボールを奪われずに最短でゴールまで辿り着けるだろうか。</p>
+<h3>Problem</h3>
+<p>二次元平面上に、<var>(0,0)</var>を左下、<var>(50,94)</var>を右上とする長方形を考える。また、この平面上には<var>N</var>個の円が存在し、<var>i</var>番目の円の中心の位置は<var>(x_i,y_i)</var>、半径は<var>r_i</var>である。円同士に重なりはない。</p>
+<p><var>(25,0)</var>を点<var>S</var>、<var>(25,94)</var>を点<var>G</var>とし、<var>S</var>から<var>G</var>へ至る経路を考える。「経路」とは、(1)<var>S</var>と<var>G</var>を結んだ線分であるか、(2)長方形内部の任意の点<var>P</var>について線分<var>SP</var>と線分<var>GP</var>を結合したものからなる。<var>S</var>から<var>G</var>へと向かう経路の途中、一度ある円の内部に入ってからその円の内部から出るまでの間を「円の内部を通過する区間」と定義する。ただし、長方形・円の周上はそれぞれ長方形・円の内部には含まれないとする。</p>
+<p>円の内部を通過する区間の数が<var>D</var>個以下であるような経路のうち、最短の経路の長さを求めよ。どうしてもゴールできないときは<var>-1</var>を返すこと。</p>
+<h3>Input</h3>
+<p>入力は以下の形式からなる。</p>
+<pre><var>N</var> <var>D</var>
+<var>x_1</var> <var>y_1</var> <var>r_1</var>
+<var>...</var>
+<var>x_N</var> <var>y_N</var> <var>r_N</var></pre>
+<p><var>1</var>行目は<var>2</var>つの整数からなり、円の個数<var>N</var>、円の内部を通過できる回数<var>D</var>が空白<var>1</var>文字区切りで与えられる。 続く<var>N</var>行は円の情報が与えられる。 <var>i+1</var>行目(<var>1 \leq i \leq N</var>)は<var>3</var>つの整数からなり、<var>i</var>番目の円の中心のx座標<var>x_i</var>、y座標<var>y_i</var>、半径<var>r_i</var>が空白<var>1</var>文字区切りで与えられる。</p>
+
+<p>制約:</p>
+
+<ul>
+<li><var>0 \leq N \leq 5</var></li>
+<li><var>0 \leq D \leq 5</var></li>
+<li><var>0 \leq x_i \leq 50</var></li>
+<li><var>0 \leq y_i \leq 94</var></li>
+<li><var>1 \leq r_i \leq 100</var></li>
+<li>任意の<var>2</var>円間は<var>10^{-5}</var>以上離れていると仮定してよい。</li>
+<li><var>S</var>,<var>G</var>はそれぞれ任意の円の内部には含まれないと仮定してよい。</li>
+<li><var>S</var>,<var>G</var>はそれぞれ任意の円と<var>10^{-5}</var>以上離れていると仮定してよい。</li>
+<li>最短経路における点Pは、長方形の周および任意の円周から<var>10^{-5}</var>以上離れていると仮定してよい。</li>
+</ul>
+
+<h3>Output</h3>
+<p>最短経路の長さを<var>1</var>行に出力せよ。行の最後では必ず改行を行うこと。 ただし、どうしてもゴールできないときは<var>-1</var>を返すこと。 正答に対し、<var>10^{-7}</var>以下の絶対誤差、あるいは相対誤差は許容される。</p>
+<h3>Sample Input 1</h3>
+<pre>1 0
+25 47 10</pre>
+<h3>Sample Output 1</h3>
+<pre>96.2027355887</pre>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_HUPC2014_DisappearDrive_sample1" alt="DisappearDrive_sample1.png" />
+<p>消えることができないので、迂回した経路が最短である。</p>
+<h3>Sample Input 2</h3>
+<pre>1 1
+25 47 10</pre>
+<h3>Sample Output 2</h3>
+<pre>94.0000000000</pre>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_HUPC2014_DisappearDrive_sample2" alt="DisappearDrive_sample2.png" />
+<p>消えることができるので、一直線に突き抜ければよい。</p>
+<h3>Sample Input 3</h3>
+<pre>1 0
+20 47 5</pre>
+<h3>Sample Output 3</h3>
+<pre>94.0000000000</pre>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_HUPC2014_DisappearDrive_sample3" alt="DisappearDrive_sample3.png" />
+<p>円周上は円の内部に含まれないので、消えずに通過することができる。</p>
+<h3>Sample Input 4</h3>
+<pre>1 0
+25 47 40</pre>
+<h3>Sample Output 4</h3>
+<pre>-1</pre>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_HUPC2014_DisappearDrive_sample4" alt="DisappearDrive_sample4.png" />
+<p>消えることも迂回することもできないため、ゴールに到達できない。</p>
+<h3>Sample Input 5</h3>
+<pre>5 2
+11 10 16
+33 40 18
+20 66 10
+45 79 14
+22 85 8</pre>
+<h3>Sample Output 5</h3>
+<pre>96.1320937224</pre>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_HUPC2014_DisappearDrive_sample5" alt="DisappearDrive_sample5.png" />

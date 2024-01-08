@@ -1,0 +1,228 @@
+
+
+<script src="./IMAGE/varmath.js" charset="UTF-8"></script>
+<!-- begin en only -->
+<!--
+<h3><u>Twin book report</u></h3>
+-->
+<!-- end en only -->
+<!-- begin ja only -->
+<h1><u>双子の読書感想文</u></h1>
+<!-- end ja only -->
+
+<!-- begin en only -->
+<!--
+<p>
+English text is not available in this practice contest.
+</p>
+-->
+<!-- end en only -->
+<!-- begin ja only -->
+<p>
+双子のアミとマミが通う学校では早くも夏休みに突入し，今年もおびただしい量の宿題が出された．
+しかし，遊び盛りの2人は今日も宿題には一切手をつけずに外へ遊びに行こうとしていた．
+このままでは夏休み最終日に泣きを見るのは明らかなので，保護者役のあなたは，心を鬼にして今日は読書感想文の宿題が終わるまで2人を家から出さないことにした．
+</p>
+
+<p>
+準備の良いあなたは既に図書館から全ての課題図書を借りてある．
+ただし，図書館の規則により各本は1冊ずつしか借りられていない．
+さて，教育上の理由から2人には互いに協力することなく，それぞれ全ての本を読み，感想を書いてもらう事にした．
+加えて，本の返却期限が近いため，まずはなるべく早くすべての本を読み終えるようにしてもらう事にした．
+そして，あなたはその条件下でなるべく早く宿題が終わるような宿題の進め方を考えることにした．
+ここで，本を読み終えた時間，宿題を終えた時間は，それぞれ双子の両方が作業を終えた時間で考える．
+</p>
+
+<p>
+各本は1冊ずつしかないため，2人が同時刻に同じ本を読むことはできない．
+加えて，大人の事情により，ある本を読み始めたらそれを中断する事はできず，ある本についての感想文を書き始めたらそれを中断することもできない．
+当然ながら，読んでいない本について感想を書くこともできない．
+なお，アミとマミは双子であるため，各本について読むのにかかる時間，感想文を書くのにかかる時間は2人で共通している．
+</p>
+
+<p>
+例えば，3冊の本があり，それぞれ本を読むのにかかる時間，感想文を書くのにかかる時間が以下の通りであるとする．
+</p>
+<center>
+<table cellpadding="4" cellspacing="4" style="border: solid 1px #000">
+<tr align=right>      
+    <td style="border: solid 1px #000"></td>
+    <td style="border: solid 1px #000">本を読む時間</td>
+    <td style="border: solid 1px #000">感想文を書く時間</td>
+</tr>
+<tr align=right>
+    <td style="border: solid 1px #000">本1</td>
+    <td style="border: solid 1px #000">5</td>
+    <td style="border: solid 1px #000">3</td>
+</tr>
+<tr align=right>
+    <td style="border: solid 1px #000">本2</td>
+    <td style="border: solid 1px #000">1</td>
+    <td style="border: solid 1px #000">2</td>
+</tr>
+<tr align=right>
+    <td style="border: solid 1px #000">本3</td>
+    <td style="border: solid 1px #000">1</td>
+    <td style="border: solid 1px #000">2</td>
+</tr>
+</table>
+</center>
+<br/>
+
+
+<p>
+この場合は，図C-1のように宿題を進めると，時間10で全ての本を読み終え，時間15で宿題を終える事ができる．
+図C-2の進め方では時間14で宿題を終えているが，本を読み終える時間が最短でないため，今回は採用できない．
+また，図C-3のように2人が同時に同じ本を読んだり， 図C-4のように本を読むのを中断したり，読んでいない本の感想を書く事もできない．
+</p>
+
+<center>
+<center>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_twinBookReport_1" height="167" width="762">
+</center>
+
+</center>
+<center>
+<p>
+<i>図 C-1: 最短で宿題を終わらせる進め方の例</i>
+</p>
+
+</center>
+<center>
+<center>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_twinBookReport_2" height="167" width="762">
+</center>
+
+</center>
+<center>
+<p>
+<i>図 C-2: 本を読み終える時間が最短でない例</i>
+</p>
+
+</center>
+<center>
+<center>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_twinBookReport_3" height="167" width="762">
+</center>
+
+</center>
+<center>
+<p>
+<i>図 C-3: 2人が同時に同じ本を読んでしまっている例</i>
+</p>
+
+</center>
+<center>
+<center>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_twinBookReport_4" height="168" width="762">
+</center>
+
+</center>
+<center>
+<p>
+<i>図 C-4: 読んでいない本の感想を書いたり，作業を中断したりしている例</i>
+</p>
+
+</center>
+<p>
+様々な大人の事情を考慮しつつ，遊びに行きたがっている双子のためになるべく早く宿題が終わるような進め方を考えてあげよう．
+</p>
+
+
+<!-- end ja only -->
+
+<h3>Input</h3>
+
+<!-- begin ja only -->
+<p>
+入力は複数のデータセットから構成される．各データセットの形式は次の通りである．
+</p>
+
+<pre>
+<var>N</var>
+<var>r<sub>1</sub></var> <var>w<sub>1</sub></var>
+<var>r<sub>2</sub></var> <var>w<sub>2</sub></var>
+<var>...</var>
+<var>r<sub>N</sub></var> <var>w<sub>N</sub></var>
+</pre>
+
+<p>
+Nは課題図書の数を表す整数であり，1以上1,000以下と仮定して良い．
+</p>
+
+<p>
+続くN行は課題図書についての情報を表す．
+各行はスペースで区切られた2つの整数を含み，r<sub>i</sub> (1 &#8804; r<sub>i</sub> &#8804; 1,000) は i 番目の本を読むのにかかる時間，w<sub>i</sub> (1 &#8804; w<sub>i</sub> &#8804; 1,000) は i 番目の本の感想文を書くのにかかる時間を表す．
+</p>
+
+<p>
+N=0 は入力の終わりを示す．
+これはデータセットには含めない．
+</p>
+
+
+<!-- end ja only -->
+
+<h3>Output</h3>
+
+<!-- begin ja only -->
+<p>
+各データセットについて，2人が全ての本を読み終えるまでの時間を最小にしたときの，全ての感想文を書き終えるまでの最小の時間を1行に出力しなさい．
+</p>
+
+
+
+<!-- end ja only -->
+
+<h3>Sample Input</h3>
+
+<pre>
+4
+1 1
+3 1
+4 1
+2 1
+3
+5 3
+1 2
+1 2
+1
+1000 1000
+10
+5 62
+10 68
+15 72
+20 73
+25 75
+30 77
+35 79
+40 82
+45 100
+815 283
+6
+74 78
+53 55
+77 77
+12 13
+39 42
+1 1
+0
+</pre>
+
+<!-- begin ja only -->
+
+<!-- end ja only -->
+
+<h3>Output for Sample Input</h3>
+
+<pre>
+14
+15
+3000
+2013
+522
+</pre>
+
+<!-- begin ja only -->
+
+<!-- end ja only -->

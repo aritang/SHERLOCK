@@ -1,0 +1,87 @@
+<span class="lang-en">
+<p>Score : <var>300</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>We have a string <var>X</var>, which has an even number of characters. Half the characters are <code>S</code>, and the other half are <code>T</code>.</p>
+<p>Takahashi, who hates the string <code>ST</code>, will perform the following operation <var>10^{10000}</var> times:</p>
+<ul>
+<li>Among the occurrences of <code>ST</code> in <var>X</var> as (contiguous) substrings, remove the leftmost one. If there is no occurrence, do nothing.</li>
+</ul>
+<p>Find the eventual length of <var>X</var>.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>2 ≦ |X| ≦ 200,000</var></li>
+<li>The length of <var>X</var> is even.</li>
+<li>Half the characters in <var>X</var> are <code>S</code>, and the other half are <code>T</code>.</li>
+</ul>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Partial Scores</h3><ul>
+<li>In test cases worth <var>200</var> points, <var>|X| ≦ 200</var>.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>The input is given from Standard Input in the following format:</p>
+<pre><var>X</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the eventual length of <var>X</var>.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>TSTTSS
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>4
+</pre>
+<p>In the <var>1</var>-st operation, the <var>2</var>-nd and <var>3</var>-rd characters of <code>TSTTSS</code> are removed.
+<var>X</var> becomes <code>TTSS</code>, and since it does not contain <code>ST</code> anymore, nothing is done in the remaining <var>10^{10000}-1</var> operations.
+Thus, the answer is <var>4</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>SSTTST
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>0
+</pre>
+<p><var>X</var> will eventually become an empty string: <code>SSTTST</code> ⇒ <code>STST</code> ⇒ <code>ST</code> ⇒ ``.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>TSSTTTSS
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>4
+</pre>
+<p><var>X</var> will become: <code>TSSTTTSS</code> ⇒ <code>TSTTSS</code> ⇒ <code>TTSS</code>.</p></section>
+</div>
+</span>

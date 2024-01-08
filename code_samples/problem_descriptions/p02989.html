@@ -1,0 +1,85 @@
+<span class="lang-en">
+<p>Score : <var>300</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>Takahashi made <var>N</var> problems for competitive programming.
+The problems are numbered <var>1</var> to <var>N</var>, and the difficulty of Problem <var>i</var> is represented as an integer <var>d_i</var> (the higher, the harder).</p>
+<p>He is dividing the problems into two categories by choosing an integer <var>K</var>, as follows:</p>
+<ul>
+<li>A problem with difficulty <var>K</var> or higher will be <em>for ARCs</em>.</li>
+<li>A problem with difficulty lower than <var>K</var> will be <em>for ABCs</em>.</li>
+</ul>
+<p>How many choices of the integer <var>K</var> make the number of problems for ARCs and the number of problems for ABCs the same?</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><ul>
+<li><var>2 \leq N \leq 10^5</var></li>
+<li><var>N</var> is an even number.</li>
+<li><var>1 \leq d_i \leq 10^5</var></li>
+<li>All values in input are integers.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+<var>d_1</var> <var>d_2</var> <var>...</var> <var>d_N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the number of choices of the integer <var>K</var> that make the number of problems for ARCs and the number of problems for ABCs the same.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>6
+9 1 4 4 6 7
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>2
+</pre>
+<p>If we choose <var>K=5</var> or <var>6</var>, Problem <var>1</var>, <var>5</var>, and <var>6</var> will be for ARCs, Problem <var>2</var>, <var>3</var>, and <var>4</var> will be for ABCs, and the objective is achieved.
+Thus, the answer is <var>2</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>8
+9 1 14 5 5 4 4 14
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>0
+</pre>
+<p>There may be no choice of the integer <var>K</var> that make the number of problems for ARCs and the number of problems for ABCs the same.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>14
+99592 10342 29105 78532 83018 11639 92015 77204 30914 21912 34519 80835 100000 1
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>42685
+</pre></section>
+</div>
+</span>

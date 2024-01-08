@@ -1,0 +1,74 @@
+<span class="lang-en">
+<p>Score : <var>1400</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>Process the <var>Q</var> queries below.</p>
+<ul>
+<li>You are given two integers <var>A_i</var> and <var>M_i</var>. Determine whether there exists a positive integer <var>K_i</var> not exceeding <var>2 × 10^{18}</var> such that <var>A_i^{K_i} ≡ K_i</var> <var>(mod</var> <var>M_i)</var>, and find one if it exists.</li>
+</ul>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 \leq Q \leq 100</var></li>
+<li><var>0 \leq A_i \leq 10^9(1 \leq i \leq Q)</var></li>
+<li><var>1 \leq M_i \leq 10^9(1 \leq i \leq Q)</var></li>
+</ul>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Inputs</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>Q</var>
+<var>A_1</var> <var>M_1</var>
+:
+<var>A_Q</var> <var>M_Q</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Outputs</h3><p>In the <var>i</var>-th line, print <var>-1</var> if there is no integer <var>K_i</var> that satisfies the condition.
+Otherwise, print an integer <var>K_i</var> not exceeding <var>2 × 10^{18}</var> such that <var>A_i^{K_i} ≡ K_i</var> <var>(mod</var> <var>M_i)</var>. If there are multiple solutions, any of them will be accepted.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>4
+2 4
+3 8
+9 6
+10 7
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>4
+11
+9
+2
+</pre>
+<p>It can be seen that the condition is satisfied: <var>2^4 = 16 ≡ 4</var> <var>(mod</var> <var>4)</var>, <var>3^{11} = 177147 ≡ 11</var> <var>(mod</var> <var>8)</var>, <var>9^9 = 387420489 ≡ 9</var> <var>(mod</var> <var>6)</var> and <var>10^2 = 100 ≡ 2</var> <var>(mod</var> <var>7)</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>3
+177 168
+2028 88772
+123456789 987654321
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>7953
+234831584
+471523108231963269
+</pre></section>
+</div>
+</span>

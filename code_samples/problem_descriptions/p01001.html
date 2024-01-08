@@ -1,0 +1,133 @@
+
+
+
+
+
+<h1>Problem C: General of Taiko</h1>
+<h2>Problem</h2>
+<p>
+とあるゲームセンターには、曲に合わせて流れてくる譜面通りに和太鼓を叩くゲームがあります。
+譜面は長さ<var> L </var>のセルからなり、各セルには何もない、またはノートと呼ばれるプレイヤーがとるべき行動を表した記号があります。
+ノートは2種類ありそれぞれ、和太鼓の面を叩く「トン」、和太鼓の縁を叩く「コツ」があります。
+これらのノートに合わせて和太鼓を叩くと得点を得ることができます。
+この得点の合計が10000点以上であればクリアとなります。
+</p>
+<p>
+このとき、プレイヤーが曲をクリアできる確率を求めなさい。ただし、プレイヤーは常に最適な行動をとることにします。
+</p>
+<p>
+プレイヤーが譜面通りに和太鼓を叩く精度は11段階あり、それぞれ、
+0%, 10%, 20%, ..., 90%, 100%の確率で譜面通りに和太鼓を叩くことができます。
+</p>
+<p>
+上記の二種類の動作は右腕と左腕どちらででも行うことができます。
+プレイヤーの情報として、それぞれの腕で行った場合の精度の安定率を表す値が16種類、下記のように与えられます。
+</p>
+<pre>
+<var>lt</var>_<var>lt</var> <var>lt</var>_<var>rt</var> <var>lt</var>_<var>lk</var> <var>lt</var>_<var>rk</var>
+<var>rt</var>_<var>lt</var> <var>rt</var>_<var>rt</var> <var>rt</var>_<var>lk</var> <var>rt</var>_<var>rk</var>
+<var>lk</var>_<var>lt</var> <var>lk</var>_<var>rt</var> <var>lk</var>_<var>lk</var> <var>lk</var>_<var>rk</var>
+<var>rk</var>_<var>lt</var> <var>rk</var>_<var>rt</var> <var>rk</var>_<var>lk</var> <var>rk</var>_<var>rk</var>
+</pre>
+<p>
+ただし、<var> lt </var> は左腕でトン, <var> rt </var> は右腕でトン, <var> lk </var> は左腕でコツ, <var> rk </var> は右腕でコツの動作を表します。
+例えば、<var> lt</var>_<var>rk </var>は左腕でトンのあとに右腕でコツを行った時の精度の安定の度合いを表し、この値によって左腕でトンのあとに右腕でコツを行うときの精度が、下記のように変化します。
+</p>
+<pre>
+プレイヤーの精度 = max(0, (精度の安定率 - 10) * 10 + 一つ前の精度) (%)
+</pre>
+<p>
+曲の情報は以下のとおりです。
+曲の長さを表す<var> L </var>、譜面を表す<var> L </var>個の数字<var> s<sub>i</sub> </var>(0 &le;<var> i </var>&lt; <var> L </var>)で示される。譜面の先頭は<var> s<sub>0</sub> </var>である。
+<var> s<sub>i</sub> </var>の値は以下の3つです。
+</p>
+<pre>
+0 ... ノートなし
+1 ... トン
+2 ... コツ
+</pre>
+<p>
+プレイヤーが最初に和太鼓を叩くときの精度は100%です。
+また、プレイヤーは譜面を無視することができます。
+ノートがなかったり、ノートを無視した場合、プレイヤーの精度は100%になります。
+</p>
+<p>
+各ノートに合わせて和太鼓を叩いたときの得点は下記のようになります。
+</p>
+<pre>
+得点 =<var> A </var>+<var> B </var>* min(コンボ数, 10)
+</pre>
+<p>
+この問題におけるコンボ数とは、連続してノートに合わせて和太鼓を叩けた数です。
+プレイヤーがノートに合わせて叩いた場合、上記の式を元に得点が入り、その後にコンボ数が1増えます。
+ノートに合わせて和太鼓を叩けなかった場合、コンボが途切れ、コンボ数が0になります。
+</p>
+<h2>Input</h2>
+<p>
+入力は複数のデータセットからなります。
+各データセットは以下のとおりです。
+</p>
+<pre>
+<var>lt</var>_<var>lt</var> <var>lt</var>_<var>rt</var> <var>lt</var>_<var>lk</var> <var>lt</var>_<var>rk</var>
+<var>rt</var>_<var>lt</var> <var>rt</var>_<var>rt</var> <var>rt</var>_<var>lk</var> <var>rt</var>_<var>rk</var>
+<var>lk</var>_<var>lt</var> <var>lk</var>_<var>rt</var> <var>lk</var>_<var>lk</var> <var>lk</var>_<var>rk</var>
+<var>rk</var>_<var>lt</var> <var>rk</var>_<var>rt</var> <var>rk</var>_<var>lk</var> <var>rk</var>_<var>rk</var>
+<var>L</var>
+<var>s<sub>0</sub></var> <var>s<sub>1</sub></var> <var>s<sub>2</sub></var> … <var>s<sub>L - 1</sub></var>
+<var>A</var> <var>B</var>
+</pre>
+<p>
+入力の終わりは負の整数4つからなります。
+</p>
+
+<h2>Constraints</h2>
+<p>
+入力は以下の条件を満たします。
+</p>
+<ul>
+<li>0 &lt;<var> L </var>&le; 100</li>
+<li>0 &le; 精度の安定率 &le; 10</li>
+<li>精度の安定率は整数</li>
+<li>0 &lt;<var> A </var>, <var> B </var>&le; 10000</li>
+<li><var> A </var>と<var> B </var>はともに100の倍数</li>
+<li>データセットの数は100個以下</li>
+</ul>
+
+<h2>Output</h2>
+<p>
+各入力に対して、クリアできる確率を1行で出力しなさい。
+ただし、出力は0.001以下の誤差を含んでも良いです。
+</p>
+
+<h2>Sample Input</h2>
+<pre>
+9 0 0 0
+0 9 0 0
+0 0 0 0
+0 0 0 0
+5
+1 1 1 1 1
+1000 500
+10 10 10 10
+10 10 10 10
+10 10 10 10
+10 10 10 10
+5
+1 0 2 0 1
+1000 2000
+3 8 6 10
+0 1 6 8
+10 2 4 7
+8 6 6 8
+19
+2 2 0 2 2 0 2 1 0 1 2 0 1 2 0 1 0 2 2
+200 100
+-1 -1 -1 -1
+</pre>
+
+<h2>Sample Output</h2>
+<pre>
+0.3024000000
+0.0000000000
+0.5120000000
+</pre>

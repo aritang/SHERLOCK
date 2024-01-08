@@ -1,0 +1,90 @@
+
+<H1>Sunny Graph</H1>
+
+<p>
+The Sun is a great heavenly body.
+The Sun is worshiped by various religions.
+Bob loves the Sun and loves any object that is similar to the Sun.
+He noticed that he can find the shape of the Sun in certain graphs.
+He calls such graphs &quot;Sunny&quot;.
+</p>
+
+<p>
+We define the property &quot;Sunny&quot; mathematically.
+A graph <var>G=(V,E)</var> with a vertex <var>v \in V</var> is called &quot;Sunny&quot; when there exists a subgraph <var>G'=(V,E'), E' \subseteq E</var> that has the following two properties.
+(Be careful, the set of vertices must be the same.)
+</p>
+
+<p>
+1. The connected component containing <var>v</var> is a cycle that consists of three or more vertices.
+</p>
+
+<p>
+2. Every other component has exactly two vertices.
+</p>
+
+<p>
+The following picture is an example of a subgraph <var>G'=(V,E')</var> that has the above property.
+</p>
+
+<center>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE_sunny">
+</center>
+
+<p>
+Given a simple graph (In each edge, two end points are different. Every pair of vertices has one or no edge.) <var>G=(V,E)</var>,
+write a program that decides whether the given graph with the vertex <var>1</var> is &quot;Sunny&quot; or not. 
+</p>
+
+<H2>Input</H2>
+
+<p>
+The first line contains two integers <var>N</var> (odd, <var>1 \leq N \leq 200</var>) and <var>M</var> (<var>0 \leq M \leq 20,000</var>), separated by a single space.
+<var>N</var> is the number of the vertices and <var>M</var> is the number of the edges.
+</p>
+
+<p>
+The following <var>M</var> lines describe the edges. Each line contains two integers <var>v_i</var> and <var>u_i</var> (<var>1 \leq u_i, v_i \leq N</var>).
+(<var>u_i, v_i</var>) indicates the edge that connects the two vertices <var>u_i</var> and <var>v_i</var>.
+<var>u_i</var> and <var>v_i</var> are different, and every pair <var>(u_i,v_i)</var> are different.
+</p>
+
+<H2>Output</H2>
+
+<p>
+Print a line containing &quot;Yes&quot; when the graph is &quot;Sunny&quot;. Otherwise, print &quot;No&quot;.
+</p>
+
+<H2>Sample Input 1</H2>
+
+<pre>
+5 5
+1 2
+2 3
+3 4
+4 5
+1 3
+</pre>
+
+<H2>Output for the Sample Input 1</H2>
+
+<pre>
+Yes
+</pre>
+
+<H2>Sample Input 2</H2>
+
+<pre>
+5 5
+1 2
+2 3
+3 4
+4 5
+1 4
+</pre>
+
+<H2>Output for the Sample Input 2</H2>
+
+<pre>
+No
+</pre>

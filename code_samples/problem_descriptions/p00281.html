@@ -1,0 +1,119 @@
+
+
+
+<h2>親方の給料計算</h2>
+
+<p>
+ワシはパイプつなぎ組合の親方じゃ。職人を工事現場に派遣し、現場でパイプをつながせておる。去年は工事が増えて大儲けするかと思ったのじゃが、ちょっと給料の出し方がまずくてのぅ。ウチとしては大赤字になってしまったのじゃよ…。そこで、今年は職人たちへの給料の出し方を工夫したいのじゃ。
+</p>
+
+<p>
+職人たちの給料は、工事の種類とこなした回数で決めておる。つまり、<br>
+職人の給料 ＝ 種類 1 の単価 &times; 種類 1 をこなした回数<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  + 種類 2 の単価 &times; 種類 2 をこなした回数<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;....<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  + 種類 <var>M</var> の単価 &times; 種類 <var>M</var> をこなした回数<br>
+<br>
+
+となるのじゃ。これを計算するために、ウチでは、どの職人がどの種類の工事を何回こなしたかを次のような表に記録しておる。
+</p>
+
+<center>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_PCK2013_salary">
+</center>
+<br>
+
+<p>
+例えば、上の表では、職人１が工事２を２回、工事４を１回こなしたことを示しておる。
+</p>
+
+<p>
+職人たちがこなした仕事の回数はもう変えられんが、やつらは工事の単価を知らんので、単価をいろいろと変えながら皆の不満が出ぬよう給料を調整しようと思うておる。じゃが、ワシがこしらえたプログラムが今もって動かなくてのぅ。ちょっとみてくれんかね。
+</p>
+
+<pre>
+//省略
+int i, j;
+for ( i = 0; i < N; i++ ){
+    c[i] = 0;
+    for ( j = 0; j < M; j++ ){
+        c[i] = c[i] + a[i][j]*b[j];
+    }
+}
+//省略
+</pre>
+
+<p>
+<var>N</var> は職人の数で <var>M</var> は工事の種類の数じゃ。変数 <var>a[i][j]</var> に職人iが工事 <var>j</var> をこなした回数を、<var>b[j]</var> に工事 <var>j</var> の単価をいれて、<var>c[i]</var> に職人 <var>i</var> の給料を格納しておる。合っているはずなのに、うんともすんとも言わん！そろそろ今年の給料を職人たちに払わないとまずいのじゃが・・・・・なんとかならんかのぅ。
+</p>
+
+<p>
+それでは、職人のこなした仕事の回数と各工事の単価の情報が与えられたとき、各職人の給料を計算するプログラムを作成してください。
+</p>
+
+<h2>入力</h2>
+
+<p>
+入力は1つのデータセットからなる。入力データは以下の形式で与えられる。
+</p>
+
+<pre>
+<var>N</var> <var>M</var>
+<var>s<sub>1</sub></var> <var>t<sub>1</sub></var> <var>e<sub>1</sub></var>
+<var>s<sub>2</sub></var> <var>t<sub>2</sub></var> <var>e<sub>2</sub></var>
+:
+0 0 0
+<var>L</var>
+<var>b<sub>11</sub></var> <var>b<sub>12</sub></var> ... <var>b<sub>1M</sub></var>
+<var>b<sub>21</sub></var> <var>b<sub>22</sub></var> ... <var>b<sub>2M</sub></var>
+:
+<var>b<sub>L1</sub></var> <var>b<sub>L2</sub></var> ... <var>b<sub>LM</sub></var>
+</pre>
+
+<ul>
+<li> 1行目は職人の数 <var>N</var>(1 &le; <var>N</var> &le; 10000)と工事の種類の数 <var>M</var>(1 &le; <var>M</var> &le; 10000)。</li>
+<li> 続いて、工事の記録として、職人の番号 <var>s<sub>i</sub></var> (1 &le; <var>s<sub>i</sub></var>  &le; <var>N</var>) と工事の種類の番号 <var>t<sub>i</sub></var>(1 &le; <var>t<sub>i</sub></var> &le; <var>M</var>)、および職人 <var>s<sub>i</sub></var> が工事 <var>t<sub>i</sub></var> をこなした回数 <var>e<sub>i</sub></var> (1 &le; <var>e<sub>i</sub></var> &le; 50000) からなる行が１行以上与えられる。工事の記録はゼロ３つの行で終わる。ただし、<var>e<sub>i</sub></var> の合計は 1 以上 50000 以下である。また、工事の記録には、どの職人と工事の種類の組も２度以上現れない。工事をこなした回数が 0 である職人と工事の種類の組は与えられない。</li>
+<li> 続く 1 行は給料の算出を行う回数 <var>L</var> (1 &le; <var>L</var> &le; 100) 。</li>
+<li> 続く <var>L</var> 行は、<var>i</var> 回目の給料の算出に必要な、工事 <var>j</var> の単価 <var>b<sub>ij</sub></var> (0 &le; <var>b<sub>ij</sub></var> &le; 10000) の並び。</li>
+</ul>
+
+<h2>出力</h2>
+
+<p>
+以下の形式で、<var>i</var> 回目の給料の算出によって得られた職人 <var>j</var> の給料 <var>c<sub>ij</sub></var> を順番に出力する。各給料の間は空白１つで区切る。
+</p>
+
+<pre>
+<var>c<sub>11</sub></var> <var>c<sub>12</sub></var> ... <var>c<sub>1N</sub></var>
+<var>c<sub>21</sub></var> <var>c<sub>22</sub></var> ... <var>c<sub>2N</sub></var>
+:
+<var>c<sub>L1</sub></var> <var>c<sub>L2</sub></var> ... <var>c<sub>LN</sub></var>
+</pre>
+
+
+<h2>入出力例</h2>
+<br>
+
+<h2>入力例</h2>
+<pre>
+4 6
+1 2 1
+2 3 2
+2 4 3
+3 1 5
+4 2 4
+4 3 2
+4 6 10
+0 0 0
+3
+1 3 2 4 0 10
+6 5 4 3 2 1
+5 1 1 5 5 1
+</pre>
+
+<h2>出力例</h2>
+<pre>
+3 16 5 116
+5 17 30 38
+1 17 25 16
+</pre>

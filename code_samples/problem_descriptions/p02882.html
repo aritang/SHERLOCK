@@ -1,0 +1,77 @@
+<span class="lang-en">
+<p>Score : <var>400</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>Takahashi has a water bottle with the shape of a rectangular prism whose base is a square of side <var>a~\mathrm{cm}</var> and whose height is <var>b~\mathrm{cm}</var>. (The thickness of the bottle can be ignored.)</p>
+<p>We will pour <var>x~\mathrm{cm}^3</var> of water into the bottle, and gradually tilt the bottle around one of the sides of the base.</p>
+<p>When will the water be spilled? More formally, find the maximum angle in which we can tilt the bottle without spilling any water.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li>All values in input are integers.</li>
+<li><var>1 \leq a \leq 100</var></li>
+<li><var>1 \leq b \leq 100</var></li>
+<li><var>1 \leq x \leq a^2b</var></li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>a</var> <var>b</var> <var>x</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the maximum angle in which we can tilt the bottle without spilling any water, in degrees.
+Your output will be judged as correct when the absolute or relative error from the judge's output is at most <var>10^{-6}</var>.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>2 2 4
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>45.0000000000
+</pre>
+<p>This bottle has a cubic shape, and it is half-full. The water gets spilled when we tilt the bottle more than <var>45</var> degrees.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>12 21 10
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>89.7834636934
+</pre>
+<p>This bottle is almost empty. When the water gets spilled, the bottle is nearly horizontal.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>3 1 8
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>4.2363947991
+</pre>
+<p>This bottle is almost full. When the water gets spilled, the bottle is still nearly vertical.</p></section>
+</div>
+</span>

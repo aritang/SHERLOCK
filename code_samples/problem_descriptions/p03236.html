@@ -1,0 +1,135 @@
+<span class="lang-en">
+<p>Score : <var>1000</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p><strong>Problem F and F2 are the same problem, but with different constraints and time limits.</strong></p>
+<p>We have a board divided into <var>N</var> horizontal rows and <var>N</var> vertical columns of square cells.
+The cell at the <var>i</var>-th row from the top and the <var>j</var>-th column from the left is called Cell <var>(i,j)</var>.
+Each cell is either empty or occupied by an obstacle.
+Also, each empty cell has a digit written on it.
+If <var>A_{i,j}=</var> <code>1</code>, <code>2</code>, ..., or <code>9</code>, Cell <var>(i,j)</var> is empty and the digit <var>A_{i,j}</var> is written on it.
+If <var>A_{i,j}=</var> <code>#</code>, Cell <var>(i,j)</var> is occupied by an obstacle.</p>
+<p>Cell <var>Y</var> is <em>reachable</em> from cell <var>X</var> when the following conditions are all met:</p>
+<ul>
+<li>Cells <var>X</var> and <var>Y</var> are different.</li>
+<li>Cells <var>X</var> and <var>Y</var> are both empty.</li>
+<li>One can reach from Cell <var>X</var> to Cell <var>Y</var> by repeatedly moving right or down to an adjacent empty cell.</li>
+</ul>
+<p>Consider all pairs of cells <var>(X,Y)</var> such that cell <var>Y</var> is reachable from cell <var>X</var>.
+Find the sum of the products of the digits written on cell <var>X</var> and cell <var>Y</var> for all of those pairs.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 \leq N \leq 500</var></li>
+<li><var>A_{i,j}</var> is one of the following characters: <code>1</code>, <code>2</code>, ... <code>9</code> and <code>#</code>.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+<var>A_{1,1}A_{1,2}...A_{1,N}</var>
+<var>A_{2,1}A_{2,2}...A_{2,N}</var>
+<var>:</var>
+<var>A_{N,1}A_{N,2}...A_{N,N}</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the sum of the products of the digits written on cell <var>X</var> and cell <var>Y</var> for all pairs <var>(X,Y)</var> such that cell <var>Y</var> is reachable from cell <var>X</var>.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>2
+11
+11
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>5
+</pre>
+<p>There are five pairs of cells <var>(X,Y)</var> such that cell <var>Y</var> is reachable from cell <var>X</var>, as follows:</p>
+<ul>
+<li><var>X=(1,1)</var>, <var>Y=(1,2)</var></li>
+<li><var>X=(1,1)</var>, <var>Y=(2,1)</var></li>
+<li><var>X=(1,1)</var>, <var>Y=(2,2)</var></li>
+<li><var>X=(1,2)</var>, <var>Y=(2,2)</var></li>
+<li><var>X=(2,1)</var>, <var>Y=(2,2)</var></li>
+</ul>
+<p>The product of the digits written on cell <var>X</var> and cell <var>Y</var> is <var>1</var> for all of those pairs, so the answer is <var>5</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>4
+1111
+11#1
+1#11
+1111
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>47
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>10
+76##63##3#
+8445669721
+75#9542133
+3#285##445
+749632##89
+2458##9515
+5952578#77
+1#3#44196#
+4355#99#1#
+#298#63587
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>36065
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 4</h3><pre>10
+4177143673
+7#########
+5#1716155#
+6#4#####5#
+2#3#597#6#
+6#9#8#3#5#
+5#2#899#9#
+1#6#####6#
+6#5359657#
+5#########
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 4</h3><pre>6525
+</pre></section>
+</div>
+</span>

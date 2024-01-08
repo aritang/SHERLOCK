@@ -1,0 +1,102 @@
+
+
+
+<h2>H - Bit Operation Game</h2>
+
+<p>
+<var>N</var> 頂点の根付き木が与えられる。
+頂点には <var>0</var> から <var>N &minus; 1</var> の番号がついており、<var>0</var>番目の頂点が根を表す。
+根には <code>T = 0</code> が、それ以外の頂点には
+</p>
+<ul>
+<li><code>T=T&X</code></li>
+<li><code>T=T&Y</code></li><li><code>T=T|X</code></li>
+<li><code>T=T|Y</code></li>
+<li><code>T=T^X</code></li>
+<li><code>T=T^Y</code></li>
+</ul>
+
+<p>
+のいずれかの操作が書かれている。
+ここでの演算子 &, |, ^ はそれぞれビット演算子 and, or, xor, を意味する。
+</p>
+
+<p>
+A君とB君はこの木を使って以下のゲームを <var>M</var> 回行った。
+二人は根からスタートし、子頂点を選び進むという操作を、A君から始め葉に到達するまで交互に行う。
+通ったノードに書かれている操作を、通った順に適用した時の、最終的な <var>T</var> の値がスコアになる。
+B君はできるだけスコアを小さくしたいと考えており、またA君は大きくしたいと考えている。
+M回のゲームの <var>X</var>, <var>Y</var> の値が与えられるので、二人が最適な選択をした時の各ゲームのスコアを出力せよ。
+</p>
+
+<h3>Constraints</h3>
+<ul>
+<li><var>1  &le;  N  &le;  100000</var></li>
+<li><var>1  &le;  M  &le;  100000</var></li>
+<li><var>0  &le;  X, Y < 2^{16}</var></li>
+</ul>
+
+
+<h3>Input Format</h3>
+<p>
+入力は以下の形式で標準入力から与えられる。
+</p>
+<pre>
+<var>N</var> <var>M</var>
+<var>o_1</var>
+<var>o_2</var>
+...
+<var>o_{N&minus;1}</var>
+<var>u_1</var> <var>v_1</var>
+<var>u_2</var> <var>v_2</var>
+...
+<var>u_{N&minus;1}</var> <var>v_{N&minus;1}</var>
+<var>X_1</var> <var>Y_1</var>
+<var>X_2</var> <var>Y_2</var>
+...
+<var>X_M</var> <var>Y_M</var>
+</pre>
+
+<p>
+<var>1</var> 行目には木の頂点数 <var>N</var> と、行われるゲーム数を表す整数 <var>M</var> が入力される。 <br />
+<var>2</var> 行目から <var>N</var> 行目にかけて、<var>1</var> ... <var>N&minus;1</var> 番目の頂点に書かれている操作が入力される。<br />
+さらに続けて <var>N&minus;1</var> 行に、各辺により繋がれる <var>2</var> 頂点の番号が入力される。<br />
+最後に <var>M</var> 回のゲームにおける <var>X</var>, <var>Y</var> の値が <var>M</var> 行に渡り入力される。<br />
+</p>
+
+<h3>Output Format</h3>
+<p>
+各ゲームでの最終的な <var>T</var> の値をそれぞれ <var>M</var> 行に出力せよ。
+</p>
+
+
+<h3>Sample Input 1</h3>
+<pre>
+6 3
+T=T|X
+T=T|Y
+T=T|Y
+T=T^Y
+T=T&X
+0 1
+0 2
+1 3
+1 4
+2 5
+5 6
+3 5
+0 0
+</pre>
+
+<h3>Sample Output 1</h3>
+<pre>
+4
+6
+0
+</pre>
+<p>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_JAG2015SummerDay2_h_sample1-1" width=400/> <br/>
+X = 5, Y = 6 の場合、頂点 0 -> 2 -> 5 と進み、T = 5 & 6 = 4 になります<br/>
+X = 3, Y = 5 の場合、頂点 0 -> 1 -> 4 と進み、T = 3 ^ 5 = 6 になります<br/>
+X = 0, Y = 0 の場合、どこを通っても T は 0 から変化しません<br/>
+</p>

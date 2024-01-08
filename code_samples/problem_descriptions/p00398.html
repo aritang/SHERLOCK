@@ -1,0 +1,82 @@
+<h1>Road Construction</h1>
+
+<p>
+The Zuia Kingdom has finally emerged through annexation of $N$ cities, which are identified by index from $1$ to $N$. You are appointed the Minister of Transport of the newly born kingdom to construct the inter-city road network.
+</p>
+<p>
+To simplify the conceptual design planning, you opted to consider each city as a point on the map, so that the $i$-th city can be represented by an coordinate ($x_i, y_i$).
+</p>
+
+<p>
+  The cost of road construction connecting $u$-th and $v$-th cities is equal to the distance $|x_u - x_v|$ or $|y_u - y_v|$, whichever the larger. The notation $|A|$ represents the absolute value of $A$. The object here is to explore the minimum cost required to construct the road network in such a way that people can move between different cities along one or more roads.
+</p>
+
+<p>
+  Make a program to calculate the minimum of total road construction cost from the number of cities and their coordinates.
+</p>
+
+<h2>Input</h2>
+<p>
+The input is given in the following format.
+</p>
+<pre>
+$N$
+$x_1$ $y_1$
+$x_2$ $y_2$
+...
+$x_N$ $y_N$
+</pre>
+
+<p>
+The first line provides the number of cities $N$ ($2 \leq N \leq 10^5$). Each of the subsequent $N$ lines provides the coordinate of the $i$-th city $x_i, y_i$ ($0 \leq x_i, y_i \leq 10^9$) as integers. Note that none of these coordinates coincides if: $i \ne j$, then $x_i \ne x_j$ or $y_i \ne y_j$.
+</p>
+
+<h2>Output</h2>
+<p>
+  Output the minimum road construction cost.
+</p>
+
+
+<h2>Sample Input 1 </h2>
+<pre>
+3
+1 2
+3 4
+10 1
+</pre>
+
+<h2>Sample Output 1</h2>
+<pre>
+9
+</pre>
+<p>
+  The road connecting city 1 and 2 can be constructed at the cost of 2, and that connecting city 2 and 3 at the cost of 7. Therefore, the total cost becomes 9, which is the minimum.
+</p>
+
+<h2>Sample Input 2</h2>
+<pre>
+3
+1 2
+3 4
+3 2
+</pre>
+<h2>Sample Output 2</h2>
+<pre>
+4
+</pre>
+
+<h2>Sample Input 3</h2>
+<pre>
+5
+7 41
+10 0
+99 27
+71 87
+14 25
+</pre>
+
+<h2>Sample Output 3</h2>
+<pre>
+163
+</pre>
+

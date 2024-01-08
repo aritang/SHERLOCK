@@ -1,0 +1,79 @@
+<span class="lang-en">
+<p>Score : <var>700</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>You are given an integer <var>N</var>. Determine if there exists a tree with <var>2N</var> vertices numbered <var>1</var> to <var>2N</var> satisfying the following condition, and show one such tree if the answer is yes.</p>
+<ul>
+<li>Assume that, for each integer <var>i</var> between <var>1</var> and <var>N</var> (inclusive), Vertex <var>i</var> and <var>N+i</var> have the weight <var>i</var>. Then, for each integer <var>i</var> between <var>1</var> and <var>N</var>, the bitwise XOR of the weights of the vertices on the path between Vertex <var>i</var> and <var>N+i</var> (including themselves) is <var>i</var>.</li>
+</ul>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>N</var> is an integer.</li>
+<li><var>1 \leq N \leq 10^{5}</var></li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>If there exists a tree satisfying the condition in the statement, print <code>Yes</code>; otherwise, print <code>No</code>.
+Then, if such a tree exists, print the <var>2N-1</var> edges of such a tree in the subsequent <var>2N-1</var> lines, in the following format:</p>
+<pre><var>a_{1}</var> <var>b_{1}</var>
+<var>\vdots</var>
+<var>a_{2N-1}</var> <var>b_{2N-1}</var>
+</pre>
+<p>Here each pair (<var>a_i</var>, <var>b_i</var>) means that there is an edge connecting Vertex <var>a_i</var> and <var>b_i</var>. The edges may be printed in any order.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>3
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>Yes
+1 2
+2 3
+3 4
+4 5
+5 6
+</pre>
+<ul>
+<li>The sample output represents the following graph:
+<div style="text-align: center;">
+<img alt="d004b05438497d50637b534e89f7a511.png" src="https://img.atcoder.jp/agc035/d004b05438497d50637b534e89f7a511.png">
+</img></div></li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>1
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>No
+</pre>
+<ul>
+<li>There is no tree satisfying the condition.</li>
+</ul></section>
+</div>
+</span>

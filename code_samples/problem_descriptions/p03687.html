@@ -1,0 +1,92 @@
+<span class="lang-en">
+<p>Score : <var>300</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>Snuke can change a string <var>t</var> of length <var>N</var> into a string <var>t'</var> of length <var>N - 1</var> under the following rule:</p>
+<ul>
+<li>For each <var>i</var> (<var>1 ≤ i ≤ N - 1</var>), the <var>i</var>-th character of <var>t'</var> must be either the <var>i</var>-th or <var>(i + 1)</var>-th character of <var>t</var>.</li>
+</ul>
+<p>There is a string <var>s</var> consisting of lowercase English letters.
+Snuke's objective is to apply the above operation to <var>s</var> repeatedly so that all the characters in <var>s</var> are the same.
+Find the minimum necessary number of operations.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 ≤ |s| ≤ 100</var></li>
+<li><var>s</var> consists of lowercase English letters.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>s</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the minimum necessary number of operations to achieve the objective.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>serval
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>3
+</pre>
+<p>One solution is: <code>serval</code> → <code>srvvl</code> → <code>svvv</code> → <code>vvv</code>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>jackal
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>2
+</pre>
+<p>One solution is: <code>jackal</code> → <code>aacaa</code> → <code>aaaa</code>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>zzz
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>0
+</pre>
+<p>All the characters in <var>s</var> are the same from the beginning.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 4</h3><pre>whbrjpjyhsrywlqjxdbrbaomnw
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 4</h3><pre>8
+</pre>
+<p>In <var>8</var> operations, he can change <var>s</var> to <code>rrrrrrrrrrrrrrrrrr</code>.</p></section>
+</div>
+</span>

@@ -1,0 +1,78 @@
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({ tex2jax: { inlineMath: [["$","$"], ["\\(","\\)"]], processEscapes: true }});
+</script>
+<script type='text/javascript' src='http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
+</script>
+
+
+<h2>M and A</h2>
+<p>
+The CEO of the company named $S$ is planning M&amp;A with another company named $T$. M&amp;A is an abbreviation for "Mergers and Acquisitions". The CEO wants to keep the original company name $S$ through the M&amp;A on the plea that both company names are mixed into a new one.
+</p>
+
+<p>
+The CEO insists that the mixed company name after the M&amp;A is produced as follows.
+</p>
+
+<p>
+Let $s$ be an arbitrary subsequence of $S$, and $t$ be an arbitrary subsequence of $T$. The new company name must be a string of the same length to $S$ obtained by alternatively lining up the characters in $s$ and $t$. More formally, $s_0 + t_0 + s_1 + t_1 +  ...$ or $t_0 + s_0 + t_1 + s_1 + ... $ can be used as the company name after M&amp;A. Here, $s_k$ denotes the $k$-th (0-based) character of string $s$. Please note that the lengths of $s$ and $t$ will be different if the length of $S$ is odd. In this case, the company name after M&amp;A is obtained by $s_0 + t_0 + ... + t_{|S|/2} + s_{|S|/2+1}$ or $t_0 + s_0 + ... + s_{|S|/2} + t_{|S|/2+1}$ ($|S|$ denotes the length of $S$ and "/" denotes integer division).
+</p>
+
+<p>
+A subsequence of a string is a string which is obtained by erasing zero or more characters from the original string. For example, the strings "abe", "abcde" and "" (the empty string) are all subsequences of the string "abcde".
+</p>
+
+<p>
+You are a programmer employed by the acquiring company. You are assigned a task to write a program that determines whether it is possible to make $S$, which is the original company name, by mixing the two company names.
+</p>
+
+<h3>Input</h3>
+
+<p>
+The input consists of a single test case. The test case consists of two lines.
+</p>
+
+<p>
+The first line contains a string $S$ which denotes the name of the company that you belong to. The second line contains a string $T$ which denotes the name of the target company of the planned M&amp;A. The two names $S$ and $T$ are non-empty and of the same length no longer than 1,000 characters, and all the characters used in the names are lowercase English letters.
+</p>
+
+
+<h3>Output</h3>
+<p>
+Print "Yes" in a line if it is possible to make original company name by combining $S$ and $T$. Otherwise, print "No" in a line.
+</p>
+
+<h3>Sample Input 1</h3>
+<pre>
+acmicpc
+tsukuba
+</pre>
+
+<h3>Output for the Sample Input 1</h3>
+<pre>
+No
+</pre>
+
+
+<h3>Sample Input 2</h3>
+<pre>
+hoge
+moen
+</pre>
+
+<h3>Output for the Sample Input 2</h3>
+<pre>
+Yes
+</pre>
+
+<h3>Sample Input 3</h3>
+<pre>
+abcdefg
+xacxegx
+</pre>
+
+<h3>Output for the Sample Input 3</h3>
+<pre>
+Yes
+</pre>

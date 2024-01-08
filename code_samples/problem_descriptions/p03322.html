@@ -1,0 +1,94 @@
+<span class="lang-en">
+<p>Score : <var>1200</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>In Takahashi's mind, there is always an integer sequence of length <var>2 \times 10^9 + 1</var>: <var>A = (A_{-10^9}, A_{-10^9 + 1}, ..., A_{10^9 - 1}, A_{10^9})</var> and an integer <var>P</var>.</p>
+<p>Initially, all the elements in the sequence <var>A</var> in Takahashi's mind are <var>0</var>, and the value of the integer <var>P</var> is <var>0</var>.</p>
+<p>When Takahashi eats symbols <code>+</code>, <code>-</code>, <code>&gt;</code> and <code>&lt;</code>, the sequence <var>A</var> and the integer <var>P</var> will change as follows:</p>
+<ul>
+<li>When he eats <code>+</code>, the value of <var>A_P</var> increases by <var>1</var>;</li>
+<li>When he eats <code>-</code>, the value of <var>A_P</var> decreases by <var>1</var>;</li>
+<li>When he eats <code>&gt;</code>, the value of <var>P</var> increases by <var>1</var>;</li>
+<li>When he eats <code>&lt;</code>, the value of <var>P</var> decreases by <var>1</var>.</li>
+</ul>
+<p>Takahashi has a string <var>S</var> of length <var>N</var>. Each character in <var>S</var> is one of the symbols <code>+</code>, <code>-</code>, <code>&gt;</code> and <code>&lt;</code>.
+He chose a pair of integers <var>(i, j)</var> such that <var>1 \leq i \leq j \leq N</var> and ate the symbols that are the <var>i</var>-th, <var>(i+1)</var>-th, <var>...</var>, <var>j</var>-th characters in <var>S</var>, in this order.
+We heard that, after he finished eating, the sequence <var>A</var> became the same as if he had eaten all the symbols in <var>S</var> from first to last.
+How many such possible pairs <var>(i, j)</var> are there?</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 \leq N \leq 250000</var></li>
+<li><var>|S| = N</var></li>
+<li>Each character in <var>S</var> is <code>+</code>, <code>-</code>, <code>&gt;</code> or <code>&lt;</code>.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+<var>S</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the answer.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>5
++&gt;+&lt;-
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>3
+</pre>
+<p>If Takahashi eats all the symbols in <var>S</var>, <var>A_1 = 1</var> and all other elements would be <var>0</var>.
+The pairs <var>(i, j)</var> that leads to the same sequence <var>A</var> are as follows:</p>
+<ul>
+<li><var>(1, 5)</var></li>
+<li><var>(2, 3)</var></li>
+<li><var>(2, 4)</var></li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>5
++&gt;+-&lt;
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>5
+</pre>
+<p>Note that the value of <var>P</var> may be different from the value when Takahashi eats all the symbols in <var>S</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>48
+-+&gt;&lt;&lt;&gt;&lt;&gt;&lt;&gt;&lt;&gt;&gt;&gt;+-&lt;&lt;&gt;-&gt;&gt;&gt;&lt;&lt;&gt;&lt;&lt;-+&lt;&gt;&gt;&lt;+&lt;&lt;&gt;+&gt;&lt;-+-&gt;&gt;&lt;&lt;
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>475
+</pre></section>
+</div>
+</span>

@@ -1,0 +1,91 @@
+<span class="lang-en">
+<p>Score : <var>500</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>Snuke, who loves animals, built a zoo.</p>
+<p>There are <var>N</var> animals in this zoo. They are conveniently numbered <var>1</var> through <var>N</var>, and arranged in a circle.
+The animal numbered <var>i (2≤i≤N-1)</var> is adjacent to the animals numbered <var>i-1</var> and <var>i+1</var>. Also, the animal numbered <var>1</var> is adjacent to the animals numbered <var>2</var> and <var>N</var>, and the animal numbered <var>N</var> is adjacent to the animals numbered <var>N-1</var> and <var>1</var>.</p>
+<p>There are two kinds of animals in this zoo: honest sheep that only speak the truth, and lying wolves that only tell lies.</p>
+<p>Snuke cannot tell the difference between these two species, and asked each animal the following question: "Are your neighbors of the same species?" The animal numbered <var>i</var> answered <var>s_i</var>. Here, if <var>s_i</var> is <code>o</code>, the animal said that the two neighboring animals are of the same species, and if <var>s_i</var> is <code>x</code>, the animal said that the two neighboring animals are of different species.</p>
+<p>More formally, a sheep answered <code>o</code> if the two neighboring animals are both sheep or both wolves, and answered <code>x</code> otherwise.
+Similarly, a wolf answered <code>x</code> if the two neighboring animals are both sheep or both wolves, and answered <code>o</code> otherwise.</p>
+<p>Snuke is wondering whether there is a valid assignment of species to the animals that is consistent with these responses. If there is such an assignment, show one such assignment. Otherwise, print <code>-1</code>.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>3 ≤ N ≤ 10^{5}</var></li>
+<li><var>s</var> is a string of length <var>N</var> consisting of <code>o</code> and <code>x</code>.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>The input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+<var>s</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>If there does not exist an valid assignment that is consistent with <var>s</var>, print <code>-1</code>.
+Otherwise, print an string <var>t</var> in the following format. The output is considered correct if the assignment described by <var>t</var> is consistent with <var>s</var>.</p>
+<ul>
+<li><var>t</var> is a string of length <var>N</var> consisting of <code>S</code> and <code>W</code>.</li>
+<li>If <var>t_i</var> is <code>S</code>, it indicates that the animal numbered <var>i</var> is a sheep. If <var>t_i</var> is <code>W</code>, it indicates that the animal numbered <var>i</var> is a wolf.</li>
+</ul>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>6
+ooxoox
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>SSSWWS
+</pre>
+<p>For example, if the animals numbered <var>1</var>, <var>2</var>, <var>3</var>, <var>4</var>, <var>5</var> and <var>6</var> are respectively a sheep, sheep, sheep, wolf, wolf, and sheep, it is consistent with their responses. Besides, there is another valid assignment of species: a wolf, sheep, wolf, sheep, wolf and wolf.</p>
+<p>Let us remind you: if the neiboring animals are of the same species, a sheep answers <code>o</code> and a wolf answers <code>x</code>. If the neiboring animals are of different species, a sheep answers <code>x</code> and a wolf answers <code>o</code>.</p>
+<div style="text-align: center;">
+<img alt="b34c052fc21c42d2def9b98d6dccd05c.png" src="https://atcoder.jp/img/arc069/b34c052fc21c42d2def9b98d6dccd05c.png">
+</img></div>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>3
+oox
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>-1
+</pre>
+<p>Print <code>-1</code> if there is no valid assignment of species.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>10
+oxooxoxoox
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>SSWWSSSWWS
+</pre></section>
+</div>
+</span>

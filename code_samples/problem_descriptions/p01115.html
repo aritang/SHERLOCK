@@ -1,0 +1,104 @@
+<h3>Expression Mining</h3>
+<!-- end en only -->
+
+
+
+<!-- begin en only -->
+<p>
+Consider an arithmetic expression built by combining single-digit positive integers
+with addition symbols <tt>+</tt>, multiplication symbols <tt>*</tt>,
+and parentheses <tt>(</tt> <tt>)</tt>,
+defined by the following grammar rules with the start symbol <tt>E</tt>.
+</p>
+<!-- end en only -->
+
+<pre>  E ::= T | E '+' T
+  T ::= F | T '*' F
+  F ::= '1' | '2' | '3' | '4' | '5' | '6' | '7' | '8' | '9' | '(' E ')'
+</pre>
+
+<!-- begin en only -->
+<p>
+When such an arithmetic expression is viewed as a string,
+its substring, that is, a contiguous sequence of characters within the string,
+may again form an arithmetic expression.
+
+Given an integer <i>n</i> and a string <i>s</i> representing an arithmetic expression,
+let us count the number of its substrings that can be read as arithmetic expressions
+with values computed equal to <i>n</i>.
+</p>
+<!-- end en only -->
+
+
+
+<h3>Input</h3>
+
+
+
+<!-- begin en only -->
+<p>
+The input consists of multiple datasets, each in the following format.
+</p>
+<!-- end en only -->
+
+<blockquote>
+<p>
+<i>n</i><br>
+<i>s</i><br>
+</p>
+</blockquote>
+
+<!-- begin en only -->
+<p>
+A dataset consists of two lines.
+In the first line, the target value <i>n</i> is given.
+<i>n</i> is an integer satisfying 1 &#8804; <i>n</i> &#8804; 10<sup>9</sup>.
+
+The string <i>s</i> given in the second line
+is an arithmetic expression conforming to the grammar defined above.
+The length of <i>s</i> does not exceed 2&times;10<sup>6</sup>.
+The nesting depth of the parentheses in the string is at most 1000.
+</p>
+<p>
+The end of the input is indicated by a line containing a single zero.
+The sum of the lengths of <i>s</i>
+in all the datasets does not exceed 5&times;10<sup>6</sup>.
+</p>
+<!-- end en only -->
+
+
+
+<h3>Output</h3>
+
+
+
+<!-- begin en only -->
+<p>
+For each dataset, output in one line the number of substrings of <i>s</i> that
+conform to the above grammar and have the value <i>n</i>.
+The same sequence of characters appearing at different positions should be counted separately.
+</p>
+<!-- end en only -->
+
+
+
+<h3>Sample Input</h3>
+
+
+<pre>3
+(1+2)*3+3
+2
+1*1*1+1*1*1
+587
+1*(2*3*4)+5+((6+7*8))*(9)
+0
+</pre>
+
+
+<h3>Output for the Sample Input</h3>
+
+
+<pre>4
+9
+2
+</pre>

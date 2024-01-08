@@ -1,0 +1,89 @@
+<span class="lang-en">
+<p>Score : <var>700</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>Takahashi has a tower which is divided into <var>N</var> layers.
+Initially, all the layers are uncolored. Takahashi is going to paint some of the layers in red, green or blue to make a beautiful tower.
+He defines the <em>beauty of the tower</em> as follows:</p>
+<ul>
+<li>The beauty of the tower is the sum of the scores of the <var>N</var> layers, where the score of a layer is <var>A</var> if the layer is painted red, <var>A+B</var> if the layer is painted green, <var>B</var> if the layer is painted blue, and <var>0</var> if the layer is uncolored.</li>
+</ul>
+<p>Here, <var>A</var> and <var>B</var> are positive integer constants given beforehand. Also note that a layer may not be painted in two or more colors.</p>
+<p>Takahashi is planning to paint the tower so that the beauty of the tower becomes exactly <var>K</var>.
+How many such ways are there to paint the tower? Find the count modulo <var>998244353</var>.
+Two ways to paint the tower are considered different when there exists a layer that is painted in different colors, or a layer that is painted in some color in one of the ways and not in the other.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 ≤ N ≤ 3×10^5</var></li>
+<li><var>1 ≤ A,B ≤ 3×10^5</var></li>
+<li><var>0 ≤ K ≤ 18×10^{10}</var></li>
+<li>All values in the input are integers.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var> <var>A</var> <var>B</var> <var>K</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the number of the ways to paint tiles, modulo <var>998244353</var>.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>4 1 2 5
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>40
+</pre>
+<p>In this case, a red layer worth <var>1</var> points, a green layer worth <var>3</var> points and the blue layer worth <var>2</var> points. The beauty of the tower is <var>5</var> when we have one of the following sets of painted layers:</p>
+<ul>
+<li><var>1</var> green, <var>1</var> blue</li>
+<li><var>1</var> red, <var>2</var> blues</li>
+<li><var>2</var> reds, <var>1</var> green</li>
+<li><var>3</var> reds, <var>1</var> blue</li>
+</ul>
+<p>The total number of the ways to produce them is <var>40</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>2 5 6 0
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>1
+</pre>
+<p>The beauty of the tower is <var>0</var> only when all the layers are uncolored. Thus, the answer is <var>1</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>90081 33447 90629 6391049189
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>577742975
+</pre></section>
+</div>
+</span>

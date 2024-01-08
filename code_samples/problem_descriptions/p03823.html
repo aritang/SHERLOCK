@@ -1,0 +1,124 @@
+<span class="lang-en">
+<p>Score : <var>1100</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>There is a set consisting of <var>N</var> distinct integers. The <var>i</var>-th smallest element in this set is <var>S_i</var>. We want to divide this set into two sets, <var>X</var> and <var>Y</var>, such that:</p>
+<ul>
+<li>The absolute difference of any two distinct elements in <var>X</var> is <var>A</var> or greater.</li>
+<li>The absolute difference of any two distinct elements in <var>Y</var> is <var>B</var> or greater.</li>
+</ul>
+<p>How many ways are there to perform such division, modulo <var>10^9 + 7</var>? Note that one of <var>X</var> and <var>Y</var> may be empty.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li>All input values are integers.</li>
+<li><var>1 ≦ N ≦ 10^5</var></li>
+<li><var>1 ≦ A , B ≦ 10^{18}</var></li>
+<li><var>0 ≦ S_i ≦ 10^{18}(1 ≦ i ≦ N)</var></li>
+<li><var>S_i &lt; S_{i+1}(1 ≦ i ≦ N - 1)</var></li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>The input is given from Standard Input in the following format:</p>
+<pre><var>N</var> <var>A</var> <var>B</var>
+<var>S_1</var>
+:
+<var>S_N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the number of the different divisions under the conditions, modulo <var>10^9 + 7</var>.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>5 3 7
+1
+3
+6
+9
+12
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>5
+</pre>
+<p>There are five ways to perform division:</p>
+<ul>
+<li><var>X=</var>{<var>1,6,9,12</var>}, <var>Y=</var>{<var>3</var>}</li>
+<li><var>X=</var>{<var>1,6,9</var>}, <var>Y=</var>{<var>3,12</var>}</li>
+<li><var>X=</var>{<var>3,6,9,12</var>}, <var>Y=</var>{<var>1</var>}</li>
+<li><var>X=</var>{<var>3,6,9</var>}, <var>Y=</var>{<var>1,12</var>}</li>
+<li><var>X=</var>{<var>3,6,12</var>}, <var>Y=</var>{<var>1,9</var>}</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>7 5 3
+0
+2
+4
+7
+8
+11
+15
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>4
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>8 2 9
+3
+4
+5
+13
+15
+22
+26
+32
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>13
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 4</h3><pre>3 3 4
+5
+6
+7
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 4</h3><pre>0
+</pre></section>
+</div>
+</span>

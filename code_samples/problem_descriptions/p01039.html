@@ -1,0 +1,80 @@
+<h1>Problem C: Manhattan Warp Machine 1</h1>
+<h2>Problem</h2>
+
+<p>
+とある宇宙では、1次元の整数座標点上に星が存在し、宇宙人達はマンハッタンワープ装置を使い、星間を移動している。<br>
+このワープ装置には、<var>N</var>個のボタンが付いており、ボタン<var>i</var>を押すと、現在いる星からのマンハッタン距離が<var>d<sub>i</sub></var>である任意の星にコスト<var>c<sub>i</sub></var>でワープすることができる。<br>
+今、点0の星にいるある宇宙人が点<var>x</var>の星に行きたいと考えている。<br>
+点<var>x</var>の星に辿り着くまでの最小のコストを答えよ。<br>
+辿り着けない場合は-1を出力せよ。<br>
+1次元上の整数座標点には必ず星が存在する。<br>
+点<var>x<sub>1</sub></var>と点<var>x<sub>2</sub></var>間のマンハッタン距離は| <var>x<sub>1</sub></var> - <var>x<sub>2</sub></var> |で表される。
+</p>
+
+<h2>Input</h2>
+
+<pre>
+<var>N</var> <var>x</var>
+<var>d<sub>1</sub></var> <var>c<sub>1</sub></var>
+...
+<var>d<sub>N</sub></var> <var>c<sub>N</sub></var>
+</pre>
+
+<p>
+入力は全て整数で与えられる。<br>
+1行目に<var>N</var>と行きたい星の座標<var>x</var>が空白区切りで与えられる。<br>
+続く<var>N</var>行に、移動可能なマンハッタン距離<var>d<sub>i</sub></var>とコスト<var>c<sub>i</sub></var>が1行ずつ空白区切りで与えられる。<br>
+</p>
+
+<h2>Constraints</h2>
+<p>
+  入力は以下の条件を満たす。
+</p>
+
+<ul>
+<li>1 &le; <var>N</var> &le; 15</li>
+<li>0 &le; <var>x</var> &le; 10<sup>5</sup></li>
+<li>1 &le; <var>d<sub>i</sub></var> &le; 10<sup>5</sup></li>
+<li>1 &le; <var>c<sub>i</sub></var> &le; 100</li>
+<li>与えられるマンハッタン距離<var>d<sub>i</sub></var>は全て異なる。</li>
+</ul>
+
+<h2>Output</h2>
+<p>
+点<var>x</var>の星に辿り着くまでにかかる最小コストを1行に出力せよ。辿り着くことが不可能な場合は-1を出力せよ。
+</p>
+
+<h2>Sample Input 1</h2>
+<pre>
+2 5
+1 1
+2 1
+</pre>
+
+<h2>Sample Output 1</h2>
+<pre>
+3
+</pre>
+
+<h2>Sample Input 2</h2>
+<pre>
+2 12
+9 1
+3 2
+</pre>
+
+<h2>Sample Output 2</h2>
+<pre>
+3
+</pre>
+
+<h2>Sample Input 3</h2>
+<pre>
+1 3
+4 1
+</pre>
+
+<h2>Sample Output 3</h2>
+<pre>
+-1
+</pre>

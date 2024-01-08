@@ -1,0 +1,100 @@
+<span class="lang-en">
+<p>Score : <var>300</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>There is a box containing <var>N</var> balls. The <var>i</var>-th ball has the integer <var>A_i</var> written on it.
+Snuke can perform the following operation any number of times:</p>
+<ul>
+<li>Take out two balls from the box. Then, return them to the box along with a new ball, on which the absolute difference of the integers written on the two balls is written.</li>
+</ul>
+<p>Determine whether it is possible for Snuke to reach the state where the box contains a ball on which the integer <var>K</var> is written.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 \leq N \leq 10^5</var></li>
+<li><var>1 \leq A_i \leq 10^9</var></li>
+<li><var>1 \leq K \leq 10^9</var></li>
+<li>All input values are integers.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var> <var>K</var>
+<var>A_1</var> <var>A_2</var> <var>...</var> <var>A_N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>If it is possible for Snuke to reach the state where the box contains a ball on which the integer <var>K</var> is written, print <code>POSSIBLE</code>; if it is not possible, print <code>IMPOSSIBLE</code>.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>3 7
+9 3 4
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>POSSIBLE
+</pre>
+<p>First, take out the two balls <var>9</var> and <var>4</var>, and return them back along with a new ball, <var>abs(9-4)=5</var>.
+Next, take out <var>3</var> and <var>5</var>, and return them back along with <var>abs(3-5)=2</var>.
+Finally, take out <var>9</var> and <var>2</var>, and return them back along with <var>abs(9-2)=7</var>.
+Now we have <var>7</var> in the box, and the answer is therefore <code>POSSIBLE</code>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>3 5
+6 9 3
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>IMPOSSIBLE
+</pre>
+<p>No matter what we do, it is not possible to have <var>5</var> in the box. The answer is therefore <code>IMPOSSIBLE</code>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>4 11
+11 3 7 15
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>POSSIBLE
+</pre>
+<p>The box already contains <var>11</var> before we do anything. The answer is therefore <code>POSSIBLE</code>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 4</h3><pre>5 12
+10 2 8 6 4
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 4</h3><pre>IMPOSSIBLE
+</pre></section>
+</div>
+</span>

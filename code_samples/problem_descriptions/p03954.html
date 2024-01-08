@@ -1,0 +1,79 @@
+<span class="lang-en">
+<p>Score : <var>1300</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>We have a pyramid with <var>N</var> steps, built with blocks.
+The steps are numbered <var>1</var> through <var>N</var> from top to bottom.
+For each <var>1≤i≤N</var>, step <var>i</var> consists of <var>2i-1</var> blocks aligned horizontally.
+The pyramid is built so that the blocks at the centers of the steps are aligned vertically.</p>
+<div style="text-align: center;">
+<img src="https://atcoder.jp/img/agc006/a2bde72df5ad036d1699f4a74d74a370.png">
+<p>A pyramid with <var>N=4</var> steps</p>
+</img></div>
+<p>Snuke wrote a permutation of (<var>1</var>, <var>2</var>, <var>...</var>, <var>2N-1</var>) into the blocks of step <var>N</var>.
+Then, he wrote integers into all remaining blocks, under the following rule:</p>
+<ul>
+<li>The integer written into a block <var>b</var> must be equal to the median of the three integers written into the three blocks directly under <var>b</var>, or to the lower left or lower right of <var>b</var>.</li>
+</ul>
+<div style="text-align: center;">
+<img src="https://atcoder.jp/img/agc006/a940f1d8303f255e1f91d17a5696633f.png">
+<p>Writing integers into the blocks</p>
+</img></div>
+<p>Afterwards, he erased all integers written into the blocks.
+Now, he only remembers that the permutation written into the blocks of step <var>N</var> was (<var>a_1</var>, <var>a_2</var>, <var>...</var>, <var>a_{2N-1}</var>).</p>
+<p>Find the integer written into the block of step <var>1</var>.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>2≤N≤10^5</var></li>
+<li>(<var>a_1</var>, <var>a_2</var>, <var>...</var>, <var>a_{2N-1}</var>) is a permutation of (<var>1</var>, <var>2</var>, <var>...</var>, <var>2N-1</var>).</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>The input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+<var>a_1</var> <var>a_2</var> <var>...</var> <var>a_{2N-1}</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the integer written into the block of step <var>1</var>.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>4
+1 6 3 7 4 5 2
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>4
+</pre>
+<p>This case corresponds to the figure in the problem statement.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>2
+1 2 3
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>2
+</pre></section>
+</div>
+</span>

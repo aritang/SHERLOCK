@@ -1,0 +1,76 @@
+<span class="lang-en">
+<p>Score : <var>1100</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3>
+<p>Niwango bought a piece of land that can be represented as a half-open interval <var>[0, X)</var>.</p>
+<p>Niwango will lay out <var>N</var> vinyl sheets on this land. The sheets are numbered <var>1,2, \ldots, N</var>, and they are distinguishable.
+For Sheet <var>i</var>, he can choose an integer <var>j</var> such that <var>0 \leq j \leq X - L_i</var> and cover <var>[j, j + L_i)</var> with this sheet.</p>
+<p>Find the number of ways to cover the land with the sheets such that no point in <var>[0, X)</var> remains uncovered, modulo <var>(10^9+7)</var>.
+We consider two ways to cover the land different if and only if there is an integer <var>i</var> <var>(1 \leq i \leq N)</var> such that the region covered by Sheet <var>i</var> is different.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3>
+<ul>
+<li><var>1 \leq N \leq 100</var></li>
+<li><var>1 \leq L_i \leq X \leq 500</var></li>
+<li>All values in input are integers.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3>
+<p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var> <var>X</var>
+<var>L_1</var> <var>L_2</var> <var>\ldots</var> <var>L_N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3>
+<p>Print the answer.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>3 3
+1 1 2
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>10
+</pre>
+<ul>
+<li>If we ignore whether the whole interval is covered, there are <var>18</var> ways to lay out the sheets.</li>
+<li>Among them, there are <var>4</var> ways that leave <var>[0, 1)</var> uncovered, and <var>4</var> ways that leave <var>[2, 3)</var> uncovered.</li>
+<li>Each of the other ways covers the whole interval <var>[0,3)</var>, so the answer is <var>10</var>.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>18 477
+324 31 27 227 9 21 41 29 50 34 2 362 92 11 13 17 183 119
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>134796357
+</pre>
+<ul>
+<li>Find the number of ways modulo <var>(10^9+7)</var>.</li>
+</ul></section>
+</div>
+</span>

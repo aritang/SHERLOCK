@@ -1,0 +1,118 @@
+
+<h1><font color="#000">Problem F:</font> Cleaning Robot</h1>
+
+<p>
+Here, we want to solve path planning for a mobile robot cleaning a
+rectangular room floor with furniture.
+</p>
+
+<p>
+Consider the room floor paved with square tiles whose size fits 
+the cleaning robot (1 &times; 1).
+There are 'clean tiles' and 'dirty tiles', and the robot can change
+a 'dirty tile' to a 'clean tile' by visiting the tile.
+Also there may be some obstacles (furniture) whose size fits a
+tile in the room. If there is an obstacle on a tile, the robot cannot visit 
+it.
+The robot moves to an adjacent tile with one move.
+The tile onto which the robot moves must be one of four tiles 
+(i.e., east, west, north or south) adjacent to the tile where the 
+robot is present. The robot may visit a tile twice or more.
+</p>
+
+<p>
+Your task is to write a program which computes the minimum number of
+moves for the robot to change all 'dirty tiles' to 'clean tiles', 
+if ever possible.
+</p>
+
+<h2>Input</h2>
+
+<p>
+The input consists of multiple maps, each representing the size 
+and arrangement of the room. A map is given in the following format.
+</p>
+<blockquote>
+<i>
+w h<br>
+</i>
+<i>c</i><sub>11</sub> <i>c</i><sub>12</sub> <i>c</i><sub>13</sub> ... <i>c</i><sub>1<i>w</i></sub><br>
+<i>c</i><sub>21</sub> <i>c</i><sub>22</sub> <i>c</i><sub>23</sub> ... <i>c</i><sub>2<i>w</i></sub><br>
+...<br>
+<i>c</i><sub><i>h</i>1</sub> <i>c</i><sub><i>h</i>2</sub> <i>c</i><sub><i>h</i>3</sub> ... <i>c</i><sub><i>hw</i></sub><br>
+</i>
+</blockquote>
+<p>
+The integers <i>w</i> and <i>h</i> are the lengths of the two sides 
+of the floor of the room in terms of widths of floor tiles. <i>w</i> and <i>h</i> 
+are less than or equal to 20. The character <i>c<sub>yx</sub></i> represents 
+what is initially on the tile with coordinates (<i>x, y</i>) as follows. 
+</p>
+
+<blockquote>
+'<tt>.</tt>' : a clean tile<br>
+'<tt>*</tt>' : a dirty tile <br>
+'<tt>x</tt>' : a piece of furniture (obstacle) <br>
+'<tt>o</tt>' : the robot (initial position)<br>
+</blockquote>
+
+<p>
+In the map the number of 'dirty tiles' does not exceed 10.
+There is only one 'robot'.
+</p>
+<p>
+The end of the input is indicated by a line containing two zeros. 
+</p>
+
+<h2>Output</h2>
+<p> 
+For each map, your program should output a line containing the minimum 
+number of moves. If the map includes 'dirty tiles' which the robot cannot reach, 
+your program should output -1.
+</p>
+
+
+<h2>Sample Input</h2>
+<pre>
+7 5
+.......
+.o...*.
+.......
+.*...*.
+.......
+15 13
+.......x.......
+...o...x....*..
+.......x.......
+.......x.......
+.......x.......
+...............
+xxxxx.....xxxxx
+...............
+.......x.......
+.......x.......
+.......x.......
+..*....x....*..
+.......x.......
+10 10
+..........
+..o.......
+..........
+..........
+..........
+.....xxxxx
+.....x....
+.....x.*..
+.....x....
+.....x....
+0 0
+</pre>
+
+<h2>Output for the Sample Input</h2>
+<pre>
+8
+49
+-1
+</pre>
+
+

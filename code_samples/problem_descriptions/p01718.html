@@ -1,0 +1,91 @@
+
+
+
+<h1>問題 G : Perm Query </h1>
+<h2>問題文</h2>
+<p>
+<var>\{1,&thinsp; 2,&thinsp; …&thinsp;,&thinsp; N\}</var>の順列 <var>(p(1),&thinsp; p(2),&thinsp; …&thinsp;,&thinsp; p(n))</var> が与えられる．
+<var>(l_i,&thinsp; r_i)</var> からなるクエリが <var>Q</var> 個与えられるので，各クエリに対して以下の擬似コードによる処理結果を出力せよ．
+</p>
+
+<ol>
+<li><var>ret &thinsp; := &thinsp; 0</var>, <var>(x(1),&thinsp; x(2),&thinsp; …&thinsp;,&thinsp; x(N)) &thinsp;:=&thinsp; (1,&thinsp; 2,&thinsp; …&thinsp;,&thinsp; N)</var> とおく．</li>
+<li>各<var>i &thinsp; &in; \{1, &thinsp; 2, &thinsp;…&thinsp;, &thinsp; N\}</var> について <var>y(i) := p(x(i))</var> とする．</li>
+<li>各<var>i &thinsp; &in; \{1, &thinsp; 2, &thinsp;…&thinsp;, &thinsp; N\}</var> について <var>x(i) &thinsp; = &thinsp;y(i)</var>とする．</li>
+<li><var>ret &thinsp; := &thinsp;ret + x(l_i) + x(l_i+1) + …&thinsp; + x(r_i)</var></li>
+<li>もし <var>(x(l_i),&thinsp; x(l_i+1),&thinsp; …&thinsp;,&thinsp; x(r_i)) = (l_i,&thinsp; l_i+1,&thinsp; …&thinsp;,&thinsp; r_i)</var> なら <var>(ret &ensp; </var><b>mod</b><var>10^9+7)</var> を出力して終了する．そうでないなら 2 行目に戻る．</li>
+</ol>
+
+
+<h2>入力形式</h2>
+<p>
+入力は以下の形式で与えられる
+<pre>
+<var>N</var> <var>Q</var>
+<var>p(1)</var> <var>p(2)</var> <var>...</var> <var>p(N)</var>
+<var>l_0</var> <var>r_0</var>
+<var>...</var>
+<var>l_{Q-1}</var> <var>r_{Q-1}</var>
+</pre>
+<h2>出力形式</h2>
+<p>
+各クエリに対する出力を1行ずつ出力せよ．
+</p>
+
+<h2>制約</h2>
+<ul>
+<li><var>1 &le; N &le; 10^5</var></li>
+<li><var>1 &le; Q &le; 10^4</var></li>
+<li><var>(p_1,&thinsp; p_2,&thinsp; …&thinsp;,&thinsp; p_N)</var> は <var>(1,&thinsp; 2,&thinsp; …&thinsp;,&thinsp; N)</var> の順列になっている．</li>
+<li>各 <var>i</var> に対して，ある <var>1 &le; k &le; 40</var> が存在して，<var>p^k(i)=i</var> となる．ここで，<var>p^k(i)</var> は <var>p(p(p(…&thinsp;p(i)…&thinsp;)))</var> で <var>p</var> が <var>k</var> 回現れるもの．</li>
+<li><var>1 &le; l_i &thinsp; &le; &thinsp; r_i &thinsp; &le; N</var></li>
+</ul>
+
+
+<h2>入出力例</h2>
+<h3>入力例 1</h3>
+<pre>
+5 2
+5 1 2 3 4
+1 1
+2 4
+</pre>
+
+<h3>出力例 1</h3>
+<pre>
+15
+45
+</pre>
+
+<p>
+擬似コード中の順列<var>(x(1), &thinsp; x(2), &thinsp; …&thinsp;, &thinsp;x(N))</var>は以下のように変化する．
+<pre>
+1 2 3 4 5
+5 1 2 3 4
+4 5 1 2 3
+3 4 5 1 2
+2 3 4 5 1
+1 2 3 4 5
+</pre>
+</p>
+
+<h3>入力例 2</h3>
+<pre>
+10 5
+3 1 2 5 4 10 6 7 9 8
+1 10
+1 5
+3 3
+5 10
+9 10
+</pre>
+
+<h3>出力例 2</h3>
+<pre>
+660
+90
+6
+178
+67
+</pre>
+

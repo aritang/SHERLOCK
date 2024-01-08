@@ -1,0 +1,160 @@
+<span class="lang-en">
+<p>Score : <var>900</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>You are given an undirected graph consisting of <var>N</var> vertices and <var>M</var> edges.
+The vertices are numbered <var>1</var> to <var>N</var>, and the edges are numbered <var>1</var> to <var>M</var>.
+In addition, each vertex has a label, <code>A</code> or <code>B</code>. The label of Vertex <var>i</var> is <var>s_i</var>.
+Edge <var>i</var> bidirectionally connects vertex <var>a_i</var> and <var>b_i</var>.</p>
+<p>The phantom thief Nusook likes to choose some vertex as the startpoint and traverse an edge zero or more times.
+Today, he will make a string after traveling as above, by placing the labels of the visited vertices in the order visited, beginning from the startpoint.</p>
+<p>For example, in a graph where Vertex <var>1</var> has the label <code>A</code> and Vertex <var>2</var> has the label <code>B</code>, if Nusook travels along the path <var>1 \rightarrow 2 \rightarrow 1 \rightarrow 2 \rightarrow 2</var>, the resulting string is <code>ABABB</code>.</p>
+<p>Determine if Nusook can make all strings consisting of <code>A</code> and <code>B</code>.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>2 \leq N \leq 2 \times 10^{5}</var></li>
+<li><var>1 \leq M \leq 2 \times 10^{5}</var></li>
+<li><var>|s| = N</var></li>
+<li><var>s_i</var> is <code>A</code> or <code>B</code>.</li>
+<li><var>1 \leq a_i, b_i \leq N</var></li>
+<li>The given graph may NOT be simple or connected.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var> <var>M</var>
+<var>s</var>
+<var>a_1</var> <var>b_1</var>
+<var>:</var>
+<var>a_{M}</var> <var>b_{M}</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>If Nusook can make all strings consisting of <code>A</code> and <code>B</code>, print <code>Yes</code>; otherwise, print <code>No</code>.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>2 3
+AB
+1 1
+1 2
+2 2
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>Yes
+</pre>
+<ul>
+<li>Since Nusook can visit Vertex <var>1</var> and Vertex <var>2</var> in any way he likes, he can make all strings consisting of <code>A</code> and <code>B</code>.</li>
+</ul>
+<div style="text-align: center;">
+<img alt="77e96cf8e213d606ddd8f3c3f8315d32.png" src="https://img.atcoder.jp/agc027/77e96cf8e213d606ddd8f3c3f8315d32.png">
+</img></div>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>4 3
+ABAB
+1 2
+2 3
+3 1
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>No
+</pre>
+<ul>
+<li>For example, Nusook cannot make <code>BB</code>.</li>
+<li>The given graph may not be connected.</li>
+</ul>
+<div style="text-align: center;">
+<img alt="1ab1411cb9d6ee023d14ca4e77c4b584.png" src="https://img.atcoder.jp/agc027/1ab1411cb9d6ee023d14ca4e77c4b584.png">
+</img></div>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>13 23
+ABAAAABBBBAAB
+7 1
+10 6
+1 11
+2 10
+2 8
+2 11
+11 12
+8 3
+7 12
+11 2
+13 13
+11 9
+4 1
+9 7
+9 6
+8 13
+8 6
+4 10
+8 7
+4 3
+2 1
+8 12
+6 9
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>Yes
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 4</h3><pre>13 17
+BBABBBAABABBA
+7 1
+7 9
+11 12
+3 9
+11 9
+2 1
+11 5
+12 11
+10 8
+1 11
+1 8
+7 7
+9 10
+8 8
+8 12
+6 2
+13 11
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 4</h3><pre>No
+</pre></section>
+</div>
+</span>

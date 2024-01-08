@@ -1,0 +1,281 @@
+
+<h2>Problem Statement</h2>
+
+<p>
+One day in a forest, Alice found an old monolith.
+</p>
+
+<center>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_ancientCommemorative1"><br/>
+<br/>
+</center>
+
+<p>
+She investigated the monolith, and found this  was a sentence written in an old language.
+A sentence consists of glyphs and rectangles which surrounds them.
+For the above example, there are following glyphs.
+</p>
+
+<center>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_ancientCommemorative2"><br/>
+<br/>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_ancientCommemorative3"><br/>
+<br/>
+</center>
+
+<p>
+Notice that some glyphs are flipped horizontally in a sentence.
+</p>
+
+<p>
+She decided to transliterate it using ASCII letters assigning an alphabet to each glyph, and <code>[</code> and <code>]</code> to rectangles.
+If a sentence contains a flipped glyph,  she transliterates it from right to left.
+For example,  she could assign <code>a</code> and <code>b</code> to the above glyphs respectively.
+Then the above sentence  would be transliterated into <code>[[ab][ab]a]</code>.
+</p>
+
+<p>
+After examining the sentence, Alice figured out that the sentence was organized by the following structure:
+</p>
+
+<ul>
+<li> A sentence &lt;seq&gt; is a sequence consists of  zero or more &lt;term&gt;s. </li>
+<li> A term &lt;term&gt; is either a glyph or a &lt;box&gt;. A glyph may be flipped.</li>
+<li> &lt;box&gt; is a rectangle surrounding a &lt;seq&gt;. The height of a box is larger than any glyphs inside.</li>
+</ul>
+
+<p>
+Now, the sentence written on the monolith is a nonempty &lt;seq&gt;.
+Each term in the sequence fits in a rectangular bounding box, although the boxes are not explicitly indicated for glyphs.  Those bounding boxes for adjacent terms have no overlap to each other.
+Alice  formalized the transliteration rules as follows.
+</p>
+
+<p>
+Let <var>f</var> be the transliterate function.
+</p>
+
+<p>
+Each sequence <var>s = t_1 t_2 ... t_m</var> is written either from left to right, or from right to left.
+However, please note here <var>t_1</var> corresponds to the leftmost term in the sentence, <var>t_2</var> to the 2nd term from the left, and so on.
+</p>
+
+<p>
+Let's define <var>&#7713;</var> to be the flipped glyph <var>g</var>.
+A sequence must have been written from right to left, when a sequence contains one or more single-glyph term which is unreadable without flipping, i.e. there exists an integer <var>i</var> where <var>t_i</var> is a single glyph <var>g</var>, and <var>g</var> is not in the glyph dictionary given separately whereas <var>&#7713;</var> is.
+In such cases <var>f(s)</var> is defined to be <var>f(t_m) f(t_{m-1}) ... f(t_1)</var>, otherwise <var>f(s) = f(t_1) f(t_2) ... f(t_m)</var>.
+It is guaranteed that all the glyphs in the sequence are flipped if there is one or more glyph which is unreadable without flipping.
+</p>
+
+<p>
+If the term <var>t_i</var> is a box enclosing a sequence <var>s'</var>, <var>f(t_i) = </var><code>[</code><var> f(s') </var><code>]</code>.
+If the term <var>t_i</var> is a glyph <var>g</var>, <var>f(t_i)</var> is mapped to an alphabet letter corresponding to the glyph <var>g</var>, or <var>&#7713;</var> if the sequence containing <var>g</var> is written from right to left.
+</p>
+
+<p>
+Please make a program to transliterate the sentences on the monoliths to help Alice.
+</p>
+
+
+<h2>Input</h2>
+
+<p>
+The input consists of several  datasets.
+The end of the input is denoted by two zeros separated by a single-space.
+</p>
+
+<p>
+Each  dataset  has the following format.
+</p>
+
+<pre>
+<var>n</var> <var>m</var>
+<var>glyph_1</var>
+...
+<var>glyph_n</var>
+<var>string_1</var>
+...
+<var>string_m</var>
+</pre>
+
+<p>
+<var>n</var> (<var>1\leq n\leq 26</var>) is the number of glyphs and <var>m</var> (<var>1\leq m\leq 10</var>) is the number of monoliths.
+<var>glyph_i</var> is given by the following format.
+</p>
+
+<pre>
+<var>c</var> <var>h</var> <var>w</var>
+<var>b_{11}</var>...<var>b_{1w}</var>
+...
+<var>b_{h1}</var>...<var>b_{hw}</var>
+</pre>
+
+<p>
+<var>c</var> is a lower-case alphabet that Alice assigned to the glyph.
+<var>h</var> and <var>w</var> (<var>1 \leq h \leq 15</var>, <var>1 \leq w \leq 15</var>)  specify the height and width of the bitmap of the glyph, respectively.
+The matrix <var>b</var> indicates the bitmap.
+A white cell is represented by <code>.</code> and a black cell is represented by <code>*</code>.
+</p>
+
+<p>
+You can assume that all the glyphs are assigned distinct characters.
+You can assume that every column of the bitmap contains at least one black cell, and the first and last row of the bitmap contains at least one black cell.
+Every bitmap is different to each other, but it is possible that a flipped bitmap is  same to another bitmap.
+Moreover there may be symmetric bitmaps.
+</p>
+
+<center>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_ancientCommemorative4" height="188" width="580">
+</center>
+
+<p>
+<var>string_i</var> is given by the following format.
+</p>
+
+<pre>
+<var>h</var> <var>w</var>
+<var>b_{11}</var>...<var>b_{1w}</var>
+...
+<var>b_{h1}</var>...<var>b_{hw}</var>
+</pre>
+
+<p>
+<var>h</var> and <var>w</var> (<var>1 \leq h \leq 100</var>, <var>1 \leq w \leq 1000</var>) is the height and width of the bitmap of the  sequence.
+Similarly to the glyph dictionary, <var>b</var> indicates the bitmap where A white cell is represented by <code>.</code> and a black cell  by <code>*</code>.
+</p>
+
+<p>
+There is no noise: every black cell in the bitmap belongs to either one glyph or one rectangle box.
+The height of a rectangle is at least 3 and more than the maximum height of  the tallest glyph.
+The width of a rectangle is at least 3.
+</p>
+
+<p>
+A box must have a margin of 1 pixel around the edge of it.
+</p>
+
+<p>
+You can assume  the glyphs are never arranged vertically.
+Moreover, you can assume that if two rectangles, or a rectangle and a glyph, are in the same column, then one of them contains the other.
+For all bounding boxes of glyphs and black cells of rectangles, there is at least one white cell between every two of them.
+You can assume at least one cell in the bitmap is black.
+</p>
+
+<h2>Output</h2>
+
+<p>
+For each monolith, output the transliterated sentence in one line.
+After  the output for one dataset, output <code>#</code> in one line.
+</p>
+
+
+<h2>Sample Input</h2>
+
+<pre>
+2 1
+a 11 9
+****.....
+.*.*.....
+.*.*.....
+.*..*....
+.**..*...
+..**..*..
+..*.*....
+..**.*.*.
+..*..*.*.
+..*****.*
+******.**
+b 10 6
+....*.
+....*.
+....*.
+....*.
+....*.
+....*.
+....*.
+....*.
+.**..*
+*****.
+19 55
+*******************************************************
+*.....................................................*
+*.********************.********************...........*
+*.*..................*.*..................*...........*
+*.*.****.............*.*.............****.*.****......*
+*.*..*.*..........*..*.*..*..........*.*..*..*.*......*
+*.*..*.*..........*..*.*..*..........*.*..*..*.*......*
+*.*..*..*.........*..*.*..*.........*..*..*..*..*.....*
+*.*..**..*........*..*.*..*........*..**..*..**..*....*
+*.*...**..*.......*..*.*..*.......*..**...*...**..*...*
+*.*...*.*.........*..*.*..*.........*.*...*...*.*.....*
+*.*...**.*.*......*..*.*..*......*.*.**...*...**.*.*..*
+*.*...*..*.*......*..*.*..*......*.*..*...*...*..*.*..*
+*.*...*****.*..**..*.*.*.*..**..*.*****...*...*****.*.*
+*.*.******.**.*****..*.*..*****.**.******.*.******.**.*
+*.*..................*.*..................*...........*
+*.********************.********************...........*
+*.....................................................*
+*******************************************************
+2 3
+a 2 3
+.*.
+***
+b 3 3
+.*.
+***
+.*.
+2 3
+.*.
+***
+4 3
+***
+*.*
+*.*
+***
+9 13
+************.
+*..........*.
+*.......*..*.
+*...*..***.*.
+*..***.....*.
+*...*......*.
+*..........*.
+************.
+.............
+3 1
+a 2 2
+.*
+**
+b 2 1
+*
+*
+c 3 3
+***
+*.*
+***
+11 16
+****************
+*..............*
+*....*********.*
+*....*.......*.*
+*.*..*.***...*.*
+*.**.*.*.*.*.*.*
+*....*.***.*.*.*
+*....*.......*.*
+*....*********.*
+*..............*
+****************
+0 0
+</pre>
+
+<h2>Output for the Sample Input</h2>
+
+<pre>
+[[ab][ab]a]
+#
+a
+[]
+[ba]
+#
+[[cb]a]
+#
+</pre>

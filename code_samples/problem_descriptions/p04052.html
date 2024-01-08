@@ -1,0 +1,101 @@
+<span class="lang-en">
+<p>Score : <var>2000</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>You are given a permutation <var>P_1 ... P_N</var> of the set {<var>1</var>, <var>2</var>, ..., <var>N</var>}.</p>
+<p>You can apply the following operation to this permutation, any number of times (possibly zero):</p>
+<ul>
+<li>Choose two indices <var>i,j (1 ≦ i &lt; j ≦ N)</var>, such that <var>j - i ≧ K</var> and <var>|P_i - P_j| = 1</var>.
+Then, swap the values of <var>P_i</var> and <var>P_j</var>.</li>
+</ul>
+<p>Among all permutations that can be obtained by applying this operation to the given permutation, find the lexicographically smallest one.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>2≦N≦500,000</var></li>
+<li><var>1≦K≦N-1</var></li>
+<li><var>P</var> is a permutation of the set {<var>1</var>, <var>2</var>, ..., <var>N</var>}.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>The input is given from Standard Input in the following format:</p>
+<pre><var>N</var> <var>K</var>
+<var>P_1</var> <var>P_2</var> <var>...</var> <var>P_N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the lexicographically smallest permutation that can be obtained.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>4 2
+4 2 3 1
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>2
+1
+4
+3
+</pre>
+<p>One possible way to obtain the lexicographically smallest permutation is shown below:</p>
+<ul>
+<li><var>4 2 3 1</var></li>
+<li><var>4 1 3 2</var></li>
+<li><var>3 1 4 2</var></li>
+<li><var>2 1 4 3</var></li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>5 1
+5 4 3 2 1
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>1
+2
+3
+4
+5
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>8 3
+4 5 7 8 3 1 2 6
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>1
+2
+6
+7
+5
+3
+4
+8
+</pre></section>
+</div>
+</span>

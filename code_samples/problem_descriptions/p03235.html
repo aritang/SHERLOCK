@@ -1,0 +1,105 @@
+<span class="lang-en">
+<p>Score : <var>1400</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>You are given <var>P</var>, a permutation of <var>(1,\ 2,\ ...\ N)</var>.</p>
+<p>A string <var>S</var> of length <var>N</var> consisting of <code>0</code> and <code>1</code> is a <em>good string</em> when it meets the following criterion:</p>
+<ul>
+<li>The sequences <var>X</var> and <var>Y</var> are constructed as follows:<ul>
+<li>First, let <var>X</var> and <var>Y</var> be empty sequences.</li>
+<li>For each <var>i=1,\ 2,\ ...\ N</var>, in this order, append <var>P_i</var> to the end of <var>X</var> if <var>S_i=</var> <code>0</code>, and append it to the end of <var>Y</var> if <var>S_i=</var> <code>1</code>.</li>
+</ul>
+</li>
+<li>If <var>X</var> and <var>Y</var> have the same number of <em>high</em> elements, <var>S</var> is a good string.
+Here, the <var>i</var>-th element of a sequence is called <em>high</em> when that element is the largest among the elements from the <var>1</var>-st to <var>i</var>-th element in the sequence.</li>
+</ul>
+<p>Determine if there exists a good string. If it exists, find the lexicographically smallest such string.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 \leq N \leq 2 \times 10^5</var></li>
+<li><var>1 \leq P_i \leq N</var></li>
+<li><var>P_1,\ P_2,\ ...\ P_N</var> are all distinct.</li>
+<li>All values in input are integers.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+<var>P_1</var> <var>P_2</var> <var>...</var> <var>P_N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>If a good string does not exist, print <code>-1</code>.
+If it exists, print the lexicographically smallest such string.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>6
+3 1 4 6 2 5
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>001001
+</pre>
+<p>Let <var>S=</var> <code>001001</code>. Then, <var>X=(3,\ 1,\ 6,\ 2)</var> and <var>Y=(4,\ 5)</var>.
+The high elements in <var>X</var> is the first and third elements, and the high elements in <var>Y</var> is the first and second elements.
+As they have the same number of high elements, <code>001001</code> is a good string.
+There is no good string that is lexicographically smaller than this, so the answer is <code>001001</code>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>5
+1 2 3 4 5
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>-1
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>7
+1 3 2 5 6 4 7
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>0001101
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 4</h3><pre>30
+1 2 6 3 5 7 9 8 11 12 10 13 16 23 15 18 14 24 22 26 19 21 28 17 4 27 29 25 20 30
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 4</h3><pre>000000000001100101010010011101
+</pre></section>
+</div>
+</span>

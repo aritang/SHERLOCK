@@ -1,0 +1,91 @@
+
+<h2>Problem Statement</h2>
+
+<p>
+We found a dictionary of the Ancient Civilization Mayo (ACM) during excavation of the ruins.
+After analysis of the dictionary, we revealed they used a language that had not more than 26 letters.
+So one of us mapped each letter to a different English alphabet and typed all the words in the dictionary into a computer.
+</p>
+
+<p>
+How the words are ordered in the dictionary, especially whether they are ordered lexicographically, is an interesting topic to many people.
+As a good programmer, you are requested to write a program to judge whether we can consider the words to be sorted in a lexicographical order.
+</p>
+
+<p>
+Note:
+In a lexicographical order, a word always precedes other words it is a prefix of.
+For example, <code>ab</code> 
+precedes <code>abc</code>, 
+<code>abde</code>, and so on.
+</p>
+
+
+<h2>Input</h2>
+
+<p>
+The input consists of multiple datasets. Each dataset is formatted as follows:
+</p>
+
+<pre>
+<var>n</var>
+<var>string_1</var>
+...
+<var>string_n</var>
+</pre>
+
+<p>
+Each dataset consists of <var>n+1</var> lines.
+The first line of each dataset contains an integer that indicates <var>n</var> (<var>1 \leq n \leq 500</var>).
+The <var>i</var>-th line of the following <var>n</var> lines contains <var>string_i</var>, which consists of up to 10 English lowercase letters.
+</p>
+
+<p>
+The end of the input is <code>0</code>, and this should not be processed.
+</p>
+
+<h2>Output</h2>
+
+<p>
+Print either <code>yes</code> or 
+<code>no</code> in a line for each dataset, in the order of the input.
+If all words in the dataset can be considered to be ordered lexicographically, print <code>yes</code>.
+Otherwise, print <code>no</code>.
+</p>
+
+
+<h2>Sample Input</h2>
+
+<pre>
+4
+cba
+cab
+b
+a
+3
+bca
+ab
+a
+5
+abc
+acb
+b
+c
+c
+5
+abc
+acb
+c
+b
+b
+0
+</pre>
+
+<h2>Output for the Sample Input</h2>
+
+<pre>
+yes
+no
+yes
+no
+</pre>

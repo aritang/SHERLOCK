@@ -1,0 +1,215 @@
+
+
+<h1><font color="#000">Problem I:</font> 盗まれた宝石</h1>
+
+<p>パル王国の国宝である宝石が盗賊たちに盗まれた。 冒険者のあなたはその噂を聞きつけて盗賊のアジトに向かい、なんとか宝石を取り戻すことが出来た。</p>
+<p>ところが、宝石をパル王国の城へ返しに出向いたところ、城の守衛兵から、 「我が王はまだあなたを完全に信用していない。その宝石が本物かどうか怪しいし、そもそも宝石を取り戻したというのがウソで、王の命を狙う盗賊の仲間なのではないか？と疑っておられる。」 といわれた。</p>
+<p>あなたは、守衛兵から本当に信頼できる人物かどうか試すための試練を与えられた。試練の内容は、 「城の地下倉庫へ行き指定された場所に宝石を置け。そこに宝石が本物だったときに反応する魔法陣が書かれてある。ただしあなたが怪しい行動を起こさないようにするため、地下倉庫の入り口から指定された場所に向かうまで、守衛兵が言った移動パターンをとってはならない。」 というものだった。</p>
+
+<p>例えば、下図にある地下倉庫の形状、禁止パターンに対し、図にかかれてあるような移動パターンを取ってはならない。移動パターンの一部(赤くハイライトされている)が、禁止パターンの中に含まれるからである。(また、この移動パターンの中の2,3番目の動き「&darr;&darr;」も禁止パターンの中に含まれる)</p>
+<center><img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_stolenjewel1"></center>
+<p>一方、 下図のような移動パターンは、移動パターンのどの部分も禁止パターンの中に含まれないので許される。</p>
+<center><img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_stolenjewel2"></center>
+<p>入力として、地下倉庫の形状、禁止パターンが与えられる。禁止パターンを取らずに、入り口から魔法陣へ移動するのに最低限必要な移動回数を求めよ。</p>
+
+<h2>Input</h2>
+
+<p>入力には、地下倉庫の形状と禁止パターンが含まれる。</p>
+<p>地下倉庫の形状は、以下のように表される。 まず、二つの整数 N,M が与えられる。それぞれ地下倉庫の行数と列数を意味する。(1 &le; N,M &le; 50)</p>
+<p>続いて、それぞれM個の文字からなる文字列がN行与えられる。 含まれる文字とその意味は以下の通りである。</p>
+
+<center>
+<table>
+<tr><th>文字</th><th>意味</th></tr>
+<tr><td><span style="font-family: monospace">S</span></td><td>地下倉庫の入り口。一つの地下倉庫につき必ず一つだけ含まれる。</td></tr>
+<tr><td><span style="font-family: monospace">G</span></td><td>魔法陣。一つの地下倉庫につき必ず一つだけ含まれる。</td></tr>
+<tr><td><span style="font-family: monospace">.</span></td><td>通路。(禁止パターンをとらなければ)通ることが出来る。</td></tr>
+<tr><td><span style="font-family: monospace">#</span></td><td>壁。壁の中を通ることはできない。</td></tr>
+</table>
+</center>
+
+<p>次に、禁止パターンが与えられる。禁止パターンは以下のように表される。 まず、一つの整数 P が与えられる。禁止パターンの数を意味する。(0 &le; P &le; 10)</p>
+<p>続いて、禁止パターンを意味する文字列がP行にわたって与えられる。 禁止パターンに含まれる文字とその意味は以下の通りである。</p>
+
+<center>
+<table>
+<tr><th>文字</th><th>意味</th></tr>
+<tr><td><span style="font-family: monospace">U</span></td><td>&uarr;の移動。</td></tr>
+<tr><td><span style="font-family: monospace">R</span></td><td>&rarr;の移動。</td></tr>
+<tr><td><span style="font-family: monospace">D</span></td><td>&darr;の移動。</td></tr>
+<tr><td><span style="font-family: monospace">L</span></td><td>&larr;の移動。</td></tr>
+</table>
+</center>
+
+<p>禁止パターンの長さは1以上、10以下である。 ある禁止パターンが、別の禁止パターンの部分文字列となっていることもある。また、同一の禁止パターンが含まれることもある。 
+</p>
+
+<h2>Output</h2>
+
+<p>最低限必要な移動回数を意味する整数を出力せよ。魔法陣へ辿りつけない場合は -1 を出力せよ。 
+</p>
+
+<h2>Notes on Test Cases</h2>
+
+<p>
+上記入力形式で複数のデータセットが与えられます。各データセットに対して上記出力形式で出力を行うプログラムを作成して下さい。
+</p>
+
+<p>
+n, m が 0 のとき入力の終わりを示します。
+</p>
+
+<!--
+<h2>Sample Input 1</h2>
+<pre>
+7 6
+......
+.####.
+.####.
+...S#.
+...##.
+...##.
+.....G
+3
+LD
+DD
+LLL
+</pre>
+<h2>Output for Sample Input 1</h2>
+<pre>13
+</pre>
+
+<h2>Sample Input 2</h2>
+<pre>7 8
+S#......
+.#.####.
+.#.#G.#.
+.#.##.#.
+.#....#.
+.######.
+........
+8
+DDDD
+DDDU
+UUUU
+UUUD
+RRRR
+RRRL
+LLLL
+LLLR
+</pre>
+<h2>Output for Sample Input 2</h2>
+<pre>60
+</pre>
+
+<h2>Sample Input 3</h2>
+<pre>3 8
+########
+S......G
+########
+2
+U
+D
+</pre>
+<h2>Output for Sample Input 3</h2>
+<pre>7
+</pre>
+
+<h2>Sample Input 4</h2>
+<pre>6 10
+..........
+.S........
+..........
+..........
+........G.
+..........
+0
+</pre>
+<h2>Output for Sample Input 4</h2>
+<pre>10
+</pre>
+
+<h2>Sample Input 5</h2>
+<pre>6 7
+.......
+...#...
+...#.S.
+...###.
+.G.....
+.......
+2
+LL
+DD
+</pre>
+<h2>Output for Sample Input 5</h2>
+<pre>-1
+</pre>
+-->
+
+<h2>Sample Input</h2>
+<pre>
+7 6
+......
+.####.
+.####.
+...S#.
+...##.
+...##.
+.....G
+3
+LD
+DD
+LLL
+7 8
+S#......
+.#.####.
+.#.#G.#.
+.#.##.#.
+.#....#.
+.######.
+........
+8
+DDDD
+DDDU
+UUUU
+UUUD
+RRRR
+RRRL
+LLLL
+LLLR
+3 8
+########
+S......G
+########
+2
+U
+D
+6 10
+..........
+.S........
+..........
+..........
+........G.
+..........
+0
+6 7
+.......
+...#...
+...#.S.
+...###.
+.G.....
+.......
+2
+LL
+DD
+0 0
+</pre>
+
+<h2>Output for Sample Input</h2>
+<pre>
+13
+60
+7
+10
+-1
+</pre>

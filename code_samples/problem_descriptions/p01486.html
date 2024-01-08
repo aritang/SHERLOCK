@@ -1,0 +1,75 @@
+
+
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({ tex2jax: { inlineMath: [["$","$"], ["\\(","\\)"]], processEscapes: true }});
+</script>
+<script type='text/javascript' src='http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
+</script>
+
+<h2>Problem A:
+CatChecker
+</h2>
+
+<p>
+  外見からねこかどうかわからない動物がいる. あなたは, 鳴き声がねこの鳴き声であればねこであり, そうでなければうさぎであると判定することにした.
+</p>
+
+<p>
+  ねこの鳴き声は次のように定義される.
+</p>
+
+<ul>
+  <li> "" (empty string) はねこの鳴き声である.</li>
+  <li> $X$, $Y$ がねこの鳴き声であれば 'm' + $X$ + 'e' + $Y$ + 'w' は猫の鳴き声である. ただし + は文字列の連結を表す.</li>
+  <li>以上で定義されるものだけがねこの鳴き声である.</li>
+</ul>
+
+<p>
+BNF で表すとねこの鳴き声 $CAT$ は<br>
+$CAT$ := "" (empty string) $|$ 'm' + $CAT$ + 'e' + $CAT$ + 'w'<br>
+と定義される.
+</p>
+
+<p>
+  鳴き声を表す文字列 $S$ が与えられる. 鳴き声から動物が何であるか判定せよ.
+</p>
+
+
+<h3>Constraints</h3>
+    <p>
+      $S$ will contain between 1 and 500 characters, inclusive. Each character in $S$ will be 'm', 'e' or 'w'.
+      </p>
+
+
+<h3>Input</h3>
+
+<p>
+  入力は以下の形式で与えられる:<br>
+  <br>
+$S$
+</p>
+
+
+<h3>Output</h3>
+
+<p>
+$S$ が猫の鳴き声であれば "Cat", そうでなければ "Rabbit" と1 行に出力せよ.
+</p>
+
+
+<h3>Sample Input 1</h3>
+
+<pre>mmemewwemeww</pre>
+
+<h3>Sample Output 1</h3>
+
+<pre>Cat</pre>
+
+<h3>Sample Input 2</h3>
+
+<pre>mewmew</pre>
+
+<h3>Sample Output 2</h3>
+
+<pre>Rabbit</pre>

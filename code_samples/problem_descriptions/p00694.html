@@ -1,0 +1,233 @@
+
+<h1>
+Strange Key
+</h1>
+
+
+<p>
+Professor Tsukuba invented a mysterious jewelry box that can be opened
+with a special gold key whose shape is very strange. It is composed
+of gold bars joined at their ends.  Each gold bar
+has the same length and is placed parallel to one of the three
+orthogonal axes in a three dimensional space, 
+i.e., x-axis, y-axis and z-axis.</p>
+
+<p>
+The locking mechanism of the jewelry box
+is truly mysterious, but the shape of the key is known.
+To identify the key of the jewelry box, he gave a way to describe 
+its shape.</p>
+
+<p>
+The description 
+indicates a list of connected paths that completely defines the shape
+of the key: the gold bars of the key are arranged along the paths and 
+joined at their ends.
+Except for the first path, 
+each path must start from an end point of a gold bar on a previously
+defined path.
+Each path is represented by a sequence of elements, each of which is one
+of six symbols (+x, -x, +y, -y, +z and -z) or a positive integer.
+Each symbol indicates the direction from an end point to the other end
+point of a gold bar along the path.  Since each gold bar is
+parallel to one of the three orthogonal axes, the 6 symbols are enough to
+indicate the direction.  Note that a description of a path has
+direction but the gold bars themselves have no direction.
+</p>
+<p>
+An end point of a gold bar can have a label, which is a positive integer.
+The labeled point may be referred to as the beginnings of other paths.
+In a key description, the first occurrence of a positive integer 
+defines a label of a point and each subsequent occurrence of the same
+positive integer indicates the beginning of a new path at the point.
+</p>
+<p>
+An example of a key composed of 13 gold bars is depicted 
+in Figure 1.  </p>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE1_fig1"> 
+<br> 
+<p>The following sequence of lines</p>
+<pre>
+      19
+      1 +x 1 +y +z 3 +z 
+      3 +y -z +x +y -z -x +z 2 +z  
+      2 +y
+</pre>
+<p>
+is a description of the key in Figure 1.
+Note that newlines have the same role as space characters in the
+description, so that <tt>"19 1 +x 1 +y +z 3 +z 3 +y -z +x +y -z -x +z
+2 +z 2 +y"</tt> has the same meaning.
+</p>
+<p>
+The meaning of this description is quite simple.
+The first integer "19" means the number of
+the following elements in this description.
+Each element is one of the 6 symbols or a positive integer.
+</p>
+<p>
+The integer "1" at the head of the second line 
+is a label attached to the starting point of the first path.
+Without loss of generality, 
+it can be assumed that the starting point of the first path is the
+origin, i.e., (0,0,0), and that the length of each gold bar is 1.
+The next element "+x" indicates that the first gold bar
+is parallel to the x-axis, 
+so that the other end point of the gold bar is at (1,0,0).
+These two elements "1" and "+x" indicates
+the first path consisting of only one gold bar.
+The third element of the second line in the description is the positive
+integer "1", meaning that the point with the label "1", i.e., the
+origin (0,0,0) is the beginning of a new path.
+The following elements "+y", "+z", "3", and "+z" indicate the second
+path consisting of three gold bars. Note that this "3" is its first
+occurrence so that the point with coordinates (0,1,1) is labeled "3". 
+The head of the third line "3" indicates
+the beginning of the third path and so on.
+Consequently, there are four paths by which the shape of the key in
+Figure 1 is completely defined.
+</p>
+<p>
+Note that there are various descriptions of the same key since there
+are various sets of paths that cover the shape of the key.
+For example,
+the following sequence of lines</p>
+<pre>
+      19  
+      1 +x 1 +y +z 3 +y -z +x +y -z -x +z 2 +y  
+      3 +z 
+      2 +z
+</pre>
+<p>
+is another description of the key in Figure 1, since
+the gold bars are placed in the same way.
+</p>
+<p>
+Furthermore, the key may be turned 90-degrees around 
+x-axis, y-axis or z-axis several times and may be moved parallelly.
+Since any combinations of rotations and parallel moves don't change
+the shape of the key, a description of a rotated and moved key also
+represent the same shape of the original key. For example, a
+sequence</p>
+<pre>
+      17 
+      +y 1 +y -z +x
+      1 +z +y +x +z +y -x -y 2 -y
+      2 +z
+</pre>
+<p>
+is a description of a key in Figure 2 that represents the same key 
+as in Figure 1.
+Indeed, they are congruent under a rotation around x-axis and 
+a parallel move.
+</p>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE1_fig2">
+<p>
+Your job is to write a program to
+judge whether or not the given two descriptions define the same key.
+</p>
+<p>
+Note that paths may make a cycle.
+For example, <tt>"4 +x +y -x -y"</tt> and <tt>"6 1 +x 1 +y +x -y"</tt>
+are valid descriptions. However, two or more gold bars must not be placed at the same position.
+For example, key descriptions
+<tt>"2 +x -x"</tt> 
+and
+<tt>"7 1 +x 1 +y +x -y -x"</tt> are invalid.
+</p>
+
+<h2>Input</h2>
+<p>
+An input data is a list of pairs of key descriptions followed by
+a zero that indicates the end of the input.
+For <i>p</i> pairs of key descriptions, the input is given in the
+following format.
+</p>
+
+<ul>
+<i>key-description</i><sub>1-a</sub><br>
+<i>key-description</i><sub>1-b</sub><br>
+<i>key-description</i><sub>2-a</sub><br>
+<i>key-description</i><sub>2-b</sub><br>
+...<br>
+<i>key-description</i><sub><i>p</i>-a</sub><br>
+<i>key-description</i><sub><i>p</i>-b</sub><br>
+0
+</ul>
+<p>
+Each key description (<i>key-description</i>) has the following format.</p>
+
+<ul>
+<I>n</I><tt> </tt>
+<I>e</I><sub>1</sub> <tt> </tt>  <I>e</I><sub>2</sub>  <tt> </tt>
+... <tt> </tt>
+<I>e</I><sub><I>k</I></sub> <tt> </tt>
+... <tt> </tt>
+<I>e</I><sub><I>n</I></sub>
+</ul>
+<p>
+The positive integer <I>n</I> indicates the number of the following elements 
+<I>e</I><sub>1</sub>, ...,
+<I>e<sub>n</sub></I> .
+They are separated by one or more space characters and/or newlines.
+Each element <I>e<sub>k</sub></I> is 
+one of the six symbols
+(<tt>+x</tt>, <tt>-x</tt>, <tt>+y</tt>, <tt>-y</tt>, <tt>+z</tt> and <tt>-z</tt>)
+or a positive integer.
+</p>
+
+<p>
+You can assume that each label is a positive integer that is less than 51,
+the number of elements in a single key description is less than 301,
+and the number of characters in a line is less than 80.
+You can also assume that the given key descriptions are valid and 
+contain at least one gold bar.
+</p>
+
+
+<h2>Output</h2>
+<p>
+The number of output lines should be equal to that of
+pairs of key descriptions given in the input.
+In each line, you should output one of two words "SAME",
+when the two key descriptions represent the same key, and 
+"DIFFERENT", when they are different.
+Note that the letters should be in upper case.
+</p>
+
+<H2>Sample Input</H2>
+
+<pre>
+19
+  1 +x 1 +y +z 3 +z 
+  3 +y -z +x +y -z -x +z 2 +z  
+  2 +y
+19
+  1 +x 1 +y +z 3 +y -z +x +y -z -x +z 2 +y  
+  3 +z 
+  2 +z
+19
+  1 +x 1 +y +z 3 +z 
+  3 +y -z +x +y -z -x +z 2 +y  
+  2 +z
+18
+  1 -y
+  1 +y -z +x
+  1 +z +y +x +z +y -x -y 2 -y
+  2 +z
+3 +x +y +z
+3 +y +z -x
+0
+</pre>
+
+<H2>Output for the Sample Input</H2>
+
+<pre>
+SAME
+SAME
+DIFFERENT
+</pre>
+
+
+
+

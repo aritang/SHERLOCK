@@ -1,0 +1,112 @@
+<span class="lang-en">
+<p>Score : <var>2200</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>You are given <var>N-1</var> subsets of <var>\{1,2,...,N\}</var>. Let the <var>i</var>-th set be <var>E_i</var>.</p>
+<p>Let us choose two distinct elements <var>u_i</var> and <var>v_i</var> from each set <var>E_i</var>, and consider a graph <var>T</var> with <var>N</var> vertices and <var>N-1</var> edges, whose vertex set is <var>\{1,2,..,N\}</var> and whose edge set is <var>(u_1,v_1),(u_2,v_2),...,(u_{N-1},v_{N-1})</var>.
+Determine if <var>T</var> can be a tree by properly deciding <var>u_i</var> and <var>v_i</var>.
+If it can, additionally find one instance of <var>(u_1,v_1),(u_2,v_2),...,(u_{N-1},v_{N-1})</var> such that <var>T</var> is actually a tree.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>2 \leq N \leq 10^5</var></li>
+<li><var>E_i</var> is a subset of <var>\{1,2,..,N\}</var>.</li>
+<li><var>|E_i| \geq 2</var></li>
+<li>The sum of <var>|E_i|</var> is at most <var>2 \times 10^5</var>.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+<var>c_1</var> <var>w_{1,1}</var> <var>w_{1,2}</var> <var>...</var> <var>w_{1,c_1}</var>
+<var>:</var>
+<var>c_{N-1}</var> <var>w_{N-1,1}</var> <var>w_{N-1,2}</var> <var>...</var> <var>w_{N-1,c_{N-1}}</var>
+</pre>
+<p>Here, <var>c_i</var> stands for the number of elements in <var>E_i</var>, and <var>w_{i,1},...,w_{i,c_i}</var> are the <var>c_i</var> elements in <var>c_i</var>.
+Here, <var>2 \leq c_i \leq N</var>, <var>1 \leq w_{i,j} \leq N</var>, and <var>w_{i,j} \neq w_{i,k}</var> (<var>1 \leq j &lt; k \leq c_i</var>) hold.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>If <var>T</var> cannot be a tree, print <code>-1</code>; otherwise, print the choices of <var>(u_i,v_i)</var> that satisfy the condition, in the following format:</p>
+<pre><var>u_1</var> <var>v_1</var>
+<var>:</var>
+<var>u_{N-1}</var> <var>v_{N-1}</var>
+</pre>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>5
+2 1 2
+3 1 2 3
+3 3 4 5
+2 4 5
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>1 2
+1 3
+3 4
+4 5
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>6
+3 1 2 3
+3 2 3 4
+3 1 3 4
+3 1 2 4
+3 4 5 6
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>-1
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>10
+5 1 2 3 4 5
+5 2 3 4 5 6
+5 3 4 5 6 7
+5 4 5 6 7 8
+5 5 6 7 8 9
+5 6 7 8 9 10
+5 7 8 9 10 1
+5 8 9 10 1 2
+5 9 10 1 2 3
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>1 2
+2 3
+3 4
+4 5
+5 6
+6 7
+7 8
+8 9
+9 10
+</pre></section>
+</div>
+</span>

@@ -1,0 +1,75 @@
+<span class="lang-en">
+<p>Score : <var>500</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>Count the pairs of length-<var>N</var> sequences consisting of integers between <var>1</var> and <var>M</var> (inclusive), <var>A_1, A_2, \cdots, A_{N}</var> and <var>B_1, B_2, \cdots, B_{N}</var>, that satisfy all of the following conditions:</p>
+<ul>
+<li><var>A_i \neq B_i</var>, for every <var>i</var> such that <var>1\leq i\leq N</var>.</li>
+<li><var>A_i \neq A_j</var> and <var>B_i \neq B_j</var>, for every <var>(i, j)</var> such that <var>1\leq i &lt; j\leq N</var>.</li>
+</ul>
+<p>Since the count can be enormous, print it modulo <var>(10^9+7)</var>.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1\leq N \leq M \leq 5\times10^5</var></li>
+<li>All values in input are integers.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var> <var>M</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the count modulo <var>(10^9+7)</var>.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>2 2
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>2
+</pre>
+<p><var>A_1=1,A_2=2,B_1=2,B_2=1</var> and <var>A_1=2,A_2=1,B_1=1,B_2=2</var> satisfy the conditions.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>2 3
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>18
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>141421 356237
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>881613484
+</pre></section>
+</div>
+</span>

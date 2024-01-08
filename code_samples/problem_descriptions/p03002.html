@@ -1,0 +1,86 @@
+<span class="lang-en">
+<p>Score : <var>400</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>You are given a sequence of positive integers of length <var>N</var>, <var>A=a_1,a_2,…,a_{N}</var>, and an integer <var>K</var>.
+How many contiguous subsequences of <var>A</var> satisfy the following condition?</p>
+<ul>
+<li>(Condition) The sum of the elements in the contiguous subsequence is at least <var>K</var>.</li>
+</ul>
+<p>We consider two contiguous subsequences different if they derive from different positions in <var>A</var>, even if they are the same in content.</p>
+<p>Note that the answer may not fit into a <var>32</var>-bit integer type.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 \leq a_i \leq 10^5</var></li>
+<li><var>1 \leq N \leq 10^5</var></li>
+<li><var>1 \leq K \leq 10^{10}</var></li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var> <var>K</var>
+<var>a_1</var> <var>a_2</var> <var>...</var> <var>a_N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the number of contiguous subsequences of <var>A</var> that satisfy the condition.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>4 10
+6 1 2 7
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>2
+</pre>
+<p>The following two contiguous subsequences satisfy the condition:</p>
+<ul>
+<li><var>A[1..4]=a_1,a_2,a_3,a_4</var>, with the sum of <var>16</var></li>
+<li><var>A[2..4]=a_2,a_3,a_4</var>, with the sum of <var>10</var></li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>3 5
+3 3 3
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>3
+</pre>
+<p>Note again that we consider two contiguous subsequences different if they derive from different positions, even if they are the same in content.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>10 53462
+103 35322 232 342 21099 90000 18843 9010 35221 19352
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>36
+</pre></section>
+</div>
+</span>

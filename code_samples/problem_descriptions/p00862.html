@@ -1,0 +1,94 @@
+
+<H1><font color="#000">Problem I:</font> Most Distant Point from the Sea</H1>
+
+<p>
+The main land of Japan called Honshu is an island surrounded by the sea. In such an island, it
+is natural to ask a question: "Where is the most distant point from the sea?" The answer to
+this question for Honshu was found in 1996. The most distant point is located in former Usuda
+Town, Nagano Prefecture, whose distance from the sea is 114.86 km.
+</p>
+
+<p>
+In this problem, you are asked to write a program which, given a map of an island, finds the
+most distant point from the sea in the island, and reports its distance from the sea. In order to
+simplify the problem, we only consider maps representable by convex polygons.
+</p>
+
+<H2>Input</H2>
+
+<p>
+The input consists of multiple datasets. Each dataset represents a map of an island, which is a convex polygon. The format of a dataset is as follows.
+</p>
+<pre>
+<i>n</i>
+<i>x</i><sub>1</sub>    <i>y</i><sub>1</sub>
+   .
+   .
+   .
+<i>x</i><sub><i>n</i></sub>    <i>y</i><sub><i>n</i></sub>
+</pre>
+
+<p>
+Every input item in a dataset is a non-negative integer. Two input items in a line are separated by a space.
+</p>
+<p>
+<i>n</i> in the first line is the number of vertices of the polygon, satisfying 3 &le; <i>n</i> &le; 100. Subsequent
+<i>n</i> lines are the <i>x</i>- and <i>y</i>-coordinates of the <i>n</i> vertices. Line segments (<i>x<sub>i</sub></i>, <i>y<sub>i</sub></i>) - (<i>x</i><sub><i>i</i>+1</sub>, <i>y</i><sub><i>i</i>+1</sub>) (1 &le; <i>i</i> &le; <i>n</i> - 1) and the line segment (<i>x<sub>n</sub></i>, <i>y<sub>n</sub></i>) - (<i>x</i><sub>1</sub>, <i>y</i><sub>1</sub>) form the border of the polygon in counterclockwise order. That is, these line segments see the inside of the polygon in the left of their directions. All coordinate values are between 0 and 10000, inclusive.
+</p>
+
+<p>
+You can assume that the polygon is simple, that is, its border never crosses or touches itself. As stated above, the given polygon is always a convex one.
+</p>
+
+<p>
+The last dataset is followed by a line containing a single zero.
+</p>
+
+<H2>Output</H2>
+
+<p>
+For each dataset in the input, one line containing the distance of the most distant point from
+the sea should be output. An output line should not contain extra characters such as spaces.
+</p>
+
+<p>
+The answer should not have an error greater than 0.00001 (10<sup>-5</sup> ). You may output any number
+of digits after the decimal point, provided that the above accuracy condition is satisfied.
+</p>
+
+<H2>Sample Input</H2>
+<pre>
+4
+0 0
+10000 0
+10000 10000
+0 10000
+3
+0 0
+10000 0
+7000 1000
+6
+0 40
+100 20
+250 40
+250 70
+100 90
+0 70
+3
+0 0
+10000 10000
+5000 5001
+0
+</pre>
+
+<H2>Output for the Sample Input</H2>
+<pre>
+5000.000000
+494.233641
+34.542948
+0.353553
+</pre>
+
+
+
+

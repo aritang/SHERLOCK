@@ -1,0 +1,71 @@
+<span class="lang-en">
+<p>Score : <var>100</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>Takahashi is a user of a site that hosts programming contests.<br/>
+When a user competes in a contest, the <em>rating</em> of the user (not necessarily an integer) changes according to the <em>performance</em> of the user, as follows:  </p>
+<ul>
+<li>Let the current rating of the user be <var>a</var>.</li>
+<li>Suppose that the performance of the user in the contest is <var>b</var>.</li>
+<li>Then, the new rating of the user will be the avarage of <var>a</var> and <var>b</var>.</li>
+</ul>
+<p>For example, if a user with rating <var>1</var> competes in a contest and gives performance <var>1000</var>, his/her new rating will be <var>500.5</var>, the average of <var>1</var> and <var>1000</var>.</p>
+<p>Takahashi's current rating is <var>R</var>, and he wants his rating to be exactly <var>G</var> after the next contest.<br/>
+Find the performance required to achieve it.  </p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>0 \leq R, G \leq 4500</var></li>
+<li>All input values are integers.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>R</var>
+<var>G</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the performance required to achieve the objective.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>2002
+2017
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>2032
+</pre>
+<p>Takahashi's current rating is <var>2002</var>.<br/>
+If his performance in the contest is <var>2032</var>, his rating will be the average of <var>2002</var> and <var>2032</var>, which is equal to the desired rating, <var>2017</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>4500
+0
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>-4500
+</pre>
+<p>Although the current and desired ratings are between <var>0</var> and <var>4500</var>, the performance of a user can be below <var>0</var>.</p></section>
+</div>
+</span>

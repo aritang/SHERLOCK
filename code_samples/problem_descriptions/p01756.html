@@ -1,0 +1,145 @@
+
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({ tex2jax: { inlineMath: [["$","$"], ["\\(","\\)"]], processEscapes: true }});
+</script>
+<script language="JavaScript" type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+
+
+<p>
+文字列 <var>S</var> と， <var>m</var> 個のクエリが与えられる．<var>i</var> 番目のクエリは二つの文字列 <var>x<sub>i</sub>, y<sub>i</sub></var> で与えられる．
+</p>
+
+<p>
+各クエリについて，文字列 <var>S</var> の部分文字列であり， <var>x<sub>i</sub></var> で始まり <var>y<sub>i</sub></var> で終わるものの中で，最長の長さを答えよ．
+</p>
+
+<p>
+文字列 <var>S</var> について， <var>|S|</var> は <var>S</var> の長さを表す．また，文字列 <var>T</var> が文字列 <var>S</var> の部分文字列であるとは，ある整数 <var>i</var> が存在して， 1 &le; <var>j</var> &le; <var>|T|</var> に対して <var>T<sub>j</sub> = S<sub>i+j</sub></var> を満たすことを言う．ただし <var>T<sub>j</sub></var> は <var>T</var> の <var>j</var> 番目の文字を表す．
+</p>
+
+
+<h2>Input</h2>
+<p>
+入力は以下の形式で与えられる．
+</p>
+
+<pre>
+<var>S</var>
+<var>m</var>
+<var>x<sub>1</sub></var> <var>y<sub>1</sub></var>
+<var>x<sub>2</sub></var> <var>y<sub>2</sub></var>
+:
+<var>x<sub>m</sub></var> <var>y<sub>m</sub></var>
+</pre>
+
+<ul>
+<li> 1 行目には，文字列 <var>S</var> が与えられる．</li>
+<li> 2 行目には，クエリの個数 <var>m</var> が与えられる．</li>
+<li> 3 行目からの <var>m</var> 行のうち <var>i</var> 行目には <var>i</var> 番目のクエリ文字列 <var>x<sub>i</sub>, y<sub>i</sub></var> が空白区切りで与えられる．</li>
+</ul>
+
+<h2>Constraints</h2>
+<ul>
+<li> 1 &le; <var>|S|</var> &le; 2 &times; 10<sup>5</sup> </li>
+<li> 1 &le; <var>m</var> &le; 10<sup>5</sup></li>
+<li> 1 &le; <var>|x<sub>i</sub>|, |y<sub>i</sub>|</var></li>
+<li> $\sum^m_{i=1}$ (<var>|x<sub>i</sub>| + |y<sub>i</sub>|</var>) &le; 2 &times; 10<sup>5</sup></li>
+<li> <var>S</var> 及び <var>x<sub>i</sub>, y<sub>i</sub></var> は，半角の英小文字のみからなる．</li>
+</ul>
+
+
+<h2>Output</h2>
+<p>
+以下の形式で最大の部分文字列の長さを答えよ．
+</p>
+
+<pre>
+<var>len<sub>1</sub></var>
+<var>len<sub>2</sub></var>
+:
+<var>len<sub>m</sub></var>
+</pre>
+
+<p>
+1 行目からの <var>m</var> 行のうち <var>i</var> 行目には， <var>i</var> 番目のクエリについて，条件を満たす最長の部分文字列の長さ <var>len<sub>i</sub></var> を出力せよ．そのような部分文字列がない場合，0 を出力せよ．
+</p>
+
+<h2>Sample Input 1</h2>
+<pre>
+abracadabra
+5
+ab a
+a a
+b c
+ac ca
+z z
+</pre>
+
+<h2>Output for the Sample Input 1</h2>
+<pre>
+11
+11
+4
+3
+0
+</pre>
+
+<p>
+文字列 <var>S</var> として，abracadabra が与えられる．
+</p>
+
+<ul>
+<li> "ab" で始まり "a" で終わる部分文字列は，"abra" や "abraca", "abracada", "abracadabra" の4 種類があるが，最長の部分文字列は "abracadabra" で，長さは 11 である．</li>
+<li> "a" で始まり "a" で終わる最長の部分文字列も同様に "abracadabra" で，長さは 11 である．</li>
+<li> "b" で始まり "c" で終わる最長の部分文字列は "brac" で，長さは 4 である．</li>
+<li> "ac" で始まり "ca" で終わる最長の部分文字列は "aca" で，長さは 3 である．</li>
+<li> "z" で始まり "z" で終わる部分文字列は存在しない．よって0 を出力する．</li>
+</ul>
+
+
+<h2>Sample Input 2</h2>
+<pre>
+howistheprogress
+4
+ist prog
+s ss
+how is
+the progress
+</pre>
+
+<h2>Output for the Sample Input 2</h2>
+<pre>
+9
+12
+5
+11
+</pre>
+
+<h2>Sample Input 3</h2>
+<pre>
+icpcsummertraining
+9
+mm m
+icpc summer
+train ing
+summer mm
+i c
+i i
+g g
+train i
+summer er
+</pre>
+
+<h2>Output for the Sample Input 3</h2>
+<pre>
+2
+10
+8
+0
+4
+16
+1
+6
+6
+</pre>

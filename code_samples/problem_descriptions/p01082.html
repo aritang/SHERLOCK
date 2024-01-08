@@ -1,0 +1,87 @@
+
+
+
+<h1>Problem K: Escape of Lappin the Phantom Thief</h1>
+
+<h2>Problem</h2>
+<p>
+怪盗ラッパンは宝石を盗みにやってきた。簡単に宝石を手にすることができたが、宝石にはセンサーが仕込まれており、警備ロボットに囲まれてしまった。
+</p>
+<p>
+警備ロボットは宝石に向かって移動するように仕組まれている。センサーは簡単に外せそうになかったので、宝石を置いて逃走することにした。宝石をできるだけ警備ロボットから遠くに置いて、逃げるための時間稼ぎをすることにした。
+</p>
+
+<p>
+敷地は<var>n</var> &times; <var>m</var>のマスからなる長方形の形をしていて、障害物はない。
+<var>k</var>体の警備ロボットは、それぞれマス(<var>x<sub>i</sub></var>, <var>y<sub>i</sub></var>)(0 &le; <var>x<sub>i</sub></var> &le; <var>n</var>&minus;1, 0 &le; <var>y<sub>i</sub></var> &le; <var>m</var>&minus;1)に配置されており、上下左右のマスに単位時間で移動できる。
+警備ロボットは宝石があるマスに最短経路で移動する。
+</p>
+
+<p>
+敷地内に自由に宝石を置けるとき、1台以上の警備ロボットが宝石のあるマスに到達するまでにかかる移動時間の最大値を求めよ。
+</p>
+
+<h2>Input</h2>
+<pre>
+<var>n</var> <var>m</var> <var>k</var>
+<var>x<sub>1</sub></var> <var>y<sub>1</sub></var>
+<var>x<sub>2</sub></var> <var>y<sub>2</sub></var>
+...
+<var>x<sub>k</sub></var> <var>y<sub>k</sub></var>
+</pre>
+<p>
+入力はすべて整数で与えられる。<br>
+1行目に<var>n</var>, <var>m</var>, <var>k</var>が空白区切りで与えられる。<br>
+2行目以降<var>k</var>行に警備ロボットのいるマスの座標(<var>x<sub>i</sub></var>, <var>y<sub>i</sub></var>)が空白区切りで与えられる。
+</p>
+
+<h2>Constraints</h2>
+
+<ul>
+    <li>1 &le; <var>n</var>, <var>m</var> &le; 5 &times; 10<sup>4</sup></li>
+    <li>1 &le; <var>k</var> &le; min(10<sup>5</sup>, <var>n</var> &times; <var>m</var>)</li>
+    <li>0 &le; <var>x<sub>i</sub></var> &le; <var>n</var>&minus;1</li>
+    <li>0 &le; <var>y<sub>i</sub></var> &le; <var>m</var>&minus;1</li>
+    <li>与えられる座標はすべて異なる</li>
+</ul>
+
+<h2>Output</h2>
+<p>
+警備ロボットが到達するまでに、最も時間がかかる場所への移動時間を1行に出力せよ。
+</p>
+
+<h2>Sample Input 1</h2>
+<pre>
+20 10 1
+0 0
+</pre>
+
+<h2>Sample Output 1</h2>
+<pre>
+28
+</pre>
+
+<h2>Sample Input 2</h2>
+<pre>
+20 10 2
+0 0
+17 5
+</pre>
+
+<h2>Sample Output 2</h2>
+<pre>
+15
+</pre>
+
+<h2>Sample Input 3</h2>
+<pre>
+20 10 3
+0 0
+17 5
+6 9
+</pre>
+
+<h2>Sample Output 3</h2>
+<pre>
+11
+</pre>

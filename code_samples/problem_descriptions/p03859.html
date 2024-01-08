@@ -1,0 +1,98 @@
+<span class="lang-en">
+<p>Score : <var>900</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>There is a string <var>S</var> of length <var>N</var> consisting of characters <code>0</code> and <code>1</code>. You will perform the following operation for each <var>i = 1, 2, ..., m</var>:</p>
+<ul>
+<li>Arbitrarily permute the characters within the substring of <var>S</var> starting at the <var>l_i</var>-th character from the left and extending through the <var>r_i</var>-th character.</li>
+</ul>
+<p>Here, the sequence <var>l_i</var> is non-decreasing.</p>
+<p>How many values are possible for <var>S</var> after the <var>M</var> operations, modulo <var>1000000007(= 10^9+7)</var>?</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>2≦N≦3000</var></li>
+<li><var>1≦M≦3000</var></li>
+<li><var>S</var> consists of characters <code>0</code> and <code>1</code>.</li>
+<li>The length of <var>S</var> equals <var>N</var>.</li>
+<li><var>1≦l_i &lt; r_i≦N</var></li>
+<li><var>l_i ≦ l_{i+1}</var></li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>The input is given from Standard Input in the following format:</p>
+<pre><var>N</var> <var>M</var>
+<var>S</var>
+<var>l_1</var> <var>r_1</var>
+:
+<var>l_M</var> <var>r_M</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the number of the possible values for <var>S</var> after the <var>M</var> operations, modulo <var>1000000007</var>.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>5 2
+01001
+2 4
+3 5
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>6
+</pre>
+<p>After the first operation, <var>S</var> can be one of the following three: <code>01001</code>, <code>00101</code> and <code>00011</code>.</p>
+<p>After the second operation, <var>S</var> can be one of the following six: <code>01100</code>, <code>01010</code>, <code>01001</code>, <code>00011</code>, <code>00101</code> and <code>00110</code>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>9 3
+110111110
+1 4
+4 6
+6 9
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>26
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>11 6
+00101000110
+2 4
+2 3
+4 7
+5 6
+6 10
+10 11
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>143
+</pre></section>
+</div>
+</span>

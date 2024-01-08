@@ -1,0 +1,63 @@
+
+<H1><font color="#000">Problem E:</font> Triangles</H1>
+
+<p>
+There is a group that paints an emblem on the ground to invite aliens every year. You are a member of
+this group and you have to paint the emblem this year.
+</p>
+<p>
+The shape of the emblem is described as follows. It is made of <i>n</i> regular triangles whose sides are
+equally one unit length long. These triangles are placed so that their centroids coincide, and each of them
+is rotated counterclockwise by 360/<i>n</i> degrees with respect to the one over it around its centroid. The
+direction of the top triangle is not taken into account.
+</p>
+<p>
+It is believed that emblems have more impact as their <i>n</i> are taken larger. So you want to paint the emblem
+of <i>n</i> as large as possible, but you don’t have so much chemicals to paint. Your task is to write a program
+which outputs the area of the emblem for given <i>n</i> so that you can estimate the amount of the needed
+chemicals.
+</p>
+
+<center>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE1_triangles">
+<p>Figure 1: The Emblem for <i>n</i> = 2</p>
+</center>
+
+<H2>Input</H2>
+
+<p>
+The input data is made of a number of data sets. Each data set is made of one line which contains an
+integer <i>n</i> between 1 and 1000 inclusive.
+</p>
+<p>
+The input is terminated by a line with <i>n</i> = 0. This line should not be processed.
+</p>
+
+<H2>Output</H2>
+
+<p>
+For each data set, output the area of the emblem on one line. Your program may output an arbitrary
+number of digits after the decimal point. However, the error should be 10<sup>-6</sup> ( = 0.000001) or less.
+</p>
+
+<H2>Sample Input</H2>
+<pre>
+1
+2
+3
+4
+5
+6
+0
+</pre>
+
+<H2>Output for the Sample Input</H2>
+<pre>
+0.433013
+0.577350
+0.433013
+0.732051
+0.776798
+0.577350
+</pre>
+

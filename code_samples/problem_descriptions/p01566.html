@@ -1,0 +1,81 @@
+
+<h1>Pipeline Plans</h1>
+<p>There are twelve types of tiles in Fig. 1.
+ You were asked to fill a table with <var>R &times; C</var> cells with these tiles.
+<var>R</var> is the number of rows and <var>C</var> is the number of columns.
+</p>
+<p>How many arrangements in the table meet the following constraints?
+</p><ul><li><p> Each cell has one tile.
+</p></li><li><p> the center of the upper left cell (1,1) and the center of the lower right cell (<var>C</var>, <var>R</var>) are connected by some roads.
+</p></li></ul>
+
+<p><center><img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE_tiles" height="634" width="926"></center></p>
+<p><center><i>Fig. 1: the types of tiles</i></center></p>
+
+</p>
+
+<h2>Input</h2>
+<p>The first line contains two integers <var>R</var> and <var>C</var> <var>(2 &le; R &times; C &le; 15)</var>.
+You can  safely assume at least one of <var>R</var> and <var>C</var> is greater than 1.<br>
+The second line contains twelve integers, <var>t<sub>1</sub></var>, <var>t<sub>2</sub></var>, ..., <var>t<sub>12</sub></var> <var>(0 &le; t<sub>1</sub> + .... + t<sub>12</sub> &le; 15)</var>.
+<var>t<sub>i</sub></var> represents the number of the <var>i</var>-th tiles you have.
+</p>
+
+<h2>Output</h2>
+<p>Output the number of arrangments in a line.
+</p>
+
+<h2>Sample Input 1</h2>
+
+<pre>3 3
+4 2 2 0 0 0 0 0 0 0 0 1
+</pre>
+
+<h2>Output for the Sample Input 1</h2>
+
+<pre>2
+</pre>
+
+<h2>Sample Input 2</h2>
+
+<pre>3 3
+0 1 1 0 0 0 0 0 0 0 0 7
+</pre>
+
+<h2>Output for the Sample Input 2</h2>
+
+<pre>66
+</pre>
+
+<h2>Sample Input 3</h2>
+
+<pre>3 3
+0 0 0 0 0 0 0 0 0 0 0 10
+</pre>
+
+<h2>Output for the Sample Input 3</h2>
+
+<pre>1
+</pre>
+
+<h2>Sample Input 4</h2>
+
+<pre>2 4
+0 0 1 1 1 2 0 1 0 0 1 1
+</pre>
+
+<h2>Output for the Sample Input 4</h2>
+
+<pre>2012
+</pre>
+
+<h2>Sample Input 5</h2>
+
+<pre>5 2
+0 1 1 1 0 1 2 1 2 0 0 1
+</pre>
+
+<h2>Output for the Sample Input 5</h2>
+
+<pre>8512
+</pre>

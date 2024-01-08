@@ -1,0 +1,74 @@
+
+<H1>Hit and Blow</H1>
+
+<p>
+Let's play Hit and Blow game. <i>A</i> imagines four numbers and <i>B</i> guesses the numbers. After <i>B</i> picks out four numbers, <i>A</i> answers:
+</p>
+
+<ul>
+<li> The number of numbers which have the same place with numbers <i>A</i> imagined (Hit) </li>
+<li> The number of numbers included (but different place) in the numbers <i>A</i> imagined (Blow)</li>
+</ul>
+
+<p>
+For example, if <i>A</i> imagined numbers:
+</p>
+
+<pre>
+9 1 8 2
+</pre>
+<p>
+and <i>B</i> chose:
+</p>
+<pre>
+4 1 5 9
+</pre>
+<p>
+<i>A</i> should say 1 Hit and 1 Blow.
+</p>
+
+
+<p>
+Write a program which reads four numbers <i>A</i> imagined and four numbers <i>B</i> chose and prints the number of Hit and Blow respectively. You may assume that the four numbers are all different and within from 0 to 9.
+</p>
+<H2>Input</H2>
+
+<p>
+The input consists of multiple datasets. Each dataset set consists of:
+</p>
+<pre>
+<var>a<sub>1</sub></var> <var>a<sub>2</sub></var> <var>a<sub>3</sub></var> <var>a<sub>4</sub></var>
+<var>b<sub>1</sub></var> <var>b<sub>2</sub></var> <var>b<sub>3</sub></var> <var>b<sub>4</sub></var>
+</pre>
+<p>
+, where <var>a<sub>i</sub></var> (0 &le; <var>a<sub>i</sub></var> &le; 9) is <var>i</var>-th number <i>A</i>  imagined and <var>b<sub>i</sub></var> (0 &le; <var>b<sub>i</sub></var> &le; 9) is <var>i</var>-th number <i>B</i> chose.
+</p>
+
+<p>
+The input ends with EOF. The number of datasets is less than or equal to 50.
+</P>
+
+<H2>Output</H2>
+
+<p>
+For each dataset, print the number of Hit and Blow in a line. These two numbers should be separated by a space.
+</p>
+
+<H2>Sample Input</H2>
+
+<pre>
+9 1 8 2
+4 1 5 9
+4 6 8 2
+4 6 3 2
+</pre>
+
+<H2>Output for the Sample Input</H2>
+
+<pre>
+1 1
+3 0
+</pre>
+
+
+

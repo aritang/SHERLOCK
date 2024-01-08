@@ -1,0 +1,107 @@
+
+
+
+ <p>プログラミングコンテストの合宿で出す問題のアイディアが出ずに困っていたイクタ君は、ある日友人に相談した。
+</p>
+
+<p>イクタ君「こういうアルゴリズムを使わないと解けないような問題が出したいんですけど、なにかありませんかね？」
+</p>
+
+<p>友人「それではこういうものを考えたらいいんじゃないですか」
+</p>
+
+<p>このようにしてその友人は以下のような問題の原案となるアイデアを考えてくれた。
+</p>
+
+<p>2進数<var>A,B</var>が与えられた時、以下の様なクエリを処理せよ。
+<ul>
+<li> 出力クエリ: max{<var>x</var> を2進数で表したときの、1の数 | <var>A &le; x < A+B</var> }を出力
+</li>
+<li> A変更クエリ: <var>A</var>の最下位ビットから<var>i</var>ビット目(0-origin)を反転
+</li>
+<li> B変更クエリ: <var>B</var>の最下位ビットから<var>i</var>ビット目(0-origin)を反転
+</li></ul>
+
+<p><var>i</var>ビット目というのが 0-origin で表されていることに注意せよ。
+つまり、<var>A</var>の最下位ビットから0ビット目とは最下位ビットを表す。
+</p>
+
+<h2>Input</h2>
+<p>入力は以下の形式で与えられる。
+</p>
+
+<pre>
+<var>N</var> <var>A</var> <var>B</var><br><var>Q<sub>1</sub></var><br>...<br><var>Q<sub>N</sub></var></pre>
+
+<p>1行目にクエリの数N,2進数A, Bが与えられる。
+</p>
+<p>2からN+1行目には以下の様なクエリが与えられる。
+</p>
+
+<ul><li> Q
+</li><li> A <var>i</var>
+</li><li> B <var>i</var>
+</li></ul>
+
+<p>Qが出力クエリを、A <var>i</var>,B <var>i</var>はそれぞれ<var>A</var>の最下位ビットから<var>i</var>ビット目、<var>B</var>の最下位ビットから<var>i</var>ビット目を反転させる変更クエリを表している。
+</p>
+
+
+<h3>Constraints</h3>
+<p>入力中の各変数は以下の制約を満たす。
+</p>
+
+<ul><li> <var>1 &le; N < 300,000</var>
+</li><li> <var>1 &le; |A|,|B| &le; 300,000</var> (<var>|A|</var>は<var>A</var>の長さ)
+</li><li> A <var>i</var> というクエリでは <var>0 &le; i < |A|</var>
+</li><li> B <var>i</var> というクエリでは <var>0 &le; i < |B|</var>
+</li><li> <var>B</var>が0になることはない
+</li></ul>
+
+
+<h2>Output</h2>
+<p>出力クエリごとに答えを1行に出力せよ。
+</p>
+
+<h2>Sample Input 1</h2>
+
+<pre>4 10000 00101
+Q
+A 0
+B 1
+Q
+</pre>
+
+<h2>Output for the Sample Input 1</h2>
+
+<pre>3
+4
+</pre>
+<p>最初の出力クエリでは <var>A=10000</var>, <var>B=00101</var>, <var>A+B=10101</var>なので求める<var>x</var>は10011
+</p>
+<p>次の出力クエリでは <var>A=10001</var>, <var>B=00111</var>, <var>A+B=11000</var>なので求める<var>x</var>は10111
+</p>
+
+
+<h2>Sample Input 2</h2>
+
+<pre>9 0110111101 0010100111
+Q
+B 4
+Q
+A 4
+Q
+B 9
+Q
+A 8
+Q
+</pre>
+
+<h2>Output for the Sample Input 2</h2>
+
+<pre>9
+9
+9
+10
+9
+</pre>

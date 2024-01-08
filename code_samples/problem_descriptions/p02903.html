@@ -1,0 +1,79 @@
+<span class="lang-en">
+<p>Score : <var>300</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>We have a square grid with <var>H</var> rows and <var>W</var> columns.
+Snuke wants to write <var>0</var> or <var>1</var> in each of the squares.
+Here, all of the following conditions have to be satisfied:</p>
+<ul>
+<li>For every row, the smaller of the following is <var>A</var>: the number of <var>0</var>s contained in the row, and the number of <var>1</var>s contained in the row. (If these two numbers are equal, “the smaller” should be read as “either”.)</li>
+<li>For every column, the smaller of the following is <var>B</var>: the number of <var>0</var>s contained in the column, and the number of <var>1</var>s contained in the column.</li>
+</ul>
+<p>Determine if these conditions can be satisfied by writing <var>0</var> or <var>1</var> in each of the squares. If the answer is yes, show one way to fill the squares so that the conditions are satisfied.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 \leq H,W \leq 1000</var></li>
+<li><var>0 \leq A</var></li>
+<li><var>2 \times A \leq W</var></li>
+<li><var>0 \leq B</var></li>
+<li><var>2 \times B \leq H</var></li>
+<li>All values in input are integers.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>H</var> <var>W</var> <var>A</var> <var>B</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>If the conditions cannot be satisfied by writing <var>0</var> or <var>1</var> in each of the squares, print <var>-1</var>.</p>
+<p>If the conditions can be satisfied, print one way to fill the squares so that the conditions are satisfied, in the following format:</p>
+<pre><var>s_{11}s_{12}\cdots s_{1W}</var>
+<var>s_{21}s_{22}\cdots s_{2W}</var>
+<var>\vdots</var>
+<var>s_{H1}s_{H2}\cdots s_{HW}</var>
+</pre>
+<p>Here <var>s_{ij}</var> is the digit written in the square at the <var>i</var>-th row from the top and the <var>j</var>-th column from the left in the grid.</p>
+<p>If multiple solutions exist, printing any of them will be accepted.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>3 3 1 1
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>100
+010
+001
+</pre>
+<p>Every row contains two <var>0</var>s and one <var>1</var>, so the first condition is satisfied.
+Also, every column contains two <var>0</var>s and one <var>1</var>, so the second condition is satisfied.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>1 5 2 0
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>01010
+</pre></section>
+</div>
+</span>

@@ -1,0 +1,120 @@
+<span class="lang-en">
+<p>Score : <var>1200</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>One day Mr. Takahashi picked up a dictionary containing all of the <var>N</var>! permutations of integers <var>1</var> through <var>N</var>.
+The dictionary has <var>N</var>! pages, and page <var>i</var> (<var>1 ≤ i ≤ N!</var>) contains the <var>i</var>-th permutation in the lexicographical order.</p>
+<p>Mr. Takahashi wanted to look up a certain permutation of length <var>N</var> in this dictionary, but he forgot some part of it.</p>
+<p>His memory of the permutation is described by a sequence <var>P_1, P_2, ..., P_N</var>.
+If <var>P_i = 0</var>, it means that he forgot the <var>i</var>-th element of the permutation; otherwise, it means that he remembered the <var>i</var>-th element of the permutation and it is <var>P_i</var>.</p>
+<p>He decided to look up all the possible permutations in the dictionary.
+Compute the sum of the page numbers of the pages he has to check, modulo <var>10^9 + 7</var>.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 ≤ N ≤ 500000</var></li>
+<li><var>0 ≤ P_i ≤ N</var></li>
+<li><var>P_i ≠ P_j</var> if <var>i ≠ j</var> (<var>1 ≤ i, j ≤ N</var>), <var>P_i ≠ 0</var> and <var>P_j ≠ 0</var>.</li>
+</ul>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Partial Score</h3><ul>
+<li>In test cases worth <var>500</var> points, <var>1 ≤ N ≤ 3000</var>.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>The input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+<var>P_1</var> <var>P_2</var> <var>...</var> <var>P_N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the sum of the page numbers of the pages he has to check, as modulo <var>10^9 + 7</var>.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>4
+0 2 3 0
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>23
+</pre>
+<p>The possible permutations are [<var>1</var>, <var>2</var>, <var>3</var>, <var>4</var>] and [<var>4</var>, <var>2</var>, <var>3</var>, <var>1</var>].
+Since the former is on page <var>1</var> and the latter is on page <var>22</var>, the answer is <var>23</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>3
+0 0 0
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>21
+</pre>
+<p>Since all permutations of length <var>3</var> are possible, the answer is <var>1 + 2 + 3 + 4 + 5 + 6 = 21</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>5
+1 2 3 5 4
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>2
+</pre>
+<p>Mr. Takahashi remembered all the elements of the permutation.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 4</h3><pre>1
+0
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 4</h3><pre>1
+</pre>
+<p>The dictionary consists of one page.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 5</h3><pre>10
+0 3 0 0 1 0 4 0 0 0
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 5</h3><pre>953330050
+</pre></section>
+</div>
+</span>

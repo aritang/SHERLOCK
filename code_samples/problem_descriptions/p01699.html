@@ -1,0 +1,95 @@
+
+
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({ tex2jax: { inlineMath: [["$","$"], ["\\(","\\)"]], processEscapes: true }});
+</script>
+<script language="JavaScript" type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+
+<!-- begin en only -->
+<!--<h3><u>Elevator Hall Number</u></h3>-->
+<!-- end en only -->
+<!-- begin ja only -->
+<h3><u>エレベーターホール・ナンバー</u></h3>
+<!-- end ja only -->
+
+<!-- begin en only -->
+<!-- end en only -->
+<!-- begin ja only -->
+<p>JAG (Japanese Alumni Group) は東京都某所のとある高層ビルに本部を置く謎の組織である．
+このビルでは $N$ 台のエレベーターが動いており，$i$ 台目のエレベーターは $low_i$ 階から $high_i$ 階までの各階に停まる ($1 \le i \le N$)．
+</p>
+<p>JAG の新スタッフである X 氏は，本部を訪れようとビルのエレベーターホールまで辿り着いた．
+そこでボタンを押してエレベーターを待っていた X 氏は，エレベーターが現在いる階の表示が少々変わっていることに気づいた．
+$i$ 台目のエレベーターが $a_i$ 階にいるとき，$a_1, a_2, \ldots, a_N$ をこの順に並べて，十進表記で・先頭に 0 を加えず・空白を挟まずに繋げて書いた 1 つの数がディスプレイに映されるのである．
+例えば，$N = 3$ で，エレベーターが順に $10$ 階，$2$ 階，$11$ 階にいるとき，$10211$ が表示される．
+</p>
+<p>X 氏は，ディスプレイに映される可能性がある数は全部で何通りあるかが気になってしまった．
+あなたの課題は，それを求めるプログラムを作成することである．
+</p>
+
+
+<!-- end ja only -->
+
+<h3>Input</h3>
+
+<!-- begin ja only -->
+<p>入力は複数のデータセットからなり，各データセットは以下の形をしている．
+</p>
+<blockquote>$N$<br>$low_1$ $high_1$<br>...<br>$low_N$ $high_N$</blockquote>
+
+<p>データセットの最初の行は，エレベーターの台数を表す整数 $N$ ($2 \le N \le 6$) からなる．
+続く $N$ 行のうち $i$ 行目は，$2$ 個の整数 $low_i$, $high_i$ ($1 \le low_i \le high_i \le 99$) からなり，$i$ 台目のエレベーターが動く範囲を表す．
+</p>
+<p>入力の終わりは，ゼロを $1$ 個だけ含む行で表される．
+</p>
+
+
+<!-- end ja only -->
+
+<h3>Output</h3>
+
+<!-- begin ja only -->
+<p>各データセットに対して，ディスプレイに映される可能性がある数の個数を $1$ 行で出力せよ．
+</p>
+
+
+<!-- end ja only -->
+
+<h3>Sample Input</h3>
+
+<pre>2
+1 11
+1 11
+3
+10 10
+2 2
+11 11
+4
+89 91
+1 12
+1 12
+89 91
+5
+1 8
+2 76
+10 19
+6 16
+33 42
+6
+10 59
+20 69
+30 79
+40 89
+50 99
+50 99
+0</pre>
+
+<h3>Output for Sample Input</h3>
+
+<pre>120
+1
+1278
+659520
+15625000000</pre>
+

@@ -1,0 +1,137 @@
+<span class="lang-en">
+<p>Score: <var>300</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3>
+<p>Takahashi has decided to hold fastest-finger-fast quiz games. Kizahashi, who is in charge of making the scoreboard, is struggling to write the program that manages the players' scores in a game, which proceeds as follows.</p>
+<p>A game is played by <var>N</var> players, numbered <var>1</var> to <var>N</var>. At the beginning of a game, each player has <var>K</var> points.</p>
+<p>When a player correctly answers a question, each of the other <var>N-1</var> players receives minus one (<var>-1</var>) point. There is no other factor that affects the players' scores.</p>
+<p>At the end of a game, the players with <var>0</var> points or lower are eliminated, and the remaining players survive.</p>
+<p>In the last game, the players gave a total of <var>Q</var> correct answers, the <var>i</var>-th of which was given by Player <var>A_i</var>.
+For Kizahashi, write a program that determines whether each of the <var>N</var> players survived this game.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3>
+<ul>
+<li>All values in input are integers.</li>
+<li><var>2 \leq N \leq 10^5</var></li>
+<li><var>1 \leq K \leq 10^9</var></li>
+<li><var>1 \leq Q \leq 10^5</var></li>
+<li><var>1 \leq A_i \leq N\ (1 \leq i \leq Q)</var></li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3>
+<p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var> <var>K</var> <var>Q</var>
+<var>A_1</var>
+<var>A_2</var>
+<var>.</var>
+<var>.</var>
+<var>.</var>
+<var>A_Q</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3>
+<p>Print <var>N</var> lines. The <var>i</var>-th line should contain <code>Yes</code> if Player <var>i</var> survived the game, and <code>No</code> otherwise.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>6 3 4
+3
+1
+3
+2
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>No
+No
+Yes
+No
+No
+No
+</pre>
+<p>In the beginning, the players' scores are <var>(3, 3, 3, 3, 3, 3)</var>.</p>
+<ul>
+<li>Player <var>3</var> correctly answers a question. The players' scores are now <var>(2, 2, 3, 2, 2, 2)</var>.</li>
+<li>Player <var>1</var> correctly answers a question. The players' scores are now <var>(2, 1, 2, 1, 1, 1)</var>.</li>
+<li>Player <var>3</var> correctly answers a question. The players' scores are now <var>(1, 0, 2, 0, 0, 0)</var>.</li>
+<li>Player <var>2</var> correctly answers a question. The players' scores are now <var>(0, 0, 1, -1, -1, -1)</var>.</li>
+</ul>
+<p>Players <var>1, 2, 4, 5</var> and <var>6</var>, who have <var>0</var> points or lower, are eliminated, and Player <var>3</var> survives this game.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>6 5 4
+3
+1
+3
+2
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>10 13 15
+3
+1
+4
+1
+5
+9
+2
+6
+5
+3
+5
+8
+9
+7
+9
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>No
+No
+No
+No
+Yes
+No
+No
+No
+Yes
+No
+</pre></section>
+</div>
+</span>

@@ -1,0 +1,172 @@
+
+
+
+<h1>String Crossing</h1>
+
+<h2>Problem</h2>
+<p>
+<var>N</var>個の文字列{ <var>S<sub>1</sub></var>, <var>S<sub>2</sub></var>, ..., <var>S<sub>N</sub></var> } が与えられる。
+続いて<var>Q</var>個のクエリが与えられる。
+クエリの種類は以下の2つである。
+</p>
+<ol>
+<li>
+<var>a</var>,<var>b</var>,<var>c</var>,<var>d</var>が入力され<var>S<sub>a</sub></var> の <var>b</var>文字目からの substring を <var>S<sub>c</sub></var> の <var>d</var>-1文字までの substring の後に繋げる。これを新しい<var>S<sub>c</sub></var>とする。
+元の<var>S<sub>c</sub></var> の <var>d</var>文字目からの substring を <var>S<sub>a</sub></var> の <var>b</var>-1文字までの substring の後に繋げる。これを新しい<var>S<sub>a</sub></var>とする。
+</li>
+<li>
+<var>a</var>,<var>b</var>,<var>c</var>が入力され <var>S<sub>a</sub></var> の <var>b</var>文字目を <var>c</var> に変更する。
+</li>
+</li>
+</ol>
+
+<p>
+例えば<var>S<sub>1</sub></var>="abcd",<var>S<sub>2</sub></var>="efgh"があり
+クエリの種類が1で<var>a</var>=1,<var>b</var>=2,<var>c</var>=2,<var>d</var>=3のとき
+</p>
+<pre>
+a  - -> bcd
+    X
+ef - -> gh
+</pre>
+<p>
+<var>S<sub>1</sub></var>="agh",<var>S<sub>2</sub></var>="efbcd"となる。
+</p>
+
+<p>
+全てのクエリを処理した後の文字列<var>S<sub>1</sub></var>から<var>S<sub>N</sub></var>を全て出力せよ。
+</p>
+
+
+<h2>Input</h2>
+<p>
+入力は以下の形式で与えられる。
+</p>
+
+<pre>
+<var>N</var> <var>Q</var>
+<var>S<sub>1</sub></var>
+<var>S<sub>2</sub></var>
+...
+<var>S<sub>N</sub></var>
+<var>query<sub>1</sub></var>
+<var>query<sub>2</sub></var>
+...
+<var>query<sub>Q</sub></var>
+</pre>
+
+各<var>query</var>は次のいずれかである。
+
+<pre>
+1 <var>a</var> <var>b</var> <var>c</var> <var>d</var>
+</pre>
+<p>or</p>
+<pre>
+2 <var>a</var> <var>b</var> <var>c</var>
+</pre>
+
+
+<h2>Constraints</h2>
+
+<ul>
+<li>1 &le; <var>N</var> &le; 10<sup>5</sup></li>
+<li>1 &le; <var>Q</var> &le; 10<sup>5</sup></li>
+<li><var>N</var>個の文字列の長さの合計は2&times;10<sup>6</sup>を越えない。</li>
+<li>文字列<var>S<sub>i</sub></var>は全て英小文字であることが保証される。</li>
+<li>クエリの種類が1のとき
+ <ul>
+ <li><var>a</var> &ne; <var>c</var></li>
+ <li>1 &le; <var>b</var> &le; |<var>S<sub>a</sub></var>|</li>
+ <li>1 &le; <var>d</var> &le; |<var>S<sub>c</sub></var>|</li>
+ </ul>
+</li>
+<li>クエリの種類が2のとき
+ <ul>
+ <li>1 &le; <var>b</var> &le; |<var>S<sub>a</sub></var>|</li>
+ <li><var>c</var>は英小文字であることが保証される。</li>
+ </ul>
+</li>
+</ul>
+<p>
+高速な入出力を推奨する。
+</p>
+
+<h2>Output</h2>
+<p>
+各クエリを処理した後の文字列を<var>S<sub>1</sub></var>から<var>S<sub>N</sub></var>まで1行ずつ出力せよ。
+</p>
+<pre>
+<var>S<sub>1</sub></var>
+<var>S<sub>2</sub></var>
+...
+<var>S<sub>N</sub></var>
+</pre>
+
+<h2>Sample Input 1</h2>
+<pre>
+2 1
+abcd
+efgh
+1 1 2 2 3
+</pre>
+
+<h2>Sample Output 1</h2>
+<pre>
+agh
+efbcd
+</pre>
+
+<h2>Sample Input 2</h2>
+<pre>
+2 3
+abcd
+efgh
+1 1 2 2 3
+2 1 3 x
+2 2 4 x
+</pre>
+
+<h2>Sample Output 2</h2>
+<pre>
+agx
+efbxd
+</pre>
+
+<h2>Sample Input 3</h2>
+<pre>
+10 10
+sjcvpauokb
+fmeaowomscy
+sepeqqfcosrjmonfsv
+zapc
+aromazjzqoeiqswvcaf
+clifpa
+dusudcz
+qeqdzdtdzlkhc
+gkpsjvdvadmf
+xrtyxnkolluagwxp
+1 4 4 6 3
+1 7 1 8 1
+2 2 6 o
+1 4 4 3 7
+2 1 2 i
+1 6 3 3 2
+1 6 5 1 9
+2 10 9 j
+1 2 2 7 3
+2 3 2 b
+</pre>
+
+<h2>Sample Output 3</h2>
+<pre>
+sicvpauoeqqifpa
+fqdzdtdzlkhc
+sb
+zapfcosrjmonfsv
+aromazjzqoeiqswvcaf
+clepkb
+qemeaooomscy
+dusudcz
+gkpsjvdvadmf
+xrtyxnkojluagwxp
+</pre>

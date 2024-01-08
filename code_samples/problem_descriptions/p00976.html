@@ -1,0 +1,190 @@
+<h2>Ranks</h2>
+
+<p>
+  A <i>finite field</i> <b>F<sub>2</sub></b> consists of two elements: 0 and 1. Addition and multiplication on <b>F<sub>2</sub></b> are those on integers modulo two, as defined below.
+</p>
+
+<table align="center">
+  <tr>
+    <td>
+      <table>
+	<tr >
+	  <td style="border-bottom:1px solid #000; border-right:1px solid #000">+</td>
+	  <td style="border-bottom:1px solid #000">0</td>
+	  <td style="border-bottom:1px solid #000">1</td>
+	</tr>
+	<tr><td style="border-right:1px solid #000">0</td><td>0</td><td>1</td></tr>
+	<tr><td style="border-right:1px solid #000">1</td><td>1</td><td>0</td></tr>
+      </table>
+    </td>
+    <td>
+      &nbsp;&nbsp;&nbsp;&nbsp;
+    </td>
+    <td>
+      <table>
+	<tr >
+	  <td style="border-bottom:1px solid #000; border-right:1px solid #000">$\times$</td>
+	  <td style="border-bottom:1px solid #000">0</td>
+	  <td style="border-bottom:1px solid #000">1</td>
+	</tr>
+	<tr><td style="border-right:1px solid #000">0</td><td>0</td><td>0</td></tr>
+	<tr><td style="border-right:1px solid #000">1</td><td>0</td><td>1</td></tr>
+      </table>
+    </td>
+  </tr>
+  </table>
+
+<br>
+
+<p>
+  A set of vectors $v_1, ... , v_k$ over <b>F<sub>2</sub></b> with the same dimension is said to be <i>linearly independent</i> when, for $c_1, ... , c_k \in $ <b>F<sub>2</sub></b>, $c_1v_1 + ... + c_kv_k = 0$ is equivalent to $c_1 = ... = c_k = 0$, where $0$ is the zero vector, the vector with all its elements being zero.
+</p>
+
+<p>
+  The <i>rank</i> of a matrix is the maximum cardinality of its linearly independent sets of column vectors. For example, the rank of the matrix
+
+$
+  \left[
+    \begin{array}{rrr}
+      0 & 0 & 1 \\
+      1 & 0 & 1
+    \end{array}
+  \right]
+$
+  
+  is two; the column vectors
+
+ $
+  \left[
+    \begin{array}{rrr}
+      0 \\
+      1 
+    \end{array}
+  \right]
+$ 
+  
+and
+
+   $
+  \left[
+    \begin{array}{rrr}
+      1 \\
+      1 
+    \end{array}
+  \right]
+$ 
+
+  
+  (the first and the third columns) are linearly independent while the set of all three column vectors is <i>not</i> linearly independent. Note that the rank is zero for the zero matrix.
+</p>
+
+<p>
+  Given the above definition of the rank of matrices, the following may be an intriguing question. <i>How does a modification of an entry in a matrix change the rank of the matrix?</i> To investigate this question, let us suppose that we are given a matrix $A$ over <b>F<sub>2</sub></b>. For any indices $i$ and $j$, let $A^{(ij)}$ be a matrix equivalent to $A$ except that the $(i, j)$ entry is flipped.
+</p>
+  
+\begin{equation*}
+A^{(ij)}_{kl}= \left \{
+\begin{array}{ll}
+A_{kl} + 1　         &   (k = i \; {\rm and} \; l = j)          \\
+A_{kl}　         &  ({\rm otherwise}) \\
+
+\end{array}
+\right.
+  \end{equation*}
+
+  <p>
+    In this problem, we are interested in the rank of the matrix $A^{(ij)}$. Let us denote the rank of $A$ by $r$, and that of $A^{(ij)}$ by $r^{(ij)}$. Your task is to determine, for all $(i, j)$ entries, the relation of ranks before and after flipping the entry out of the following possibilities: $(i) r^{(ij)} < r, (ii) r^{(ij)} = r$, or $(iii) r^{(ij)} > r$.
+  </p>
+  
+  <h3>Input</h3>
+  <p>
+    The input consists of a single test case of the following format.
+  </p>
+<pre>
+$n$ $m$
+$A_{11}$ ... $A_{1m}$
+.
+.
+.
+$A_{n1}$ ... $A_{nm}$
+</pre>
+
+  <p>
+    $n$ and $m$ are the numbers of rows and columns in the matrix $A$, respectively ($1 \leq n \leq 1000, 1 \leq m \leq 1000$). In the next $n$ lines, the entries of $A$ are listed without spaces in between. $A_{ij}$ is the entry in the $i$-th row and $j$-th column, which is either 0 or 1.
+  </p>
+  
+  <h3>Output</h3>
+  <p>
+    Output $n$ lines, each consisting of $m$ characters. The character in the $i$-th line at the $j$-th position must be either <span>-</span> (minus), <span>0</span> (zero), or <span>+</span> (plus). They correspond to the possibilities (i), (ii), and (iii) in the problem statement respectively.
+  </p>
+
+  <h3>Sample Input 1</h3>
+<pre>
+2 3
+001
+101
+</pre>
+  <h3>Sample Output 1</h3>
+<pre>
+-0-
+-00
+</pre>
+  
+  <h3>Sample Input 2</h3>
+<pre>
+5 4
+1111
+1000
+1000
+1000
+1000
+</pre>
+  
+  <h3>Sample Output 2</h3>
+<pre>
+0000
+0+++
+0+++
+0+++
+0+++
+</pre>
+
+  <h3>Sample Input 3</h3>
+<pre>
+10 10
+1000001001
+0000010100
+0000100010
+0001000001
+0010000010
+0100000100
+1000001000
+0000010000
+0000100000
+0001000001
+</pre>
+
+  <h3>Sample Output 3</h3>
+<pre>
+000-00000-
+0-00000-00
+00-00000-0
++00000+000
+00-0000000
+0-00000000
+000-00000-
+0-000-0-00
+00-0-000-0
++00000+000
+</pre>
+  
+  <h3>Sample Input 4</h3>
+<pre>
+1 1
+0
+</pre>
+
+  <h3>Sample Output 4</h3>
+<pre>
++
+</pre>

@@ -1,0 +1,89 @@
+<span class="lang-en">
+<p>Score : <var>500</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>Given are two strings <var>s</var> and <var>t</var> consisting of lowercase English letters. Determine if there exists an integer <var>i</var> satisfying the following condition, and find the minimum such <var>i</var> if it exists.</p>
+<ul>
+<li>Let <var>s'</var> be the concatenation of <var>10^{100}</var> copies of <var>s</var>. <var>t</var> is a subsequence of the string <var>{s'}_1{s'}_2\ldots{s'}_i</var> (the first <var>i</var> characters in <var>s'</var>).</li>
+</ul>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Notes</h3><ul>
+<li>A subsequence of a string <var>a</var> is a string obtained by deleting zero or more characters from <var>a</var> and concatenating the remaining characters without changing the relative order. For example, the subsequences of <code>contest</code> include <code>net</code>, <code>c</code>, and <code>contest</code>.</li>
+</ul>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 \leq |s| \leq 10^5</var></li>
+<li><var>1 \leq |t| \leq 10^5</var></li>
+<li><var>s</var> and <var>t</var> consists of lowercase English letters.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>s</var>
+<var>t</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>If there exists an integer <var>i</var> satisfying the following condition, print the minimum such <var>i</var>; otherwise, print <code>-1</code>.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>contest
+son
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>10
+</pre>
+<p><var>t =</var> <code>son</code> is a subsequence of the string <code>contestcon</code> (the first <var>10</var> characters in <var>s' =</var> <code>contestcontestcontest...</code>), so <var>i = 10</var> satisfies the condition.</p>
+<p>On the other hand, <var>t</var> is not a subsequence of the string <code>contestco</code> (the first <var>9</var> characters in <var>s'</var>), so <var>i = 9</var> does not satisfy the condition.</p>
+<p>Similarly, any integer less than <var>9</var> does not satisfy the condition, either. Thus, the minimum integer <var>i</var> satisfying the condition is <var>10</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>contest
+programming
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>-1
+</pre>
+<p><var>t =</var> <code>programming</code> is not a substring of <var>s' =</var> <code>contestcontestcontest...</code>. Thus, there is no integer <var>i</var> satisfying the condition.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>contest
+sentence
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>33
+</pre>
+<p>Note that the answer may not fit into a <var>32</var>-bit integer type, though we cannot put such a case here.</p></section>
+</div>
+</span>

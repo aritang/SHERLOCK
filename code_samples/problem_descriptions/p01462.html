@@ -1,0 +1,77 @@
+
+<script src="./IMAGE/varmath.js" charset="UTF-8"></script>
+
+<H1>Network Reliability</H1>
+
+<p>
+An undirected graph is given.
+Each edge of the graph disappears with a constant probability.
+Calculate the probability with which the remained graph is connected.
+</p>
+
+<H2>Input</H2>
+
+<p>
+The first line contains three integers <var>N</var> (<var>1 \leq N \leq 14</var>), <var>M</var> (<var>0 \leq M \leq 100</var>) and <var>P</var> (<var>0 \leq P \leq 100</var>), separated by a single space.
+<var>N</var> is the number of the vertices and <var>M</var> is the number of the edges. <var>P</var> is the probability represented by a percentage.
+</p>
+
+<p>
+The following <var>M</var> lines describe the edges.
+Each line contains two integers <var>v_i</var> and <var>u_i</var> (<var>1 \leq u_i, v_i \leq N</var>).
+(<var>u_i, v_i</var>) indicates the edge that connects the two vertices <var>u_i</var> and <var>v_i</var>.
+</p>
+
+<H2>Output</H2>
+
+<p>
+Output a line containing the probability with which the remained graph is connected.
+Your program may output an arbitrary number of digits after the decimal point. However, the absolute error should be <var>10^{-9}</var> or less.
+</p>
+
+<H2>Sample Input 1</H2>
+
+<pre>
+3 3 50
+1 2
+2 3
+3 1
+</pre>
+
+<H2>Output for the Sample Input 1</H2>
+
+<pre>
+0.500000000000
+</pre>
+
+<H2>Sample Input 2</H2>
+
+<pre>
+3 3 10
+1 2
+2 3
+3 1
+</pre>
+
+<H2>Output for the Sample Input 2</H2>
+
+<pre>
+0.972000000000
+</pre>
+
+<H2>Sample Input 3</H2>
+
+<pre>
+4 5 50
+1 2
+2 3
+3 4
+4 1
+1 3
+</pre>
+
+<H2>Output for the Sample Input 3</H2>
+
+<pre>
+0.437500000000
+</pre>

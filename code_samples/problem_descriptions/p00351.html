@@ -1,0 +1,99 @@
+
+
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({ tex2jax: { inlineMath: [["$","$"], ["\\(","\\)"]], processEscapes: true }});
+</script>
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+
+<H1>夕暮れ</H1>
+
+<p>
+  AIZU 国の夕暮れ時は、スマートフォンを西の空へ構えて立ち止まる観光客で賑わう。AIZU 国は無数のビルが建ち並ぶ大都市であり、ビルの谷間が長く連なる西の空には、ビルのシルエットとそれらから漏れ出す太陽の光による絶景が広がる。
+</p>
+
+<p>
+  AIZU 観光協会の若松氏によると、太陽を表す円が、その面積のちょうど半分だけ遮られているとき、格段の絶景になるという。
+</p>
+
+<p>
+図のように、西の空を、地平線を <var>x</var> 軸、太陽の中心の軌跡を <var>y</var> 軸とするような <var>x</var>-<var>y</var> 平面で表し、太陽を半径 <var>R</var> の円、それぞれのビルのシルエットを長方形とする。
+</p>
+
+<center>
+  <img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_PCK2016_nightfall" width="400"><br/>
+</center>
+<br/>
+
+<p>
+各ビルのシルエットの底辺は <var>x</var> 軸上にあり、太陽は十分高い位置から地平線に対して垂直に沈んでいく。太陽はビルのシルエットあるいは地平線を上端とする地面に遮られ、やがて地平線の下へ消えてゆく。
+  </p>
+
+<br/>
+
+<p>
+太陽の半径と各ビルのシルエットの情報が与えられたとき、太陽の面積のちょうど半分が遮られるような、最も高い太陽の高さ（中心の <var>y</var>座標）を求めるプログラムを作成せよ。
+</p>
+
+
+<h2>Input</h2>
+
+<p>
+  入力は以下の形式で与えられる。
+</p>
+
+<pre>
+<var>N</var> <var>R</var>
+<var>x<sub>1</sub></var> <var>w<sub>1</sub></var> <var>h<sub>1</sub></var>
+<var>x<sub>2</sub></var> <var>w<sub>2</sub></var> <var>h<sub>2</sub></var>
+:
+<var>x<sub>N</sub></var> <var>w<sub>N</sub></var> <var>h<sub>N</sub></var>
+</pre>
+
+<p>
+１行目にビルの数 <var>N</var> (0 &le; <var>N</var> &le; 100) と太陽を表す円の半径 <var>R</var> (1 &le; <var>R</var> &le; 100) が与えられる。続く <var>N</var> 行に <var>i</var> 番目のビルのシルエットの左下角の <var>x</var> 座標 <var>x<sub>i</sub></var> (-100 &le; <var>x<sub>i</sub></var> &le; 100, <var>x<sub>i</sub></var> &lt; <var>x<sub>i+1</sub></var>)、幅 <var>w<sub>i</sub></var> (1 &le; <var>w<sub>i</sub></var> &le; 100)、高さ <var>h<sub>i</sub></var> (1 &le; <var>h<sub>i</sub></var> &le; 100) が与えられる。入力はすべて整数で与えられる。
+</p>
+
+<p>
+  入力は以下の条件を満たす。
+</p>
+
+<ul>
+<li> ビルのシルエットが重なることはない（<var>x<sub>i</sub></var> + <var>w<sub>i</sub></var> &le; <var>x<sub>i+1</sub></var>）。</li>
+<li> ２つの隣接するビルのシルエットの高さの差は、<var>R</var> を超えない。</li>
+<li> ビルの左側（<var>x</var> 軸の負の方向）または右側（<var>x</var> 軸の正の方向）に隣接するビルがない場合、その高さは <var>R</var> を超えない。</li>
+</ul>
+
+
+
+<h2>Output</h2>
+
+<p>
+太陽の高さ（円の中心の <var>y</var> 座標）を１行に出力する。ただし、誤差がプラスマイナス 10<sup>-6</sup> を超えてはならない。
+</p>
+
+<h2>Sample Input 1</h2>
+
+<pre>
+0 2
+</pre>
+
+<h2>Sample Output 1</h2>
+<pre>
+0.00000000
+</pre>
+
+<h2>Sample Input 2</h2>
+<pre>
+3 2
+-2 1 1
+-1 1 2
+0 2 1
+</pre>
+
+<h2>Sample Output 2</h2>
+<pre>
+1.25065774
+</pre>

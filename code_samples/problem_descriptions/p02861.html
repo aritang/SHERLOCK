@@ -1,0 +1,95 @@
+<span class="lang-en">
+<p>Score : <var>300</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>There are <var>N</var> towns in a coordinate plane. Town <var>i</var> is located at coordinates (<var>x_i</var>, <var>y_i</var>). The distance between Town <var>i</var> and Town <var>j</var> is <var>\sqrt{\left(x_i-x_j\right)^2+\left(y_i-y_j\right)^2}</var>.</p>
+<p>There are <var>N!</var> possible paths to visit all of these towns once. Let the length of a path be the distance covered when we start at the first town in the path, visit the second, third, <var>\dots</var>, towns, and arrive at the last town (assume that we travel in a straight line from a town to another). Compute the average length of these <var>N!</var> paths.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>2 \leq N \leq 8</var></li>
+<li><var>-1000 \leq x_i \leq 1000</var></li>
+<li><var>-1000 \leq y_i \leq 1000</var></li>
+<li><var>\left(x_i, y_i\right) \neq \left(x_j, y_j\right)</var> (if <var>i \neq j</var>)</li>
+<li>(Added 21:12 JST) All values in input are integers.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+<var>x_1</var> <var>y_1</var>
+<var>:</var>
+<var>x_N</var> <var>y_N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the average length of the paths.
+Your output will be judges as correct when the absolute difference from the judge's output is at most <var>10^{-6}</var>.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>3
+0 0
+1 0
+0 1
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>2.2761423749
+</pre>
+<p>There are six paths to visit the towns: <var>1</var> → <var>2</var> → <var>3</var>, <var>1</var> → <var>3</var> → <var>2</var>, <var>2</var> → <var>1</var> → <var>3</var>, <var>2</var> → <var>3</var> → <var>1</var>, <var>3</var> → <var>1</var> → <var>2</var>, and <var>3</var> → <var>2</var> → <var>1</var>.</p>
+<p>The length of the path <var>1</var> → <var>2</var> → <var>3</var> is <var>\sqrt{\left(0-1\right)^2+\left(0-0\right)^2} + \sqrt{\left(1-0\right)^2+\left(0-1\right)^2} = 1+\sqrt{2}</var>.</p>
+<p>By calculating the lengths of the other paths in this way, we see that the average length of all routes is:</p>
+<p><var>\frac{\left(1+\sqrt{2}\right)+\left(1+\sqrt{2}\right)+\left(2\right)+\left(1+\sqrt{2}\right)+\left(2\right)+\left(1+\sqrt{2}\right)}{6} = 2.276142...</var></p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>2
+-879 981
+-866 890
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>91.9238815543
+</pre>
+<p>There are two paths to visit the towns: <var>1</var> → <var>2</var> and <var>2</var> → <var>1</var>. These paths have the same length.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>8
+-406 10
+512 859
+494 362
+-955 -475
+128 553
+-986 -885
+763 77
+449 310
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>7641.9817824387
+</pre></section>
+</div>
+</span>

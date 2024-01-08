@@ -1,0 +1,71 @@
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({ tex2jax: { inlineMath: [["$","$"], ["\\(","\\)"]], processEscapes: true }});
+</script>
+<script language="JavaScript" type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML">
+</script>
+
+<H1>15 Puzzle</H1>
+
+
+<p>
+  The goal of the 15 puzzle problem is to complete pieces on $4 \times 4$ cells where one of the cells is empty space.
+</p>
+
+<p>
+  In this problem, the space is represented by 0 and pieces are represented by integers from 1 to 15 as shown below.
+</p>
+
+<pre>
+1 2 3 4
+6 7 8 0
+5 10 11 12
+9 13 14 15
+</pre>
+
+<p>
+  You can move a piece toward the empty space at one step. Your goal is to make the pieces the following configuration in the shortest move (fewest steps).
+</p>
+
+<pre>
+1 2 3 4
+5 6 7 8
+9 10 11 12
+13 14 15 0
+</pre>
+
+<p>
+  Write a program which reads an initial state of the puzzle and prints the fewest steps to solve the puzzle.
+</p>
+
+<H2>Input</H2>
+
+<p>
+  The $4 \times 4$ integers denoting the pieces or space are given.
+</p>
+
+<H2>Output</H2>
+
+<p>
+  Print the fewest steps in a line.
+</p>
+
+<H2>Constraints</H2>
+
+<ul>
+<li>The given puzzle is solvable in at most 45 steps.</li>
+</ul>
+
+
+<H2>Sample Input</H2>
+<pre>
+1 2 3 4
+6 7 8 0
+5 10 11 12
+9 13 14 15
+</pre>
+
+<H2>Sample Output</H2>
+<pre>
+8
+</pre>

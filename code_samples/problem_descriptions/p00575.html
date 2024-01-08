@@ -1,0 +1,105 @@
+<h1>ソーシャルゲーム (Social Game)</h1>
+
+<!--　　時間制限 : 2sec / メモリ制限 : 256MB-->
+
+<h2> 問題文</h2>
+
+<p>
+JOI 君は明日から新たにソーシャルゲームを始めることにした．
+</p>
+
+<p>
+このソーシャルゲームでは，<var>1</var> 日につき <var>1</var> 回までログインすることができ，ログインするたびに <var>A</var> 枚のコインが得られる．
+</p>
+
+<p>
+また，月曜日から日曜日まで <var>7</var> 日連続でログインすると，そのたびに，追加で <var>B</var> 枚のコインが得られる．
+</p>
+
+<p>
+これ以外にコインがもらえることはない．
+</p>
+
+<p>
+明日は月曜日である．JOI 君が少なくとも <var>C</var> 枚のコインを得るためにログインしなければならない回数の最小値を求めよ．
+</p>
+
+
+<h2> 制約</h2>
+
+<ul>
+<li><var>1 ≦ A ≦ 1000</var></li>
+<li><var>0 ≦ B ≦ 1000</var></li>
+<li><var>1 ≦ C ≦ 1000000 (= 10^6)</var></li>
+</ul>
+
+<h2>  入力・出力</h2>
+
+<p>
+<b>入力</b><br>
+入力は以下の形式で標準入力から与えられる．<br>
+<var>A</var> <var>B</var> <var>C</var>
+</p>
+
+<p>
+<b>出力</b><br>
+JOI 君が少なくとも <var>C</var> 枚のコインを得るためにログインしなければならない回数の最小値を出力せよ．
+</p>
+
+<!--
+<h2> 小課題</h2>
+<p style="line-height: 200%;  margin-left: 30px; margin-right: 30px;">
+</p>
+
+<p style="line-height: 200%;  margin-left: 30px; margin-right: 30px;">
+<ol style="line-height: 200%;  margin-left: 30px; margin-right: 30px;">
+<li>(<var>40</var> 点) <var>B = 0</var></li>
+<li>(<var>60</var> 点) 追加の制約はない．</li>
+</ol>
+</p>
+-->
+
+<h2> 入出力例</h2>
+
+<h3>入力例 1</h3>
+<pre>
+3 0 10
+</pre>
+
+<h3>出力例 1</h3>
+<pre>
+4
+</pre>
+
+<ul>
+<li><var>1</var> 回のログインあたり <var>3</var> 枚のコインが得られ，<var>10</var> 枚のコインを集めたい．</li>
+<li>JOI 君は，月曜日から連続 <var>4</var> 日間ログインすることで <var>12</var> 枚のコインが得られる．</li>
+<li><var>3</var> 回以下のログインで <var>10</var> 枚以上のコインを得ることはできないので，JOI 君がログインしなければならない回数の最小値は <var>4</var> である．従って，<var>4</var> を出力する．</li>
+</ul>
+</p>
+
+<h3>入力例 2</h3>
+<pre>
+1 2 10
+</pre>
+
+<h3>出力例 2</h3>
+<pre>
+8
+</pre>
+
+<ul>
+<li><var>1</var> 回のログインあたり <var>1</var> 枚のコインが得られる．それとは別に，1 週間連続でログインすることで <var>2</var> 枚のコインが得られる．<var>10</var> 枚のコインを集めたい．</li>
+<li>月曜日から日曜日まで連続でログインすると，日々のコイン <var>7</var> 枚に加えて，<var>2</var> 枚のコインが得られるため，合計 <var>9</var> 枚のコインが得られる．従って，更にもう <var>1</var> 回ログインすることにより，<var>10</var> 枚のコインが得られる．</li>
+<li><var>7</var> 回以下のログインで <var>10</var> 枚以上のコインを得ることはできないので，JOI 君がログインしなければならない回数の最小値は <var>8</var> である．従って，<var>8</var> を出力する．</li>
+</ul>
+
+<br/>
+<div class="source">
+<p class="source">
+<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="クリエイティブ・コモンズ・ライセンス" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png"/></a>
+</p>
+<p class="source">
+<a href="https://www.ioi-jp.org/joi/2018/2019-yo/index.html">情報オリンピック日本委員会作 『第 18 回日本情報オリンピック JOI 2018/2019 予選競技課題』</a>
+</p>
+</div>

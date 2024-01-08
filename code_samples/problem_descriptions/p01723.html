@@ -1,0 +1,127 @@
+
+
+
+<p>イクタ君の住む町には<var>N</var>個の塔がある。
+それぞれの塔には0から<var>N&minus;1</var>までの異なる番号が与えられており、番号<var>i</var>の塔を塔<var>i</var>と呼ぶ。
+好奇心旺盛なイクタ君は<var>N</var>個の塔の高さに興味を持ち、それらの大小関係を表す表<var>T</var>を作ることにした。
+<var>T</var>は<var>N &times; N</var>個の要素を持ち、各要素<var>T<sub>i, j</sub> (0 &le; i, j &le; N &minus; 1)</var>は次のように定義される。
+</p>
+
+<ul>
+<li> <var>T<sub>i, j</sub> = &minus;1</var>  <var>&hArr;</var> 塔<var>i</var>の高さが塔<var>j</var>の高さより小さい
+</li>
+<li> <var>T<sub>i, j</sub> =  0</var>  <var>&hArr;</var> 塔<var>i</var>の高さと塔<var>j</var>の高さが等しい
+</li>
+<li> <var>T<sub>i, j</sub> =  1</var>  <var>&hArr;</var> 塔<var>i</var>の高さが塔<var>j</var>の高さより大きい
+</li>
+</ul>
+
+<p>イクタ君は表<var>T</var>を作成するための調査として、2つの塔を選びそれらの高さを比較するということを<var>N&minus;1</var>回繰り返した。
+</p>
+
+<p>イクタ君の調査に関して以下のことがわかっている。
+</p>
+
+<ul>
+<li> <var>i</var>回目の比較<var>(1 &le; i &le; \ N &minus; 1)</var>で塔<var>a<sub>i</sub></var>, 塔<var>b<sub>i</sub></var>が選ばれたとすると塔<var>a<sub>i</sub></var>の高さが塔<var>b<sub>i</sub></var>の高さより大きかった。つまり<var>T<sub>a<sub>i</sub>, b<sub>i</sub></sub> = 1</var>, <var>T<sub>b<sub>i</sub>, a<sub>i</sub></sub> = &minus;1</var>であった。
+</li>
+<li> それぞれの塔は自分自身よりも大きな塔とは高々一回しか比較されていない。
+</li></ul>
+
+<p>残念ながらイクタ君の調査による情報だけで表<var>T</var>の内容を一意に決めることができるとは限らない。
+表<var>T</var>がイクタ君の調査と矛盾せず、<var>T</var>が定義されるような塔の高さの組み合わせが存在するとき<var>T</var>を正しい表と呼ぶことにする。
+正しい表として何通りのものが考えられるかを計算してイクタ君に教えて欲しい。
+</p>
+
+<p>ただし、比較された２つの塔の高さは互いに異なるがすべての塔の高さが互いに異なるとは限らない。
+</p>
+
+<h2>Input</h2>
+<p>入力は以下の形式で与えられる。
+</p>
+
+
+<pre>
+<var>N</var><br><var>a<sub>1</sub></var> <var>b<sub>1</sub></var><br>...<br><var>a<sub>N&minus;1</sub></var> <var>b<sub>N&minus;1</sub></var>
+</pre>
+
+<p><var>N</var>は塔の数を表す。
+<var>a<sub>i</sub></var>, <var>b<sub>i</sub></var> (<var>1 &le; i &le; N &minus; 1</var>)は塔<var>a<sub>i</sub></var>が塔<var>b<sub>i</sub></var>より高いことを表す。
+</p>
+
+<h3>Constraints</h3>
+<p>入力中の各変数は以下の制約を満たす。
+</p>
+<ul>
+<li> <var>1 &le; N &le; 200</var>
+</li>
+<li> <var>0 &le; a<sub>i</sub>, b<sub>i</sub> < N</var>
+</li>
+<li> <var>a<sub>i</sub> &ne; b<sub>i</sub></var>
+</li>
+<li> 異なる塔が同じ高さであることもある。
+</li>
+<li> イクタ君の調査結果自体が矛盾していることはなく、少なくとも1つイクタ君の調査結果と矛盾しない表<var>T</var>が存在する。
+</li></ul>
+
+
+<h2>Output</h2>
+<p>考えられる正しい表Tの個数の数を1,000,000,007で割ったあまりを出力せよ。
+</p>
+<h2>Sample Input 1</h2>
+
+<pre>3
+0 1
+1 2
+</pre>
+<h2>Output for the Sample Input 1</h2>
+
+<pre>1
+</pre>
+
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_JAGSummerCamp2013Day3_Ordering_sample1" height="74" width="77">
+<br>
+<ul><li> 正しい表<var>T</var>は上図の1通りである。
+</li></ul>
+
+<h2>Sample Input 2</h2>
+
+<pre>3 
+0 1
+0 2 
+</pre>
+<h2>Output for the Sample Input 2</h2>
+
+<pre>3
+</pre><img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_JAGSummerCamp2013Day3_Ordering_sample5" height="76" width="233">
+<br>
+<ul><li> 正しい表<var>T</var>は上図の3通りである。
+</li></ul>
+
+<h2>Sample Input 3</h2>
+
+<pre>1 
+</pre>
+<h2>Output for the Sample Input 3</h2>
+
+<pre>1
+</pre><img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_JAGSummerCamp2013Day3_Ordering_sample4" height="30" width="30">
+<br>
+<ul><li> 正しい表<var>T</var>は上図の1通りである。
+</li></ul>
+
+
+<h2>Sample Input 4</h2>
+
+<pre>7
+0 1
+1 2
+2 3
+3 4
+0 5
+0 6
+</pre>
+<h2>Output for the Sample Input 4</h2>
+
+<pre>91
+</pre>

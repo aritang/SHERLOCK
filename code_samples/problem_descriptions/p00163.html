@@ -1,0 +1,78 @@
+
+
+
+<H1>有料道路通行料</H1>
+
+<p>
+20XX年に喜多方市熱塩加納町から南会津町までの6区間、総距離58kmの会津中央道路が完成し開通する予定です。
+</p>
+
+<p>
+開通後、半年間は利用促進のため17時30分〜19時30分までに出発ICか到着ICを通過し、なおかつ走行距離が40km以下の車に対する通行料金は半額になります。ただし料金は50円単位とし、端数は切り上げます。下記の表は料金と距離の一覧表です。
+</p>
+
+<center>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE1_highwayToll1"><br><br>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE1_highwayToll2">
+</center><br>
+
+<p>
+例えば喜多方（２）から会津若松（４）までは料金が450円、距離が12kmとなります。半額時間帯であれば250円になります。
+</p>
+
+<p>
+出発IC、出発IC通過時刻、到着IC、到着IC通過時刻を入力とし、料金を計算して出力するプログラムを作成してください。ただし、入力される時刻は24 時間表記の値とします。なお、17時30分および19時30分ちょうどに通過した場合も半額時間帯に含めます。
+</p>
+
+
+<H2>Input</H2>
+
+<p>
+複数のデータセットの並びが入力として与えられます。入力の終わりはゼロひとつの行で示されます。
+各データセットは以下の形式で与えられます。
+</p>
+
+<pre>
+<var>d</var>
+<var>h<sub>d</sub></var> <var>m<sub>d</sub></var>
+<var>a</var>
+<var>h<sub>a</sub></var> <var>m<sub>a</sub></var>
+</pre>
+
+<p>
+１行目に出発ICの番号 <var>d</var> (1 &le; <var>d</var> &le; 7)、２行目に出発ICの通過時刻の時間 <var>h<sub>d</sub></var> (0 &le; <var>h<sub>d</sub></var> &le; 23) と分 <var>m<sub>d</sub></var> (0 &le; <var>m<sub>d</sub></var> &le; 59) が与えられます。
+</p>
+<p>
+3行目に到着ICの番号 <var>a</var> (1 &le; <var>a</var> &le; 7)、４行目に到着ICの通過時刻の時間 <var>h<sub>a</sub></var> (0 &le; <var>h<sub>a</sub></var> &le; 23) と分 <var>m<sub>a</sub></var> (0 &le; <var>m<sub>a</sub></var> &le; 59) が与えられます。
+</p>
+
+
+<H2>Output</H2>
+<p>
+データセットごとに通行料金（整数）を１行に出力します。
+</p>
+
+
+<H2>Sample Input</H2>
+
+<pre>
+2
+17 25
+4
+17 45
+4
+17 25
+7
+19 35
+0
+</pre>
+
+<H2>Output for the Sample Input</H2>
+
+<pre>
+250
+1300
+</pre>
+
+
+

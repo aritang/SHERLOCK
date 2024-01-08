@@ -1,0 +1,128 @@
+
+
+<script language="JavaScript" type="text/javascript" src="js/varmath.js" charset="UTF-8"></script>
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+});
+</script>
+<script type="text/javascript" async
+src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+<h2>C: 成長する点 - Growing Point -</h2>
+
+<h3>問題</h3>
+<p>
+粘菌コンピュータというものがある。
+ある種の粘菌には「餌を求め、餌と餌の最短距離をつなぐ形に変形する」
+という性質がある。
+これを利用し、餌を「入力」、形を「出力」とみなして
+コンピュータとして利用することができる。
+</p>
+
+<p>
+今、二次元平面上に1つの粘菌の拠点と<var>N</var>個の餌が存在する。それぞれの餌には<var>1</var>から<var>N</var>までの異なる番号が与えられ、拠点には番号0が与えられている。
+この粘菌はある餌を食べるために、その餌と最も近い拠点の最短距離を結ぶ管状に
+成長し、食べた位置に新たに拠点を形成する。
+新たに形成した拠点は拠点を形成する直前に食べた餌と同じ番号を持つ。
+粘菌は拠点以外の場所から成長することはできない。
+以降では、拠点と餌を二次元平面上の点、管状に成長した粘菌を複数の線分として考える。
+</p>
+
+<p>
+すべての拠点と線分からなる構造を粘菌網と呼ぶ。
+粘菌は1つの餌を食べるために次のような操作を繰り返す。
+</p>
+<ol>
+<li>まだ食べていない餌の中で粘菌網に最も近い餌を選ぶ。そのような餌が複数存在する場合は番号が最も小さい餌を選ぶ。</li>
+<li>選んだ餌と最も近い拠点を選ぶ。そのような拠点が複数存在する場合は、最も拠点の番号が小さいものから取る。</li>
+<li>選んだ拠点と餌を結ぶ線分を引く。以降ではこのとき選んだ餌も拠点として扱う。</li>
+</ol>
+
+<p>
+この粘菌は生きるために必要な栄養を取るのに<var>M</var>個の餌を食べる必要がある。
+粘菌が<var>M</var>個の餌を食べるまでに引いたすべての線分の長さの合計を求めよ。
+また、出力する値は0.0001以下の誤差を含んでいても良い。
+</p>
+
+<p>以下の図では入力例2の粘菌の様子を示している。</p>
+
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE3_HUPC20160308_c1" type="image/jpeg" width="320"></img>
+
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE3_HUPC20160308_c2" type="image/jpeg" width="320"></img>
+
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE3_HUPC20160308_c3" type="image/jpeg" width="320"></img>
+
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE3_HUPC20160308_c4" type="image/jpeg" width="320"></img>
+
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE3_HUPC20160308_c5" type="image/jpeg" width="320"></img>
+
+<h3>入力形式</h3>
+<pre>
+<var>N</var> <var>M</var> <var>X</var> <var>Y</var>
+<var>px_1</var> <var>py_1</var>
+...
+<var>px_n</var> <var>py_n</var>
+</pre>
+
+<p>
+<var>1</var>行目には餌の数<var>N</var>（<var>1 \&le; N \&le; 5,000</var>）、食べる餌の個数<var>M</var> （<var>1 \&le; M \&le; N</var>）、番号0の拠点の座標<var>X</var>, <var>Y</var>（<var>&minus;5,000 \&le; X, Y \&le; 5,000</var>）が整数値で与えられる。続く<var>N</var>行には番号順に餌の座標<var>px_i</var>, <var>py_i</var>（<var>1 \&le; i \&le; N</var>）が整数値で与えられる。（<var>&minus;5,000 \&le; px_i, py_i \&le; 5,000</var>）
+また、番号が異なる餌は異なる座標に存在し、それぞれの餌と番号0の拠点の座標は異なる。
+</p>
+
+<h3>出力形式</h3>
+<p>成長した距離の合計を1行で出力せよ。また、出力する値は0.0001以下の誤差を含んでいても良い。</p>
+
+<h3>入力例1</h3>
+<pre>
+2 2 0 0
+3 3
+4 0
+</pre>
+
+<h3>出力例1</h3>
+<pre>7.16227766017</pre>
+
+<p>
+最初は番号1の餌と拠点の距離が $3\sqrt{2}$ と番号2の餌と拠点の距離が<var>4</var>なので
+番号2の餌が選ばれる。その後番号1の餌と粘菌網との距離が<var>3</var>になり、番号1の餌が選ばれる。
+</p>
+
+<h3>入力例2</h3>
+<pre>
+4 4 1 3
+3 3
+2 1
+3 1
+1 1
+</pre>
+
+<h3>出力例2</h3>
+<pre>6.2360679775</pre>
+<p>図のように餌1、2、4、3の順に粘菌は餌を食べていく</p>
+
+<h3>入力例3</h3>
+<pre>
+16 15 -4077 763
+-2480 2841
+-2908 -1096
+676 -4080
+-4988 -2634
+3004 -1360
+-2272 1773
+-4344 -3631
+-355 4426
+-3740 3634
+-3330 2191
+-3423 -2999
+-3438 2281
+4754 -1500
+-3440 -3873
+-2089 -3419
+1426 2793
+</pre>
+
+<h3>出力例3</h3>
+<pre>25349.9626798834</pre>

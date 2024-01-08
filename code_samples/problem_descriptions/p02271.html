@@ -1,0 +1,84 @@
+
+<H1>Exhaustive Search</H1>
+
+
+<p>
+Write a program which reads a sequence <i>A</i> of <i>n</i> elements and an integer <i>M</i>, and outputs "<span>yes</span>" if you can make <i>M</i> by adding elements in <i>A</i>, otherwise "<span>no</span>". You can use an element only once.
+</p>
+<p>
+You are given the sequence <i>A</i> and <i>q</i> questions where each question contains <i>M<sub>i</sub></i>.
+</p>
+
+<H2>Input</H2>
+
+<p>
+In the first line <i>n</i> is given. In the second line, <i>n</i> integers are given. In the third line <i>q</i> is given. Then, in the fourth line, <i>q</i> integers (<i>M<sub>i</sub></i>) are given.
+</p>
+
+
+<H2>Output</H2>
+
+<p>
+For each question <i>M<sub>i</sub></i>, print <span>yes</span> or <span>no</span>.
+</p>
+
+<H2>Constraints</H2>
+
+<ul>
+<li>n &le; 20</li>
+<li> q &le; 200 </li>
+<li>1 &le; elements in A &le; 2000</li>
+<li>1 &le; M<sub>i</sub> &le; 2000</li>
+</ul>
+
+
+<H2>Sample Input 1</H2>
+<pre>
+5
+1 5 7 10 21
+8
+2 4 17 8 22 21 100 35
+</pre>
+
+<H2>Sample Output 1</H2>
+<pre>
+no
+no
+yes
+yes
+yes
+yes
+no
+no
+</pre>
+
+<H2>Notes</H2>
+
+<p>
+You can solve this problem by a Burte Force approach. Suppose solve(p, t) is a function which checkes whether you can make t by selecting elements after p-th element (inclusive). Then you can recursively call the following functions:
+</p>
+
+<p>
+solve(0, M) <br>
+solve(1, M-{sum created from elements before 1st element}) <br>
+solve(2, M-{sum created from elements before 2nd element}) <br>
+...
+</p>
+
+<p>
+The recursive function has two choices: you selected p-th element and not. So, you can check solve(p+1, t-A[p]) and solve(p+1, t) in solve(p, t) to check the all combinations.
+</p>
+
+<p>
+For example, the following figure shows that 8 can be made by A[0] + A[2].
+</p>
+
+<center>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_ALDS1_5_A">
+</center>
+
+<!--
+<a href="template/ALDS1_3_A_template.c" target="_blank">Template in C</a>
+-->
+
+

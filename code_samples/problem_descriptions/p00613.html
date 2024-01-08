@@ -1,0 +1,64 @@
+
+<H1><font color="#000000">Problem I:</font> A Piece of Cake</H1>
+
+<p>
+In the city, there are two pastry shops.  One shop was very popular because its cakes are pretty tasty.  
+However, there was a man who is displeased at the shop.  He was an owner of another shop.  Although cause of his shop's unpopularity is incredibly awful taste of its cakes, he never improved it.  He was just growing hate, ill, envy, and jealousy.
+</p>
+<p>
+Finally, he decided to vandalize the rival.
+</p>
+<p>
+His vandalize is to mess up sales record of cakes. The rival shop sells <i>K</i> kinds of cakes and sales quantity is recorded for each kind. He calculates sum of sales quantities for all pairs of cakes. Getting <i>K</i>(<i>K</i>-1)/2 numbers, then he rearranges them randomly, and replace an original sales record with them.
+</p>
+<p>
+An owner of the rival shop is bothered.  Could you write, at least, a program that finds total sales quantity of all cakes for the pitiful owner?
+</p>
+
+<H2>Input</H2>
+
+<p>
+Input file contains several data sets.
+A single data set has following format:
+</p>
+
+<pre>
+<i>K</i>
+<i>c</i><sub>1</sub> <i>c</i><sub>2</sub> ... <i>c</i><sub><i>K</i>&times;(<i>K</i>-1)/2</sub>
+</pre>
+
+<p>
+<i>K</i> is an integer that denotes how many kinds of cakes are sold.  <i>c<sub>i</sub></i> is an integer that denotes a number written on the card.
+</p>
+<p>
+The end of input is denoted by a case where <i>K</i> = 0.  You should output nothing for this case.
+</p>
+
+<H2>Output</H2>
+
+<p>
+For each data set, output the total sales quantity in one line.
+</p>
+
+<H2>Constraints</H2>
+<ul>
+<li>Judge data contains at most 100 data sets.</li>
+<li>2 &le; <i>K</i> &le; 100</li>
+<li>0 &le; <i>c<sub>i</sub></i> &le; 100 </li>
+</ul>
+
+<H2>Sample Input</H2>
+<pre>
+2
+2
+3
+5 4 3
+0
+</pre>
+
+<H2>Output for the Sample Input</H2>
+<pre>
+2
+6
+</pre>
+

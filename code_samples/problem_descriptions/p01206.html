@@ -1,0 +1,107 @@
+
+<H1><font color="#000">Problem E:</font> Black Force</H1>
+
+<p>
+A dam construction project was designed around an area called Black Force. The area is surrounded by
+mountains and its rugged terrain is said to be very suitable for constructing a dam.
+</p>
+<p>
+However, the project is now almost pushed into cancellation by a strong protest campaign started by the
+local residents. Your task is to plan out a compromise proposal. In other words, you must find a way to
+build a dam with sufficient capacity, without destroying the inhabited area of the residents.
+</p>
+<p>
+The map of Black Force is given as <i>H</i> &times; <i>W</i> cells (0 &lt; <i>H</i>, <i>W</i> &le; 20). Each cell <i>h<sub>i, j</sub></i> is a positive integer
+representing the height of the place. The dam can be constructed at a connected region surrounded
+by higher cells, as long as the region contains neither the outermost cells nor the inhabited area of the
+residents. Here, a region is said to be connected if one can go between any pair of cells in the region
+by following a sequence of left-, right-, top-, or bottom-adjacent cells without leaving the region. The
+constructed dam can store water up to the height of the lowest surrounding cell. The capacity of the dam
+is the maximum volume of water it can store. Water of the depth of 1 poured to a single cell has the
+volume of 1.
+</p>
+<p>
+The important thing is that, in the case it is difficult to build a sufficient large dam, it is allowed to
+choose (at most) one cell and do groundwork to increase the height of the cell by 1 unit. Unfortunately,
+considering the protest campaign, groundwork of larger scale is impossible. Needless to say, you cannot
+do the groundwork at the inhabited cell.
+</p>
+<p>
+Given the map, the required capacity, and the list of cells inhabited, please determine whether it is possible
+to construct a dam.
+</p>
+
+<H2>Input</H2>
+
+<p>
+The input consists of multiple data sets. Each data set is given in the following format:
+</p>
+<pre>
+       <i>H W C R</i>
+       <i>h</i><sub>1,1</sub> <i>h</i><sub>1,2</sub> . . . <i>h</i><sub>1,<i>W</i></sub>
+       ...
+       <i>h</i><sub><i>H</i>,1</sub> <i>h</i><sub><i>H</i>,2</sub> . . . <i>h</i><sub><i>H</i>,<i>W</i></sub>
+       <i>y</i><sub>1</sub> <i>x</i><sub>1</sub>
+       ...
+       <i>y<sub>R</sub> x<sub>R</sub></i>
+</pre>
+<p>
+<i>H</i> and <i>W</i> is the size of the map. <i.C</i> is the required capacity. <i>R</i> (0 &lt; <i>R</i> &lt; <i>H</i> &times; <i>W</i>) is the number of cells
+inhabited. The following <i>H</i> lines represent the map, where each line contains <i>W</i> numbers separated by
+space. Then, the <i>R</i> lines containing the coordinates of inhabited cells follow. The line “<i>y x</i>” means that
+the cell <i>h<sub>y,x</sub></i> is inhabited.
+</p>
+<p>
+The end of input is indicated by a line “0 0 0 0”. This line should not be processed.
+</p>
+
+<H2>Output</H2>
+
+<p>
+For each data set, print “Yes” if it is possible to construct a dam with capacity equal to or more than <i>C</i>.
+Otherwise, print “No”.
+</p>
+
+<H2>Sample Input</H2>
+<pre>
+4 4 1 1
+2 2 2 2
+2 1 1 2
+2 1 1 2
+2 1 2 2
+1 1
+4 4 1 1
+2 2 2 2
+2 1 1 2
+2 1 1 2
+2 1 2 2
+2 2
+4 4 1 1
+2 2 2 2
+2 1 1 2
+2 1 1 2
+2 1 1 2
+1 1
+3 6 6 1
+1 6 7 1 7 1
+5 1 2 8 1 6
+1 4 3 1 5 1
+1 4
+5 6 21 1
+1 3 3 3 3 1
+3 1 1 1 1 3
+3 1 1 3 2 2
+3 1 1 1 1 3
+1 3 3 3 3 1
+3 4
+0 0 0 0
+</pre>
+
+<H2>Output for the Sample Input</H2>
+<pre>
+Yes
+No
+No
+No
+Yes
+</pre>

@@ -1,0 +1,78 @@
+<span class="lang-en">
+<p>Score : <var>200</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>We have <var>N</var> weights indexed <var>1</var> to <var>N</var>. The mass of the weight indexed <var>i</var> is <var>W_i</var>.</p>
+<p>We will divide these weights into two groups: the weights with indices not greater than <var>T</var>, and those with indices greater than <var>T</var>, for some integer <var>1 \leq T &lt; N</var>. Let <var>S_1</var> be the sum of the masses of the weights in the former group, and <var>S_2</var> be the sum of the masses of the weights in the latter group.</p>
+<p>Consider all possible such divisions and find the minimum possible absolute difference of <var>S_1</var> and <var>S_2</var>.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>2 \leq N \leq 100</var></li>
+<li><var>1 \leq W_i \leq 100</var></li>
+<li>All values in input are integers.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+<var>W_1</var> <var>W_2</var> <var>...</var> <var>W_{N-1}</var> <var>W_N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the minimum possible absolute difference of <var>S_1</var> and <var>S_2</var>.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>3
+1 2 3
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>0
+</pre>
+<p>If <var>T = 2</var>, <var>S_1 = 1 + 2 = 3</var> and <var>S_2 = 3</var>, with the absolute difference of <var>0</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>4
+1 3 1 1
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>2
+</pre>
+<p>If <var>T = 2</var>, <var>S_1 = 1 + 3 = 4</var> and <var>S_2 = 1 + 1 = 2</var>, with the absolute difference of <var>2</var>. We cannot have a smaller absolute difference.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>8
+27 23 76 2 3 5 62 52
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>2
+</pre></section>
+</div>
+</span>

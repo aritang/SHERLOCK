@@ -1,0 +1,187 @@
+
+<H1>
+Missing Numbers
+</H1>
+
+
+<P>
+Toshizo is the manager of a convenience store chain in Hakodate.
+Every day, each of the stores in his chain sends him a table of the
+products that they have sold.  Toshizo's job is to compile these
+figures and calculate how much the stores have sold in total.
+</P>
+ 
+<P>
+The type of a table that is sent to Toshizo by the stores looks like this
+(all numbers represent units of products sold):
+<PRE> 
+                       Store1      Store2      Store3         Totals
+ Product A                 -5          40          70      |    105
+ Product B                 20          50          80      |    150
+ Product C                 30          60          90      |    180
+ -----------------------------------------------------------
+ Store's total sales       45         150         240           435
+</PRE>
+<p>
+By looking at the table, Toshizo can tell at a glance which goods are
+selling well or selling badly, and which stores are paying well and
+which stores are too empty. Sometimes, customers will bring products
+back, so numbers in a table can be negative as well as positive.
+</P>
+
+<P>
+Toshizo reports these figures to his boss in Tokyo, and together they
+sometimes decide to close stores that are not doing well and sometimes
+decide to open new stores in places that they think will be profitable.
+So, the total number of stores managed by Toshizo is not fixed. Also,
+they often decide to discontinue selling some products that are not
+popular, as well as deciding to stock new items that are likely to be
+popular. So, the number of products that Toshizo has to monitor is also
+not fixed.
+</P>
+ 
+<P>
+One New Year, it is very cold in Hakodate. A water pipe bursts in
+Toshizo's office and floods his desk. When Toshizo comes to work, he
+finds that the latest sales table is not legible. He can make out some
+of the figures, but not all of them. He wants to call his boss in
+Tokyo to tell him that the figures will be late, but he knows that his
+boss will expect him to reconstruct the table if at all possible.
+</P>
+ 
+<P>
+Waiting until the next day won't help, because it is the New Year, and
+his shops will be on holiday.  So, Toshizo decides either to work out
+the values for himself, or to be sure that there really is no unique
+solution. Only then can he call his boss and tell him what has
+happened.
+</P>
+ 
+<P>
+But Toshizo also wants to be sure that a problem like this never
+happens again. So he decides to write a computer program that all the
+managers in his company can use if some of the data goes missing
+from their sales tables. For instance, if they have a table like:
+<PRE> 
+                  Store 1     Store 2    Store 3            Totals
+ Product A              ?           ?         70        |     105
+ Product B              ?          50          ?        |     150
+ Product C             30          60         90        |     180
+ --------------------------------------------------------
+ Store's total sales   45         150        240              435
+</PRE>
+<p>
+then Toshizo's program will be able to tell them the correct figures
+to replace the question marks.
+In some cases, however, even his program will not be able to replace
+all the question marks, in general.
+For instance, if a table like:</p>
+<PRE>
+                  Store 1     Store 2            Totals
+ Product A              ?           ?        |      40
+ Product B              ?           ?        |      40
+ ---------------------------------------------
+ Store's total sales   40          40               80
+</PRE>
+<p>
+is given, there are infinitely many possible solutions.
+In this sort of case, his program will just say "NO". 
+Toshizo's program works for any data where the totals row and column
+are still intact.
+Can you reproduce Toshizo's program?
+</P>
+
+</P>
+
+<H2>Input</H2>
+<P>The input consists of multiple data sets, each in the following
+format:</p>
+<PRE>
+<I>p s</I>
+<I>row</I><SUB>1</SUB>
+<I>row</I><SUB>2</SUB>
+...
+<I>row</I><SUB>p</SUB>
+<I>totals</I>
+</PRE>
+<p>
+The first line consists of two integers <I>p</I> and <I>s</I>,
+representing the numbers of products and stores, respectively.
+The former is less than 100 and the latter is less than 10.
+</P>
+
+<P>They are separated by a blank character.
+Each of the subsequent lines represents a row of the table and
+consists of <I>s</I>+1 elements, each of which is either an integer or
+a question mark.
+The <I>i</I>-th line (1 &lt;= <I>i</I> &lt;= <I>p</I>) corresponds to
+the <I>i</I>-th product and the last line the totals row.
+The first <I>s</I> elements in a line represent the sales of each
+store and the last one the total sales of the product.
+Numbers or question marks in a line are separated by a blank character.
+There are no missing numbers in the totals column or row. 
+There is at least one question mark in each data set.
+</P>
+
+<P>The known numbers in the table except the totals row and column is
+between -1,000 and 1,000, inclusive.
+However, unknown numbers, represented by question marks, may not be in
+this range.
+The total sales number of each product is between -10,000 and
+10,000, inclusive. 
+The total sales number of each store is between -100,000 and
+100,000, inclusive. 
+</P>
+
+<P>There is a blank line between each data set in the input, and the input
+is terminated by a line consisting of a zero. 
+</P>
+
+</PRE>
+ 
+<H2>Output</H2>
+
+<P>When there is a unique solution, your program should print the missing
+numbers in the occurrence order in the input data set.
+Otherwise, your program should print just "NO".
+The answers of consecutive data sets should be separated by an empty
+line.
+Each non-empty output line contains only a single number or "NO".
+</P>
+
+<H2>Sample Input</H2>
+<PRE>
+3 3
+? ? 70 105
+? 50 ? 150
+30 60 90 180
+45 150 240 435
+ 
+2 2
+? ? 40
+? ? 40
+40 40 80
+
+2 3
+? 30 40 90
+50 60 70 180
+70 90 110 270
+
+0
+</PRE>
+
+<H2>Output for the Sample Input</H2>
+<PRE>
+-5
+40
+20
+80
+ 
+NO
+
+20
+</PRE>
+
+
+
+

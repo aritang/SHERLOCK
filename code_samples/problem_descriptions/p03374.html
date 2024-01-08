@@ -1,0 +1,125 @@
+<span class="lang-en">
+<p>Score : <var>500</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>"Teishi-zushi", a Japanese restaurant, is a plain restaurant with only one round counter. The outer circumference of the counter is <var>C</var> meters. Customers cannot go inside the counter.</p>
+<p>Nakahashi entered Teishi-zushi, and he was guided to the counter. Now, there are <var>N</var> pieces of sushi (vinegared rice with seafood and so on) on the counter. The distance measured clockwise from the point where Nakahashi is standing to the point where the <var>i</var>-th sushi is placed, is <var>x_i</var> meters. Also, the <var>i</var>-th sushi has a nutritive value of <var>v_i</var> kilocalories.</p>
+<p>Nakahashi can freely walk around the circumference of the counter. When he reach a point where a sushi is placed, he can eat that sushi and take in its nutrition (naturally, the sushi disappears). However, while walking, he consumes <var>1</var> kilocalories per meter.</p>
+<p>Whenever he is satisfied, he can leave the restaurant from any place (he does not have to return to the initial place). On balance, at most how much nutrition can he take in before he leaves? That is, what is the maximum possible value of the total nutrition taken in minus the total energy consumed? Assume that there are no other customers, and no new sushi will be added to the counter. Also, since Nakahashi has plenty of nutrition in his body, assume that no matter how much he walks and consumes energy, he never dies from hunger.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 ≤ N ≤ 10^5</var></li>
+<li><var>2 ≤ C ≤ 10^{14}</var></li>
+<li><var>1 ≤ x_1 &lt; x_2 &lt; ... &lt; x_N &lt; C</var></li>
+<li><var>1 ≤ v_i ≤ 10^9</var></li>
+<li>All values in input are integers.</li>
+</ul>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Subscores</h3><ul>
+<li><var>300</var> points will be awarded for passing the test set satisfying <var>N ≤ 100</var>.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var> <var>C</var>
+<var>x_1</var> <var>v_1</var>
+<var>x_2</var> <var>v_2</var>
+<var>:</var>
+<var>x_N</var> <var>v_N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>If Nakahashi can take in at most <var>c</var> kilocalories on balance before he leaves the restaurant, print <var>c</var>.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>3 20
+2 80
+9 120
+16 1
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>191
+</pre>
+<p>There are three sushi on the counter with a circumference of <var>20</var> meters. If he walks two meters clockwise from the initial place, he can eat a sushi of <var>80</var> kilocalories. If he walks seven more meters clockwise, he can eat a sushi of <var>120</var> kilocalories. If he leaves now, the total nutrition taken in is <var>200</var> kilocalories, and the total energy consumed is <var>9</var> kilocalories, thus he can take in <var>191</var> kilocalories on balance, which is the largest possible value.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>3 20
+2 80
+9 1
+16 120
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>192
+</pre>
+<p>The second and third sushi have been swapped. Again, if he walks two meters clockwise from the initial place, he can eat a sushi of <var>80</var> kilocalories. If he walks six more meters counterclockwise this time, he can eat a sushi of <var>120</var> kilocalories. If he leaves now, the total nutrition taken in is <var>200</var> kilocalories, and the total energy consumed is <var>8</var> kilocalories, thus he can take in <var>192</var> kilocalories on balance, which is the largest possible value.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>1 100000000000000
+50000000000000 1
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>0
+</pre>
+<p>Even though the only sushi is so far that it does not fit into a <var>32</var>-bit integer, its nutritive value is low, thus he should immediately leave without doing anything.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 4</h3><pre>15 10000000000
+400000000 1000000000
+800000000 1000000000
+1900000000 1000000000
+2400000000 1000000000
+2900000000 1000000000
+3300000000 1000000000
+3700000000 1000000000
+3800000000 1000000000
+4000000000 1000000000
+4100000000 1000000000
+5200000000 1000000000
+6600000000 1000000000
+8000000000 1000000000
+9300000000 1000000000
+9700000000 1000000000
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 4</h3><pre>6500000000
+</pre>
+<p>All these sample inputs above are included in the test set for the partial score.</p></section>
+</div>
+</span>

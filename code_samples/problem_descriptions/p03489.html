@@ -1,0 +1,112 @@
+<span class="lang-en">
+<p>Score : <var>300</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>You are given a sequence of positive integers of length <var>N</var>, <var>a = (a_1, a_2, ..., a_N)</var>.
+Your objective is to remove some of the elements in <var>a</var> so that <var>a</var> will be a <strong>good sequence</strong>.</p>
+<p>Here, an sequence <var>b</var> is a <strong>good sequence</strong> when the following condition holds true:</p>
+<ul>
+<li>For each element <var>x</var> in <var>b</var>, the value <var>x</var> occurs exactly <var>x</var> times in <var>b</var>.</li>
+</ul>
+<p>For example, <var>(3, 3, 3)</var>, <var>(4, 2, 4, 1, 4, 2, 4)</var> and <var>()</var> (an empty sequence) are good sequences, while <var>(3, 3, 3, 3)</var> and <var>(2, 4, 1, 4, 2)</var> are not.</p>
+<p>Find the minimum number of elements that needs to be removed so that <var>a</var> will be a good sequence.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 \leq N \leq 10^5</var></li>
+<li><var>a_i</var> is an integer.</li>
+<li><var>1 \leq a_i \leq 10^9</var></li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+<var>a_1</var> <var>a_2</var> <var>...</var> <var>a_N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the minimum number of elements that needs to be removed so that <var>a</var> will be a good sequence.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>4
+3 3 3 3
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>1
+</pre>
+<p>We can, for example, remove one occurrence of <var>3</var>. Then, <var>(3, 3, 3)</var> is a good sequence.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>5
+2 4 1 4 2
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>2
+</pre>
+<p>We can, for example, remove two occurrences of <var>4</var>. Then, <var>(2, 1, 2)</var> is a good sequence.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>6
+1 2 2 3 3 3
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>0
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 4</h3><pre>1
+1000000000
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 4</h3><pre>1
+</pre>
+<p>Remove one occurrence of <var>10^9</var>. Then, <var>()</var> is a good sequence.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 5</h3><pre>8
+2 7 1 8 2 8 1 8
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 5</h3><pre>5
+</pre></section>
+</div>
+</span>

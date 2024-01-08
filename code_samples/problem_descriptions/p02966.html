@@ -1,0 +1,103 @@
+<span class="lang-en">
+<p>Score : <var>1200</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>We have a weighted directed graph with <var>N</var> vertices numbered <var>0</var> to <var>N-1</var>.</p>
+<p>The graph initially has <var>N-1</var> edges. The <var>i</var>-th edge (<var>0 \leq i \leq N-2</var>) is directed from Vertex <var>i</var> to Vertex <var>i+1</var> and has a weight of <var>0</var>.</p>
+<p>Snuke will now add a new edge <var>(i → j)</var> for every pair <var>i, j</var> (<var>0 \leq i,j \leq N-1,\ i \neq j</var>).
+The weight of the edge will be <var>-1</var> if <var>i &lt; j</var>, and <var>1</var> otherwise.</p>
+<p>Ringo is a boy. A negative cycle (a cycle whose total weight is negative) in a graph makes him sad.
+He will delete some of the edges added by Snuke so that the graph will no longer contain a negative cycle.
+The cost of deleting the edge <var>(i → j)</var> is <var>A_{i,j}</var>. He cannot delete edges that have been present from the beginning.</p>
+<p>Find the minimum total cost required to achieve Ringo's objective.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>3 \leq N \leq 500</var></li>
+<li><var>1 \leq A_{i,j} \leq 10^9</var></li>
+<li>All values in input are integers.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+<var>A_{0,1}</var> <var>A_{0,2}</var> <var>A_{0,3}</var> <var>\cdots</var> <var>A_{0,N-1}</var>
+<var>A_{1,0}</var> <var>A_{1,2}</var> <var>A_{1,3}</var> <var>\cdots</var> <var>A_{1,N-1}</var>
+<var>A_{2,0}</var> <var>A_{2,1}</var> <var>A_{2,3}</var> <var>\cdots</var> <var>A_{2,N-1}</var>
+<var>\vdots</var>
+<var>A_{N-1,0}</var> <var>A_{N-1,1}</var> <var>A_{N-1,2}</var> <var>\cdots</var> <var>A_{N-1,N-2}</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the minimum total cost required to achieve Ringo's objective.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>3
+2 1
+1 4
+3 3
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>2
+</pre>
+<p>If we delete the edge <var>(0 → 1)</var> added by Snuke, the graph will no longer contain a negative cycle.
+The cost will be <var>2</var> in this case, which is the minimum possible.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>4
+1 1 1
+1 1 1
+1 1 1
+1 1 1
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>2
+</pre>
+<p>If we delete the edges <var>(1 → 2)</var> and <var>(3 → 0)</var> added by Snuke, the graph will no longer contain a negative cycle.
+The cost will be <var>1+1=2</var> in this case, which is the minimum possible.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>10
+190587 2038070 142162180 88207341 215145790 38 2 5 20
+32047998 21426 4177178 52 734621629 2596 102224223 5 1864
+41 481241221 1518272 51 772 146 8805349 3243297 449
+918151 126080576 5186563 46354 6646 491776 5750138 2897 161
+3656 7551068 2919714 43035419 495 3408 26 3317 2698
+455357 3 12 1857 5459 7870 4123856 2402 258
+3 25700 16191 102120 971821039 52375 40449 20548149 16186673
+2 16 130300357 18 6574485 29175 179 1693 2681
+99 833 131 2 414045824 57357 56 302669472 95
+8408 7 1266941 60620177 129747 41382505 38966 187 5151064
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>2280211
+</pre></section>
+</div>
+</span>

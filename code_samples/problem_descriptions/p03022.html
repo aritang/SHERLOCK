@@ -1,0 +1,110 @@
+<span class="lang-en">
+<p>Score : <var>1600</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>Snuke found a random number generator.
+It generates an integer between <var>0</var> and <var>2^N-1</var> (inclusive).
+An integer sequence <var>A_0, A_1, \cdots, A_{2^N-1}</var>  represents the probability that each of these integers is generated. The integer <var>i</var> (<var>0 \leq i \leq 2^N-1</var>) is generated with probability <var>A_i / S</var>, where <var>S = \sum_{i=0}^{2^N-1} A_i</var>. The process of generating an integer is done independently each time the generator is executed.</p>
+<p>Snuke has an integer <var>X</var>, which is now <var>0</var>.
+He can perform the following operation any number of times:</p>
+<ul>
+<li>Generate an integer <var>v</var> with the generator and replace <var>X</var> with <var>X \oplus v</var>, where <var>\oplus</var> denotes the bitwise XOR.</li>
+</ul>
+<p>For each integer <var>i</var> (<var>0 \leq i \leq 2^N-1</var>), find the expected number of operations until <var>X</var> becomes <var>i</var>, and print it modulo <var>998244353</var>.
+More formally, represent the expected number of operations as an irreducible fraction <var>P/Q</var>. Then, there exists a unique integer <var>R</var> such that <var>R \times Q \equiv P \mod 998244353,\ 0 \leq R &lt; 998244353</var>, so print this <var>R</var>.</p>
+<p>We can prove that, for every <var>i</var>, the expected number of operations until <var>X</var> becomes <var>i</var> is a finite rational number, and its integer representation modulo <var>998244353</var> can be defined.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 \leq N \leq 18</var></li>
+<li><var>1 \leq A_i \leq 1000</var></li>
+<li>All values in input are integers.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+<var>A_0</var> <var>A_1</var> <var>\cdots</var> <var>A_{2^N-1}</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print <var>2^N</var> lines.
+The <var>(i+1)</var>-th line (<var>0 \leq i \leq 2^N-1</var>) should contain the expected number of operations until <var>X</var> becomes <var>i</var>, modulo <var>998244353</var>.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>2
+1 1 1 1
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>0
+4
+4
+4
+</pre>
+<p><var>X=0</var> after zero operations, so the expected number of operations until <var>X</var> becomes <var>0</var> is <var>0</var>.</p>
+<p>Also, from any state, the value of <var>X</var> after one operation is <var>0</var>, <var>1</var>, <var>2</var> or <var>3</var> with equal probability.
+Thus, the expected numbers of operations until <var>X</var> becomes <var>1</var>, <var>2</var> and <var>3</var> are all <var>4</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>2
+1 2 1 2
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>0
+499122180
+4
+499122180
+</pre>
+<p>The expected numbers of operations until <var>X</var> becomes <var>0</var>, <var>1</var>, <var>2</var> and <var>3</var> are <var>0</var>, <var>7/2</var>, <var>4</var> and <var>7/2</var>, respectively.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>4
+337 780 799 10 796 875 331 223 941 67 148 483 390 565 116 355
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>0
+468683018
+635850749
+96019779
+657074071
+24757563
+745107950
+665159588
+551278361
+143136064
+557841197
+185790407
+988018173
+247117461
+129098626
+789682908
+</pre></section>
+</div>
+</span>

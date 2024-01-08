@@ -1,0 +1,130 @@
+<span class="lang-en">
+<p>Score : <var>1600</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>We constructed a rectangular parallelepiped of dimensions <var>A \times B \times C</var> built of <var>ABC</var> cubic blocks of side <var>1</var>.
+Then, we placed the parallelepiped in <var>xyz</var>-space as follows:</p>
+<ul>
+<li>For every triple <var>i, j, k</var> (<var>0 \leq i &lt; A, 0 \leq j &lt; B, 0 \leq k &lt; C</var>), there exists a block that has a diagonal connecting the points <var>(i, j, k)</var> and <var>(i + 1, j + 1, k + 1)</var>. All sides of the block are parallel to a coordinate axis.</li>
+</ul>
+<p>For each triple <var>i, j, k</var>, we will call the above block as block <var>(i, j, k)</var>.</p>
+<p>For two blocks <var>(i_1, j_1, k_1)</var> and <var>(i_2, j_2, k_2)</var>, we will define the distance between them as max<var>(|i_1 - i_2|, |j_1 - j_2|, |k_1 - k_2|)</var>.</p>
+<p>We have passed a wire with a negligible thickness through a segment connecting the points <var>(0, 0, 0)</var> and <var>(A, B, C)</var>.
+How many blocks <var>(x,y,z)</var> satisfy the following condition? Find the count modulo <var>10^9 + 7</var>.</p>
+<ul>
+<li>There exists a block <var>(x', y', z')</var> such that the wire passes inside the block <var>(x', y', z')</var> (not just boundary) and the distance between the blocks <var>(x, y, z)</var> and <var>(x', y', z')</var> is at most <var>D</var>.</li>
+</ul>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 \leq A &lt; B &lt; C \leq 10^{9}</var></li>
+<li>Any two of the three integers <var>A, B</var> and <var>C</var> are coprime.</li>
+<li><var>0 \leq D \leq 50,000</var></li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>A</var> <var>B</var> <var>C</var> <var>D</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the number of the blocks that satisfy the condition, modulo <var>10^9 + 7</var>.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>3 4 5 1
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>54
+</pre>
+<p>The figure below shows the parallelepiped, sliced into five layers by planes parallel to <var>xy</var>-plane.
+Here, the layer in the region <var>i - 1 \leq z \leq i</var> is called layer <var>i</var>.</p>
+<p>The blocks painted black are penetrated by the wire, and satisfy the condition.
+The other blocks that satisfy the condition are painted yellow.</p>
+<div style="text-align: center;">
+<img alt="b09f2a541e463456c01d148eabdf36c3.png" src="https://img.atcoder.jp/code-festival-2017-qualc/b09f2a541e463456c01d148eabdf36c3.png">
+</img></div>
+<p>There are <var>54</var> blocks that are painted black or yellow.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>1 2 3 0
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>4
+</pre>
+<p>There are four blocks that are penetrated by the wire, and only these blocks satisfy the condition.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>3 5 7 100
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>105
+</pre>
+<p>All blocks satisfy the condition.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 4</h3><pre>3 123456781 1000000000 100
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 4</h3><pre>444124403
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 5</h3><pre>1234 12345 1234567 5
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 5</h3><pre>150673016
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 6</h3><pre>999999997 999999999 1000000000 50000
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 6</h3><pre>8402143
+</pre></section>
+</div>
+</span>

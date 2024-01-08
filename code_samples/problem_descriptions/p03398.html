@@ -1,0 +1,83 @@
+<span class="lang-en">
+<p>Score : <var>1600</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>Let <var>X = 10^{100}</var>. Inaba has <var>N</var> checker pieces on the number line, where the <var>i</var>-th checker piece is at coordinate <var>X^{i}</var> for all <var>1 \leq i \leq N</var>.</p>
+<p>Every second, Inaba chooses two checker pieces, <var>A</var> and <var>B</var>, and move <var>A</var> to the symmetric point of its current position with respect to <var>B</var>. After that, <var>B</var> is removed. (It is possible that <var>A</var> and <var>B</var> occupy the same position, and it is also possible for <var>A</var> to occupy the same position as another checker piece after the move).</p>
+<p>After <var>N - 1</var> seconds, only one checker piece will remain. Find the number of distinct possible positions of that checker piece, modulo <var>10^{9} + 7</var>.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 \leq N \leq 50</var></li>
+<li><var>N</var> is an integer.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the number of distinct possible positions of the final checker piece, modulo <var>10^{9} + 7</var>.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>3
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>12
+</pre>
+<p>There are <var>3</var> checker pieces, positioned at <var>10^{100}, 10^{200}, 10^{300}</var> respectively. Call them <var>A, B, C</var> respectively.</p>
+<p>Here are two (of the <var>12</var>) possible sequence of moves :</p>
+<ul>
+<li>
+<p>Let <var>A</var> jump over <var>B</var> in the first second, and let <var>A</var> jump over <var>C</var> in the second second. The final position of <var>A</var> is <var>2 \times 10^{300} - 2 \times 10^{200} + 10^{100}</var>.</p>
+</li>
+<li>
+<p>Let <var>C</var> jump over <var>A</var> in the first second, and let <var>B</var> jump over <var>C</var> in the second second. The final position of <var>B</var> is <var>-2 \times 10^{300} - 10^{200} + 4 \times 10^{100}</var>.</p>
+</li>
+</ul>
+<p>There are a total of <var>3 \times 2 \times 2 = 12</var> possible sequence of moves, and the final piece are in different positions in all of them.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>4
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>84
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>22
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>487772376
+</pre>
+<p>Remember to output your answer modulo <var>10^{9} + 7</var>.</p></section>
+</div>
+</span>

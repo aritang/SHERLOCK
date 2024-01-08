@@ -1,0 +1,66 @@
+
+
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({ tex2jax: { inlineMath: [["$","$"], ["\\(","\\)"]], processEscapes: true }});
+</script>
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+<H1>直交判定</H1>
+
+<p>
+平面上の異なる 4 点、$A (x_A, y_A)$, $B (x_B, y_B)$, $C (x_C, y_C)$, $D (x_D, y_D)$ の座標を読み込んで、直線 $AB$ と $CD$ が直交する場合には <span>YES</span>、直交しない場合には <span>NO</span> と出力するプログラムを作成してください。ここで、「直線」とは線分のことではありません。以下の図を参考にして下さい。
+</p>
+
+<!--
+ただし、x_A, yA, xB, yB, xC, yC, xD, yD は、それぞれ -100 以上 100 以下の実数とします。
+-->
+
+<center>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE1_orthogonal">
+</center>
+<br/>
+
+<H2>Input</H2>
+<p>
+複数のデータセットが与えられます。各データセットの形式は以下のとおりです。<br/>
+<br/>
+$x_A$ $y_A$ $x_B$ $y_B$ $x_C$ $y_C$ $x_D$ $y_D$</br>
+</pre>
+
+<p>
+$x_A$, $y_A$, $x_B$, $y_B$, $x_C$, $y_C$, $x_D$, $y_D$ はそれぞれ -100 以上 100 以下であり、各値は小数点以下最大 5 桁までの数字を含む実数で与えられます。
+</p>
+
+<p>
+データセットの数は 100 を超えません。
+</p>
+
+<H2>Output</H2>
+
+<p>
+各データセットに対して、<span>YES</span> または <span>NO</span> を１行に出力して下さい。
+</p>
+
+
+<H2>Sample Input</H2>
+
+<pre>
+1.0 1.0 2.0 2.0 0.0 0.0 1.0 -1.0
+0.0 0.0 2.0 0.0 -1.0 2.0 2.0 2.0
+10.0 6.0 3.4 5.2 6.8 9.5 4.3 2.1
+2.5 3.5 2.5 4.5 -3.3 -2.3 6.8 -2.3
+</pre>
+
+<H2>Output for the Sample Input</H2>
+
+<pre>
+YES
+NO
+NO
+YES
+</pre>
+
+
+

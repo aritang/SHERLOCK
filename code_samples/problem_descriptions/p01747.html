@@ -1,0 +1,87 @@
+
+
+<p>
+すなけ君は，(自己交差を持たない) <var>n</var> 個の頂点からなる折れ線の形をしている．最初に，すなけ君の <var>i</var> 番目の頂点は <var>(x<sub>i</sub>, y<sub>i</sub>)</var> にある．すなけ君は，平行移動や回転をして連続的に移動することはできるが，変形(折れ線の長さや二つの線分のなす角度を変える) することはできない．<var>y</var> = 0 は壁であり，(0, 0) に微小な穴が開いている．すなけ君がこの穴を通って全体が <var>y</var> &lt; 0 をみたすように移動できるかどうか判定せよ．
+</p>
+
+<h2>Constraints</h2>
+
+<ul>
+<li> 2 &le; <var>n</var> &le; 1000 </li>
+<li> 0 &le; <var>x<sub>i</sub></var> &le; 10<sup>9</sup> </li>
+<li> 1 &le; <var>y<sub>i</sub></var> &le; 10<sup>9</sup> </li>
+<li> 折れ線は自己交差を持たない </li>
+<li> どの三点も同一直線上にない </li>
+<li> <var>(x<sub>i</sub>, y<sub>i</sub>) &ne; (x<sub>i+1</sub>, y<sub>i+1</sub>)</var> </li>
+<li> 入力は全て整数である </li>
+</ul>
+
+
+<h2>Input</h2>
+<pre>
+<var>n</var>
+<var>x<sub>1</sub></var> <var>y<sub>1</sub></var>
+. . .
+<var>x<sub>n</sub></var> <var>y<sub>n</sub></var>
+</pre>
+
+<h2>Output</h2>
+
+<p>
+すなけ君が穴を通って移動できる場合は"<spna>Possible</span>", できない場合は"<span>Impossible</span>" と出力せよ．
+</p>
+
+
+<h2>Sample Input 1</h2>
+<pre>
+4
+0 1
+1 1
+1 2
+2 2
+</pre>
+
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_JAGSummer2014_sunake" title="Sunake" alt="Sunake">
+
+
+<h2>Sample Output 1</h2>
+<pre>
+Possible
+</pre>
+
+
+
+
+<ul>
+<li> −<var>y</var> 方向に 1 平行移動する． </li>
+<li> (0, 0) を中心として 90 度反時計回りに回転する．</li>
+<li> −<var>y</var> 方向に 1 平行移動する．</li>
+<li> (0, 0) を中心として 90 度時計回りに回転する．</li>
+<li> −<var>y</var> 方向に 1 平行移動する．</li>
+<li> (0, 0) を中心として 90 度反時計回りに回転する．</li>
+<li> −<var>y</var> 方向に 2 平行移動する．</li>
+</ul>
+
+
+<h2>Sample Input 2</h2>
+<pre>
+11
+63 106
+87 143
+102 132
+115 169
+74 145
+41 177
+56 130
+28 141
+19 124
+0 156
+22 183
+</pre>
+
+<h2>Sample Output 2</h2>
+<pre>
+Impossible
+</pre>
+
+

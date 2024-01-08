@@ -1,0 +1,63 @@
+
+<H1>Discounts of Buckwheat</H1>
+
+<p>
+Aizu is famous for its buckwheat. There are many people who make buckwheat noodles by themselves.
+</p>
+
+<p>
+  One day, you went shopping to buy buckwheat flour. You can visit three shops, A, B and C. The amount in a bag and its unit price for each shop is determined by the follows table. Note that it is discounted when you buy buckwheat flour in several bags.
+</p>
+
+<center>
+<table class="withborder">
+<tr><th></th><th>             Shop A </th><th>    Shop B   </th><th>  Shop C</th></tr>
+<tr><th>  Amount in a bag </th><td>   200g</td><td>   300g</td><td>   500g</td></tr>
+<tr><th> Unit price for a bag (nominal cost)</th><td> 380 yen </td><td>  550 yen </td><td>  850 yen</td></tr>
+<tr><th> Discounted units </th><td> per 5 bags </td><td>per 4 bags </td><td>per 3 bags</td></tr>
+<tr><th> Discount rate</th><td>   reduced by 20 %</td><td>  reduced by 15 %</td><td>  reduced by 12 %</td></tr>
+</table>
+</center>
+<br/>
+
+<p>
+ For example, when you buy 12 bags of flour at shop A, the price is reduced by 20 % for 10 bags, but not for other 2 bags. So, the total amount shall be (380 &times; 10) &times; 0.8 + 380 &times; 2 = 3,800 yen.
+</p>
+
+<p>
+  Write a program which reads the amount of flour, and prints the lowest cost to buy them. Note that you should buy the flour of exactly the same amount as the given input.
+</p>
+
+<H2>Input</H2>
+
+<p>
+  The input consists of multiple datasets. For each dataset, an integer <var>a</var> (500 &le; <var>a</var> &le; 5000, <var>a</var> is divisible by 100) which represents the amount of flour is given in a line.
+</p>
+
+<p>
+  The input ends with a line including a zero. Your program should not process for the terminal symbol. The number of datasets does not exceed 50.
+</p>
+
+<H2>Output</H2>
+
+<p>
+  For each dataset, print an integer which represents the lowest cost.
+</p>
+
+<H2>Sample Input</H2>
+
+<pre>
+500
+2200
+0
+</pre>
+
+<H2>Output for the Sample Input</H2>
+
+<pre>
+850
+3390
+</pre>
+
+
+

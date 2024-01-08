@@ -1,0 +1,122 @@
+<span class="lang-en">
+<p>Score : <var>600</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>There is a game that involves three variables, denoted <var>A</var>, <var>B</var>, and <var>C</var>.</p>
+<p>As the game progresses, there will be <var>N</var> events where you are asked to make a choice.
+Each of these choices is represented by a string <var>s_i</var>. If <var>s_i</var> is <code>AB</code>, you must add <var>1</var> to <var>A</var> or <var>B</var> then subtract <var>1</var> from the other; if <var>s_i</var> is <code>AC</code>, you must add <var>1</var> to <var>A</var> or <var>C</var> then subtract <var>1</var> from the other; if <var>s_i</var> is <code>BC</code>, you must add <var>1</var> to <var>B</var> or <var>C</var> then subtract <var>1</var> from the other.</p>
+<p>After each choice, none of <var>A</var>, <var>B</var>, and <var>C</var> should be negative.</p>
+<p>Determine whether it is possible to make <var>N</var> choices under this condition. If it is possible, also give one such way to make the choices.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 \leq N \leq 10^5</var></li>
+<li><var>0 \leq A,B,C \leq 10^9</var></li>
+<li><var>N, A, B, C</var> are integers.</li>
+<li><var>s_i</var> is <code>AB</code>, <code>AC</code>, or <code>BC</code>.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var> <var>A</var> <var>B</var> <var>C</var>
+<var>s_1</var>
+<var>s_2</var>
+<var>:</var>
+<var>s_N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>If it is possible to make <var>N</var> choices under the condition, print <code>Yes</code>; otherwise, print <code>No</code>.</p>
+<p>Also, in the former case, show one such way to make the choices in the subsequent <var>N</var> lines. The <var>(i+1)</var>-th line should contain the name of the variable (<code>A</code>, <code>B</code>, or <code>C</code>) to which you add <var>1</var> in the <var>i</var>-th choice.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>2 1 3 0
+AB
+AC
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>Yes
+A
+C
+</pre>
+<p>You can successfully make two choices, as follows:</p>
+<ul>
+<li>In the first choice, add <var>1</var> to <var>A</var> and subtract <var>1</var> from <var>B</var>. <var>A</var> becomes <var>2</var>, and <var>B</var> becomes <var>2</var>.</li>
+<li>In the second choice, add <var>1</var> to <var>C</var> and subtract <var>1</var> from <var>A</var>. <var>C</var> becomes <var>1</var>, and <var>A</var> becomes <var>1</var>.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>3 1 0 0
+AB
+BC
+AB
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>No
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>1 0 9 0
+AC
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>No
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 4</h3><pre>8 6 9 1
+AC
+BC
+AB
+BC
+AC
+BC
+AB
+AB
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 4</h3><pre>Yes
+C
+B
+B
+C
+C
+B
+A
+A
+</pre></section>
+</div>
+</span>

@@ -1,0 +1,69 @@
+
+<h2>Problem A: Approximate Circle</h2>
+
+<p>Consider a set of <var>n</var> points (<var>x<sub>1</sub></var>, <var>y<sub>1</sub></var>),
+..., (<var>x<sub>n</sub></var>,<var>y<sub>n</sub></var>) on a Cartesian space.
+Your task is to write a program for regression to a circle <var>x<sup>2</sup></var>
++ <var>y<sup>2</sup></var> + <var>a</var><var>x</var> + <var>b</var><var>y</var>
++ <var>c</var> = 0. In other words, your program should find a circle that
+minimizes the error. Here the error is measured by the sum over square distances
+between each point and the circle, which is given by:</p>
+
+<div align="center"><img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_approximateCircle" /></div>
+
+<h2>Input</h2>
+
+<p>The input begins with a line containing one integer <var>n</var> (3 <= <var>n</var>
+<= 40,000). Then <var>n</var> lines follow. The <var>i</var>-th line contains
+two integers <var>x<sub>i</sub></var> and <var>y<sub>i</sub></var> (0 <= <var>x<sub>i</sub></var>,
+<var>y<sub>i</sub></var> <= 1,000), which denote the coordinates of the <var>i</var>-th
+point.</p>
+<p>You can assume there are no cases in which all the points lie on a
+straight line.</p>
+
+<h2>Output</h2>
+
+<!--
+<p>Print three integers <var>a</var>, <var>b</var> and <var>c</var>,
+separated by space, to show the regressed function. The output values should be
+printed with three digits after the decimal point, and should not contain an
+error greater than 0.001.</p>
+-->
+
+<p>Print three integers <var>a</var>, <var>b</var> and <var>c</var>,
+separated by space, to show the regressed function. The output values should be
+in a decimal fraction and should not contain an
+error greater than 0.001.</p>
+
+
+<h2>Sample Input 1</h2>
+
+<pre>
+4
+0 0
+100 0
+100 100
+0 100
+</pre>
+
+<h2>Output for the Sample Input 1</h2>
+
+<pre>
+-100.000 -100.000 0.000
+</pre>
+
+<h2>Sample Input 2</h2>
+
+<pre>
+3
+0 0
+10 0
+5 100
+</pre>
+
+<h2>Output for the Sample Input 2</h2>
+
+<pre>
+-10.000 -99.750 0.000
+</pre>
+

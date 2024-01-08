@@ -1,0 +1,47 @@
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({ tex2jax: { inlineMath: [["$","$"], ["\\(","\\)"]], processEscapes: true }});
+</script>
+<script type='text/javascript' src='http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
+</script>
+
+
+<h2>Problem F
+ICPC Teams</h2>
+
+<p>
+You are a coach of the International Collegiate Programming Contest (ICPC) club in your university. There are 3N students in the ICPC club and you want to make $N$ teams for the next ICPC. All teams in ICPC consist of 3 members. Every student belongs to exactly one team.
+</p>
+
+<p>
+When you form the teams, you should consider several relationships among the students. Some student has an extremely good relationship with other students. If they belong to a same team, their performance will improve surprisingly. The contrary situation also occurs for a student pair with a bad relationship. In short, students with a good relationship must be in the same team, and students with a bad relationship must be in different teams. Since you are a competent coach, you know all $M$ relationships among the students.
+</p>
+
+<p>
+Your task is to write a program that calculates the number of possible team assignments. Two assignments are considered different if and only if there exists a pair of students such that in one assignment they are in the same team and in the other they are not.
+</p>
+
+<h3>Input</h3>
+
+<p>
+The input consists of a single test case. The first line contains two integers $N$ $(1 \leq N \leq 10^6)$ and $M$ $(1 \leq M \leq 18)$. The $i$-th line of the following $M$ lines contains three integers $A_i$, $B_i$ $(1 \leq A_i, B_i \leq 3N, A_i \ne B_i)$, and $C_i$ $(C_i \in \{0, 1\})$. $A_i$ and $B_i$ denote indices of the students and $C_i$ denotes the relation type. If $C_i$ is 0, the $A_i$-th student and the $B_i$-th student have a good relation. If $C_i$ is 1, they have a bad relation. You can assume that $\{A_i, B_i\} \ne \{A_j, B_j\}$ if $i \ne j$ for all $1 \leq i, j \leq M$.
+</p>
+
+
+<h3>Output</h3>
+
+<p>
+Display a line containing the number of the possible team assignments modulo $10^9 + 9$.
+</p>
+
+
+<h3>Sample Input 1</h3>
+
+<pre>2 2
+1 2 0
+3 4 1</pre>
+
+<h3>Output for the Sample Input 1</h3>
+
+<pre>2</pre>
+

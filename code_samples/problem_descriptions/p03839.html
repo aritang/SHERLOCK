@@ -1,0 +1,104 @@
+<span class="lang-en">
+<p>Score : <var>400</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>There are <var>N</var> squares aligned in a row.
+The <var>i</var>-th square from the left contains an integer <var>a_i</var>.</p>
+<p>Initially, all the squares are white.
+Snuke will perform the following operation some number of times:</p>
+<ul>
+<li>Select <var>K</var> consecutive squares. Then, paint all of them white, or paint all of them black. Here, the colors of the squares are overwritten.</li>
+</ul>
+<p>After Snuke finishes performing the operation, the score will be calculated as the sum of the integers contained in the black squares.
+Find the maximum possible score.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1≤N≤10^5</var></li>
+<li><var>1≤K≤N</var></li>
+<li><var>a_i</var> is an integer.</li>
+<li><var>|a_i|≤10^9</var></li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>The input is given from Standard Input in the following format:</p>
+<pre><var>N</var> <var>K</var>
+<var>a_1</var> <var>a_2</var> <var>...</var> <var>a_N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the maximum possible score.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>5 3
+-10 10 -10 10 -10
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>10
+</pre>
+<p>Paint the following squares black: the second, third and fourth squares from the left.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>4 2
+10 -10 -10 10
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>20
+</pre>
+<p>One possible way to obtain the maximum score is as follows:</p>
+<ul>
+<li>Paint the following squares black: the first and second squares from the left.</li>
+<li>Paint the following squares black: the third and fourth squares from the left.</li>
+<li>Paint the following squares white: the second and third squares from the left.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>1 1
+-10
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>0
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 4</h3><pre>10 5
+5 -4 -5 -8 -4 7 2 -4 0 7
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 4</h3><pre>17
+</pre></section>
+</div>
+</span>

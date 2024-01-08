@@ -1,0 +1,148 @@
+<span class="lang-en lang-child hidden-lang">
+<div id="task-statement">
+				Max Score: <var>1450</var> Points <br/>
+<section>
+<h3>Problem Statement</h3>
+					There are <var>N</var> workers in Atcoder company. Each worker is numbered <var>0</var> through <var>N - 1</var>, and the boss for worker <var>i</var> is <var>p_i</var> like a tree structure and the salary is currently <var>a_i</var>. (<var>p_i &lt; i</var>, especially <var>p_0 = -1</var> because worker <var>0</var> is a president) <br/>
+					In atcoder, the boss of boss of boss of ... (repeated <var>k</var> times) worker <var>i</var> called "<var>k</var>-th upper boss", and "<var>k</var>-th lower subordinate" called for vice versa. <br/>
+<br/>
+					You have to process <var>Q</var> queries for Atcoder: <br/>
+<ul>
+<li>Query 1: You are given <var>v_i, d_i, x_i</var>. Increase the salary of worker <var>v_i</var>, and all <var>j</var>-th (<var>1 ≤ j ≤ d_i</var>) lower subordinates by <var>x_i</var>.</li>
+<li>Query 2: You are given <var>v_i, d_i</var>. Calculate the sum of salary of worker <var>v_i</var> and all <var>j</var>-th (<var>1 ≤ j ≤ d_i</var>) lower subordinates.</li>
+<li>Query 3: You are given <var>pr_i, ar_i</var>. Now Atcoder has a new worker <var>c</var>! (<var>c</var> is the current number of workers) The boss is <var>pr_i</var>, and the first salary is <var>ar_i</var>.</li>
+</ul>
+					Process all queries!!! <br/>
+</section>
+</div>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input Format</h3>
+						Let the <var>i</var>-th query <var>query_i</var>, the input format is following:<br/>
+<pre>
+<var>N</var> <var>Q</var>
+<var>p_0</var> <var>a_0</var>
+<var>p_1</var> <var>a_1</var>
+ :   :
+<var>p_{N - 1}</var> <var>a_{N - 1}</var>
+<var>query_0</var>
+<var>query_1</var>
+ :   :
+<var>query_{Q - 1}</var>
+</pre>
+						THe format of <var>query_i</var> is one of the three format:<br/>
+<pre>
+1 <var>v_i</var> <var>d_i</var> <var>x_i</var>
+</pre>
+<pre>
+2 <var>v_i</var> <var>d_i</var>
+</pre>
+<pre>
+3 <var>pr_i</var> <var>ar_i</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output Format</h3>
+						Print the result in one line for each query 2.<br/>
+</section>
+<section>
+<h3>Constraints</h3>
+<ul>
+<li><var>N ≤ 400000</var></li>
+<li><var>Q ≤ 50000</var></li>
+<li><var>p_i &lt; i</var> for all valid <var>i</var>.</li>
+<li>In each question 1 or 2, worker <var>v_i</var> exists.</li>
+<li><var>d_i ≤ 400000</var></li>
+<li><var>0 ≤ a_i, x_i ≤ 1000</var></li>
+</ul>
+</section>
+<section>
+<h3>Scoring</h3>
+						Subtask 1 [<var>170</var> points] <br/>
+<ul>
+<li><var>N, Q ≤ 5000</var></li>
+</ul>
+						Subtask 2 [<var>310</var> points] <br/>
+<ul>
+<li><var>p_i + 1 = i</var> for all valid <var>i</var>.</li>
+</ul>
+						Subtask 3 [<var>380</var> points] <br/>
+<ul>
+<li>There are no query 3.</li>
+</ul>
+						Subtask 4 [<var>590</var> points] <br/>
+<ul>
+<li>There are no additional constraints.</li>
+</ul>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3>
+<pre>
+6 7
+-1 6
+0 5
+0 4
+2 3
+2 2
+1 1
+2 0 1
+1 0 2 1
+2 2 1
+3 3 3
+2 0 3
+3 3 4
+2 1 1
+</pre>
+</section>
+<section>
+<h3>Sample Output 1</h3>
+<pre>
+15
+12
+30
+8
+</pre>
+</section>
+</div>
+</div>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3>
+<pre>
+7 9
+-1 1
+0 5
+0 7
+0 8
+1 3
+4 1
+5 1
+2 1 1
+2 1 2
+1 1 2 3
+1 4 1 1
+2 3 1
+2 0 2
+3 6 1
+3 7 11
+2 0 15
+</pre>
+</section>
+<section>
+<h3>Sample Output 2</h3>
+<pre>
+8
+9
+8
+31
+49
+</pre>
+</section>
+</div>
+<!-- 入出力例の説明もできれば書く -->
+</span>

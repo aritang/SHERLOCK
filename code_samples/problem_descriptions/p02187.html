@@ -1,0 +1,69 @@
+<h2>F: 部分文字列分解</h2>
+
+<h3>問題</h3>
+
+<p>
+2 つの文字列 <var>S</var> と <var>T</var> および整数 <var>k</var> が与えられる。
+<var>T</var> の長さ <var>k</var> 以上の連続する部分文字列を考えたとき、それらの連結で <var>S</var> を構成できるか判定せよ。
+</p>
+
+<p>ここで文字列 <var>s = s_1 s_2 ... s_n</var> の連続する部分文字列 <var>s[l, r] = s_l s_{l+1} ... s_r</var> <var>(1 \leq l \leq r \leq n)</var> とは、<var>s</var> の <var>l</var> 文字目から <var>r</var> 文字目までを切り出してできる文字列を指し、その長さは <var>r - l + 1</var> である。</p>
+
+<h3>入力形式</h3>
+<pre>
+<var>S</var>
+<var>T</var>
+<var>k</var>
+</pre>
+
+<h3>制約</h3>
+<ul>
+<li> <var>S</var> と <var>T</var> は小文字アルファベットからなる</li>
+<li> <var>1 \leq |S|, |T| \leq 2\times 10^5</var></li>
+<li> <var>1 \leq k \leq |T|</var></li>
+</ul>
+
+<h3>出力形式</h3>
+<p><var>S</var> を構成できるとき <code>Yes</code> を、そうでないとき <code>No</code> を一行に出力せよ。</p>
+
+<h3>入力例1</h3>
+<pre>
+abracadabra
+cadabra
+4
+</pre>
+
+<h3>出力例1</h3>
+<pre>Yes</pre>
+
+<p><var>T</var> の長さ <var>4</var> 以上の部分文字列である <code>abra</code> と <code>cadabra</code> を連結させることで <code>abracadabra</code> が構成でき、これは <var>S</var> と等しい文字列である。</p>
+
+<h3>入力例2</h3>
+<pre>
+abcd
+zcba
+1
+</pre>
+
+<h3>出力例2</h3>
+<pre>No</pre>
+
+<h3>入力例3</h3>
+<pre>
+abc
+zcba
+1
+</pre>
+
+<h3>出力例3</h3>
+<pre>Yes</pre>
+
+<h3>入力例4</h3>
+<pre>
+abcdefg
+abcddefg
+4
+</pre>
+
+<h3>出力例4</h3>
+<pre>No</pre>

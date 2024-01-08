@@ -1,0 +1,87 @@
+<span class="lang-en lang-child hidden-lang">
+<div id="task-statement">
+				Max Score: <var>350</var> Points <br/>
+<section>
+<h3>Problem Statement</h3>
+					There are <var>N</var> buildings along the line. The <var>i</var>-th building from the left is colored in color <var>i</var>, and its height is currently <var>a_i</var> meters. <br/>
+					Chokudai is a mayor of the city, and he loves colorful thigs. And now he wants to see at least <var>K</var> buildings from the left. <br/>
+<br/>
+					You can increase height of buildings, but it costs <var>1</var> yens to increase <var>1</var> meters. It means you cannot make building that height is not integer. <br/>
+					You cannot decrease height of buildings. <br/>
+					Calculate the minimum cost of satisfying Chokudai's objective. <br/>
+					Note: "Building <var>i</var> can see from the left" means there are no <var>j</var> exists that (height of building <var>j</var>) ≥ (height of building <var>i</var>) and <var>j &lt; i</var>. <br/>
+</section>
+</div>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input Format</h3>
+<pre>
+<var>N</var> <var>K</var>
+<var>a_1</var> <var>a_2</var> <var>a_3</var> ... <var>a_N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output Format</h3>
+						Print the minimum cost in one line. In the end put a line break.<br/>
+</section>
+<section>
+<h3>Constraints</h3>
+<ul>
+<li><var>1 ≤ K ≤ N ≤ 15</var></li>
+<li><var>1 ≤ a_i ≤ 10^9</var></li>
+</ul>
+</section>
+<section>
+<h3>Scoring</h3>
+						Subtask 1 [<var>120</var> points] <br/>
+<ul>
+<li><var>N = K</var></li>
+</ul>
+						Subtask 2 [<var>90</var> points] <br/>
+<ul>
+<li><var>N ≤ 5</var></li>
+<li><var>a_i ≤ 7</var></li>
+</ul>
+						Subtask 3 [<var>140</var> points] <br/>
+<ul>
+<li>There are no additional constraints.</li>
+</ul>
+</section>
+</div>
+</div>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3>
+<pre>
+5 5
+3949 3774 3598 3469 3424
+</pre>
+</section>
+<section>
+<h3>Sample Output 1</h3>
+<pre>
+1541
+</pre>
+					The optimal solution is (height of buildings from the left) <var>= [3949, 3950, 3951, 3952, 3953]</var>.<br/>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3>
+<pre>
+5 3
+7 4 2 6 4
+</pre>
+</section>
+<section>
+<h3>Sample Output 2</h3>
+<pre>
+7
+</pre>
+					The optimal solution is (height of buildings from the left) <var>= [7, 8, 2, 9, 4]</var>.<br/>
+</section>
+</div>
+</span>

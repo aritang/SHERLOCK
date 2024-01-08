@@ -1,0 +1,92 @@
+<h1>Queue</h1>
+
+<p>
+Queue is a container of elements that are inserted and deleted according to FIFO (First In First Out).
+</p>
+
+<p>
+  For $n$ queues $Q_i$ ($i = 0, 1, ..., n-1$), perform a sequence of the following operations.
+</p>
+
+<ul>
+  <li>enqueue($t$, $x$): Insert an integer $x$ to $Q_t$.</li>
+  <li>front($t$): Report the value which should be deleted next from $Q_t$. If $Q_t$ is empty, do nothing.</li>
+  <li>dequeue($t$): Delete an element from $Q_t$. If $Q_t$ is empty, do nothing.</li>
+</ul>
+
+<p>
+In the initial state, all queues are empty.
+</p>
+
+<h2>Input</h2>
+
+<p>
+  The input is given in the following format.
+</p>
+
+<pre>
+$n \; q$
+$query_1$
+$query_2$
+:
+$query_q$
+</pre>
+
+<p>
+Each query $query_i$ is given by
+</p>
+
+<pre>
+0 $t$ $x$
+</pre>
+
+<p>or</p>
+
+<pre>
+1 $t$
+</pre>
+
+<p>or</p>
+
+<pre>
+2 $t$
+</pre>
+
+<p>
+  where the first digits <span>0</span>, <span>1</span> and <span>2</span> represent enqueue, front and dequeue operations respectively.
+</p>
+
+<h2>Output</h2>
+<p>
+  For each front operation, print an integer in a line.
+</p>
+
+<h2>Constraints</h2>
+<ul>
+  <li>$1 \leq n \leq 1,000$</li>
+  <li>$1 \leq q \leq 200,000$</li>
+  <li>$-1,000,000,000 \leq x \leq 1,000,000,000$</li>
+</ul>
+
+<h2>Sample Input 1</h2>
+
+<pre>
+3 9
+0 0 1
+0 0 2
+0 0 3
+0 2 4
+0 2 5
+1 0
+1 2
+2 0
+1 0
+</pre>
+
+<h2>Sample Output 1</h2>
+
+<pre>
+1
+4
+2
+</pre>

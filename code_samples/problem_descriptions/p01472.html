@@ -1,0 +1,80 @@
+
+
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({ tex2jax: { inlineMath: [["$","$"], ["\\(","\\)"]], skipTags: ["script","noscript","style","textarea","code"], processEscapes: true }});
+</script>
+<script language="JavaScript" type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+
+
+<h2>問題文</h2>
+
+<p>ふたりのプレイヤーがゲームをしている。以下、ゲームのルールを説明する。</p>
+<p>$N×N$ マスのボードがあり、各マスには数字 $X_{i,j}$ ($1 \leq i,j \leq N$)が書かれている。先手と後手は交互に手を選んで点を積み重ねてゆく。最初に先手は $F$ 点持っており、後手は $0$ 点持っている。</p>
+<p>$t$ ターン目($1 \leq t \leq 2N$)のプレイヤーの行動を示す。</p>
+<ol><li>これ以降自分と相手がどのような手を選んだとしても自分が負けてしまう場合、即座に負けを宣言してゲームを終了する。</li>
+<li>これまでに自分が一度も選んだことのない数字を $1,2,...,N$ から一つ選んで $Y_t$ とする。
+<ol><li>先手の手番(つまり $t$ が奇数)かつ $t&gt;1$ のとき、先手は $X_{Y_{t}, Y_{t-1}}$ 点を得る。 $t=1$ のとき、先手の得点に変化は起きない。</li>
+<li>後手の手番(つまり $t$ が偶数)のとき、後手は $X_{Y_{t-1}, Y_{t}}$ 点を得る。</li></ol></li>
+<li>$t=2N$ のとき、勝敗判定を行いゲームを終了する。点を多く獲得しているプレイヤーの勝ちで、点が同じ場合は引き分けとする。</li>
+<li>ターンを終了して相手に手番を渡す。</li></ol>
+<p>先手と後手は以下の基準で手を選ぶ。</p>
+<ol><li>自分が勝ちになる手が存在するときはその手を選ぶ。自分が勝ちになる手が複数存在するときはその中からゲームが最短で終了するような手を選ぶ。</li>
+<li>自分が勝ちになる手が存在しないとき、引き分けになる手が存在すればその手を選ぶ。</li>
+<li>自分が負けになる手しか存在しないとき、ゲームが最長で終了するような手を選ぶ。</li></ol>
+<p>先手と後手がこのような基準で手を選んだとき、ゲームの結果とゲームが何ターンで終了するかを求めよ。</p>
+
+<h2>入力</h2>
+
+<p>入力は以下の形式に従う。与えられる数は全て整数である。</p>
+<pre>$N$ $F$
+$X_{1,1}$ $X_{1,2}$ $...$ $X_{1,N}$
+$X_{2,1}$ $X_{2,2}$ $...$ $X_{2,N}$
+$...$
+$X_{N,1}$ $X_{N,2}$ $...$ $X_{N,N}$</pre>
+
+<h2>制約</h2>
+
+<ul><li>$1 \leq N \leq 8$</li>
+<li>$-10^5 \leq F \leq 10^5$</li>
+<li>$-10^5 \leq X_{i,j} \leq 10^5$</li></ul>
+
+<h2>出力</h2>
+
+<p>先手が勝つ場合は&quot;First&quot;、後手が勝つ場合は&quot;Second&quot;、引き分けになる場合は&quot;Draw&quot;と1行目に出力せよ。
+2行目にゲームが終了するのが何ターン目になるのかを出力せよ。</p>
+
+<h2>Sample Input 1</h2>
+
+<pre>2 0
+1 3
+1 1</pre>
+
+<h2>Output for the Sample Input 1</h2>
+
+<pre>Second
+3</pre>
+
+<h2>Sample Input 2</h2>
+
+<pre>2 100
+0 0
+0 0</pre>
+
+<h2>Output for the Sample Input 2</h2>
+
+<pre>First
+2</pre>
+
+<h2>Sample Input 3</h2>
+
+<pre>2 5
+3 4
+7 6</pre>
+
+
+<h2>Output for the Sample Input 3</h2>
+
+<pre>Draw
+4</pre>
+<p>両者が最善を尽くした場合 $(Y_1,Y_2,Y_3,Y_4) = (1,2,2,1)$ となり、このとき両者11点を獲得して引き分けになる。</p>

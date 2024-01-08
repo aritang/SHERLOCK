@@ -1,0 +1,114 @@
+<span class="lang-en">
+<p>Score : <var>1100</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>We have an <var>H \times W</var> grid, where each square is painted white or black in the initial state.
+Given are strings <var>A_1, A_2, ..., A_H</var> representing the colors of the squares in the initial state.
+For each pair <var>(i, j)</var> (<var>1 \leq i \leq H</var>, <var>1 \leq j \leq W</var>), if the <var>j</var>-th character of <var>A_i</var> is <code>.</code>, the square at the <var>i</var>-th row and <var>j</var>-th column is painted white; if that character is <code>#</code>, that square is painted black.</p>
+<p>Among the <var>2^{HW}</var> ways for each square in the grid to be painted white or black, how many can be obtained from the initial state by performing the operations below any number of times (possibly zero) in any order? Find this count modulo <var>998,244,353</var>.</p>
+<ul>
+<li>Choose one row, then paint all the squares in that row white.</li>
+<li>Choose one row, then paint all the squares in that row black.</li>
+<li>Choose one column, then paint all the squares in that column white.</li>
+<li>Choose one column, then paint all the squares in that column black.</li>
+</ul>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 \leq H, W \leq 10</var></li>
+<li><var>|A_i| = W</var> (<var>1 \leq i \leq H</var>)</li>
+<li>All strings <var>A_i</var> consist of <code>.</code> and <code>#</code>.</li>
+<li><var>H</var> and <var>W</var> are integers.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>H</var> <var>W</var>
+<var>A_1</var>
+<var>A_2</var>
+<var>\vdots</var>
+<var>A_H</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the answer.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>2 2
+#.
+.#
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>15
+</pre>
+<p>For example, if we paint the second row black, the grid becomes:</p>
+<pre>#.
+##
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>3 3
+...
+...
+...
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>230
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>2 4
+#...
+...#
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>150
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 4</h3><pre>6 7
+.......
+.......
+.#.....
+..#....
+.#.#...
+.......
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 4</h3><pre>203949910
+</pre></section>
+</div>
+</span>

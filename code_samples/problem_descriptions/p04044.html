@@ -1,0 +1,59 @@
+<span class="lang-en">
+<p>Score : <var>200</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>Iroha has a sequence of <var>N</var> strings <var>S_1, S_2, ..., S_N</var>. The length of each string is <var>L</var>.</p>
+<p>She will concatenate all of the strings in some order, to produce a long string.</p>
+<p>Among all strings that she can produce in this way, find the lexicographically smallest one.</p>
+<p>Here, a string <var>s=s_1s_2s_3</var>...<var>s_n</var> is <em>lexicographically smaller</em> than another string <var>t=t_1t_2t_3</var>...<var>t_m</var> if and only if one of the following holds:
+<ul>
+<li>There exists an index <var>i(1≦i≦min(n,m))</var>, such that <var>s_j = t_j</var> for all indices <var>j(1≦j&lt;i)</var>, and <var>s_i&lt;t_i</var>.</li>
+<li><var>s_i = t_i</var> for all integers <var>i(1≦i≦min(n,m))</var>, and <var>n&lt;m</var>.</li>
+</ul></p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 ≦ N, L ≦ 100</var></li>
+<li>For each <var>i</var>, the length of <var>S_i</var> equals <var>L</var>.</li>
+<li>For each <var>i</var>, <var>S_i</var> consists of lowercase letters.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>The input is given from Standard Input in the following format:</p>
+<pre><var>N</var> <var>L</var>
+<var>S_1</var>
+<var>S_2</var>
+:
+<var>S_N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the lexicographically smallest string that Iroha can produce.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>3 3
+dxx
+axx
+cxx
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>axxcxxdxx
+</pre>
+<p>The following order should be used: <code>axx</code>, <code>cxx</code>, <code>dxx</code>.</p></section>
+</div>
+</span>

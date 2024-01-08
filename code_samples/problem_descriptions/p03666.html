@@ -1,0 +1,93 @@
+<span class="lang-en">
+<p>Score : <var>400</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>There are <var>N</var> squares in a row.
+The leftmost square contains the integer <var>A</var>, and the rightmost contains the integer <var>B</var>. The other squares are empty.</p>
+<p>Aohashi would like to fill the empty squares with integers so that the following condition is satisfied:</p>
+<ul>
+<li>For any two adjacent squares, the (absolute) difference of the two integers in those squares is between <var>C</var> and <var>D</var> (inclusive).</li>
+</ul>
+<p>As long as the condition is satisfied, it is allowed to use arbitrarily large or small integers to fill the squares.
+Determine whether it is possible to fill the squares under the condition.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>3 \leq N \leq 500000</var></li>
+<li><var>0 \leq A \leq 10^9</var></li>
+<li><var>0 \leq B \leq 10^9</var></li>
+<li><var>0 \leq C \leq D \leq 10^9</var></li>
+<li>All input values are integers.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var> <var>A</var> <var>B</var> <var>C</var> <var>D</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print <code>YES</code> if it is possible to fill the squares under the condition; print <code>NO</code> otherwise.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>5 1 5 2 4
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>YES
+</pre>
+<p>For example, fill the squares with the following integers: <var>1</var>, <var>-1</var>, <var>3</var>, <var>7</var>, <var>5</var>, from left to right.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>4 7 6 4 5
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>NO
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>48792 105960835 681218449 90629745 90632170
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>NO
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 4</h3><pre>491995 412925347 825318103 59999126 59999339
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 4</h3><pre>YES
+</pre></section>
+</div>
+</span>

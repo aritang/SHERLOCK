@@ -1,0 +1,74 @@
+<span class="lang-en">
+<p>Score : <var>100</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>You are given a grid of <var>N</var> rows and <var>M</var> columns. The square at the <var>i</var>-th row and <var>j</var>-th column will be denoted as <var>(i,j)</var>.
+Some of the squares contain an object. All the remaining squares are empty.
+The state of the grid is represented by strings <var>S_1,S_2,\cdots,S_N</var>. The square <var>(i,j)</var> contains an object if <var>S_{i,j}=</var> <code>#</code> and is empty if <var>S_{i,j}=</var> <code>.</code>.</p>
+<p>Consider placing <var>1 \times 2</var> tiles on the grid. Tiles can be placed vertically or horizontally to cover two adjacent empty squares.
+Tiles must not stick out of the grid, and no two different tiles may intersect. Tiles cannot occupy the square with an object.</p>
+<p>Calculate the maximum number of tiles that can be placed and any configulation that acheives the maximum.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 \leq N \leq 100</var></li>
+<li><var>1 \leq M \leq 100</var></li>
+<li><var>S_i</var> is a string with length <var>M</var> consists of <code>#</code> and <code>.</code>.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var> <var>M</var>
+<var>S_1</var>
+<var>S_2</var>
+<var>\vdots</var>
+<var>S_N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>On the first line, print the maximum number of tiles that can be placed.</p>
+<p>On the next <var>N</var> lines, print a configulation that achieves the maximum.
+Precisely, output the strings <var>t_1,t_2,\cdots,t_N</var> constructed by the following way.</p>
+<ul>
+<li><var>t_i</var> is initialized to <var>S_i</var>.</li>
+<li>For each <var>(i,j)</var>, if there is a tile that occupies <var>(i,j)</var> and <var>(i+1,j)</var>, change <var>t_{i,j}</var>:=<code>v</code>, <var>t_{i+1,j}</var>:=<code>^</code>.</li>
+<li>For each <var>(i,j)</var>, if there is a tile that occupies <var>(i,j)</var> and <var>(i,j+1)</var>, change <var>t_{i,j}</var>:=<code>&gt;</code>, <var>t_{i,j+1}</var>:=<code>&lt;</code>.</li>
+</ul>
+<p>See samples for further information.</p>
+<p>You may print any configulation that maximizes the number of tiles.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>3 3
+#..
+..#
+...
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>3
+#&gt;&lt;
+vv#
+^^.
+</pre>
+<p>The following output is also treated as a correct answer.</p>
+<pre>3
+#&gt;&lt;
+v.#
+^&gt;&lt;
+</pre></section>
+</div>
+</span>

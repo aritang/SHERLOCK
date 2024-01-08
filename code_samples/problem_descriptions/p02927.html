@@ -1,0 +1,91 @@
+<span class="lang-en">
+<p>Score : <var>200</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>Today is August <var>24</var>, one of the five Product Days in a year.</p>
+<p>A date <var>m</var>-<var>d</var> (<var>m</var> is the month, <var>d</var> is the date) is called a Product Day when <var>d</var> is a two-digit number, and all of the following conditions are satisfied (here <var>d_{10}</var> is the tens digit of the day and <var>d_1</var> is the ones digit of the day):</p>
+<ul>
+<li><var>d_1 \geq 2</var></li>
+<li><var>d_{10} \geq 2</var></li>
+<li><var>d_1 \times d_{10} = m</var></li>
+</ul>
+<p>Takahashi wants more Product Days, and he made a new calendar called Takahashi Calendar where a year consists of <var>M</var> month from Month <var>1</var> to Month <var>M</var>, and each month consists of <var>D</var> days from Day <var>1</var> to Day <var>D</var>.</p>
+<p>In Takahashi Calendar, how many Product Days does a year have?</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li>All values in input are integers.</li>
+<li><var>1 \leq M \leq 100</var></li>
+<li><var>1 \leq D \leq 99</var></li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>M</var> <var>D</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the number of Product Days in a year in Takahashi Calender.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>15 40
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>10
+</pre>
+<p>There are <var>10</var> Product Days in a year, as follows (<var>m</var>-<var>d</var> denotes Month <var>m</var>, Day <var>d</var>):</p>
+<ul>
+<li><var>4</var>-<var>22</var></li>
+<li><var>6</var>-<var>23</var></li>
+<li><var>6</var>-<var>32</var></li>
+<li><var>8</var>-<var>24</var></li>
+<li><var>9</var>-<var>33</var></li>
+<li><var>10</var>-<var>25</var></li>
+<li><var>12</var>-<var>26</var></li>
+<li><var>12</var>-<var>34</var></li>
+<li><var>14</var>-<var>27</var></li>
+<li><var>15</var>-<var>35</var></li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>12 31
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>5
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>1 1
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>0
+</pre></section>
+</div>
+</span>

@@ -1,0 +1,95 @@
+<span class="lang-en">
+<p>Score : <var>600</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>You are given a forest with <var>N</var> vertices and <var>M</var> edges. The vertices are numbered <var>0</var> through <var>N-1</var>.
+The edges are given in the format <var>(x_i,y_i)</var>, which means that Vertex <var>x_i</var> and <var>y_i</var> are connected by an edge.</p>
+<p>Each vertex <var>i</var> has a value <var>a_i</var>.
+You want to add edges in the given forest so that the forest becomes connected.
+To add an edge, you choose two different vertices <var>i</var> and <var>j</var>, then span an edge between <var>i</var> and <var>j</var>.
+This operation costs <var>a_i + a_j</var> dollars, and afterward neither Vertex <var>i</var> nor <var>j</var> can be selected again.</p>
+<p>Find the minimum total cost required to make the forest connected, or print <code>Impossible</code> if it is impossible.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 ≤ N ≤ 100,000</var></li>
+<li><var>0 ≤ M ≤ N-1</var></li>
+<li><var>1 ≤ a_i ≤ 10^9</var></li>
+<li><var>0 ≤ x_i,y_i ≤ N-1</var></li>
+<li>The given graph is a forest.</li>
+<li>All input values are integers.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var> <var>M</var>
+<var>a_0</var> <var>a_1</var> <var>..</var> <var>a_{N-1}</var>
+<var>x_1</var> <var>y_1</var>
+<var>x_2</var> <var>y_2</var>
+<var>:</var>
+<var>x_M</var> <var>y_M</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the minimum total cost required to make the forest connected, or print <code>Impossible</code> if it is impossible.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>7 5
+1 2 3 4 5 6 7
+3 0
+4 0
+1 2
+1 3
+5 6
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>7
+</pre>
+<p>If we connect vertices <var>0</var> and <var>5</var>, the graph becomes connected, for the cost of <var>1 + 6 = 7</var> dollars.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>5 0
+3 1 4 1 5
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>Impossible
+</pre>
+<p>We can't make the graph connected.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>1 0
+5
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>0
+</pre>
+<p>The graph is already connected, so we do not need to add any edges.</p></section>
+</div>
+</span>

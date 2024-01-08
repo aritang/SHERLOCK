@@ -1,0 +1,143 @@
+
+
+
+
+<h3>Rotate and Rewrite</h3>
+
+
+<p>
+Two sequences of integers
+A: <i>A</i><sub>1</sub> <i>A</i><sub>2</sub> ... <i>A</i><sub><i>n</i></sub> and
+B: <i>B</i><sub>1</sub> <i>B</i><sub>2</sub> ... <i>B</i><sub><i>m</i></sub> and
+a set of <em>rewriting rules</em> of the form
+"<i>x</i><sub>1</sub> <i>x</i><sub>2</sub> ... <i>x</i><sub><i>k</i></sub> &rarr; <i>y</i>"
+are given.
+The following transformations on each of the sequences are allowed
+an arbitrary number of times in an arbitrary order independently.
+</p>
+
+<ul>
+<li>
+<b>Rotate</b>:
+  Moving the first element of a sequence to the last.
+  That is, transforming a sequence <i>c</i><sub>1</sub> <i>c</i><sub>2</sub> ... <i>c</i><sub><i>p</i></sub>
+  to <i>c</i><sub>2</sub> ... <i>c</i><sub><i>p</i></sub> <i>c</i><sub>1</sub>.
+</li>
+<li>
+<b>Rewrite</b>:
+  With a rewriting rule
+  "<i>x</i><sub>1</sub> <i>x</i><sub>2</sub> ... <i>x</i><sub><i>k</i></sub> &rarr; <i>y</i>",
+  transforming a sequence
+  <i>c</i><sub>1</sub> <i>c</i><sub>2</sub> ... <i>c</i><sub><i>i</i></sub> <i>x</i><sub>1</sub> <i>x</i><sub>2</sub> ... <i>x</i><sub><i>k</i></sub> <i>d</i><sub>1</sub> <i>d</i><sub>2</sub> ... <i>d</i><sub><i>j</i></sub>
+  to
+<i>c</i><sub>1</sub> <i>c</i><sub>2</sub> ... <i>c</i><sub><i>i</i></sub> <i>y</i> <i>d</i><sub>1</sub> <i>d</i><sub>2</sub> ... <i>d</i><sub><i>j</i></sub>.
+</li>
+</ul>
+
+
+<p>	
+Your task is to determine whether it is possible to transform the two sequences A and B into the same sequence.
+If possible, compute the length of the longest of the sequences after such a transformation.
+</p>
+
+
+
+<h3>Input</h3>
+
+
+<p>The input consists of multiple datasets. Each dataset has the following form.</p>
+
+
+<blockquote>
+<i>n m r</i> <br>
+<i>A</i><sub>1</sub> <i>A</i><sub>2</sub> ... <i>A</i><sub><i>n</i></sub><br>
+<i>B</i><sub>1</sub> <i>B</i><sub>2</sub> ... <i>B</i><sub><i>m</i></sub><br>
+<i>R</i><sub>1</sub><br>
+...<br>
+<i>R</i><sub><i>r</i></sub><br>
+</blockquote>
+
+
+<p>
+The first line of a dataset consists of three positive integers <i>n</i>, <i>m</i>, and <i>r,</i>
+where 
+<i>n</i> (<i>n</i> &le; 25) is the length of the sequence A,
+<i>m</i> (<i>m</i> &le; 25) is the length of the sequence B, and
+<i>r</i> (<i>r</i> &le; 60) is the number of rewriting rules.
+The second line contains <i>n</i> integers representing the <i>n</i> elements of A.
+The third line contains <i>m</i> integers representing the <i>m</i> elements of B.
+Each of the last <i>r</i> lines describes a rewriting rule in the following form.
+</p>
+
+
+
+<blockquote>
+<i>k</i> <i>x</i><sub>1</sub> <i>x</i><sub>2</sub> ... <i>x</i><sub><i>k</i></sub> <i>y</i><br>
+</blockquote>
+
+
+<p>
+The first <i>k</i> is an integer (2 &le; <i>k</i> &le; 10), which is the length of the left-hand side of the rule.
+It is followed by <i>k</i> integers <i>x</i><sub>1</sub> <i>x</i><sub>2</sub> ... <i>x</i><sub><i>k</i></sub>,
+representing the left-hand side of the rule.
+Finally comes an integer <i>y</i>, representing the right-hand side.
+</p>
+<p>
+All of <i>A</i><sub>1</sub>, .., <i>A</i><sub><i>n</i></sub>, <i>B</i><sub>1</sub>, ..., <i>B</i><sub><i>m</i></sub>, <i>x</i><sub>1</sub>, ..., <i>x</i><sub><i>k</i></sub>, and <i>y</i>
+are in the range between 1 and 30, inclusive.
+</p>
+
+
+
+<p>A line "0 0 0" denotes the end of the input.</p>
+
+
+<h3>Output</h3>
+
+<p>
+For each dataset, if it is possible to transform A and B
+to the same sequence, print the length of the longest of
+the sequences after such a transformation.
+Print <code>-1</code> if it is impossible.
+</p>
+
+
+<h3>Sample Input</h3>
+
+<pre>
+3 3 3
+1 2 3
+4 5 6
+2 1 2 5
+2 6 4 3
+2 5 3 1
+3 3 2
+1 1 1
+2 2 1
+2 1 1 2
+2 2 2 1
+7 1 2
+1 1 2 1 4 1 2
+4
+3 1 4 1 4
+3 2 4 2 4
+16 14 5
+2 1 2 2 1 3 2 1 3 2 2 1 1 3 1 2
+2 1 3 1 1 2 3 1 2 2 2 2 1 3
+2 3 1 3
+3 2 2 2 1
+3 2 2 1 2
+3 1 2 2 2
+4 2 1 2 2 2
+0 0 0
+</pre>
+
+
+<h3>Output for the Sample Input</h3>
+
+<pre>
+2
+-1
+1
+9
+</pre>

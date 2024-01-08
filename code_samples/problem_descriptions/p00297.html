@@ -1,0 +1,89 @@
+
+
+
+<h1>天体観測</h1>
+
+<p>
+ある晴れた夜の帰り道、空を見上げるとそこには無数の星。強く輝く星々、かすかに見える星々、いろ
+いろな明るさの星々が夜空を彩っています。
+</p>
+<p>
+あなたはふと思いました。この星空に自分の星座があったらどんなに素敵だろうと。そこであなたはひとつの基準を決め、部屋の窓から見える星々を適当につなげて自分の星座を作ることにしました。その基準とは、「どの２つの星を選んでも、それらの明るさの差がある定数 <var>d</var> 以下になるような星のグループを作り、その中で一番大きいものを自分の星座にしよう！」というものです。例えば、図のような窓から見える夜空を考えてみましょう（外側の長方形は窓枠です）。 
+</p>
+
+<center>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_PCK2014_starWatching1" width="340">
+</center>
+<br>
+<p>
+この夜空には、明るさがそれぞれ 1，12, 2，4，1，8, 3，5，4 の９つの星がありますが、<var>d</var> = 2 とすると例えば以下のような３つの星座 A, B, C ができます。
+</p>
+
+<center>
+<table>
+<tr>
+<td style="text-align:center"><img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_PCK2014_starWatching2" width="160"></td>
+<td style="text-align:center"><img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_PCK2014_starWatching3" width="160"></td>
+<td style="text-align:center"><img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_PCK2014_starWatching4" width="160"></td>
+</tr>
+<tr>
+<td style="text-align:center" width="180">大きさが 12 の星座 A</td>
+<td style="text-align:center" width="180">大きさが 10 の星座 B</td>
+<td style="text-align:center" width="180">大きさが 16 の星座 C</td>
+</tr>
+</table>
+</center>
+
+<br>
+
+<p>
+星座の大きさを次のように決めることにしました。ある星座の星をすべて含むような、窓枠に平行な辺からなる長方形のうち、面積が最も小さいものを選びます。この長方形の面積をその星座の大きさとします。例えば、上の夜空では星座 A, B, Cの大きさはそれぞれ12, 10, 16になるので、星座Cが最も大きい星座となります。
+</p>
+
+<p>
+<var>N</var> 個の星の位置と明るさ、および整数 <var>d</var> が与えられたとき、一番大きい星座の面積を求めるプログラムを作成してください。星の位置は窓枠の左下隅を原点とした座標で与えられ、軸は図のような向きとします。星座を構成する星が１つの場合や、星々が軸に平行な直線上にある場合は、その星座の面積は 0 となることに注意してください。
+</p>
+
+<h2>入力</h2>
+
+<p>
+入力は以下の形式で与えられる。 
+</p>
+<pre>
+<var>N</var> <var>d</var>
+<var>x</var><sub>1</sub> <var>y</var><sub>1</sub> <var>b</var><sub>1</sub>
+<var>x</var><sub>2</sub> <var>y</var><sub>2</sub> <var>b</var><sub>2</sub>
+:
+<var>x<sub>N</sub></var> <var>y<sub>N</sub></var> <var>b<sub>N</sub></var>
+</pre>
+
+<p>
+1 行目に星の数 <var>N</var> (1 &le; <var>N</var> &le; 200000) と整数 <var>d</var> (0 &le; <var>d</var> &le; 10<sup>9</sup>) が与えられる。続く <var>N</var> 行に、<var>i</var> 番目の星の座標を表す整数 <var>x<sub>i</sub></var> (0 &le; <var>x<sub>i</sub></var> &le; 2000000) と <var>y<sub>i</sub></var> (0 &le; <var>y<sub>i</sub></var> &le; 2000000)、明るさを表す整数 <var>b<sub>i</sub></var> (0 &le; <var>b<sub>i</sub></var> &le; 10<sup>9</sup>) が与えられる。入力される星の座標はすべて異なる。
+</p>
+
+<h2>出力</h2>
+<p>
+一番大きい星座の面積を１行に出力する。
+</p>
+
+<h2>入出力例</h2>
+<br>
+
+<h2>入力例</h2>
+<pre>
+9 2
+1 1 1
+1 5 12
+2 3 2
+3 2 4
+4 4 1
+5 1 3
+5 3 8
+6 5 5
+7 2 4
+</pre>
+
+<h2> 出力例</h2>
+<pre>
+16 
+</pre>

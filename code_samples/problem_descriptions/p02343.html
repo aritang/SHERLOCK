@@ -1,0 +1,84 @@
+
+<H1>Disjoint Set</H1>
+
+<p>
+Write a program which manipulates a disjoint set <var>S = {S<sub>1</sub>, S<sub>2</sub>, . . . , S<sub>k</sub>}</var>.
+</p>
+
+<p>
+First of all, the program should read an integer <var>n</var>, then make a disjoint set where each element consists of 0, 1, ... <var>n&minus;1</var> respectively.
+</p>
+
+<p>
+Next, the program should read an integer <var>q</var> and manipulate the set for <var>q</var> queries. There are two kinds of queries for different operations:
+</p>
+
+<ul>
+<li><var>unite(x, y)</var>: unites sets that contain <var>x</var> and <var>y</var>, say <var>S<sub>x</sub></var> and <var>S<sub>y</sub></var>, into a new set.
+<li><var>same(x, y)</var>: determine whether <var>x</var> and <var>y</var> are in the same set.</li>
+</ul>
+
+<H2>Input</H2>
+
+
+<pre>
+<var>n</var> <var>q</var>
+<var>com<sub>1</sub></var> <var>x<sub>1</sub></var> <var>y<sub>1</sub></var>
+<var>com<sub>2</sub></var> <var>x<sub>2</sub></var> <var>y<sub>2</sub></var>
+...
+<var>com<sub>q</sub></var> <var>x<sub>q</sub></var> <var>y<sub>q</sub></var>
+</pre>
+
+<p>
+In the first line, <var>n</var> and <var>q</var> are given. Then, <var>q</var> queries are given where <var>com</var> represents the type of queries. '0' denotes <var>unite</var> and '1' denotes <var>same</var> operation. 
+</p>
+
+
+<H2>Output</H2>
+
+<p>
+For each <var>same</var> operation, print <span>1</span> if <var>x</var> and <var>y</var> are in the same set, otherwise <span>0<span>, in a line.
+</p>
+
+<H2>Constraints</H2>
+
+<ul>
+<li>
+<var>1 &le; n &le; 10000
+</li>
+<li>
+<var>1 &le; q &le; 100000
+</li>
+<li>
+<var>x &ne; y</var>
+</li>
+</ul>
+
+
+<H2>Sample Input</H2>
+<pre>
+5 12
+0 1 4
+0 2 3
+1 1 2
+1 3 4
+1 1 4
+1 3 2
+0 1 3
+1 2 4
+1 3 0
+0 0 4
+1 0 2
+1 3 0
+</pre>
+<H2>Sample Output</H2>
+<pre>
+0
+0
+1
+1
+1
+0
+1
+1
+</pre>

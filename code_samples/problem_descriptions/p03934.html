@@ -1,0 +1,222 @@
+<span class="lang-en lang-child hidden-lang">
+<div id="task-statement">
+<div class="part">
+					Max Score: $1200$ Points <br/>
+<section>
+<h3>Problem statement</h3>
+						There are $N$ customers in a restaurant. Each customer is numbered $1$ through $N$. <br/>
+						A sushi chef carried out $Q$ operations for customers. <br/>
+<br/>
+						The $i$-th operation is follows: <br/>
+<ol class="simple">
+<li>The sushi chef chooses a customer whose number of dishes of sushi eaten is minimum, in customer $1, 2, 3, \dots, a_i$. If there are multiple customers who are minimum numbers of dishes, he selects the minimum-numbered customers. </li>
+<li>He puts a dish of sushi on the selected seats.</li>
+<li>A customer who have selected for professional eats this sushi.</li>
+<li>Repeat 1-3, $b_i$ times.</li>
+</ol>
+<br/>
+						Please calculate the number of dishes of sushi that have been eaten by each customer.<br/>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3>
+							The input is given from Standard Input in the following format: <br/>
+<blockquote>$N \ Q$
+$a_1 \ b_1$
+$a_2 \ b_2$
+$ ：  \ ： $
+$a_Q \ b_Q$
+</blockquote>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3>
+<ul>
+<li>You have to print $N$ lines.</li>
+<li>The $i$-th line should contain the number of dishes of sushi had eaten for customer $i (1 \le i \le N)$.</li>
+</ul>
+</section>
+<section>
+<h3>Constraints</h3>
+<ul>
+<li>$3 \le N, Q \le 100,000$</li>
+<li>$1 \le a_i \le N$</li>
+<li>$1 \le b_i \le 10^{12}$</li>
+<li>Any final results do not exceed $2 \times 10^{13}$.</li>
+</ul>
+</section>
+<section>
+<h3>Subtasks</h3>
+							Subtask 1 [ $60$ points ] <br/>
+<ul>
+<li>$N, Q \le 100$</li>
+<li>$b_i = 1$</li>
+</ul>
+							Subtask 2 [ $400$ points ] <br/>
+<ul>
+<li>$N, Q \le 100$</li>
+<li>$b_i \le 10^{12}$</li>
+</ul>
+							Subtask 3 [ $240$ points ] <br/>
+<ul>
+<li>$N, Q \le 100,000$</li>
+<li>$b_i = 1$</li>
+</ul>
+							Subtask 4 [ $500$ points ] <br/>
+<ul>
+<li>There are no additional constraints.</li>
+</ul>
+</section>
+</div>
+</div>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3>
+<pre>
+9 3
+5 11
+8 4
+4 7
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3>
+<pre>
+4
+4
+4
+4
+2
+2
+1
+1
+0
+</pre>
+						The change of the number of dishes of sushi have eaten is following: <br/>
+<br/>
+<table class="table-striped table-bordered table-condensed">
+<tr align="center">
+<th></th>
+<td width="90">Customer 1</td>
+<td width="90">Customer 2</td>
+<td width="90">Customer 3</td>
+<td width="90">Customer 4</td>
+<td width="90">Customer 5</td>
+<td width="90">Customer 6</td>
+<td width="90">Customer 7</td>
+<td width="90">Customer 8</td>
+<td width="90">Customer 9</td>
+</tr>
+<tr align="center">
+<th>1st Operation</th>
+<td>3</td> <td>2</td> <td>2</td> <td>2</td> <td>2</td> <td>0</td> <td>0</td> <td>0</td> <td>0</td>
+</tr>
+<tr align="center">
+<th>2nd Operation</th>
+<td>3</td> <td>2</td> <td>2</td> <td>2</td> <td>2</td> <td>2</td> <td>1</td> <td>1</td> <td>0</td>
+</tr>
+<tr align="center">
+<th>3rd Operation</th>
+<td>4</td> <td>4</td> <td>4</td> <td>4</td> <td>2</td> <td>2</td> <td>1</td> <td>1</td> <td>0</td>
+</tr>
+</table>
+<br/>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3>
+<pre>
+6 6
+3 5
+6 11
+1 6
+4 7
+5 2
+2 5
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3>
+<pre>
+10
+10
+5
+5
+4
+2
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3>
+<pre>
+5 6
+1 1
+2 1
+3 1
+1 1
+5 1
+3 1
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3>
+<pre>
+2
+2
+1
+1
+0
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Input 4</h3>
+<pre>
+10 10
+10 10
+9 20
+8 30
+7 40
+6 50
+5 60
+4 70
+3 80
+2 90
+1 100
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 4</h3>
+<pre>
+223
+123
+77
+50
+33
+21
+12
+7
+3
+1
+</pre>
+</section>
+</div>
+				Writer: E869120 <br/>
+</div>
+</span>

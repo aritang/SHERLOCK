@@ -1,0 +1,109 @@
+
+
+
+<p>キョウトという街は古い寺社仏閣で有名な観光地である。</p>
+
+<p>イクタ君は数人の友人とキョウト観光に来ていたが、全員が好き勝手に行動した結果、みんな迷子になってしまった。
+</p>
+
+<p>そこでイクタ君は、なるべく早く全員と合流するためには集合場所をどこにするのがよいか考えることにした。
+</p>
+
+<p>
+キョウトの道路は東西と南北に距離10の間隔で無数に走っており、無限に広がる正方格子とみなすことができる。
+</p>
+
+<p>
+道路は直線であるとみなし、幅は無いものとする。
+また、街の中心を基準として東に距離<var>x</var>、北に距離<var>y</var>移動した位置を<var>(x,y)</var>という座標で表す。
+</p>
+
+<p>街の中心である<var>(0,0)</var>では東西の道路と南北の道路が交差している。
+</p>
+
+<p>下図はキョウトの道路と、いくつかの点の座標を図示したものである。
+</p>
+<br>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_JAGSummerCamp2013Day3_TripToKyoto_kyoto" height="400" width="400">
+<br>
+
+<p><var>N</var>人の観光客の座標<var>(X<sub>i</sub>,Y<sub>i</sub>)</var>が整数で与えられるので、<var>N</var>人が道路上を移動して1点に集合するのに必要な時間の最小値を答えよ。
+</p>
+<p>観光客は時間1あたり距離1の速さで連続的に道路上を動くことができるとする。
+</p>
+<p>与えられる<var>N</var>人の観光客の座標はそれぞれ相異なり、また全ての座標は道路上にあることが保証されている。
+</p>
+<p>また、複数の観光客が同時に1点に存在したり、観光客同士がすれ違うように移動することも可能であるとする。
+</p>
+
+<h2>Input</h2>
+<p>入力は以下の形式で与えられる。
+</p><blockquote>
+<var>N</var><br><var>X<sub>1</sub></var> <var>Y<sub>1</sub></var><br>...<br><var>X<sub>N</sub></var> <var>Y<sub>N</sub></var><br></blockquote>
+
+<p>1行目のNは観光客の人数である。
+次のN行のうちi行目(<var>1&le; i &le; N</var>)はi番目の観光客の位置<var>(X<sub>i</sub>, Y<sub>i</sub>)</var>を表している。
+<var>X<sub>i</sub></var>,<var>Y<sub>i</sub></var>はそれぞれ整数で与えられる。
+</p>
+
+<h3>Constraints</h3>
+<p>入力中の各変数は以下の制約を満たす。</p>
+
+<ul>
+<li> <var>2 &le; N &le; 10000</var>
+</li>
+<li> <var>&minus;10<sup>8</sup> &le; X<sub>i</sub>, Y<sub>i</sub> &le; 10<sup>8</sup></var>
+</li>
+<li> <var>i &ne; j</var> のとき <var>(X<sub>i</sub>, Y<sub>i</sub>) &ne; (X<sub>j</sub>, Y<sub>j</sub>)</var>
+</li>
+<li> <var>X<sub>i</sub></var> と <var>Y<sub>i</sub></var> のうち少なくとも一方は10の倍数である
+</li></ul>
+
+
+<h2>Output</h2>
+<p>問題の解を1行に出力せよ。
+<var>10<sup>&minus;3</sup></var>までの絶対誤差を許容する。
+</p>
+
+<h2>Sample Input 1</h2>
+
+<pre>3
+5 10
+-10 0
+3 -10
+</pre>
+
+<h2>Output for the Sample Input 1</h2>
+
+<pre>14
+</pre>
+<ul><li><var>(0, 1)</var>に集合すればよい（この入力例は問題文中の図と対応している）
+</li></ul>
+
+
+<h2>Sample Input 2</h2>
+
+<pre>2
+0 0
+0 1
+</pre>
+<h2>Output for the Sample Input 2</h2>
+
+<pre>0.5
+</pre>
+<ul><li><var>(0, 0.5)</var>に集合すればよい（整数座標以外に集まる場合もあることに注意せよ）
+</li></ul>
+
+
+<h2>Sample Input 3</h2>
+
+<pre>4
+100000000 100000000
+100000000 -100000000
+-100000000 100000000
+-100000000 -100000000
+</pre>
+<h2>Output for the Sample Input 3</h2>
+
+<pre>200000000
+</pre>

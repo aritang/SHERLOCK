@@ -1,0 +1,128 @@
+
+
+
+
+<p>
+閉路のない連結な有向グラフが与えられる．(有向グラフが連結であるとは，これを無向グラフとした時に連結であるという事である．)
+</p>
+
+<p>
+このグラフに対して一つの頂点を選んで首都 <var>s</var> を定めたい．
+</p>
+
+<p>
+<var>T(v) =</var> "<var>v</var> から全ての点を到達可能にするために必要な「辺の反転」操作の回数の最小値"とする．
+</p>
+
+<p>
+ただし，「辺の反転」とは，頂点 <var>v, u</var> に関して <var>(v, u)</var> に張られていた有向辺を削除して <var>(u, v)</var> に張り直すことである．
+</p>
+
+<p>
+頂点 <var>s</var> が首都であるとは任意の頂点 <var>v</var> に対して， <var>T(s) &le; T(v)</var> が成立することである．
+</p>
+
+<p>
+首都であるような頂点をすべて列挙して答えよ．
+</p>
+
+
+<h3>Input</h3>
+<p>
+入力は以下のような形式で <var>M + 1</var> 行で与えられる．
+</p>
+
+<pre>
+<var>N</var> <var>M</var>
+<var>a<sub>1</sub></var> <var>b<sub>1</sub></var>
+:
+<var>a<sub>M</sub></var> <var>b<sub>M</sub></var>
+</pre>
+
+<ul>
+<li> 1 行目には二つの整数 <var>N, M</var> が与えられ，与えられるグラフは <var>N</var> 頂点 <var>M</var> 辺であることを表す．</li>
+<li> 2 行目から <var>M + 1</var> 行目にはそれぞれ二つの整数 <var>a<sub>i</sub>, b<sub>i</sub></var> が与えられ，<var>a<sub>i</sub></var> から <var>b<sub>i</sub></var> に有向辺が張られていることを表す．
+</li>
+</ul>
+
+<h3>Constraints</h3>
+<ul>
+<li> 1 &le; <var>N</var> &le; 10,000</li>
+<li> 0 &le; <var>M</var> &le; 100,000</li>
+<li> 0 &le; <var>a<sub>i</sub></var> &le; <var>N &minus; 1</var></li>
+<li> 0 &le; <var>b<sub>i</sub></var> &le; <var>N &minus; 1</var></li>
+<li> <var>a<sub>i</sub> &ne; b<sub>i</sub></var></li>
+<li> <var>i &ne; j</var> ならば <var>(a<sub>i</sub>, b<sub>i</sub>) &ne; (a<sub>j</sub>, b<sub>j</sub>)</var></li>
+<li> 与えられるグラフは連結で閉路はない．</li>
+<li> 与えられるグラフに対して，入次数が 0 である頂点の個数は 50 以下である．</li>
+</ul>
+
+<h3>Output</h3>
+<p>
+以下の形式で2 行で出力せよ．
+</p>
+<pre>
+<var>cnum</var> <var>cost</var>
+<var>c<sub>1</sub></var> <var>c<sub>2</sub></var> . . .  <var>c<sub>cnum</sub></var>
+</pre>
+
+<ul>
+<li> 1 行目には二つの整数 <var>cnum</var>, <var>cost</var> を空白区切りで出力せよ．</li>
+<li> 2 行目には <var>cnum</var> 個の整数 <var>c<sub>i</sub></var> を空白区切りで出力せよ．</li>
+<li> 変数の意味は以下の通りである．<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &minus; <var>cnum</var> : 首都の性質を満たす頂点数<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &minus; <var>cost</var> : 首都となる頂点 <var>v</var> に対する <var>T(v)</var> の値<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &minus; <var>c<sub>i</sub></var> : 首都の性質を満たす頂点を番号に関して昇順に並べた時，<var>i</var> 番目の頂点番号<br>
+</li>
+</ul>
+
+
+<h3>Sample Input 1</h3>
+<pre>
+3 2
+0 1
+2 1
+</pre>
+
+<h3>Output for the Sample Input 1</h3>
+<pre>
+2 1
+0 2
+</pre>
+
+<ul>
+<li> 頂点 0 を首都とするときには辺 (2,1) を反転すれば，(0,1), (1,2) の辺を持つグラフができるので 1 が答え．</li>
+<li> <var>T(0) = 1, T(1) = 2, T(2) = 1</var> である．</li>
+</ul>
+
+
+<h3>Sample Input 2</h3>
+<pre>
+5 4
+0 1
+2 1
+2 3
+4 3
+</pre>
+
+<h3>Output for the Sample Input 2</h3>
+<pre>
+3 2
+0 2 4
+</pre>
+
+<h3>Sample Input 3</h3>
+<pre>
+5 5
+0 1
+1 2
+3 2
+3 4
+4 1
+</pre>
+
+<h3>Output for the Sample Input 3</h3>
+<pre>
+2 1
+0 3
+</pre>

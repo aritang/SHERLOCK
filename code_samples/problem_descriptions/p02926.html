@@ -1,0 +1,184 @@
+<span class="lang-en">
+<p>Score: <var>600</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3>
+<p>E869120 is initially standing at the origin <var>(0, 0)</var> in a two-dimensional plane.</p>
+<p>He has <var>N</var> engines, which can be used as follows:</p>
+<ul>
+<li>When E869120 uses the <var>i</var>-th engine, his <var>X</var>- and <var>Y</var>-coordinate change by <var>x_i</var> and <var>y_i</var>, respectively. In other words, if E869120 uses the <var>i</var>-th engine from coordinates <var>(X, Y)</var>, he will move to the coordinates <var>(X + x_i, Y + y_i)</var>.</li>
+<li>E869120 can use these engines in any order, but each engine can be used at most once. He may also choose not to use some of the engines.</li>
+</ul>
+<p>He wants to go as far as possible from the origin.
+Let <var>(X, Y)</var> be his final coordinates. Find the maximum possible value of <var>\sqrt{X^2 + Y^2}</var>, the distance from the origin.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3>
+<ul>
+<li><var>1 \leq N \leq 100</var></li>
+<li><var>-1 \ 000 \ 000 \leq x_i \leq 1 \ 000 \ 000</var></li>
+<li><var>-1 \ 000 \ 000 \leq y_i \leq 1 \ 000 \ 000</var></li>
+<li>All values in input are integers.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3>
+<p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+<var>x_1</var> <var>y_1</var>
+<var>x_2</var> <var>y_2</var>
+ <var>:</var> <var>:</var>
+<var>x_N</var> <var>y_N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3>
+<p>Print the maximum possible final distance from the origin, as a real value.
+Your output is considered correct when the relative or absolute error from the true answer is at most <var>10^{-10}</var>.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>3
+0 10
+5 -5
+-5 -5
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>10.000000000000000000000000000000000000000000000000
+</pre>
+<p>The final distance from the origin can be <var>10</var> if we use the engines in one of the following three ways:</p>
+<ul>
+<li>Use Engine <var>1</var> to move to <var>(0, 10)</var>.</li>
+<li>Use Engine <var>2</var> to move to <var>(5, -5)</var>, and then use Engine <var>3</var> to move to <var>(0, -10)</var>.</li>
+<li>Use Engine <var>3</var> to move to <var>(-5, -5)</var>, and then use Engine <var>2</var> to move to <var>(0, -10)</var>.</li>
+</ul>
+<p>The distance cannot be greater than <var>10</var>, so the maximum possible distance is <var>10</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>5
+1 1
+1 0
+0 1
+-1 0
+0 -1
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>2.828427124746190097603377448419396157139343750753
+</pre>
+<p>The maximum possible final distance is <var>2 \sqrt{2} = 2.82842...</var>.
+One of the ways to achieve it is:</p>
+<ul>
+<li>Use Engine <var>1</var> to move to <var>(1, 1)</var>, and then use Engine <var>2</var> to move to <var>(2, 1)</var>, and finally use Engine <var>3</var> to move to <var>(2, 2)</var>.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>5
+1 1
+2 2
+3 3
+4 4
+5 5
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>21.213203435596425732025330863145471178545078130654
+</pre>
+<p>If we use all the engines in the order <var>1 \rightarrow 2 \rightarrow 3 \rightarrow 4 \rightarrow 5</var>, we will end up at <var>(15, 15)</var>, with the distance <var>15 \sqrt{2} = 21.2132...</var> from the origin.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 4</h3><pre>3
+0 0
+0 1
+1 0
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 4</h3><pre>1.414213562373095048801688724209698078569671875376
+</pre>
+<p>There can be useless engines with <var>(x_i, y_i) = (0, 0)</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 5</h3><pre>1
+90447 91000
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 5</h3><pre>128303.000000000000000000000000000000000000000000000000
+</pre>
+<p>Note that there can be only one engine.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 6</h3><pre>2
+96000 -72000
+-72000 54000
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 6</h3><pre>120000.000000000000000000000000000000000000000000000000
+</pre>
+<p>There can be only two engines, too.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 7</h3><pre>10
+1 2
+3 4
+5 6
+7 8
+9 10
+11 12
+13 14
+15 16
+17 18
+19 20
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 7</h3><pre>148.660687473185055226120082139313966514489855137208
+</pre></section>
+</div>
+</span>

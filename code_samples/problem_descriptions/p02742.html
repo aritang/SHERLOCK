@@ -1,0 +1,83 @@
+<span class="lang-en">
+<p>Score : <var>200</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>We have a board with <var>H</var> horizontal rows and <var>W</var> vertical columns of squares.
+There is a bishop at the top-left square on this board.
+How many squares can this bishop reach by zero or more movements?</p>
+<p>Here the bishop can only move diagonally.
+More formally, the bishop can move from the square at the <var>r_1</var>-th row (from the top) and the <var>c_1</var>-th column (from the left) to the square at the <var>r_2</var>-th row and the <var>c_2</var>-th column if and only if exactly one of the following holds:</p>
+<ul>
+<li><var>r_1 + c_1 = r_2 + c_2</var></li>
+<li><var>r_1 - c_1 = r_2 - c_2</var></li>
+</ul>
+<p>For example, in the following figure, the bishop can move to any of the red squares in one move:</p>
+<p><img alt="" src="https://img.atcoder.jp/panasonic2020/943f3f8428e6f8328924ff99681c932b.png"/></p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 \leq H, W \leq 10^9</var></li>
+<li>All values in input are integers.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>H \ W</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the number of squares the bishop can reach.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>4 5
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>10
+</pre>
+<p>The bishop can reach the cyan squares in the following figure:</p>
+<p><img alt="" src="https://img.atcoder.jp/panasonic2020/b218e01560fe6e40e7d082ca57a64e6e.png"/></p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>7 3
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>11
+</pre>
+<p>The bishop can reach the cyan squares in the following figure:</p>
+<p><img alt="" src="https://img.atcoder.jp/panasonic2020/088830f8a244d99a9f95d20bf9a8d336.png"/></p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>1000000000 1000000000
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>500000000000000000
+</pre></section>
+</div>
+</span>

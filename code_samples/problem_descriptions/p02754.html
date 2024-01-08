@@ -1,0 +1,80 @@
+<span class="lang-en">
+<p>Score : <var>200</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>Takahashi has many red balls and blue balls. Now, he will place them in a row.</p>
+<p>Initially, there is no ball placed.</p>
+<p>Takahashi, who is very patient, will do the following operation <var>10^{100}</var> times:</p>
+<ul>
+<li>Place <var>A</var> blue balls at the end of the row of balls already placed. Then, place <var>B</var> red balls at the end of the row.</li>
+</ul>
+<p>How many blue balls will be there among the first <var>N</var> balls in the row of balls made this way?</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 \leq N \leq 10^{18}</var></li>
+<li><var>A, B \geq 0</var></li>
+<li><var>0 &lt; A + B \leq 10^{18}</var></li>
+<li>All values in input are integers.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var> <var>A</var> <var>B</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the number of blue balls that will be there among the first <var>N</var> balls in the row of balls.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>8 3 4
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>4
+</pre>
+<p>Let <code>b</code> denote a blue ball, and <code>r</code> denote a red ball. The first eight balls in the row will be <code>bbbrrrrb</code>, among which there are four blue balls.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>8 0 4
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>0
+</pre>
+<p>He placed only red balls from the beginning.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>6 2 4
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>2
+</pre>
+<p>Among <code>bbrrrr</code>, there are two blue balls.</p></section>
+</div>
+</span>

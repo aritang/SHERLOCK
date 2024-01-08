@@ -1,0 +1,99 @@
+
+<h2>I - The J-th Number</h2>
+
+<h3>Problem Statement</h3>
+
+<p>
+You are given <var>N</var> empty arrays, <var>t_1, ..., t_n</var>. At first, you execute <var>M</var> queries as follows.
+</p>
+
+<ul>
+<li>add a value <var>v</var> to array <var>t_i</var> (<var>a \leq i \leq b</var>)</li>
+</ul>
+
+<p>
+Next, you process <var>Q</var> following output queries.
+</p>
+
+<ul>
+<li>output the <var>j</var>-th number of the sequence sorted all values in <var>t_i</var> (<var>x \leq i \leq y</var>)</li>
+</ul>
+
+
+<h3>Input</h3>
+
+<p>
+The dataset is formatted as follows.
+</p>
+
+<pre>
+<var>N</var> <var>M</var> <var>Q</var>
+<var>a_1</var> <var>b_1</var> <var>v_1</var>
+...
+<var>a_M</var> <var>b_M</var> <var>v_M</var>
+<var>x_1</var> <var>y_1</var> <var>j_1</var>
+...
+<var>x_Q</var> <var>y_Q</var> <var>j_Q</var>
+</pre>
+
+<p>
+The first line contains three integers <var>N</var> (<var>1 \leq N \leq 10^9</var>), <var>M</var> (<var>1 \leq M \leq 10^5</var>) and <var>Q</var> (<var>1 \leq Q \leq 10^5</var>). Each of the following <var>M</var> lines consists of three integers <var>a_i</var>, <var>b_i</var> and <var>v_i</var> (<var>1 \leq a_i \leq b_i \leq N</var>, <var>1 \leq v_i \leq 10^9</var>). Finally the following <var>Q</var> lines give the list of output queries, each of these lines consists of three integers <var>x_i</var>, <var>y_i</var> and <var>j_i</var> (<var>1 \leq x_i \leq y_i \leq N, 1 \leq j_i \leq &Sigma;_{x_i \leq k \leq y_i} |t_k|</var>).
+</p>
+
+<h3>Output</h3>
+
+<p>
+For each output query, print in a line the <var>j</var>-th number.
+</p>
+
+<h3>Sample Input 1</h3>
+
+<pre>
+5 4 1
+1 5 1
+1 1 3
+4 5 1
+3 4 2
+1 3 4
+</pre>
+
+<h3>Output for the Sample Input 1</h3>
+
+<pre>
+2
+</pre>
+
+<p>
+After the <var>M</var>-th query is executed, each <var>t_i</var> is as follows:
+</p>
+
+<pre>
+[1,3], [1], [1,2], [1,1,2], [1,1]
+</pre>
+
+<p>
+The sequence sorted values in <var>t_1</var>, <var>t_2</var> and <var>t_3</var> is [1,1,1,2,3]. In the sequence, the 4-th number is 2.
+</p>
+
+<h3>Sample Input 2</h3>
+
+<pre>
+10 4 4
+1 4 11
+2 3 22
+6 9 33
+8 9 44
+1 1 1
+4 5 1
+4 6 2
+1 10 12
+</pre>
+
+<h3>Output for the Sample Input 2</h3>
+
+<pre>
+11
+11
+33
+44
+</pre>

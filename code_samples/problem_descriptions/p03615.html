@@ -1,0 +1,97 @@
+<span class="lang-en">
+<p>Score : <var>700</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>You are given <var>N</var> points <var>(x_i,y_i)</var> located on a two-dimensional plane.
+Consider a subset <var>S</var> of the <var>N</var> points that forms a convex polygon.
+Here, we say a set of points <var>S</var> <em>forms a convex polygon</em> when there exists a convex polygon with a positive area that has the same set of vertices as <var>S</var>. All the interior angles of the polygon must be strictly less than <var>180°</var>.</p>
+<div style="text-align: center;">
+<img alt="cddb0c267926c2add885ca153c47ad8a.png" src="https://atcoder.jp/img/arc082/cddb0c267926c2add885ca153c47ad8a.png">
+</img></div>
+<p>For example, in the figure above, {<var>A,C,E</var>} and {<var>B,D,E</var>} form convex polygons; {<var>A,C,D,E</var>}, {<var>A,B,C,E</var>}, {<var>A,B,C</var>}, {<var>D,E</var>} and {} do not.</p>
+<p>For a given set <var>S</var>, let <var>n</var> be the number of the points among the <var>N</var> points that are inside the convex hull of <var>S</var> (including the boundary and vertices). Then, we will define the <em>score</em> of <var>S</var> as <var>2^{n-|S|}</var>.</p>
+<p>Compute the scores of all possible sets <var>S</var> that form convex polygons, and find the sum of all those scores.</p>
+<p>However, since the sum can be extremely large, print the sum modulo <var>998244353</var>.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1≤N≤200</var></li>
+<li><var>0≤x_i,y_i&lt;10^4 (1≤i≤N)</var></li>
+<li>If <var>i≠j</var>, <var>x_i≠x_j</var> or <var>y_i≠y_j</var>.</li>
+<li><var>x_i</var> and <var>y_i</var> are integers.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>The input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+<var>x_1</var> <var>y_1</var>
+<var>x_2</var> <var>y_2</var>
+<var>:</var>
+<var>x_N</var> <var>y_N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the sum of all the scores modulo <var>998244353</var>.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>4
+0 0
+0 1
+1 0
+1 1
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>5
+</pre>
+<p>We have five possible sets as <var>S</var>, four sets that form triangles and one set that forms a square. Each of them has a score of <var>2^0=1</var>, so the answer is <var>5</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>5
+0 0
+0 1
+0 2
+0 3
+1 1
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>11
+</pre>
+<p>We have three "triangles" with a score of <var>1</var> each, two "triangles" with a score of <var>2</var> each, and one "triangle" with a score of <var>4</var>. Thus, the answer is <var>11</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>1
+3141 2718
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>0
+</pre>
+<p>There are no possible set as <var>S</var>, so the answer is <var>0</var>.</p></section>
+</div>
+</span>

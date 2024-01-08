@@ -1,0 +1,84 @@
+<span class="lang-en">
+<p>Score : <var>300</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>Takahashi is now competing in a programming contest, but he received TLE in a problem where the answer is <code>YES</code> or <code>NO</code>.</p>
+<p>When he checked the detailed status of the submission, there were <var>N</var> test cases in the problem, and the code received TLE in <var>M</var> of those cases.</p>
+<p>Then, he rewrote the code to correctly solve each of those <var>M</var> cases with <var>1/2</var> probability in <var>1900</var> milliseconds, and correctly solve each of the other <var>N-M</var> cases without fail in <var>100</var> milliseconds.</p>
+<p>Now, he goes through the following process:</p>
+<ul>
+<li>Submit the code.</li>
+<li>Wait until the code finishes execution on all the cases.</li>
+<li>If the code fails to correctly solve some of the <var>M</var> cases, submit it again.</li>
+<li>Repeat until the code correctly solve all the cases in one submission.</li>
+</ul>
+<p>Let the expected value of the total execution time of the code be <var>X</var> milliseconds. Print <var>X</var> (as an integer).</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li>All input values are integers.</li>
+<li><var>1 \leq N \leq 100</var></li>
+<li><var>1 \leq M \leq {\rm min}(N, 5)</var></li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var> <var>M</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print <var>X</var>, the expected value of the total execution time of the code, as an integer. It can be proved that, under the constraints in this problem, <var>X</var> is an integer not exceeding <var>10^9</var>.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>1 1
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>3800
+</pre>
+<p>In this input, there is only one case. Takahashi will repeatedly submit the code that correctly solves this case with <var>1/2</var> probability in <var>1900</var> milliseconds.</p>
+<p>The code will succeed in one attempt with <var>1/2</var> probability, in two attempts with <var>1/4</var> probability, and in three attempts with <var>1/8</var> probability, and so on.</p>
+<p>Thus, the answer is <var>1900 \times 1/2 + (2 \times 1900) \times 1/4 + (3 \times 1900) \times 1/8 + ... = 3800</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>10 2
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>18400
+</pre>
+<p>The code will take <var>1900</var> milliseconds in each of the <var>2</var> cases, and <var>100</var> milliseconds in each of the <var>10-2=8</var> cases. The probability of the code correctly solving all the cases is <var>1/2 \times 1/2 = 1/4</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>100 5
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>608000
+</pre></section>
+</div>
+</span>

@@ -1,0 +1,107 @@
+<span class="lang-en">
+<p>Score : <var>700</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>We have a sequence of <var>N \times K</var> integers: <var>X=(X_0,X_1,\cdots,X_{N \times K-1})</var>.
+Its elements are represented by another sequence of <var>N</var> integers: <var>A=(A_0,A_1,\cdots,A_{N-1})</var>. For each pair <var>i, j</var> (<var>0 \leq i \leq K-1,\ 0 \leq j \leq N-1</var>), <var>X_{i \times N + j}=A_j</var> holds.</p>
+<p>Snuke has an integer sequence <var>s</var>, which is initially empty.
+For each <var>i=0,1,2,\cdots,N \times K-1</var>, in this order, he will perform the following operation:</p>
+<ul>
+<li>If <var>s</var> does not contain <var>X_i</var>: add <var>X_i</var> to the end of <var>s</var>.</li>
+<li>If <var>s</var> does contain <var>X_i</var>: repeatedly delete the element at the end of <var>s</var> until <var>s</var> no longer contains <var>X_i</var>. Note that, in this case, we do <strong>not</strong> add <var>X_i</var> to the end of <var>s</var>.</li>
+</ul>
+<p>Find the elements of <var>s</var> after Snuke finished the operations.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 \leq N \leq 2 \times 10^5</var></li>
+<li><var>1 \leq K \leq 10^{12}</var></li>
+<li><var>1 \leq A_i \leq 2 \times 10^5</var></li>
+<li>All values in input are integers.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var> <var>K</var>
+<var>A_0</var> <var>A_1</var> <var>\cdots</var> <var>A_{N-1}</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the elements of <var>s</var> after Snuke finished the operations, in order from beginning to end, with spaces in between.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>3 2
+1 2 3
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>2 3
+</pre>
+<p>In this case, <var>X=(1,2,3,1,2,3)</var>.
+We will perform the operations as follows:</p>
+<ul>
+<li><var>i=0</var>: <var>s</var> does not contain <var>1</var>, so we add <var>1</var> to the end of <var>s</var>, resulting in <var>s=(1)</var>.</li>
+<li><var>i=1</var>: <var>s</var> does not contain <var>2</var>, so we add <var>2</var> to the end of <var>s</var>, resulting in <var>s=(1,2)</var>.</li>
+<li><var>i=2</var>: <var>s</var> does not contain <var>3</var>, so we add <var>3</var> to the end of <var>s</var>, resulting in <var>s=(1,2,3)</var>.</li>
+<li><var>i=3</var>: <var>s</var> does contain <var>1</var>, so we repeatedly delete the element at the end of <var>s</var> as long as <var>s</var> contains <var>1</var>, which causes the following changes to <var>s</var>: <var>(1,2,3)→(1,2)→(1)→()</var>.</li>
+<li><var>i=4</var>: <var>s</var> does not contain <var>2</var>, so we add <var>2</var> to the end of <var>s</var>, resulting in <var>s=(2)</var>.</li>
+<li><var>i=5</var>: <var>s</var> does not contain <var>3</var>, so we add <var>3</var> to the end of <var>s</var>, resulting in <var>s=(2,3)</var>.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>5 10
+1 2 3 2 3
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>3
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>6 1000000000000
+1 1 2 2 3 3
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre></pre>
+<p><var>s</var> may be empty in the end.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 4</h3><pre>11 97
+3 1 4 1 5 9 2 6 5 3 5
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 4</h3><pre>9 2 6
+</pre></section>
+</div>
+</span>

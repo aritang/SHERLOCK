@@ -1,0 +1,39 @@
+
+
+
+
+<h1>A : Taps / 蛇口</h1>
+
+<h1>Problem</h1>
+<p>あいづ君の家の浴槽には2つの蛇口 <em>A</em>, <em>B</em> がついており、 ひねるとひねった角度に比例した量の水が出てくる。 出てくる水の温度は <em>A</em> は <em>t<SUB>A</SUB></em> [℃]、<em>B</em> は <em>t<SUB>B</SUB></em> [℃]で一定である。 風呂に入るときにはそれらの量を調節して混ぜあわせることで適度な温度になるようにしている。</p>
+<p><em>t<SUB>A</SUB></em> [℃] の水 <em>v<SUB>A</SUB></em> [L] と <em>t<SUB>B</SUB></em> [℃]の水 <em>v<SUB>B</SUB></em> [L] を混ぜ合わせた後の温度は、(<em>t<SUB>A</SUB></em> × <em>v<SUB>A</SUB></em> + <em>t<SUB>B</SUB></em> × <em>v<SUB>B</SUB></em>) / (<em>v<SUB>A</SUB></em> + <em>v<SUB>B</SUB></em>) になる。 例えば、<em>t<SUB>A</SUB></em> = 80℃, <em>t<SUB>B</SUB></em> = 20℃ で 40℃ のお湯を張りたいときには、 <em>A</em> から 100mL/s 、 <em>B</em> から 200mL/s ずつ出るように蛇口を調節すればよい。</p>
+<p>ところが、このごろ蛇口が老朽化してきたため <em>A</em> は <em>d<SUB>A</SUB></em> [mL/s] 、<em>B</em> は <em>d<SUB>B</SUB></em> [mL/s] 単位でしか 出る水の量を調節できなくなってしまった。 すなわち、<em>A</em> から出る水の量が 0, <em>d<SUB>A</SUB></em>, 2×<em>d<SUB>A</SUB></em>, 3×<em>d<SUB>A</SUB></em>, ...[mL/s] という 飛び飛びの値にしか設定できなくなってしまったのである(<em>B</em> も同様)。</p>
+<p>あいづ君は長年培ってきた勘によって狙った温度ぴったりに 調節できたのだが、それが通用しなくなった。 困ったあいづ君は、自動的に目的の温度 <em>T</em>[℃] に最も近い温度になるような水の出し方に調節するプログラムを書くことにした。 ただし、毎秒出せる水の量には上限があり、 <em>A</em> と <em>B</em> の水の量の和は <em>D</em> [mL/s] 以下でなければならない。 また、水を出さないことにはお風呂に入れないため、毎秒出る水の量は最低でも 1mL/s 以上でなければならない。 つまり、 1 ≦ <em>A</em> から出る水の量 + <em>B</em> から出る水の量 ≦ <em>D</em> を満たす必要がある。</p>
+<h1>Input</h1>
+<p>入力は次のような形式で与えられる．</p>
+<p><em>T</em> <em>D</em><br><em>t<SUB>A</SUB></em> <em>t<SUB>B</SUB></em><br><em>d<SUB>A</SUB></em> <em>d<SUB>B</SUB></em></p>
+<p>1行目の <em>T</em>, <em>D</em> は、それぞれ目的の温度、水の量の上限を表す。 2行目の <em>t<SUB>A</SUB></em>, <em>t<SUB>B</SUB></em> は、それぞれ <em>A</em> の温度、 <em>B</em> の温度を表す。 3行目の <em>d<SUB>A</SUB></em>, <em>d<SUB>B</SUB></em> は、それぞれ <em>A</em> から出る水の量の単位、 <em>B</em> から出る水の量の単位を表す。</p>
+<h1>Constraints</h1>
+<ul>
+<li>入力は全て整数である。</li>
+<li>1 ≦ <em>T</em>, <em>t<SUB>A</SUB></em>, <em>t<SUB>B</SUB></em> ≦ 99</li>
+<li>1 ≦ <em>D</em> ≦ 1000</li>
+<li>1 ≦ <em>d<SUB>A</SUB></em>, <em>d<SUB>B</SUB></em> ≦ <em>D</em></li>
+</ul>
+<h1>Output</h1>
+<p><em>T</em> に最も近くなるように水を混ぜあわせた後の温度と<em>T</em> との差の大きさの最小値を1行で出力せよ。ただし、10<sup>-4</sup> 以下の誤差は許容される。</p>
+<h1>Samples</h1>
+<h2>Sample Input 1</h2>
+<pre>40 1000
+80 20
+100 100</pre>
+<h2>Sample Output 1</h2>
+<pre>0.0000000000</pre>
+<p>問題文の例である。</p>
+<h2>Sample Input 2</h2>
+<pre>38 1000
+80 20
+100 95</pre>
+<h2>Sample Output 2</h2>
+<pre>0.2222222222</pre>
+<p>Aの蛇口から 200mL/s、Bの蛇口から 475mL/s の量の水を出したとき、37.7777...℃ となり、これが38℃ に最も近くなる。</p>

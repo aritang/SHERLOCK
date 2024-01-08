@@ -1,0 +1,68 @@
+<span class="lang-en">
+<p>Score : <var>300</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>Snuke and Raccoon have a heap of <var>N</var> cards. The <var>i</var>-th card from the top has the integer <var>a_i</var> written on it.</p>
+<p>They will share these cards.
+First, Snuke will take some number of cards from the top of the heap, then Raccoon will take all the remaining cards.
+Here, both Snuke and Raccoon have to take at least one card.</p>
+<p>Let the sum of the integers on Snuke's cards and Raccoon's cards be <var>x</var> and <var>y</var>, respectively.
+They would like to minimize <var>|x-y|</var>.
+Find the minimum possible value of <var>|x-y|</var>.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>2 \leq N \leq 2 \times 10^5</var></li>
+<li><var>-10^{9} \leq a_i \leq 10^{9}</var></li>
+<li><var>a_i</var> is an integer.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+<var>a_1</var> <var>a_2</var> <var>...</var> <var>a_{N}</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the answer.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>6
+1 2 3 4 5 6
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>1
+</pre>
+<p>If Snuke takes four cards from the top, and Raccoon takes the remaining two cards, <var>x=10</var>, <var>y=11</var>, and thus <var>|x-y|=1</var>. This is the minimum possible value.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>2
+10 -10
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>20
+</pre>
+<p>Snuke can only take one card from the top, and Raccoon can only take the remaining one card. In this case, <var>x=10</var>, <var>y=-10</var>, and thus <var>|x-y|=20</var>.</p></section>
+</div>
+</span>

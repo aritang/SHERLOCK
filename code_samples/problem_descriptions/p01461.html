@@ -1,0 +1,82 @@
+
+<script src="./IMAGE/varmath.js" charset="UTF-8"></script>
+
+<H1>Multi-ending Story</H1>
+
+<p>
+You are a programmer who loves bishojo games (a sub-genre of dating simulation games).
+A game, which is titled &quot;I * C * P * C!&quot; and was released yesterday, has arrived to you just now.
+This game has multiple endings. When you complete all of those endings, you can get a special figure of the main heroine, Sakuya.
+So, you want to hurry and play the game!
+But, let's calm down a bit and think how to complete all of the endings in the shortest time first.
+</p>
+
+<p>
+In fact, you have a special skill that allows you to know the structure of branching points of games.
+By using the skill, you have found out that all of the branching points in this game are to select two choices &quot;Yes&quot; or &quot;No&quot;, and once a different choice is taken the branched stories flow to different endings; they won't converge any more, like a binary tree.
+You also noticed that it takes exactly one minute to proceed the game from a branching point to another branching point or to an ending.
+In addition, you can assume it only takes negligible time to return to the beginning of the game (``reset'') and to play from the beginning to the first branching point. 
+</p>
+
+<p>
+The game has an additional feature called &quot;Quick Save&quot;, which can significantly reduce the playing time for completion.
+The feature allows you to record the point where you are currently playing and return there at any time later.
+You can record any number of times, but you can hold only the last recorded point.
+That is, when you use Quick Save, you overwrite the previous record. If you want to return to the overwritten point, you must play the game from the beginning once again.
+</p>
+
+<p>
+Well, let's estimate how long it will take for completing all of the endings in the shortest time.
+</p>
+
+<H2>Input</H2>
+
+<p>
+A data set is given in the following format.
+</p>
+
+<p>
+The first line of the data set contains one integer <var>N</var> (<var>2 \leq N \leq 500{,}000</var>), which denotes the number of the endings in this game.
+The following <var>N-1</var> lines describe the branching points.
+The <var>i</var>-th line describes the branching point of ID number i and contains two integers <var>Yes_i</var> and <var>No_i</var> (<var>i + 1 \leq Yes_i, No_i \leq N</var>), which denote the ID numbers of the next branching points when you select Yes or No respectively.
+<var>Yes_i = N</var> means that you can reach an ending if you select Yes, and so for <var>No_i = N</var>.
+The branching point with ID 1 is the first branching point.
+The branching points with ID between 2 and <var>N-1</var> (inclusive) appear exactly once in <var>Yes_i</var>'s and <var>No_i</var>'s.
+</p>
+
+<H2>Output</H2>
+
+<p>
+Print the shortest time in a line.
+</p>
+
+<H2>Sample Input 1</H2>
+
+<pre>
+4
+2 3
+4 4
+4 4
+</pre>
+
+<H2>Output for the Sample Input 1</H2>
+
+<pre>
+6
+</pre>
+
+<H2>Sample Input 2</H2>
+
+<pre>
+5
+5 2
+3 5
+5 4
+5 5
+</pre>
+
+<H2>Output for the Sample Input 2</H2>
+
+<pre>
+8
+</pre>

@@ -1,0 +1,144 @@
+
+<H1><font color="#000">Problem I:</font> Intersection of Two Prisms</H1>
+
+<p>
+Suppose that <i>P</i><sub>1</sub> is an infinite-height prism whose axis is parallel to the <i>z</i>-axis, and <i>P</i><sub>2</sub> is also an infinite-height prism whose axis is parallel to the <i>y</i>-axis. <i>P</i><sub>1</sub> is defined by the polygon <i>C</i><sub>1</sub> which is the cross section of <i>P</i><sub>1</sub> and the <i>xy</i>-plane, and <i>P</i><sub>2</sub> is also defined by the polygon <i>C</i><sub>2</sub> which is the cross section of <i>P</i><sub>2</sub> and the <i>x</i>z-plane.
+</p>
+
+<p>
+Figure I.1 shows two cross sections which appear as the first dataset in the sample input, and
+Figure I.2 shows the relationship between the prisms and their cross sections.
+</p>
+
+<center>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_intersectionOfTwoPrisms1"><br>
+<p>Figure I.1: Cross sections of Prisms</p>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_intersectionOfTwoPrisms2"><br>
+<p>Figure I.2: Prisms and their cross sections</p>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_intersectionOfTwoPrisms3"><br>
+<p>Figure I.3: Intersection of two prisms</p>
+</center>
+
+<p>
+Figure I.3 shows the intersection of two prisms in Figure I.2, namely, <i>P</i><sub>1</sub> and <i>P</i><sub>2</sub>.
+</p>
+<p>
+Write a program which calculates the volume of the intersection of two prisms.
+</p>
+
+
+<H2>Input</H2>
+
+<p>
+The input is a sequence of datasets. The number of datasets is less than 200.
+</p>
+<p>
+Each dataset is formatted as follows.
+</p>
+
+<p>
+<i>m n</i><br>
+<i>x</i><sub>11</sub> <i>y</i><sub>11</sub><br>
+<i>x</i><sub>12</sub> <i>y</i><sub>12</sub> <br>
+.<br>
+.<br>
+.<br>
+<i>x</i><sub>1<i>m</i></sub> <i>y</i><sub>1<i>m</i></sub> <br>
+<i>x</i><sub>21</sub> <i>z</i><sub>21</sub><br>
+<i>x</i><sub>22</sub> <i>z</i><sub>22</sub><br>
+.<br>
+.<br>
+.<br>
+<i>x</i><sub>2<i>n</i></sub> <i>z</i><sub>2<i>n</i></sub><br>
+</p>
+
+<p>
+<i>m</i> and <i>n</i> are integers (3 &le; <i>m</i> &le; 100, 3 &le; <i>n</i> &le; 100) which represent the numbers of the vertices of the polygons, <i>C</i><sub>1</sub> and <i>C</i><sub>2</sub>, respectively.
+</p>
+
+<p>
+<i>x</i><sub>1<i>i</i></sub>, <i>y</i><sbu>1<i>i</i></sub>, <i>x</i><sub>2<i>j</i></sub> and <i>z</i><sub>2<i>j</i></sub> are integers between -100 and 100, inclusive. (<i>x</i><sub>1<i>i</i></sub>, <i>y</i><sub>1<i>i</i></sub>) and (<i>x</i><sub>2<i>j</i></sub> , <i>z</i><sub>2<i>j</i></sub>) mean the <i>i</i>-th and <i>j</i>-th vertices' positions of <i>C</i><sub>1</sub> and <i>C</i><sub>2</sub> respectively.
+</p>
+<p>
+The sequences of these vertex positions are given in the counterclockwise order either on the <i>xy</i>-plane or the <i>xz</i>-plane as in Figure I.1.
+</p>
+
+<p>
+You may assume that all the polygons are <i>convex</i>, that is, all the interior angles of the polygons are less than 180 degrees. You may also assume that all the polygons are <i>simple</i>, that is, each polygon's boundary does not cross nor touch itself.
+</p>
+
+<p>
+The end of the input is indicated by a line containing two zeros.
+</p>
+
+<H2>Output</H2>
+
+<p>
+For each dataset, output the volume of the intersection of the two prisms, <i>P</i><sub>1</sub> and <i>P</i><sub>2</sub>, with a decimal representation in a line.
+</p>
+
+<p>
+None of the output values may have an error greater than 0.001. The output should not contain any other extra characters.
+</p>
+
+<H2>Sample Input</H2>
+<pre>
+4 3
+7 2
+3 3
+0 2
+3 1
+4 2
+0 1
+8 1
+4 4
+30 2
+30 12
+2 12
+2 2
+15 2
+30 8
+13 14
+2 8
+8 5
+13 5
+21 7
+21 9
+18 15
+11 15
+6 10
+6 8
+8 5
+10 12
+5 9
+15 6
+20 10
+18 12
+3 3
+5 5
+10 3
+10 10
+20 8
+10 15
+10 8
+4 4
+-98 99
+-99 -99
+99 -98
+99 97
+-99 99
+-98 -98
+99 -99
+96 99
+0 0
+</pre>
+
+<H2>Output for the Sample Input</H2>
+<pre>
+4.708333333333333
+1680.0000000000005
+491.1500000000007
+0.0
+7600258.4847715655
+</pre>
+

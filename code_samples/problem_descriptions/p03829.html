@@ -1,0 +1,99 @@
+<span class="lang-en">
+<p>Score : <var>500</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>There are <var>N</var> towns on a line running east-west.
+The towns are numbered <var>1</var> through <var>N</var>, in order from west to east.
+Each point on the line has a one-dimensional coordinate, and a point that is farther east has a greater coordinate value.
+The coordinate of town <var>i</var> is <var>X_i</var>.</p>
+<p>You are now at town <var>1</var>, and you want to visit all the other towns.
+You have two ways to travel:</p>
+<ul>
+<li>
+<p>Walk on the line.
+Your <em>fatigue level</em> increases by <var>A</var> each time you travel a distance of <var>1</var>, regardless of direction.</p>
+</li>
+<li>
+<p>Teleport to any location of your choice.
+Your fatigue level increases by <var>B</var>, regardless of the distance covered.</p>
+</li>
+</ul>
+<p>Find the minimum possible total increase of your fatigue level when you visit all the towns in these two ways.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li>All input values are integers.</li>
+<li><var>2≤N≤10^5</var></li>
+<li><var>1≤X_i≤10^9</var></li>
+<li>For all <var>i(1≤i≤N-1)</var>, <var>X_i&lt;X_{i+1}</var>.</li>
+<li><var>1≤A≤10^9</var></li>
+<li><var>1≤B≤10^9</var></li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>The input is given from Standard Input in the following format:</p>
+<pre><var>N</var> <var>A</var> <var>B</var>
+<var>X_1</var> <var>X_2</var> <var>...</var> <var>X_N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the minimum possible total increase of your fatigue level when you visit all the towns.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>4 2 5
+1 2 5 7
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>11
+</pre>
+<p>From town <var>1</var>, walk a distance of <var>1</var> to town <var>2</var>, then teleport to town <var>3</var>, then walk a distance of <var>2</var> to town <var>4</var>.
+The total increase of your fatigue level in this case is <var>2×1+5+2×2=11</var>, which is the minimum possible value.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>7 1 100
+40 43 45 105 108 115 124
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>84
+</pre>
+<p>From town <var>1</var>, walk all the way to town <var>7</var>.
+The total increase of your fatigue level in this case is <var>84</var>, which is the minimum possible value.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>7 1 2
+24 35 40 68 72 99 103
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>12
+</pre>
+<p>Visit all the towns in any order by teleporting six times.
+The total increase of your fatigue level in this case is <var>12</var>, which is the minimum possible value.</p></section>
+</div>
+</span>

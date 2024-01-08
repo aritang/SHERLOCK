@@ -1,0 +1,107 @@
+<span class="lang-en">
+<p>Score : <var>1300</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>There is a string <var>s</var> consisting of <code>a</code> and <code>b</code>.
+Snuke can perform the following two kinds of operation any number of times in any order:</p>
+<ul>
+<li>Choose an occurrence of <code>aa</code> as a substring, and replace it with <code>b</code>.</li>
+<li>Choose an occurrence of <code>bb</code> as a substring, and replace it with <code>a</code>.</li>
+</ul>
+<p>How many strings <var>s</var> can be obtained by this sequence of operations?
+Find the count modulo <var>10^9 + 7</var>.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 \leq |s| \leq 10^5</var></li>
+<li><var>s</var> consists of <code>a</code> and <code>b</code>.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>s</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the number of strings <var>s</var> that can be obtained, modulo <var>10^9 + 7</var>.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>aaaa
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>6
+</pre>
+<p>Six strings can be obtained:</p>
+<ul>
+<li><code>aaaa</code></li>
+<li><code>aab</code></li>
+<li><code>aba</code></li>
+<li><code>baa</code></li>
+<li><code>bb</code></li>
+<li><code>a</code></li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>aabb
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>5
+</pre>
+<p>Five strings can be obtained:</p>
+<ul>
+<li><code>aabb</code></li>
+<li><code>aaa</code></li>
+<li><code>bbb</code></li>
+<li><code>ab</code></li>
+<li><code>ba</code></li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>ababababa
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>1
+</pre>
+<p>Snuke cannot perform any operation.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 4</h3><pre>babbabaaba
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 4</h3><pre>35
+</pre></section>
+</div>
+</span>

@@ -1,0 +1,145 @@
+
+
+
+
+<h2>E： たい焼きマスターと食べ盛り - Taiyaki-Master and Eater</h2>
+
+<h3>物語</h3>
+
+<p>つたさんはたい焼きを作るのがとても上手い。えびちゃんはそんなつたさんが作るたい焼きが大好きだ。　<var>2</var> 人は毎週たい焼きを作って食べて幸せに過ごしているが、たい焼きを作っているそばで食べ盛りのえびちゃんにつまみ食いをされてしまうのがつたさんの最近の悩みだ。</p>
+
+<p>学校祭でたい焼きを作ることになったつたさんは、いつものようにえびちゃんにつまみ食いされていたら売上が心配なので、自分が注目している範囲のたい焼きの様子を知ることができればいいなと思った。学校祭が成功するように、つたさんを助けてあげよう。</p>
+
+<h3>問題</h3>
+
+<p>縦 <var>H</var>、横 <var>W</var> の長方形状のたい焼きプレートがあり、たい焼きをセットしてから焼き上がるまでに <var>T</var> 分かかる。このプレートはたい焼きを一度に最大 <var>HW</var> 個焼くことができ、プレートの上から <var>i</var> <var>(1 \leq i \leq H)</var> 番目で左から <var>j</var> <var>(1 \leq j \leq W)</var> 番目の場所で焼いているたい焼きは <var>(i, j)</var> で表される。</p>
+
+<p>次の <var>3</var> 種類のイベントが合計 <var>Q</var> 回発生する。なお、初期状態ではたい焼きはいずれの場所にもセットされていない。</p>
+
+<ul>
+<li>時刻 <var>t</var> につたさんが <var>(h, w)</var> にたい焼きを <var>1</var> つセットする。そのたい焼きは <var>T</var> 分で焼き上がり、時刻 <var>t+T</var> の時点で食べることができるようになる。ただし、すでにたい焼きがセットされている場所にたい焼きをセットすることはない。</li>
+<li>時刻 <var>t</var> に、えびちゃんが <var>(h, w)</var> にあるたい焼きをつまみ食いしようとする。ただし、<b>つまみ食いできるのはすでに焼き上がったたい焼きのみである</b>。つまみ食いした後はその場所からたい焼きが無くなる (すなわち、たい焼きがセットされていない状態になる)。たい焼きが焼き上がっていない、またはたい焼きがない場所にもつまみ食いのイベントが発生する場合があることに注意せよ。</li>
+<li>左上が <var>(h_1, w_1)</var>、右下が <var>(h_2, w_2)</var> となるような長方形領域内 (<var>(h_1, w_1)</var> および <var>(h_2, w_2)</var> を含む) のたい焼きについて、次の数が時刻 <var>t</var> の時点でそれぞれいくつであるかをつたさんがカウントする。</li>
+<ul>
+<li>すでに焼き上がったたい焼きの数</li>
+<li>まだ焼き上がっていないたい焼きの数</li>
+</ul>
+</ul>
+
+<h3>入力形式</h3>
+
+<pre>
+<var>H</var> <var>W</var> <var>T</var> <var>Q</var>  
+<var>t_1</var> <var>c_1</var> <var>h_{11}</var> <var>w_{11}</var> <var>(h_{12}</var> <var>w_{12})</var>
+<var>t_2</var> <var>c_2</var> <var>h_{21}</var> <var>w_{21}</var> <var>(h_{22}</var> <var>w_{22})</var>
+<var>…</var>
+<var>t_Q</var> <var>c_Q</var> <var>h_{Q1}</var> <var>w_{Q1}</var> <var>(h_{Q2}</var> <var>w_{Q2})</var>
+</pre>
+
+<p>入力は全て整数で与えられる。</p>
+
+<p><var>1</var> 行目には、たい焼きプレートの縦 <var>H</var>、 横 <var>W</var>、 たい焼きをセットしてから焼きあがるまでの時間 <var>T</var>、 イベントの数 <var>Q</var> が与えられる。</p>
+
+<p><var>1+i</var> <var>(1 \leq i \leq Q)</var> 行目には、時刻 <var>t_i</var> で発生したイベントの内容が与えられる。</p>
+
+<ul>
+<li><var>c_i</var> はイベントの種類を表す。この値が <var>0</var> ならばたい焼きをセットするイベント、 <var>1</var> ならばつまみ食いをするイベント、 <var>2</var> ならばたい焼きをカウントするイベントを指す。</li>
+<li><var>h_{i1}</var> <var>(1 \leq h_{i1} \leq H)</var>、<var>w_{i1}</var> <var>(1 \leq w_{i1} \leq W)</var> は、<var>c_i = 0, 1</var> において次のような意味である。</li>
+<ul>
+<li><var>c_i = 0</var> のとき、<var>(h_{i1}, w_{i1})</var> の場所にたい焼きを1つセットする。</li>
+<li><var>c_i = 1</var> のとき、<var>(h_{i1}, w_{i1})</var> の場所に焼き上がった状態のたい焼きがあればつまみ食いをし、そうでなければ何もしない。</li>
+</ul>
+<li><var>h_{i2}</var>、<var>w_{i2}</var> は、<var>c_i = 2</var> のときのみ与えられる。</li>
+<ul>
+<li><var>c_i = 2</var> のとき、左上を <var>(h_{i1}, w_{i1})</var>、 右下を <var>(h_{i2}, w_{i2})</var> とする長方形領域内のたい焼きについてカウントする。</li>
+</ul>
+</ul>
+
+<p>入出力が非常に多くなることが予想されるため、入出力に遅い関数を使っている場合は注意してください。</p>
+
+<h3>制約</h3>
+<ul>
+<li> <var>1 \leq H \leq 2 \times 10^3</var></li>
+<li> <var>1 \leq W \leq 2 \times 10^3</var></li>
+<li> <var>1 \leq T \leq 10^9</var></li>
+<li> <var>1 \leq Q \leq 10^5</var></li>
+<li> <var>1 \leq t_i \leq 10^9</var></li>
+<li> <var>i \lt j</var> ならば、 <var>t_i \lt t_j</var></li>
+<li> <var>0 \leq c_i \leq 2</var></li>
+<li> <var>1 \leq h_{i1} \leq h_{i2} \leq H</var></li>
+<li> <var>1 \leq w_{i1} \leq w_{i2} \leq W</var></li>
+</ul>
+
+
+<h3>出力形式</h3>
+
+<p>(<var>c_i = 2</var> <var>(1 \leq i \leq Q)</var> の個数) を <var>n</var> とする。たい焼きのカウントの結果を、次の書き方に従ってイベントの発生時間が早い順に <var>n</var> 行に出力せよ。</p>
+
+<pre>
+<var>a_1</var> <var>b_1</var>  
+<var>a_2</var> <var>b_2</var>  
+<var>…</var>  
+<var>a_n</var> <var>b_n</var>
+</pre>
+
+<ul>
+<li><var>a_i</var> は、領域内にある「焼き上がったたい焼きの数」である。</li>
+<li><var>b_i</var> は、領域内にある「まだ焼き上がっていないたい焼きの数」である。</li>
+<li>末尾の改行を忘れないこと。</li>
+</ul>
+
+<h3>入力例1</h3>
+<pre>
+3 3 3 6
+1 0 1 1
+2 2 1 1 2 2
+3 1 1 1
+4 0 2 1
+5 2 1 1 2 2
+6 2 2 1 3 3
+</pre>
+
+<h3>出力例1</h3>
+
+<pre>
+0 1
+1 1
+0 1
+</pre>
+
+<p>この入出力例では以下のイベントが発生している。</p>
+
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE3_ACPC2017Day3_HUPC2017_aizu17-e-t01" type="image/png" width="300"></img>
+
+<ul>
+<li>時刻 <var>1</var> 分に、<var>(1, 1)</var> にたい焼きをセットする。このたい焼きは時刻 <var>4</var> 分に焼き上がる。</li>
+</ul>
+
+<img data="IMAGE3/ACPC2017Day3/HUPC2017/aizu17-e-t02.png" type="image/png" width="300"></img>
+
+<ul>
+<li>時刻 <var>2</var> 分に、左上 <var>(1, 1)</var>、右下 <var>(2, 2)</var> の長方形領域にあるたい焼きをカウントする。<var>(1, 1)</var> にセットしたたい焼きはまだ焼き上がっていないため、<code>0 1</code> を出力する。</li>
+</ul>
+
+
+<ul>
+<li>時刻 <var>3</var> 分に、<var>(1, 1)</var> にあるたい焼きをつまみ食いしようとするが、まだ焼き上がっていないので何もしない。</li>
+</ul>
+
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE3_ACPC2017Day3_HUPC2017_aizu17-e-t04" type="image/png" width="300"></img>
+
+<ul>
+<li>時刻 <var>4</var> 分に、<var>(2, 1)</var> にたい焼きをセットする。このたい焼きは時刻 <var>7</var> 分に焼き上がる。</li>
+</ul>
+
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE3_ACPC2017Day3_HUPC2017_aizu17-e-t05" type="image/png" width="300"></img>
+
+<ul>
+<li>時刻 <var>5</var> 分に、左上 <var>(1, 1)</var>、右下 <var>(2, 2)</var> の長方形領域にあるたい焼きをカウントする。<var>(1, 1)</var> のたい焼きは焼き上がっており、 <var>(2, 1)</var> のたい焼きはまだ焼き上がっていないため、<code>1 1</code> を出力する。</li>
+</ul>
+
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE3_ACPC2017Day3_HUPC2017_aizu17-e-t06" type="image/png" width="300"></img>
+
+<ul>
+<li>時刻 <var>6</var> 分に、左上 <var>(2, 1)</var>、右下 <var>(3, 3)</var> の長方形領域にあるたい焼きをカウントする。<var>(2, 1)</var> のたい焼きはまだ焼き上がっていないため、<code>0 1</code> を出力する。</li>
+</ul>

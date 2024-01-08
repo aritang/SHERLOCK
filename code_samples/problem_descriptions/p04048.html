@@ -1,0 +1,68 @@
+<span class="lang-en">
+<p>Score : <var>500</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>Snuke is conducting an optical experiment using mirrors and his new invention, the rifle of <em>Mysterious Light</em>.</p>
+<p>Three mirrors of length <var>N</var> are set so that they form an equilateral triangle.
+Let the vertices of the triangle be <var>a, b</var> and <var>c</var>.</p>
+<p>Inside the triangle, the rifle is placed at the point <var>p</var> on segment <var>ab</var> such that <var>ap = X</var>.
+(The size of the rifle is negligible.)
+Now, the rifle is about to fire a ray of Mysterious Light in the direction of <var>bc</var>.</p>
+<p>The ray of Mysterious Light will travel in a straight line, and will be reflected by mirrors, in the same ways as "ordinary" light.
+There is one major difference, though: it will be also reflected by its own trajectory as if it is a mirror!
+When the ray comes back to the rifle, the ray will be absorbed.</p>
+<p>The following image shows the ray's trajectory where <var>N = 5</var> and <var>X = 2</var>.</p>
+<div style="text-align: center;">
+<img alt="btriangle.png" src="https://agc001.contest.atcoder.jp/img/agc/001/Gg9pvPKw/btriangle.png">
+</img></div>
+<p>It can be shown that the ray eventually comes back to the rifle and is absorbed, regardless of the values of <var>N</var> and <var>X</var>.
+Find the total length of the ray's trajectory.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>2≦N≦10^{12}</var></li>
+<li><var>1≦X≦N-1</var></li>
+<li><var>N</var> and <var>X</var> are integers.</li>
+</ul>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Partial Points</h3><ul>
+<li><var>300</var> points will be awarded for passing the test set satisfying <var>N≦1000</var>.</li>
+<li>Another <var>200</var> points will be awarded for passing the test set without additional constraints.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>The input is given from Standard Input in the following format:</p>
+<pre><var>N</var> <var>X</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the total length of the ray's trajectory.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>5 2
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>12
+</pre>
+<p>Refer to the image in the Problem Statement section.
+The total length of the trajectory is <var>2+3+2+2+1+1+1 = 12</var>.</p></section>
+</div>
+</span>

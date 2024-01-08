@@ -1,0 +1,224 @@
+
+
+<H1>
+Nets of Dice
+</H1>
+
+
+<P>
+In mathematics, some plain words have special meanings.
+The word "<I>net</I>" is one of such technical terms.
+In mathematics, the word "<I>net</I>" is sometimes used to
+mean a plane shape 
+which can be folded into some solid shape.
+</P>
+
+<P>
+The following are a solid shape (Figure 1) and one of its <I>net</I> (Figure 2).
+</P>
+
+
+<TABLE>
+<TR><TD ALIGN=center><img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE1_prism"></TD><TD ALIGN=center><img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE1_netprism"></TD></TR>
+<TR><TD ALIGN=center>Figure 1: a prism</TD><TD ALIGN=center>Figure 2: a net of a prism</TD></TR>
+</TABLE>
+
+<P>
+Nets corresponding to a solid shape are not unique.
+For example, Figure 3 shows three of the nets of a cube.
+</P>
+
+<TABLE>
+<TR><TD ALIGN=center><img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE1_netcube"></TD></TR>
+<TR><TD ALIGN=center>Figure 3: examples of nets of a cube</TD></TR>
+</TABLE>
+
+<P>
+In this problem, we consider nets of dice.
+The definition of a die is as follows.
+<OL>
+<LI> A die is a cube, each face marked with a number between one and six.
+<LI> Numbers on faces of a die are different from each other.
+<LI> The sum of two numbers on the opposite faces is always 7.
+</OL>
+<p>
+Usually, a die is used in pair with another die.
+The plural form of the word "die" is "dice".
+</P>
+
+<P>
+Some examples of proper nets of dice are shown in Figure 4,
+and those of improper ones are shown in Figure 5.
+</P>
+
+<TABLE>
+
+<TR><TD ALIGN=center><img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE1_netdice2"></TD></TR>
+<TR><TD ALIGN=center>Figure 4: examples of proper nets of dice</TD></TR>
+</TABLE>
+
+<TABLE>
+<TR><TD ALIGN=center><img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE1_netdice3"></TD></TR>
+<TR><TD ALIGN=center>Figure 5: examples of improper nets</TD></TR>
+</TABLE>
+
+<P>
+The reasons why each example in Figure 5 is improper are as follows.
+<DL>
+<DD>(a) The sum of two numbers on the opposite faces is not always 7.
+<DD>(b) Some faces are marked with the same number.
+<DD>(c) This is not a net of a cube. Some faces overlap each other.
+<DD>(d) This is not a net of a cube.
+Some faces overlap each other and one face of a cube is not covered.
+<DD>(e) This is not a net of a cube. 
+The plane shape is cut off into two parts.
+The face marked with '2' is isolated.
+<DD>(f) This is not a net of a cube.
+The plane shape is cut off into two parts.
+<DD>(g) There is an extra face marked with '5'.
+</DL>
+</P>
+
+<P>
+Notice that there are two kinds of dice.
+For example, the solid shapes formed from 
+the first two examples in Figure 4 
+are mirror images of each other.
+</P>
+
+
+<P>
+Any net of a die can be expressed on a sheet of 5x5 mesh like the one in Figure 6.
+In the figure, gray squares are the parts to be cut off.
+When we represent the sheet of mesh by numbers as in Figure 7,
+squares cut off are marked with zeros.
+</P>
+
+<TABLE>
+<TR><TD ALIGN=center><img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE1_mesh"></TD><TD ALIGN=center><img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE1_matrix"></TD></TR>
+<TR><TD ALIGN=center>Figure 6: 5x5 mesh</TD><TD ALIGN=center>Figure 7: representation by numbers</TD></TR>
+</TABLE>
+
+<P>
+Your job is to write a program which tells
+the proper nets of a die from the improper ones automatically.
+</P>
+
+
+<H2>Input</H2>
+
+<P>
+The input consists of multiple sheets of 5x5 mesh.
+</P>
+
+<TABLE>
+<TR><TD><I>N</I></TD></TR>
+<TR><TD><I>Mesh</I><SUB>0</SUB></TD></TR>
+<TR><TD><I>Mesh</I><SUB>1</SUB></TD></TR>
+<TR><TD>...</TD></TR>
+<TR><TD><I>Mesh</I><SUB><I>N</I>-1</SUB></TD></TR>
+</TABLE>
+
+<P>
+<I>N</I> is the number of sheets of mesh.
+Each <I>Mesh<SUB>i</SUB></I> gives a sheet of mesh
+on which a net of a die is expressed.
+<I>Mesh<SUB>i</SUB></I> is in the following format.
+</P>
+
+<TABLE>
+<TR>
+        <TD><I>F</I><SUB>00</SUB></TD>
+	<TD><I>F</I><SUB>01</SUB></TD>
+	<TD><I>F</I><SUB>02</SUB></TD>
+	<TD><I>F</I><SUB>03</SUB></TD>
+	<TD><I>F</I><SUB>04</SUB></TD>
+</TR>
+<TR>  
+	<TD><I>F</I><SUB>10</SUB></TD>
+	<TD><I>F</I><SUB>11</SUB></TD>
+	<TD><I>F</I><SUB>12</SUB></TD>
+	<TD><I>F</I><SUB>13</SUB></TD>
+	<TD><I>F</I><SUB>14</SUB></TD>
+</TR>
+<TR>  
+	<TD><I>F</I><SUB>20</SUB></TD>
+	<TD><I>F</I><SUB>21</SUB></TD>
+	<TD><I>F</I><SUB>22</SUB></TD>
+	<TD><I>F</I><SUB>23</SUB></TD>
+	<TD><I>F</I><SUB>24</SUB></TD>
+</TR>
+<TR>  
+	<TD><I>F</I><SUB>30</SUB></TD>
+	<TD><I>F</I><SUB>31</SUB></TD>
+	<TD><I>F</I><SUB>32</SUB></TD>
+	<TD><I>F</I><SUB>33</SUB></TD>
+	<TD><I>F</I><SUB>34</SUB></TD>
+</TR>
+<TR>  
+	<TD><I>F</I><SUB>40</SUB></TD>
+	<TD><I>F</I><SUB>41</SUB></TD>
+	<TD><I>F</I><SUB>42</SUB></TD>
+	<TD><I>F</I><SUB>43</SUB></TD>
+	<TD><I>F</I><SUB>44</SUB></TD>
+</TR>
+</TABLE>
+
+<P>
+Each <I>F<SUB>ij</SUB></I> is an integer between 0 and 6.
+They are separated by a space character.
+</P>
+
+<H2>Output</H2>
+<p>
+For each <I>Mesh<SUB>i</SUB></I>, 
+the truth value, <I>true</I> or <I>false</I>, 
+should be output, each in a separate line.
+When the net of a die expressed on the <I>Mesh<SUB>i</SUB></I> is proper, 
+output "true".
+Otherwise, output "false".
+</p>
+<H2>Sample Input</H2>
+<PRE>
+6
+0 0 0 0 0
+0 0 0 0 6
+0 2 4 5 3
+0 0 1 0 0
+0 0 0 0 0
+0 0 3 0 0
+0 0 2 0 0
+0 0 4 1 0
+0 0 0 5 0
+0 0 0 6 0
+0 0 0 3 0
+0 0 2 5 0
+0 4 1 0 0
+0 0 6 0 0
+0 0 0 0 0
+0 6 2 0 0
+0 0 4 0 0
+0 1 5 0 0
+0 0 3 0 0
+0 0 0 0 0
+0 0 0 0 6
+0 2 4 5 3
+0 0 1 0 0
+0 0 0 0 0
+0 0 0 1 0
+0 0 0 0 6
+0 2 4 5 3
+0 0 0 0 0
+0 0 0 0 0
+0 0 0 1 0
+</PRE>
+
+<H2>Output for the Sample Input</H2>
+<PRE>
+true
+true
+false
+false
+false
+false
+</PRE>

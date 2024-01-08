@@ -1,0 +1,123 @@
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({ tex2jax: { inlineMath: [["$","$"], ["\\(","\\)"]], processEscapes: true }});
+</script>
+<script type='text/javascript' src='http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
+</script>
+
+
+<h2>Share the Ruins Preservation</h2>
+
+<p>
+Two organizations International Community for Preservation of Constructions (ICPC) and Japanese Archaeologist Group (JAG) engage in ruins preservation. Recently, many ruins were found in a certain zone. The two organizations decided to share the preservation of the ruins by assigning some of the ruins to ICPC and the other ruins to JAG.
+</p>
+
+<p>
+Now, ICPC and JAG make a rule for assignment as follows:
+</p>
+
+<ol>
+<li> Draw a vertical straight line from the north to the south, avoiding to intersect ruins.</li>
+<li> Ruins located to the west of the line are preserved by ICPC. On the other hand, ruins located to the east of the line are preserved by JAG. (It is possible that no ruins are located to the east/west of the line; in this case, ICPC/JAG will preserve no ruins.)</li>
+</ol>
+
+<p>
+A problem is where to draw a straight line. For each organization, the way to preserve its assigned ruins is to make exactly one fence such that all the assigned ruins are in the region surrounded by the fence. Furthermore, they should minimize the length of such a fence for their budget. If the surrounded areas are vast, expensive costs will be needed to maintain the inside of areas. Therefore, they want to minimize the total preservation cost, i.e. the sum of the areas surrounded by two fences. Your task is to write a program computing the minimum sum of the areas surrounded by two fences, yielded by drawing an appropriate straight line.
+</p>
+
+
+<h3>Input</h3>
+<p>
+The input consists of a single test case.<br/>
+<br/>
+$N$<br/>
+$x_1$ $y_1$<br/>
+$x_2$ $y_2$<br/>
+...<br/>
+$x_N$ $y_N$
+</p>
+
+<p>
+The first line contains an integer $N$ ($1 \leq N \leq 100,000$), which is the number of founded ruins. The following $N$ lines represent the location of the ruins. The $i$-th line of them consists of two integers $x_i$ and $y_i$, which indicate the location of the $i$-th ruin is $x_i$ east and $y_i$ north from a certain location in the zone. You can assume the following things for the ruins:
+</p>
+
+<ul>
+<li>$-10^9 \leq x_i, y_i \leq 10^9$</li>
+<li>You can ignore the sizes of ruins. That is, you can assume ruins are points.</li>
+<li>No pair of ruins has the same location.</li>
+</ul>
+
+<h3>Output</h3>
+
+<p>
+Print the minimum total preservation cost yielded by drawing an appropriate straight line. You should round off the cost to the nearest integer.
+</p>
+
+<h3>Sample Input 1</h3>
+<pre>
+8
+-10 0
+-10 5
+-5 5
+-5 0
+10 0
+10 -5
+5 -5
+5 0
+</pre>
+
+<h3>Output for the Sample Input 1</h3>
+<pre>
+50
+</pre>
+
+<h3>Sample Input 2</h3>
+<pre>
+5
+0 0
+0 1
+0 2
+1 0
+1 1
+</pre>
+
+<h3>Output for the Sample Input 2</h3>
+<pre>
+0
+</pre>
+
+<h3>Sample Input 3</h3>
+<pre>
+6
+1 5
+1 6
+0 5
+0 -5
+-1 -5
+-1 -6
+</pre>
+
+<h3>Output for the Sample Input 3</h3>
+<pre>
+6
+</pre>
+
+<h3>Sample Input 4</h3>
+<pre>
+10
+2 5
+4 6
+9 5
+8 8
+1 3
+6 4
+5 9
+7 3
+7 7
+3 9
+</pre>
+
+<h3>Output for the Sample Input 4</h3>
+<pre>
+17
+</pre>

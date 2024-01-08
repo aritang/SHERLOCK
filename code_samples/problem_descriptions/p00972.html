@@ -1,0 +1,134 @@
+<h2>Eulerian Flight Tour</h2>
+
+<p>
+  You have an airline route map of a certain region. All the airports in the region and all the <i>non-stop routes</i> between them are on the map. Here, a non-stop route is a flight route that provides non-stop flights in both ways.
+</p>
+
+<p>
+  Named after the great mathematician Leonhard Euler, an <i>Eulerian tour</i> is an itinerary visiting all the airports in the region taking a single flight of every non-stop route available in the region. To be precise, it is a list of airports, satisfying all of the following.
+</p>
+
+<ul>
+<li> The list begins and ends with the same airport.</li>
+<li> There are non-stop routes between pairs of airports adjacent in the list.</li>
+<li> All the airports in the region appear <i>at least once</i> in the list. Note that it is allowed to have some airports appearing multiple times.</li>
+<li> For all the airport pairs with non-stop routes in between, there should be <i>one and only one adjacent appearance</i> of two airports of the pair in the list in either order.</li>
+</ul>
+
+<p>
+  It may not always be possible to find an Eulerian tour only with the non-stop routes listed in the map. Adding more routes, however, may enable Eulerian tours. Your task is to find a set of additional routes that enables Eulerian tours.
+</p>
+
+
+<h3>Input</h3>
+<p>
+  The input consists of a single test case.
+</p>
+<pre>
+$n$ $m$
+$a_1$ $b_1$
+...
+$a_m$ $b_m$
+</pre>
+
+<p>
+  $n$ ($3 \leq n \leq 100$) is the number of airports. The airports are numbered from 1 to $n$. $m$ ($0 \leq m \leq \frac{n(n-1)}{2}$) is the number of pairs of airports that have non-stop routes. Among the $m$ lines following it, integers $a_i$ and $b_i$ on the $i$-th line of them ($1 \leq i \leq m$) are airport numbers between which a non-stop route is operated. You can assume $1 \leq a_i < b_i \leq n$, and for any $i \ne j$, either $a_i \ne a_j$ or $b_i \ne b_j$ holds.
+</p>
+
+<h3>Output</h3>
+
+<p>
+  Output a set of additional non-stop routes that enables Eulerian tours. If two or more different sets will do, any one of them is acceptable. The output should be in the following format.
+</p>
+
+<pre>
+$k$
+$c_1$ $d_1$
+...
+$c_k$ $d_k$
+</pre>
+<p>
+  $k$ is the number of non-stop routes to add, possibly zero. Each of the following $k$ lines should have a pair of integers, separated by a space. Integers $c_i$ and $d_i$ in the $i$-th line ($c_i < d_i$) are airport numbers specifying that a non-stop route is to be added between them. These pairs, ($c_i, d_i$) for $1 \leq i \leq k$, should be distinct and should not appear in the input.
+</p>
+
+<p>
+  If adding new non-stop routes can never enable Eulerian tours, output <span>-1</span> in a line.
+</p>
+
+
+<h3>Sample Input 1</h3>
+<pre>
+4 2
+1 2
+3 4
+</pre>
+<h3>Sample Output 1</h3>
+<pre>
+2
+1 4
+2 3
+</pre>
+
+<h3>Sample Input 2</h3>
+<pre>
+6 9
+1 4
+1 5
+1 6
+2 4
+2 5
+2 6
+3 4
+3 5
+3 6
+</pre>
+<h3>Sample Output 2</h3>
+<pre>
+-1
+</pre>
+
+<h3>Sample Input 3</h3>
+<pre>
+6 7
+1 2
+1 3
+1 4
+2 3
+4 5
+4 6
+5 6
+</pre>
+<h3>Sample Output 3</h3>
+<pre>
+3
+1 5
+2 4
+2 5
+</pre>
+
+<h3>Sample Input 4</h3>
+<pre>
+4 3
+2 3
+2 4
+3 4
+</pre>
+<h3>Sample Output 4</h3>
+<pre>
+-1
+</pre>
+
+<h3>Sample Input 5</h3>
+<pre>
+5 5
+1 3
+1 4
+2 4
+2 5
+3 5
+</pre>
+<h3>Sample Output 5</h3>
+<pre>
+0
+</pre>
+

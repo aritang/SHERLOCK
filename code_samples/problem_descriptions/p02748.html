@@ -1,0 +1,101 @@
+<span class="lang-en">
+<p>Score : <var>200</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3>
+<p>You are visiting a large electronics store to buy a refrigerator and a microwave.</p>
+<p>The store sells <var>A</var> kinds of refrigerators and <var>B</var> kinds of microwaves. The <var>i</var>-th refrigerator ( <var>1 \le i \le A</var> ) is sold at <var>a_i</var> yen (the currency of Japan), and the <var>j</var>-th microwave ( <var>1 \le j \le B</var> ) is sold at <var>b_j</var> yen.</p>
+<p>You have <var>M</var> discount tickets. With the <var>i</var>-th ticket ( <var>1 \le i \le M</var> ), you can get a discount of <var>c_i</var> yen from the total price when buying the <var>x_i</var>-th refrigerator and the <var>y_i</var>-th microwave together. Only one ticket can be used at a time.</p>
+<p>You are planning to buy one refrigerator and one microwave. Find the minimum amount of money required.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3>
+<ul>
+<li>All values in input are integers.</li>
+<li><var> 1 \le A \le 10^5 </var></li>
+<li><var> 1 \le B \le 10^5 </var></li>
+<li><var> 1 \le M \le 10^5 </var></li>
+<li><var> 1 \le a_i , b_i , c_i \le 10^5 </var></li>
+<li><var> 1 \le x_i \le A </var></li>
+<li><var> 1 \le y_i \le B </var></li>
+<li><var> c_i \le a_{x_i} + b_{y_i} </var></li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3>
+<p>Input is given from Standard Input in the following format:</p>
+<pre><var>A</var> <var>B</var> <var>M</var>
+<var>a_1</var> <var>a_2</var> <var>...</var> <var>a_A</var>
+<var>b_1</var> <var>b_2</var> <var>...</var> <var>b_B</var>
+<var>x_1</var> <var>y_1</var> <var>c_1</var>
+<var>\vdots</var>
+<var>x_M</var> <var>y_M</var> <var>c_M</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3>
+<p>Print the answer.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>2 3 1
+3 3
+3 3 3
+1 2 1
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>5
+</pre>
+<p>With the ticket, you can get the <var>1</var>-st refrigerator and the <var>2</var>-nd microwave for <var>3+3-1=5</var> yen.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>1 1 2
+10
+10
+1 1 5
+1 1 10
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>10
+</pre>
+<p>Note that you cannot use more than one ticket at a time.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>2 2 1
+3 5
+3 5
+2 2 2
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>6
+</pre>
+<p>You can get the <var>1</var>-st refrigerator and the <var>1</var>-st microwave for <var>6</var> yen, which is the minimum amount to pay in this case.
+Note that using a ticket is optional.</p></section>
+</div>
+</span>

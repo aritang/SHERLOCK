@@ -1,0 +1,97 @@
+
+
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({ tex2jax: { inlineMath: [["$","$"], ["\\(","\\)"]], processEscapes: true }});
+</script>
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+
+<H1>プログラミングコンテスト</H1>
+
+<p>
+今年も白虎大学でプログラミングコンテストが開催されることになりました。コンテストではいくつかの問題が出題され、それぞれ難易度に応じた得点が割り当てられています。
+</p>
+
+<p>
+実行委員会は、解いた問題の数とそれらの得点の両方を考慮し、次のルールに基づいて各チームのスコアを計算することにしました。
+</p>
+
+<p>
+「あるチームが正解した問題のうち、得点が <var>A</var> 以上であるものが <var>A</var> 問以上あることを満たすような最大の <var>A</var> を、そのチームのスコアとする」
+</p>
+
+<p>
+あるチームが正解した問題の数と、それらの問題の得点から、チームのスコアを計算するプログラムを作成せよ。
+</p>
+
+
+<h2>Input</h2>
+
+<p>
+入力は以下の形式で与えられる。
+</p>
+
+<pre>
+<var>N</var>
+<var>p<sub>1</sub></var> <var>p<sub>2</sub></var> ... <var>p<sub>N</sub></var>
+</pre>
+
+<p>
+１行目にチームが正解した問題の数 <var>N</var> (1 &le; <var>N</var> &le; 100) が与えられる。２行目に正解した各問題の得点 <var>p<sub>i</sub></var>(1 &le; <var>p<sub>i</sub></var> &le; 100) が与えられる。
+</p>
+
+
+<h2>Output</h2>
+
+<p>
+チームのスコアを１行に出力する。
+</p>
+
+<h2>Sample Input 1</h2>
+
+<pre>
+7
+5 4 3 10 2 4 1
+</pre>
+
+<h2>Sample Output 1</h2>
+<pre>
+4
+</pre>
+<p>
+得点が 4 以上の問題を 4 問以上正解しているので、スコアは 4 となる。
+</p>
+<br/>
+
+
+<h2>Sample Input 2</h2>
+<pre>
+3
+1 1 100
+</pre>
+
+<h2>Sample Output 2</h2>
+<pre>
+1
+</pre>
+<p>
+得点が 1 以上の問題を 1 問以上正解しているので、スコアは 1 となる。
+</p>
+<br/>
+
+<h2>Sample Input 3</h2>
+<pre>
+4
+11 15 58 1
+</pre>
+
+<h2>Sample Output 3</h2>
+<pre>
+3
+</pre>
+<p>
+得点が 3 以上の問題を 3 問以上正解しているので、スコアは 3 となる。
+</p>
+

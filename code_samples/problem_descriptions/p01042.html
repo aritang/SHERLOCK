@@ -1,0 +1,66 @@
+
+
+<h1>Problem F: Sum of Numbers</h1>
+
+<h2>Problem</h2>
+<p>
+<var>a</var>以上<var>b</var>以下の整数が書かれたカードがそれぞれ<var>c</var>枚ずつあります。
+これら<var>c(b-a+1)</var>枚のカードの中から<var>d</var>枚のカードを選択したとき、それらのカードに書かれている整数の合計が<var>e</var>になる場合の数を1,000,000,007で割った余りを求めてください。
+</p>
+
+<h2>Input</h2>
+<p>
+入力は以下の形式で与えられる。
+</p>
+
+<pre>
+<var>a</var> <var>b</var> <var>c</var> <var>d</var> <var>e</var>
+</pre>
+
+<p>
+1行目に、5つの整数<var>a</var> <var>b</var> <var>c</var> <var>d</var> <var>e</var>が空白区切りで与えられる。
+</p>
+
+<h2>Constraints</h2>
+<p>
+入力は以下の制約を満たす。
+</p>
+<ul>
+<li>1 &le; <var>a</var> &le; 1000</li>
+<li><var>a</var> &le; <var>b</var> &le; 1000</li>
+<li>1 &le; <var>c</var> &le; 100</li>
+<li>1 &le; <var>d</var> &le; 1000</li>
+<li><var>c</var> &le; <var>d</var> &le; <var>c(b-a+1)</var></li>
+<li>1 &le; <var>e</var> &le; 20000</li>
+</ul>
+
+<h2>Output</h2>
+<p>
+場合の数を1,000,000,007で割った余りを出力せよ。
+</p>
+
+<h2>Sample Input1</h2>
+<pre>
+2 5 3 3 11
+</pre>
+
+<h2>Sample Output1</h2>
+<pre>
+3
+</pre>
+<p>
+{2,2,2,3,3,3,4,4,4,5,5,5}の中から3枚選び合計が11になるのは、
+{2,4,5},{3,3,5},{3,4,4}の３通りである。
+</p>
+<h2>Sample Input2</h2>
+<pre>
+1 2 3 4 100
+</pre>
+
+<h2>Sample Output2</h2>
+<pre>
+0
+</pre>
+<p>
+{1,1,1,2,2,2}の中から4枚選び合計が100になるのは0通りである。
+</p>

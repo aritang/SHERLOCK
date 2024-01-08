@@ -1,0 +1,67 @@
+
+<h2>B: AddMulSubDiv</h2>
+
+<h3>Problem Statement</h3>
+
+<p>You have an array <var>A</var> of <var>N</var> integers. <var>A_i</var> denotes the <var>i</var>-th element of <var>A</var>.</p>
+
+<p>You have to process one of the following queries <var>Q</var> times:</p>
+
+<ul>
+<li> Query 1: The query consists of non-negative integer <var>x</var>, and two positive integers <var>s, t</var>. For all the elements <b>greater</b> than or equal to <var>x</var> in <var>A</var>, you have to add <var>s</var> to the elements, and then multiply them by <var>t</var>. That is, an element with <var>v (v \geq x)</var> becomes <var>t(v + s)</var> after this query.</li>
+</ul>
+
+<ul>
+<li> Query 2: The query consists of non-negative integer <var>x</var>, and two positive integers <var>s, t</var>. For all the elements <b>less</b> than or equal to <var>x</var> in <var>A</var>, you have to subtract <var>s</var> from the elements, and then divide them by <var>t</var>. If the result is not an integer, you truncate it towards zero. That is, an element with <var>v (v \leq x)</var> becomes $\mathrm{trunc}$ <var>( \frac{v - s}{t} )</var> after this query, where $\mathrm{trunc}$ <var>( y )</var> is the integer obtained by truncating <var>y</var> towards zero. </li>
+</ul>
+
+<ul>
+<ul>
+<li> "Truncating towards zero" means converting a decimal number to an integer so that if <var>x = 0.0</var> then <var>0 </var>, otherwise an integer whose absolute value is the maximum integer no more than <var>|x|</var> and whose sign is same as <var>x</var>. For example, truncating <var>3.5</var> towards zero is <var>3</var>, and truncating <var>-2.8</var> towards zero is <var>-2</var>.</li>
+</ul>
+</ul>
+
+<p>After applying <var>Q</var> queries one by one, how many elements in <var>A</var> are no less than <var>L</var> and no more than <var>R</var>?</p>
+
+<h3>Input</h3>
+<pre>
+<var>N</var> <var>Q</var> <var>L</var> <var>R</var>
+<var>A_1</var> <var>A_2</var> <var>...</var> <var>A_N</var>
+<var>q_1</var> <var>x_1</var> <var>s_1</var> <var>t_1</var>
+<var>:</var>
+<var>q_Q</var> <var>x_Q</var> <var>s_Q</var> <var>t_Q</var>
+</pre>
+
+<ul>
+<li> The first line contains four integers <var>N</var>, <var>Q</var>, <var>L</var>, and <var>R</var>. <var>N</var> is the number of elements in an integer array <var>A</var>, <var>Q</var> is the number of queries, and <var>L</var> and <var>R</var> specify the range of integers you want to count within after the queries.</li>
+<li> The second line consists of <var>N</var> integers, the <var>i</var>-th of which is the <var>i</var>-th element of <var>A</var>.</li>
+<li> The following <var>Q</var> lines represent information of queries. The <var>j</var>-th line of them corresponds to the <var>j</var>-th query and consists of four integers <var>q_j</var>, <var>x_j</var>, <var>s_j</var>, and <var>t_j</var>.  Here, <var>q_j = 1</var> stands for the <var>j</var>-th query is Query 1, and <var>q_j = 2</var> stands for the <var>j</var>-th query is Query 2. <var>x_j</var>, <var>s_j</var>, and <var>t_j</var> are parameters used for the <var>j</var>-th query.</li>
+</ul>
+
+<h3>Constraints</h3>
+<ul>
+<li> <var>1 \leq N \leq 2 \times 10^5</var></li>
+<li> <var>1 \leq Q \leq 2 \times 10^5</var></li>
+<li> <var>-2^{63} &lt; L \leq R &lt; 2^{63}</var></li>
+<li> <var>0 \leq |A_i| \leq 10^9</var></li>
+<li> <var>q_j \in \{ 1, 2 \}</var></li>
+<li> <var>0 \leq x_j &lt; 2^{63}</var></li>
+<li> <var>1 \leq s_j, t_j \leq 10^9</var></li>
+<li> Inputs consist only of integers.</li>
+<li> The absolute value of any element in the array dosen't exceed <var>2^{63}</var> at any point during query processing.</li>
+</ul>
+
+<h3>Output</h3>
+<p>Output the number of elements in <var>A</var> that are no less than <var>L</var> and no more than <var>R</var> after processing all given queries in one line.</p>
+
+<h3>Sample Input 1</h3>
+<pre>
+3 3 3 10
+1 -2 3
+1 2 2 3
+2 20 1 3
+2 1 20 5
+</pre>
+
+<h3>Output for Sample Input 1</h3>
+<pre>1</pre>

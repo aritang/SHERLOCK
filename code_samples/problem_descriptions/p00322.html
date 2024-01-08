@@ -1,0 +1,106 @@
+
+
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({ tex2jax: { inlineMath: [["$","$"], ["\\(","\\)"]], processEscapes: true }});
+</script>
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+
+<H1>虫食い算</H1>
+
+<p>
+足し算は筆算で簡単に計算できますが、もし、いくつかの数字が欠けていたら、欠けている数字を埋めるのは簡単でしょうか？ 例えば、以下のような筆算において、１から９の数字が一度しか現れないという条件があるとき、ＣとＥのマスに入る数字はいくつになるでしょう？ この場合、Ｃに入るのは８，Ｅに入るのは５が正解となります。このように、数字がいくつか欠けている演算を虫食い算と呼びます。
+</p>
+
+<center>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_PCK2015_calculation1"><br/>
+</center>
+<br/>
+
+<p>
+１から９の数字が一度しか現れないという条件はそのままで、以下のようにもっとたくさんの数字が欠けていたら、正解となる数字の埋め方は一通りしかないのでしょうか？ 実は、必ず一通りに決まるとは限りません。
+</p>
+
+<center>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_PCK2015_calculation2"><br/>
+</center>
+<br/>
+
+<p>
+上の図のような形をした虫食い算の、ＡからＩの各マスの情報が与えられたとき、正しい埋め方が何通りあるかを出力するプログラムを作成せよ。
+</p>
+
+
+<h2>Input</h2>
+
+<p>
+入力は以下の形式で与えられる。
+</p>
+
+<pre>
+<var>A</var> <var>B</var> <var>C</var> <var>D</var> <var>E</var> <var>F</var> <var>G</var> <var>H</var> <var>I</var>
+</pre>
+
+<p>
+１行に、虫食い算の <var>Ａ</var> から <var>Ｉ</var> のマスに入っている数字の情報が与えられる。ただし、与えられた値が -1 のときは、そのマスの数字が欠けていることを表す。-1 以外の値は、1 から 9 の整数のいずれかで、それらの間に重複はない。
+</p>
+
+
+
+<h2>Output</h2>
+
+<p>
+正しい埋め方が何通りあるかを１行に出力する。
+</p>
+
+<h2>Sample Input 1</h2>
+
+<pre>
+7 6 -1 1 -1 9 2 3 4
+</pre>
+
+<h2>Sample Output 1</h2>
+<pre>
+1
+</pre>
+<br/>
+
+
+<h2>Sample Input 2</h2>
+<pre>
+7 6 5 1 8 9 2 3 4
+</pre>
+
+<h2>Sample Output 2</h2>
+<pre>
+0
+</pre>
+<br/>
+
+<h2>Sample Input 3</h2>
+
+<pre>
+-1 -1 -1 -1 -1 -1 8 4 6
+</pre>
+
+<h2>Sample Output 3</h2>
+<pre>
+12
+</pre>
+<br/>
+
+
+<h2>Sample Input 4</h2>
+<pre>
+-1 -1 -1 -1 -1 -1 -1 -1 -1
+</pre>
+
+<h2>Sample Output 4</h2>
+<pre>
+168
+</pre>
+
+
+

@@ -1,0 +1,129 @@
+<span class="lang-en">
+<p>Score : <var>1600</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>There is a directed graph <var>G</var> with <var>N</var> vertices and <var>M</var> edges.
+The vertices are numbered <var>1</var> through <var>N</var>, and the edges are numbered <var>1</var> through <var>M</var>.
+Edge <var>i</var> is directed from <var>x_i</var> to <var>y_i</var>.
+Here, <var>x_i &lt; y_i</var> holds.
+Also, there are no multiple edges in <var>G</var>.</p>
+<p>Consider selecting a subset of the set of the <var>M</var> edges in <var>G</var>, and removing these edges from <var>G</var> to obtain another graph <var>G'</var>.
+There are <var>2^M</var> different possible graphs as <var>G'</var>.</p>
+<p>Alice and Bob play against each other in the following game played on <var>G'</var>.
+First, place two pieces on vertices <var>1</var> and <var>2</var>, one on each.
+Then, starting from Alice, Alice and Bob alternately perform the following operation:</p>
+<ul>
+<li>Select an edge <var>i</var> such that there is a piece placed on vertex <var>x_i</var>, and move the piece to vertex <var>y_i</var> (if there are two pieces on vertex <var>x_i</var>, only move one). The two pieces are allowed to be placed on the same vertex.</li>
+</ul>
+<p>The player loses when he/she becomes unable to perform the operation.
+We assume that both players play optimally.</p>
+<p>Among the <var>2^M</var> different possible graphs as <var>G'</var>, how many lead to Alice's victory?
+Find the count modulo <var>10^9+7</var>.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>2 ≤ N ≤ 15</var></li>
+<li><var>1 ≤ M ≤ N(N-1)/2</var></li>
+<li><var>1 ≤ x_i &lt; y_i ≤ N</var></li>
+<li>All <var>(x_i,\ y_i)</var> are distinct.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var> <var>M</var>
+<var>x_1</var> <var>y_1</var>
+<var>x_2</var> <var>y_2</var>
+<var>:</var>
+<var>x_M</var> <var>y_M</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the number of <var>G'</var> that lead to Alice's victory, modulo <var>10^9+7</var>.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>2 1
+1 2
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>1
+</pre>
+<p>The figure below shows the two possible graphs as <var>G'</var>.
+A graph marked with ○ leads to Alice's victory, and a graph marked with × leads to Bob's victory.</p>
+<div style="text-align: center;">
+<img alt="b250f23c38d0f5ec2204bd714e7c1516.png" src="https://atcoder.jp/img/agc016/b250f23c38d0f5ec2204bd714e7c1516.png">
+</img></div>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>3 3
+1 2
+1 3
+2 3
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>6
+</pre>
+<p>The figure below shows the eight possible graphs as <var>G'</var>.</p>
+<div style="text-align: center;">
+<img alt="8192fd32f894f708c5e4a60dcdea9d35.png" src="https://atcoder.jp/img/agc016/8192fd32f894f708c5e4a60dcdea9d35.png">
+</img></div>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>4 2
+1 3
+2 4
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>2
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 4</h3><pre>5 10
+2 4
+3 4
+2 5
+2 3
+1 2
+3 5
+1 3
+1 5
+4 5
+1 4
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 4</h3><pre>816
+</pre></section>
+</div>
+</span>

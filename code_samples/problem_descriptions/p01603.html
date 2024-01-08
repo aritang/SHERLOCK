@@ -1,0 +1,74 @@
+
+
+
+<h2>さんぽ</h2>
+
+
+<h2>Problem Statement</h2>
+
+<p>ねこのそらは散歩が大好きだ．道を歩くと新しい発見がある．</p>
+<p>そらの住む町は <var>N</var> 個の広場と <var>N-1</var> 本の道からなる．<br />
+道はちょうど二つの広場をつないでおり，枝分かれしたり道どうしが交わったりしない．</p>
+<p>道には，歩くのにかかる時間 <var>t</var>，得られる発見の個数の上限 <var>m</var>，および，発見一つあたりの価値 <var>v</var> が指定されている．<br />
+道を一方の端からもう一方の端まで歩いたとき，<var>m</var> 回目までの通行では価値 <var>v</var> の発見が一つ得られるが，<var>m+1</var> 回目以降は発見が得られない．</p>
+<p>今日もそらは，町内の散歩に出かけるようだ．<br />
+そらの散歩は広場 1 から始まり，いくつかの道 ( 0 本かもしれない ) を通って，最後に広場 1 に戻ってくる，というルートをとる．<br />
+また，日が暮れると寂しい気持ちになるので，そらは散歩時間を <var>T</var> 以下にしたいと思っている．</p>
+<p>そらの友人であるあなたの仕事は，散歩時間が <var>T</var> 以下である散歩ルートにおいて，得られる発見の価値の総和の最大値を求めることである．</p>
+
+<h2>Input</h2>
+
+<p>入力は以下の形式に従う．与えられる数は全て整数である．</p>
+<pre><var>N</var> <var>T</var>
+<var>a_1</var> <var>b_1</var> <var>t_1</var> <var>m_1</var> <var>v_1</var>
+<var>. . .</var>
+<var>a_{N-1}</var> <var>b_{N-1}</var> <var>t_{N-1}</var> <var>m_{N-1}</var> <var>v_{N-1}</var></pre>
+<p>入力の <var>i+1</var> 行目は，広場 <var>a_i</var> と <var>b_i</var> をつなぐ，通行時間 <var>t_i</var>，得られる発見の個数の上限 <var>m_i</var>，発見一つあたりの価値 <var>v_i</var> の道を表している．</p>
+
+<h2>Constraints</h2>
+
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li><var>1 ≦ N ≦ 300</var></li>
+<li><var>1 ≦ T ≦ 10^4</var></li>
+<li><var>1 ≦ a_i, b_i ≦ N</var></li>
+<li><var>1 ≦ t_i ≦ 10^4</var></li>
+<li><var>0 ≦ m_i ≦ 10^4</var></li>
+<li><var>1 ≦ v_i ≦ 10^5</var></li>
+<li>どの二つの広場も道を通って行き来できる．</li></ul>
+
+<h2>Output</h2>
+
+<p>得られる発見の価値の総和の最大値を 1 行に出力せよ．</p>
+
+<h2>Sample Input 1</h2>
+
+<pre>4 5
+1 2 1 4 7
+2 3 1 2 77
+2 4 1 2 777</pre>
+
+<h2>Output for the Sample Input 1</h2>
+
+<pre>1568</pre>
+<p>1→2→4→2→1 と移動することで，合計で価値 7+777+777+7=1568 の発見が得られる．</p>
+
+<h2>Sample Input 2</h2>
+
+<pre>2 10000
+1 2 1 10 1</pre>
+
+<h2>Output for the Sample Input 2</h2>
+
+<pre>10</pre>
+
+<h2>Sample Input 3</h2>
+
+<pre>5 15
+1 2 3 2 1
+2 3 3 2 1
+1 4 8 2 777
+1 5 1 3 10</pre>
+
+
+<h2>Output for the Sample Input 3</h2>
+
+<pre>32</pre>

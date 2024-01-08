@@ -1,0 +1,73 @@
+<span class="lang-en">
+<p>Score : <var>200</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>Takahashi has <var>A</var> cookies, and Aoki has <var>B</var> cookies.
+Takahashi will do the following action <var>K</var> times:</p>
+<ul>
+<li>If Takahashi has one or more cookies, eat one of his cookies.</li>
+<li>Otherwise, if Aoki has one or more cookies, eat one of Aoki's cookies.</li>
+<li>If they both have no cookies, do nothing.</li>
+</ul>
+<p>In the end, how many cookies will Takahashi and Aoki have, respectively?</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>0 \leq A \leq 10^{12}</var></li>
+<li><var>0 \leq B \leq 10^{12}</var></li>
+<li><var>0 \leq K \leq 10^{12}</var></li>
+<li>All values in input are integers.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>A</var> <var>B</var> <var>K</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the numbers of Takahashi's and Aoki's cookies after <var>K</var> actions.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>2 3 3
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>0 2
+</pre>
+<p>Takahashi will do the following:</p>
+<ul>
+<li>He has two cookies, so he eats one of them.</li>
+<li>Now he has one cookie left, and he eats it.</li>
+<li>Now he has no cookies left, but Aoki has three, so Takahashi eats one of them.</li>
+</ul>
+<p>Thus, in the end, Takahashi will have <var>0</var> cookies, and Aoki will have <var>2</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>500000000000 500000000000 1000000000000
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>0 0
+</pre>
+<p>Watch out for overflows.</p></section>
+</div>
+</span>

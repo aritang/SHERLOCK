@@ -1,0 +1,106 @@
+
+<H1><font color="#000000">Problem I:</font> Mysterious Onslaught</H1>
+
+<p>
+In 2012, human beings have been exposed to fierce onslaught of unidentified mysterious extra-terrestrial creatures. We have exhaused because of the long war and can't regist against them any longer. Only you, an excellent wizard, can save us. Yes, it's time to stand up!
+</p>
+<p>
+The enemies are dispatched to the earth with being aligned like an <i>n</i> * <i>n</i> square. Appearently some of them have already lost their fighting capabilities for some unexpected reason. You have invented a highest grade magic spell 'MYON' to defeat them all. An attack of this magic covers any rectangles (which is parallel to axis). Once you cast a spell "myon," then all the enemies which the magic covers will lose their fighting capabilities because of tremendous power of the magic. However, the magic seems to activate enemies' self-repairing circuit. Therefore if any enemy which have already lost its fighting capability is exposed to the magic, the enemy repossesses its fighting capability. You will win the war when all the enemies will lose their fighting capabilities.
+</p>
+
+<p>
+Let me show an example. An array of enemies below have dispatched:
+</p>
+
+<pre>
+1 1 1 1 1
+1 0 0 0 1
+1 0 1 0 1
+1 0 0 0 1
+1 1 1 1 1
+</pre>
+
+<p>
+Here, '<span>0</span>' means an enemy that doesn't possess fighting capability, and '<span>1</span>' means an enemy that possesses.
+First, you cast a spell "<span>myon</span>" with covering all the enemies, which results in;
+ </p>
+
+<pre>
+0 0 0 0 0
+0 1 1 1 0
+0 1 0 1 0
+0 1 1 1 0
+0 0 0 0 0
+</pre>
+<p>
+Next, cast once again with covering central 3 * 3 enemies.
+</p>
+
+<pre>
+0 0 0 0 0
+0 0 0 0 0
+0 0 1 0 0
+0 0 0 0 0
+0 0 0 0 0
+</pre>
+
+<p>
+Now you can defeat them all by casting a spell covers remaining one. Therefore you can cast "<span>myonmyonmyon</span>," which is the shortest spell for this case.
+</p>
+<p>
+You are given the information of the array. Please write a program that generates the shortest spell that can defeat them all.
+</p>
+
+
+<H2>Input</H2>
+
+<p>
+The first line of each test case has an integer <i>n</i>. Following <i>n</i> lines are information of an array of enemies. The format is same as described in the problem statement.
+</p>
+
+<p>
+Input terminates when n = 0.
+You may assume that one or more enemy have fighting capability.
+</p>
+
+<H2>Output</H2>
+
+<p>
+For each dataset, output the shortest spell. 
+</p>
+
+<H2>Constraints</H2>
+
+<ul>
+<li>1 &le; <i>n</i> &le; 5</li>
+</ul>
+
+<H2>Sample Input</H2>
+<pre>
+5
+1 1 1 1 1
+1 0 0 0 1
+1 0 1 0 1
+1 0 0 0 1
+1 1 1 1 1
+3
+1 1 1
+1 1 1
+1 1 1
+5
+1 1 1 1 0
+1 1 1 1 0
+1 0 0 0 1
+0 1 1 1 1
+0 1 1 1 1
+0
+</pre>
+
+<H2>Output for the Sample Input</H2>
+<pre>
+myonmyonmyon
+myon
+myonmyon
+</pre>
+
+

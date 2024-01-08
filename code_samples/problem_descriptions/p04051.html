@@ -1,0 +1,65 @@
+<span class="lang-en">
+<p>Score : <var>1400</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>Snuke is having another barbeque party.</p>
+<p>This time, he will make one serving of <em>Skewer Meal</em>.</p>
+<p>He has a stock of <var>N</var> <em>Skewer Meal Packs</em>. The <var>i</var>-th Skewer Meal Pack contains one skewer, <var>A_i</var> pieces of beef and <var>B_i</var> pieces of green pepper.
+All skewers in these packs are different and distinguishable, while all pieces of beef and all pieces of green pepper are, respectively, indistinguishable.</p>
+<p>To make a Skewer Meal, he chooses two of his Skewer Meal Packs, and takes out all of the contents from the chosen packs, that is, two skewers and some pieces of beef or green pepper.
+(Remaining Skewer Meal Packs will not be used.)
+Then, all those pieces of food are threaded onto both skewers, one by one, in any order.</p>
+<p>(See the image in the Sample section for better understanding.)</p>
+<p>In how many different ways can he make a Skewer Meal? Two ways of making a Skewer Meal is different if and only if the sets of the used skewers are different, or the orders of the pieces of food are different.
+Since this number can be extremely large, find it modulo <var>10^9+7</var>.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>2≦N≦200,000</var></li>
+<li><var>1≦A_i≦2000, 1≦B_i≦2000</var></li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>The input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+<var>A_1</var> <var>B_1</var>
+<var>A_2</var> <var>B_2</var>
+:
+<var>A_N</var> <var>B_N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the number of the different ways Snuke can make a serving of Skewer Meal, modulo <var>10^9+7</var>.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>3
+1 1
+1 1
+2 1
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>26
+</pre>
+<p>The <var>26</var> ways of making a Skewer Meal are shown below.
+Gray bars represent skewers, each with a number denoting the Skewer Meal Set that contained the skewer.
+Brown and green rectangles represent pieces of beef and green pepper, respectively.</p>
+<div style="text-align: center;">
+<img alt="ebbq.png" src="https://agc001.contest.atcoder.jp/img/agc/001/Gg9pvPKw/ebbq.png">
+</img></div></section>
+</div>
+</span>

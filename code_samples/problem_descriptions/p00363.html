@@ -1,0 +1,77 @@
+<!--<H1>Let’s Make a Flag</H1>-->
+<h1>Flag</h1>
+
+<p>
+  AHK Education, the educational program section of Aizu Broadcasting Cooperation, broadcasts a children’s workshop program called "Let's Play and Make." Today’s theme is "Make your own flag." A child writes his first initial in the center of their rectangular flag.
+</p>
+
+<p>
+Given the flag size and the initial letter to be placed in the center of it, write a program to draw the flag as shown in the figure below.
+</p>
+
+<pre>
++-------+
+|.......|
+|...A...|
+|.......|
++-------+
+</pre>
+<p>
+  The figure has "A" in the center of a flag with size 9 (horizontal) &times; 5 (vertical).
+</p>
+
+
+<h2>Input</h2>
+
+<p>
+The input is given in the following format.
+</p>
+
+<pre>
+<var>W</var> <var>H</var> <var>c</var>
+</pre>
+
+<p>
+The input line provides the flag dimensions <var>W</var> (width) and <var>H</var> (height) (3 &le; <var>W,H</var> &le; 21), and the initial letter <var>c</var>. Both <var>W</var> and <var>H</var> are odd numbers, and <var>c</var> is a capital letter.
+  
+</p>
+
+<h2>Output</h2>
+
+<p>
+Draw the flag of specified size with the initial in its center using the following characters: "<span>+</span>" for the four corners of the flag, "<span>-</span>" for horizontal lines, "<span>|</span>" for vertical lines, and "<span>.</span>" for the background (except for the initial in the center).
+  
+</p>
+
+<h2>Sample Input 1</h2>
+
+<pre>
+3 3 B
+</pre>
+
+<h2>Sample Output 1</h2>
+
+<pre>
++-+
+|B|
++-+
+</pre>
+
+
+<h2>Sample Input 2</h2>
+
+<pre>
+11 7 Z
+</pre>
+
+<h2>Sample Output 2</h2>
+
+<pre>
++---------+
+|.........|
+|.........|
+|....Z....|
+|.........|
+|.........|
++---------+
+</pre>

@@ -1,0 +1,69 @@
+<span class="lang-en">
+<p>Score : <var>300</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>There are <var>N</var> Reversi pieces arranged in a row. (A <em>Reversi piece</em> is a disc with a black side and a white side.)
+The state of each piece is represented by a string <var>S</var> of length <var>N</var>.
+If <var>S_i=</var><code>B</code>, the <var>i</var>-th piece from the left is showing black;
+If <var>S_i=</var><code>W</code>, the <var>i</var>-th piece from the left is showing white.</p>
+<p>Consider performing the following operation:</p>
+<ul>
+<li>Choose <var>i</var> (<var>1 \leq i &lt; N</var>) such that the <var>i</var>-th piece from the left is showing black and the <var>(i+1)</var>-th piece from the left is showing white, then flip both of those pieces. That is, the <var>i</var>-th piece from the left is now showing white and the <var>(i+1)</var>-th piece from the left is now showing black.</li>
+</ul>
+<p>Find the maximum possible number of times this operation can be performed.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 \leq |S| \leq 2\times 10^5</var></li>
+<li><var>S_i=</var><code>B</code> or <code>W</code></li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>S</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the maximum possible number of times the operation can be performed.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>BBW
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>2
+</pre>
+<p>The operation can be performed twice, as follows:</p>
+<ul>
+<li>Flip the second and third pieces from the left.</li>
+<li>Flip the first and second pieces from the left.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>BWBWBW
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>6
+</pre></section>
+</div>
+</span>

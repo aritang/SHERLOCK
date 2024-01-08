@@ -1,0 +1,181 @@
+
+<H1><font color="#000">Problem I: </font>Encircling Circles</H1>
+
+<p>
+You are given a set of circles <i>C</i> of a variety of radii (radiuses) placed at a variety of positions, possibly overlapping one another. Given a circle with radius <i>r</i>, that circle may be placed so that it encircles all of the circles in the set <i>C</i> if r is large enough.
+</p>
+
+<p>
+There may be more than one possible position of the circle of radius <i>r</i> to encircle all the member circles of <i>C</i>. We define the region <i>U</i> as the union of the areas of encircling circles at all such positions. In other words, for each point in <i>U</i>, there exists a circle of radius <i>r</i> that encircles that point and all the members of <i>C</i>. Your task is to calculate the length of the periphery of that region <i>U</i>.
+</p>
+
+<p>
+Figure I.1 shows an example of the set of circles <i>C</i> and the region <i>U</i>. In the figure, three circles contained in <i>C</i> are expressed by circles of solid circumference, some possible positions of the encircling circles are expressed by circles of dashed circumference, and the area <i>U</i> is expressed by a thick dashed closed curve.
+</p>
+<center>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_1323_1">
+</center>
+
+<H2>Input</H2>
+<p>
+The input is a sequence of datasets. The number of datasets is less than 100.
+</p>
+
+<p>
+Each dataset is formatted as follows.
+</p>
+
+<p>
+<i>n r<br>
+x<sub>1</sub> y<sub>1</sub> r<sub>1</sub><br>
+x<sub>2</sub> y<sub>2</sub> r<sub>2</sub><br>
+.<br>
+.<br>
+.<br>
+x<sub>n</sub> y<sub>n</sub> r<sub>n</sub></i>
+</p>
+
+<p>
+The first line of a dataset contains two positive integers, <i>n</i> and <i>r</i>, separated by a single space. <i>n</i> means the number of the circles in the set <i>C</i> and does not exceed 100. <i>r</i> means the radius of the encircling circle and does not exceed 1000.
+</p>
+
+<p>
+Each of the <i>n</i> lines following the first line contains three integers separated by a single space. (<i>x<sub>i</sub></i>, <i>y<sub>i</sub></i>) means the center position of the <i>i</i>-th circle of the set <i>C</i> and <i>r<sub>i</sub></i> means its radius.
+</p>
+
+<p>
+You may assume &minus;500&le;<i>x<sub>i</sub></i> &le;500, &minus;500&le;<i>y<sub>i</sub></i> &le;500, and 1&le;<i>r<sub>i</sub></i> &le;500.
+</p>
+
+<p>
+The end of the input is indicated by a line containing two zeros separated by a single space.
+</p>
+
+<H2>Output</H2>
+<p>
+For each dataset, output a line containing a decimal fraction which means the length of the periphery (circumferential length) of the region <i>U</i>.
+</p>
+
+<p>
+The output should not contain an error greater than 0.01. You can assume that, when <i>r</i> changes by &epsilon; (|&epsilon;| < 0.0000001), the length of the periphery of the region <i>U</i> will not change more than 0.001.
+</p>
+
+<p>
+If <i>r</i> is too small to cover all of the circles in <i>C</i>, output a line containing only 0.0.
+</p>
+
+<p>
+No other characters should be contained in the output.
+</p>
+
+<H2>Sample Input</H2>
+
+<pre>
+1 10
+5 5 7
+2 12
+5 5 7
+8 6 3
+3 10
+3 11 2
+2 1 1
+2 16 3
+3 15
+-5 2 5
+9 2 9
+5 8 6
+3 38
+-25 -10 8
+30 5 7
+-3 35 11
+3 39
+-25 -10 8
+30 5 7
+-3 35 11
+3 800
+-400 400 2
+300 300 1
+300 302 1
+3 800
+400 -400 2
+300 300 1
+307 300 3
+8 147
+130 80 12
+130 -40 12
+-110 80 12
+-110 -40 12
+70 140 12
+70 -100 12
+-50 140 12
+-50 -100 12
+3 493
+345 154 10
+291 111 75
+-275 -301 46
+4 55
+54 0 1
+40 30 5
+27 36 10
+0 48 7
+3 30
+0 3 3
+-3 0 4
+400 0 3
+3 7
+2 3 2
+-5 -4 2
+-4 3 2
+3 10
+-5 -4 5
+2 3 5
+-4 3 5
+4 6
+4 6 1
+5 5 1
+1 7 1
+0 1 1
+3 493
+345 154 10
+291 111 75
+-275 -301 46
+5 20
+-9 12 5
+0 15 5
+3 -3 3
+12 9 5
+-12 9 5
+0 0
+</pre>
+
+<H2>Output for the Sample Input</H2>
+
+<pre>
+81.68140899333463
+106.81415022205297
+74.11215318612639
+108.92086846105579
+0.0
+254.85616536128433
+8576.936716409238
+8569.462129048667
+929.1977057481128
+4181.124698202453
+505.09134735536804
+0.0
+46.82023824234038
+65.66979416387915
+50.990642291793506
+4181.124698202453
+158.87951420768937
+</pre>
+
+<center>
+<table>
+<td valign="top">
+</td>
+<td>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_1323_2">
+</td>
+</table>
+</center>

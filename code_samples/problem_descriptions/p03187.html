@@ -1,0 +1,114 @@
+<span class="lang-en">
+<p>Score : <var>800</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>Takahashi Lake has a perimeter of <var>L</var>. On the circumference of the lake, there is a residence of the lake's owner, Takahashi.
+Each point on the circumference of the lake has a coordinate between <var>0</var> and <var>L</var> (including <var>0</var> but not <var>L</var>), which is the distance from the Takahashi's residence, measured counter-clockwise.</p>
+<p>There are <var>N</var> trees around the lake; the coordinate of the <var>i</var>-th tree is <var>X_i</var>. There is no tree at coordinate <var>0</var>, the location of Takahashi's residence.</p>
+<p>Starting at his residence, Takahashi will repeat the following action:</p>
+<ul>
+<li>If all trees are burnt, terminate the process.</li>
+<li>Specify a direction: clockwise or counter-clockwise.</li>
+<li>Walk around the lake in the specified direction, until the coordinate of a tree that is not yet burnt is reached for the first time.</li>
+<li>When the coordinate with the tree is reached, burn that tree, stay at the position and go back to the first step.</li>
+</ul>
+<p>Find the longest possible total distance Takahashi walks during the process.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Partial Score</h3><p>A partial score can be obtained in this problem:</p>
+<ul>
+<li><var>300</var> points will be awarded for passing the input satisfying <var>N \leq 2000</var>.</li>
+</ul>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>2 \leq L \leq 10^9</var></li>
+<li><var>1 \leq N \leq 2\times 10^5</var></li>
+<li><var>1 \leq X_1 &lt; ... &lt; X_N \leq L-1</var></li>
+<li>All values in input are integers.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>L</var> <var>N</var>
+<var>X_1</var>
+<var>:</var>
+<var>X_N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the longest possible total distance Takahashi walks during the process.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>10 3
+2
+7
+9
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>15
+</pre>
+<p>Takahashi walks the distance of <var>15</var> if the process goes as follows:</p>
+<ul>
+<li>Walk a distance of <var>2</var> counter-clockwise, burn the tree at the coordinate <var>2</var> and stay there.</li>
+<li>Walk a distance of <var>5</var> counter-clockwise, burn the tree at the coordinate <var>7</var> and stay there.</li>
+<li>Walk a distance of <var>8</var> clockwise, burn the tree at the coordinate <var>9</var> and stay there.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>10 6
+1
+2
+3
+6
+7
+9
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>27
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>314159265 7
+21662711
+77271666
+89022761
+156626166
+160332356
+166902656
+298992265
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>1204124749
+</pre></section>
+</div>
+</span>

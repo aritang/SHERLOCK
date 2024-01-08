@@ -1,0 +1,121 @@
+
+
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({ tex2jax: { inlineMath: [["$","$"], ["\\(","\\)"]], processEscapes: true }});
+</script>
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+
+<H1>部活動調査</H1>
+
+<p>
+A 高校の生徒会長である明は、A 高校の生徒がどの部活動に所属しているかを調査することにした。A高校には 1 から <var>N</var> の番号が付けられた <var>N</var> 人の生徒と、1 から <var>M</var> の番号が付けられた <var>M</var> 種類の部活動がある。各部活動に人数制限はなく、0 人の部活動もありえる。ただし、A 高校の校則では生徒はひとつの部活動までしか所属できない。生徒は全員この校則を守っている。
+</p>
+
+<p>
+明は生徒会員に調査を依頼し、各行が次のいずれかであるような <var>K</var> 行の記録を入手した。
+</p>
+<ul>
+<li> 生徒 <var>a</var> と生徒 <var>b</var> は同じ部活動に所属している。</li>
+<li> 生徒 <var>c</var> は部活動 <var>x</var> に所属している。</li>
+</ul>
+
+<p>
+しかし、この記録には誰かが校則違反になってしまうような矛盾があるかもしれない。明は１行目から順に見ていき、矛盾があると判断できる最初の行を探すことにした。
+</p>
+
+<p>
+<var>K</var> 行の記録が与えられたとき、矛盾があると判断できる最初の行の番号を求めるプログラムを作成せよ。
+</p>
+
+<h2>Input</h2>
+
+<p>
+入力は以下の形式で与えられる。
+</p>
+
+<pre>
+<var>N</var> <var>M</var> <var>K</var>
+<var>record<sub>1</sub></var>
+<var>record<sub>2</sub></var>
+:
+<var>record<sub>K</sub></var>
+</pre>
+
+<p>
+１行目に生徒の人数 <var>N</var> (1 &le; <var>N</var> &le; 100000)、部活動の種類の数 <var>M</var> (1 &le; <var>M</var> &le; 100000)、記録の行数 <var>K</var> (1 &le; <var>K</var> &le; 200000) が与えられる。続く <var>K</var> 行に記録の各行 <var>record<sub>i</sub></var> が、以下のいずれかの形式で与えられる。
+</p>
+
+<pre>
+1 <var>a</var> <var>b</var>
+</pre>
+
+<p>
+または
+</p>
+
+<pre>
+2 <var>c</var> <var>x</var>
+</pre>
+
+<p>
+先頭の数字が「1」のとき、生徒 <var>a</var> (1 &le; <var>a</var> &le; <var>N</var>) と生徒 <var>b</var> (1 &le; <var>b</var> &le; <var>N</var>) が同じ部活動に所属していることを示す。ただし、<var>a</var> &ne; <var>b</var> である。
+</p>
+
+<p>
+先頭の数字が「2」のとき、生徒 <var>c</var> (1 &le; <var>c</var> &le; <var>N</var>) が部活動 <var>x</var> (1 &le; <var>x</var> &le; <var>M</var>) に所属していることを示す。
+</p>
+
+
+<h2>Output</h2>
+
+<p>
+矛盾があると判断できる最初の行の番号を１行に出力する。見つからない場合は 0 を１行に出力する。
+</p>
+
+<h2>Sample Input 1</h2>
+
+<pre>
+3 2 5
+1 1 2
+1 2 3
+2 1 1
+2 3 2
+2 2 1
+</pre>
+
+<h2>Sample Output 1</h2>
+<pre>
+4
+</pre>
+<br/>
+
+
+<h2>Sample Input 2</h2>
+<pre>
+3 2 4
+1 1 2
+2 1 1
+2 3 2
+2 2 1
+</pre>
+
+<h2>Sample Output 2</h2>
+<pre>
+0
+</pre>
+<br/>
+
+<h2>Sample Input 3</h2>
+<pre>
+3 2 2
+1 1 2
+2 1 1
+</pre>
+
+<h2>Sample Output 3</h2>
+<pre>
+0
+</pre>

@@ -1,0 +1,120 @@
+
+
+<h1>Problem B: Yu-kun Likes Letters in the English Alphabet</h1>
+<h2>Background</h2>
+<p>
+会津大学付属幼稚園はプログラミングが大好きな子供が集まる幼稚園である。園児の一人であるゆう君は、プログラミングと同じくらい英小文字が大好きだ。
+そんなゆう君は紙と丸と線、そして英小文字を使う新しい遊びを考え、その採点用プログラムを書くことにした。
+</p>
+
+<h2>Problem</h2>
+<p>初期状態として、紙に <var>V</var> 個の丸と <var>E</var> 本の線が書かれている。丸には0から昇順に番号がつけられており、各丸の中には英小文字が1つ書かれているか、何も書かれていない。 各線は異なる２つの丸を結んでいる。1つの丸が26本以上の線で結ばれることはない。
+</p>
+
+<p>遊びの手順は以下の通りである。</p>
+<ol>
+<li>何も書かれていない丸を１つ選ぶ。 そのような丸が存在しない場合はこの処理を終了する。</li>
+<li>丸の中に英小文字を１つ書く。　ただし丸が既に英小文字の書かれている丸と線で結ばれている場合、その英小文字と同じ英小文字は書くことはできない。</li>
+<li>1. に戻る。</li>
+</ol>
+
+<p>
+上記の手順に従って全ての丸に英小文字を書いた後、丸の番号が小さい順に丸の中の英小文字を並べ文字列を作る。
+こうしてできる文字列を辞書順で最小となるようにしたい。
+２つの同じ長さの文字列 <var>s</var>, <var>t</var> があり、 <var>s</var> が <var>t</var> より辞書順で小さいとは次のような場合を言う。
+<var>s<sub>i</sub></var> は文字列 <var>s</var> の <var>i</var> 番目の英小文字を、 <var>t<sub>i</sub></var> は文字列 <var>t</var> の <var>i</var> 番目の英小文字を表す。
+<var>s<sub>i</sub></var> が <var>t<sub>i</sub></var> と異なるような最小の <var>i</var> について、 <var>s<sub>i</sub></var> が <var>t<sub>i</sub></var> より小さい。
+</p>
+
+<p>
+紙の初期状態が与えられるので、そこから上記の手順にしたがって作成できる文字列のうち辞書順最小のものを出力せよ。
+</p>
+
+
+<h2>Input</h2>
+
+
+<pre>
+<var>V</var> <var>E</var>
+<var>a<sub>0</sub></var> <var>a<sub>1</sub></var> ... <var>a<sub>(V-1)</sub></var>
+<var>s<sub>0</sub></var> <var>t<sub>0</sub></var>
+<var>s<sub>1</sub></var> <var>t<sub>1</sub></var>
+...
+<var>s<sub>(E-1)</sub></var> <var>t<sub>(E-1)</sub></var>
+</pre>
+
+
+<p>１行目に丸の数 <var>V</var> と線の数 <var>E</var> が空白区切りで与えられる。</p>
+<p>２行目に丸の初期状態が空白区切りで与えられる。</p>
+<p><var>a<sub>i</sub></var> が英小文字の場合は <var>i</var> 番目の丸にその英小文字が書かれており、'?'の場合は <var>i</var> 番目の丸には何も書かれていないことを表す。</p>
+<p>続く <var>E</var> 行に線の情報が<var>s<sub>i</sub></var> <var>t<sub>i</sub></var> として与えられ、これは<var>s<sub>i</sub></var>番の丸と <var>t<sub>i</sub></var> 番の丸が線で結ばれていることを表す。</p>
+
+
+<h2>Constraints</h2>
+<p>入力は以下の条件を満たす。</p>
+<ul>
+
+<li>1 &le; <var>V</var> &le; 100,000</li>
+<li>0 &le; <var>E</var> &le; 200,000</li>
+<li><var>a<sub>i</sub></var> は英小文字, または '?' のいずれか ( 0 &le; <var>i</var> &le; <var>V-1</var> ) </li>
+<li>0 &le; <var>s<sub>i</sub></var>, <var>t<sub>i</sub></var> &le; <var>V-1</var> ( <var>s<sub>i</sub></var> &lt; <var>t<sub>i</sub></var> , 0 &le; <var>i</var> &le; <var>E-1</var> ) </li>
+<li>１つの丸が26本以上の線で結ばれることはない</li>
+</ul>
+
+<h2>Output</h2>
+<p>問題文中の手順に従って作成可能な文字列のうち、辞書順で最も小さいものを1行に出力せよ</p>
+
+<h2>Sample Input 1</h2>
+<pre>
+3 3
+c ? ?
+0 1
+0 2
+1 2
+</pre>
+
+<h2>Sample Output 1</h2>
+<pre>
+cab
+</pre>
+
+<h2>Sample Input 2</h2>
+<pre>
+3 2
+c ? ?
+0 1
+0 2
+</pre>
+
+<h2>Sample Output 2</h2>
+<pre>
+caa
+</pre>
+
+<h2>Sample Input 3</h2>
+<pre>
+7 6
+? a ? ? z a ?
+0 1
+0 2
+3 4
+4 5
+4 6
+5 6
+</pre>
+
+<h2>Sample Output 3</h2>
+<pre>
+baaazab
+</pre>
+
+<h2>Sample Input 4</h2>
+<pre>
+5 0
+? ? ? ? ?
+</pre>
+
+<h2>Sample Output 4</h2>
+<pre>
+aaaaa
+</pre>

@@ -1,0 +1,171 @@
+
+
+
+<h1>Problem B: Matrix Operations</h1>
+
+<h2>Problem</h2>
+<p>
+      要素が1と0からなる<var>n</var>×<var>n</var>の行列に対して、以下の種類の操作を行うプログラムを作成せよ。
+</p>
+
+<!--
+    <p>
+      祖父から1と0だけが書かれた<var>n</var>×<var>n</var>の行列と<var>m</var>個の操作が書かれている紙が送られてきた。
+    </p>
+    
+    <p>
+      紙の裏を見てみると、「この紙に書いてある行列に操作を加えて新しくできた行列をわしのとこに送ってくるのじゃ！
+      一流のプログラマになりたいならこれくらいできなきゃ話にならんぞ！」と書かれている。どうやら私への挑戦状らしい。
+      しかし私はプログラマではなくパティシエになりたいため、プログラムを書いたことがない。祖父にそのことを何度も言っているが一向に聞く耳を持ってくれない。 そこで、私の友達であるあなたにこの問題を解決するプログラムを組んでもらいたい。以下に操作の種類を示す。
+    </p>
+-->
+
+<p>
+      <img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE3_ACPC2013Aizu_aizuicpc_grid1" width="500" height="200"> <br />
+      部分行列と角度(0,90,180,270,360)が与えられるのでその分だけ時計回りに回転させる。 <br />
+      <img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE3_ACPC2013Aizu_aizuicpc_grid2" width="500" height="200"> <br />
+      部分行列が与えられるので値を反転させる。<br />
+      <img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE3_ACPC2013Aizu_aizuicpc_grid3" width="500" height="200"> <br />
+      行が与えられるので左に1個シフトし、はみ出た分は右端に移動する。 <br />
+      <img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE3_ACPC2013Aizu_aizuicpc_grid4" width="500" height="200"> <br />
+      行が与えられるので右に１個シフトし、はみ出た分は左端に移動する。 <br />
+      <img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE3_ACPC2013Aizu_aizuicpc_grid5" width="500" height="200"> <br />
+      行(<var>r</var>),列(<var>c</var>)が与えられる。<br />
+      Step1：現在のセルを(<var>r</var>,<var>c</var>)にする。 <br />
+      Step2：現在のセルの値を反転する。 <br />
+      Step3：隣接するセルのうち、値が現在のセルの反転前の値と等しいセルに対し、Step2とStep3の処理を行う。<br />
+      ここで、セル(<var>i</var>,<var>j</var>)に隣接するセルとは、(<var>i</var>-1,<var>j</var>),
+      (<var>i</var>+1,<var>j</var>),(<var>i</var>,<var>j</var>-1),(<var>i</var>,<var>j</var>+1)の４つである。 <br />
+
+</p>
+    <h2>Input</h2>
+
+<pre>
+<var>n</var> <var>m</var>
+<var>a<sub>1,1</sub></var> <var>a<sub>1,2</sub></var> ... <var>a<sub>1,n</sub></var>
+<var>a<sub>2,1</sub></var> <var>a<sub>2,2</sub></var> ... <var>a<sub>2,n</sub></var>
+:
+<var>a<sub>n,1</sub></var> <var>a<sub>n,2</sub></var> ... <var>a<sub>n,n</sub></var>
+<var>Operation<sub>1</sub></var>
+<var>Operation<sub>2</sub></var>
+:
+<var>Operation<sub>m</sub></var>
+</pre>
+
+<p>
+      入力の最初に2つの整数<var>n</var>と<var>m</var>が空白区切りで与えられる。     <var>n</var>は行列のサイズ、<var>m</var>は操作の数を表している。
+</p>
+<p>
+    次にグリッドの情報が<var>n</var>行で与えられ、グリッドの情報の<var>i</var>行目には<var>n</var>個の整数
+    <var>a</var><sub>i,j</sub>が空白区切りで与えられる。<var>a</var><sub>i,j</sub>には0か1が与えられる。
+</p>
+
+<p>
+    次に1行で表される各<var>Operation<sub>i</sub></var>が<var>m</var>個与えられる。      
+    <var>Operation<sub>i</sub></var> の最初の入力は<var>o</var>(操作の種類)が入力される。 
+
+</p>
+
+<p>
+      <var>o</var>が0のときは回転(Rotate)を表している。
+      続く入力は、<var>r</var> <var>c</var> <var>size</var> <var>angle</var>(行、列、サイズ、角度) が空白区切りで与えられる。
+      左上(<var>r</var>,<var>c</var>)から右下(<var>r</var>+<var>size</var>-1,<var>c</var>+<var>size</var>-1)が部分行列となる。
+      正方行列になることは保証されている。
+</p>
+<p>
+      <var>o</var>が1のときは反転(Reversal)を表している。
+      また、続く入力は、<var>r</var> <var>c</var> <var>size</var> (行、列、サイズ) が空白区切りで与えられる。
+      左上(<var>r</var>,<var>c</var>)から右下(<var>r</var>+<var>size</var>-1,<var>c</var>+<var>size</var>-1)が部分行列となる。
+      正方行列になることは保証されている。
+</p>
+<p>      
+      <var>o</var>が2のときは左シフト(Left shift)を表している。
+      また、続く入力は <var>r</var>(行) が与えられる。
+</p>
+<p>      
+      <var>o</var>が3のときは右シフト(Right shift)を表している。
+      また、続く入力は <var>r</var>(行) が与えられる。
+</p>
+<p>      
+      <var>o</var>が4のときは島反転(Island reversal)を表している。
+      また、続く入力は <var>r</var> <var>c</var>(行、列) が空白区切りで与えられる。
+</p>
+
+
+    <h2>Constraints</h2>
+    <p>入力は以下の条件を満たす。</p>
+    <ul>
+
+      <li>1 &le; <var>n</var>,<var>r</var>,<var>c</var>,<var>size</var> &le; 15</li>
+      <li>1 &le; <var>m</var> &le; 100</li>
+      <li>0 &le; <var>o</var> &le; 4</li>
+      <li>1 &le; <var>r</var>+<var>size</var>-1,<var>c</var>+<var>size</var>-1 &le; 15</li>
+      <li>0 &le; <var>angle</var> &le; 360</li>
+      
+    </ul>
+
+    <h2>Output</h2>
+    <p>生成された行列を出力して下さい。</p>
+
+    <h2>Sample Input 1</h2>
+
+
+<pre>
+3 1
+1 1 0
+0 1 1
+1 0 1
+0 2 2 2 90
+</pre>
+
+    <h2>Sample Output 1</h2>
+    
+<pre>
+1 1 0
+0 0 1
+1 1 1
+</pre>
+
+<h2>Sample Input 2</h2>
+
+<pre>
+5 2
+0 0 0 0 0
+1 0 0 0 0
+0 1 1 1 0
+0 1 1 1 0
+0 0 0 0 0
+3 2
+4 2 2
+</pre>
+
+<h2>Sample Output 2</h2>
+
+<pre>
+0 0 0 0 0
+0 0 0 0 0
+0 0 0 0 0
+0 0 0 0 0
+0 0 0 0 0
+</pre>
+
+<h2>Sample Input 3</h2>
+<pre>
+5 2
+1 1 1 0 1
+1 0 0 0 0
+0 0 0 1 1
+0 1 0 0 0
+0 1 1 1 0
+1 3 3 3
+0 1 1 5 90
+</pre>
+
+<h2>Sample Output 3</h2>
+<pre>
+0 0 0 1 1
+1 1 0 0 1
+0 1 1 0 1
+0 1 0 0 0
+1 1 0 0 1
+</pre>

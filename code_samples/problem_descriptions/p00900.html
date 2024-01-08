@@ -1,0 +1,69 @@
+
+<H1><font color="#000">Problem G: </font>Captain Q&prime;s Treasure</H1>
+
+<p>
+You got an old map, which turned out to be drawn by the infamous pirate &ldquo;Captain Q&rdquo;. It shows the locations of a lot of treasure chests buried in an island.
+</p>
+
+<p>
+The map is divided into square sections, each of which has a digit on it or has no digit. The digit represents the number of chests in its 9 neighboring sections (the section itself and its 8 neighbors). You may assume that there is at most one chest in each section.
+</p>
+
+<p>
+Although you have the map, you can't determine the sections where the chests are buried. Even the total number of chests buried in the island is unknown. However, it is possible to calculate the minimum number of chests buried in the island. Your mission in this problem is to write a program that calculates it.
+</p>
+
+<H2>Input</H2>
+
+<p>
+The input is a sequence of datasets. Each dataset is formatted as follows.
+</p>
+
+<p>
+<i>h w<br>
+map</i>
+</p>
+
+<p>
+The first line of a dataset consists of two positive integers <i>h</i> and <i>w</i>. <i>h</i> is the height of the map and w is the width of the map. You may assume 1&le;<i>h</i>&le;15 and 1&le;<i>w</i>&le;15.
+</p>
+
+<p>
+The following h lines give the map. Each line consists of w characters and corresponds to a horizontal strip of the map. Each of the characters in the line represents the state of a section as follows.
+</p>
+
+<p>
+&lsquo;.&rsquo;: The section is not a part of the island (water). No chest is here.
+</p>
+
+<p>
+&lsquo;*&rsquo;: The section is a part of the island, and the number of chests in its 9 neighbors is not known.
+</p>
+
+<p>
+&lsquo;0&rsquo;-&lsquo;9&rsquo;: The section is a part of the island, and the digit represents the number of chests in its 9 neighbors.
+</p>
+
+<p>
+You may assume that the map is not self-contradicting, i.e., there is at least one arrangement of chests. You may also assume the number of sections with digits is at least one and at most 15.
+</p>
+
+<p>
+A line containing two zeros indicates the end of the input.
+</p>
+
+<H2>Output</H2>
+
+<p>
+For each dataset, output a line that contains the minimum number of chests. The output should not contain any other character.
+</p>
+
+<H2>Sample Input</H2>
+
+<pre>
+5 6<br>*2.2**<br>..*...<br>..2...<br>..*...<br>*2.2**<br>6 5<br>.*2*.<br>..*..<br>..*..<br>..2..<br>..*..<br>.*2*.<br>5 6<br>.1111.<br>**...*<br>33....<br>**...0<br>.*2**.<br>6 9<br>....1....<br>...1.1...<br>....1....<br>.1..*..1.<br>1.1***1.1<br>.1..*..1.<br>9 9<br>*********<br>*4*4*4*4*<br>*********<br>*4*4*4*4*<br>*********<br>*4*4*4*4*<br>*********<br>*4*4*4***<br>*********<br>0 0
+</pre>
+
+<H2>Output for the Sample Input</H2>
+
+<pre>6<br>5<br>5<br>6<br>23</pre>

@@ -1,0 +1,63 @@
+
+<script src="./IMAGE/varmath.js" charset="UTF-8"></script>
+
+<H1>Dungeon Creation</H1>
+
+<p>
+The king demon is waiting in his dungeon to defeat a brave man.
+His dungeon consists of <var>H \times W</var> grids.
+Each cell is connected to four (i.e. north, south, east and west) neighboring cells and some cells are occupied by obstacles.
+</p>
+
+<p>
+To attack the brave man, the king demon created and sent a servant  that walks around in the dungeon.
+However, soon the king demon found that the servant does not work as he wants.
+The servant  is too dumb. If the dungeon had  cyclic path, it might keep walking along the cycle forever.
+</p>
+
+<p>
+In order to make sure that the servant eventually find the brave man, the king demon decided to  eliminate all cycles by building walls between cells.
+At the same time, he must be careful so that there  is at least one path between any two cells  not occupied by obstacles.
+</p>
+
+<p>
+Your task is to write a program that computes in how many ways the kind demon can build walls.
+</p>
+
+<H2>Input</H2>
+
+<p>
+The first line of each test case has two integers <var>H</var> and <var>W</var> (<var>1 \leq H \leq 500</var>, <var>1 \leq W \leq 15</var>), which  are the height and the width of the dungeon.
+Following <var>H</var> lines consist of exactly <var>W</var> letters each of which is '.' (there is no obstacle on the cell) or '#' (there is an obstacle).
+You may assume that there is at least one cell that does not have an obstacle.
+</p>
+
+<p>
+The input terminates when <var>H = 0</var> and <var>W = 0</var>. Your program must not output for this case.
+</p>
+
+<H2>Output</H2>
+
+<p>
+For each test case, print its case number and the number of ways that walls can be built in one line. Since the answer can be very big, output in modulo 1,000,000,007.
+</p>
+
+<H2>Sample Input</H2>
+
+<pre>
+2 2
+..
+..
+3 3
+...
+...
+..#
+0 0
+</pre>
+
+<H2>Output for the Sample Input</H2>
+
+<pre>
+Case 1: 4
+Case 2: 56
+</pre>

@@ -1,0 +1,82 @@
+
+<H1>Insertion Sort</H1>
+
+<p>
+Write a program of the Insertion Sort algorithm which sorts a sequence A in ascending order. The algorithm should be based on the following pseudocode:
+</p>
+
+<pre>
+for i = 1 to A.length-1
+    key = A[i]
+    /* insert A[i] into the sorted sequence A[0,...,j-1] */
+    j = i - 1
+    while j >= 0 and A[j] > key
+        A[j+1] = A[j]
+        j--
+    A[j+1] = key
+</pre>
+
+<p>
+Note that, indices for array elements are based on 0-origin.
+</p>
+
+<p>
+To illustrate the algorithms, your program should trace intermediate result for each step.
+</p>
+
+<H2>Input</H2>
+
+<p>
+The first line of the input includes an integer N, the number of elements in the sequence.
+</p>
+<p>
+In the second line, <i>N</i> elements of the sequence are given separated by a single space.
+</p>
+
+<H2>Output</H2>
+
+<p>
+The output consists of <i>N</i> lines. Please output the intermediate sequence in a line for each step. Elements of the sequence should be separated by single space.
+</p>
+
+<H2>Constraints</H2>
+
+<p>
+1 &le; <i>N</i> &le; 100
+</p>
+
+<H2>Sample Input 1</H2>
+<pre>
+6
+5 2 4 6 1 3
+</pre>
+<H2>Sample Output 1</H2>
+<pre>
+5 2 4 6 1 3
+2 5 4 6 1 3
+2 4 5 6 1 3
+2 4 5 6 1 3
+1 2 4 5 6 3
+1 2 3 4 5 6
+</pre>
+
+<H2>Sample Input 2</H2>
+<pre>
+3
+1 2 3
+</pre>
+<H2>Sample Output 2</H2>
+<pre>
+1 2 3
+1 2 3
+1 2 3
+</pre>
+
+
+
+
+<H2>Hint</H2>
+
+<a href="template/ALDS1_1_A_template.c">Template in C</a>
+
+

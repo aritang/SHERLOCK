@@ -1,0 +1,86 @@
+
+
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({ tex2jax: { inlineMath: [["$","$"], ["\\(","\\)"]], processEscapes: true }});
+</script>
+<script type='text/javascript' src='http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
+</script>
+
+<h2>Problem B:
+RabbitWalking
+</h2>
+
+<p>
+  うさぎの住んでいる都市には, $V$ 個の交差点と $E$ 本の道がある. 交差点は 1-indexed で番号が付けられている. $i$ 番目の道は交差点 $a_i$ と交差点 $b_i$ を bidirectional につないでいる.
+</p>
+
+<p>
+  うさぎは, 散歩と奇数が好きである．うさぎはある交差点から出発し, 道を奇数本辿り, 出発した頂点に戻るような経路に沿って散歩したいと思っている．
+</p>
+
+<p>
+  この都市の市長であるねこは, 都市内の移動を効率化するために異なる2 つの交差点を結ぶ道をたくさん追加しようとしている．ただし，ある交差点の組に対して敷設することが出来る道は高々1本までである．また， ねこはいたずら好きなので，道を奇数本辿り, 出発した頂点に戻るような経路が含まれないようにしたいと思っている．
+</p>
+
+<p>
+  最大で何本道を付け加えられるか求めよ. ただし，最初からうさぎの要求が満たされている場合は-1 を出力せよ.
+</p>
+
+
+<h3>Constraints</h3>
+<ul>
+<li>$V$ will be between 1 and 100,000, inclusive.</li>
+<li>$E$ will be between 0 and 100,000, inclusive.</li>
+<li>$a_i$ and $b_i$ will be distinct.</li>
+<li>No two roads connect the same pair of intersections.</li>
+</ul>
+
+<h3>Input</h3>
+
+<p>
+  入力は以下の形式で与えられる:<br>
+  <br>
+$V$ $E$<br>
+$a_1$ $b_1$<br>
+...<br>
+$a_E$ $b_E$<br>
+  <br>
+</p>
+
+
+<h3>Output</h3>
+
+<p>
+道を追加できる本数の最大値を表す整数を 1 行に出力せよ. 最初からうさぎの要求が満たされている場合は -1 を出力せよ.
+</p>
+
+
+<h3>Sample Input 1</h3>
+
+<pre>8 5
+1 2
+6 5
+6 4
+1 3
+4 7</pre>
+
+<h3>Sample Output 1</h3>
+
+<pre>11</pre>
+
+<h3>Sample Input 2</h3>
+
+<pre>5 8
+2 1
+2 4
+1 3
+5 4
+4 1
+2 3
+3 5
+2 5</pre>
+
+<h3>Sample Output 2</h3>
+
+<pre>-1</pre>

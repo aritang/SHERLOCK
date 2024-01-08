@@ -1,0 +1,116 @@
+<span class="lang-en">
+<p>Score : <var>400</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>There are <var>N</var> cells arranged in a row, numbered <var>1, 2, \ldots, N</var> from left to right.</p>
+<p>Tak lives in these cells and is currently on Cell <var>1</var>. He is trying to reach Cell <var>N</var> by using the procedure described below.</p>
+<p>You are given an integer <var>K</var> that is less than or equal to <var>10</var>, and <var>K</var> non-intersecting segments <var>[L_1, R_1], [L_2, R_2], \ldots, [L_K, R_K]</var>.
+Let <var>S</var> be the union of these <var>K</var> segments.
+Here, the segment <var>[l, r]</var> denotes the set consisting of all integers <var>i</var> that satisfy <var>l \leq i \leq r</var>.</p>
+<ul>
+<li>When you are on Cell <var>i</var>, pick an integer <var>d</var> from <var>S</var> and move to Cell <var>i + d</var>. You cannot move out of the cells.</li>
+</ul>
+<p>To help Tak, find the number of ways to go to Cell <var>N</var>, modulo <var>998244353</var>.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>2 \leq N \leq 2 \times 10^5</var></li>
+<li><var>1 \leq K \leq \min(N, 10)</var></li>
+<li><var>1 \leq L_i \leq R_i \leq N</var></li>
+<li><var>[L_i, R_i]</var> and <var>[L_j, R_j]</var> do not intersect (<var>i \neq j</var>) </li>
+<li>All values in input are integers.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var> <var>K</var>
+<var>L_1</var> <var>R_1</var>
+<var>L_2</var> <var>R_2</var>
+<var>:</var>
+<var>L_K</var> <var>R_K</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the number of ways for Tak to go from Cell <var>1</var> to Cell <var>N</var>, modulo <var>998244353</var>.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>5 2
+1 1
+3 4
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>4
+</pre>
+<p>The set <var>S</var> is the union of the segment <var>[1, 1]</var> and the segment <var>[3, 4]</var>, therefore <var>S = \{ 1, 3, 4 \}</var> holds.</p>
+<p>There are <var>4</var> possible ways to get to Cell <var>5</var>:</p>
+<ul>
+<li><var>1 \to 2 \to 3 \to 4 \to 5</var>,</li>
+<li><var>1 \to 2 \to 5</var>,</li>
+<li><var>1 \to 4 \to 5</var> and</li>
+<li><var>1 \to 5</var>.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>5 2
+3 3
+5 5
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>0
+</pre>
+<p>Because <var>S = \{ 3, 5 \}</var> holds, you cannot reach to Cell <var>5</var>.
+Print <var>0</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>5 1
+1 2
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>5
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 4</h3><pre>60 3
+5 8
+1 3
+10 15
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 4</h3><pre>221823067
+</pre>
+<p>Note that you have to print the answer modulo <var>998244353</var>.</p></section>
+</div>
+</span>

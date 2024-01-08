@@ -1,0 +1,97 @@
+<span class="lang-en">
+<p>Score : <var>300</var> points</p>
+<div class="part">
+<section>
+<h3>Problem</h3><p>Takahashi, who is a novice in competitive programming, wants to learn <var>M</var> algorithms.
+Initially, his <em>understanding level</em> of each of the <var>M</var> algorithms is <var>0</var>.</p>
+<p>Takahashi is visiting a bookstore, where he finds <var>N</var> books on algorithms.
+The <var>i</var>-th book (<var>1\leq i\leq N</var>) is sold for <var>C_i</var> yen (the currency of Japan). If he buys and reads it, his understanding level of the <var>j</var>-th algorithm will increase by <var>A_{i,j}</var> for each <var>j</var> (<var>1\leq j\leq M</var>).
+There is no other way to increase the understanding levels of the algorithms.</p>
+<p>Takahashi's objective is to make his understanding levels of all the <var>M</var> algorithms <var>X</var> or higher. Determine whether this objective is achievable. If it is achievable, find the minimum amount of money needed to achieve it.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li>All values in input are integers.</li>
+<li><var>1\leq N, M\leq 12</var></li>
+<li><var>1\leq X\leq 10^5</var></li>
+<li><var>1\leq C_i \leq 10^5</var></li>
+<li><var>0\leq A_{i, j} \leq 10^5</var></li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var> <var>M</var> <var>X</var>
+<var>C_1</var> <var>A_{1,1}</var> <var>A_{1,2}</var> <var>\cdots</var> <var>A_{1,M}</var>
+<var>C_2</var> <var>A_{2,1}</var> <var>A_{2,2}</var> <var>\cdots</var> <var>A_{2,M}</var>
+<var>\vdots</var>
+<var>C_N</var> <var>A_{N,1}</var> <var>A_{N,2}</var> <var>\cdots</var> <var>A_{N,M}</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>If the objective is not achievable, print <code>-1</code>; otherwise, print the minimum amount of money needed to achieve it.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>3 3 10
+60 2 2 4
+70 8 7 9
+50 2 3 9
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>120
+</pre>
+<p>Buying the second and third books makes his understanding levels of all the algorithms <var>10</var> or higher, at the minimum cost possible.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>3 3 10
+100 3 1 4
+100 1 5 9
+100 2 6 5
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>-1
+</pre>
+<p>Buying all the books is still not enough to make his understanding levels of all the algorithms <var>10</var> or higher.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>8 5 22
+100 3 7 5 3 1
+164 4 5 2 7 8
+334 7 2 7 2 9
+234 4 7 2 8 2
+541 5 4 3 3 6
+235 4 8 6 9 7
+394 3 6 1 6 2
+872 8 4 3 7 2
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>1067
+</pre></section>
+</div>
+</span>

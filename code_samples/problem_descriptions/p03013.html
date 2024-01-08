@@ -1,0 +1,97 @@
+<span class="lang-en">
+<p>Score : <var>300</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>There is a staircase with <var>N</var> steps. Takahashi is now standing at the foot of the stairs, that is, on the <var>0</var>-th step.
+He can climb up one or two steps at a time.</p>
+<p>However, the treads of the <var>a_1</var>-th, <var>a_2</var>-th, <var>a_3</var>-th, <var>\ldots</var>, <var>a_M</var>-th steps are broken, so it is dangerous to set foot on those steps.</p>
+<p>How many are there to climb up to the top step, that is, the <var>N</var>-th step, without setting foot on the broken steps?
+Find the count modulo <var>1\ 000\ 000\ 007</var>.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 \leq N \leq 10^5</var></li>
+<li><var>0 \leq M \leq N-1</var></li>
+<li><var>1 \leq a_1 &lt; a_2 &lt; </var> <var>...</var> <var> &lt; a_M \leq N-1</var></li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var> <var>M</var>
+<var>a_1</var>
+<var>a_2</var>
+<var> .</var>
+<var> .</var>
+<var> .</var>
+<var>a_M</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the number of ways to climb up the stairs under the condition, modulo <var>1\ 000\ 000\ 007</var>.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>6 1
+3
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>4
+</pre>
+<p>There are four ways to climb up the stairs, as follows:</p>
+<ul>
+<li><var>0 \to 1 \to 2 \to 4 \to 5 \to 6</var></li>
+<li><var>0 \to 1 \to 2 \to 4 \to 6</var></li>
+<li><var>0 \to 2 \to 4 \to 5 \to 6</var></li>
+<li><var>0 \to 2 \to 4 \to 6</var></li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>10 2
+4
+5
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>0
+</pre>
+<p>There may be no way to climb up the stairs without setting foot on the broken steps.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>100 5
+1
+23
+45
+67
+89
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>608200469
+</pre>
+<p>Be sure to print the count modulo <var>1\ 000\ 000\ 007</var>.</p></section>
+</div>
+</span>

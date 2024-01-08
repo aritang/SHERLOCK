@@ -1,0 +1,97 @@
+<span class="lang-en">
+<p>Score : <var>1000</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><style>
+   #nck {
+      width: 30px;
+      height: auto;
+   }
+</style>
+<p>There are <var>N</var> cities in a two-dimensional plane.
+The coordinates of the <var>i</var>-th city is <var>(x_i, y_i)</var>.
+Initially, the amount of water stored in the <var>i</var>-th city is <var>a_i</var> liters.</p>
+<p>Snuke can carry any amount of water from a city to another city.
+However, water leaks out a bit while he carries it.
+If he carries <var>l</var> liters of water from the <var>s</var>-th city to the <var>t</var>-th city, only <var>max(l-d_{s,t}, 0)</var> liters of water remains when he arrives at the destination.
+Here <var>d_{s,t}</var> denotes the (Euclidean) distance between the <var>s</var>-th city and the <var>t</var>-th city.
+He can perform arbitrary number of operations of this type.</p>
+<p>Snuke wants to maximize the minimum amount of water among the <var>N</var> cities.
+Find the maximum <var>X</var> such that he can distribute at least <var>X</var> liters of water to each city.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 ≤ N ≤ 15</var></li>
+<li><var>0 ≤ x_i, y_i, a_i ≤ 10^9</var></li>
+<li>All values in the input are integers.</li>
+<li>No two cities are at the same position.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>The input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+<var>x_1</var> <var>y_1</var> <var>a_1</var>
+:
+<var>x_N</var> <var>y_N</var> <var>a_N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the maximum of the minimum amount of water among the <var>N</var> cities.
+The absolute error or the relative error must be at most <var>10^{-9}</var>.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>3
+0 0 10
+2 0 5
+0 5 8
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>6.500000000000
+</pre>
+<p>The optimal solution is to carry <var>3.5</var> liters of water from the 1st city to the 2nd city.
+After the operation, both the 1st and the 2nd cities will have <var>6.5</var> liters of water, and the 3rd city will have <var>8</var> liters of water.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>15
+335279264 849598327 822889311
+446755913 526239859 548830120
+181424399 715477619 342858071
+625711486 448565595 480845266
+647639160 467825612 449656269
+160714711 336869678 545923679
+61020590 573085537 816372580
+626006012 389312924 135599877
+547865075 511429216 605997004
+561330066 539239436 921749002
+650693494 63219754 786119025
+849028504 632532642 655702582
+285323416 611583586 211428413
+990607689 590857173 393671555
+560686330 679513171 501983447
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>434666178.237122833729
+</pre></section>
+</div>
+</span>

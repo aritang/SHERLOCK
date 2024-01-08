@@ -1,0 +1,84 @@
+<span class="lang-en">
+<p>Score : <var>700</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p><var>N</var> people are waiting in a single line in front of the Takahashi Store. The cash on hand of the <var>i</var>-th person from the front of the line is a positive integer <var>A_i</var>.</p>
+<p>Mr. Takahashi, the shop owner, has decided on the following scheme: He picks a product, sets a positive integer <var>P</var> indicating its price, and shows this product to customers in order, starting from the front of the line. This step is repeated as described below.</p>
+<p>At each step, when a product is shown to a customer, if price <var>P</var> is equal to or less than the cash held by that customer at the time, the customer buys the product and Mr. Takahashi ends the current step. That is, the cash held by the first customer in line with cash equal to or greater than <var>P</var> decreases by <var>P</var>, and the next step begins.</p>
+<p>Mr. Takahashi can set the value of positive integer <var>P</var> independently at each step.</p>
+<p>He would like to sell as many products as possible. However, if a customer were to end up with <var>0</var> cash on hand after a purchase, that person would not have the fare to go home. Customers not being able to go home would be a problem for Mr. Takahashi, so he does not want anyone to end up with <var>0</var> cash.</p>
+<p>Help out Mr. Takahashi by writing a program that determines the maximum number of products he can sell, when the initial cash in possession of each customer is given.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 ≦ | N | ≦ 100000</var></li>
+<li><var>1 ≦ A_i ≦ 10^9(1 ≦ i ≦ N)</var></li>
+<li>All inputs are integers.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Inputs are provided from Standard Inputs in the following form.</p>
+<pre><var>N</var>
+<var>A_1</var>
+:
+<var>A_N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Output an integer representing the maximum number of products Mr. Takahashi can sell.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>3
+3
+2
+5
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>3
+</pre>
+<p>As values of <var>P</var>, select in order <var>1, 4, 1</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>15
+3
+1
+4
+1
+5
+9
+2
+6
+5
+3
+5
+8
+9
+7
+9
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>18
+</pre></section>
+</div>
+</span>

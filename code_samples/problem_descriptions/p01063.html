@@ -1,0 +1,101 @@
+
+
+
+<h1>Rubik Dungeon</h1>
+<h2>Problem</h2>
+
+<p>
+あなたは<var>n</var> × <var>n</var> × <var>n</var>の立方体のルービックキューブ型のダンジョンにやってきた。<br>
+あなたは現在(<var>x<sub>1</sub></var>,<var>y<sub>1</sub></var>,<var>z<sub>1</sub></var>)の部屋にいる。<br>
+目標の宝は(<var>x<sub>2</sub></var>,<var>y<sub>2</sub></var>,<var>z<sub>2</sub></var>)の部屋にある。<br>
+あなたは隣接している前後左右上下の部屋に単位時間で移動することができる。
+</p>
+
+
+<left>
+	<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE3_UAPC2016Spring_E1"  width="200"><br>
+</left>
+
+<p>
+各部屋には6つのボタンがあり、それぞれのボタンを押すことにより、単位時間で、ルービックキューブのように以下の操作を行うことができる：<br>
+</p>
+
+<ul>
+<li>現在いる部屋と<var>x</var>座標の値が同じ全ての部屋を時計または反時計周りに90度回転することができる</li>
+</ul>
+
+<left>
+	<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE3_UAPC2016Spring_E2" width="360"><br>
+</left>
+
+<ul>
+<li>現在いる部屋と<var>y</var>座標の値が同じ全ての部屋を時計または反時計周りに90度回転することができる</li>
+</ul>
+<left>
+	<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE3_UAPC2016Spring_E3" width="360"><br>
+</left>
+<ul>
+<li>現在いる部屋と<var>z</var>座標の値が同じ全ての部屋を時計または反時計周りに90度回転することができる</li>
+</ul>
+<left>
+	<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE3_UAPC2016Spring_E4" width="360" ><br>
+</left>
+<p>
+回転している途中で他の部屋に移動することはできない。<br>
+宝のある部屋まで最短で移動した場合の時間を求めよ。<br>
+</p>
+
+<h2>Input</h2>
+
+<pre>
+<var>n</var>
+<var>x<sub>1</sub></var> <var>y<sub>1</sub></var> <var>z<sub>1</sub></var>
+<var>x<sub>2</sub></var> <var>y<sub>2</sub></var> <var>z<sub>2</sub></var>
+</pre>
+
+<p>
+入力は全て整数で与えられる。<br>
+1行目に<var>n</var>が与えられる。<br>
+2行目に現在地の座標(<var>x<sub>1</sub></var>,<var>y<sub>1</sub></var>,<var>z<sub>1</sub></var>)、3行目に宝のある部屋の座標(<var>x<sub>2</sub></var>,<var>y<sub>2</sub></var>,<var>z<sub>2</sub></var>)が空白区切りで与えられる。
+</p>
+
+<h2>Constraints</h2>
+
+<ul>
+  <li>2 &le; n &le; 10<sup>5</sup></li>
+  <li>0 &le; <var>x<sub>1</sub></var>,<var>y<sub>1</sub></var>,<var>z<sub>1</sub></var>,<var>x<sub>2</sub></var>,<var>y<sub>2</sub></var>,<var>z<sub>2</sub></var> &le; <var>n</var>&minus;1</li>
+  <li>(<var>x<sub>1</sub></var>,<var>y<sub>1</sub></var>,<var>z<sub>1</sub></var>) &ne; (<var>x<sub>2</sub></var>,<var>y<sub>2</sub></var>,<var>z<sub>2</sub></var>)</li>
+</ul>
+
+<h2>Output</h2>
+<p>
+最短の時間を出力せよ。
+</p>
+
+<h2>Sample Input 1</h2>
+<pre>
+3
+0 0 0
+1 2 2
+</pre>
+
+<h2>Sample Output 1</h2>
+<pre>
+3
+</pre>
+
+<h2>Sample Input 2</h2>
+<pre>
+3
+0 0 0
+0 0 2
+</pre>
+
+<h2>Sample Output 2</h2>
+<pre>
+2
+</pre>
+
+<p>
+回転させると宝も移動してしまうので、回転させずに移動する。
+</p>

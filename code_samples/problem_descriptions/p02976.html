@@ -1,0 +1,87 @@
+<span class="lang-en">
+<p>Score : <var>700</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>You are given a simple connected undirected graph with <var>N</var> vertices and <var>M</var> edges. The vertices are numbered <var>1</var> to <var>N</var>, and the <var>i</var>-th edge connects Vertex <var>A_i</var> and Vertex <var>B_i</var>.
+Takahashi will assign one of the two possible directions to each of the edges in the graph to make a directed graph.
+Determine if it is possible to make a directed graph with an even number of edges going out from every vertex. If the answer is yes, construct one such graph.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Notes</h3><p>An undirected graph is said to be simple when it contains no self-loops or multiple edges.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>2 \leq N \leq 10^5</var></li>
+<li><var>N-1 \leq M \leq 10^5</var></li>
+<li><var>1 \leq A_i,B_i \leq N (1\leq i\leq M)</var></li>
+<li>The given graph is simple and connected.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var> <var>M</var>
+<var>A_1</var> <var>B_1</var>
+<var>:</var>
+<var>A_M</var> <var>B_M</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>If it is impossible to assign directions to satisfy the requirement, print <var>-1</var>.
+Otherwise, print an assignment of directions that satisfies the requirement, in the following format:</p>
+<pre><var>C_1</var> <var>D_1</var>
+<var>:</var>
+<var>C_M</var> <var>D_M</var>
+</pre>
+<p>Here each pair (<var>C_i</var>, <var>D_i</var>) means that there is an edge directed from Vertex <var>C_i</var> to Vertex <var>D_i</var>. The edges may be printed in any order.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>4 4
+1 2
+2 3
+3 4
+4 1
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>1 2
+1 4
+3 2
+3 4
+</pre>
+<p>After this assignment of directions, Vertex <var>1</var> and <var>3</var> will each have two outgoing edges, and Vertex <var>2</var> and <var>4</var> will each have zero outgoing edges.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>5 5
+1 2
+2 3
+3 4
+2 5
+4 5
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>-1
+</pre></section>
+</div>
+</span>

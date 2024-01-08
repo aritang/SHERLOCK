@@ -1,0 +1,67 @@
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({ tex2jax: { inlineMath: [["$","$"], ["\\(","\\)"]], processEscapes: true }});
+</script>
+<script language="JavaScript" type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML">
+</script>
+
+<H1>Priority Queue</H1>
+
+<p>
+  A priority queue is a data structure which maintains a set $S$ of elements, each of with an associated value (key), and supports the following operations:
+</p>
+
+<ul>
+<li>$insert(S, k)$: insert an element $k$ into the set $S$</li>
+<li>$extractMax(S)$: remove and return the element of $S$ with the largest key</li>
+</ul>
+
+<p>
+  Write a program which performs the $insert(S, k)$ and $extractMax(S)$ operations to a priority queue $S$.
+  The priority queue manages a set of integers, which are also keys for the priority.
+</p>
+
+<H2>Input</H2>
+
+<p>
+  Multiple operations to the priority queue $S$ are given. Each operation is given by "<span>insert </span>$k$", "<span>extract</span>" or "<span>end</span>" in a line. Here, $k$ represents an integer element to be inserted to the priority queue.
+</p>
+
+<p>
+The input ends with "<span>end</span>" operation.
+</p>
+
+<H2>Output</H2>
+
+<p>
+For each "<span>extract</span>" operation, print the element extracted from the priority queue $S$ in a line.
+</p>
+
+<H2>Constraints</H2>
+
+<ul>
+<li>The number of operations $\leq 2,000,000$</li>
+<li>$0 \leq k \leq 2,000,000,000$</li>
+</ul>
+
+
+<H2>Sample Input 1</H2>
+<pre>
+insert 8
+insert 2
+extract
+insert 10
+extract
+insert 11
+extract
+extract
+end
+</pre>
+
+<H2>Sample Output 1</H2>
+<pre>
+8
+10
+11
+2
+</pre>

@@ -1,0 +1,119 @@
+<span class="lang-en">
+<p>Score : <var>700</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>We have <var>N</var> cards numbered <var>1, 2, ..., N</var>.
+Card <var>i</var> (<var>1 \leq i \leq N</var>) has an integer <var>A_i</var> written in red ink on one side and an integer <var>B_i</var> written in blue ink on the other side.
+Initially, these cards are arranged from left to right in the order from Card <var>1</var> to Card <var>N</var>, with the red numbers facing up.</p>
+<p>Determine whether it is possible to have a non-decreasing sequence facing up from left to right (that is, for each <var>i</var> (<var>1 \leq i \leq N - 1</var>), the integer facing up on the <var>(i+1)</var>-th card from the left is not less than the integer facing up on the <var>i</var>-th card from the left) by repeating the operation below. If the answer is yes, find the minimum number of operations required to achieve it.</p>
+<ul>
+<li>Choose an integer <var>i</var> (<var>1 \leq i \leq N - 1</var>).
+Swap the <var>i</var>-th and <var>(i+1)</var>-th cards from the left, then flip these two cards.</li>
+</ul>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 \leq N \leq 18</var></li>
+<li><var>1 \leq A_i, B_i \leq 50</var> (<var>1 \leq i \leq N</var>)</li>
+<li>All values in input are integers.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+<var>A_1</var> <var>A_2</var> <var>...</var> <var>A_N</var>
+<var>B_1</var> <var>B_2</var> <var>...</var> <var>B_N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>If it is impossible to have a non-decreasing sequence, print <code>-1</code>.
+If it is possible, print the minimum number of operations required to achieve it.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>3
+3 4 3
+3 2 3
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>1
+</pre>
+<p>By doing the operation once with <var>i = 1</var>, we have a sequence <var>[2, 3, 3]</var> facing up, which is non-decreasing.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>2
+2 1
+1 2
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>-1
+</pre>
+<p>After any number of operations, we have the sequence <var>[2, 1]</var> facing up, which is not non-decreasing.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>4
+1 2 3 4
+5 6 7 8
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>0
+</pre>
+<p>No operation may be required.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 4</h3><pre>5
+28 15 22 43 31
+20 22 43 33 32
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 4</h3><pre>-1
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 5</h3><pre>5
+4 46 6 38 43
+33 15 18 27 37
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 5</h3><pre>3
+</pre></section>
+</div>
+</span>

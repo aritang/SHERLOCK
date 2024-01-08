@@ -1,0 +1,54 @@
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({ tex2jax: { inlineMath: [["$","$"], ["\\(","\\)"]], processEscapes: true }});
+</script>
+<script type='text/javascript' src='http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
+</script>
+
+
+<h2>Problem K
+Runner and Sniper</h2>
+
+<p>
+You are escaping from an enemy for some reason. The enemy is a sniper equipped with a high-tech laser gun, and you will be immediately defeated if you get shot. You are a very good runner, but just wondering how fast you have to run in order not to be shot by the sniper. The situation is as follows:
+</p>
+
+<p>
+You and the sniper are on the $xy$-plane whose $x$-axis and $y$-axis are directed to the right and the top, respectively. You can assume that the plane is infinitely large, and that there is no obstacle that blocks the laser or your movement.
+</p>
+
+<p>
+The sniper and the laser gun are at $(0, 0)$ and cannot move from the initial location. The sniper can continuously rotate the laser gun by at most $\omega$ degrees per unit time, either clockwise or counterclockwise, and can change the direction of rotation at any time. The laser gun is initially directed $\theta$ degrees counterclockwise from the positive direction of the $x$-axis.
+</p>
+
+<p>
+You are initially at ($x$, $y$) on the plane and can move in any direction at speed not more than $v$ (you can arbitrarily determine the value of $v$ since you are a very good runner). You will be shot by the sniper exactly when the laser gun is directed toward your position, that is, you can ignore the time that the laser reaches you from the laser gun. Assume that your body is a point and the laser is a half-line whose end point is (0, 0).
+</p>
+
+<p>
+Find the maximum speed $v$ at which you are shot by the sniper in finite time when you and the sniper behave optimally.
+</p>
+
+
+<h3>Input</h3>
+
+<p>
+The input consists of a single test case. The input contains four integers in a line, $x$, $y$, $\theta$ and $\omega$. The two integers $x$ and $y$ $(0 \leq |x|, |y| \leq 1,000$, ($x$, $y$) $\ne$ (0, 0)) represent your initial position on the $xy$-plane. The integer $\theta$ $(0 \leq \theta < 360)$ represents the initial direction of the laser gun: it is the counterclockwise angle in degrees from the positive direction of the $x$-axis. The integer $\omega$ $(1 \leq \omega \leq 100)$ is the angle which the laser gun can rotate in unit time. You can assume that you are not shot by the sniper at the initial position.
+</p>
+
+
+<h3>Output</h3>
+
+<p>
+Display a line containing the maximum speed $v$ at which you are shot by the sniper in finite time. The
+absolute error or the relative error should be less than $10^{-6}$.
+</p>
+
+
+<h3>Sample Input 1</h3>
+
+<pre>100 100 0 1</pre>
+
+<h3>Output for the Sample Input 1</h3>
+
+<pre>1.16699564</pre>

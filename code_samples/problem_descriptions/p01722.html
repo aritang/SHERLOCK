@@ -1,0 +1,69 @@
+
+
+
+ <p>
+イクタ君は速いプログラムが大好きである。最近は、除算のプログラムを高速にしようとしている。しかしなかなか速くならないので、「常識的に考えて典型的」な入力に対してのみ高速にすればよいと考えた。イクタ君が解こうとしている問題は次のようなものである。
+</p>
+
+<p>
+与えられた非負整数<var>n</var>に対し、10進法で<var>p(n) &minus; 1</var>桁の正整数<var>11</var>...<var>1</var>を<var>p(n)</var>で割ったあまりを求めよ。ただし<var>p(n)</var>は<var>2<sup>2<sup>{</sup> . . . <sup>2</sup></sup>}</var>（2が<var>n</var>個）より大きい最小の素数を表すとする。<var>p(0) = 2</var>とする。
+</p>
+
+<p>あなたの仕事は、イクタ君より速くプログラムを完成させることである。
+</p>
+
+<h2>Input</h2>
+
+<p>入力は以下の形式で与えられる。
+</p>
+<pre>
+<var>n</var>
+</pre>
+
+<p>問題の入力の非負整数<var>n</var>があたえられる。
+</p>
+
+<h3>Constraints</h3>
+<p>入力中の各変数は以下の制約を満たす。
+</p><ul><li> <var>0 &le; n < 1000</var>
+</li></ul>
+
+
+<h2>Output</h2>
+<p>問題の解を1行に出力せよ。
+</p>
+
+<h2>Sample Input 1</h2>
+
+<pre>0
+</pre>
+
+<h2>Output for the Sample Input 1</h2>
+
+<pre>1
+</pre>
+<ul><li><var>n=0</var>のとき、<var>p(n) = 2</var> なので、1 mod 2 = 1 が解となる。
+</li></ul>
+
+
+<h2>Sample Input 2</h2>
+
+<pre>1
+</pre>
+
+<h2>Output for the Sample Input 2</h2>
+
+<pre>2
+</pre>
+<ul><li><var>n=1</var>のとき、<var>p(n) = 3</var> なので、11 mod 3 = 2が解となる。
+</li></ul>
+
+
+<h2>Sample Input 3</h2>
+
+<pre>2
+</pre>
+<h2>Output for the Sample Input 3</h2>
+
+<pre>1 
+</pre>

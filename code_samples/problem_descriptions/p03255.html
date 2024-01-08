@@ -1,0 +1,114 @@
+<span class="lang-en">
+<p>Score : <var>700</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>Snuke has decided to use a robot to clean his room.</p>
+<p>There are <var>N</var> pieces of trash on a number line.
+The <var>i</var>-th piece from the left is at position <var>x_i</var>.
+We would like to put all of them in a trash bin at position <var>0</var>.</p>
+<p>For the positions of the pieces of trash, <var>0 &lt; x_1 &lt; x_2 &lt; ... &lt; x_{N} \leq 10^{9}</var> holds.</p>
+<p>The robot is initially at position <var>0</var>.
+It can freely move left and right along the number line, pick up a piece of trash when it comes to the position of that piece, carry any number of pieces of trash and put them in the trash bin when it comes to position <var>0</var>. It is not allowed to put pieces of trash anywhere except in the trash bin.</p>
+<p>The robot consumes <var>X</var> points of energy when the robot picks up a piece of trash, or put pieces of trash in the trash bin. (Putting any number of pieces of trash in the trash bin consumes <var>X</var> points of energy.)
+Also, the robot consumes <var>(k+1)^{2}</var> points of energy to travel by a distance of <var>1</var> when the robot is carrying <var>k</var> pieces of trash.</p>
+<p>Find the minimum amount of energy required to put all the <var>N</var> pieces of trash in the trash bin.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 \leq N \leq 2 \times 10^{5}</var></li>
+<li><var>0 &lt; x_1 &lt; ... &lt; x_N \leq 10^9</var></li>
+<li><var>1 \leq X \leq 10^9</var></li>
+<li>All values in input are integers.</li>
+</ul>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Partial Scores</h3><ul>
+<li><var>400</var> points will be awarded for passing the test set satisfying <var>N \leq 2000</var>.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var> <var>X</var>
+<var>x_1</var> <var>x_2</var> <var>...</var> <var>x_{N}</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the answer.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>2 100
+1 10
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>355
+</pre>
+<ul>
+<li>Travel to position <var>10</var> by consuming <var>10</var> points of energy.</li>
+<li>Pick up the piece of trash by consuming <var>100</var> points of energy.</li>
+<li>Travel to position <var>1</var> by consuming <var>36</var> points of energy.</li>
+<li>Pick up the piece of trash by consuming <var>100</var> points of energy.</li>
+<li>Travel to position <var>0</var> by consuming <var>9</var> points of energy.</li>
+<li>Put the two pieces of trash in the trash bin by consuming <var>100</var> points of energy.</li>
+</ul>
+<p>This strategy consumes a total of <var>10+100+36+100+9+100=355</var> points of energy.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>5 1
+1 999999997 999999998 999999999 1000000000
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>19999999983
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>10 8851025
+38 87 668 3175 22601 65499 90236 790604 4290609 4894746
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>150710136
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 4</h3><pre>16 10
+1 7 12 27 52 75 731 13856 395504 534840 1276551 2356789 9384806 19108104 82684732 535447408
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 4</h3><pre>3256017715
+</pre></section>
+</div>
+</span>

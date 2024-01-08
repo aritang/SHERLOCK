@@ -1,0 +1,82 @@
+<span class="lang-en">
+<p>Score : <var>1000</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>Rng is baking cookies.</p>
+<p>Initially, he can bake one cookie per second.</p>
+<p>He can also eat the cookies baked by himself.
+When there are <var>x</var> cookies not yet eaten, he can choose to eat all those cookies. After he finishes eating those cookies, the number of cookies he can bake per second becomes <var>x</var>. Note that a cookie always needs to be baked for <var>1</var> second, that is, he cannot bake a cookie in <var>1/x</var> seconds when <var>x &gt; 1</var>.
+When he choose to eat the cookies, he must eat all of them; he cannot choose to eat only part of them.
+It takes him <var>A</var> seconds to eat the cookies regardless of how many, during which no cookies can be baked.</p>
+<p>He wants to give <var>N</var> cookies to Grandma.
+Find the shortest time needed to produce at least <var>N</var> cookies not yet eaten.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1≦N≦10^{12}</var></li>
+<li><var>0≦A≦10^{12}</var></li>
+<li><var>A</var> is an integer.</li>
+</ul>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Partial Score</h3><ul>
+<li><var>500</var> points will be awarded for passing the test set satisfying <var>N≦10^6</var> and <var>A≦10^6</var>.</li>
+<li>Additional <var>500</var> points will be awarded for passing the test set without additional constraints.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>The input is given from Standard Input in the following format:</p>
+<pre><var>N</var> <var>A</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the shortest time needed to produce at least <var>N</var> cookies not yet eaten.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>8 1
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>7
+</pre>
+<p>It is possible to produce <var>8</var> cookies in <var>7</var> seconds, as follows:</p>
+<ul>
+<li>After <var>1</var> second: <var>1</var> cookie is done.</li>
+<li>After <var>2</var> seconds: <var>1</var> more cookie is done, totaling <var>2</var>. Now, Rng starts eating those <var>2</var> cookies.</li>
+<li>After <var>3</var> seconds: He finishes eating the cookies, and he can now bake <var>2</var> cookies per second.</li>
+<li>After <var>4</var> seconds: <var>2</var> cookies are done.</li>
+<li>After <var>5</var> seconds: <var>2</var> more cookies are done, totaling <var>4</var>.</li>
+<li>After <var>6</var> seconds: <var>2</var> more cookies are done, totaling <var>6</var>.</li>
+<li>After <var>7</var> seconds: <var>2</var> more cookies are done, totaling <var>8</var>.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>1000000000000 1000000000000
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>1000000000000
+</pre></section>
+</div>
+</span>

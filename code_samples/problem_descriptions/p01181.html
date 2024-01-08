@@ -1,0 +1,76 @@
+
+<H1><font color="#000">Problem A:</font> Moduic Squares</H1>
+
+<p>
+Have you ever heard of Moduic Squares? They are like 3 &times; 3 Magic Squares, but each of them has one
+extra cell called a moduic cell. Hence a Moduic Square has the following form.
+</p>
+
+<center>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE1_moduicSquares1">
+<p>Figure 1: A Moduic Square</p>
+</center>
+
+<p>
+Each of cells labeled from A to J contains one number from 1 to 10, where no two cells contain the same
+number. The sums of three numbers in the same rows, in the same columns, and in the diagonals in the
+3 &times 3 cells must be congruent modulo the number in the moduic cell. Here is an example Moduic Square:
+</p>
+
+<center>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE1_moduicSquares2">
+<p>Figure 2: An example Moduic Square</p>
+</center>
+
+<p>
+You can easily see that all the sums are congruent to 0 modulo 5.
+</p>
+<p>
+Now, we can consider interesting puzzles in which we complete Moduic Squares with partially filled cells.
+For example, we can complete the following square by filling 4 into the empty cell on the left and 9 on
+the right. Alternatively, we can also complete the square by filling 9 on the left and 4 on the right. So
+this puzzle has two possible solutions.
+
+</p>
+
+<center>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE1_moduicSquares3">
+<p>Figure 3: A Moduic Square as a puzzle</p>
+</center>
+
+<p>
+Your task is to write a program that determines the number of solutions for each given puzzle.
+</p>
+
+<H2>Input</H2>
+
+<p>
+The input contains multiple test cases. Each test case is specified on a single line made of 10 integers
+that represent cells A, B, C, D, E, F, G, H, I, and J as shown in the first figure of the problem statement.
+Positive integer means that the corresponding cell is already filled with the integer. Zero means that the
+corresponding cell is left empty.
+</p>
+<p>
+The end of input is identified with a line containing ten of -1’s. This is not part of test cases.
+
+</p>
+
+<H2>Output</H2>
+
+<p>
+For each test case, output a single integer indicating the number of solutions on a line. There may be
+cases with no solutions, in which you should output 0 as the number.
+</p>
+
+<H2>Sample Input</H2>
+<pre>
+3 1 6 8 10 7 0 0 2 5
+0 0 0 0 0 0 0 0 0 1
+-1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+</pre>
+
+<H2>Output for the Sample Input</H2>
+<pre>
+2
+362880
+</pre>

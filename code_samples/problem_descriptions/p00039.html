@@ -1,0 +1,72 @@
+
+
+
+<H1>ローマ数字</H1>
+
+<p>
+古代ローマでは数を数えることは難しい仕事でした。アラビア数字の 0,1,2,3,…, 9 はまだ流布していませんでした。その代わり次のような記号が使われていました。
+</p>
+
+<center>
+<table border=1>
+<tr>
+<td bgcolor="#EEFFFF" width="100">アラビア数字</td><td  width="100">ローマ数字</td><td bgcolor="#EEFFFF"  width="100">アラビア数字</td><td  width="100">ローマ数字</td><td bgcolor="#EEFFFF"  width="100">アラビア数字</td><td  width="100">ローマ数字</td>
+</tr>
+<tr><td bgcolor="#EEFFFF">1</td><td>I</td><td bgcolor="#EEFFFF">11<td>XI</td><td bgcolor="#EEFFFF">30</td><td>XXX</td><td>
+<tr><td bgcolor="#EEFFFF">2</td><td>II</td><td bgcolor="#EEFFFF">12<td>XII</td><td bgcolor="#EEFFFF">40</td><td>XL</td><td>
+<tr><td bgcolor="#EEFFFF">3</td><td>III</td><td bgcolor="#EEFFFF">13<td>XIII</td><td bgcolor="#EEFFFF">50</td><td>L</td><td>
+<tr><td bgcolor="#EEFFFF">4</td><td>IV</td><td bgcolor="#EEFFFF">14<td>XIV</td><td bgcolor="#EEFFFF">60</td><td>LX</td><td>
+<tr><td bgcolor="#EEFFFF">5</td><td>V</td><td bgcolor="#EEFFFF">15<td>XV</td><td bgcolor="#EEFFFF">70</td><td>LXX</td><td>
+<tr><td bgcolor="#EEFFFF">6</td><td>VI</td><td bgcolor="#EEFFFF">16<td>XVI</td><td bgcolor="#EEFFFF">80</td><td>LXXX</td><td>
+<tr><td bgcolor="#EEFFFF">7</td><td>VII</td><td bgcolor="#EEFFFF">17<td>XVII</td><td bgcolor="#EEFFFF">90</td><td>XC</td><td>
+<tr><td bgcolor="#EEFFFF">8</td><td>VIII</td><td bgcolor="#EEFFFF">18<td>XVIII</td><td bgcolor="#EEFFFF">100</td><td>C</td><td>
+<tr><td bgcolor="#EEFFFF">9</td><td>IX</td><td bgcolor="#EEFFFF">19<td>XIX</td><td bgcolor="#EEFFFF">500</td><td>D</td><td>
+<tr><td bgcolor="#EEFFFF">10</td><td>X</td><td bgcolor="#EEFFFF">20<td>XX</td><td bgcolor="#EEFFFF">1000</td><td>M</td><td>
+</table>
+</center>
+<br/>
+
+
+<p>
+I は 1、 V は 5、 X は 10、 L は 50、 C は 100、 D は 500、 M は 1000、 他の例は上の表を見てください。小さい数が大きい数に続いている、つまり右側にあるときは足し算をします。小さい数が大きい数の前に、つまり左にあるときは、大きい数から小さい数を引きます。大きい数字の前にあって引き算を表す小さな数字は一回の引き算あたりひとつしかありません。
+</p>
+
+<p>
+ローマ数字をアラビア数字（通常の数字）の表記（10 進表示）に変換して出力するプログラムを作成してください。ただし、与えられるローマ数字は上記のルールにのみ従っています(実際のローマ数字の表記にはもっと細かいルールがありますが、ここでは考慮する必要はありません。たとえば、実際のローマ数字ではI はV かX から、X はL かC から、C はD かM からしか引き算しませんし、同じローマ数字は４つ以上（または５つ以上）足し並べることはありません。)
+</p>
+
+
+<H2>Input</H2>
+
+<p>
+複数のデータセットが与えられます。それぞれのデータセットにローマ数字（半角大文字のI, V, X, L, C, D ,M で表される連続した文字列）が１行に与えられます。与えられるローマ数字の文字列の長さはおのおの 100 以下です。
+</p>
+<p>
+データセットの数は 50 を超えません。
+</p>
+
+
+
+
+<H2>Output</H2>
+
+<p>
+各データセットに対し、アラビア数字（整数）を１行に出力して下さい。
+</p>
+
+<H2>Sample Input</H2>
+
+<pre>
+IV
+CCCCLXXXXVIIII
+CDXCIX
+</pre>
+
+<H2>Output for the Sample Input</H2>
+
+<pre>
+4
+499
+499
+</pre>
+

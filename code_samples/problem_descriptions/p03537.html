@@ -1,0 +1,93 @@
+<span class="lang-en">
+<p>Score : <var>1000</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>Ringo has a string <var>S</var>.</p>
+<p>He can perform the following <var>N</var> kinds of operations any number of times in any order.</p>
+<ul>
+<li>Operation <var>i</var>: For each of the characters from the <var>L_i</var>-th through the <var>R_i</var>-th characters in <var>S</var>, replace it with its succeeding letter in the English alphabet. (That is, replace <code>a</code> with <code>b</code>, replace <code>b</code> with <code>c</code> and so on.) For <code>z</code>, we assume that its succeeding letter is <code>a</code>.</li>
+</ul>
+<p>Ringo loves palindromes and wants to turn <var>S</var> into a palindrome.
+Determine whether this is possible.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 \leq |S| \leq 10^5</var></li>
+<li><var>S</var> consists of lowercase English letters.</li>
+<li><var>1 \leq N \leq 10^5</var></li>
+<li><var>1 \leq L_i \leq R_i \leq |S|</var></li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>S</var>
+<var>N</var>
+<var>L_1</var> <var>R_1</var>
+<var>L_2</var> <var>R_2</var>
+<var>:</var>
+<var>L_N</var> <var>R_N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print <code>YES</code> if it is possible to turn <var>S</var> into a palindrome; print <code>NO</code> if it is impossible.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>bixzja
+2
+2 3
+3 6
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>YES
+</pre>
+<p>For example, if we perform Operation <var>1</var>, <var>2</var> and <var>1</var> in this order, <var>S</var> changes as <code>bixzja</code> → <code>bjyzja</code> → <code>bjzakb</code> → <code>bkaakb</code> and becomes a palindrome.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>abc
+1
+2 2
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>NO
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>cassert
+4
+1 2
+3 4
+1 1
+2 2
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>YES
+</pre></section>
+</div>
+</span>

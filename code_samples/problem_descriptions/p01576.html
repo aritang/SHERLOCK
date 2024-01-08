@@ -1,0 +1,108 @@
+
+<H1><font color="#000">Problem F:</font> Exciting Bicycle</H1>
+
+<p>
+You happened to get a special bicycle. You can run with it incredibly fast because it has a turbo engine. You can't wait to try it off road to enjoy the power.
+</p>
+
+<p>
+You planned to go straight. The ground is very rough with ups and downs, and can be seen as a series of slopes (line segments) when seen from a lateral view. The bicycle runs on the ground at a constant speed of <i>V</i>. Since running very fast, the bicycle jumps off the ground every time it comes to the beginning point of a slope slanting more downward than the previous, as illustrated below. It then goes along a parabola until reaching the ground, affected by the gravity with the acceleration of 9.8m/s<sup>2</sup>.
+</p>
+<center>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_excitingBicycle">
+</center>
+
+<p>
+It is somewhat scary to ride the bicycle without any preparations - you might crash into rocks or fall into pitfalls. So you decided to perform a computer simulation of the ride.
+</p>
+
+<p>
+Given a description of the ground, calculate the trace you will run on the ground by the bicycle. For simplicity, it is sufficient to output its length.
+</p>
+
+<H2>Input</H2>
+
+<p>
+The first line of the input has two integers <i>N</i> (2 &le; <i>N</i> &le; 10000) and <i>V</i> (1 &le; <i>V</i> &le; 10000), separated by a space. It is followed by <i>N</i> lines. The <i>i</i>-th line has two integers <i>X<sub>i</sub></i> and <i>Y<sub>i</sub></i> (0 &le; <i>X<sub>i</sub></i>, <i>Y<sub>i</sub></i> &le; 10000). <i>V</i>[m/s] is the ground speed of the bicycle. The (<i>i</i> - 1) line segments (<i>X<sub>i</sub></i>, <i>Y<sub>i</sub></i>)-(<i>X</i><sub><i>i</i>+1</sub>, <i>Y</i><sub><i>i</i>+1</sub>) form the slopes on the ground, with the sky in the positive direction of the <i>Y</i> axis. Each coordinate value is measured in meters.
+</p>
+
+<p>
+The start is at (<i>X</i><sub>1</sub>, <i>Y</i><sub>1</sub>), and the goal is at (<i>X<sub>N</sub></i>, <i>Y<sub>N</sub></i>). It is guaranteed that <i>X<sub>i</sub></i> &lt; <i>X</i><sub><i>i</i>+1</sub> for 1 &le; <i>i</i> &le; <i>N</i> - 1.
+</p>
+
+<p>
+You may assume that the distance of <i>x</i>-coordinate between the falling point and any endpoint (except for the jumping point) is not less than 10<sup>-5</sup>m.
+</p>
+
+<H2>Output</H2>
+
+<p>
+Output the length you will run on the ground with the bicycle, in meters. The value may be printed with any number of digits after the decimal point, should have the absolute or relative error not greater than 10<sup>-8</sup>.
+</p>
+
+<H2>Sample Input 1</H2>
+<pre>
+5 10
+0 0
+10 10
+20 0
+30 10
+40 0
+</pre>
+
+<H2>Output for the Sample Input 1</H2>
+<pre>
+22.22335598
+</pre>
+
+<br/>
+<H2>Sample Input 2</H2>
+<pre>
+2 10
+0 0
+10000 0
+</pre>
+
+<H2>Output for the Sample Input 2</H2>
+<pre>
+10000.00000000
+</pre>
+
+<br/>
+
+
+<H2>Sample Input 3</H2>
+<pre>
+4 10000
+0 0
+1 1
+9999 0
+10000 10000
+</pre>
+
+<H2>Output for the Sample Input 3</H2>
+<pre>
+11.21323169
+</pre>
+
+<br/>
+
+
+<H2>Sample Input 4</H2>
+<pre>
+4 50
+0 10000
+1 10000
+2 0
+10000 0
+</pre>
+
+<H2>Output for the Sample Input 4</H2>
+<pre>
+7741.23024274
+</pre>
+
+<br/>
+
+
+

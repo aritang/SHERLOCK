@@ -1,0 +1,79 @@
+<span class="lang-en">
+<p>Score : <var>700</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>Limak can repeatedly remove one of the first two characters of a string,
+    for example <var>abcxyx \rightarrow acxyx \rightarrow cxyx \rightarrow cyx</var>.</p>
+<p>You are given <var>N</var> different strings <var>S_1, S_2, \ldots, S_N</var>.
+Among <var>N \cdot (N-1) / 2</var> pairs <var>(S_i, S_j)</var>,
+    in how many pairs could Limak obtain one string from the other?</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>2 \leq N \leq 200\,000</var></li>
+<li><var>S_i</var> consists of lowercase English letters <code>a</code>-<code>z</code>.</li>
+<li><var>S_i \neq S_j</var></li>
+<li><var>1 \leq |S_i|</var></li>
+<li><var>|S_1| + |S_2| + \ldots + |S_N| \leq 10^6</var></li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format.</p>
+<pre><var>N</var>
+<var>S_1</var>
+<var>S_2</var>
+<var>\vdots</var>
+<var>S_N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the number of unordered pairs <var>(S_i, S_j)</var>
+    where <var>i \neq j</var> and Limak can obtain one string from the other.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>3
+abcxyx
+cyx
+abc
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>1
+</pre>
+<p>The only good pair is <var>(abcxyx, cyx)</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>6
+b
+a
+abc
+c
+d
+ab
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>5
+</pre>
+<p>There are five good pairs: <var>(b, abc)</var>, <var>(a, abc)</var>, <var>(abc, c)</var>, <var>(b, ab)</var>, <var>(a, ab)</var>.</p></section>
+</div>
+</span>

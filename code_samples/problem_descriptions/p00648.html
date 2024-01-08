@@ -1,0 +1,134 @@
+
+<h1>Problem B: Watchin' TVA</h1>
+<p>
+Animation is one of methods for making movies and in Japan, it is popular to broadcast as a television program or perform as a movie. Many people, especially the young, love one. And here is an anime lover called Jack. We say he is an mysterious guy with uncertain age. He likes anime which are broadcasted in midnight and early morning especially.
+</p>
+<p>
+In his room, there is a huge piece of paper on the wall. He writes a timetable of TV anime on it. In his house, he can watch all Japanese TV anime programs that are broadcasted in Japan using a secret and countrywide live system. However he can not watch all anime and must give up to watch some programs because they are "broadcasted at the same time" in a season. Here, programs are "broadcasted at the same time" means that two or more programs have one or more common minutes in broadcasting time. Increasing the number of anime programs in recent makes him nervous. Actually, some people buy DVDs after the program series ends or visit a web site called vhefoo. Anyway, he loves to watch programs on his live system. Of course, he is not able to watch two or more programs at the same time. However, as described above, he must give up some programs broadcasted at the same time. Therefore, he has a set of programs <i>F</i> and he watches programs in a set <i>F</i> absolutely.
+</p>
+<p>
+Your task is to write a program that reads a timetable and outputs the maximum number of watchable programs, keeping that Jack watches all programs in the set <i>F</i>. Of course, there are multiple choices of programs, so we want the number of programs he can watch. If two or more programs in a set <i>F</i> are broadcasted at the same time, you must give Jack an unfortunate announcement. In this case, your program outputs -1. In addition, each anime program is a program of 30 minutes.
+</p>
+<h2>Input</h2>
+<p>
+Input consists of multiple datasets.<br>
+A dataset is given in a following format.
+</p>
+<pre>
+<i>N</i>
+<i>PROGRAM<sub>1</sub></i>
+<i>PROGRAM<sub>2</sub></i>
+...
+<i>PROGRAM<sub>N</sub></i>
+<i>P</i>
+<i>FAV<sub>1</sub></i>
+<i>FAV<sub>2</sub></i>
+...
+<i>FAV<sub>P</sub></i>
+</pre>
+<p>
+<i>N</i> is the number of programs in a season.<br>
+<i>PROGRAM<sub>i</sub></i>(1&le;<i>i</i>&le;<i>N</i>)is a string which has the following format.
+</p>
+<pre>
+<i>name</i> <i>weekday</i> <i>start</i>
+</pre>
+<ul>
+<li><i>name</i> is a program name. This is a a string having between 1 and 32 characters and these names do not overlap each other program. A name consists of alphanumeric characters and '_'(underscore).</li>
+<li><i>weekday</i> is a broadcasting weekday about the corresponding program. This is an integer. 0 means Sunday and 1 is Monday and so on (2:Tuesday, 3:Wednesday, 4:Thursday, 5:Friday, 6:Saturday).</li>
+<li><i>start</i> is a starting time of the program broadcasting. This is an integer between 600 and 2929. First one or two digits represent hour and the last two digits represent minute. If the hour has one digit it will be a representation "900" for example. Note: a program may have an integer more than or equal to 2400 as <i>start</i>, if the program begins the next day. For example, a program begins from 2500 on Monday should be interpreted as a program begins from 0100 on Tuesday.<font color="#880000"> There are no input the minute of <i>start</i> exceeds 59. And when the hour of <i>start</i> is equal to 29, there are no input the minute of <i>start</i> exceeds 29.</font></li>
+</ul>
+<p>
+<i>P</i> is an integer and represents the number of elements in the set <i>F</i>.  And <i>FAV<sub>i</sub></i>(1&le;<i>i</i>&le;<i>P</i>&le;<i>N</i>) is a string for a program name which Jack watches absolutely. You can assume names which are not given in program descriptions will not appear in the set <i>F</i>.<br>
+The last line contains a single 0 which represents the end of input.
+</p>
+<h2>Constraints</h2>
+<p>
+The number of datasets is less than or equal to 400.<br>
+1&le;<i>N</i>&le;500
+</p>
+<h2>Output</h2>
+<p>
+For each dataset, output an integer <i>S</i> that represents maximum number of programs Jack can watch in the following format.
+</p>
+<pre>
+<i>S</i>
+</pre>
+<h2>Sample Input</h2>
+<pre>
+1
+galaxy_angel 0 600
+1
+galaxy_angel
+11
+A 0 600
+B 0 610
+C 0 610
+D 0 610
+E 0 640
+EE 0 700
+F 0 710
+G 0 710
+H 0 710
+I 0 740
+J 0 750
+2
+B
+H
+42
+nchj 6 2620
+anhnnnmewbktthsrn 4 2515
+gntmdsh 1 1800
+achnnl 4 2540
+hnskirh 0 2200
+aonexrcst 0 1700
+dgdys 6 2330
+hdnnara 4 2525
+dnpaonntssotk 4 2555
+ddmnwndrlnd 6 2500
+C 4 2445
+astrttnomch 0 2330
+seknnqasr 1 2630
+sftnt 4 2630
+stnsgt 2 2605
+drrnenmknmrmr 4 2610
+hnzm 6 2713
+yndmsoazzlsn 6 2658
+mrahlcalv 4 2615
+hshzrhkkrhs 1 900
+ortchntsbshni 0 2430
+kmnmzshrski 1 2530
+sktdnc 4 1800
+gykkybrkjhkirkhn 2 2459
+trk 0 900
+30zzsinhkntiik 3 2700
+sngkotmmmirprdx 1 2600
+yran 2 2529
+tntissygntinybu 1 2614
+skiichhtki 5 2505
+tgrbnny 6 2558
+dnbrsnki 3 1927
+yugozxl 1 1930
+frbllchrmn 1 1928
+fjrg 1 1955
+shwmngtr 0 2200
+xmn 5 2200
+rngnkkrskitikihn 0 2100
+szysz 0 1254
+prttyrythmaulrdrm 6 1000
+sckiesfrntrqst 5 1820
+mshdr 1 2255
+1
+mrahlcalv
+0
+</pre>
+<h2>Output for the Sample Input</h2>
+<pre>
+1
+4
+31
+</pre>
+<h2>Hint</h2>
+<p>
+Second dataset: He can watch program E after watching B. Then he can choose a program either I or J after watching H. Therefore he can watch maximum 4 programs.
+</p>

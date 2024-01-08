@@ -1,0 +1,80 @@
+<span class="lang-en">
+<p>Score : <var>200</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>In Japan, people make offerings called <em>hina arare</em>, colorful crackers, on March <var>3</var>.</p>
+<p>We have a bag that contains <var>N</var> hina arare. (From here, we call them arare.)</p>
+<p>It is known that the bag either contains arare in three colors: pink, white and green, or contains arare in four colors: pink, white, green and yellow.</p>
+<p>We have taken out the arare in the bag one by one, and the color of the <var>i</var>-th arare was <var>S_i</var>, where colors are represented as follows - pink: <code>P</code>, white: <code>W</code>, green: <code>G</code>, yellow: <code>Y</code>.</p>
+<p>If the number of colors of the arare in the bag was three, print <code>Three</code>; if the number of colors was four, print <code>Four</code>.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 \leq N \leq 100</var></li>
+<li><var>S_i</var> is <code>P</code>, <code>W</code>, <code>G</code> or <code>Y</code>.</li>
+<li>There always exist <var>i</var>, <var>j</var> and <var>k</var> such that <var>S_i=</var><code>P</code>, <var>S_j=</var><code>W</code> and <var>S_k=</var><code>G</code>.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+<var>S_1</var> <var>S_2</var> <var>...</var> <var>S_N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>If the number of colors of the arare in the bag was three, print <code>Three</code>; if the number of colors was four, print <code>Four</code>.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>6
+G W Y P Y W
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>Four
+</pre>
+<p>The bag contained arare in four colors, so you should print <code>Four</code>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>9
+G W W G P W P G G
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>Three
+</pre>
+<p>The bag contained arare in three colors, so you should print <code>Three</code>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>8
+P Y W G Y W Y Y
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>Four
+</pre></section>
+</div>
+</span>

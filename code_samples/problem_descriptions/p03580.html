@@ -1,0 +1,77 @@
+<span class="lang-en">
+<p>Score : <var>700</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p><var>N</var> cells are arranged in a row.
+Some of them may contain tokens.
+You are given a string <var>s</var> that consists of <code>0</code>s and <code>1</code>s.
+If the <var>i</var>-th character of <var>s</var> is <code>1</code>, the <var>i</var>-th cell (from left) contains a token.
+Otherwise, it doesn't contain a token.</p>
+<p>Snuke wants to perform the following operation as many times as possible.
+In each operation, he chooses three consecutive cells.
+Let's call the cells <var>X, Y, Z</var> from left to right.
+In order for the operation to be valid, both <var>X</var> and <var>Z</var> must contain tokens and <var>Y</var> must not contain a token.
+Then, he removes these two tokens and puts a new token on <var>Y</var>.</p>
+<p>How many operations can he perform if he performs operations in the optimal way?</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 \leq N \leq 500,000</var></li>
+<li><var>|s| = N</var></li>
+<li>Each character in <var>s</var> is either <code>0</code> or <code>1</code>.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+<var>s</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the answer.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>7
+1010101
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>2
+</pre>
+<p>For example, he can perform two operations in the following way:</p>
+<ul>
+<li>Perform an operation on the last three cells. Now the string that represents tokens becomes <code>1010010</code>.</li>
+<li>Perform an operation on the first three cells. Now the string that represents tokens becomes <code>0100010</code>.</li>
+</ul>
+<p>Note that the choice of operations matters.
+For example, if he chooses three cells in the middle first, he can perform no more operations.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>50
+10101000010011011110001001111110000101010111100110
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>10
+</pre></section>
+</div>
+</span>

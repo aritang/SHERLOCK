@@ -1,0 +1,144 @@
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({ tex2jax: { inlineMath: [["$","$"], ["\\(","\\)"]], processEscapes: true }});
+</script>
+<script type='text/javascript' src='http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
+</script>
+
+<h2>G - Proportional Representation</h2>
+
+<h3>Problem Statement</h3>
+
+<p>
+An election selecting the members of the parliament in JAG Kingdom was held. The only system adopted in this country is the party-list proportional representation. In this system, each citizen votes for a political party, and the number of seats a party wins will be proportional to the number of votes it receives. Since the total number of seats in the parliament is an integer, of course, it is often impossible to allocate seats exactly proportionaly. In JAG Kingdom, the following method, known as the D'Hondt method, is used to determine the number of seats for each party. 
+</p>
+
+<p>
+Assume that every party has an unlimited supply of candidates and the candidates of each party are ordered in some way. To the $y$-th candidate of a party which received $x$ votes, assign the value $\dfrac{x}{y}$. Then all the candidates are sorted in the decreasing order of their assigned values. The first $T$ candidates are considered to win, where $T$ is the total number of seats, and the number of seats a party win is the number of its winning candidates. 
+</p>
+
+<p>
+The table below shows an example with three parties. The first party received $40$ votes, the second $60$ votes, and the third $30$ votes. If the total number of seats is $T = 9$, the first party will win $3$ seats, the second $4$ seats, and the third $2$ seats. 
+</p>
+
+
+<center><img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_Proportional_Representation" /></center>
+
+<p>
+When selecting winning candidates, ties are broken by lottery; any tied candidates will have a chance to win. For instance, in the example above, if $T = 5$ then two candidates tie for the value $20$ and there are two possible outcomes: 
+</p>
+
+<ul>
+<li> The first party wins $2$ seats, the second $2$ seats, and the third $1$ seat. </li>
+<li> The first party wins $1$ seat, the second $3$ seats, and the third $1$ seat. </li>
+</ul>
+
+<p>You have just heard the results of the election on TV. Knowing the total number of valid votes and the number of seats each party won, you wonder how many votes each party received. 
+</p>
+
+<p>
+Given $N$, $M$, and $S_i$ ($1 \le i \le M$), denoting the total number of valid votes, the number of parties, and the number of seats the $i$-th party won, respectively, your task is to determine for each party the minimum and the maximum possible number of votes it received. Note that for some cases there might be no such situation with the given $N$, $M$, and $S_i$. 
+</p>
+
+<h3>Input</h3>
+
+<p>
+The first line of the input contains two integers $N$ ($1 \le N \le 10^9$) and $M$ ($1 \le M \le 30{,}000$), where $N$ is the total number of valid votes and $M$ is the number of parties. $M$ lines follow, the $i$-th of which contains a single integer $S_i$ ($0 \le S_i \le 30{,}000$), representing the number of seats the $i$-th party won. You can assume that there exists $i$ with $S_i \ne 0$. 
+</p>
+
+<h3>Output</h3>
+
+<p>
+If there is no situation with the given $N$, $M$, and $S_i$, display the word "impossible". Otherwise, output $M$ lines, each containing two integers. The first integer and the second integer in the $i$-th line should be the minimum and the maximum possible number of votes the $i$-th party received, respectively. 
+</p>
+
+<h3>Sample Input 1</h3>
+
+<pre>10 2
+2
+1</pre>
+
+<h3>Output for the Sample Input 1</h3>
+
+<pre>5 7
+3 5</pre>
+
+<h3>Sample Input 2</h3>
+
+<pre>5 6
+0
+2
+0
+2
+6
+0</pre>
+
+<h3>Output for the Sample Input 2</h3>
+
+<pre>0 0
+1 1
+0 0
+1 1
+3 3
+0 0</pre>
+
+
+<h3>Sample Input 3</h3>
+
+<pre>2000 5
+200
+201
+202
+203
+204</pre>
+
+<h3>Output for the Sample Input 3</h3>
+
+<pre>396 397
+397 399
+399 401
+401 403
+403 404</pre>
+
+<h3>Sample Input 4</h3>
+
+<pre>15 10
+1
+1
+1
+1
+1
+1
+1
+1
+1
+13</pre>
+
+<h3>Output for the Sample Input 4</h3>
+
+<pre>impossible</pre>
+
+<h3>Sample Input 5</h3>
+
+<pre>1000000000 9
+12507
+16653
+26746
+21516
+29090
+10215
+28375
+21379
+18494</pre>
+
+<h3>Output for the Sample Input 5</h3>
+
+<pre>67611619 67619582
+90024490 90033301
+144586260 144597136
+116313392 116323198
+157257695 157269050
+55221291 55228786
+153392475 153403684
+115572783 115582561
+99976756 99985943</pre>

@@ -1,0 +1,65 @@
+
+<H1><font color="#000">Problem G:</font> Defend the Bases</H1>
+
+<p>
+A country Gizevom is being under a sneak and fierce attack by their foe. They have to deploy one or
+more troops to every base immediately in order to defend their country. Otherwise their foe would take
+all the bases and declare "All your base are belong to us."
+</p>
+<p>
+You are asked to write a program that calculates the minimum time required for deployment, given the
+present positions and marching speeds of troops and the positions of the bases.
+
+</p>
+
+<H2>Input</H2>
+
+<p>
+The input consists of multiple datasets. Each dataset has the following format:
+</p>
+
+<p>
+<i>N M</i><br>
+<i>x</i><sub>1</sub> <i>y</i><sub>1</sub> <i>v</i><sub>1</sub><br>
+<i>x</i><sub>2</sub> <i>y</i><sub>2</sub> <i>v</i><sub>2</sub><br>
+...<br>
+<i>x</i><sub><i>N</i></sub> <i>y</i><sub><i>N</i></sub> <i>v</i><sub><i>N</i></sub><br>
+<i>x'</i><sub>1</sub> <i>y'</i><sub>1</sub><br>
+<i>x'</i><sub>2</sub> <i>y'</i><sub>2</sub><br>
+...<br>
+<i>x'</i><sub><i>M</i></sub> <i>y'</i><sub><i>M</i></sub><br>
+</p>
+
+<p>
+<i>N</i> is the number of troops (1 &le; <i>N</i> &le; 100); <i>M</i> is the number of bases (1 &le; <i>M</i> &le; 100); (<i>x<sub>i</sub></i>, <i>y<sub>i</sub></i> ) denotes the present position of <i>i</i>-th troop; <i>v<sub>i</sub></i> is the speed of the <i>i</i>-th troop (1 &le; <i>v<sub>i</sub></i> &le; 100); (<i>x'<sub>j</sub></i>, <i>y'<sub>j</sub></i>) is the position of the <i>j</i>-th base.
+</p>
+<p>
+All the coordinates are integers between 0 and 10000 inclusive.
+</p>
+
+<p>
+The last dataset is followed by a line containing two zeros. This line is not a part of any dataset and should not be processed.
+</p>
+
+
+<H2>Output</H2>
+
+<p>
+For each dataset, print the minimum required time in a line.
+</p>
+
+<H2>Sample Input</H2>
+<pre>
+2 2
+10 20 1
+0 10 1
+0 10
+10 0
+0 0
+</pre>
+
+<H2>Output for the Sample Input</H2>
+<pre>
+14.14213562
+</pre>
+

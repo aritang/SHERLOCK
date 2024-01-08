@@ -1,0 +1,169 @@
+<h1>Problem A: Yu-kun Likes an Integer</h1>
+<h2>Background</h2>
+<p>
+会津大学付属幼稚園はプログラミングが大好きな子供が集まる幼稚園である。園児の一人であるゆう君は、プログラミングと同じくらい数字が大好きだ。そんなゆう君は最近、表に0から9までのいずれかの数字の書かかれたプレートを<var>n</var>枚購入して<var>n</var>桁の数を作る遊びに熱中している。
+今月もゆう君は貰ったお小遣いで<var>n</var>枚のプレートを買いに行こうと考えていた。
+</p>
+
+<h2>Problem</h2>
+<p>
+プレートは表に書かれている数字によって値段が異なる。
+それらを使って作れる<var>n</var>桁の数をできる限り小さくしたい。
+ゆう君の所持金額と各プレートの値段、購入するプレートの枚数が与えられるので、そこから作ることのできる数の最小値を求めよ。
+</p>
+
+<p>
+購入するプレートの値段の総和が所持金額を超えなければ自由にプレートを購入できる。
+同じ数字の書かれたプレートを複数枚購入しても良い。
+</p>
+
+<p>
+プレートは必ず<var>n</var>枚購入しなければならない。<var>n</var>枚購入できない場合は "NA" と出力すること。
+</p>
+
+<p>
+購入後は<var>n</var>枚のプレートを任意の順番で一直線上に並べる。
+そうしてできる数字の列を10進数の数とし、その値が最小になるようにしたい。
+先頭に1つ以上の0が連続していても良い。 ( 例えば 0019 なら 19 となり, 0000 なら 0 として考える )
+</p>
+
+<p>
+図１は０、１、９のプレートを購入した場合についての説明である。
+</p>
+
+
+<center>
+<table>
+<tr>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE3_AizuCamp14_Day2_A_00.png" alt="figure1" height="150" witdh="150">
+</tr>
+<tr>
+<td ALIGN="center">図1 : 0,1,9のプレートを購入した場合</td>
+</tr>
+</table>
+</center>
+
+<h2>Hint</h2>
+<p>
+この問題を解くに当たって、以下のことを参考にしても良い。
+整数値を文字列に変換する方法を示す。
+value を文字列として str に代入する。
+</p>
+<h4>Cの場合</h4>
+<pre>
+#include&lt;stdio.h&gt;
+
+int main(){
+  int value = 123; // この値を文字列に変換する
+  char str[6];     // この変数に value を文字列にしたものが入る
+  sprintf(str,"%d",value);
+  return 0;
+}
+
+</pre>
+
+<h4>C++の場合</h4>
+
+<pre>
+#include&lt;sstream&gt;
+
+using namespace std;
+
+int main(){
+  int value = 123; // この値を文字列に変換する
+  string str;      // この変数に value を文字列にしたものが入る
+  stringstream ss;
+  ss << value;
+  ss >> str;
+  return 0;
+}
+</pre>
+
+
+<h4>JAVAの場合</h4>
+
+<pre>
+class Main {
+    public static void main(String args[]){
+        int value = 123;           // この値を文字列に変換する
+        String str = new Integer(value).toString(); // この変数に value を文字列にしたものが入る
+    }
+}
+</pre>
+
+<h2>Input</h2>
+
+<pre>
+<var>n</var> <var>m</var>
+<var>c</var><sub>0</sub> <var>c</var><sub>1</sub> <var>c</var><sub>2</sub> ... <var>c</var><sub>9</sub>
+</pre>
+
+<p>
+１行目に２つの整数 <var>n</var> ,<var>m</var> が空白区切りで与えられる。<var>n</var> は購入するプレートの枚数, <var>m</var> はゆう君の所持金額を表す。
+</p>
+<p>
+２行目には10個の整数が空白区切りで与えられる。 <var>c<sub>i</sub></var> ( <var>i</var> は0以上9以下 ) は表に <var>i</var> が書かれたプレートの値段を表す。
+</p>
+
+<h2>Constraints</h2>
+<p>入力は以下の条件を満たす。</p>
+<ul>
+
+<li>1 &le; <var>n</var> &le; 5</li>
+<li>0 &le; <var>m</var> &le; 500</li>
+<li>1 &le; <var>c<sub>i</sub></var> &le; 1000 ( 0 &le; <var>i</var> &le; 9 ) </li>
+
+</ul>
+
+<h2>Output</h2>
+<p>
+<var>n</var>枚のプレートを購入し、それらを任意の順番で並べることでできる数の値の最小値を出力せよ。
+</p>
+<p>
+先頭にいくつかの０を含む場合はそのまま出力すること。 ( 例えば答えが 0019 の場合は先頭の０を取り除いて 19 とするのではなく、そのまま 0019 と出力すること )
+所持金額では <var>n</var> 枚プレートを購入できない場合は "NA" と出力すること。
+</p>
+
+<h2>Sample Input 1</h2>
+<pre>
+1 10
+1 2 3 4 5 6 7 8 9 10
+</pre>
+
+<h2>Sample Output 1</h2>
+<pre>
+0
+</pre>
+
+<h2>Sample Input 2</h2>
+<pre>
+3 10
+8 4 5 3 5 6 9 10 11 2
+</pre>
+
+<h2>Sample Output 2</h2>
+<pre>
+119
+</pre>
+
+<h2>Sample Input 3</h2>
+<pre>
+5 30
+25 51 32 9 2 1 10 2 5 10
+</pre>
+
+<h2>Sample Output 3</h2>
+<pre>
+04555
+</pre>
+
+<h2>Sample Input 4</h2>
+<pre>
+5 100
+101 101 101 101 101 101 101 101 101 101
+</pre>
+
+<h2>Sample Output 4</h2>
+<pre>
+NA
+</pre>

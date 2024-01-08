@@ -1,0 +1,72 @@
+
+<!--<script language="JavaScript" type="text/javascript" src="js/varmath.js" charset="UTF-8"></script>-->
+
+
+
+
+<h2>F: みこみー文字列 - Miko Mi String -</h2>
+<h3>物語</h3>
+<p>みっこみっこみ〜！みんなのアイドル，田澤みこみこ！今日は〜，みこと一緒に〜，文字列アルゴリズムの練習，しよ☆</p>
+
+<p>みこのとっておきの<s>キャラ作り</s>合言葉，「みっこみっこみ〜」は，ローマ字にすると “MikoMikoMi” になるみこ！つまり，<var>A=</var>“Mi”, <var>B=</var>“Ko” とすると，<var>ABABA</var>の形で書けるってことなの！こんな風に，適切に<var>A</var>と<var>B</var>を決めると<var>ABABA</var>の形に分解できる文字列のことを「みこみー文字列」って言うわ！文字列の名前にまでなっちゃうなんて，みこはみんなの人気者みこね！</p>
+
+<p>みんなでみこみー文字列をも〜っと使っていくために，与えられた文字列がみこみー文字列かどうか判定するプログラムを作ることにしたんだけど，みこ，FizzBuzzより長いプログラムなんて書けな〜い！だから〜，みこのために〜，みこみー文字列を判定するプログラムを書いて欲しいな☆</p>
+
+<p>……アンタ，いま寒いって言った！？</p>
+
+<h3>問題</h3>
+<p>
+アルファベット大文字・小文字からなる文字列<var>S</var>が与えられる．
+ここで，<var>S = ABABA</var>と書けるような，空でない2つの文字列<var>A, B</var>が存在するならば，<var>S</var>は「みこみー文字列」であるという．
+このとき，アルファベットの大文字と小文字は違う文字として区別するものとする．
+与えられた文字列がみこみー文字列であるかどうかを判定するプログラムを作成せよ．
+</p>
+
+<h3>入力形式</h3>
+<p>
+入力は文字列<var>S</var>を含む1行のみからなる．
+<var>S</var>は以下の条件を満たすと仮定してよい．
+</p>
+
+<ul>
+<li><var>1 &le; |S| &le; 10^6</var>．ただし，<var>|S|</var>は文字列<var>S</var>の長さを表す．</li>
+<li><var>S</var>は大文字，もしくは小文字のアルファベットのみからなる．</li>
+</ul>
+
+<p>なお，入力が非常に大きくなる場合があるため，入力の受け取りには高速な関数を用いることを推奨する．</p>
+
+<h3>出力形式</h3>
+<p>
+<var>S</var>がみこみー文字列であるならば，<var>S = ABABA</var>を満たすような<var>A, B</var>について，“Love <var>AB</var>!”と出力せよ．ただし，複数の<var>A, B</var>の組が条件を満たす場合，<var>|AB|</var>が最小のものを出力せよ．
+<var>S</var>がみこみー文字列でないならば，“mitomerarenaiWA”と出力せよ．
+</p>
+
+<h3>入力例1</h3>
+<pre>NicoNicoNi</pre>
+
+<h3>出力例1</h3>
+<pre>Love Nico!</pre>
+
+<h3>入力例2</h3>
+<pre>KashikoiKawaiiElichika</pre>
+
+<h3>出力例2</h3>
+<pre>mitomerarenaiWA</pre>
+
+<h3>入力例3</h3>
+<pre>LiveLiveL</pre>
+
+<h3>出力例3</h3>
+<pre>Love Live!</pre>
+
+<h3>入力例4</h3>
+<pre>AizunyanPeroPero</pre>
+
+<h3>出力例4</h3>
+<pre>mitomerarenaiWA</pre>
+
+<h3>入力例5</h3>
+<pre>AAAAAAAAAAAAAA</pre>
+
+<h3>出力例5</h3>
+<pre>Love AAAAA!</pre>

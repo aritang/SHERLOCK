@@ -1,0 +1,121 @@
+<span class="lang-en">
+<p>Score : <var>1600</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>There is a rectangle in the <var>xy</var>-plane, with its lower left corner at <var>(0, 0)</var> and its upper right corner at <var>(W, H)</var>. Each of its sides is parallel to the <var>x</var>-axis or <var>y</var>-axis. Initially, the whole region within the rectangle is painted white.</p>
+<p>Snuke plotted <var>N</var> points into the rectangle. The coordinate of the <var>i</var>-th (<var>1 ≦ i ≦ N</var>) point was <var>(x_i, y_i)</var>.</p>
+<p>Then, for each <var>1 ≦ i ≦ N</var>, he will paint one of the following four regions black:</p>
+<ul>
+<li>the region satisfying <var>x &lt; x_i</var> within the rectangle</li>
+<li>the region satisfying <var>x &gt; x_i</var> within the rectangle</li>
+<li>the region satisfying <var>y &lt; y_i</var> within the rectangle</li>
+<li>the region satisfying <var>y &gt; y_i</var> within the rectangle</li>
+</ul>
+<p>Find the longest possible perimeter of the white region of a rectangular shape within the rectangle after he finishes painting.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 ≦ W, H ≦ 10^8</var></li>
+<li><var>1 ≦ N ≦ 3 \times 10^5</var></li>
+<li><var>0 ≦ x_i ≦ W</var> (<var>1 ≦ i ≦ N</var>)</li>
+<li><var>0 ≦ y_i ≦ H</var> (<var>1 ≦ i ≦ N</var>)</li>
+<li><var>W</var>, <var>H</var> (21:32, added), <var>x_i</var> and <var>y_i</var> are integers.</li>
+<li>If <var>i ≠ j</var>, then <var>x_i ≠ x_j</var> and <var>y_i ≠ y_j</var>.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>The input is given from Standard Input in the following format:</p>
+<pre><var>W</var> <var>H</var> <var>N</var>
+<var>x_1</var> <var>y_1</var>
+<var>x_2</var> <var>y_2</var>
+<var>:</var>
+<var>x_N</var> <var>y_N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the longest possible perimeter of the white region of a rectangular shape within the rectangle after Snuke finishes painting.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>10 10 4
+1 6
+4 1
+6 9
+9 4
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>32
+</pre>
+<p>In this case, the maximum perimeter of <var>32</var> can be obtained by painting the rectangle as follows:</p>
+<div style="text-align: center;">
+<img alt="842bb3939c9721d978d4e122b0bfff55.png" src="https://atcoder.jp/img/arc063/842bb3939c9721d978d4e122b0bfff55.png">
+</img></div>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>5 4 5
+0 0
+1 1
+2 2
+4 3
+5 4
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>12
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>100 100 8
+19 33
+8 10
+52 18
+94 2
+81 36
+88 95
+67 83
+20 71
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>270
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 4</h3><pre>100000000 100000000 1
+3 4
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 4</h3><pre>399999994
+</pre></section>
+</div>
+</span>

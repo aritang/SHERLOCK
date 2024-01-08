@@ -1,0 +1,130 @@
+<span class="lang-en">
+<p>Score : <var>900</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>You are developing frog-shaped robots, and decided to race them against each other.</p>
+<p>First, you placed <var>N</var> robots onto a number line.
+These robots are numbered <var>1</var> through <var>N</var>.
+The current coordinate of robot <var>i</var> is <var>x_i</var>.
+Here, all <var>x_i</var> are integers, and <var>0 &lt; x_1 &lt; x_2 &lt; ... &lt; x_N</var>.</p>
+<p>You will repeatedly perform the following operation:</p>
+<ul>
+<li>Select a robot on the number line. Let the coordinate of the robot be <var>x</var>. Select the destination coordinate, either <var>x-1</var> or <var>x-2</var>, that is not occupied by another robot. The robot now jumps to the selected coordinate.</li>
+</ul>
+<p>When the coordinate of a robot becomes <var>0</var> or less, the robot is considered finished and will be removed from the number line immediately.
+You will repeat the operation until all the robots finish the race.</p>
+<p>Depending on your choice in the operation, the <var>N</var> robots can finish the race in different orders.
+In how many different orders can the <var>N</var> robots finish the race?
+Find the answer modulo <var>10^9+7</var>.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>2 ≤ N ≤ 10^5</var></li>
+<li><var>x_i</var> is an integer.</li>
+<li><var>0 &lt; x_1 &lt; x_2 &lt; ... &lt; x_N ≤ 10^9</var></li>
+</ul>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Partial Score</h3><ul>
+<li>In a test set worth <var>500</var> points, <var>N ≤ 8</var>.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>The input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+<var>x_1</var> <var>x_2</var> <var>...</var> <var>x_N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the number of the different orders in which the <var>N</var> robots can finish the race, modulo <var>10^9+7</var>.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>3
+1 2 3
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>4
+</pre>
+<p>There are four different orders in which the three robots can finish the race:</p>
+<ul>
+<li><var>(</var>Robot <var>1 →</var> Robot <var>2 →</var> Robot <var>3)</var></li>
+<li><var>(</var>Robot <var>1 →</var> Robot <var>3 →</var> Robot <var>2)</var></li>
+<li><var>(</var>Robot <var>2 →</var> Robot <var>1 →</var> Robot <var>3)</var></li>
+<li><var>(</var>Robot <var>2 →</var> Robot <var>3 →</var> Robot <var>1)</var></li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>3
+2 3 4
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>6
+</pre>
+<p>There are six different orders in which the three robots can finish the race:</p>
+<ul>
+<li><var>(</var>Robot <var>1 →</var> Robot <var>2 →</var> Robot <var>3)</var></li>
+<li><var>(</var>Robot <var>1 →</var> Robot <var>3 →</var> Robot <var>2)</var></li>
+<li><var>(</var>Robot <var>2 →</var> Robot <var>1 →</var> Robot <var>3)</var></li>
+<li><var>(</var>Robot <var>2 →</var> Robot <var>3 →</var> Robot <var>1)</var></li>
+<li><var>(</var>Robot <var>3 →</var> Robot <var>1 →</var> Robot <var>2)</var></li>
+<li><var>(</var>Robot <var>3 →</var> Robot <var>2 →</var> Robot <var>1)</var></li>
+</ul>
+<p>For example, the order <var>(</var>Robot <var>3 →</var> Robot <var>2 →</var> Robot <var>1)</var> can be achieved as shown in the figure below:</p>
+<div style="text-align: center;">
+<img alt="a55aed48a00614569d4844f39807e2fb.png" src="https://atcoder.jp/img/mujin/a55aed48a00614569d4844f39807e2fb.png">
+</img></div>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>8
+1 2 3 5 7 11 13 17
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>10080
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 4</h3><pre>13
+4 6 8 9 10 12 14 15 16 18 20 21 22
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 4</h3><pre>311014372
+</pre>
+<p>Remember to print the answer modulo <var>10^9+7</var>.
+This case is not included in the test set for the partial score.</p></section>
+</div>
+</span>

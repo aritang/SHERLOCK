@@ -1,0 +1,97 @@
+<span class="lang-en">
+<p>Score : <var>400</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>There are <var>N</var> people standing in a queue from west to east.</p>
+<p>Given is a string <var>S</var> of length <var>N</var> representing the directions of the people.
+The <var>i</var>-th person from the west is facing west if the <var>i</var>-th character of <var>S</var> is <code>L</code>, and east if that character of <var>S</var> is <code>R</code>.</p>
+<p>A person is happy if the person in front of him/her is facing the same direction.
+If no person is standing in front of a person, however, he/she is not happy.</p>
+<p>You can perform the following operation any number of times between <var>0</var> and <var>K</var> (inclusive):</p>
+<p>Operation: Choose integers <var>l</var> and <var>r</var> such that <var>1 \leq l \leq r \leq N</var>, and rotate by <var>180</var> degrees the part of the queue: the <var>l</var>-th, <var>(l+1)</var>-th, <var>...</var>, <var>r</var>-th persons. That is, for each <var>i = 0, 1, ..., r-l</var>, the <var>(l + i)</var>-th person from the west will stand the <var>(r - i)</var>-th from the west after the operation, facing east if he/she is facing west now, and vice versa.</p>
+<p>What is the maximum possible number of happy people you can have?</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>N</var> is an integer satisfying <var>1 \leq N \leq 10^5</var>.</li>
+<li><var>K</var> is an integer satisfying <var>1 \leq K \leq 10^5</var>.</li>
+<li><var>|S| = N</var></li>
+<li>Each character of <var>S</var> is <code>L</code> or <code>R</code>.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var> <var>K</var>
+<var>S</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the maximum possible number of happy people after at most <var>K</var> operations.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>6 1
+LRLRRL
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>3
+</pre>
+<p>If we choose <var>(l, r) = (2, 5)</var>, we have <code>LLLRLL</code>, where the <var>2</var>-nd, <var>3</var>-rd, and <var>6</var>-th persons from the west are happy.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>13 3
+LRRLRLRRLRLLR
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>9
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>10 1
+LLLLLRRRRR
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>9
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 4</h3><pre>9 2
+RRRLRLRLL
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 4</h3><pre>7
+</pre></section>
+</div>
+</span>

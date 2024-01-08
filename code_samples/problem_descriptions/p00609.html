@@ -1,0 +1,87 @@
+
+<H1><font color="#000000">Problem E:</font> Amazing Graze</H1>
+
+<p>
+In 2215 A.D., a war between two planets, ACM and ICPC, is being more and more intense.
+</p>
+<p>
+ACM introduced new combat planes.  These planes have a special system that is called Graze, and fighting power of a plane increases when it is close to energy bullets that ICPC combat planes shoot.
+</p>
+<p>
+Both combat planes and energy bullets have a shape of a sphere with a radius of <i>R</i>.  Precisely, fighting power of a plane is equivalent to the number of energy bullet where distance from the plane is less than or equals to 2<i>R</i>.
+</p>
+<p>
+You, helper of captain of intelligence units, are asked to analyze a war situation.  The information given to you is coordinates of <i>AN</i> combat planes and <i>BN</i> energy bullets.  Additionally, you know following things:
+</p>
+<ul>
+<li> All combat planes and energy bullet has same <i>z</i>-coordinates. In other word, <i>z</i>-coordinate can be ignored.</li>
+<li> No two combat planes, no two energy bullets, and no pair of combat plane and energy bullet collide (i.e. have positive common volume) each other.</li>
+</ul>
+
+<p>
+Your task is to write a program that outputs total fighting power of all combat planes.
+</p>
+
+
+
+<H2>Input</H2>
+
+<p>
+Input file consists of a number of data sets.
+One data set is given in following format:
+</p>
+
+<pre>
+<i>AN BN R</i>
+<i>XA</i><sub>1</sub> <i>YA</i><sub>1</sub>
+<i>XA</i><sub>2</sub> <i>YA</i><sub>2</sub>
+:
+<i>XA<sub>AN</sub></i> <i>YA<sub>AN</sub></i>
+<i>XB</i><sub>1</sub> <i>YB</i><sub>1</sub>
+<i>XB</i><sub>2</sub> <i>YB</i><sub>2</sub>
+:
+<i>XB<sub>BN</sub></i> <i>YB<sub>BN</sub></i>
+</pre>
+
+<p>
+<i>AN</i>, <i>BN</i>, <i>R</i> are integers that describe the number of combat planes, energy bullets, and their radius respectively.
+</p>
+<p>
+Following <i>AN</i> lines indicate coordinates of the center of combat planes.  Each line has two integers that describe <i>x</i>-coordinate and <i>y</i>-coordinate.
+</p>
+<p>
+Following <i>BN</i> lines indicate coordinates of the center of energy bullets, in the same format as that of combat planes.
+</p>
+<p>
+Input ends when <i>AN</i> = <i>BN</i> = 0.  You should output nothing for this case.
+</p>
+
+<H2>Output</H2>
+
+<p>
+For each data set, output the total fighting power.
+</p>
+
+<H2>Constraints</H2>
+<ul>
+<li>Jude data includes at most 20 data sets.</li>
+<li>1 &le; <i>AN</i>, <i>BN</i> &le; 100000</li>
+<li>0 &lt; <i>R</i> &le; 10 </li>
+<li>0 &le; (coordinate values) &lt; 10000</li>
+</ul>
+
+<H2>Sample Input</H2>
+<pre>
+2 2 1
+0 0
+0 4
+2 2
+2 8
+0 0 0
+</pre>
+
+<H2>Output for the Sample Input</H2>
+<pre>
+2
+</pre>
+

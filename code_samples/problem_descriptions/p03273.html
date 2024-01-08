@@ -1,0 +1,125 @@
+<span class="lang-en">
+<p>Score : <var>200</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>There is a grid of squares with <var>H</var> horizontal rows and <var>W</var> vertical columns.
+The square at the <var>i</var>-th row from the top and the <var>j</var>-th column from the left is represented as <var>(i, j)</var>.
+Each square is black or white.
+The color of the square is given as an <var>H</var>-by-<var>W</var> matrix <var>(a_{i, j})</var>.
+If <var>a_{i, j}</var> is <code>.</code>, the square <var>(i, j)</var> is white; if <var>a_{i, j}</var> is <code>#</code>, the square <var>(i, j)</var> is black.</p>
+<p>Snuke is compressing this grid.
+He will do so by repeatedly performing the following operation while there is a row or column that consists only of white squares:</p>
+<ul>
+<li>Operation: choose any one row or column that consists only of white squares, remove it and delete the space between the rows or columns.</li>
+</ul>
+<p>It can be shown that the final state of the grid is uniquely determined regardless of what row or column is chosen in each operation.
+Find the final state of the grid.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 \leq H, W \leq 100</var></li>
+<li><var>a_{i, j}</var> is <code>.</code> or <code>#</code>.</li>
+<li>There is at least one black square in the whole grid.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>H</var> <var>W</var>
+<var>a_{1, 1}...a_{1, W}</var>
+<var>:</var>
+<var>a_{H, 1}...a_{H, W}</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the final state of the grid in the same format as input (without the numbers of rows and columns); see the samples for clarity.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>4 4
+##.#
+....
+##.#
+.#.#
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>###
+###
+.##
+</pre>
+<p>The second row and the third column in the original grid will be removed.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>3 3
+#..
+.#.
+..#
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>#..
+.#.
+..#
+</pre>
+<p>As there is no row or column that consists only of white squares, no operation will be performed.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>4 5
+.....
+.....
+..#..
+.....
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>#
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 4</h3><pre>7 6
+......
+....#.
+.#....
+..#...
+..#...
+......
+.#..#.
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 4</h3><pre>..#
+#..
+.#.
+.#.
+#.#
+</pre></section>
+</div>
+</span>

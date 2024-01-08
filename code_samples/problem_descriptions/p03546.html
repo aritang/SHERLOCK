@@ -1,0 +1,130 @@
+<span class="lang-en">
+<p>Score : <var>400</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>Joisino the magical girl has decided to turn every single digit that exists on this world into <var>1</var>.</p>
+<p>Rewriting a digit <var>i</var> with <var>j</var> <var>(0≤i,j≤9)</var> costs <var>c_{i,j}</var> MP (Magic Points).</p>
+<p>She is now standing before a wall. The wall is divided into <var>HW</var> squares in <var>H</var> rows and <var>W</var> columns, and at least one square contains a digit between <var>0</var> and <var>9</var> (inclusive).</p>
+<p>You are given <var>A_{i,j}</var> that describes the square at the <var>i</var>-th row from the top and <var>j</var>-th column from the left, as follows:</p>
+<ul>
+<li>If <var>A_{i,j}≠-1</var>, the square contains a digit <var>A_{i,j}</var>.</li>
+<li>If <var>A_{i,j}=-1</var>, the square does not contain a digit.</li>
+</ul>
+<p>Find the minimum total amount of MP required to turn every digit on this wall into <var>1</var> in the end.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1≤H,W≤200</var></li>
+<li><var>1≤c_{i,j}≤10^3</var> <var>(i≠j)</var></li>
+<li><var>c_{i,j}=0</var> <var>(i=j)</var></li>
+<li><var>-1≤A_{i,j}≤9</var></li>
+<li>All input values are integers.</li>
+<li>There is at least one digit on the wall.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>H</var> <var>W</var>
+<var>c_{0,0}</var> <var>...</var> <var>c_{0,9}</var>
+<var>:</var>
+<var>c_{9,0}</var> <var>...</var> <var>c_{9,9}</var>
+<var>A_{1,1}</var> <var>...</var> <var>A_{1,W}</var>
+<var>:</var>
+<var>A_{H,1}</var> <var>...</var> <var>A_{H,W}</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the minimum total amount of MP required to turn every digit on the wall into <var>1</var> in the end.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>2 4
+0 9 9 9 9 9 9 9 9 9
+9 0 9 9 9 9 9 9 9 9
+9 9 0 9 9 9 9 9 9 9
+9 9 9 0 9 9 9 9 9 9
+9 9 9 9 0 9 9 9 9 2
+9 9 9 9 9 0 9 9 9 9
+9 9 9 9 9 9 0 9 9 9
+9 9 9 9 9 9 9 0 9 9
+9 9 9 9 2 9 9 9 0 9
+9 2 9 9 9 9 9 9 9 0
+-1 -1 -1 -1
+8 1 1 8
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>12
+</pre>
+<p>To turn a single <var>8</var> into <var>1</var>, it is optimal to first turn <var>8</var> into <var>4</var>, then turn <var>4</var> into <var>9</var>, and finally turn <var>9</var> into <var>1</var>, costing <var>6</var> MP.</p>
+<p>The wall contains two <var>8</var>s, so the minimum total MP required is <var>6×2=12</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>5 5
+0 999 999 999 999 999 999 999 999 999
+999 0 999 999 999 999 999 999 999 999
+999 999 0 999 999 999 999 999 999 999
+999 999 999 0 999 999 999 999 999 999
+999 999 999 999 0 999 999 999 999 999
+999 999 999 999 999 0 999 999 999 999
+999 999 999 999 999 999 0 999 999 999
+999 999 999 999 999 999 999 0 999 999
+999 999 999 999 999 999 999 999 0 999
+999 999 999 999 999 999 999 999 999 0
+1 1 1 1 1
+1 1 1 1 1
+1 1 1 1 1
+1 1 1 1 1
+1 1 1 1 1
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>0
+</pre>
+<p>Note that she may not need to change any digit.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>3 5
+0 4 3 6 2 7 2 5 3 3
+4 0 5 3 7 5 3 7 2 7
+5 7 0 7 2 9 3 2 9 1
+3 6 2 0 2 4 6 4 2 3
+3 5 7 4 0 6 9 7 6 7
+9 8 5 2 2 0 4 7 6 5
+5 4 6 3 2 3 0 5 4 3
+3 6 2 3 4 2 4 0 8 9
+4 6 5 4 3 5 3 2 0 8
+2 1 3 4 5 7 8 6 4 0
+3 5 2 6 1
+2 5 3 2 1
+6 9 2 5 6
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>47
+</pre></section>
+</div>
+</span>

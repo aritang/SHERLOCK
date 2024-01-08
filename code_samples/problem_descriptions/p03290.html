@@ -1,0 +1,118 @@
+<span class="lang-en">
+<p>Score : <var>300</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>A programming competition site <em>AtCode</em> provides algorithmic problems.
+Each problem is allocated a score based on its difficulty.
+Currently, for each integer <var>i</var> between <var>1</var> and <var>D</var> (inclusive), there are <var>p_i</var> problems with a score of <var>100i</var> points.
+These <var>p_1 + … + p_D</var> problems are all of the problems available on AtCode.</p>
+<p>A user of AtCode has a value called <em>total score</em>.
+The total score of a user is the sum of the following two elements:</p>
+<ul>
+<li>Base score: the sum of the scores of all problems solved by the user.</li>
+<li>Perfect bonuses: when a user solves all problems with a score of <var>100i</var> points, he/she earns the perfect bonus of <var>c_i</var> points, aside from the base score <var>(1 ≤ i ≤ D)</var>.</li>
+</ul>
+<p>Takahashi, who is the new user of AtCode, has not solved any problem.
+His objective is to have a total score of <var>G</var> or more points.
+At least how many problems does he need to solve for this objective?</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 ≤ D ≤ 10</var></li>
+<li><var>1 ≤ p_i ≤ 100</var></li>
+<li><var>100 ≤ c_i ≤ 10^6</var></li>
+<li><var>100 ≤ G</var></li>
+<li>All values in input are integers.</li>
+<li><var>c_i</var> and <var>G</var> are all multiples of <var>100</var>.</li>
+<li>It is possible to have a total score of <var>G</var> or more points.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>D</var> <var>G</var>
+<var>p_1</var> <var>c_1</var>
+<var>:</var>
+<var>p_D</var> <var>c_D</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the minimum number of problems that needs to be solved in order to have a total score of <var>G</var> or more points. Note that this objective is always achievable (see Constraints).</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>2 700
+3 500
+5 800
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>3
+</pre>
+<p>In this case, there are three problems each with <var>100</var> points and five problems each with <var>200</var> points. The perfect bonus for solving all the <var>100</var>-point problems is <var>500</var> points, and the perfect bonus for solving all the <var>200</var>-point problems is <var>800</var> points. Takahashi's objective is to have a total score of <var>700</var> points or more.</p>
+<p>One way to achieve this objective is to solve four <var>200</var>-point problems and earn a base score of <var>800</var> points. However, if we solve three <var>100</var>-point problems, we can earn the perfect bonus of <var>500</var> points in addition to the base score of <var>300</var> points, for a total score of <var>800</var> points, and we can achieve the objective with fewer problems.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>2 2000
+3 500
+5 800
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>7
+</pre>
+<p>This case is similar to Sample Input 1, but the Takahashi's objective this time is <var>2000</var> points or more. In this case, we inevitably need to solve all five <var>200</var>-point problems, and by solving two <var>100</var>-point problems additionally we have the total score of <var>2000</var> points.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>2 400
+3 500
+5 800
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>2
+</pre>
+<p>This case is again similar to Sample Input 1, but the Takahashi's objective this time is <var>400</var> points or more. In this case, we only need to solve two <var>200</var>-point problems to achieve the objective.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 4</h3><pre>5 25000
+20 1000
+40 1000
+50 1000
+30 1000
+1 1000
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 4</h3><pre>66
+</pre>
+<p>There is only one <var>500</var>-point problem, but the perfect bonus can be earned even in such a case. </p></section>
+</div>
+</span>

@@ -1,0 +1,91 @@
+
+
+
+<h1>Circles and Ray</h1>
+
+<h2>Problem</h2>
+<p>
+2次元平面上にそれぞれ互いに共通部分をもたない <var>N</var> 個の円が与えられる。
+また、円にはそれぞれ1から <var>N</var> までの番号が割り振られている。
+</p>
+
+<p>
+あなたは、端点が1番目の円の円周上にあるような半直線を任意の数だけ設置することができる。
+どの円も1本以上の半直線との共通部分を持っているようにするためには、最低何本の半直線を設置しなければならないかを求めなさい。
+</p>
+
+<h2>Input</h2>
+<p>
+入力は以下の形式で与えられる。
+</p>
+
+<pre>
+<var>N</var>
+<var>x<sub>1</sub></var> <var>y<sub>1</sub></var> <var>r<sub>1</sub></var>
+<var>x<sub>2</sub></var> <var>y<sub>2</sub></var> <var>r<sub>2</sub></var>
+...
+<var>x<sub>N</sub></var> <var>y<sub>N</sub></var> <var>r<sub>N</sub></var>
+</pre>
+
+<p>
+1行目に、1つの整数 <var>N</var> が与えられる。
+2行目からの <var>N</var> 行のうち <var>i</var> 行目には <var>i</var> 番目の円のx座標、y座標、半径を表す3つの整数 <var>x<sub>i</sub>, y<sub>i</sub>, r<sub>i</sub></var> が空白区切りで与えられる。
+</p>
+
+<h2>Constraints</h2>
+
+<ul>
+<li>2 &le; <var>N</var> &le; 16</li>
+<li>-100 &le; <var>x<sub>i</sub></var> &le; 100 (1 &le; <var>i</var> &le; <var>N</var>)</li>
+<li>-100 &le; <var>y<sub>i</sub></var> &le; 100 (1 &le; <var>i</var> &le; <var>N</var>)</li>
+<li>1 &le; <var>r<sub>i</sub></var> &le; 100 (1 &le; <var>i</var> &le; <var>N</var>)</li>
+</ul>
+
+<h2>Output</h2>
+<p>
+どの円も1本以上の半直線との共通部分を持っているようにするためには最低何本の半直線を設置しなければならないかを出力せよ。
+</p>
+
+<h2>Sample Input 1</h2>
+<pre>
+3
+0 0 2
+3 3 1
+6 1 1
+</pre>
+
+<h2>Sample Output 1</h2>
+<pre>
+1
+</pre>
+
+<h2>Sample Input 2</h2>
+<pre>
+4
+1 2 3
+12 2 2
+7 6 2
+1 9 3
+</pre>
+
+<h2>Sample Output 2</h2>
+<pre>
+2
+</pre>
+
+
+<h2>Sample Input 3</h2>
+<pre>
+5
+0 0 5
+0 10 1
+10 0 1
+-10 0 1
+0 -10 1
+</pre>
+
+<h2>Sample Output 3</h2>
+<pre>
+4
+</pre>
+

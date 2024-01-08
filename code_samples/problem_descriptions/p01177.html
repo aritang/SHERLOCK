@@ -1,0 +1,193 @@
+
+<H1><font color="#000">Problem G:</font> Entangled Tree</H1>
+
+<p>
+The electronics division in Ishimatsu Company consists of various development departments
+for electronic devices including disks and storages, network devices, mobile phones, and many
+others. Each department covers a wide range of products. For example, the department of disks
+and storages develops internal and external hard disk drives, USB thumb drives, solid-state
+drives, and so on. This situation brings staff in the product management division difficulty
+categorizing these numerous products because of their poor understanding of computer devices.
+</p>
+<p>
+One day, a staff member suggested a tree-based diagram named a <i>category diagram</i> in order to
+make their tasks easier. A category diagram is depicted as follows. Firstly, they prepare one
+large sheet of paper. Secondly, they write down the names of the development departments
+on the upper side of the sheet. These names represent the <i>start nodes</i> of the diagram. Each
+start node is connected to either a single <i>split node</i> or a single end node (these nodes will be
+mentioned soon later). Then they write down a number of questions that distinguish features
+of products in the middle, and these questions represent the split nodes of the diagram. Each
+split node is connected with other split nodes and end nodes, and each line from a split node
+is labeled with the answer to the question. Finally, they write down all category names on the
+lower side, which represents the <i>end nodes</i>.
+</p>
+<p>
+The classification of each product is done like the following. They begin with the start node that
+corresponds to the department developing the product. Visiting some split nodes, they traces
+the lines down until they reach one of the end nodes labeled with a category name. Then they
+find the product classified into the resultant category.
+</p>
+<p>
+The visual appearance of a category diagram makes the diagram quite understandable even for
+non-geek persons. However, product managers are not good at drawing the figures by hand, so
+most of the diagrams were often messy due to many line crossings. For this reason, they hired
+you, a talented programmer, to obtain the <i>clean diagrams</i> equivalent to their diagrams. Here,
+we mean the clean diagrams as those with no line crossings.
+</p>
+<p>
+Your task is to write a program that finds the clean diagrams. For simplicity, we simply ignore
+the questions of the split nodes, and use integers from 1 to <i>N</i> instead of the category names.
+
+</p>
+
+<H2>Input</H2>
+
+<p>
+The input consists of multiple datasets. Each dataset follows the format below:
+</p>
+<pre>
+     <i>N M Q</i>
+     <i>split node info</i><sub>1</sub>
+     <i>split node info</i><sub>2</sub>
+     ...
+     <i>split node info</i><sub><i>M</i></sub>
+     <i>query</i><sub>1</sub>
+     <i>query</i><sub>2</sub>
+     ...
+     <i>query</i><sub><i>Q</i></sub>
+</pre>
+
+<p>
+The first line of each dataset contains three integers <i>N</i> (1 &le; <i>N</i> &le; 100000), <i>M</i> (0 &le; <i>M</i> &le; <i>N</i> - 1),
+and <i>Q</i> (1 &le; <i>Q</i> &le; 1000, <i>Q</i> &le; <i>N</i>), representing the number of end nodes and split nodes, and the
+number of queries respectively. Then <i>M</i> lines describing the split nodes follow. Each split node
+is described in the format below:
+</p>
+<pre>
+      <i>Y L label</i><sub>1</sub> <i>label</i><sub>2</sub> . . .
+</pre>
+<p>
+The first two integers, <i>Y</i> (0 &le; <i>Y</i> &le; 10<sup>9</sup> ) and <i>L</i>, which indicates the <i>y</i>-coordinate where the
+split node locates (the smaller is the higher) and the size of a label list. After that, <i>L</i> integer
+numbers of end node labels which directly or indirectly connected to the split node follow. This
+is a key information for node connections. A split node A is connected to another split node B
+if and only if both A and B refer (at least) one identical end node in their label lists, and the
+y-coordinate of B is the lowest of all split nodes referring identical end nodes and located below
+A. The split node is connected to the end node if and only if that is the lowest node among all
+nodes which contain the same label as the end node’s label. The start node is directly connected
+to the end node, if and only if the end node is connected to none of the split nodes.
+</p>
+<p>
+After the information of the category diagram, <i>Q</i> lines of integers follow. These integers indicate
+the horizontal positions of the end nodes in the diagram. The leftmost position is numbered 1.
+</p>
+<p>
+The input is terminated by the dataset with <i>N</i> = <i>M</i> = <i>Q</i> = 0, and this dataset should not be
+processed.
+</p>
+
+<H2>Output</H2>
+
+<p>
+Your program must print the <i>Q</i> lines, each of which denotes the label of the end node at the
+position indicated by the queries in the clean diagram. One blank line must follow after the
+output for each dataset.
+
+</p>
+
+<H2>Sample Input</H2>
+<pre>
+3 2 3
+10 2 1 2
+20 2 3 2
+1
+2
+3
+5 2 5
+10 3 1 2 4
+20 3 2 3 5
+1
+2
+3
+4
+5
+4 1 4
+10 2 1 4
+1
+2
+3
+4
+4 3 4
+30 2 1 4
+20 2 2 4
+10 2 3 4
+1
+2
+3
+4
+4 3 4
+10 2 1 4
+20 2 2 4
+30 2 3 4
+1
+2
+3
+4
+4 3 4
+10 2 1 2
+15 2 1 4
+20 2 2 3
+1
+2
+3
+4
+3 2 3
+10 2 2 3
+20 2 1 2
+1
+2
+3
+1 0 1
+1
+0 0 0
+</pre>
+
+<H2>Output for the Sample Input</H2>
+<pre>
+1
+2
+3
+
+1
+2
+3
+5
+4
+
+1
+4
+2
+3
+
+1
+4
+2
+3
+
+1
+2
+3
+4
+
+1
+4
+2
+3
+
+1
+2
+3
+
+1
+</pre>
+

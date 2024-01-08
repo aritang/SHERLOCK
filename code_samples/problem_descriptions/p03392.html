@@ -1,0 +1,86 @@
+<span class="lang-en">
+<p>Score : <var>700</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>You are given a string <var>S</var> consisting of <code>a</code>,<code>b</code> and <code>c</code>. Find the number of strings that can be possibly obtained by repeatedly performing the following operation zero or more times, modulo <var>998244353</var>:</p>
+<ul>
+<li>Choose an integer <var>i</var> such that <var>1\leq i\leq |S|-1</var> and the <var>i</var>-th and <var>(i+1)</var>-th characters in <var>S</var> are different. Replace each of the <var>i</var>-th and <var>(i+1)</var>-th characters in <var>S</var> with the character that differs from both of them (among <code>a</code>, <code>b</code> and <code>c</code>).</li>
+</ul>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>2 \leq |S| \leq 2 × 10^5</var></li>
+<li><var>S</var> consists of <code>a</code>, <code>b</code> and <code>c</code>.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>S</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the number of strings that can be possibly obtained by repeatedly performing the operation, modulo <var>998244353</var>.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>abc
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>3
+</pre>
+<p><code>abc</code>, <code>aaa</code> and <code>ccc</code> can be obtained.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>abbac
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>65
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>babacabac
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>6310
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 4</h3><pre>ababacbcacbacacbcbbcbbacbaccacbacbacba
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 4</h3><pre>148010497
+</pre></section>
+</div>
+</span>

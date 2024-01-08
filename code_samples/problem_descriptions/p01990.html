@@ -1,0 +1,64 @@
+<h2>B: ピボット (Pivots)</h2>
+
+<h3>問題</h3>
+<p>
+<var>1</var> から <var>N</var> までの整数を並び変えた、長さ <var>N</var> の順列 <var>a_1, a_2,  ..., a_N</var> が与えられる。
+また、この順列に対して <var>Q</var> 個のクエリが順に与えられる。<var>i</var> 番目のクエリでは次の操作をしなければならない。
+</p>
+
+<ul>
+<li> 値 <var>q_i</var> (<var>1 \leq q_i \leq N</var>) が与えられる。順列 <var>\{a_1, a_2, ..., a_N\}</var> において <var>q_i</var> の左側の順列を <var>L</var>、<var>q_i</var> の右側の順列を <var>R</var> としたとき、元の順列 <var>L \ \  q_i \ \  R</var> を <var>R \ \  q_i \ \  L</var> に変更する。つまり、<var>q_{i} = a_j</var> であるとき、順列 <var>\{a_1, ..., a_{j-1}, a_j, a_{j+1}, ..., a_N\}</var> を <var>\{a_{j+1}, ..., a_N, a_j, a_1, ..., a_{j-1}\}</var> に変更する。</li>
+</ul>
+<p>なお、順列 <var>L</var>, <var>R</var> は空になることもあり得る。例えば <var>L</var> が空の時は、<var>q_i \ \  R</var> を <var>R \ \  q_i</var> に変更する。<var>R</var> が空のときについても同様である。</p>
+
+<p>与えられた順列に対してこれら <var>Q</var> 個のクエリを順に処理した後の順列を一行に出力せよ。</p>
+
+
+<h3>入力形式</h3>
+<pre>
+<var>N</var> <var>Q</var>
+<var>a_1 a_2 ... a_N</var>
+<var>q_1 q_2 ... q_Q</var>
+</pre>
+
+<p>入力は全て整数である。</p>
+
+<p>
+一行目には順列の要素数 <var>N</var> とクエリの回数 <var>Q</var> が空白区切りで与えられる。
+二行目には <var>1</var> から <var>N</var> までの整数を並び変えた順列 <var>a_1, a_2, ..., a_N</var> が空白区切りで与えられる。
+三行目にはクエリが <var>Q</var> 個、空白区切りで与えられる。<var>q_i</var> は <var>i</var> 番目のクエリを表す。
+</p>
+
+<h3>制約</h3>
+<ul>
+<li> <var>1 \leq N \leq 10^5</var></li>
+<li> <var>1 \leq Q \leq 10^5</var></li>
+<li> <var>1 \leq a_i \leq N</var></li>
+<li> <var>a_i</var> は相異なる</li>
+<li> <var>1 \leq q_i \leq N</var></li>
+</ul>
+
+<h3>出力形式</h3>
+<p>クエリを順にすべて処理した後の順列を一行に出力せよ。</p>
+
+<h3>入力例1</h3>
+<pre>
+5 2
+1 5 3 2 4
+5 2
+</pre>
+<h3>出力例1</h3>
+<pre>4 5 1 2 3</pre>
+
+<ul>
+<li> 1番目のクエリにより、順列は <var>\{3, 2, 4, 5, 1\}</var> へ変わる。</li>
+<li> 2番目のクエリにより、順列は <var>\{4, 5, 1, 2, 3\}</var> へ変わる。</li>
+</ul>
+<h3>入力例2</h3>
+<pre>
+5 1
+1 2 3 4 5
+5
+</pre>
+<h3>出力例2</h3>
+<pre>5 1 2 3 4</pre>

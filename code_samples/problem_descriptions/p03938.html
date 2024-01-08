@@ -1,0 +1,90 @@
+<span class="lang-en">
+<p>Score : <var>400</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><style>
+   #nck {
+      width: 30px;
+      height: auto;
+   }
+</style>
+<p>You are given a permutation <var>p</var> of the set {<var>1, 2, ..., N</var>}. Please construct two sequences of positive integers <var>a_1</var>, <var>a_2</var>, ..., <var>a_N</var> and <var>b_1</var>, <var>b_2</var>, ..., <var>b_N</var> satisfying the following conditions:</p>
+<ul>
+<li><var>1 \leq a_i, b_i \leq 10^9</var> for all <var>i</var></li>
+<li><var>a_1 &lt; a_2 &lt; ... &lt; a_N</var></li>
+<li><var>b_1 &gt; b_2 &gt; ... &gt; b_N</var></li>
+<li><var>a_{p_1}+b_{p_1} &lt; a_{p_2}+b_{p_2} &lt; ... &lt; a_{p_N}+b_{p_N}</var></li>
+</ul>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>2 \leq N \leq 20,000</var></li>
+<li><var>p</var> is a permutation of the set {<var>1, 2, ..., N</var>}</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>The input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+<var>p_1</var> <var>p_2</var> <var>...</var> <var>p_N</var> 
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>The output consists of two lines. The first line contains <var>a_1</var>, <var>a_2</var>, ..., <var>a_N</var> seperated by a space. The second line contains <var>b_1</var>, <var>b_2</var>, ..., <var>b_N</var> seperated by a space. </p>
+<p>It can be shown that there always exists a solution for any input satisfying the constraints.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>2
+1 2
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>1 4
+5 4
+</pre>
+<p><var>a_1 + b_1 = 6</var> and <var>a_2 + b_2 = 8</var>. So this output satisfies all conditions.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>3
+3 2 1
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>1 2 3
+5 3 1
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>3
+2 3 1
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>5 10 100
+100 10 1
+</pre></section>
+</div>
+</span>

@@ -1,0 +1,106 @@
+<span class="lang-en">
+<p>Score : <var>1500</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>You are given a tree with <var>N</var> vertices numbered <var>1, 2, ..., N</var>. The <var>i</var>-th edge connects Vertex <var>a_i</var> and Vertex <var>b_i</var>.
+You are also given a string <var>S</var> of length <var>N</var> consisting of <code>0</code> and <code>1</code>. The <var>i</var>-th character of <var>S</var> represents the number of pieces placed on Vertex <var>i</var>.</p>
+<p>Snuke will perform the following operation some number of times:</p>
+<ul>
+<li>Choose two pieces the distance between which is at least <var>2</var>, and bring these pieces closer to each other by <var>1</var>. More formally, choose two vertices <var>u</var> and <var>v</var>, each with one or more pieces, and consider the shortest path between them. Here the path must contain at least two edges. Then, move one piece from <var>u</var> to its adjacent vertex on the path, and move one piece from <var>v</var> to its adjacent vertex on the path.</li>
+</ul>
+<p>By repeating this operation, Snuke wants to have all the pieces on the same vertex. Is this possible?
+If the answer is yes, also find the minimum number of operations required to achieve it.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>2 \leq N \leq 2000</var></li>
+<li><var>|S| = N</var></li>
+<li><var>S</var> consists of <code>0</code> and <code>1</code>, and contains at least one <code>1</code>.</li>
+<li><var>1 \leq a_i, b_i \leq N(a_i \neq b_i)</var></li>
+<li>The edges <var>(a_1, b_1), (a_2, b_2), ..., (a_{N - 1}, b_{N - 1})</var> forms a tree.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+<var>S</var>
+<var>a_1</var> <var>b_1</var>
+<var>a_2</var> <var>b_2</var>
+<var>:</var>
+<var>a_{N - 1}</var> <var>b_{N - 1}</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>If it is impossible to have all the pieces on the same vertex, print <code>-1</code>. If it is possible, print the minimum number of operations required.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>7
+0010101
+1 2
+2 3
+1 4
+4 5
+1 6
+6 7
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>3
+</pre>
+<p>We can gather all the pieces in three operations as follows:</p>
+<ul>
+<li>Choose the pieces on Vertex <var>3</var> and <var>5</var>.</li>
+<li>Choose the pieces on Vertex <var>2</var> and <var>7</var>.</li>
+<li>Choose the pieces on Vertex <var>4</var> and <var>6</var>.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>7
+0010110
+1 2
+2 3
+1 4
+4 5
+1 6
+6 7
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>-1
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>2
+01
+1 2
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>0
+</pre></section>
+</div>
+</span>

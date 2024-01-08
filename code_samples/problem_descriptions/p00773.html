@@ -1,0 +1,157 @@
+
+<h3>Tax Rate Changed</h3>
+
+  <p>
+    VAT (value-added tax) is a tax imposed at a certain rate proportional to the sale price.
+  </p>
+
+  <p>
+    Our store uses the following rules to calculate the after-tax prices.
+    </p>
+
+<ul>
+      <li>
+	When the VAT rate is <i>x</i>%,
+	for an item with the before-tax price of <i>p</i> yen,
+	its after-tax price of the item is <i>p</i>&nbsp;(100+<i>x</i>)&nbsp;/&nbsp;100 yen, fractions rounded off.
+      </li>
+      <li>
+	The total after-tax price of multiple items paid at once is
+	the sum of after-tax prices of the items.
+      </li>
+    </ul>
+  
+
+  <p>
+    The VAT rate is changed quite often.
+    Our accountant has become aware that
+    "different pairs of items that had the same total after-tax price
+    may have different total after-tax prices after VAT rate changes."
+    For example, when the VAT rate rises from 5% to 8%,
+    a pair of items that had the total after-tax prices of 105 yen before
+    can now have after-tax prices either of 107, 108, or 109 yen, as shown in the table below.
+  </p>
+
+<center>
+  <table border="1"  style="border: 1px #aaa solid;">
+
+    <tbody><tr><th style="border: 1px #aaa solid;">Before-tax prices of two items</th><th style="border: 1px #aaa solid;">After-tax price with 5% VAT</th><th style="border: 1px #aaa solid;">After-tax price with 8% VAT</th></tr>
+
+    <tr><td  style="border: 1px #aaa solid;" align="center">20, 80</td><td  style="border: 1px #aaa solid;"align="center">21 + 84 = 105</td><td  style="border: 1px #aaa solid;" align="center">21 + 86 = 107</td></tr>
+    <tr><td  style="border: 1px #aaa solid;" align="center">2, 99</td><td  style="border: 1px #aaa solid;" align="center">2 + 103 = 105</td><td  style="border: 1px #aaa solid;" align="center">2 + 106 = 108</td></tr>
+    <tr><td  style="border: 1px #aaa solid;" align="center">13, 88</td><td  style="border: 1px #aaa solid;" align="center">13 + 92 = 105</td><td  style="border: 1px #aaa solid;" align="center">14 + 95 = 109</td></tr>
+  </tbody></table>
+</center>
+
+<br>
+
+  <p>
+    Our accountant is examining effects of VAT-rate changes on after-tax prices.
+    You are asked to write a program that calculates the possible maximum
+    total after-tax price of two items with the new VAT rate,
+    knowing their total after-tax price before the VAT rate change.
+  </p>
+
+
+<h3>Input</h3>
+
+
+  <p>
+    The input consists of multiple datasets.
+    Each dataset is in one line,
+    which consists of three integers <i>x</i>, <i>y</i>, and <i>s</i> separated by a space.
+    <i>x</i> is the VAT rate in percent <i>before</i> the VAT-rate change,
+    <i>y</i> is the VAT rate in percent <i>after</i> the VAT-rate change,
+    and <i>s</i> is the sum of after-tax prices of two items <i>before</i> the VAT-rate change.
+    For these integers, 0 &lt; <i>x</i> &lt; 100, 0 &lt; <i>y</i> &lt; 100,
+    10 &lt; <i>s</i> &lt; 1000, and <i>x</i> &#8800; <i>y</i> hold.
+    For before-tax prices of items, all possibilities of 1 yen through <i>s</i>-1 yen should be considered.
+  </p>
+  <p>
+    The end of the input is specified by three zeros separated by a space.
+  </p>
+
+
+
+<h3>Output</h3>
+
+
+  <p>
+    For each dataset,
+    output in a line the possible maximum total after-tax price when the VAT rate is changed to <i>y</i>%.
+  </p>
+
+
+
+<h3>Sample Input</h3>
+
+<pre>5 8 105
+8 5 105
+1 2 24
+99 98 24
+12 13 26
+1 22 23
+1 13 201
+13 16 112
+2 24 50
+1 82 61
+1 84 125
+1 99 999
+99 1 999
+98 99 999
+1 99 11
+99 1 12
+0 0 0
+</pre>
+
+
+<h3>Output for the Sample Input</h3>
+
+<pre>109
+103
+24
+24
+26
+27
+225
+116
+62
+111
+230
+1972
+508
+1004
+20
+7
+</pre>
+
+
+
+<h3>Hints</h3>
+
+  <p>
+    In the following table,
+    an instance of a before-tax price pair that has the maximum after-tax price after the VAT-rate change
+    is given for each dataset of the sample input.
+  </p>
+<table border="1" style="border: 1px #aaa solid;">
+
+  <tbody><tr><th style="border: 1px #aaa solid;">Dataset</th><th style="border: 1px #aaa solid;">Before-tax prices</th><th style="border: 1px #aaa solid;">After-tax price with <i>y</i>% VAT</th></tr>
+
+  <tr><td style="border: 1px #aaa solid;"align="center">5 8 105</td>  <td style="border: 1px #aaa solid;"align="center"> 13, 88</td><td style="border: 1px #aaa solid;"align="center"> 14 + 95 = 109</td></tr>
+  <tr><td style="border: 1px #aaa solid;"align="center">8 5 105</td>  <td style="border: 1px #aaa solid;"align="center"> 12, 87</td><td style="border: 1px #aaa solid;"align="center"> 12 + 91 = 103</td></tr>
+  <tr><td style="border: 1px #aaa solid;"align="center">1 2 24</td>   <td style="border: 1px #aaa solid;"align="center">  1, 23</td><td style="border: 1px #aaa solid;"align="center">  1 + 23 =  24</td></tr>
+  <tr><td style="border: 1px #aaa solid;"align="center">99 98 24</td> <td style="border: 1px #aaa solid;"align="center">  1, 12</td><td style="border: 1px #aaa solid;"align="center">  1 + 23 =  24</td></tr>
+  <tr><td style="border: 1px #aaa solid;"align="center">12 13 26</td> <td style="border: 1px #aaa solid;"align="center">  1, 23</td><td style="border: 1px #aaa solid;"align="center">  1 + 25 =  26</td></tr>
+  <tr><td style="border: 1px #aaa solid;"align="center">1 22 23</td>  <td style="border: 1px #aaa solid;"align="center">  1, 22</td><td style="border: 1px #aaa solid;"align="center">  1 + 26 =  27</td></tr>
+  <tr><td style="border: 1px #aaa solid;"align="center">1 13 201</td> <td style="border: 1px #aaa solid;"align="center">  1,199</td><td style="border: 1px #aaa solid;"align="center">  1 +224 = 225</td></tr>
+  <tr><td style="border: 1px #aaa solid;"align="center">13 16 112</td><td style="border: 1px #aaa solid;"align="center"> 25, 75</td><td style="border: 1px #aaa solid;"align="center"> 29 + 87 = 116</td></tr>
+  <tr><td style="border: 1px #aaa solid;"align="center">2 24 50</td>  <td style="border: 1px #aaa solid;"align="center"> 25, 25</td><td style="border: 1px #aaa solid;"align="center"> 31 + 31 =  62</td></tr>
+  <tr><td style="border: 1px #aaa solid;"align="center">1 82 61</td>  <td style="border: 1px #aaa solid;"align="center"> 11, 50</td><td style="border: 1px #aaa solid;"align="center"> 20 + 91 = 111</td></tr>
+  <tr><td style="border: 1px #aaa solid;"align="center">1 84 125</td> <td style="border: 1px #aaa solid;"align="center"> 50, 75</td><td style="border: 1px #aaa solid;"align="center"> 92 +138 = 230</td></tr>
+  <tr><td style="border: 1px #aaa solid;"align="center">1 99 999</td> <td style="border: 1px #aaa solid;"align="center"> 92,899</td><td style="border: 1px #aaa solid;"align="center">183+1789 =1972</td></tr>
+  <tr><td style="border: 1px #aaa solid;"align="center">99 1 999</td> <td style="border: 1px #aaa solid;"align="center">  1,502</td><td style="border: 1px #aaa solid;"align="center">  1 +507 = 508</td></tr>
+  <tr><td style="border: 1px #aaa solid;"align="center">98 99 999</td><td style="border: 1px #aaa solid;"align="center">  5,500</td><td style="border: 1px #aaa solid;"align="center">  9 +995 =1004</td></tr>
+  <tr><td style="border: 1px #aaa solid;"align="center">1 99 11</td>  <td style="border: 1px #aaa solid;"align="center">  1, 10</td><td style="border: 1px #aaa solid;"align="center">  1 + 19 =  20</td></tr>
+  <tr><td style="border: 1px #aaa solid;"align="center">99 1 12</td>  <td style="border: 1px #aaa solid;"align="center">  1,  6</td><td style="border: 1px #aaa solid;"align="center">  1 +  6 =   7</td></tr>
+</tbody></table>

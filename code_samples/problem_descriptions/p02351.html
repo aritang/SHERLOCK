@@ -1,0 +1,103 @@
+
+<H1>RSQ and RAQ</H1>
+
+<p>
+Write a program which manipulates a sequence <var>A</var> = {<var>a<sub>1</sub>, a<sub>2</sub>, . . .  , a<sub>n</sub></var>} with the following operations:
+</p>
+
+<ul>
+  <li><var>add(s, t, x)</var>: add <var>x</var> to <var>a<sub>s</sub></var>, <var>a<sub>s+1</sub></var>, ..., <var>a<sub>t</sub></var>.</li>
+  <li><var>getSum(s, t)</var>: report the sum of <var>a<sub>s</sub></var>, <var>a<sub>s+1</sub></var>, ..., <var>a<sub>t</sub></var>.</li>
+
+</ul>
+
+<p>
+Note that the initial values of <var>a<sub>i</sub></var> (<var>i = 1, 2, . . .  , n</var>) are 0.
+</p>
+
+<H2>Input</H2>
+
+
+<pre>
+<var>n</var> <var>q</var>
+<var>query<sub>1</sub></var>
+<var>query<sub>2</sub></var>
+:
+<var>query<sub>q</sub></var>
+</pre>
+
+<p>
+  In the first line, <var>n</var> (the number of elements in <var>A</var>) and <var>q</var> (the number of queries) are given. Then, <i>i</i>th query <var>query<sub>i</sub></var> is given in the following format:
+</p>
+
+<pre>
+0 <var>s</var> <var>t</var> <var>x</var> 
+</pre>
+
+<p>
+  or
+</p>
+
+<pre>
+1 <var>s</var> <var>t</var>
+</pre>
+
+<p>
+  The first digit represents the type of the query. '0' denotes <var>add(s, t, x)</var> and '1' denotes <var>getSum(s, t)</var>.
+</p>
+
+
+<H2>Output</H2>
+
+<p>
+For each <var>getSum</var> operation, print the sum;
+</p>
+
+<H2>Constraints</H2>
+
+<ul>
+<li>
+<var>1 &le; n &le; 100000</var>
+</li>
+<li>
+<var>1 &le; q &le; 100000</var>
+</li>
+<li>
+  <var>1 &le; s &le; t &le; n</var>
+</li>
+<li>
+  <var>0 &le; x &lt; 1000</var>
+</li>
+</ul>
+
+
+<H2>Sample Input 1</H2>
+<pre>
+3 5
+0 1 2 1
+0 2 3 2
+0 3 3 3
+1 1 2
+1 2 3
+</pre>
+<H2>Sample Output 1</H2>
+<pre>
+4
+8
+</pre>
+
+
+<br/>
+
+<H2>Sample Input 2</H2>
+<pre>
+4 3
+1 1 4
+0 1 4 1
+1 1 4
+</pre>
+<H2>Sample Output 2</H2>
+<pre>
+0
+4
+</pre>

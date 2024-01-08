@@ -1,0 +1,94 @@
+<span class="lang-en">
+<p>Score : <var>300</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>Takahashi has come to an integer shop to buy an integer.</p>
+<p>The shop sells the integers from <var>1</var> through <var>10^9</var>. The integer <var>N</var> is sold for <var>A \times N + B \times d(N)</var> yen (the currency of Japan), where <var>d(N)</var> is the number of digits in the decimal notation of <var>N</var>.</p>
+<p>Find the largest integer that Takahashi can buy when he has <var>X</var> yen. If no integer can be bought, print <var>0</var>.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li>All values in input are integers.</li>
+<li><var>1 \leq A \leq 10^9</var></li>
+<li><var>1 \leq B \leq 10^9</var></li>
+<li><var>1 \leq X \leq 10^{18}</var></li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>A</var> <var>B</var> <var>X</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the greatest integer that Takahashi can buy. If no integer can be bought, print <var>0</var>.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>10 7 100
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>9
+</pre>
+<p>The integer <var>9</var> is sold for <var>10 \times 9 + 7 \times 1 = 97</var> yen, and this is the greatest integer that can be bought.
+Some of the other integers are sold for the following prices:</p>
+<ul>
+<li><var>10: 10 \times 10 + 7 \times 2 = 114</var> yen</li>
+<li><var>100: 10 \times 100 + 7 \times 3 = 1021</var> yen</li>
+<li><var>12345: 10 \times 12345 + 7 \times 5 = 123485</var> yen</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>2 1 100000000000
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>1000000000
+</pre>
+<p>He can buy the largest integer that is sold. Note that input may not fit into a <var>32</var>-bit integer type.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>1000000000 1000000000 100
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>0
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 4</h3><pre>1234 56789 314159265
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 4</h3><pre>254309
+</pre></section>
+</div>
+</span>

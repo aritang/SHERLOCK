@@ -1,0 +1,82 @@
+<span class="lang-en">
+<p>Score : <var>200</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>A string <var>S</var> of an odd length is said to be a <em>strong palindrome</em> if and only if all of the following conditions are satisfied:</p>
+<ul>
+<li><var>S</var> is a palindrome.</li>
+<li>Let <var>N</var> be the length of <var>S</var>. The string formed by the <var>1</var>-st through <var>((N-1)/2)</var>-th characters of <var>S</var> is a palindrome.</li>
+<li>The string consisting of the <var>(N+3)/2</var>-st through <var>N</var>-th characters of <var>S</var> is a palindrome.</li>
+</ul>
+<p>Determine whether <var>S</var> is a strong palindrome.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>S</var> consists of lowercase English letters.</li>
+<li>The length of <var>S</var> is an odd number between <var>3</var> and <var>99</var> (inclusive).</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>S</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>If <var>S</var> is a strong palindrome, print <code>Yes</code>;
+otherwise, print <code>No</code>.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>akasaka
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>Yes
+</pre>
+<ul>
+<li><var>S</var> is <code>akasaka</code>.</li>
+<li>The string formed by the <var>1</var>-st through the <var>3</var>-rd characters is <code>aka</code>.</li>
+<li>The string formed by the <var>5</var>-th through the <var>7</var>-th characters is <code>aka</code>.
+All of these are palindromes, so <var>S</var> is a strong palindrome.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>level
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>No
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>atcoder
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>No
+</pre></section>
+</div>
+</span>

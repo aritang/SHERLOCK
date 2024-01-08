@@ -1,0 +1,86 @@
+<span class="lang-en">
+<p>Score : <var>2400</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>Takahashi loves sorting.</p>
+<p>He has a permutation <var>(p_1,p_2,...,p_N)</var> of the integers from <var>1</var> through <var>N</var>. Now, he will repeat the following operation until the permutation becomes <var>(1,2,...,N)</var>:</p>
+<ul>
+<li>First, we will define <em>high</em> and <em>low</em> elements in the permutation, as follows. The <var>i</var>-th element in the permutation is high if the maximum element between the <var>1</var>-st and <var>i</var>-th elements, inclusive, is the <var>i</var>-th element itself, and otherwise the <var>i</var>-th element is low.</li>
+<li>Then, let <var>a_1,a_2,...,a_k</var> be the values of the high elements, and <var>b_1,b_2,...,b_{N-k}</var> be the values of the low elements in the current permutation, <strong>in the order they appear in it</strong>.</li>
+<li>Lastly, rearrange the permutation into <var>(b_1,b_2,...,b_{N-k},a_1,a_2,...,a_k)</var>.</li>
+</ul>
+<p>How many operations are necessary until the permutation is sorted?</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 ≤ N ≤ 2×10^5</var></li>
+<li><var>(p_1,p_2,...,p_N)</var> is a permutation of the integers from <var>1</var> through <var>N</var>.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+<var>p_1</var> <var>p_2</var> ... <var>p_N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the number of operations that are necessary until the permutation is sorted.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>5
+3 5 1 2 4
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>3
+</pre>
+<p>The initial permutation is <var>(3,5,1,2,4)</var>, and each operation changes it as follows:</p>
+<ul>
+<li>In the first operation, the <var>1</var>-st and <var>2</var>-nd elements are high, and the <var>3</var>-rd, <var>4</var>-th and <var>5</var>-th are low. The permutation becomes: <var>(1,2,4,3,5)</var>.</li>
+<li>In the second operation, the <var>1</var>-st, <var>2</var>-nd, <var>3</var>-rd and <var>5</var>-th elements are high, and the <var>4</var>-th is low. The permutation becomes: <var>(3,1,2,4,5)</var>.</li>
+<li>In the third operation, the <var>1</var>-st, <var>4</var>-th and <var>5</var>-th elements are high, and the <var>2</var>-nd and <var>3</var>-rd and <var>5</var>-th are low. The permutation becomes: <var>(1,2,3,4,5)</var>.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>5
+5 4 3 2 1
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>4
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>10
+2 10 5 7 3 6 4 9 8 1
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>6
+</pre></section>
+</div>
+</span>

@@ -1,0 +1,89 @@
+
+
+<H1><font color="#000000">Problem P04:</font> CamelCase</H1>
+
+<p>
+プログラミングにおける識別子（変数や関数）の命名では、
+単語を連結した複合語が使われる。
+しかし、そのまま連結すると単語の区切りがわからなくなるため、
+一般的に以下の命名規則の中から統一するものを選び適用する：
+</p>
+
+<ul>
+<li>Upper CamelCase　にする<br>
+単語を直接連結し複合語とし、各単語の先頭文字のみを大文字にする。<br>
+例： GetUserName
+</li>
+
+
+<li>Lower CamelCase　にする<br>
+
+単語を直接連結し複合語とし、各単語の先頭文字のみを大文字にする。ただし、複合語の先頭文字は小文字にする。<br>
+例： getUserName
+</li>
+
+
+<li>アンダースコアで繋ぐ<br>
+
+単語をアンダースコアで連結し複合語とする。単語の文字はすべて小文字にする。<br>
+例： get_user_name
+</li>
+
+</ul>
+
+<p>
+与えられた識別子を、指定された命名規則を適用して出力するプログラムを作成せよ。
+与えられる識別子は、上記の命名規則のいづれかが既に適用されているものとする。
+</p>
+
+
+<H2>Input</H2>
+<p>
+入力として複数のデータセットが与えられる。各データセットは以下の形式で与えられる：
+</p>
+
+<p>
+<i>name</i> <i>type</i> （識別子、命名規則：　空白区切りの文字列と文字）
+</p>
+
+<p>
+<i>type</i>は命名規則を示す文字であり、以下の表の通りとする：
+</p>
+
+<table border=1 cellspacing=4 cellpadding=4>
+<tr><th><i>type</i></td><th>命名規則</th></tr>
+<tr><td><span>U</span></td><td>Upper CamelCase にする</td></tr>
+<tr><td><span>L</span></td><td>Lower CamelCase にする</td></tr>
+<tr><td><span>D</span></td><td>アンダースコアで繋ぐ</td></tr>
+</table>
+
+
+<p>
+与えられる識別子の文字数は 1 以上 100 以下である。
+</p>
+
+
+<p>
+<i>type</i> が '<span>X</span>' のとき入力の終わりとする。この入力に対する出力を行ってはならない。
+</p>
+
+<H2>Output</H2>
+<p>
+各データセットについて、命名規則を適用した識別子を1行に出力せよ。
+</p>
+
+<H2>Sample Input</H2>
+<pre>
+get_user_name L
+getUserName U
+GetUserName D
+EndOfInput X
+</pre>
+
+
+<H2>Output for the Sample Input</H2>
+<pre>
+getUserName
+GetUserName
+get_user_name
+</pre>

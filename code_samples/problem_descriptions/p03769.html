@@ -1,0 +1,70 @@
+<span class="lang-en">
+<p>Score : <var>1000</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>We will call a string <var>x</var> <em>good</em> if it satisfies the following condition:</p>
+<ul>
+<li>Condition: <var>x</var> can be represented as a concatenation of two copies of another string <var>y</var> of length at least <var>1</var>.</li>
+</ul>
+<p>For example, <code>aa</code> and <code>bubobubo</code> are good; an empty string, <code>a</code>, <code>abcabcabc</code> and <code>abba</code> are not good.</p>
+<p>Eagle and Owl created a puzzle on good strings.
+Find one string <var>s</var> that satisfies the following conditions. It can be proved that such a string always exists under the constraints in this problem.</p>
+<ul>
+<li><var>1 ≤ |s| ≤ 200</var></li>
+<li>Each character of <var>s</var> is one of the <var>100</var> characters represented by the integers <var>1</var> through <var>100</var>.</li>
+<li>Among the <var>2^{|s|}</var> subsequences of <var>s</var>, exactly <var>N</var> are good strings.</li>
+</ul>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 ≤ N ≤ 10^{12}</var></li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>In the first line, print <var>|s|</var>, the length of <var>s</var>.
+In the second line, print the elements in <var>s</var> in order, with spaces in between. Any string that satisfies the above conditions will be accepted.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>7
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>4
+1 1 1 1
+</pre>
+<p>There are two good strings that appear as subsequences of <var>s</var>: <var>(1,1)</var> and <var>(1,1,1,1)</var>. There are six occurrences of <var>(1,1)</var> and one occurrence of <var>(1,1,1,1)</var>, for a total of seven.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>299
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>23
+32 11 11 73 45 8 11 83 83 8 45 32 32 10 100 73 32 83 45 73 32 11 10
+</pre></section>
+</div>
+</span>

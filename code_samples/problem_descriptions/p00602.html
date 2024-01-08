@@ -1,0 +1,70 @@
+
+<H1><font color="#000000">Problem H:</font> Fibonacci Sets</H1>
+
+<p>
+Fibonacci number <i>f</i>(<i>i</i>) appear in a variety of puzzles in nature and math, including packing problems, family trees or Pythagorean triangles. They obey the rule <i>f</i>(<i>i</i>) = <i>f</i>(<i>i</i> - 1) + <i>f</i>(<i>i</i> - 2), where we set <i>f</i>(0) = 1 = <i>f</i>(-1).
+</p>
+
+<!--
+<p>
+Let <i>V</i> and <i>d</i> be two certain positive integers and be <i>N</i> &equiv; 1001 a constant. Consider a set of <i>V</i> nodes, each node <i>i</i> having a Fibonacci label (<i>f</i>(<i>i</i>) mod N) assigned for <i>i</i> = 1,..., <i>V</i> &le; N. If |<i>f</i>(<i>i</i>) - <i>f</i>(<i>j</i>)| &lt; <i>d</i>, then the nodes <i>i</i> and <i>j</i> are connected.
+</p>
+-->
+
+<p>
+Let <i>V</i> and <i>d</i> be two certain positive integers and be <i>N</i> &equiv; 1001 a constant. Consider a set of <i>V</i> nodes, each node <i>i</i> having a Fibonacci label <i>F</i>[<i>i</i>] = (<i>f</i>(<i>i</i>) mod N) assigned for <i>i</i> = 1,..., <i>V</i> &le; N. If |<i>F</i>(<i>i</i>) - <i>F</i>(<i>j</i>)| &lt; <i>d</i>, then the nodes <i>i</i> and <i>j</i> are connected.
+</p>
+
+
+<p>
+Given <i>V</i> and <i>d</i>, how many connected subsets of nodes will you obtain?
+</p>
+
+<center>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE1_fibonaccisets">
+</center>
+<center>
+<p>
+Figure 1: There are 4 connected subsets for <i>V</i> = 20 and <i>d</i> = 100.
+</p>
+</center>
+
+<H2>Input</H2>
+
+<p>
+Each data set is defined as one line with two integers as follows:
+</p>
+
+<p>
+<i>Line 1</i>: Number of nodes <i>V</i> and the distance <i>d</i>.
+</p>
+
+<p>
+Input includes several data sets (i.e., several lines). The number of dat sets is less than or equal to 50.
+</p>
+
+<h2>Constraints</h2>
+
+<ul>
+<li>1 &le; V &le; 1000</li>
+<li>1 &le; d &le; 150</li>
+</ul>
+<H2>Output</H2>
+
+<p>
+Output line contains one integer - the number of connected subsets - for each input line.
+</p>
+
+<H2>Sample Input</H2>
+<pre>
+5 5
+50 1
+13 13
+</pre>
+
+<H2>Output for the Sample Input</H2>
+<pre>
+2
+50
+8
+</pre>

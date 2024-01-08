@@ -1,0 +1,134 @@
+
+<H1><font color="#000">Problem E:</font> Manhattan Wiring</H1>
+
+<p>
+There is a rectangular area containing <i>n</i> &times; <i>m</i> cells. Two cells are marked with "2", and another two with "3". Some cells are occupied by obstacles. You should connect the two "2"s and also the two "3"s with non-intersecting lines. Lines can run only vertically or horizontally connecting
+centers of cells without obstacles.
+</p>
+<p>
+Lines cannot run on a cell with an obstacle. Only one line can run on a cell at most once. Hence,
+a line cannot intersect with the other line, nor with itself. Under these constraints, the total
+length of the two lines should be minimized. The length of a line is defined as the number of
+cell borders it passes. In particular, a line connecting cells sharing their border has length 1.
+</p>
+<p>
+Fig. 6(a) shows an example setting. Fig. 6(b) shows two lines satisfying the constraints above
+with minimum total length 18.
+</p>
+<br>
+<center>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE1_manhattanWiring">
+<p>
+Figure 6: An example setting and its solution
+</p>
+
+</center>
+
+<H2>Input</H2>
+
+<p>
+The input consists of multiple datasets, each in the following format.
+</p>
+<pre>
+       <i>n m</i>
+       row<sub>1</sub>
+          ...
+       row<sub><i>n</i></sub>
+</pre>
+
+<p>
+<i>n</i> is the number of rows which satisfies 2 &le; <i>n</i> &le; 9. <i>m</i> is the number of columns which satisfies
+2 &le; <i>m</i> &le; 9. Each row<sub><i>i</i></sub> is a sequence of <i>m</i> digits separated by a space. The digits mean the
+following.
+</p>
+
+
+<p><span>0</span>:   Empty</p>
+<p><span>1</span>:   Occupied by an obstacle</p>
+<p><span>2</span>:   Marked with "2"</p>
+<p><span>3</span>:   Marked with "3"</p>
+
+<p>
+The end of the input is indicated with a line containing two zeros separated by a space.
+</p>
+
+<H2>Output</H2>
+
+<p>
+For each dataset, one line containing the minimum total length of the two lines should be output.
+If there is no pair of lines satisfying the requirement, answer "0" instead. No other characters
+should be contained in the output.
+
+</p>
+
+<H2>Sample Input</H2>
+<pre>
+5 5
+0 0 0 0 0
+0 0 0 3 0
+2 0 2 0 0
+1 0 1 1 1
+0 0 0 0 3
+2 3
+2 2 0
+0 3 3
+6 5
+2 0 0 0 0
+0 3 0 0 0
+0 0 0 0 0
+1 1 1 0 0
+0 0 0 0 0
+0 0 2 3 0
+5 9
+0 0 0 0 0 0 0 0 0
+0 0 0 0 3 0 0 0 0
+0 2 0 0 0 0 0 2 0
+0 0 0 0 3 0 0 0 0
+0 0 0 0 0 0 0 0 0
+9 9
+3 0 0 0 0 0 0 0 2
+0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0
+2 0 0 0 0 0 0 0 3
+9 9
+0 0 0 1 0 0 0 0 0
+0 2 0 1 0 0 0 0 3
+0 0 0 1 0 0 0 0 2
+0 0 0 1 0 0 0 0 3
+0 0 0 1 1 1 0 0 0
+0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0
+9 9
+0 0 0 0 0 0 0 0 0
+0 3 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 2 3 2
+0 0
+</pre>
+
+<H2>Output for the Sample Input</H2>
+<pre>
+18
+2
+17
+12
+0
+52
+43
+</pre>
+
+
+
+

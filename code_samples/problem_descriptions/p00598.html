@@ -1,0 +1,94 @@
+
+<H1><font color="#000000">Problem D:</font> Operations with Finite Sets</H1>
+
+<p>
+Let <i>A, B, C, D, E</i> be sets of integers and let <i>U</i> is a universal set that includes all sets under consideration. All elements in any set are different (no repetitions).
+</p>
+
+<p>
+u - <b>union</b> of two sets, <i>AuB</i> = {<i>x &isin; U</i> : <i>x &isin; A</i> or <i>x &isin; B</i>} is the set of all elements which belong to <i>A</i> or <i>B</i>.
+</p>
+
+<p>
+i - <b>intersection</b> of two sets, <i>AiB</i> = {<i>x &isin; U</i> : <i>x &isin; A</i> and <i>x &isin; B</i>} is the set of all elements which belong to both <i>A</i> and <i>B</i>.
+</p>
+
+<p>
+d - <b>difference</b> of two sets, <i>AdB</i> = {<i>x &isin; U</i> : <i>x &isin; A</i>, <i>x &notin; B</i>} is the set of those elements of <i>A</i> which do not belong to <i>B</i>.
+</p>
+
+<p>
+s - <b>symmetric difference</b> of two sets, <i>AsB</i> = (<i>AdB</i>)<i>u</i>(<i>BdA</i>) consists of those elements which belong to <i>A</i> or <i>B</i> but not to both.
+</p>
+
+<p>
+c - <b>complement</b> of a set, <i>cA</i> = {<i>x &isin; U</i> : <i>x &notin; A</i>}, is set of elements which belong to <i>U</i> but do not belong to <i>A</i>. Unary operator <i>c</i> has higest precedence.
+</p>
+
+
+<p>
+The universal set <i>U</i> is defined as a union of all sets specified in data. 
+</p>
+
+<p>
+Your task is to determine the result of an expression, which includes sets, set operations and parenthesis (any number of parenthesis and any correct enclosure of parenthesis may take place).
+</p>
+
+<H2>Input</H2>
+
+<p>
+Input consists of several pairs of lines difining sets and one pair of lines defining an expression. Each pair of lines for set definition includes the following.
+</p>
+
+<p>
+<i>Line 1</i>: Set name (A, B, C, D, E), number of elements in a set.
+</p>
+<p>
+<i>Line 2</i>: Set elements separated by blanks.
+</p>
+<p>
+Pair of lines for expression definition:
+</p>
+<p>
+<i>Line 1</i>: R 0
+</p>
+<p>
+<i>Line 2</i>: Expression consisting of set names, operators and parenthesis (no blanks).
+</p>
+
+<p>
+Number of sets can vary from 1 to 5. Set names can be specified in any order. Each set consists of 1-100 elements. Pair of lines for expression definition signals the end of data set. Input file includes several data sets. The number of datasets is less than 20.
+</p>
+
+
+<H2>Output</H2>
+
+<p>
+For each data set, the output should contain one line with resulting set elements sorted in ascending order separated by blanks. If the result contains no set elements then the line should contain the text NULL.
+</p>
+
+<H2>Sample Input</H2>
+<pre>
+A 3
+1 3 -1
+B 4
+3 1 5 7
+D 1
+5
+R 0
+cAiBdD
+C 3
+1 2 3
+A 4
+2 10 8 3
+B 3
+2 4 8
+R 0
+(As(AiB))uC
+</pre>
+
+<H2>Output for the Sample Input</H2>
+<pre>
+7
+1 2 3 10
+</pre>

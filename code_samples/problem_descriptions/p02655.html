@@ -1,0 +1,117 @@
+<span class="lang-en">
+<p>Score : <var>1200</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>We have <var>N</var> boxes numbered <var>1</var> to <var>N</var>, and <var>M</var> balls numbered <var>1</var> to <var>M</var>.
+Currently, Ball <var>i</var> is in Box <var>A_i</var>.</p>
+<p>You can do the following operation:</p>
+<ul>
+<li>Choose a box containing two or more balls, pick up one of the balls from that box, and put it into another box.</li>
+</ul>
+<p>Since the balls are very easy to break, you cannot move Ball <var>i</var> more than <var>C_i</var> times in total.
+Within this limit, you can do the operation any number of times.</p>
+<p>Your objective is to have Ball <var>i</var> in Box <var>B_i</var> for every <var>i</var> (<var>1 \leq i \leq M</var>).
+Determine whether this objective is achievable.
+If it is, also find the minimum number of operations required to achieve it.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 \leq N \leq 10^5</var></li>
+<li><var>1 \leq M \leq 10^5</var></li>
+<li><var>1 \leq A_i,B_i \leq N</var></li>
+<li><var>1 \leq C_i \leq 10^5</var></li>
+<li>In the situation where the objective is achieved, every box contains one or more balls.
+That is, for every <var>i</var> (<var>1 \leq i \leq N</var>), there exists <var>j</var> such that <var>B_j=i</var>.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var> <var>M</var>
+<var>A_1</var> <var>B_1</var> <var>C_1</var>
+<var>A_2</var> <var>B_2</var> <var>C_2</var>
+<var>\vdots</var>
+<var>A_M</var> <var>B_M</var> <var>C_M</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>If the objective is unachievable, print <var>-1</var>; if it is achievable, print the minimum number of operations required to achieve it.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>3 3
+1 2 1
+2 1 1
+1 3 2
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>3
+</pre>
+<p>We can achieve the objective in three operations, as follows:</p>
+<ul>
+<li>Pick up Ball <var>1</var> from Box <var>1</var> and put it into Box <var>2</var>.</li>
+<li>Pick up Ball <var>2</var> from Box <var>2</var> and put it into Box <var>1</var>.</li>
+<li>Pick up Ball <var>3</var> from Box <var>1</var> and put it into Box <var>3</var>.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>2 2
+1 2 1
+2 1 1
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>-1
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>5 5
+1 2 1
+2 1 1
+1 3 2
+4 5 1
+5 4 1
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>6
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 4</h3><pre>1 1
+1 1 1
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 4</h3><pre>0
+</pre></section>
+</div>
+</span>

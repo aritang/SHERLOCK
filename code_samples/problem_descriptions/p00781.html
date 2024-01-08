@@ -1,0 +1,94 @@
+
+<H1><font color="#000">Problem B:</font> Lattice Practices</H1>
+
+<p>
+Once upon a time, there was a king who loved beautiful costumes very much. The king had a special cocoon bed to make excellent cloth of silk. The cocoon bed had 16 small square rooms, forming a 4 &times; 4 lattice, for 16 silkworms. The cocoon bed can be depicted as follows:
+</p>
+
+<center>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE1_lattice1">
+</center>
+
+<p>
+The cocoon bed can be divided into 10 rectangular boards, each of which has 5 slits:
+</p>
+
+<center>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE1_lattice2">
+</center>
+
+<p>
+Note that, except for the slit depth, there is no difference between the left side and the right side of the board (or, between the front and the back); thus, we cannot distinguish a symmetric board from its rotated image as is shown in the following:
+</p>
+
+<center>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE1_lattice3">
+</center>
+
+<p>
+Slits have two kinds of depth, either shallow or deep. The cocoon bed should be constructed by fitting five of the boards vertically and the others horizontally, matching a shallow slit with a deep slit.
+</p>
+
+<p>
+Your job is to write a program that calculates the number of possible configurations to make the lattice. You may assume that there is no pair of identical boards. Notice that we are interested in the number of essentially different configurations and therefore you should not count mirror image configurations and rotated configurations separately as different configurations.
+</p>
+
+<p>
+The following is an example of mirror image and rotated configurations, showing vertical and horizontal boards separately, where shallow and deep slits are denoted by '1' and '0' respectively.
+</p>
+
+<center>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE1_lattice4">
+</center>
+
+
+<p>
+Notice that a rotation may exchange position of a vertical board and a horizontal board.
+</p>
+
+<H2>Input</H2>
+
+<p>
+The input consists of multiple data sets, each in a line. A data set gives the patterns of slits of 10 boards used to construct the lattice. The format of a data set is as follows:
+</p>
+
+<pre>
+XXXXX XXXXX XXXXX XXXXX XXXXX XXXXX XXXXX XXXXX XXXXX XXXXX
+</pre>
+
+<p>
+Each x is either '0' or '1'. '0' means a deep slit, and '1' a shallow slit. A block of five slit descriptions corresponds to a board. There are 10 blocks of slit descriptions in a line. Two adjacent blocks are separated by a space.
+</p>
+
+<p>
+For example, the first data set in the Sample Input means the set of the following 10 boards:
+</p>
+
+<center>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE1_lattice5">
+</center>
+
+<p>
+The end of the input is indicated by a line consisting solely of three characters "END".
+</p>
+
+<H2>Output</H2>
+
+<p>
+For each data set, the number of possible configurations to make the lattice from the given 10 boards should be output, each in a separate line.
+</p>
+
+
+<H2>Sample Input</H2>
+<pre>
+10000 01000 00100 11000 01100 11111 01110 11100 10110 11110
+10101 01000 00000 11001 01100 11101 01110 11100 10110 11010
+END
+</pre>
+
+<H2>Output for the Sample Input</H2>
+<pre>
+40
+6
+</pre>
+

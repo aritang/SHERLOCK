@@ -1,0 +1,98 @@
+<span class="lang-en">
+<p>Score : <var>200</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>Our world is one-dimensional, and ruled by two empires called Empire A and Empire B.</p>
+<p>The capital of Empire A is located at coordinate <var>X</var>, and that of Empire B is located at coordinate <var>Y</var>.</p>
+<p>One day, Empire A becomes inclined to put the cities at coordinates <var>x_1, x_2, ..., x_N</var> under its control, and Empire B becomes inclined to put the cities at coordinates <var>y_1, y_2, ..., y_M</var> under its control.</p>
+<p>If there exists an integer <var>Z</var> that satisfies all of the following three conditions, they will come to an agreement, but otherwise war will break out.</p>
+<ul>
+<li><var>X &lt; Z \leq Y</var></li>
+<li><var>x_1, x_2, ..., x_N &lt; Z</var></li>
+<li><var>y_1, y_2, ..., y_M \geq Z</var></li>
+</ul>
+<p>Determine if war will break out.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li>All values in input are integers.</li>
+<li><var>1 \leq N, M \leq 100</var></li>
+<li><var>-100 \leq X &lt; Y \leq 100</var></li>
+<li><var>-100 \leq x_i, y_i \leq 100</var></li>
+<li><var>x_1, x_2, ..., x_N \neq X</var></li>
+<li><var>x_i</var> are all different.</li>
+<li><var>y_1, y_2, ..., y_M \neq Y</var></li>
+<li><var>y_i</var> are all different.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var> <var>M</var> <var>X</var> <var>Y</var>
+<var>x_1</var> <var>x_2</var> <var>...</var> <var>x_N</var>
+<var>y_1</var> <var>y_2</var> <var>...</var> <var>y_M</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>If war will break out, print <code>War</code>; otherwise, print <code>No War</code>.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>3 2 10 20
+8 15 13
+16 22
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>No War
+</pre>
+<p>The choice <var>Z = 16</var> satisfies all of the three conditions as follows, thus they will come to an agreement.</p>
+<ul>
+<li><var>X = 10 &lt; 16 \leq 20 = Y</var></li>
+<li><var>8, 15, 13 &lt; 16</var></li>
+<li><var>16, 22 \geq 16</var></li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>4 2 -48 -1
+-20 -35 -91 -23
+-22 66
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>War
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>5 3 6 8
+-10 3 1 5 -100
+100 6 14
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>War
+</pre></section>
+</div>
+</span>

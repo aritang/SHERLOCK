@@ -1,0 +1,107 @@
+<span class="lang-en">
+<p>Score : <var>1600</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>There are <var>A</var> slimes lining up in a row.
+Initially, the sizes of the slimes are all <var>1</var>.</p>
+<p>Snuke can repeatedly perform the following operation.</p>
+<ul>
+<li>Choose a positive even number <var>M</var>. Then, select <var>M</var> consecutive slimes and form <var>M / 2</var> pairs from those slimes as follows: pair the <var>1</var>-st and <var>2</var>-nd of them from the left, the <var>3</var>-rd and <var>4</var>-th of them, <var>...</var>, the <var>(M-1)</var>-th and <var>M</var>-th of them. Combine each pair of slimes into one larger slime. Here, the size of a combined slime is the sum of the individual slimes before combination. The order of the <var>M / 2</var> combined slimes remain the same as the <var>M / 2</var> pairs of slimes before combination.</li>
+</ul>
+<p>Snuke wants to get to the situation where there are exactly <var>N</var> slimes, and the size of the <var>i</var>-th (<var>1 ≤ i ≤ N</var>) slime from the left is <var>a_i</var>.
+Find the minimum number of operations required to achieve his goal.</p>
+<p>Note that <var>A</var> is not directly given as input. Assume <var>A = a_1 + a_2 + ... + a_N</var>.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 ≤ N ≤ 10^5</var></li>
+<li><var>a_i</var> is an integer.</li>
+<li><var>1 ≤ a_i ≤ 10^9</var></li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+<var>a_1</var> <var>a_2</var> <var>...</var> <var>a_N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the minimum number of operations required to achieve Snuke's goal.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>2
+3 3
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>2
+</pre>
+<p>One way to achieve Snuke's goal is as follows.
+Here, the selected slimes are marked in bold.</p>
+<ul>
+<li>(1, <strong>1</strong>, <strong>1</strong>, <strong>1</strong>, <strong>1</strong>, 1) → (1, <strong>2</strong>, <strong>2</strong>, 1)</li>
+<li>(<strong>1</strong>, <strong>2</strong>, <strong>2</strong>, <strong>1</strong>) → (<strong>3</strong>, <strong>3</strong>)</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>4
+2 1 2 2
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>2
+</pre>
+<p>One way to achieve Snuke's goal is as follows.</p>
+<ul>
+<li>(<strong>1</strong>, <strong>1</strong>, 1, 1, 1, 1, 1) → (<strong>2</strong>, 1, 1, 1, 1, 1)</li>
+<li>(2, 1, <strong>1</strong>, <strong>1</strong>, <strong>1</strong>, <strong>1</strong>) → (2, 1, <strong>2</strong>, <strong>2</strong>)</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>1
+1
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>0
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 4</h3><pre>10
+3 1 4 1 5 9 2 6 5 3
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 4</h3><pre>10
+</pre></section>
+</div>
+</span>

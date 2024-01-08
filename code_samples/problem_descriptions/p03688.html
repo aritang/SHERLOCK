@@ -1,0 +1,123 @@
+<span class="lang-en">
+<p>Score : <var>700</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>There are <var>N</var> cats.
+We number them from <var>1</var> through <var>N</var>.</p>
+<p>Each of the cats wears a hat.
+Cat <var>i</var> says: "there are exactly <var>a_i</var> different colors among the <var>N - 1</var> hats worn by the cats except me."</p>
+<p>Determine whether there exists a sequence of colors of the hats that is consistent with the remarks of the cats.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>2 ≤ N ≤ 10^5</var></li>
+<li><var>1 ≤ a_i ≤ N-1</var></li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+<var>a_1</var> <var>a_2</var> <var>...</var> <var>a_N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print <code>Yes</code> if there exists a sequence of colors of the hats that is consistent with the remarks of the cats; print <code>No</code> otherwise.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>3
+1 2 2
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>Yes
+</pre>
+<p>For example, if cat <var>1</var>, <var>2</var> and <var>3</var> wears red, blue and blue hats, respectively, it is consistent with the remarks of the cats.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>3
+1 1 2
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>No
+</pre>
+<p>From the remark of cat <var>1</var>, we can see that cat <var>2</var> and <var>3</var> wear hats of the same color.
+Also, from the remark of cat <var>2</var>, we can see that cat <var>1</var> and <var>3</var> wear hats of the same color.
+Therefore, cat <var>1</var> and <var>2</var> wear hats of the same color, which contradicts the remark of cat <var>3</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>5
+4 3 4 3 4
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>No
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 4</h3><pre>3
+2 2 2
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 4</h3><pre>Yes
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 5</h3><pre>4
+2 2 2 2
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 5</h3><pre>Yes
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 6</h3><pre>5
+3 3 3 3 3
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 6</h3><pre>No
+</pre></section>
+</div>
+</span>

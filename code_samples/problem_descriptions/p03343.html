@@ -1,0 +1,86 @@
+<span class="lang-en">
+<p>Score : <var>600</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>You are given an integer sequence <var>A</var> of length <var>N</var> and an integer <var>K</var>.
+You will perform the following operation on this sequence <var>Q</var> times:</p>
+<ul>
+<li>Choose a contiguous subsequence of length <var>K</var>, then remove the smallest element among the <var>K</var> elements contained in the chosen subsequence (if there are multiple such elements, choose one of them as you like).</li>
+</ul>
+<p>Let <var>X</var> and <var>Y</var> be the values of the largest and smallest element removed in the <var>Q</var> operations. You would like <var>X-Y</var> to be as small as possible.
+Find the smallest possible value of <var>X-Y</var> when the <var>Q</var> operations are performed optimally.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 \leq N \leq 2000</var></li>
+<li><var>1 \leq K \leq N</var></li>
+<li><var>1 \leq Q \leq N-K+1</var></li>
+<li><var>1 \leq A_i \leq 10^9</var></li>
+<li>All values in input are integers.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var> <var>K</var> <var>Q</var>
+<var>A_1</var> <var>A_2</var> <var>...</var> <var>A_N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the smallest possible value of <var>X-Y</var>.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>5 3 2
+4 3 1 5 2
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>1
+</pre>
+<p>In the first operation, whichever contiguous subsequence of length <var>3</var> we choose, the minimum element in it is <var>1</var>.
+Thus, the first operation removes <var>A_3=1</var> and now we have <var>A=(4,3,5,2)</var>.
+In the second operation, it is optimal to choose <var>(A_2,A_3,A_4)=(3,5,2)</var> as the contiguous subsequence of length <var>3</var> and remove <var>A_4=2</var>.
+In this case, the largest element removed is <var>2</var>, and the smallest is <var>1</var>, so their difference is <var>2-1=1</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>10 1 6
+1 1 2 3 5 8 13 21 34 55
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>7
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>11 7 5
+24979445 861648772 623690081 433933447 476190629 262703497 211047202 971407775 628894325 731963982 822804784
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>451211184
+</pre></section>
+</div>
+</span>

@@ -1,0 +1,114 @@
+<span class="lang-en">
+<p>Score : <var>400</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>You have <var>N</var> items and a bag of strength <var>W</var>.
+The <var>i</var>-th item has a weight of <var>w_i</var> and a value of <var>v_i</var>.</p>
+<p>You will select some of the items and put them in the bag.
+Here, the total weight of the selected items needs to be at most <var>W</var>.</p>
+<p>Your objective is to maximize the total value of the selected items.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 ≤ N ≤ 100</var></li>
+<li><var>1 ≤ W ≤ 10^9</var></li>
+<li><var>1 ≤ w_i ≤ 10^9</var></li>
+<li>For each <var>i = 2,3,...,N</var>, <var>w_1 ≤ w_i ≤ w_1 + 3</var>.</li>
+<li><var>1 ≤ v_i ≤ 10^7</var></li>
+<li><var>W</var>, each <var>w_i</var> and <var>v_i</var> are integers.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var> <var>W</var>
+<var>w_1</var> <var>v_1</var>
+<var>w_2</var> <var>v_2</var>
+:
+<var>w_N</var> <var>v_N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the maximum possible total value of the selected items.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>4 6
+2 1
+3 4
+4 10
+3 4
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>11
+</pre>
+<p>The first and third items should be selected.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>4 6
+2 1
+3 7
+4 10
+3 6
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>13
+</pre>
+<p>The second and fourth items should be selected.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>4 10
+1 100
+1 100
+1 100
+1 100
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>400
+</pre>
+<p>You can take everything.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 4</h3><pre>4 1
+10 100
+10 100
+10 100
+10 100
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 4</h3><pre>0
+</pre>
+<p>You can take nothing.</p></section>
+</div>
+</span>

@@ -1,0 +1,60 @@
+<span class="lang-en">
+<p>Score : <var>200</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>For a string <var>S</var> consisting of the uppercase English letters <code>P</code> and <code>D</code>, let the <em>doctoral and postdoctoral quotient</em> of <var>S</var> be the total number of occurrences of <code>D</code> and <code>PD</code> in <var>S</var> as contiguous substrings. For example, if <var>S =</var> <code>PPDDP</code>, it contains two occurrences of <code>D</code> and one occurrence of <code>PD</code> as contiguous substrings, so the doctoral and postdoctoral quotient of <var>S</var> is <var>3</var>.</p>
+<p>We have a string <var>T</var> consisting of <code>P</code>, <code>D</code>, and <code>?</code>.</p>
+<p>Among the strings that can be obtained by replacing each <code>?</code> in <var>T</var> with <code>P</code> or <code>D</code>, find one with the maximum possible doctoral and postdoctoral quotient.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 \leq |T| \leq 2 \times 10^5</var></li>
+<li><var>T</var> consists of <code>P</code>, <code>D</code>, and <code>?</code>.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>T</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print one string with the maximum possible doctoral and postdoctoral quotient among the strings that can be obtained by replacing each <code>?</code> in <var>T</var> with <code>P</code> or <code>D</code>.
+If there are multiple such strings, you may print any of them.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>PD?D??P
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>PDPDPDP
+</pre>
+<p>This string contains three occurrences of <code>D</code> and three occurrences of <code>PD</code> as contiguous substrings, so its doctoral and postdoctoral quotient is <var>6</var>, which is the maximum doctoral and postdoctoral quotient of a string obtained by replacing each <code>?</code> in <var>T</var> with <code>P</code> or <code>D</code>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>P?P?
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>PDPD
+</pre></section>
+</div>
+</span>

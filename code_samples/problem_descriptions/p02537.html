@@ -1,0 +1,69 @@
+<span class="lang-en">
+<p>Score : <var>400</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>You are given a sequence <var>A_1, A_2, ..., A_N</var> and an integer <var>K</var>.</p>
+<p>Print the maximum possible length of a sequence <var>B</var> that satisfies the following conditions:</p>
+<ul>
+<li><var>B</var> is a (not necessarily continuous) subsequence of <var>A</var>.</li>
+<li>For each pair of adjacents elements of <var>B</var>, the absolute difference of the elements is at most <var>K</var>.</li>
+</ul>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 \leq N \leq 300,000</var></li>
+<li><var>0 \leq A_i \leq 300,000</var></li>
+<li><var>0 \leq K \leq 300,000</var></li>
+<li>All values in input are integers.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var> <var>K</var>
+<var>A_1</var>
+<var>A_2</var>
+<var>:</var>
+<var>A_N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the answer.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>10 3
+1
+5
+4
+3
+8
+6
+9
+7
+2
+4
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>7
+</pre>
+<p>For example, <var>B = (1, 4, 3, 6, 9, 7, 4)</var> satisfies the conditions.</p>
+<ul>
+<li>It is a subsequence of <var>A = (1, 5, 4, 3, 8, 6, 9, 7, 2, 4)</var>.</li>
+<li>All of the absolute differences between two adjacent elements (<var>|1-4|, |4-3|, |3-6|, |6-9|, |9-7|, |7-4|</var>) are at most <var>K = 3</var>.</li>
+</ul></section>
+</div>
+</span>

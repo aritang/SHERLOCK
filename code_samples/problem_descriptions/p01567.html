@@ -1,0 +1,93 @@
+
+<h1>Presentation</h1>
+<p>You are a researcher investigating  algorithms on  binary trees.
+Binary tree is a data structure composed of branch nodes and leaf nodes.
+Every branch nodes have left child and right child, and each child is either a branch node or a leaf node.
+The root of a binary tree is the branch node which has no parent.
+</p>
+<p>You are preparing for your presentation and you have to make a figure of  binary trees using a software.
+You have already made a figure corresponding to a binary tree which is composed of one branch node and two leaf nodes (Figure 1.)
+However, suddenly the function of your software to create a figure  was broken.
+You  are very upset because  in five hours you have to make the presentation in front of large audience.
+</p>
+<p>You decided to make the figure of the binary trees using only copy function, shrink function and paste function of the presentation tool.
+That is, you can do only following two types of operations.
+</p>
+<ul>
+  <li><p> Copy the current figure to the clipboard.</p>
+    <ul><li><p>The figure copied to the clipboard before is removed.</p></li></ul>
+  </li>
+  <li><p> Paste the copied figure (with shrinking, if needed), putting the root of the pasted figure on a leaf node of the current figure.</p>
+    <ul><li><p> You can paste the copied figure multiple times.</p></li></ul>
+  </li>
+</ul>
+
+<p>Moreover, you decided to make the figure using the minimum number of paste operations because paste operation is very time cosuming.
+Now, your job is to calculate the minimum possible number of paste operations to  produce the target figure.
+</p>
+<p><center><img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE_sample1_0" height="149" width="178"></center></p>
+<p><center><i>Figure 1: initial state</i></center></p>
+<p>For example, the answer for the instance of sample 1(Figure 4) is 3, because you can  produce the target figure by following operations and this is minimum.
+</p>
+<p><center><img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE_sample1_1" height="192" width="257"></center></p>
+<p><center><i>Figure 2: intermediate 1</i></center></p>
+<p><center><img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE_sample1_2" height="183" width="243"></center></p>
+<p><center><i>Figure 3: intermediate 2</i></center></p>
+<p><center><img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE_sample1_3" height="219" width="291"></center></p>
+<p><center><i>Figure 4: Goal</i></center></p>
+
+<h2>Input</h2>
+<p>The input is a line which indicates a binary tree.
+The grammar of the expression is given by the following BNF.
+</p>
+<blockquote>
+&lt;tree&gt; ::= &lt;leaf&gt; | &quot;(&quot; &lt;tree&gt; &lt;tree&gt; &quot;)&quot;<br>&lt;leaf&gt; ::= &quot;()&quot;<br></blockquote>
+
+<p>Every input obeys this syntax.
+
+You can assume that every tree in the input has at least 1 branch node, and that it has no more than 10^5 branch nodes.
+</p>
+
+<h2>Output</h2>
+<p>A line containing the minimum possible number of paste operations to make the given binary tree.
+</p>
+
+<h2>Sample Input 1</h2>
+
+<pre>((()())(((()())(()()))()))
+</pre>
+
+<h2>Output for the Sample Input 1</h2>
+
+<pre>3
+</pre>
+
+<h2>Sample Input 2</h2>
+
+<pre>(((()())(()()))(()()))
+</pre>
+
+<h2>Output for the Sample Input 2</h2>
+
+<pre>4
+</pre>
+
+<h2>Sample Input 3</h2>
+
+<pre>((()(()()))((()(()()))()))
+</pre>
+
+<h2>Output for the Sample Input 3</h2>
+
+<pre>3
+</pre>
+
+<h2>Sample Input 4</h2>
+
+<pre>(()())
+</pre>
+
+<h2>Output for the Sample Input 4</h2>
+
+<pre>0
+</pre>

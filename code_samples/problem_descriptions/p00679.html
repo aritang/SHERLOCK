@@ -1,0 +1,94 @@
+
+
+
+<h1>KND Warp</h1>
+<h2>Problem</h2>
+<p>KND君は会津大学に在籍する学生プログラマだ。彼はその優秀な頭脳をもってワープ装置を開発したことで有名である。ワープ装置とは便利なもので、ある場所から別の場所まで瞬時に移動することができる。彼はこれから地球上に点在するワープ装置を用いて様々な場所を可能な限り早くめぐる旅を計画している。</p>
+<p>彼の隣人であるあなたの仕事は3次元空間 (xyz直交座標系) 上に存在する<var>N</var>個のワープ装置をうまく使用して、1から<var>M</var>までの番号がふられた<var>M</var>個の点を順に通って、<var>M</var>番目の点まで移動するときの最小の所要時間を求めることだ。はじめは1番目の点にいるものとし、どのワープ装置も任意のワープ装置へ時間0で移動できる。ワープ以外の単位距離の移動は単位時間を要する。経由点のクエリは<var>Q</var>個与えられる。</p>
+
+<h2>Input</h2>
+<p>
+入力は複数のテストケースからなる。
+ひとつのテストケースは以下の形式で与えられる。
+入力の終わりを<var>N</var> = <var>Q</var> = 0のとき示す。
+</p>
+
+<pre>
+<var>N</var> <var>Q</var>
+<var>x<sub>1</sub></var> <var>y<sub>1</sub></var> <var>z<sub>1</sub></var>
+<var>x<sub>2</sub></var> <var>y<sub>2</sub></var> <var>z<sub>2</sub></var>
+...
+<var>x<sub>N</sub></var> <var>y<sub>N</sub></var> <var>z<sub>N</sub></var>
+<var>M<sub>1</sub></var>
+<var>x<sub>1,1</sub></var> <var>y<sub>1,1</sub></var> <var>z<sub>1,1</sub></var>
+<var>x<sub>1,2</sub></var> <var>y<sub>1,2</sub></var> <var>z<sub>1,2</sub></var>
+...
+<var>x<sub>1,M</sub></var> <var>y<sub>1,M</sub></var> <var>z<sub>1,M</sub></var>
+
+<var>M<sub>2</sub></var>
+<var>x<sub>2,1</sub></var> <var>y<sub>2,1</sub></var> <var>z<sub>2,1</sub></var>
+<var>x<sub>2,2</sub></var> <var>y<sub>2,2</sub></var> <var>z<sub>2,2</sub></var>
+...
+<var>x<sub>2,M</sub></var> <var>y<sub>2,M</sub></var> <var>z<sub>2,M</sub></var>
+...
+<var>M<sub>Q</sub></var>
+<var>x<sub>Q,1</sub></var> <var>y<sub>Q,1</sub></var> <var>z<sub>Q,1</sub></var>
+<var>x<sub>Q,2</sub></var> <var>y<sub>Q,2</sub></var> <var>z<sub>Q,2</sub></var>
+...
+<var>x<sub>Q,M</sub></var> <var>y<sub>Q,M</sub></var> <var>z<sub>Q,M</sub></var>
+</pre>
+
+<p>
+ここで、
+</p>
+<ul>
+<li><var>N</var>:ワープ装置の数</li>
+<li><var>Q</var>:旅のクエリの数</li>
+<li><var>M<sub>i</sub></var>:i番目クエリの旅で訪れる点の数</li>
+<li><var>x<sub>i,j</sub></var>,<var>y<sub>i,j</sub></var>,<var>z<sub>i,j</sub></var>:i番目のクエリの旅で訪れるj番目の点の座標(x,y,z)</li>
+</ul>
+<p>
+である。
+</p>
+
+<h2>Constraints</h2>
+<p>入力は以下の条件を満たす。</p>
+<ul>
+<li>テストケースの数は15個を超えない。</li>
+<li>入力の半分程度は<var>N</var>&le;1000を満たす。</li>
+<li>入力に含まれる値はすべて整数。</li>
+<li>2&le;<var>N</var>&le;100,000</li>
+<li>1&le;<var>Q</var>&le;1,000</li>
+<li>2&le;<var>M</var>&le;100</li>
+<li>-1,000,000&le;(全てのx,y,z座標値)&le;1,000,000</li>
+<li>ワープ装置は上記の制約を満たす空間中にランダムに分布する(Sample Inputは例外)。</li>
+<li>ワープ装置同士、中継点同士、ワープ装置と中継点はそれぞれ重なることがある。</li>
+</ul>
+
+<h2>Output</h2>
+<p>各クエリにつき最小の所要時間を一行に出力せよ。この値はジャッジ出力の値と10<sup>-4</sup>より大きい差を持ってはならない。</p>
+<h2>Sample Input</h2>
+<pre>
+3 2
+0 0 0
+1 1 1
+2 2 2
+4
+-1 -1 -1
+3 3 3
+-1 -1 -1
+4 4 4
+2
+1234 5678 9012
+1716 6155 9455
+0 0
+</pre>
+
+<h2>Sample Output</h2>
+<pre>
+12.124355653
+810.001234567
+</pre>
+
+<h2>Notes</h2>
+<p>入力ファイルのサイズは4MB程度になる。入力は高速にしたほうがよいが、たとえばC++であればcinでも十分である。</p>

@@ -1,0 +1,106 @@
+<span class="lang-en">
+<p>Score : <var>600</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>We have a rectangular grid of squares with <var>H</var> horizontal rows and <var>W</var> vertical columns. Let <var>(i,j)</var> denote the square at the <var>i</var>-th row from the top and the <var>j</var>-th column from the left.
+On this grid, there is a piece, which is initially placed at square <var>(s_r,s_c)</var>.</p>
+<p>Takahashi and Aoki will play a game, where each player has a string of length <var>N</var>.
+Takahashi's string is <var>S</var>, and Aoki's string is <var>T</var>. <var>S</var> and <var>T</var> both consist of four kinds of letters: <code>L</code>, <code>R</code>, <code>U</code> and <code>D</code>.</p>
+<p>The game consists of <var>N</var> steps. The <var>i</var>-th step proceeds as follows:</p>
+<ul>
+<li>First, Takahashi performs a move. He either moves the piece in the direction of <var>S_i</var>, or does not move the piece.</li>
+<li>Second, Aoki performs a move. He either moves the piece in the direction of <var>T_i</var>, or does not move the piece.</li>
+</ul>
+<p>Here, to move the piece in the direction of <code>L</code>, <code>R</code>, <code>U</code> and <code>D</code>, is to move the piece from square <var>(r,c)</var> to square <var>(r,c-1)</var>, <var>(r,c+1)</var>, <var>(r-1,c)</var> and <var>(r+1,c)</var>, respectively. If the destination square does not exist, the piece is removed from the grid, and the game ends, even if less than <var>N</var> steps are done.</p>
+<p>Takahashi wants to remove the piece from the grid in one of the <var>N</var> steps.
+Aoki, on the other hand, wants to finish the <var>N</var> steps with the piece remaining on the grid.
+Determine if the piece will remain on the grid at the end of the game when both players play optimally.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>2 \leq H,W \leq 2 \times 10^5</var></li>
+<li><var>2 \leq N \leq 2 \times 10^5</var></li>
+<li><var>1 \leq s_r \leq H</var></li>
+<li><var>1 \leq s_c \leq W</var></li>
+<li><var>|S|=|T|=N</var></li>
+<li><var>S</var> and <var>T</var> consists of the four kinds of letters <code>L</code>, <code>R</code>, <code>U</code> and <code>D</code>.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>H</var> <var>W</var> <var>N</var>
+<var>s_r</var> <var>s_c</var>
+<var>S</var>
+<var>T</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>If the piece will remain on the grid at the end of the game, print <code>YES</code>; otherwise, print <code>NO</code>.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>2 3 3
+2 2
+RRL
+LUD
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>YES
+</pre>
+<p>Here is one possible progress of the game:</p>
+<ul>
+<li>Takahashi moves the piece right. The piece is now at <var>(2,3)</var>.</li>
+<li>Aoki moves the piece left. The piece is now at <var>(2,2)</var>.</li>
+<li>Takahashi does not move the piece. The piece remains at <var>(2,2)</var>.</li>
+<li>Aoki moves the piece up. The piece is now at <var>(1,2)</var>.</li>
+<li>Takahashi moves the piece left. The piece is now at <var>(1,1)</var>.</li>
+<li>Aoki does not move the piece. The piece remains at <var>(1,1)</var>.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>4 3 5
+2 2
+UDRRR
+LLDUD
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>NO
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>5 6 11
+2 1
+RLDRRUDDLRL
+URRDRLLDLRD
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>NO
+</pre></section>
+</div>
+</span>

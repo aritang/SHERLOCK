@@ -1,0 +1,116 @@
+
+<H1><font color="#000">Problem D: </font>Clock Hands</H1>
+
+<p>
+We have an analog clock whose three hands (the second hand, the <i>minute</i> hand and the <i>hour</i> hand) rotate quite smoothly. You can measure two angles between the second hand and two other hands.
+</p>
+
+<p>
+Write a program to find the time at which "No two hands overlap each other" and "Two angles between the second hand and two other hands are equal" for the first time on or after a given time.
+</p>
+
+<center>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_clockHands1" style="aling:center;width:480px"><br/>
+<span>
+Figure D.1. Angles between the second hand and two other hands
+</span>
+
+</center>
+<br/>
+
+<p>
+Clocks are not limited to 12-hour clocks. The hour hand of an <var>H</var>-hour clock goes around once in <var>H</var> hours. The minute hand still goes around once every hour, and the second hand goes around once every minute. At 0:0:0 (midnight), all the hands are at the upright position.
+</p>
+
+
+<H2>Input</H2>
+
+<p>
+The input consists of multiple datasets. Each of the dataset has four integers <var>H</var>, <var>h</var>, <var>m</var> and <var>s</var> in one line, separated by a space. <var>H</var> means that the clock is an <var>H</var>-hour clock. <var>h</var>, <var>m</var> and <var>s</var> mean hour, minute and second of the specified time, respectively.
+</p>
+<p>
+You may assume 2 &le; <var>H</var> &le; 100, 0 &le; <var>h</var> &lt; <var>H</var>, 0 &le; <var>m</var> &lt; 60, and 0 &le; <var>s</var> &lt; 60.
+</p>
+
+<p>
+The end of the input is indicated by a line containing four zeros.
+</p>
+
+<center>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_clockHands2" style="aling:center;width:480px"><br/>
+<span>
+Figure D.2. Examples of H-hour clock (6-hour clock and 15-hour clock)
+</span>
+</center>
+
+<H2>Output</H2>
+
+<p>
+Output the time T at which "No two hands overlap each other" and "Two angles between the second hand and two other hands are equal" for the first time on and after the specified time.
+</p>
+
+<p>
+For <var>T</var> being <var>h<sub>o</sub></var>:<var>m<sub>o</sub></var>:<var>s<sub>o</sub></var> (<var>s<sub>o</sub></var> seconds past <var>m<sub>o</sub></var> minutes past <var>h<sub>o</sub></var> o'clock), output four non-negative integers <var>h<sub>o</sub></var>, <var>m<sub>o</sub></var>, <var>n</var>, and <var>d</var> in one line, separated by a space, where <var>n</var>/<var>d</var> is the irreducible fraction representing <var>s<sub>o</sub></var>. For integer <var>s<sub>o</sub></var> including 0, let <var>d</var> be 1.
+</p>
+
+<p>
+The time should be expressed in the remainder of <var>H</var> hours. In other words, one second after
+(<var>H</var> − 1):59:59 is 0:0:0, not <var>H</var>:0:0.
+</p>
+
+<H2>Sample Input</H2>
+<pre>
+12 0 0 0
+12 11 59 59
+12 1 56 0
+12 1 56 3
+12 1 56 34
+12 3 9 43
+12 3 10 14
+12 7 17 58
+12 7 18 28
+12 7 23 0
+12 7 23 31
+2 0 38 29
+2 0 39 0
+2 0 39 30
+2 1 6 20
+2 1 20 1
+2 1 20 31
+3 2 15 0
+3 2 59 30
+4 0 28 48
+5 1 5 40
+5 1 6 10
+5 1 7 41
+11 0 55 0
+0 0 0 0
+</pre>
+
+<H2>Output for the Sample Input</H2>
+<pre>
+0 0 43200 1427
+0 0 43200 1427
+1 56 4080 1427
+1 56 47280 1427
+1 57 4860 1427
+3 10 18600 1427
+3 10 61800 1427
+7 18 39240 1427
+7 18 82440 1427
+7 23 43140 1427
+7 24 720 1427
+0 38 4680 79
+0 39 2340 79
+0 40 0 1
+1 6 3960 79
+1 20 2400 79
+1 21 60 79
+2 15 0 1
+0 0 2700 89
+0 28 48 1
+1 6 320 33
+1 6 40 1
+1 8 120 11
+0 55 0 1
+</pre>

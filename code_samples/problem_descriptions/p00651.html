@@ -1,0 +1,83 @@
+
+<h1>Problem E: Legend of Storia</h1>
+<p>
+In Storia Kingdom, there is an artifact called "Perfect Sphere" made by a great meister Es. This is handed down for generations in the royal palace as a treasure. Es left a memo and filled mysterious values in it. Within achievements of researches, it has been revealed that the values denote coordinate values. However it is still unknown the definition of the coordinate system.
+</p>
+<p>
+By the way, you are a person who lived in age of Es lived. The values which meister Es left are defined by following. Es set an moving object in the artifact sphere. Surprisingly, that is rigid body and perpetual organization. The object rotates inside the sphere and it is always touching the inside surface of the sphere. This value is a coordinate of the tangent point by the object and the sphere, but it is not a three dimensional value. The object is a plate and this is a simple polygon. Here, "simple" means "non self-intersected". This rotates while touching a great circle of the sphere. Here, assume that the great circle is a circle <i>O</i> centered in the origin in the xy plane. (It is two-dimensional Cartesian coordinate system, the direction of positive x-value is right and the direction of positive y-value is up). This plate touches the circle <i>O</i> with a single point at the beginning of the movement. And it rotates in counterclockwise as the current touching point is the rotation fulcrum. When another point <i>X</i> of the plate touches the circle <i>O</i> newly, the plate continue to rotate as described above, but in the next rotation, the rotation fulcrum point is changed.  This will be the point <i>X</i>. If two or more points can be interpreted as the point <i>X</i>, the point <i>X</i> is a most distant point from the currently touching point <i>X'</i>. Here, that distance is the length of the arc of the circle <i>O</i> from the point <i>X'</i> to the point <i>X</i> in clockwise.
+</p>
+<p>
+Es asked you, an excellent assistant, to write a program that enumerates <i>Q</i> tangent points (fulcrum points while the movement) by the plate and the circle <i>O</i> while the movement of the plate described above in the chronological order. Of course, one and the previous one must be distinct points. Following figures show you examples of the movement of the plate inside the circle <i>O</i>.
+<br>
+1<br><img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_uapc2011_E1"><br>
+2<br><img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_uapc2011_E2"><br>
+3<br><img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_uapc2011_E3"><br>
+4<br><img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_uapc2011_E4"><br>
+</p>
+<h2>Input</h2>
+<p>
+Input consists of multiple datasets.<br>
+A dataset is given in a following format.
+</p>
+<pre>
+<i>N</i> <i>R</i> <i>Q</i>
+<i>x<sub>1</sub></i> <i>y<sub>1</sub></i>
+<i>x<sub>2</sub></i> <i>y<sub>2</sub></i>
+...
+<i>x<sub>N</sub></i> <i>y<sub>N</sub></i>
+</pre>
+
+<p>
+<i>N</i>, <i>R</i>, <i>Q</i> are integers that represent the number of points of the plate, the radius of the circle, and the number of points Es needs respectively.<br>
+Following <i>N</i> lines contain 2<i>N</i> integers that represent coordinates of the plate's points ( <i>x<sub>k</sub></i> , <i>y<sub>k</sub></i> ) in the circle.(1&le;<i>k</i>&le;<i>N</i>)<br>
+</p>
+<ul>
+You can assume following conditions.
+<li>Points of the plate are given in counterclockwise.</li>
+<li>No three points are co-linear.</li>
+<li><i>N</i>-1 points of the plate are given inside of the circle (distances between the center of the circle and these points are less than <i>R</i>). And 1 point is on the circle edge.</li>
+<i>N</i>=<i>R</i>=<i>Q</i>=0 shows the end of input.
+</ul>
+
+</p>
+<h2>Constraints</h2>
+<p>
+The number of datasets is less than or equal to 400.<br>
+3&le;<i>N</i>&le;25<br>
+1&le;<i>R</i>&le;1000<br>
+0&le;<i>Q</i>&le;100
+</p>
+<h2>Output</h2>
+<p>
+For each dataset, output (<i>Px</i> <i>Py</i>:real number) in <i>Q</i> in the following format.
+</p>
+<pre>
+<i>Px<sub>1</sub></i> <i>Px<sub>1</sub></i>
+<i>Px<sub>2</sub></i> <i>Py<sub>2</sub></i>
+...
+<i>Px<sub>N+1</sub></i> <i>Py<sub>N+1</sub></i>
+</pre>
+<p>
+These answers must satisfy |<i>Tx<sub>i</sub></i>-<i>Px<sub>i</sub></i>|&le;0.0001 and |<i>Ty<sub>i</sub></i>-<i>Py<sub>i</sub></i>|&le;0.0001.<br>
+Here, <i>Px<sub>i</sub></i>, <i>Py<sub>i</sub></i>(1&le;<i>i</i>&le;<i>Q</i>) are your output and <i>Tx<sub>i</sub></i>,<i>Ty<sub>i</sub></i>(1&le;<i>i</i>&le;<i>Q</i>) are judge's output.
+</p>
+<h2>Sample Input</h2>
+<pre>
+4 10 8
+0 -10
+3 -7
+0 -4
+-3 -7
+0 0 0
+</pre>
+<h2>Output for the Sample Input</h2>
+<pre>
+-4.146082488326 -9.100000000000
+-7.545870128753 -6.562000000000
+-9.587401146004 -2.842840000000
+-9.903199956975 1.388031200000
+-8.436422775690 5.369056784000
+-5.451089494781 8.383652146880
+-1.484560104812 9.889190123322
+2.749190104024 9.614673877565
+</pre>

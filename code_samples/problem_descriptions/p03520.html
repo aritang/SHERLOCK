@@ -1,0 +1,150 @@
+<span class="lang-en">
+<p>Score : <var>800</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>Snuke found a record of a tree with <var>N</var> vertices in ancient ruins.
+The findings are as follows:</p>
+<ul>
+<li>The vertices of the tree were numbered <var>1,2,...,N</var>, and the edges were numbered <var>1,2,...,N-1</var>.</li>
+<li>Edge <var>i</var> connected Vertex <var>a_i</var> and <var>b_i</var>.</li>
+<li>The length of each edge was an integer between <var>1</var> and <var>10^{18}</var> (inclusive).</li>
+<li>The sum of the shortest distances from Vertex <var>i</var> to Vertex <var>1,...,N</var> was <var>s_i</var>.</li>
+</ul>
+<p>From the information above, restore the length of each edge.
+<strong>The input guarantees that it is possible to determine the lengths of the edges consistently with the record.</strong>
+Furthermore, it can be proved that the length of each edge is uniquely determined in such a case.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>2 \leq N \leq 10^{5}</var></li>
+<li><var>1 \leq a_i,b_i \leq N</var></li>
+<li><var>1 \leq s_i \leq 10^{18}</var></li>
+<li>The given graph is a tree.</li>
+<li>All input values are integers.</li>
+<li>It is possible to consistently restore the lengths of the edges.</li>
+<li>In the restored graph, the length of each edge is an integer between <var>1</var> and <var>10^{18}</var> (inclusive).</li>
+</ul>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Partial Scores</h3><ul>
+<li>In the test set worth <var>300</var> points, <var>a_i = i, b_i = i+1</var>.</li>
+<li>In the test set worth <var>200</var> points, <var>N \geq 3, a_i = 1, b_i = i+1</var>.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+<var>a_1</var> <var>b_1</var>
+<var>:</var>
+<var>a_{N-1}</var> <var>b_{N-1}</var>
+<var>s_1</var> <var>s_2</var> <var>...</var> <var>s_{N}</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print <var>N-1</var> lines. The <var>i</var>-th line must contain the length of Edge <var>i</var>.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>4
+1 2
+2 3
+3 4
+8 6 6 8
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>1
+2
+1
+</pre>
+<ul>
+<li>The given record corresponds to the tree shown below:</li>
+</ul>
+<div style="text-align: center;">
+<img alt="010664dd33d69063a99075c0f7a391f8.png" src="https://atcoder.jp/img/asaporo2/010664dd33d69063a99075c0f7a391f8.png">
+</img></div>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>5
+1 2
+1 3
+1 4
+1 5
+10 13 16 19 22
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>1
+2
+3
+4
+</pre>
+<ul>
+<li>The given record corresponds to the tree shown below:</li>
+</ul>
+<div style="text-align: center;">
+<img alt="41891e0c5dc01850fd29636b200f7f49.png" src="https://atcoder.jp/img/asaporo2/41891e0c5dc01850fd29636b200f7f49.png">
+</img></div>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>15
+9 10
+9 15
+15 4
+4 13
+13 2
+13 11
+2 14
+13 6
+11 1
+1 12
+12 3
+12 7
+2 5
+14 8
+1154 890 2240 883 2047 2076 1590 1104 1726 1791 1091 1226 841 1000 901
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>5
+75
+2
+6
+7
+50
+10
+95
+9
+8
+78
+28
+89
+8
+</pre></section>
+</div>
+</span>

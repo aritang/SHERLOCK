@@ -1,0 +1,54 @@
+<h2>H: Revenge of UMG</h2>
+
+<h3>問題</h3>
+<p>'U', 'M', 'G' の三種類の文字からなる文字列 <var>T</var> に対し、<var>1, 2, ..., |T|</var> 文字目をそれぞれ <var>T_1, T_2, ..., T_{|T|}</var> と表すことにしたとき、以下の条件を満たす <var>(i, j, k)</var> の組の個数を、文字列 <var>T</var> の “UMG 数”と呼ぶことにします:</p>
+
+<ul>
+<li> <var>1 \leq i &lt; j &lt; k \leq |T|</var></li>
+<li> <var>j - i = k - j</var></li>
+<li> <var>T_i</var> = 'U', <var>T_j</var> = 'M', <var>T_k</var> = 'G'</li>
+</ul>
+
+<p>さて、'U', 'M', 'G', '?' の四種類の文字からなる文字列 <var>S</var> が与えられます。<var>S</var> の '?' をそれぞれ 'U', 'M', 'G' のいずれかに置き換えてできる文字列は、'?' の個数を <var>N</var> として <var>3^{N}</var> 通り考えられますが、それぞれの文字列の UMG 数について総和をとったものを <var>998244353</var> で割ったあまりを求めてください。</p>
+
+<h3>入力形式</h3>
+<pre><var>S</var></pre>
+
+<h3>制約</h3>
+<ul>
+<li> <var>3 \leq |S| \leq 2 \times 10^{5}</var></li>
+<li> <var>S</var> は 'U', 'M', 'G', '?' の四種類の文字からなる文字列である。</li>
+</ul>
+
+<h3>出力形式</h3>
+<p>答えを表す整数を一行に出力してください。<var>998244353</var> で割ったあまりを出力することに注意してください。</p>
+
+<h3>入力例 1</h3>
+<pre>?MG?</pre>
+
+<h3>出力例 1</h3>
+<pre>3</pre>
+
+<p>最初の '?' が 'U' でない場合には UMG 数は <var>0 </var> になります。最初の '?' を 'U' としたとき、</p>
+
+<ul>
+<li> <code>UMGU</code> の UMG 数は <var>1</var></li>
+<li> <code>UMGM</code> の UMG 数は <var>1</var></li>
+<li> <code>UMGG</code> の UMG 数は <var>1</var></li>
+</ul>
+
+<p>となり、合計値は <var>3</var> になります。</p>
+
+<h3>入力例 2</h3>
+<pre>UUMMGGGUMG</pre>
+
+<h3>出力例 2</h3>
+<pre>4</pre>
+
+<h3>入力例 3</h3>
+<pre>?????G????U???M??????G?????M????G???U??????M???G??</pre>
+
+<h3>出力例 3</h3>
+<pre>648330088</pre>
+
+<p><var>998244353</var> で割ったあまりを答えてください。</p>

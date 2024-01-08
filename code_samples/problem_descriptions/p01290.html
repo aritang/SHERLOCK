@@ -1,0 +1,95 @@
+
+<H1><font color="#000">Problem H:</font> Queen's Case</H1>
+
+<p>
+A small country called Maltius was governed by a queen. The queen was known as an oppressive ruler.
+People in the country suffered from heavy taxes and forced labor. So some young people decided to form
+a revolutionary army and fight against the queen. Now, they besieged the palace and have just rushed into
+the entrance.
+</p>
+<p>
+Your task is to write a program to determine whether the queen can escape or will be caught by the army.
+</p>
+<p>
+Here is detailed description.
+</p>
+<ul>
+    <li> The palace can be considered as grid squares.</li>
+    <li> The queen and the army move alternately. The queen moves first.</li>
+    <li> At each of their turns, they either move to an adjacent cell or stay at the same cell.</li>
+    <li> Each of them must follow the optimal strategy.</li>
+    <li> If the queen and the army are at the same cell, the queen will be caught by the army immediately.</li>
+    <li> If the queen is at any of exit cells alone after the army’s turn, the queen can escape from the army.</li>
+    <li> There may be cases in which the queen cannot escape but won’t be caught by the army forever,
+      under their optimal strategies.</li>
+</ul>
+
+
+<H2>Input</H2>
+
+<p>
+The input consists of multiple datasets. Each dataset describes a map of the palace. The first line of the input contains two integers <i>W</i> (1 &le; <i>W</i> &le; 30) and <i>H</i> (1 &le; <i>H</i> &le; 30), which indicate the width and height of the palace. The following <i>H</i> lines, each of which contains <i>W</i> characters, denote the map of the palace. "<span>Q</span>" indicates the queen, "<span>A</span>" the army,"<span>E</span>" an exit,"<span>#</span>" a wall and "<span>.</span>" a floor.
+</p>
+
+<p>
+The map contains exactly one "<span>Q</span>", exactly one "<span>A</span>" and at least one "<span>E</span>". You can assume both the queen and the army can reach all the exits.
+</p>
+
+<p>
+The last dataset is followed by a line containing two zeros. This line is not a part of any dataset and should not be processed.
+</p>
+
+
+<H2>Output</H2>
+
+<p>
+For each dataset, output "<span>Queen can escape.</span>", "<span>Army can catch Queen.</span>" or "<span>Queen can not escape and Army can not catch Queen.</span>" in a line.
+</p>
+
+<H2>Sample Input</H2>
+<pre>
+2 2
+QE
+EA
+3 1
+QAE
+3 1
+AQE
+5 5
+..E..
+.###.
+A###Q
+.###.
+..E..
+5 1
+A.E.Q
+5 5
+A....
+####.
+..E..
+.####
+....Q
+0 0
+</pre>
+
+<H2>Output for the Sample Input</H2>
+<pre>
+Queen can not escape and Army can not catch Queen.
+Army can catch Queen.
+Queen can escape.
+Queen can not escape and Army can not catch Queen.
+Army can catch Queen.
+Army can catch Queen.
+</pre>
+
+<h2>Hint</h2>
+
+<p>
+On the first sample input, the queen can move to exit cells, but either way the queen will be caught at the
+next army’s turn. So the optimal strategy for the queen is staying at the same cell. Then the army can
+move to exit cells as well, but again either way the army will miss the queen from the other exit. So the
+optimal strategy for the army is also staying at the same cell. Thus the queen cannot escape but won’t be
+caught.
+
+</p>
+

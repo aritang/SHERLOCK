@@ -1,0 +1,77 @@
+<span class="lang-en">
+<p>Score : <var>1000</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>Consider the following game:</p>
+<ul>
+<li>The game is played using a row of <var>N</var> squares and many stones.</li>
+<li>First, <var>a_i</var> stones are put in Square <var>i\ (1 \leq i \leq N)</var>.</li>
+<li>A player can perform the following operation as many time as desired: "Select an integer <var>i</var> such that Square <var>i</var> contains exactly <var>i</var> stones. Remove all the stones from Square <var>i</var>, and add one stone to each of the <var>i-1</var> squares from Square <var>1</var> to Square <var>i-1</var>."</li>
+<li>The final score of the player is the total number of the stones remaining in the squares.</li>
+</ul>
+<p>For a sequence <var>a</var> of length <var>N</var>, let <var>f(a)</var> be the minimum score that can be obtained when the game is played on <var>a</var>.</p>
+<p>Find the sum of <var>f(a)</var> over all sequences <var>a</var> of length <var>N</var> where each element is between <var>0</var> and <var>K</var> (inclusive).
+Since it can be extremely large, find the answer modulo <var>1000000007 (= 10^9+7)</var>.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 \leq N \leq 100</var></li>
+<li><var>1 \leq K \leq N</var></li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var> <var>K</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the sum of <var>f(a)</var> modulo <var>1000000007 (= 10^9+7)</var>.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>2 2
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>10
+</pre>
+<p>There are nine sequences of length <var>2</var> where each element is between <var>0</var> and <var>2</var>. For each of them, the value of <var>f(a)</var> and how to achieve it is as follows:</p>
+<ul>
+<li><var>f(\{0,0\})</var>: <var>0</var> (Nothing can be done)</li>
+<li><var>f(\{0,1\})</var>: <var>1</var> (Nothing can be done)</li>
+<li><var>f(\{0,2\})</var>: <var>0</var> (Select Square <var>2</var>, then Square <var>1</var>)</li>
+<li><var>f(\{1,0\})</var>: <var>0</var> (Select Square <var>1</var>)</li>
+<li><var>f(\{1,1\})</var>: <var>1</var> (Select Square <var>1</var>)</li>
+<li><var>f(\{1,2\})</var>: <var>0</var> (Select Square <var>1</var>, Square <var>2</var>, then Square <var>1</var>)</li>
+<li><var>f(\{2,0\})</var>: <var>2</var> (Nothing can be done)</li>
+<li><var>f(\{2,1\})</var>: <var>3</var> (Nothing can be done)</li>
+<li><var>f(\{2,2\})</var>: <var>3</var> (Select Square <var>2</var>)</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>20 17
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>983853488
+</pre></section>
+</div>
+</span>

@@ -1,0 +1,91 @@
+<span class="lang-en">
+<p>Score : <var>1000</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><style>
+   #nck {
+      width: 30px;
+      height: auto;
+   }
+</style>
+<p>There are <var>N</var> balls and <var>N+1</var> holes in a line. Balls are numbered <var>1</var> through <var>N</var> from left to right. Holes are numbered <var>1</var> through <var>N+1</var> from left to right. The <var>i</var>-th ball is located between the <var>i</var>-th hole and <var>(i+1)</var>-th hole. We denote the distance between neighboring items (one ball and one hole) from left to right as <var>d_i</var> (<var>1 \leq i \leq 2 \times N</var>). You are given two parameters <var>d_1</var> and <var>x</var>. <var>d_i - d_{i-1}</var> is equal to <var>x</var> for all <var>i</var> (<var>2 \leq i \leq 2 \times N</var>).</p>
+<p>We want to push all <var>N</var> balls into holes one by one. When a ball rolls over a hole, the ball will drop into the hole if there is no ball in the hole yet. Otherwise, the ball will pass this hole and continue to roll. (In any scenario considered in this problem, balls will never collide.)</p>
+<p>In each step, we will choose one of the remaining balls uniformly at random and then choose a direction (either left or right) uniformly at random and push the ball in this direction. Please calculate the expected total distance rolled by all balls during this process.</p>
+<p>For example, when <var>N = 3</var>, <var>d_1 = 1</var>, and <var>x = 1</var>, the following is one possible scenario:</p>
+<div style="text-align: center;">
+<img alt="c9264131788434ac062635a675a785e3.jpg" src="https://atcoder.jp/img/agc007/c9264131788434ac062635a675a785e3.jpg">
+</img></div>
+<ul>
+<li>first step: push the ball numbered <var>2</var> to its left, it will drop into the hole numbered <var>2</var>. The distance rolled is <var>3</var>.</li>
+<li>second step: push the ball numbered <var>1</var> to its right, it will pass the hole numbered <var>2</var> and drop into the hole numbered <var>3</var>. The distance rolled is <var>9</var>.</li>
+<li>third step: push the ball numbered <var>3</var> to its right, it will drop into the hole numbered <var>4</var>. The distance rolled is <var>6</var>.</li>
+</ul>
+<p>So the total distance in this scenario is <var>18</var>.</p>
+<p>Note that in all scenarios every ball will drop into some hole and there will be a hole containing no ball in the end.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 \leq N \leq 200,000</var></li>
+<li><var>1 \leq d_1 \leq 100</var></li>
+<li><var>0 \leq x \leq 100</var></li>
+<li>All input values are integers.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>The input is given from Standard Input in the following format:</p>
+<pre><var>N</var> <var>d_1</var> <var>x</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print a floating number denoting the answer. The relative or absolute error of your answer should not be higher than <var>10^{-9}</var>.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>1 3 3
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>4.500000000000000
+</pre>
+<p>The distance between the only ball and the left hole is <var>3</var> and distance between the only ball and the right hole is <var>6</var>. There are only two scenarios (i.e. push left and push right). The only ball will roll <var>3</var> and <var>6</var> unit distance, respectively. So the answer for this example is <var>(3+6)/2 = 4.5</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>2 1 0
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>2.500000000000000
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>1000 100 100
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>649620280.957660079002380
+</pre></section>
+</div>
+</span>

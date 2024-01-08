@@ -1,0 +1,79 @@
+<span class="lang-en">
+<p>Score : <var>200</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>We have a sequence <var>p</var> = {<var>p_1,\ p_2,\ ...,\ p_N</var>} which is a permutation of {<var>1,\ 2,\ ...,\ N</var>}.</p>
+<p>You can perform the following operation at most once: choose integers <var>i</var> and <var>j</var> <var>(1 \leq i &lt; j \leq N)</var>, and swap <var>p_i</var> and <var>p_j</var>. Note that you can also choose not to perform it.</p>
+<p>Print <code>YES</code> if you can sort <var>p</var> in ascending order in this way, and <code>NO</code> otherwise.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li>All values in input are integers.</li>
+<li><var>2 \leq N \leq 50</var></li>
+<li><var>p</var> is a permutation of {<var>1,\ 2,\ ...,\ N</var>}.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+<var>p_1</var> <var>p_2</var> <var>...</var> <var>p_N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print <code>YES</code> if you can sort <var>p</var> in ascending order in the way stated in the problem statement, and <code>NO</code> otherwise.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>5
+5 2 3 4 1
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>YES
+</pre>
+<p>You can sort <var>p</var> in ascending order by swapping <var>p_1</var> and <var>p_5</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>5
+2 4 3 5 1
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>NO
+</pre>
+<p>In this case, swapping any two elements does not sort <var>p</var> in ascending order.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>7
+1 2 3 4 5 6 7
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>YES
+</pre>
+<p><var>p</var> is already sorted in ascending order, so no operation is needed.</p></section>
+</div>
+</span>

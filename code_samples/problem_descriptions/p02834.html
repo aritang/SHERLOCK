@@ -1,0 +1,131 @@
+<span class="lang-en">
+<p>Score : <var>600</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>We have a tree with <var>N</var> vertices. The <var>i</var>-th edge connects Vertex <var>A_i</var> and <var>B_i</var> bidirectionally.</p>
+<p>Takahashi is standing at Vertex <var>u</var>, and Aoki is standing at Vertex <var>v</var>.</p>
+<p>Now, they will play a game of tag as follows:</p>
+<ul>
+<li>
+<p><var>1</var>. If Takahashi and Aoki are standing at the same vertex, the game ends. Otherwise, Takahashi moves to a vertex of his choice that is adjacent to his current vertex.</p>
+</li>
+<li>
+<p><var>2</var>. If Takahashi and Aoki are standing at the same vertex, the game ends. Otherwise, Aoki moves to a vertex of his choice that is adjacent to his current vertex.</p>
+</li>
+<li>
+<p><var>3</var>. Go back to step <var>1</var>.</p>
+</li>
+</ul>
+<p>Takahashi performs his moves so that the game ends as late as possible, while Aoki performs his moves so that the game ends as early as possible.</p>
+<p>Find the number of moves Aoki will perform before the end of the game if both Takahashi and Aoki know each other's position and strategy.</p>
+<p>It can be proved that the game is bound to end.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>2 \leq N \leq 10^5</var></li>
+<li><var>1 \leq u,v \leq N</var></li>
+<li><var>u \neq v</var></li>
+<li><var>1 \leq A_i,B_i \leq N</var></li>
+<li>The given graph is a tree.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var> <var>u</var> <var>v</var>
+<var>A_1</var> <var>B_1</var>
+<var>:</var>
+<var>A_{N-1}</var> <var>B_{N-1}</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the number of moves Aoki will perform before the end of the game.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>5 4 1
+1 2
+2 3
+3 4
+3 5
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>2
+</pre>
+<p>If both players play optimally, the game will progress as follows:</p>
+<ul>
+<li>Takahashi moves to Vertex <var>3</var>.</li>
+<li>Aoki moves to Vertex <var>2</var>.</li>
+<li>Takahashi moves to Vertex <var>5</var>.</li>
+<li>Aoki moves to Vertex <var>3</var>.</li>
+<li>Takahashi moves to Vertex <var>3</var>.</li>
+</ul>
+<p>Here, Aoki performs two moves.</p>
+<p>Note that, in each move, it is prohibited to stay at the current vertex.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>5 4 5
+1 2
+1 3
+1 4
+1 5
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>1
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>2 1 2
+1 2
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>0
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 4</h3><pre>9 6 1
+1 2
+2 3
+3 4
+4 5
+5 6
+4 7
+7 8
+8 9
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 4</h3><pre>5
+</pre></section>
+</div>
+</span>

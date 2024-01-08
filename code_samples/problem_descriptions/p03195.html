@@ -1,0 +1,74 @@
+<span class="lang-en">
+<p>Score : <var>500</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>There is an apple tree that bears apples of <var>N</var> colors. The <var>N</var> colors of these apples are numbered <var>1</var> to <var>N</var>, and there are <var>a_i</var> apples of Color <var>i</var>.</p>
+<p>You and Lunlun the dachshund alternately perform the following operation (starting from you):</p>
+<ul>
+<li>Choose one or more apples from the tree and eat them. Here, the apples chosen at the same time must all have different colors.</li>
+</ul>
+<p>The one who eats the last apple from the tree will be declared winner. If both you and Lunlun play optimally, which will win?</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 \leq N \leq 10^5</var></li>
+<li><var>1 \leq a_i \leq 10^9</var></li>
+<li>All values in input are integers.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+<var>a_1</var>
+<var>a_2</var>
+<var>:</var>
+<var>a_N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>If you will win, print <code>first</code>; if Lunlun will win, print <code>second</code>.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>2
+1
+2
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>first
+</pre>
+<p>Let Color <var>1</var> be red, and Color <var>2</var> be blue. In this case, the tree bears one red apple and two blue apples.</p>
+<p>You should eat the red apple in your first turn. Lunlun is then forced to eat one of the blue apples, and you can win by eating the other in your next turn.</p>
+<p>Note that you are also allowed to eat two apples in your first turn, one red and one blue (not a winning move, though).</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>3
+100000
+30000
+20000
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>second
+</pre></section>
+</div>
+</span>

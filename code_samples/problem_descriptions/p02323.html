@@ -1,0 +1,72 @@
+
+<H1>Traveling Salesman Problem </H1>
+<br/>
+
+<p>
+For a given weighted directed graph <var>G(V, E)</var>, find the distance of the shortest route that meets the following criteria:
+</p>
+<ul>
+<li>It is a closed cycle where it ends at the same point it starts.</li>
+<li>It visits each vertex exactly once.</li>
+</ul>
+
+<H2>Input</H2>
+<pre>
+<var>|V|</var> <var>|E|</var>
+<var>s<sub>0</sub></var> <var>t<sub>0</sub></var> <var>d<sub>0</sub></var>
+<var>s<sub>1</sub></var> <var>t<sub>1</sub></var> <var>d<sub>1</sub></var>
+:
+<var>s<sub>|E|-1</sub></var> <var>t<sub>|E|-1</sub></var> <var>d<sub>|E|-1</sub></var>
+</pre>
+
+
+<p>
+<var>|V|</var> is the number of vertices and <var>|E|</var> is the number of edges in the graph. The graph vertices are named with the numbers 0, 1,..., <var>|V|</var>-1 respectively.
+</p>
+
+<p>
+<var>s<sub>i</sub></var> and <var>t<sub>i</sub></var> represent source and target vertices of <var>i</var>-th edge (directed) and <var>d<sub>i</sub></var> represents the distance between <var>s<sub>i</sub></var> and <var>t<sub>i</sub></var> (the <var>i</var>-th edge).
+</p>
+
+<H2>Output</H2>
+
+<p>
+Print the shortest distance in a line. If there is no solution, print -1.
+</p>
+
+<h2>Constraints</h2>
+
+<ul>
+<li> 2 &le; <var>|V|</var> &le; 15</li>	
+<li> 0 &le; <var>d<sub>i</sub></var> &le; 1,000</li>	
+<li> There are no multiedge</li>
+</ul>
+
+<H2>Sample Input 1</H2>
+<pre>
+4 6
+0 1 2
+1 2 3
+1 3 9
+2 0 1
+2 3 6
+3 2 4
+</pre>
+<H2>Sample Output 1</H2>
+<pre>
+16
+</pre>
+
+<br/>
+
+<H2>Sample Input 2</H2>
+<pre>
+3 3
+0 1 1
+1 2 1
+0 2 1
+</pre>
+<H2>Sample Output 2</H2>
+<pre>
+-1
+</pre>

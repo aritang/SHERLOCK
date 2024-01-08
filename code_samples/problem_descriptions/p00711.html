@@ -1,0 +1,108 @@
+
+<H1><font color="#000">Problem B:</font> Red and Black</H1>
+
+<P>
+ There is a rectangular room, covered with square tiles. Each tile is
+colored either red or black. A man is standing on a black tile.
+From a tile, he can move to one of four adjacent tiles. But he can't 
+move on red tiles, he can move only on black tiles.
+</P>
+
+<P>
+ Write a program to count the number of black tiles which he can reach 
+by repeating the moves described above. 
+</P>
+
+
+<H2>Input</H2>
+
+
+<P>
+ The input consists of multiple data sets.
+ A data set starts with a line containing two positive integers <I>W</I> and <I>H</I>;
+ <I>W</I> and <I>H</I> are the numbers of tiles in the <I>x</I>-
+ and <I>y</I>- directions, respectively. <I>W</I> and <I>H</I> are 
+not more than 20.
+</P>
+
+
+
+<P>
+  There are <I>H</I> more lines in the data set, each of which
+includes <I>W</I> characters. Each character represents the color of a
+tile as follows.
+</P>
+
+<ul>
+<li>'.' - a black tile
+<li>'#' - a red tile
+<li>'@' - a man on a black tile(appears exactly once in a data set)
+</ul>
+
+
+
+<p>
+The end of the input is indicated by a line consisting of two zeros.
+</p>
+
+
+<H2>Output</H2>
+
+
+<P>
+  For each data set, your program 
+should output a line which contains the number of 
+tiles he can reach from the initial tile (including itself).
+</P>
+
+
+<H2>Sample Input</H2>
+
+<PRE>
+6 9
+....#.
+.....#
+......
+......
+......
+......
+......
+#@...#
+.#..#.
+11 9
+.#.........
+.#.#######.
+.#.#.....#.
+.#.#.###.#.
+.#.#..@#.#.
+.#.#####.#.
+.#.......#.
+.#########.
+...........
+11 6
+..#..#..#..
+..#..#..#..
+..#..#..###
+..#..#..#@.
+..#..#..#..
+..#..#..#..
+7 7
+..#.#..
+..#.#..
+###.###
+...@...
+###.###
+..#.#..
+..#.#..
+0 0
+</PRE>
+
+<H2>Output for the Sample Input</H2>
+
+<PRE>
+45
+59
+6
+13
+</PRE>
+

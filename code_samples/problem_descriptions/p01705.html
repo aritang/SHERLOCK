@@ -1,0 +1,88 @@
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({ tex2jax: { inlineMath: [["$","$"], ["\\(","\\)"]], processEscapes: true }});
+</script>
+<script language="JavaScript" type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+
+<meta http-equiv="X-UA-Compatible" CONTENT="IE=EmulateIE7" /><style type="text/css">blockquote {
+  font-family: Menlo, Monaco, "Courier New", monospace;
+  color: #333333;
+  display: block;
+  padding: 8.5px;
+  margin: 0 0 9px;
+  font-size: 12px;
+  line-height: 18px;
+  background-color: #f5f5f5;
+  border: 1px solid #ccc;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  white-space: pre;
+  white-space: pre-wrap;
+  word-break: break-all;
+  word-wrap: break-word;
+}</style><div class="part"><h3>Problem Statement</h3><p>Circles Island is known for its mysterious shape:
+it is a completely flat island with its shape being a union of circles whose centers are on the $x$-axis and their inside regions.
+</p>
+<p>The King of Circles Island plans to build a large square on Circles Island in order to celebrate the fiftieth anniversary of his accession.
+The King wants to make the square as large as possible.
+The whole area of the square must be on the surface of Circles Island, but any area of Circles Island can be used for the square.
+He also requires that the shape of the square is square (of course!) and at least one side of the square is parallel to the $x$-axis.
+</p>
+<p>You, a minister of Circles Island, are now ordered to build the square.
+First, the King wants to know how large the square can be.
+You are given the positions and radii of the circles that constitute Circles Island.
+Answer the side length of the largest possible square.
+</p>
+<p>$N$ circles are given in an ascending order of their centers' $x$-coordinates.
+You can assume that for all $i$ ($1 \le i \le N-1$), the $i$-th and $(i+1)$-st circles overlap each other.
+You can also assume that no circles are completely overlapped by other circles.
+</p>
+
+<p><img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_JAGAsia2014_square-small" height="250" width="500" />
+</p>
+<p>[fig.1 : Shape of Circles Island and one of the largest possible squares for test case #1 of sample input]
+</p>
+
+</div><div class="part"><h3>Input</h3>
+<p>The input consists of multiple datasets. The number of datasets does not exceed $30$.
+Each dataset is formatted as follows.
+</p>
+<blockquote style="font-size:14pt">$N$<br>$X_1$ $R_1$<br>:<br>:<br>$X_N$ $R_N$</blockquote>
+
+<p>The first line of a dataset contains a single integer $N$ ($1 \le N \le 50{,}000$), the number of circles that constitute Circles Island.
+Each of the following $N$ lines describes a circle.
+The $(i+1)$-st line contains two integers $X_i$ ($-100{,}000 \le X_i \le 100{,}000$) and $R_i$ ($1 \le R_i \le  100{,}000$).
+$X_i$ denotes the $x$-coordinate of the center of the $i$-th circle and $R_i$ denotes the radius of the $i$-th circle.
+The $y$-coordinate of every circle is $0$, that is, the center of the $i$-th circle is at ($X_i$, $0$).
+</p>
+<p>You can assume the followings.
+</p><ul><li> For all $i$ ($1 \le i \le N-1$), $X_i$ is strictly less than $X_{i+1}$.
+</li><li> For all $i$ ($1 \le i \le N-1$), the $i$-th circle and the $(i+1)$-st circle have at least one common point ($X_{i+1} - X_i \le R_i + R_{i+1}$).
+</li><li> Every circle has at least one point that is not inside or on the boundary of any other circles.
+</li></ul>
+
+<p>The end of the input is indicated by a line containing a zero.
+</p>
+
+</div><div class="part"><h3>Output</h3>
+<p>For each dataset, output a line containing the side length of the square with the largest area.
+The output must have an absolute or relative error at most $10^{-4}$.
+</p>
+
+</div><div class="part"><h3>Sample Input</h3>
+
+<pre>2
+0 8
+10 8
+2
+0 7
+10 7
+0</pre>
+
+</div><div class="part"><h3>Output for the Sample Input</h3>
+
+<pre>12.489995996796796
+9.899494936611665</pre>
+</div>

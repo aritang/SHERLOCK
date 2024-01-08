@@ -1,0 +1,92 @@
+<span class="lang-en">
+<p>Score : <var>400</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>There are <var>N</var> boxes arranged in a row from left to right. The <var>i</var>-th box from the left contains <var>A_i</var> candies.</p>
+<p>You will take out the candies from some consecutive boxes and distribute them evenly to <var>M</var> children.</p>
+<p>Such being the case, find the number of the pairs <var>(l, r)</var> that satisfy the following:</p>
+<ul>
+<li><var>l</var> and <var>r</var> are both integers and satisfy <var>1 \leq l \leq r \leq N</var>.</li>
+<li><var>A_l + A_{l+1} + ... + A_r</var> is a multiple of <var>M</var>.</li>
+</ul>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li>All values in input are integers.</li>
+<li><var>1 \leq N \leq 10^5</var></li>
+<li><var>2 \leq M \leq 10^9</var></li>
+<li><var>1 \leq A_i \leq 10^9</var></li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var> <var>M</var>
+<var>A_1</var> <var>A_2</var> <var>...</var> <var>A_N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the number of the pairs <var>(l, r)</var> that satisfy the conditions.</p>
+<p>Note that the number may not fit into a <var>32</var>-bit integer type.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>3 2
+4 1 5
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>3
+</pre>
+<p>The sum <var>A_l + A_{l+1} + ... + A_r</var> for each pair <var>(l, r)</var> is as follows:</p>
+<ul>
+<li>Sum for <var>(1, 1)</var>: <var>4</var></li>
+<li>Sum for <var>(1, 2)</var>: <var>5</var></li>
+<li>Sum for <var>(1, 3)</var>: <var>10</var></li>
+<li>Sum for <var>(2, 2)</var>: <var>1</var></li>
+<li>Sum for <var>(2, 3)</var>: <var>6</var></li>
+<li>Sum for <var>(3, 3)</var>: <var>5</var></li>
+</ul>
+<p>Among these, three are multiples of <var>2</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>13 17
+29 7 5 7 9 51 7 13 8 55 42 9 81
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>6
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>10 400000000
+1000000000 1000000000 1000000000 1000000000 1000000000 1000000000 1000000000 1000000000 1000000000 1000000000
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>25
+</pre></section>
+</div>
+</span>

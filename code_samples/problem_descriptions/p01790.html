@@ -1,0 +1,74 @@
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({ tex2jax: { inlineMath: [["$","$"], ["\\(","\\)"]], processEscapes: true }});
+</script>
+<script type='text/javascript' src='http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
+</script>
+
+
+<h2>Problem A
+Balanced Paths</h2>
+
+<p>
+You are given an undirected tree with $n$ nodes. The nodes are numbered 1 through $n$. Each node is labeled with either '(' or ')'. Let $l[u \rightarrow v]$ denote the string obtained by concatenating the labels of the nodes on the simple path from $u$ to $v$. (Note that the simple path between two nodes is uniquely determined on a tree.) A <i>balanced</i> string is defined as follows:
+</p>
+
+<ul>
+<li> The empty string is balanced.</li>
+<li> For any balanced string $s$, the string "(" $s$ ")" is balanced.</li>
+<li> For any balanced strings $s$ and $t$, the string $st$ (the concatenation of $s$ and $t$) is balanced.</li>
+<li> Any other string is NOT balanced.</li>
+</ul>
+
+<p>
+Calculate the number of the ordered pairs of the nodes ($u$, $v$) such that $l[u \rightarrow v]$ is balanced.
+</p>
+
+<h3>Input</h3>
+
+<p>
+The input consists of a single test case. The input starts with an integer $n (2 \leq n \leq 10^5)$, which is the number of nodes of the tree. The next line contains a string of length $n$, each character of which is either '(' or ')'. The $x$-th character of the string represents the label of the node $x$ of the tree. Each of the following $n - 1$ lines contains two integers $a_i$ and $b_i$ $(1 \leq a_i, b_i \leq n)$, which represents that the node $a_i$ and the node $b_i$ are connected by an edge. The given graph is guaranteed to be a tree.
+</p>
+
+
+
+<h3>Output</h3>
+
+<p>
+Display a line containing the number of the ordered pairs ($u$, $v$) such that $l[u \rightarrow v]$ is balanced.
+</p>
+
+<h3>Sample Input 1</h3>
+
+<pre>2
+()
+1 2</pre>
+
+<h3>Output for the Sample Input 1</h3>
+
+<pre>1</pre>
+
+<h3>Sample Input 2</h3>
+
+<pre>4
+(())
+1 2
+2 3
+3 4</pre>
+
+<h3>Output for the Sample Input 2</h3>
+
+<pre>2</pre>
+
+<h3>Sample Input 3</h3>
+
+<pre>5
+()())
+1 2
+2 3
+2 4
+1 5</pre>
+
+<h3>Output for the Sample Input 3</h3>
+
+<pre>4</pre>

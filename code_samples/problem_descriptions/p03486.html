@@ -1,0 +1,117 @@
+<span class="lang-en">
+<p>Score : <var>200</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>You are given strings <var>s</var> and <var>t</var>, consisting of lowercase English letters.
+You will create a string <var>s'</var> by freely rearranging the characters in <var>s</var>.
+You will also create a string <var>t'</var> by freely rearranging the characters in <var>t</var>.
+Determine whether it is possible to satisfy <var>s' &lt; t'</var> for the lexicographic order.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Notes</h3><p>For a string <var>a = a_1 a_2 ... a_N</var> of length <var>N</var> and a string <var>b = b_1 b_2 ... b_M</var> of length <var>M</var>, we say <var>a &lt; b</var> for the lexicographic order if either one of the following two conditions holds true:</p>
+<ul>
+<li><var>N &lt; M</var> and <var>a_1 = b_1</var>, <var>a_2 = b_2</var>, ..., <var>a_N = b_N</var>.</li>
+<li>There exists <var>i</var> (<var>1 \leq i \leq N, M</var>) such that <var>a_1 = b_1</var>, <var>a_2 = b_2</var>, ..., <var>a_{i - 1} = b_{i - 1}</var> and <var>a_i &lt; b_i</var>. Here, letters are compared using alphabetical order.</li>
+</ul>
+<p>For example, <code>xy</code> <var>&lt;</var> <code>xya</code> and <code>atcoder</code> <var>&lt;</var> <code>atlas</code>.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li>The lengths of <var>s</var> and <var>t</var> are between <var>1</var> and <var>100</var> (inclusive).</li>
+<li><var>s</var> and <var>t</var> consists of lowercase English letters.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>s</var>
+<var>t</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>If it is possible to satisfy <var>s' &lt; t'</var>, print <code>Yes</code>; if it is not, print <code>No</code>.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>yx
+axy
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>Yes
+</pre>
+<p>We can, for example, rearrange <code>yx</code> into <code>xy</code> and <code>axy</code> into <code>yxa</code>. Then, <code>xy</code> <var>&lt;</var> <code>yxa</code>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>ratcode
+atlas
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>Yes
+</pre>
+<p>We can, for example, rearrange <code>ratcode</code> into <code>acdeort</code> and <code>atlas</code> into <code>tslaa</code>. Then, <code>acdeort</code> <var>&lt;</var> <code>tslaa</code>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>cd
+abc
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>No
+</pre>
+<p>No matter how we rearrange <code>cd</code> and <code>abc</code>, we cannot achieve our objective.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 4</h3><pre>w
+ww
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 4</h3><pre>Yes
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 5</h3><pre>zzz
+zzz
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 5</h3><pre>No
+</pre></section>
+</div>
+</span>

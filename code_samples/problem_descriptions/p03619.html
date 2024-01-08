@@ -1,0 +1,115 @@
+<span class="lang-en">
+<p>Score : <var>900</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>In the city of Nevermore, there are <var>10^8</var> streets and <var>10^8</var> avenues, both numbered from <var>0</var> to <var>10^8-1</var>.
+All streets run straight from west to east, and all avenues run straight from south to north.
+The distance between neighboring streets and between neighboring avenues is exactly <var>100</var> meters.</p>
+<p>Every street intersects every avenue. Every intersection can be described by pair <var>(x, y)</var>, where <var>x</var> is avenue ID and <var>y</var> is street ID.</p>
+<p>There are <var>N</var> fountains in the city, situated at intersections <var>(X_i, Y_i)</var>.
+Unlike normal intersections, there's a circle with radius <var>10</var> meters centered at the intersection, and there are no road parts inside this circle.</p>
+<p>The picture below shows an example of how a part of the city with roads and fountains may look like.</p>
+<div style="text-align: center;">
+<img alt="1f931bf0c98ec6f07e612b0282cdb094.png" src="https://img.atcoder.jp/agc019/1f931bf0c98ec6f07e612b0282cdb094.png">
+</img></div>
+<p>City governors don't like encountering more than one fountain while moving along the same road.
+Therefore, every street contains at most one fountain on it, as well as every avenue.</p>
+<p>Citizens can move along streets, avenues and fountain perimeters.
+What is the shortest distance one needs to cover in order to get from intersection <var>(x_1, y_1)</var> to intersection <var>(x_2, y_2)</var>?</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>0 \leq x_1, y_1, x_2, y_2 &lt; 10^8</var></li>
+<li><var>1 \leq N \leq 200,000</var></li>
+<li><var>0 \leq X_i, Y_i &lt; 10^8</var></li>
+<li><var>X_i \neq X_j</var> for <var>i \neq j</var></li>
+<li><var>Y_i \neq Y_j</var> for <var>i \neq j</var></li>
+<li>Intersections <var>(x_1, y_1)</var> and <var>(x_2, y_2)</var> are different and don't contain fountains.</li>
+<li>All input values are integers.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>x_1</var> <var>y_1</var> <var>x_2</var> <var>y_2</var>
+<var>N</var>
+<var>X_1</var> <var>Y_1</var>
+<var>X_2</var> <var>Y_2</var>
+<var>:</var>
+<var>X_N</var> <var>Y_N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the shortest possible distance one needs to cover in order to get from intersection <var>(x_1, y_1)</var> to intersection <var>(x_2, y_2)</var>, in meters.
+Your answer will be considered correct if its absolute or relative error doesn't exceed <var>10^{-11}</var>.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>1 1 6 5
+3
+3 2
+5 3
+2 4
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>891.415926535897938
+</pre>
+<p>One possible shortest path is shown on the picture below. The path starts at the blue point, finishes at the purple point and follows along the red line.</p>
+<div style="text-align: center;">
+<img alt="c49e52b9b79003f61b8a6efa5dad8ba3.png" src="https://img.atcoder.jp/agc019/c49e52b9b79003f61b8a6efa5dad8ba3.png"/>
+</div>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>3 5 6 4
+3
+3 2
+5 3
+2 4
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>400.000000000000000
+</pre>
+<div style="text-align: center;">
+<img alt="f9090ab734c89424c413f3b583376990.png" src="https://img.atcoder.jp/agc019/f9090ab734c89424c413f3b583376990.png"/>
+</div>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>4 2 2 2
+3
+3 2
+5 3
+2 4
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>211.415926535897938
+</pre>
+<div style="text-align: center;">
+<img alt="4b76416161f27cad20333a9ac636e00f.png" src="https://img.atcoder.jp/agc019/4b76416161f27cad20333a9ac636e00f.png"/>
+</div></section>
+</div>
+</span>

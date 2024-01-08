@@ -1,0 +1,203 @@
+
+<!--<script language="JavaScript" type="text/javascript" src="js/varmath.js" charset="UTF-8"></script>-->
+
+
+
+<h2>A: 磯野、あれやろうぜ！ - Sendame -</h2>
+
+<h3>物語</h3>
+<p>中島「磯野〜，あれやろうぜ！」</p>
+
+<p>磯野「あれって何だよ，中島」</p>
+
+<p>中島「ほら，あれだよ，あれ．なぜか文字で表さなきゃならないから，説明しづらいな〜」</p>
+
+<p>磯野「いや，図や写真も入れられるみたいだぞ？」</p>
+
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_ACPC2015HokudaiPC_sazae" type="image/jpeg" width="300"></img>
+
+<p>中島「本当だ！」</p>
+
+<p>磯野「で，何をやるんだ？」</p>
+
+<p>中島「ほら，リズムに乗って，手を2回叩いた後に，防御，溜め，攻撃のポーズを取るやつ」</p>
+
+<p>磯野「う〜ん，イマイチわからないな…」</p>
+
+<p>中島「2回手を叩いた後に，例えば防御だったら」</p>
+
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_ACPC2015HokudaiPC_bougyo" type="image/jpeg" width="300"></img>
+
+<p>中島「で，溜めだったら」</p>
+
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_ACPC2015HokudaiPC_tame" type="image/jpeg" width="300"></img>
+
+<p>中島「攻撃だったら」</p>
+
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_ACPC2015HokudaiPC_kougeki" type="image/jpeg" width="300"></img>
+
+<p>中島「ってやるやつ，知ってるだろ？」</p>
+
+<p>磯野「ああ！写真が入ると劇的に分かりやすくなるな！」</p>
+
+<p>中島「これぞ文明の進歩だな！」</p>
+
+<p>(それから悠久の時が経った)</p>
+
+<p>花沢「い゛そ゛の゛く゛〜゛ん゛な゛か゛じ゛ま゛く゛〜゛ん゛」</p>
+
+<p>二人「(パチパチ…パチパチ…パチパチ…)」</p>
+
+<p>花沢「アンタたち，まさか寝ながらあれやってるの…！？」</p>
+
+<p>花沢「今勝負ついたじゃない…磯野くん，今あなた勝ったわよ？」</p>
+
+<p>磯野「……花沢さん来てたんだ…中島もう一度やるぞ…zzz」</p>
+
+<p>中島「(こくり)」</p>
+
+<p>二人「(パチパチ…パチパチ…)」</p>
+
+<p>花沢「もう…ここに，あれの勝敗判定ロボット置いておくから…」</p>
+
+<p>そうして花沢さんは去って行った．</p>
+
+<p>ということがあるかもしれないので，あれの勝敗判定プログラムを書いてください．</p>
+
+<h3>問題</h3>
+<p>「あれ」は2人で行うゲームである．リズムに合わせて2人が同時に，防御，溜め，攻撃のいずれかのポーズを取ることを繰り返す．ここで，2人がポーズを取るタイミングのことを「回」と表記する．このゲームでは，ある回で勝敗がつき，かつ，それまでの回で勝敗がついていないとき，その勝敗がゲームの勝敗となる．</p>
+
+<p>2人はそれぞれ「攻撃力」というパラメータを持ち，ゲーム開始時，攻撃力は <var>0</var> である．</p>
+
+<p>攻撃のポーズを取った場合，その時点での攻撃力に応じて，次のようになる．</p>
+
+<ul>
+<li>攻撃力が <var>0</var> のときに攻撃のポーズを取ると，反則負けとなる．ただし，相手も攻撃力が <var>0</var> で攻撃のポーズをした場合，その回では勝敗がつかない．</li>
+<li>自分の攻撃力が <var>1</var> 以上のときに攻撃のポーズをとると，相手に攻撃を加える．また，その回で相手も攻撃のポーズを取った場合，攻撃力のより高いプレイヤーが勝利する．ただし，両プレイヤーが同じ攻撃力で攻撃のポーズを取った場合には，その回では勝敗がつかない．</li>
+</ul>
+
+<p>また，攻撃のポーズを取った回の終了時に，自分の攻撃力が <var>0</var> になる．</p>
+
+<p>溜めのポーズを取ると，そのプレイヤーの攻撃力が <var>1</var> だけ上昇する．ただし，攻撃力が <var>5</var> である場合，そのプレイヤーが溜めのポーズを取っても，攻撃力は <var>5</var> のままである．溜めのポーズを取った回で，相手が攻撃を加えた場合，相手が勝利する．なお，溜めのポーズを取った回で，相手が攻撃以外のポーズをとった場合，勝敗がつかない．</p>
+
+<p>防御のポーズを取った回に，相手が攻撃力 <var>5</var> の攻撃を加えた場合，相手が勝利する．一方，防御のポーズを取った回に，相手が攻撃力 <var>4</var> 以下の攻撃を加えた場合や，溜めまたは防御のポーズを取った場合，その回では勝敗がつかない．なお，防御のポーズを取っても，そのプレイヤーの攻撃力に変化はない．</p>
+
+<p>両プレイヤーのポーズが順に与えられるので，勝敗を出力せよ．なお，両プレイヤーは勝敗が決定した後もポーズをとり続けることがあるが，勝敗が決定した後のポーズは無視するものとする．</p>
+
+
+<h3>入力形式</h3>
+<p>入力は以下の形式で与えられる．</p>
+<pre>
+<var>K</var>
+<var>I_1</var>
+...
+<var>I_K</var>
+<var>N_1</var>
+...
+<var>N_K</var>
+</pre>
+
+<p>
+入力の1行目には，1個の整数 <var>K</var> (<var> 1 &le; K &le; 100</var>) が与えられる．
+2行目からの <var>K</var> 行には，磯野が取ったポーズ <var>I_i</var> (<var>1 &le; i &le; K</var>) が順に与えられる．
+その直後の <var>K</var> 行には，中島が取ったポーズ <var>N_i</var> (<var>1 &le; i &le; K</var>) が順に与えられる．
+<var>I_i</var> および <var>N_i</var> は “mamoru”, “tameru”, “kougekida” のいずれかである．これらの文字列は順に，防御，溜め，攻撃のポーズを表す．
+</p>
+
+
+<h3>出力形式</h3>
+<p>磯野が勝利した場合には “Isono-kun” ，中島が勝利した場合には “Nakajima-kun” ， <var>K</var> 回で勝敗がつかない場合には， “Hikiwake-kun” と1行で出力せよ．</p>
+
+<h3>入力例1</h3>
+<pre>
+3
+tameru
+tameru
+tameru
+tameru
+kougekida
+tameru
+</pre>
+
+<h3>出力例1</h3>
+<pre>Nakajima-kun</pre>
+
+<p><var>2</var> 回目で，磯野が溜めのポーズをしているのに対し，中島は攻撃力 <var>1</var> の攻撃をしているので，中島の勝利です．</p>
+
+<h3>入力例2</h3>
+<pre>
+3
+mamoru
+mamoru
+mamoru
+tameru
+tameru
+tameru
+</pre>
+
+<h3>出力例2</h3>
+<pre>Hikiwake-kun</pre>
+
+<p>どちらも攻撃をしなかったので，勝敗がつきませんでした．</p>
+
+<h3>入力例3</h3>
+<pre>
+5
+tameru
+tameru
+mamoru
+mamoru
+kougekida
+tameru
+tameru
+kougekida
+tameru
+kougekida
+</pre>
+
+<h3>出力例3</h3>
+<pre>Isono-kun</pre>
+
+<p><var>1</var> 回目から <var>4</var> 回目まででは勝敗がつきません． <var>5</var> 回目で，両プレイヤーが攻撃のポーズをしていますが，磯野の攻撃力が <var>2</var> なのに対し，中島の攻撃力が <var>1</var> なので，磯野の勝利です．</p>
+
+<h3>入力例4</h3>
+<pre>
+3
+kougekida
+kougekida
+tameru
+kougekida
+mamoru
+kougekida
+</pre>
+
+<h3>出力例4</h3>
+<pre>Nakajima-kun</pre>
+
+<p><var>1</var> 回目では，両プレイヤーが攻撃力 <var>0</var> で攻撃のポーズを取っているので，勝敗がつきません． <var>2</var> 回目では，磯野のみが攻撃力 <var>0</var> で攻撃のポーズをとっているので，中島の勝利です．</p>
+
+<h3>入力例5</h3>
+<pre>
+8
+tameru
+mamoru
+tameru
+tameru
+tameru
+tameru
+tameru
+kougekida
+tameru
+kougekida
+mamoru
+mamoru
+mamoru
+mamoru
+mamoru
+mamoru
+</pre>
+
+<h3>出力例5</h3>
+<pre>Isono-kun</pre>
+
+<p><var>2</var> 回目では，中島が攻撃力 <var>1</var> で攻撃のポーズを取っていますが，磯野が防御のポーズを取っているので，勝敗がつきません． <var>7</var> 回目では，磯野が攻撃力 <var>5</var> で溜めのポーズを取っているので，磯野の攻撃力は <var>5</var> のままです． <var>8</var> 回目では，磯野が攻撃力 <var>5</var> で攻撃のポーズをとり，中島が防御のポーズを取っているので，磯野が勝利します．</p>

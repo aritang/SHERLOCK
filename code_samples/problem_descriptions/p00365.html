@@ -1,0 +1,77 @@
+<H1>Age Difference</H1> <!-- Difference in ages-->
+
+<p>
+A trick of fate caused Hatsumi and Taku to come to know each other. To keep the encounter in memory, they decided to calculate the difference between their ages. But the difference in ages varies depending on the day it is calculated. While trying again and again, they came to notice that the difference of their ages will hit a maximum value even though the months move on forever.
+</p>
+<p>
+  Given the birthdays for the two, make a program to report the maximum difference between their ages. The age increases by one at the moment the birthday begins. If the birthday coincides with the 29<sup>th</sup> of February in a leap year, the age increases at the moment the 1<sup>st</sup> of March arrives in non-leap years.
+</p>
+
+<h2>Input</h2>
+
+<p>
+  The input is given in the following format.
+</p>
+
+<pre>
+<var>y_1</var> <var>m_1</var> <var>d_1</var>
+<var>y_2</var> <var>m_2</var> <var>d_2</var>
+</pre>
+
+<p>
+The first and second lines provide Hatsumi’s and Taku’s birthdays respectively in year <var>y_i</var> (1 &le; <var>y_i</var> &le; 3000), month <var>m_i</var> (1 &le; <var>m_i</var> &le; 12), and day <var>d_i</var> (1 &le; <var>d_i</var> &le; D<sub>max</sub>) format. Where <var>D<sub>max</sub></var> is given as follows:
+
+  
+</p>
+
+<ul>
+<li> 28 when February in a non-leap year</li>
+<li> 29 when February in a leap-year</li>
+<li> 30 in April, June, September, and November</li>
+<li> 31 otherwise.</li>
+</ul>
+
+<p>
+  It is a leap year if the year represented as a four-digit number is divisible by 4. Note, however, that it is a non-leap year if divisible by 100, and a leap year if divisible by 400.
+</p>
+
+
+<h2>Output</h2>
+
+<p>
+  Output the maximum difference between their ages.
+</p>
+
+<h2>Sample Input 1</h2>
+
+<pre>
+1999 9 9
+2001 11 3
+</pre>
+
+<h2>Sample Output 1</h2>
+<pre>
+3
+</pre>
+
+<p>
+
+  In this example, the difference of ages between them in 2002 and subsequent years is 3 on the 1<sup>st</sup> of October, but 2 on the 1<sup>st</sup> of December.
+</p>
+
+
+<h2>Sample Input 2</h2>
+
+<pre>
+2008 2 29
+2015 3 1
+</pre>
+
+<h2>Sample Output 2</h2>
+<pre>
+8
+</pre>
+
+<p>
+In this example, the difference of ages will become 8 on the 29<sup>th</sup> of February in and later years than 2016.
+</p>

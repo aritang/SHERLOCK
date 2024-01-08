@@ -1,0 +1,117 @@
+<h1>すごろくと駒 (Sugoroku and Pieces)</h1>
+<!-- 　　時間制限 : 2sec / メモリ制限 : 256MB -->
+
+<h2> 問題文</h2>
+
+<p>
+JOI 君はすごろくを持っている．このすごろくは <var>2019</var> 個のマスが横一列に並んだ形をしている．これらのマスには，左端のスタートマスから右端のゴールマスへと順に <var>1</var> から <var>2019</var> までの番号がついている．
+</p>
+
+<p>
+現在このすごろくの上には，<var>N</var> 個の駒が置かれている．これらの駒には，スタートに近い順に <var>1</var> から <var>N</var> までの番号がついている．駒 <var>i</var> (<var>1 ≦ i ≦ N</var>) は，マス <var>X_i</var> に置かれている．すべての駒は異なるマスに置かれている．
+</p>
+
+<p>
+JOI 君はこれから <var>M</var> 回の操作を行う．<var>j</var> 回目 (<var>1 ≦ j ≦ M</var>) の操作では，駒 <var>A_j</var> を <var>1</var> マス先へ進める．ただし，移動元のマスがゴールマスであった場合，もしくは移動先のマスに別の駒が置かれている場合，駒 <var>A_j</var> は進まず，位置は変わらない．
+</p>
+
+<p>
+すべての操作が終了した時点で，各駒が置かれているマスを求めよ．
+</p>
+
+<h2>制約</h2>
+
+<ul>
+<li><var>1 ≦ N ≦ 100</var></li>
+<li><var>1 ≦ X_1 < X_2 < ... < X_N ≦ 2019</var></li>
+<li><var>1 ≦ M ≦ 100</var></li>
+<li><var>1 ≦ A_j ≦ N</var> (<var>1 ≦ j ≦ M</var>)</li>
+</ul>
+
+<h2>入力・出力</h2>
+
+<p>
+<b>入力</b><br>
+入力は以下の形式で標準入力から与えられる．<br>
+<var>N</var><br>
+<var>X_1</var> <var>X_2</var> <var>...</var> <var>X_N</var><br>
+<var>M</var><br>
+<var>A_1</var> <var>A_2</var> <var>...</var> <var>A_M</var>
+</p>
+
+<p>
+<b>出力</b><br>
+<var>N</var> 行出力せよ．<var>i</var> 行目 (<var>1 ≦ i ≦ N</var>) には，すべての操作が終了した時点で駒 <var>i</var> が置かれているマスの番号を出力せよ．
+</p>
+
+<h2>入出力例</h2>
+
+<h3>入力例 1</h3>
+<pre>
+3
+2 3 6
+2
+1 3
+</pre>
+
+<h3>出力例 1</h3>
+<pre>
+2
+3
+7
+</pre>
+
+<p>
+<var>1</var> 回目の操作では，駒 <var>1</var> をマス <var>2</var> からマス <var>3</var> へと進めようする．しかし，駒 <var>2</var> がすでにマス <var>3</var> に置かれているため，駒 <var>1</var> は進まない．
+</p>
+
+<p>
+<var>2</var> 回目の操作では，駒 <var>3</var> をマス <var>6</var> からマス <var>7</var> へと進める．
+</p>
+
+<p>
+すべての操作が終了した時点で，駒 <var>1</var> はマス <var>2</var> に，駒 <var>2</var> はマス <var>3</var> に，駒 <var>3</var> はマス <var>7</var> に置かれている．
+</p>
+
+<h3>入力例 2</h3>
+<pre>
+2
+1 2016
+4
+2 2 2 2
+</pre>
+
+<h3>出力例 2</h3>
+<pre>
+1
+2019
+</pre>
+
+<p>
+<var>3</var> 回目の操作が完了した時点で，駒 <var>2</var> はマス <var>2019</var> に置かれている．そのため，<var>4</var> 回目の操作では駒 <var>2</var> は進まない．
+</p>
+
+<h3>入力例 3</h3>
+<pre>
+4
+1001 1002 1003 1004
+7
+1 2 3 4 3 2 1
+</pre>
+
+<h3>出力例 3</h3>
+<pre>
+1002
+1003
+1004
+1005
+</pre>
+<br/>
+<div class="source">
+<p class="source">
+<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="クリエイティブ・コモンズ・ライセンス" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png"/></a>
+</p>
+<p class="source">
+<a href="https://www.ioi-jp.org/joi/2018/2019-yo/index.html">情報オリンピック日本委員会作 『第 18 回日本情報オリンピック JOI 2018/2019 予選競技課題』</a>
+</p>
+</div>

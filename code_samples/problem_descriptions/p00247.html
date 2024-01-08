@@ -1,0 +1,133 @@
+
+
+
+<H1>氷の迷路</H1>
+
+<p>
+四角のマスを縦横にならべた長方形の迷路があります。この迷路では東西南北の隣接するマスへ移動しながら、スタートのマスSを出発し、ゴールのマスGを目指します。マスの種類には、平原、山、氷の３種類があります。SとGは、平原のマスに置かれています。平原のマスには移動できますが、山のマスには移動できません。氷のマスは移動できますが、条件によって氷が割れ動けなくなります。
+</p>
+
+<ul>
+<li> 氷のマスは東西南北に隣接するもの全体でひとつの塊として扱われます。</li>
+<li> 氷の塊のなかで、マスの個数の半分より多くのマスに移動すると、塊全体が割れます。</li>
+</ul>
+
+<p>
+例えば、図１は与えられた迷路の最短経路のステップ数が 11 であることを示しています。
+</p>
+
+<center>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_0247_1"><br>
+<b>図1</b>
+</center>
+
+<p>
+しかし、図２のように氷のマスを通って近道をしようとすると、大きさが６の氷の塊に対する４回目の移動後に動けなくなってしまいGには到達できません。
+</p>
+
+<center>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_0247_2">
+<b>図2</b>
+</center>
+
+<p>
+このような迷路の情報を入力とし、SからGまでの最短経路のステップ数を求めるプログラムを作成してください。マスの種類はそれぞれ以下の文字で表されます：
+</p>
+
+<center>
+<table style="border: 1px #000 solid" "border="1" cellpadding="3" cellspacing="0">
+<tr>
+<th width="160"style="border: 1px #000 solid" >文字（半角）</th>
+<th width="160"style="border: 1px #000 solid" >マスの種類</th>
+</tr>
+<tr>
+<td style="border: 1px #000 solid" >. （ピリオド）</td>
+<td style="border: 1px #000 solid" >平原</td>
+</tr>
+<tr>
+<td style="border: 1px #000 solid" >#（シャープ）</td>
+<td style="border: 1px #000 solid" >山</td>
+</tr>
+<tr>
+<td style="border: 1px #000 solid" >X</td>
+<td style="border: 1px #000 solid" >氷</td>
+</tr>
+</table>
+</center>
+<br>
+<p>
+与えられる迷路は必ず解けるものとします。迷路はその東西方向のマスの数 <var>X</var>、南北方向のマスの数 <var>Y</var> と <var>X</var> &times; <var>Y</var> 個の文字として与えられます。
+</p>
+
+
+<h2>入力</h2>
+
+<p>
+複数のデータセットが与えられます。入力の終わりはゼロふたつの行で示されます。各データセットは以下の形式で与えられます。
+</p>
+
+<pre>
+<var>X</var> <var>Y</var>
+<var>line<sub>1</sub></var>
+<var>line<sub>2</sub></var>
+:
+<var>line<sub>Y</sub></var>
+</pre>
+
+<p>
+1行目に迷路の大きさを表す整数 <var>X</var>, <var>Y</var> (2 &le; <var>X, Y</var> &le; 12) が与えられます。続く <var>Y</var> 行に迷路の <var>i</var> 行目の情報 <var>line<sub>i</sub></var> (長さ <var>X</var> の半角英文字列) が与えられます。
+</p>
+
+<p>
+データセットの数は 40 を超えない。
+</p>
+
+<h2>出力</h2>
+<p>
+データセットごとに、最小のステップ数を１行に出力します。
+</p>
+
+
+
+
+<h2>入力例</h2>
+
+<pre>
+5 5
+.X.S.
+.X#..
+.XX##
+.#XG.
+..X..
+7 3
+SXX.XXG
+X.#.#X.
+XXX.XX#
+4 4
+S...
+X.X.
+GX..
+...X
+10 10
+..XXXXX.XX
+.X.#.#X.XX
+SX.#X.X..X
+#X.##.X.XX
+..XXXX#.XX
+##.##.##XX
+....X.XX#X
+.##X..#X#X
+....XX#..X
+...#XXG..X
+0 0
+</pre>
+
+
+<h2>出力例</h2>
+
+<pre>
+11
+10
+10
+33
+</pre>

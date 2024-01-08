@@ -1,0 +1,73 @@
+<span class="lang-en">
+<p>Score : <var>300</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>E869120 found a chest which is likely to contain treasure.<br/>
+However, the chest is locked. In order to open it, he needs to enter a string <var>S</var> consisting of lowercase English letters.<br/>
+He also found a string <var>S'</var>, which turns out to be the string <var>S</var> with some of its letters (possibly all or none) replaced with <code>?</code>.  </p>
+<p>One more thing he found is a sheet of paper with the following facts written on it:  </p>
+<ul>
+<li>Condition 1: The string <var>S</var> contains a string <var>T</var> as a contiguous substring.</li>
+<li>Condition 2: <var>S</var> is the lexicographically smallest string among the ones that satisfy Condition 1.</li>
+</ul>
+<p>Print the string <var>S</var>.<br/>
+If such a string does not exist, print <code>UNRESTORABLE</code>.  </p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 \leq |S'|, |T| \leq 50</var></li>
+<li><var>S'</var> consists of lowercase English letters and <code>?</code>.</li>
+<li><var>T</var> consists of lowercase English letters.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>S</var>
+<var>T'</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the string <var>S</var>.<br/>
+If such a string does not exist, print <code>UNRESTORABLE</code> instead.  </p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>?tc????
+coder
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>atcoder
+</pre>
+<p>There are <var>26</var> strings that satisfy Condition 1: <code>atcoder</code>, <code>btcoder</code>, <code>ctcoder</code>,..., <code>ztcoder</code>.
+Among them, the lexicographically smallest is <code>atcoder</code>, so we can say <var>S = </var><code>atcoder</code>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>??p??d??
+abc
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>UNRESTORABLE
+</pre>
+<p>There is no string that satisfies Condition 1, so the string <var>S</var> does not exist.</p></section>
+</div>
+</span>

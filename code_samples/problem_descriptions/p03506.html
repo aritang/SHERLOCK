@@ -1,0 +1,85 @@
+<span class="lang-en">
+<p>Score : <var>100</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>You are given an integer <var>N</var>. Consider an infinite <var>N</var>-ary tree as shown below:</p>
+<div style="text-align: center;">
+<img src="https://img.atcoder.jp/relay2/c76baa50b0acf28062688597724a54b9.png">
+<p>Figure: an infinite <var>N</var>-ary tree for the case <var>N = 3</var></p>
+</img></div>
+<p>As shown in the figure, each vertex is indexed with a unique positive integer, and for every positive integer there is a vertex indexed with it. The root of the tree has the index <var>1</var>. For the remaining vertices, vertices in the upper row have smaller indices than those in the lower row. Among the vertices in the same row, a vertex that is more to the left has a smaller index.</p>
+<p>Regarding this tree, process <var>Q</var> queries. The <var>i</var>-th query is as follows:</p>
+<ul>
+<li>Find the index of the lowest common ancestor (see Notes) of Vertex <var>v_i</var> and <var>w_i</var>.</li>
+</ul>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Notes</h3><ul>
+<li>In a rooted tree, the <em>lowest common ancestor</em> (LCA) of Vertex <var>v</var> and <var>w</var> is the farthest vertex from the root that is an ancestor of both Vertex <var>v</var> and <var>w</var>. Here, a vertex is considered to be an ancestor of itself. For example, in the tree shown in Problem Statement, the LCA of Vertex <var>5</var> and <var>7</var> is Vertex <var>2</var>, the LCA of Vertex <var>8</var> and <var>11</var> is Vertex <var>1</var>, and the LCA of Vertex <var>3</var> and <var>9</var> is Vertex <var>3</var>.</li>
+</ul>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 ≤ N ≤ 10^9</var></li>
+<li><var>1 ≤ Q ≤ 10^5</var></li>
+<li><var>1 ≤ v_i &lt; w_i ≤ 10^9</var></li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var> <var>Q</var>
+<var>v_1</var> <var>w_1</var>
+<var>:</var>
+<var>v_Q</var> <var>w_Q</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print <var>Q</var> lines. The <var>i</var>-th line <var>(1 ≤ i ≤ Q)</var> must contain the index of the lowest common ancestor of Vertex <var>v_i</var> and <var>w_i</var>.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>3 3
+5 7
+8 11
+3 9
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>2
+1
+3
+</pre>
+<p>The queries in this case correspond to the examples shown in Notes.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>100000 2
+1 2
+3 4
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>1
+1
+</pre></section>
+</div>
+</span>

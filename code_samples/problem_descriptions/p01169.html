@@ -1,0 +1,96 @@
+
+<H1><font color="#000">Problem G:</font> Turn Polygons</H1>
+
+<p>
+HCII, the health committee for interstellar intelligence, aims to take care of the health of every
+interstellar intelligence.
+</p>
+<p>
+Staff of HCII uses a special equipment for health checks of patients. This equipment looks like a
+polygon-shaped room with plenty of instruments. The staff puts a patient into the equipment,
+then the equipment rotates clockwise to diagnose the patient from various angles. It fits many
+species without considering the variety of shapes, but not suitable for big patients. Furthermore,
+even if it fits the patient, it can hit the patient during rotation.
+</p>
+
+
+<center>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE1_turnPolygons">
+<p>Figure 1: The Equipment used by HCII</p>
+</center>
+
+<p>
+The interior shape of the equipment is a polygon with <i>M</i> vertices, and the shape of patients
+is a <i>convex</i> polygon with <i>N</i> vertices. Your job is to calculate how much you can rotate the
+equipment clockwise without touching the patient, and output the angle in degrees.
+</p>
+
+
+<H2>Input</H2>
+
+<p>
+The input consists of multiple data sets, followed by a line containing “0 0”. Each data set is
+given as follows:
+</p>
+
+<pre>
+<i>M N</i>
+<i>px</i><sub>1</sub> <i>py</i><sub>1</sub> <i>px</i><sub>2</sub> <i>py</i><sub>2</sub> ... <i>px<sub>M</sub> py<sub>M</sub></i>
+<i>qx</i><sub>1</sub> <i>qy</i><sub>1</sub> <i>qx</i><sub>2</sub> <i>qy</i><sub>2</sub> ... <i>qx<sub>N</sub> qy<sub>N</sub></i>
+<i>cx cy</i>
+</pre>
+
+<p>
+The first line contains two integers <i>M</i> and <i>N</i> (3 &le; <i>M, N</i> &le; 10). The second line contains 2<i>M</i>
+integers, where (<i>px<sub>j</sub></i> , <i>py<sub>j</sub></i> ) are the coordinates of the <i>j</i>-th vertex of the equipment. The third
+line contains 2<i>N</i> integers, where (<i>qx<sub>j</sub></i> , <i>qy<sub>j</sub></i> ) are the coordinates of the <i>j</i>-th vertex of the patient.
+The fourth line contains two integers <i>cx</i> and <i>cy</i>, which indicate the coordinates of the center of
+rotation.
+</p>
+<p>
+All the coordinates are between -1000 and 1000, inclusive. The vertices of each polygon are
+given in counterclockwise order.
+</p>
+<p>
+At the initial state, the patient is inside the equipment, and they don’t intersect each other.
+You may assume that the equipment doesn’t approach patients closer than 10<sup>-6</sup> without hitting
+patients, and that the equipment gets the patient to stick out by the length greater than 10<sup>-6</sup>
+whenever the equipment keeps its rotation after hitting the patient.
+
+</p>
+
+<H2>Output</H2>
+
+<p>
+For each data set, print the angle in degrees in a line. Each angle should be given as a decimal
+with an arbitrary number of fractional digits, and with an absolute error of at most 10<sup>-7</sup> .
+</p>
+<p>
+If the equipment never hit the patient during the rotation, print 360 as the angle.
+</p>
+
+<H2>Sample Input</H2>
+<pre>
+5 4
+0 0 20 0 20 10 0 10 1 5
+10 3 12 5 10 7 8 5
+10 5
+4 3
+0 0 10 0 10 5 0 5
+3 1 6 1 5 4
+0 0
+5 3
+0 0 10 0 10 10 0 10 3 5
+1 1 4 1 4 6
+0 0
+0 0
+</pre>
+
+<H2>Output for the Sample Input</H2>
+<pre>
+360.0000000
+12.6803835
+3.3722867
+</pre>
+
+

@@ -1,0 +1,123 @@
+<span class="lang-en">
+<p>Score : <var>800</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>There is a pond with a rectangular shape.
+The pond is divided into a grid with <var>H</var> rows and <var>W</var> columns of squares.
+We will denote the square at the <var>i</var>-th row from the top and <var>j</var>-th column from the left by <var>(i,\ j)</var>.</p>
+<p>Some of the squares in the pond contains a lotus leaf floating on the water.
+On one of those leaves, <var>S</var>, there is a frog trying to get to another leaf <var>T</var>.
+The state of square <var>(i,\ j)</var> is given to you by a character <var>a_{ij}</var>, as follows:</p>
+<ul>
+<li><code>.</code> : A square without a leaf.</li>
+<li><code>o</code> : A square with a leaf floating on the water.</li>
+<li><code>S</code> : A square with the leaf <var>S</var>.</li>
+<li><code>T</code> : A square with the leaf <var>T</var>.</li>
+</ul>
+<p>The frog will repeatedly perform the following action to get to the leaf <var>T</var>: "jump to a leaf that is in the same row or the same column as the leaf where the frog is currently located."</p>
+<p>Snuke is trying to remove some of the leaves, other than <var>S</var> and <var>T</var>, so that the frog cannot get to the leaf <var>T</var>.
+Determine whether this objective is achievable. If it is achievable, find the minimum necessary number of leaves to remove.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>2 ≤ H, W ≤ 100</var></li>
+<li><var>a_{ij}</var> is <code>.</code>, <code>o</code>, <code>S</code> or <code>T</code>.</li>
+<li>There is exactly one <code>S</code> among <var>a_{ij}</var>.</li>
+<li>There is exactly one <code>T</code> among <var>a_{ij}</var>.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>H</var> <var>W</var>
+<var>a_{11}</var> <var>...</var> <var>a_{1W}</var>
+<var>:</var>
+<var>a_{H1}</var> <var>...</var> <var>a_{HW}</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>If the objective is achievable, print the minimum necessary number of leaves to remove.
+Otherwise, print <code>-1</code> instead.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>3 3
+S.o
+.o.
+o.T
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>2
+</pre>
+<p>Remove the upper-right and lower-left leaves.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>3 4
+S...
+.oo.
+...T
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>0
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>4 3
+.S.
+.o.
+.o.
+.T.
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>-1
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 4</h3><pre>10 10
+.o...o..o.
+....o.....
+....oo.oo.
+..oooo..o.
+....oo....
+..o..o....
+o..o....So
+o....T....
+....o.....
+........oo
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 4</h3><pre>5
+</pre></section>
+</div>
+</span>

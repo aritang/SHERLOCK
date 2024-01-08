@@ -1,0 +1,57 @@
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({ tex2jax: { inlineMath: [["$","$"], ["\\(","\\)"]], processEscapes: true }});
+</script>
+<script language="JavaScript" type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML">
+</script>
+
+<h1>Dice IV</h1><br>
+
+<p>
+ Write a program which reads $n$ dices constructed in the same way as <a href="description.jsp?id=ITP1_11_A">Dice I</a>, and determines whether they are all different. For the determination, use the same way as <a href="description.jsp?id=ITP1_11_C">Dice III</a>.
+</p>
+
+
+<h2>Input</h2>
+<p>
+  In the first line, the number of dices $n$ is given. In the following $n$ lines, six integers assigned to the dice faces are given respectively in the same way as <a href="description.jsp?id=ITP1_11_C">Dice III</a>.
+</p>
+
+<h2>Output</h2>
+
+<p>
+  Print "<span>Yes</span>" if given dices are all different, otherwise "<span>No</span>" in a line.
+</p>
+
+<h2>Constraints</h2>
+
+<ul>
+<li>$2 \leq n \leq 100$</li>
+<li>$0 \leq $ the integer assigned to a face $ \leq 100$</li>
+</ul>
+
+<h2>Sample Input 1</h2>
+<pre>
+3
+1 2 3 4 5 6
+6 2 4 3 5 1
+6 5 4 3 2 1
+</pre>
+
+<h2>Sample Output 1</h2>
+<pre>
+No
+</pre>
+<br>
+
+<h2>Sample Input 2 </h2>
+<pre>
+3
+1 2 3 4 5 6
+6 5 4 3 2 1
+5 4 3 2 1 6
+</pre>
+<h2>Sample Output 2</h2>
+<pre>
+Yes
+</pre>

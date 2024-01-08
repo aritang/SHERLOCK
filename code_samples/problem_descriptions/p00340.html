@@ -1,0 +1,93 @@
+
+
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({ tex2jax: { inlineMath: [["$","$"], ["\\(","\\)"]], processEscapes: true }});
+</script>
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+
+<H1>長方形 </H1>
+
+<p>
+  アイヅ放送協会の教育番組(ＡＨＫ教育)では、子ども向けの工作番組「あそんでつくろ」を放送しています。今日は棒で長方形を作る回ですが、用意した４本の棒を使って長方形ができるかを確かめたいと思います。ただし、棒は切ったり折ったりしてはいけません。
+</p>
+
+<br/>
+
+<p>
+４本の棒の長さが与えられるので、それらすべてを辺とする長方形が作れるかどうか判定するプログラムを作成せよ。
+</p>
+
+
+<h2>Input</h2>
+<p>
+  入力は以下の形式で与えられる。
+</p>
+
+<pre>
+<var>e<sub>1</suv></var> <var>e<sub>2</suv></var> <var>e<sub>3</suv></var> <var>e<sub>4</suv></var>
+</pre>
+
+<p>
+  入力は１行からなり、各棒の長さを表す整数 <var>e<sub>i</sub></var> (1 &le; <var>e<sub>i</sub></var> &le; 100) が与えられる。
+</p>
+
+<h2>Output</h2>
+
+<p>
+長方形を作成できる場合には「yes」を、作成できない場合には「no」を出力する。ただし、正方形は長方形の一種なので、正方形の場合でも「yes」と出力する。
+</p>
+
+<h2>Sample Input 1</h2>
+
+<pre>
+1 1 3 4
+</pre>
+
+
+<h2>Sample Output 1</h2>
+<pre>
+no
+</pre>
+
+<br/>
+
+<h2>Sample Input 2</h2>
+<pre>
+1 1 2 2
+</pre>
+
+<h2>Sample Output 2</h2>
+<pre>
+yes
+</pre>
+
+<br/>
+
+<h2>Sample Input 3</h2>
+
+<pre>
+2 1 1 2
+</pre>
+
+
+<h2>Sample Output 3</h2>
+<pre>
+yes
+</pre>
+
+<br/>
+
+<h2>Sample Input 4</h2>
+<pre>
+4 4 4 10
+</pre>
+
+<h2>Sample Output 4</h2>
+<pre>
+no
+</pre>
+
+<br/>

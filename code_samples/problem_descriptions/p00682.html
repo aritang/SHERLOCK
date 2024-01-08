@@ -1,0 +1,97 @@
+
+<H1>Area of Polygons</H1>
+
+<p>
+Polygons are the most fundamental objects in geometric processing.
+Complex figures are often represented and handled as polygons
+with many short sides.
+If you are interested in the processing of geometric data,
+you'd better try some programming exercises about basic
+operations on polygons.
+</p>
+
+<p>
+Your job in this problem is to write a program that computes the area of polygons.
+</p>
+
+<p>
+A polygon is represented by a sequence of points that are its vertices.
+If the vertices p<SUB>1</SUB>, p<SUB>2</SUB>, ..., p<SUB>n</SUB> are given, line segments connecting
+p<SUB>i</SUB> and p<SUB>i+1</SUB> (1 <= i <= n-1) are sides of the polygon.
+The line segment connecting p<SUB>n</SUB> and p<SUB>1</SUB> is also a side of the polygon.
+</p>
+
+<p>
+You can assume that the polygon is not degenerate.
+Namely, the following facts can be assumed without any input data checking.
+</p>
+
+<UL>
+<LI>No point will occur as a vertex more than once.</LI>
+<LI>Two sides can intersect only at a common endpoint (vertex).</LI>
+<LI>The polygon has at least 3 vertices.</LI>
+</UL>
+
+<p>
+Note that the polygon is not necessarily convex.
+In other words, an inner angle may be larger than 180 degrees.
+</p>
+
+<H2>Input</H2>
+
+<P>The input contains multiple data sets, each representing a polygon.
+A data set is given in the following format.</P>
+
+<PRE>
+   n
+   x1 y1
+   x2 y2
+   ...
+   xn yn
+</PRE>
+
+<P>The first integer n is the number of vertices,
+such that 3 <= n <= 50.
+The coordinate of a vertex p<SUB>i</SUB> is given by (x<SUB>i</SUB>, y<SUB>i</SUB>).
+x<SUB>i</SUB> and y<SUB>i</SUB> are integers between 0 and 1000 inclusive.
+The coordinates of vertices are given in the order
+of clockwise visit of them.</P>
+
+<P>The end of input is indicated by a data set with 0 as the value of n.</P>
+
+<H2>Output</H2>
+
+<P>For each data set, your program should output its sequence number
+(1 for the first data set, 2 for the second, etc.) and the area of the polygon separated by a single space. The area should be printed with one digit to the right of the decimal point.</P>
+
+<P>The sequence number and the area should be printed on the same line.
+Since your result is checked by an automatic grading program,
+you should not insert any extra characters nor lines on the output.
+</P>
+
+<H2>Sample Input</H2>
+<pre>
+3
+1 1
+3 4
+6 0
+
+7
+0 0
+10 10
+0 20
+10 30
+0 40
+100 40
+100 0
+
+0
+</pre>
+
+<H2>Output for the Sample Input</H2>
+<pre>
+1 8.5
+2 3800.0
+</pre>
+
+

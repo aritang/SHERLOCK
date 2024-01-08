@@ -1,0 +1,111 @@
+<span class="lang-en">
+<p>Score : <var>1400</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>Joisino is about to compete in the final round of a certain programming competition.
+In this contest, there are <var>N</var> problems, numbered <var>1</var> through <var>N</var>.
+Joisino knows that it takes her <var>T_i</var> seconds to solve problem <var>i(1≦i≦N)</var>.</p>
+<p>In this contest, a contestant will first select some number of problems to solve.
+Then, the contestant will solve the selected problems.
+After that, the score of the contestant will be calculated as follows:</p>
+<ul>
+<li>(The score) <var>=</var> (The number of the pairs of integers <var>L</var> and <var>R</var> <var>(1≦L≦R≦N)</var> such that for every <var>i</var> satisfying <var>L≦i≦R</var>, problem <var>i</var> is solved) - (The total number of seconds it takes for the contestant to solve the selected problems)</li>
+</ul>
+<p>Note that a contestant is allowed to choose to solve zero problems, in which case the score will be <var>0</var>.</p>
+<p>Also, there are <var>M</var> kinds of drinks offered to the contestants, numbered <var>1</var> through <var>M</var>.
+If Joisino takes drink <var>i(1≦i≦M)</var>, her brain will be stimulated and the time it takes for her to solve problem <var>P_i</var> will become <var>X_i</var> seconds.
+Here, <var>X_i</var> may be greater than the length of time originally required to solve problem <var>P_i</var>.
+Taking drink <var>i</var> does not affect the time required to solve the other problems.</p>
+<p>A contestant is allowed to take exactly one of the drinks before the start of the contest.
+For each drink, Joisino wants to know the maximum score that can be obtained in the contest if she takes that drink.
+Your task is to write a program to calculate it instead of her.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li>All input values are integers.</li>
+<li><var>1≦N≦3*10^5</var></li>
+<li><var>1≦T_i≦10^9</var></li>
+<li>(The sum of <var>T_i</var>) <var>≦10^{12}</var></li>
+<li><var>1≦M≦3*10^5</var></li>
+<li><var>1≦P_i≦N</var></li>
+<li><var>1≦X_i≦10^9</var></li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>The input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+<var>T_1</var> <var>T_2</var> <var>...</var> <var>T_N</var>
+<var>M</var>
+<var>P_1</var> <var>X_1</var>
+<var>P_2</var> <var>X_2</var>
+<var>:</var>
+<var>P_M</var> <var>X_M</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>For each drink, print the maximum score that can be obtained if Joisino takes that drink, in order, one per line.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>5
+1 1 4 1 1
+2
+3 2
+3 10
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>9
+2
+</pre>
+<p>If she takes drink <var>1</var>, the maximum score can be obtained by solving all the problems.</p>
+<p>If she takes drink <var>2</var>, the maximum score can be obtained by solving the problems <var>1,2,4</var> and <var>5</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>12
+1 2 1 3 4 1 2 1 12 3 12 12
+10
+9 3
+11 1
+5 35
+6 15
+12 1
+1 9
+4 3
+10 2
+5 1
+7 6
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>34
+35
+5
+11
+35
+17
+25
+26
+28
+21
+</pre></section>
+</div>
+</span>

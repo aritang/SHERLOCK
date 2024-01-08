@@ -1,0 +1,81 @@
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']], skipTags: ["script","noscript","style","textarea","code"]}
+});
+</script>
+<script type="text/javascript" async
+src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+
+<h2>F： 掛け算は楽しい - Multiplication Is Interesting -</h2>
+
+<h3>物語</h3>
+<p>男子高生の難波列くんは、彼女の誕生日に数列をプレゼントしようと考えている。彼女は掛け算が大好きな女の子なので、難波くんは彼女にできるだけ多くの掛け算を楽しんてもらえるような数列をプレゼントしたいと思っている。しかし、計算結果が <var>2^{20}</var> を超える値になると彼女の機嫌が途端に悪くなってしまう（通常の人類は <var>2^{20}</var>という膨大な数を計算できないため、これでも彼女は随分と寛大な人であると言える）。彼女の機嫌を損なわないように、できるだけ多くの掛け算を楽しんでもらえる数列を難波くんが作ったので、あなたの仕事はその数列が彼女を十分に楽しませられるか検証するプログラムを作ることである。つまり、あなたの仕事は数列の連続する部分列の中で、部分列の総積が <var>K</var> を超えない最長の部分列の長さを答えるプログラムを作ることである。</p>
+
+<h3>問題</h3>
+<p>長さ <var>N</var> の非負実数列 <var>S = s_1, s_2, ..., s_N</var> と 非負実数 <var>K</var> がある。 あなたの仕事は、以下の条件を満たす <var>S</var> の連続する部分列のうち、次の条件を満たす最長の部分列の長さを求めることである。このとき、部分列の長さは <var>1</var> 以上でなければならない。</p>
+
+<ul>
+<li> <var>S</var> の連続する部分列 $T = s_\ell, \ldots, s_r$ について $\prod_{i = \ell, \ldots, r} s_i \leq$ <var>K</var>を満たす。</li>
+</ul>
+
+<p>もし条件を満たす部分列が一つも存在しないときは、 <var>0</var> を出力せよ。</p>
+
+
+<h3>入力形式</h3>
+<p>入力は次の形式で与えられる．</p>
+<pre>
+<var>N</var> <var>K</var>
+<var>s_1</var>
+<var>s_2</var>
+$\dots$
+<var>s_N</var>
+</pre>
+
+<p><var>1</var> 行目には数列の長さ <var>N</var> と 部分列の総積の上限 <var>K</var> が与えられる。続く <var>N</var> 行のうち、 <var>i</var> 行目では非負実数列 <var>S</var> の <var>i</var> 番目の実数 <var>s_i</var> が与えられる。</p>
+
+<h3>制約</h3>
+<ul>
+<li> <var>1 \leq N \leq 100,000</var> </li>
+<li> <var>0 \leq s_i \leq 2.00</var> </li>
+<li> <var>0 \leq K \leq 1,048,576</var></li>
+<li> <var>N</var> は整数、<var>K</var> と <var>s_i</var> は小数点第 <var>3</var> 位以下を含まない実数である</li>
+</ul>
+
+<h3>出力形式</h3>
+<p><var>S</var> の部分列の総積が <var>K</var> を超えない最長の部分列の長さを <var>1</var> 行に出力せよ。</p>
+
+<h3>入力例1</h3>
+<pre>
+6 2.01
+1.10 
+1.44
+0.91
+2.00
+1.12
+1.55
+</pre>
+
+<h3>出力例1</h3>
+<pre>3</pre>
+
+<h3>入力例2</h3>
+<pre>
+8 12.22
+2.00
+2.00
+2.00
+1.91
+2.00
+2.00
+2.00
+0.01
+</pre>
+
+<h3>出力例2</h3>
+<pre>8</pre>

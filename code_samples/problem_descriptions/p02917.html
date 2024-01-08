@@ -1,0 +1,78 @@
+<span class="lang-en">
+<p>Score : <var>300</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>There is an integer sequence <var>A</var> of length <var>N</var> whose values are unknown.</p>
+<p>Given is an integer sequence <var>B</var> of length <var>N-1</var> which is known to satisfy the following:</p>
+<p><var> B_i \geq \max(A_i, A_{i+1}) </var></p>
+<p>Find the maximum possible sum of the elements of <var>A</var>.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li>All values in input are integers.</li>
+<li><var>2 \leq N \leq 100</var></li>
+<li><var>0 \leq B_i \leq 10^5</var></li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+<var>B_1</var> <var>B_2</var> <var>...</var> <var>B_{N-1}</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the maximum possible sum of the elements of <var>A</var>.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>3
+2 5
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>9
+</pre>
+<p><var>A</var> can be, for example, ( <var>2</var> , <var>1</var> , <var>5</var> ), ( <var>-1</var> , <var>-2</var> , <var>-3</var> ), or ( <var>2</var> , <var>2</var> , <var>5</var> ). Among those candidates, <var>A</var> = ( <var>2</var> , <var>2</var> , <var>5</var> ) has the maximum possible sum.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>2
+3
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>6
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>6
+0 153 10 10 23
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>53
+</pre></section>
+</div>
+</span>

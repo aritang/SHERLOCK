@@ -1,0 +1,111 @@
+<span class="lang-en">
+<p>Score : <var>900</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>In "Takahashi-ya", a ramen restaurant, basically they have one menu: "ramen", but <var>N</var> kinds of toppings are also offered. When a customer orders a bowl of ramen, for each kind of topping, he/she can choose whether to put it on top of his/her ramen or not. There is no limit on the number of toppings, and it is allowed to have all kinds of toppings or no topping at all. That is, considering the combination of the toppings, <var>2^N</var> types of ramen can be ordered.</p>
+<p>Akaki entered Takahashi-ya. She is thinking of ordering some bowls of ramen that satisfy both of the following two conditions:</p>
+<ul>
+<li>Do not order multiple bowls of ramen with the exactly same set of toppings.</li>
+<li>Each of the <var>N</var> kinds of toppings is on two or more bowls of ramen ordered.</li>
+</ul>
+<p>You are given <var>N</var> and a prime number <var>M</var>. Find the number of the sets of bowls of ramen that satisfy these conditions, disregarding order, modulo <var>M</var>. Since she is in extreme hunger, ordering any number of bowls of ramen is fine.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>2 \leq N \leq 3000</var></li>
+<li><var>10^8 \leq M \leq 10^9 + 9</var></li>
+<li><var>N</var> is an integer.</li>
+<li><var>M</var> is a prime number.</li>
+</ul>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Subscores</h3><ul>
+<li><var>600</var> points will be awarded for passing the test set satisfying <var>N ≤ 50</var>.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var> <var>M</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the number of the sets of bowls of ramen that satisfy the conditions, disregarding order, modulo <var>M</var>.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>2 1000000007
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>2
+</pre>
+<p>Let the two kinds of toppings be A and B. Four types of ramen can be ordered: "no toppings", "with A", "with B" and "with A, B". There are two sets of ramen that satisfy the conditions:</p>
+<ul>
+<li>The following three ramen: "with A", "with B", "with A, B".</li>
+<li>Four ramen, one for each type.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>3 1000000009
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>118
+</pre>
+<p>Let the three kinds of toppings be A, B and C. In addition to the four types of ramen above, four more types of ramen can be ordered, where C is added to the above four. There are <var>118</var> sets of ramen that satisfy the conditions, and here are some of them:</p>
+<ul>
+<li>The following three ramen: "with A, B", "with A, C", "with B, C".</li>
+<li>The following five ramen: "no toppings", "with A", "with A, B", "with B, C", "with A, B, C".</li>
+<li>Eight ramen, one for each type.</li>
+</ul>
+<p>Note that the set of the following three does not satisfy the condition: "'with A', 'with B', 'with A, B'", because C is not on any of them.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>50 111111113
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>1456748
+</pre>
+<p>Remember to print the number of the sets modulo <var>M</var>. Note that these three sample inputs above are included in the test set for the partial score.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 4</h3><pre>3000 123456791
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 4</h3><pre>16369789
+</pre>
+<p>This sample input is not included in the test set for the partial score.</p></section>
+</div>
+</span>

@@ -1,0 +1,74 @@
+
+<H1>Articulation Points</H1>
+
+
+<p>
+Find articulation points of a given undirected graph <var>G(V, E)</var>.
+</p>
+
+<p>
+A vertex in an undirected graph is an articulation point (or cut vertex) iff removing it disconnects the graph.
+</p>
+
+<H2>Input</H2>
+
+<pre>
+<var>|V|</var> <var>|E|</var>
+<var>s<sub>0</sub></var> <var>t<sub>0</sub></var>
+<var>s<sub>1</sub></var> <var>t<sub>1</sub></var>
+:
+<var>s<sub>|E|-1</sub></var> <var>t<sub>|E|-1</sub></var>
+</pre>
+
+<p>
+, where <var>|V|</var> is the number of vertices and <var>|E|</var> is the number of edges in the graph. The graph vertices are named with the numbers 0, 1,..., <var>|V|</var>-1 respectively.
+</p>
+
+<p>
+<var>s<sub>i</sub></var> and <var>t<sub>i</sub></var> represent source and target verticess of <var>i</var>-th edge (undirected).
+</p>
+
+<H2>Output</H2>
+
+<p>
+A list of <i>articulation points</i> of the graph <var>G</var> ordered by name.
+</p>
+
+<H2>Constraints</H2>
+
+<ul>
+<li>1 &le; <var>|V|</var> &le; 100,000</li>
+<li>0 &le; <var>|E|</var> &le; 100,000</li>
+<li>The graph is connected</li>
+<li>There are no parallel edges</li>
+<li>There are no self-loops</li>
+</ul>
+
+<H2>Sample Input 1</H2>
+<pre>
+4 4
+0 1
+0 2
+1 2
+2 3
+</pre>
+<H2>Sample Output 1</H2>
+<pre>
+2
+</pre>
+<br/>
+
+<H2>Sample Input 2</H2>
+<pre>
+5 4
+0 1
+1 2
+2 3
+3 4
+</pre>
+<H2>Sample Output 2</H2>
+<pre>
+1
+2
+3
+</pre>

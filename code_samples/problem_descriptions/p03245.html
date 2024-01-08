@@ -1,0 +1,151 @@
+<span class="lang-en">
+<p>Score : <var>600</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>Snuke is introducing a <strong>robot arm</strong> with the following properties to his factory:</p>
+<ul>
+<li>The robot arm consists of <var>m</var> <strong>sections</strong> and <var>m+1</var> <strong>joints</strong>. The sections are numbered <var>1</var>, <var>2</var>, ..., <var>m</var>, and the joints are numbered <var>0</var>, <var>1</var>, ..., <var>m</var>. Section <var>i</var> connects Joint <var>i-1</var> and Joint <var>i</var>. The length of Section <var>i</var> is <var>d_i</var>.</li>
+<li>For each section, its <strong>mode</strong> can be specified individually. There are four modes: <code>L</code>, <code>R</code>, <code>D</code> and <code>U</code>. The mode of a section decides the direction of that section. If we consider the factory as a coordinate plane, the position of Joint <var>i</var> will be determined as follows (we denote its coordinates as <var>(x_i, y_i)</var>):<ul>
+<li><var>(x_0, y_0) = (0, 0)</var>.</li>
+<li>If the mode of Section <var>i</var> is <code>L</code>, <var>(x_{i}, y_{i}) = (x_{i-1} - d_{i}, y_{i-1})</var>.</li>
+<li>If the mode of Section <var>i</var> is <code>R</code>, <var>(x_{i}, y_{i}) = (x_{i-1} + d_{i}, y_{i-1})</var>.</li>
+<li>If the mode of Section <var>i</var> is <code>D</code>, <var>(x_{i}, y_{i}) = (x_{i-1}, y_{i-1} - d_{i})</var>.</li>
+<li>If the mode of Section <var>i</var> is <code>U</code>, <var>(x_{i}, y_{i}) = (x_{i-1}, y_{i-1} + d_{i})</var>.</li>
+</ul>
+</li>
+</ul>
+<p>Snuke would like to introduce a robot arm so that the position of Joint <var>m</var> can be matched with all of the <var>N</var> points <var>(X_1, Y_1), (X_2, Y_2), ..., (X_N, Y_N)</var> by properly specifying the modes of the sections.
+Is this possible?
+If so, find such a robot arm and how to bring Joint <var>m</var> to each point <var>(X_j, Y_j)</var>.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li>All values in input are integers.</li>
+<li><var>1 \leq N \leq 1000</var></li>
+<li><var>-10^9 \leq X_i \leq 10^9</var></li>
+<li><var>-10^9 \leq Y_i \leq 10^9</var></li>
+</ul>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Partial Score</h3><ul>
+<li>In the test cases worth <var>300</var> points, <var>-10 \leq X_i \leq 10</var> and <var>-10 \leq Y_i \leq 10</var> hold.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+<var>X_1</var> <var>Y_1</var>
+<var>X_2</var> <var>Y_2</var>
+<var>:</var>
+<var>X_N</var> <var>Y_N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>If the condition can be satisfied, follow the following format. If the condition cannot be satisfied, print <code>-1</code>.</p>
+<pre><var>m</var>
+<var>d_1</var> <var>d_2</var> <var>...</var> <var>d_m</var>
+<var>w_1</var>
+<var>w_2</var>
+<var>:</var>
+<var>w_N</var>
+</pre>
+<p><var>m</var> and <var>d_i</var> are the configurations of the robot arm. Refer to the problem statement for what each of them means.
+Here, <var>1 \leq m \leq 40</var> and <var>1 \leq d_i \leq 10^{12}</var> must hold. Also, <var>m</var> and <var>d_i</var> must all be integers.</p>
+<p><var>w_j</var> is a string of length <var>m</var> that represents the way to bring Joint <var>m</var> of the robot arm to point <var>(X_j, Y_j)</var>.
+The <var>i</var>-th character of <var>w_j</var> should be one of the letters <code>L</code>, <code>R</code>, <code>D</code> and <code>U</code>, representing the mode of Section <var>i</var>.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>3
+-1 0
+0 3
+2 -1
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>2
+1 2
+RL
+UU
+DR
+</pre>
+<p>In the given way to bring Joint <var>m</var> of the robot arm to each <var>(X_j, Y_j)</var>, the positions of the joints will be as follows:</p>
+<ul>
+<li>To <var>(X_1, Y_1) = (-1, 0)</var>: First, the position of Joint <var>0</var> is <var>(x_0, y_0) = (0, 0)</var>. As the mode of Section <var>1</var> is <code>R</code>, the position of Joint <var>1</var> is <var>(x_1, y_1) = (1, 0)</var>. Then, as the mode of Section <var>2</var> is <code>L</code>, the position of Joint <var>2</var> is <var>(x_2, y_2) = (-1, 0)</var>.</li>
+<li>To <var>(X_2, Y_2) = (0, 3)</var>: <var>(x_0, y_0) = (0, 0), (x_1, y_1) = (0, 1), (x_2, y_2) = (0, 3)</var>.</li>
+<li>To <var>(X_3, Y_3) = (2, -1)</var>: <var>(x_0, y_0) = (0, 0), (x_1, y_1) = (0, -1), (x_2, y_2) = (2, -1)</var>.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>5
+0 0
+1 0
+2 0
+3 0
+4 0
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>-1
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>2
+1 1
+1 1
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>2
+1 1
+RU
+UR
+</pre>
+<p>There may be duplicated points among <var>(X_j, Y_j)</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 4</h3><pre>3
+-7 -3
+7 3
+-3 -7
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 4</h3><pre>5
+3 1 4 1 5
+LRDUL
+RDULR
+DULRD
+</pre></section>
+</div>
+</span>

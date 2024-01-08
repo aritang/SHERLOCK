@@ -1,0 +1,87 @@
+
+<H1><font color="#000">Problem H:</font> Robot's Crash</H1>
+
+<p>
+Prof. Jenifer A. Gibson is carrying out experiments with many robots. Since those robots are
+expensive, she wants to avoid their crashes during her experiments at her all effort. So she asked
+you, her assistant, as follows.
+</p>
+<p>
+“Suppose that we have <i>n</i> (2 &le; <i>n</i> &le; 100000) robots of the circular shape with the radius of <i>r</i>,
+and that they are placed on the <i>xy</i>-plane without overlaps. Each robot starts to move straight
+with a velocity of either <i>v</i> or -<i>v</i> simultaneously, say, at the time of zero. The robots keep their
+moving infinitely unless I stop them. I’d like to know in advance if some robots will crash each
+other. The robots crash when their centers get closer than the distance of 2<i>r</i>. I’d also like to
+know the time of the first crash, if any, so I can stop the robots before the crash. Well, could
+you please write a program for this purpose?”
+</p>
+
+<H2>Input</H2>
+
+<p>
+The input consists of multiple datasets. Each dataset has the following format:
+</p>
+
+<pre>
+<i>n</i>
+<i>vx vy</i>
+<i>r</i>
+<i>rx</i><sub>1</sub> <i>ry</i><sub>1</sub> <i>u</i><sub>1</sub>
+<i>rx</i><sub>2</sub> <i>ry</i><sub>2</sub> <i>u</i><sub>2</sub>
+...
+<i>rx</i><sub><i>n</i></sub> <i>ry</i><sub><i>n</i></sub> <i>u<sub>n</sub></i>
+</pre>
+
+<p>
+<i>n</i> is the number of robots. (<i>vx</i>, <i>vy</i>) denotes the vector of the velocity <i>v</i>. <i>r</i> is the radius of the
+robots. (<i>rx</i><sub><i>i</i></sub> , <i>ry</i><sub><i>i</i></sub> ) denotes the coordinates of the center of the <i>i</i>-th robot. <i>u<sub>i</sub></i> denotes the moving
+direction of the <i>i</i>-th robot, where 1 indicates the <i>i</i>-th robot moves with the velocity (<i>vx</i> , <i>vy</i>),
+and -1 indicates (-<i>vx</i> , -<i>vy</i>).
+</p>
+<p>
+All the coordinates range from -1200 to 1200. Both <i>vx</i> and <i>vy</i> range from -1 to 1.
+</p>
+<p>
+You may assume all the following hold for any pair of robots:
+</p>
+
+<ul>
+<li>they must not be placed closer than the distance of (2<i>r</i> + 10<sup>-8</sup> ) at the initial state;</li>
+ <li> they must get closer than the distance of (2<i>r</i> - 10<sup>-8</sup> ) if they crash each other at some
+  point of time; and</li>
+<li> they must not get closer than the distance of (2<i>r</i> + 10<sup>-8</sup> ) if they don’t crash.</li>
+</ul>
+
+<p>
+The input is terminated by a line that contains a zero. This should not be processed.
+</p>
+
+<H2>Output</H2>
+
+<p>
+For each dataset, print the first crash time in a line, or “SAFE” if no pair of robots crashes each
+other. Each crash time should be given as a decimal with an arbitrary number of fractional
+digits, and with an absolute error of at most 10<sup>-4</sup>.
+</p>
+
+<H2>Sample Input</H2>
+<pre>
+2
+1.0 0.0
+0.5
+0.0 0.0 1
+2.0 0.0 -1
+2
+1.0 0.0
+0.5
+0.0 0.0 -1
+2.0 0.0 1
+0
+</pre>
+
+<H2>Output for the Sample Input</H2>
+<pre>
+0.500000
+SAFE
+</pre>
+

@@ -1,0 +1,121 @@
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({ tex2jax: { inlineMath: [["$","$"], ["\\(","\\)"]], processEscapes: true }});
+</script>
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+<h1>Kingdom of JOIOI</h1>
+
+<p>
+  The Kingdom of JOIOI is a rectangular grid of $H \times W$ cells. In the Kingdom of JOIOI, in order to improve efficiency of administrative institutions, the country will be divided into two regions called "JOI" and "IOI."
+</p>
+
+<p>
+  Since we do not want to divide it in a complicated way, the division must satisfy the following conditions:
+</p>
+
+<ul>
+<li> Each region must contain at least one cell.</li>
+<li> Each cell must belong to exactly one of two regions.</li>
+<li> For every pair of cells in the JOI region, we can travel from one to the other by passing through cells belonging to the JOI region only. When move from a cell to another cell, the two cells must share an edge. The same is true for the IOI region.</li>
+<li> For each row or column, if we take all the cells in that row or column, the cells belonging to each region must be connected. All the cells in a row or column may belong to the same region.</li>
+</ul>
+
+<p>
+  Each cell has an integer called the <b>altitude</b>. After we divide the country into two regions, it is expected that traveling in each region will be active. But, if the difference of the altitudes of cells are large, traveling between them becomes hard. Therefore, we would like to minimize the maximum of the difference of the altitudes between cells belonging to the same region. In other words, we would like to minimize the larger value of
+</p>
+<ul>
+<li> the difference between the maximum and the minimum altitudes in the JOI region, and</li>
+<li> the difference between the maximum and the minimum altitudes in the IOI region.</li>
+</ul>
+
+
+<h3>Task</h3>
+<p>
+  Given the altitudes of cells in the Kingdom of JOIOI, write a program which calculates the minimum of the larger value of the difference between the maximum and the minimum altitudes in the JOI region and the difference between the maximum and the minimum altitudes in the IOI region when we divide the country into two regions.
+  </p>
+
+<h3>Input</h3>
+<p>
+  Read the following data from the standard input.
+</p>
+
+<ul>
+<li> The first line of input contains two space separated integers $H$, $W$. This means the Kingdom of JOIOI is a rectangular grid of $H \times  W$ cells.</li>
+<li> The $i$-th line ($1 \leq i \leq H$) of the following $H$ lines contains $W$ space separated integers $A_{i,1}, A_{i,2}, ..., A_{i,W}$. This means the cell in the $i$-th row from above and $j$-th column from left ($1 \leq j \leq W$) has altitude $A_{i,j}$.</li>
+</ul>
+
+
+<h3>Output</h3>
+<p>
+Write one line to the standard output. The output contains the minimum of the larger value of the difference between the maximum and the minimum altitudes in the JOI region and the difference between the maximum and the minimum altitudes in the IOI region when we divide the country into two regions.
+</p>
+
+<h3>Constraints</h3>
+<p>
+All input data satisfy the following conditions.
+</p>
+
+<ul>
+    <li>$2 \leq H \leq 2 000．$</li>
+    <li>$2 \leq W \leq 2 000．$</li>
+    <li>$1 \leq A_{i, j} \leq 1 000 000 000 (1 \leq i \leq H, 1 \leq j \leq W)．$</li>
+</ul>
+
+<h3>Sample Input and Output</h3>
+
+<h3>Sample Input 1</h3>
+<pre>
+4 4
+1 12 6 11
+11 10 2 14
+10 1 9 20
+4 17 19 10
+</pre>
+
+<h3>Sample Output 1</h3>
+<pre>
+11
+</pre>
+<p>
+  For example, in this sample input, we divide the country into two regions as follows. Here, ‘J’ denotes the JOI region, and ‘I’ denotes the IOI region.
+</p>
+
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_JOI2016_3_1">
+
+<p>
+The following division does not satisfy the condition because, in the third column from left, cells with ‘I’ are not connected.
+</p>
+
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_JOI2016_3_2">
+
+
+<h3>Sample Input 2</h3>
+<pre>
+8 6
+23 23 10 11 16 21
+15 26 19 28 19 20
+25 26 28 16 15 11
+11 8 19 11 15 24
+14 19 15 14 24 11
+10 8 11 7 6 14
+23 5 19 23 17 17
+18 11 21 14 20 16
+</pre>
+
+<h3>Sample Output 2</h3>
+<pre>
+18
+</pre>
+
+<br/>
+<div class="source">
+  <p class="source">
+    <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commonse License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png"/></a>
+  </p>
+  <p class="source">
+    <a href="https://www.ioi-jp.org/joi/2016/2017-ho/index.html">The 16th Japanese Olympiad in Informatics (JOI 2016/2017)
+Final Round</a>
+  </p>
+</div>

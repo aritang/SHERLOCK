@@ -1,0 +1,117 @@
+
+
+<h1><font color="#000">Problem F:</font>  UTF-8</h1>
+
+<p>UTF-8はマルチバイト文字を符号化する手法の一つである。</p>
+<p>文字は計算機上ではバイト列として扱われる。英語だけであればラテンアルファベットおよび数字、記号を合わせても 1byteで表現できるが、残念ながら世界中で利用されている文字を1byteで表現することはできないため、複数のバイトを用いて文字を表す必要がある。</p>
+<p>ここで例えば"あ"という文字に12354(0x3042)という2バイト列を割り当てたとき、そのままバイト列を並べると0x30,0x42と2文字なのか0x3042で1文字なのかが区別がつかない。</p>
+<p>このため、マルチバイト文字符号化方式のUTF-8では始めの1バイト目で続くバイト列の長さが分かるようにすることにより、この問題を克服している。具体的なビットパターンは以下のようになる。</p>
+<table>
+	<tr><th>バイト長</th><th>ビットパターン</th></tr>
+	<tr><td>1</td><td style='text-align: left'>0xxxxxxx</td></tr>
+	<tr><td>2</td><td style='text-align: left'>110yyyyx 10xxxxxx</td></tr>
+	<tr><td>3</td><td style='text-align: left'>1110yyyy 10yxxxxx 10xxxxxx</td></tr>
+	<tr><td>4</td><td style='text-align: left'>11110yyy 10yyxxxx 10xxxxxx 10xxxxxx</td></tr>
+</table>
+<p>ここでxは0/1の任意のビットとする。またyも0/1の任意のビットとなるがどれか一つは1である必要がある。また全ての文字は1,2,3,4バイト文字のいずれかであるとする。</p>
+<p>ここでyのビットが少なくとも一つは1であるという制約は以下のような理由による。 例えば'/'(0x2f)をバイト列にエンコードする際に0x2fと1バイトで符号化するないしは0xc0 0xafと2バイトで符号化する方法の二つがあるが、このような曖昧性を許すとセキュリティ上の脅威のもととなる可能性があるためである。</p>
+<p>以上の話を聞いたあなたはUTF-8がどの程度の自由度があるのかが気になった。具体的には与えられたバイト列の一部のビットが不明な時にUTF-8として可能なバイト列の組み合わせがどの程度あるかということである。</p>
+<p>このとき可能なバイト列の組み合わせの個数を求め、1,000,000で割った余りを出力せよ。 
+</p>
+
+<h2>Input</h2>
+
+<pre>N
+b<sub>1</sub>
+b<sub>2</sub>
+...
+b<sub>N</sub></pre>
+<p>Nはバイト列の個数, b<sub>i</sub>はバイト列である。
+1 &le; N &le; 1000 を満たしている。 b<sub>i</sub>は記号{0/1/x}が8個並んでいる。xはビットが不明であることを示している。 
+</p>
+
+<h2>Output</h2>
+
+<p>可能なバイト列の組み合わせの個数を1,000,000で割った余りを出力せよ。
+</p>
+
+
+<h2>Notes on Test Cases</h2>
+
+<p>
+上記入力形式で複数のデータセットが与えられます。各データセットに対して上記出力形式で出力を行うプログラムを作成して下さい。
+</p>
+
+<p>
+N が 0 のとき入力の終わりを示します。
+</p>
+
+<!--
+<h2>Sample Input 1</h2>
+<pre>1
+xxxxxxxx
+</pre>
+<h2>Output for Sample Input 1</h2>
+<pre>128
+</pre>
+
+<h2>Sample Input 2</h2>
+<pre>3
+11100000
+10x00000
+10111111
+</pre>
+<h2>Output for Sample Input 2</h2>
+<pre>1
+</pre>
+
+<h2>Sample Input 3</h2>
+<pre>3
+11100000
+10000000
+10111111
+</pre>
+<h2>Output for Sample Input 3</h2>
+<pre>0
+</pre>
+
+<h2>Sample Input 4</h2>
+<pre>4
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+</pre>
+<h2>Output for Sample Input 4</h2>
+<pre>778240
+</pre>
+-->
+
+<h2>Sample Input</h2>
+<pre>
+1
+xxxxxxxx
+3
+11100000
+10x00000
+10111111
+3
+11100000
+10000000
+10111111
+4
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+0
+</pre>
+
+
+<h2>Output for Sample Input</h2>
+<pre>
+128
+1
+0
+778240
+</pre>

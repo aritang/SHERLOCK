@@ -1,0 +1,93 @@
+<span class="lang-en">
+<p>Score : <var>200</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>Tak performed the following action <var>N</var> times: rolling two dice.
+The result of the <var>i</var>-th roll is <var>D_{i,1}</var> and <var>D_{i,2}</var>.</p>
+<p>Check if doublets occurred at least three times in a row.
+Specifically, check if there exists at lease one <var>i</var> such that <var>D_{i,1}=D_{i,2}</var>, <var>D_{i+1,1}=D_{i+1,2}</var> and <var>D_{i+2,1}=D_{i+2,2}</var> hold.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>3 \leq N \leq 100</var></li>
+<li><var>1\leq D_{i,j} \leq 6</var></li>
+<li>All values in input are integers.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+<var>D_{1,1}</var> <var>D_{1,2}</var>
+<var>\vdots</var>
+<var>D_{N,1}</var> <var>D_{N,2}</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print <code>Yes</code> if doublets occurred at least three times in a row. Print <code>No</code> otherwise.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>5
+1 2
+6 6
+4 4
+3 3
+3 2
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>Yes
+</pre>
+<p>From the second roll to the fourth roll, three doublets occurred in a row.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>5
+1 1
+2 2
+3 4
+5 5
+6 6
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>No
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>6
+1 1
+2 2
+3 3
+4 4
+5 5
+6 6
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>Yes
+</pre></section>
+</div>
+</span>

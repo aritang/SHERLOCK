@@ -1,0 +1,66 @@
+<span class="lang-en">
+<p>Score : <var>400</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>Given are three integers <var>N</var>, <var>K</var>, and <var>S</var>.</p>
+<p>Find a sequence <var>A_1, A_2, ..., A_N</var> of <var>N</var> integers between <var>1</var> and <var>10^9</var> (inclusive) that satisfies the condition below.
+We can prove that, under the conditions in Constraints, such a sequence always exists.</p>
+<ul>
+<li>There are exactly <var>K</var> pairs <var>(l, r)</var> of integers such that <var>1 \leq l \leq r \leq N</var> and <var>A_l + A_{l + 1} + \cdots + A_r = S</var>.</li>
+</ul>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 \leq N \leq 10^5</var></li>
+<li><var>0 \leq K \leq N</var></li>
+<li><var>1 \leq S \leq 10^9</var></li>
+<li>All values in input are integers.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var> <var>K</var> <var>S</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print a sequence satisfying the condition, in the following format:</p>
+<pre><var>A_1</var> <var>A_2</var> <var>...</var> <var>A_N</var>
+</pre>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>4 2 3
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>1 2 3 4
+</pre>
+<p>Two pairs <var>(l, r) = (1, 2)</var> and <var>(3, 3)</var> satisfy the condition in the statement.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>5 3 100
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>50 50 50 30 70
+</pre></section>
+</div>
+</span>

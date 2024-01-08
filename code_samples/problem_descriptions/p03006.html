@@ -1,0 +1,90 @@
+<span class="lang-en">
+<p>Score : <var>300</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>There are <var>N</var> balls in a two-dimensional plane. The <var>i</var>-th ball is at coordinates <var>(x_i, y_i)</var>.</p>
+<p>We will collect all of these balls, by choosing two integers <var>p</var> and <var>q</var> such that <var>p \neq 0</var> or <var>q \neq 0</var> and then repeating the following operation:</p>
+<ul>
+<li>Choose a ball remaining in the plane and collect it. Let <var>(a, b)</var> be the coordinates of this ball. If we collected a ball at coordinates <var>(a - p, b - q)</var> in the previous operation, the cost of this operation is <var>0</var>. Otherwise, including when this is the first time to do this operation, the cost of this operation is <var>1</var>.</li>
+</ul>
+<p>Find the minimum total cost required to collect all the balls when we optimally choose <var>p</var> and <var>q</var>.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 \leq N \leq 50</var></li>
+<li><var>|x_i|, |y_i| \leq 10^9</var></li>
+<li>If <var>i \neq j</var>, <var>x_i \neq x_j</var> or <var>y_i \neq y_j</var>.</li>
+<li>All values in input are integers.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+<var>x_1</var> <var>y_1</var>
+<var>:</var>
+<var>x_N</var> <var>y_N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the minimum total cost required to collect all the balls.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>2
+1 1
+2 2
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>1
+</pre>
+<p>If we choose <var>p = 1, q = 1</var>, we can collect all the balls at a cost of <var>1</var> by collecting them in the order <var>(1, 1)</var>, <var>(2, 2)</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>3
+1 4
+4 6
+7 8
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>1
+</pre>
+<p>If we choose <var>p = -3, q = -2</var>, we can collect all the balls at a cost of <var>1</var> by collecting them in the order <var>(7, 8)</var>, <var>(4, 6)</var>, <var>(1, 4)</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>4
+1 1
+1 2
+2 1
+2 2
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>2
+</pre></section>
+</div>
+</span>

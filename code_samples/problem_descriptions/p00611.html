@@ -1,0 +1,111 @@
+
+<H1><font color="#000000">Problem G:</font> Building Water Ways</H1>
+
+<p>
+In ancient times, Romans constructed numerous water ways to supply water to cities and industrial sites. These water ways were amongst the greatest engineering feats of the ancient world.
+</p>
+<p>
+These water ways contributed to social infrastructures which improved people's quality of life. On the other hand, problems related to the water control and the water facilities are still interesting as a lot of games of water ways construction have been developed.
+</p>
+
+<p>
+Your task is to write a program which reads a map and computes the minimum possible cost of constructing water ways from sources to all the cities.
+</p>
+
+<br><br>
+<center>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE1_waterWay">
+</center>
+<br><br>
+
+<p>
+As shown in Figure 1, the map is represented by <i>H</i> &times <i>W</i> grid cells, where each cell represents source, city, flatland, or obstacle.
+</p>
+
+<p>
+You can construct only one water way from a source, but there are no limitations on the length of that water way and it can provide water to any number of cities located on its path. You can not construct water ways on the obstacles.
+</p>
+
+<p>
+Your objective is to bring water to all the city and minimize the number of cells which represent water ways. In the Figure 1, water ways are constructed in 14 cells which is the minimum cost.
+</p>
+
+<p>
+The water ways must satisfy the following conditions:
+</p>
+
+<ul>
+<li>a water way cell is adjacent to at most 2 water way cells in four cardinal points.</li>
+<li>a source cell is adjacent to at most 1 water way cell in four cardinal points.</li>
+<li>there is no path from a source to other sources through water ways.</li>
+</ul>
+
+
+<H2>Input</H2>
+
+<p>
+The input consists of multiple datasets. Each dataset consists of:
+</p>
+
+<pre>
+<i>H W</i>
+<i>H</i> &times; <i>W</i> characters
+</pre>
+
+<p>
+The integers <i>H</i> and <i>W</i> are the numbers of rows and columns of the map. <i>H</i> &times; <i>W</i> characters denote the cells which contain:
+</p>
+
+<ul>
+<li>'<span>P</span>': source</li>
+<li>'<span>*</span>': city</li>
+<li>'<span>.</span>': flatland</li>
+<li>'<span>#</span>': obstacle</li>
+</ul>
+
+<p>
+The end of input is indicated by a line containing two zeros separated by a space.
+</p>
+
+<H2>Output</H2>
+
+<p>
+For each dataset, print the minimum cost to construct the water ways.
+</p>
+
+<H2>Constraints</H2>
+<ul>
+<li>Judge data contains at most 60 data sets.</li>
+<li>3 &le; <i>H</i>, <i>W</i> &le; 10</li>
+<li>1 &le; the number of sources, the number of cities &le; 8</li>
+<li>The map is surrounded by obstacles.</li>
+<li>Sources are not adjacent each other(on the left, right, top and bottom)</li>
+<li>There is a solution.</li>
+</ul>
+
+<H2>Sample Input</H2>
+<pre>
+3 8
+########
+#P....*#
+########
+10 10
+##########
+#P.......#
+#..#*....#
+#..#*.#.*#
+#.....#*.#
+#*.......#
+#..##....#
+#...#.P..#
+#P......P#
+##########
+0 0
+</pre>
+
+<H2>Output for the Sample Input</H2>
+<pre>
+5
+14
+</pre>
+

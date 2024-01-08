@@ -1,0 +1,160 @@
+
+
+<H1><font color="#000">Problem J: </font><span>C(O|W|A*RD*|S)* CROSSWORD</span> Puzzle</H1>
+
+<p>
+The first crossword puzzle was published on December 21, 1913 by Arthur Wynne. To celebrate the centennial of his great-great-grandfather's invention, John "Coward" Wynne<sup>1</sup> was struggling to make crossword puzzles. He was such a coward that whenever he thought of a tricky clue for a word, he couldn’t stop worrying if people would blame him for choosing a bad clue that could never mean that word. At the end of the day, he cowardly chose boring clues, which made his puzzles less interesting.
+</p>
+
+<p>
+One day, he came up with a brilliant idea: puzzles in which word meanings do not matter, and yet interesting. He told his idea to his colleagues, who admitted that the idea was intriguing. They even named his puzzles "Coward's Crossword Puzzles" after his nickname. 
+</p>
+
+<p>
+However, making a Coward's crossword puzzle was not easy. Even though he did not have to think about word meanings, it was not easy to check if a puzzle has one and only one set of answers. As the day of the centennial anniversary was approaching, John started worrying if he would not be able to make interesting ones in time. Let's help John by writing a program that solves Coward's crossword puzzles.
+</p>
+
+<p>
+Each puzzle consists of <var>h</var> &times; <var>w</var> cells along with <var>h</var> across clues and <var>w</var> down clues. The clues are regular expressions written in a pattern language whose BNF syntax is given as in the table below.
+</p>
+
+<pre>
+clue       ::= "^" pattern "$"
+pattern    ::= simple | pattern "|" simple
+simple     ::= basic | simple basic
+basic      ::= elementary | elementary "*"
+elementary ::= "." | "A" | "B" | ... | "Z" | "(" pattern ")"
+</pre>
+<center>
+<span>
+Table J.1. BNF syntax of the pattern language.
+</span>
+</center>
+</br>
+
+<p>
+The clues (as denoted by p and q below) match words (as denoted by s below) according to the
+following rules.
+</p>
+
+<ul>
+<li><span>^</span><var>p</var><span>$</span> matches <var>s</var> if <var>p</var> matches <var>s</var>.</li>
+<li><var>p</var><span>|</span><var>q</var> matches a string <var>s</var> if <var>p</var> and/or <var>q</var> matches <var>s</var>.</li>
+<li><var>pq</var> matches a string <var>s</var> if there exist <var>s<sub>1</sub></var> and <var>s<sub>2</sub></var> such that <var>s<sub>1</sub>s<sub>2</sub></var> = <var>s</var>, <var>p</var> matches <var>s<sub>1</sub></var>, and <var>q</var> matches <var>s<sub>2</sub></var>.</li>
+<li><var>p</var><span>*</span> matches a string <var>s</var> if <var>s</var> is empty, or there exist <var>s<sub>1</sub></var> and <var>s<sub>2</sub></var> such that <var>s<sub>1</sub>s<sub>2</sub></var> = <var>s</var>, <var>p</var> matches</li>
+<li><var>s<sub>1</sub></var>, and <var>p</var><span>*</span> matches <var>s<sub>2</sub></var>.</li>
+<li>Each of <span>A</span>, <span>B</span>, . . . , <span>Z</span> matches the respective letter itself.</li>
+<li><span>(</span><var>p</var><span>)</span> matches <var>s</var> if <var>p</var> matches <var>s</var>.</li>
+<li><span>.</span> is the shorthand of <span>(A|B|C|D|E|F|G|H|I|J|K|L|M|N|O|P|Q|R|S|T|U|V|W|X|Y|Z)</span>.</li>
+</ul>
+
+<p>
+Below is an example of a Coward’s crossword puzzle with the answers filled in the cells.
+</p>
+
+<center>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_crosswordPuzzle" style="aling:center;width:240px"><br/>
+</center>
+<br/>
+
+<p>
+<b>Java Specific:</b> Submitted Java programs may not use classes in the java.util.regex package.<br/>
+<b>C++ Specific:</b> Submitted C++ programs may not use the std::regex class.
+</p>
+
+
+
+<H2>Input</H2>
+
+<p>
+The input consists of multiple datasets, each of which represents a puzzle given in the following format.
+</p>
+
+<pre>
+<var>h</var> <var>w</var>
+<var>p<sub>1</sub></var>
+<var>p<sub>2</sub></var>
+...
+<var>p<sub>h</sub></var>
+<var>q<sub>1</sub></var>
+<var>q<sub>2</sub></var>
+...
+<var>q<sub>2</sub></var>
+</pre>
+
+<p>
+Here, <var>h</var> and <var>w</var> represent the vertical and horizontal numbers of cells, respectively, where 2 &le; <var>h,w</var> &le; 4. The <var>p<sub>i</sub></var> and <var>q<sub>j</sub></var> are the across and down clues for the <var>i</var>-th row and <var>j</var>-th column, respectively. Any clue has no more than 512 characters.
+</p>
+<p>
+The last dataset is followed by a line of two zeros. You may assume that there are no more than 30 datasets in the input.
+</p>
+
+
+<H2>Output</H2>
+
+<p>
+For each dataset, when the puzzle has a unique set of answers, output it as <var>h</var> lines of <var>w</var> characters. When the puzzle has no set of answers, or more than one set of answers, output "<span>none</span>" or "<span>ambiguous</span>" without double quotations, respectively.
+</p>
+
+<H2>Sample Input</H2>
+<pre>
+2 2
+^(C|I|T|Y)*<span>$</span>
+^(C|O|P|S)*<span>$</span>
+^(F|L|I|P)*<span>$</span>
+^(B|A|C|K)*<span>$</span>
+2 2
+^HE|LL|O*<span>$</span>
+^(P|L|E|A|S|E)*<span>$</span>
+^(H|L)*<span>$</span>
+^EP|IP|EF<span>$</span>
+4 4
+^LONG|TALL|S*ALLY<span>$</span>
+^(R*EV*|OL*U(TIO)*N)*<span>$</span>
+^(STRAWBERRY|F*I*E*L*D*S*|FOREVER)*<span>$</span>
+^P.S.|I|LOVE|YOU<span>$</span>
+^(RE|A|L)((L|OV*E)*)<span>$</span>
+^(LUC*Y*|IN.THE.SKY)(WITH|DI*A*M*ON*D*S*)<span>$</span>
+^(IVE*|GOT|A|F*E*E*L*I*N*G*)*<span>$</span>
+^YEST*E*R*D*A*Y*<span>$</span>
+2 3
+^(C|P)(OL|AS)<span>$</span>
+^(LU|TO)(X|R)<span>$</span>
+^CT|PL<span>$</span>
+^OU|AO<span>$</span>
+^SR|LX<span>$</span>
+2 2
+^T*|(HI)|S*<span>$</span>
+^SE|NT|EN|CE<span>$</span>
+^IS<span>$</span>
+^(F|A|L|S|E)*<span>$</span>
+2 4
+^ARKA|BARB|COLU<span>$</span>
+^NSAS|ADOS|MBIA<span>$</span>
+^..<span>$</span>
+^..<span>$</span>
+^KA|RO|LI<span>$</span>
+^AS|BA|US<span>$</span>
+0 0
+</pre>
+
+<H2>Output for the Sample Input</H2>
+<pre>
+IC
+PC
+HE
+LP
+ALLY
+OUNE
+EDIS
+LOVE
+ambiguous
+none
+ARKA
+NSAS
+</pre>
+
+<h2>Notes</h2>
+<p>
+<sup>1</sup> All characters appearing in this problem, except for Arthur Wynne, are fictitious. Any resemblance to real persons, living or dead, is purely coincidental.
+</p>

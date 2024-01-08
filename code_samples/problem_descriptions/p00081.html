@@ -1,0 +1,57 @@
+
+
+
+<H1>線対称</H1>
+
+<p>
+平面上の異なる 3 点 <var>P1(x1,y1)</var>, <var>P2(x2,y2)</var>, <var>Q(xq,yq)</var> の座標の組を読み込んで、点 <var>P1</var> 点<var>P2</var> を通る直線を対称軸として点 <var>Q</var> と線対称の位置にある点 <var>R(x,y)</var> を出力するプログラムを作成してください。なお、点 <var>Q</var> は、その対称軸上にないものとします。
+</p>
+
+<center>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE1_09_1">
+</center>
+
+<H2>入力</H2>
+<p>
+入力は複数のデータセットからなります。各データセットは以下の形式で与えられます。
+</p>
+
+<pre>
+<var>x1</var>,<var>y1</var>,<var>x2</var>,<var>y2</var>,<var>xq</var>,<var>yq</var>
+</pre>
+
+<p>
+<var>x1</var>, <var>y1</var>, <var>x2</var>, <var>y2</var>, <var>xq</var>, <var>yq</var> (-100 以上 100 以下の実数) がカンマ区切りで１行に与えられます。
+</p>
+
+<p>
+データセットの数は 50 を超えない。
+</p>
+
+<H2>出力</H2>
+
+<p>
+データセットごとに、<var>x</var>, <var>y</var> を空白区切りで 1 行に出力する。出力は実数で 0.0001 以下の誤差を含んでもよい。
+</p>
+
+<H2>Sample Input</H2>
+
+<pre>
+1.0,0.0,-1.0,0.0,1.0,1.0 
+1.0,0.0,0.0,-1.0,3.0,0.0 
+0.0,1.0,0.0,-1.0,1.0,1.0 
+</pre>
+
+
+
+<H2>Output for the Sample Input</H2>
+
+<pre>
+1.000000 -1.000000
+1.000000 2.000000
+-1.000000 1.000000
+</pre>
+
+
+
+

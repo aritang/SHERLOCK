@@ -1,0 +1,124 @@
+<span class="lang-en">
+<p>Score : <var>200</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>There are <var>N</var> students and <var>M</var> checkpoints on the <var>xy</var>-plane.<br/>
+The coordinates of the <var>i</var>-th student <var>(1 \leq i \leq N)</var> is <var>(a_i,b_i)</var>, and the coordinates of the checkpoint numbered <var>j</var> <var>(1 \leq j \leq M)</var> is <var>(c_j,d_j)</var>.<br/>
+When the teacher gives a signal, each student has to go to the nearest checkpoint measured in <em>Manhattan distance</em>. <br/>
+The Manhattan distance between two points <var>(x_1,y_1)</var> and <var>(x_2,y_2)</var> is <var>|x_1-x_2|+|y_1-y_2|</var>.<br/>
+Here, <var>|x|</var> denotes the absolute value of <var>x</var>.<br/>
+If there are multiple nearest checkpoints for a student, he/she will select the checkpoint with the smallest index.<br/>
+Which checkpoint will each student go to?</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 \leq N,M \leq 50</var></li>
+<li><var>-10^8 \leq a_i,b_i,c_j,d_j \leq 10^8</var></li>
+<li>All input values are integers.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>The input is given from Standard Input in the following format:</p>
+<pre><var>N</var> <var>M</var>
+<var>a_1</var> <var>b_1</var>
+<var>:</var>  
+<var>a_N</var> <var>b_N</var>
+<var>c_1</var> <var>d_1</var>
+<var>:</var>  
+<var>c_M</var> <var>d_M</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print <var>N</var> lines.<br/>
+The <var>i</var>-th line <var>(1 \leq i \leq N)</var> should contain the index of the checkpoint for the <var>i</var>-th student to go.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>2 2
+2 0
+0 0
+-1 0
+1 0
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>2
+1
+</pre>
+<p>The Manhattan distance between the first student and each checkpoint is:</p>
+<ul>
+<li>For checkpoint <var>1</var>: <var>|2-(-1)|+|0-0|=3</var></li>
+<li>For checkpoint <var>2</var>: <var>|2-1|+|0-0|=1</var></li>
+</ul>
+<p>The nearest checkpoint is checkpoint <var>2</var>. Thus, the first line in the output should contain <var>2</var>.</p>
+<p>The Manhattan distance between the second student and each checkpoint is:</p>
+<ul>
+<li>For checkpoint <var>1</var>: <var>|0-(-1)|+|0-0|=1</var></li>
+<li>For checkpoint <var>2</var>: <var>|0-1|+|0-0|=1</var></li>
+</ul>
+<p>When there are multiple nearest checkpoints, the student will go to the checkpoint with the smallest index. Thus, the second line in the output should contain <var>1</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>3 4
+10 10
+-10 -10
+3 3
+1 2
+2 3
+3 5
+3 5
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>3
+1
+2
+</pre>
+<p>There can be multiple checkpoints at the same coordinates.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>5 5
+-100000000 -100000000
+-100000000 100000000
+100000000 -100000000
+100000000 100000000
+0 0
+0 0
+100000000 100000000
+100000000 -100000000
+-100000000 100000000
+-100000000 -100000000
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>5
+4
+3
+2
+1
+</pre></section>
+</div>
+</span>

@@ -1,0 +1,93 @@
+
+
+
+<H1>秋のイルミネーション</H1>
+
+<p>
+ 四角形が大好きな人が多く住む四角町では、四角形の電光板を組み合わせたイルミネーションで町中を彩るお祭りが開催されます。<!--このイルミネーションには四角大学で開発された特殊な電光板を使います。-->この電光板は電気を流すと発光し、発光している板に接している板も発光します。したがって、電光板を何枚使っても、すべてがひとかたまりに接していれば電源がひとつで済むという優れものです。
+ </p>
+
+<p>
+お祭り実行委員会では、四角形を組み合わせたデザインを町民から募集し多数のイルミネーションを作成します。各イルミネーションは、デザインを構成する四角形の配置によって必要となる電源の個数が変わるため、必要な電源の個数を把握する作業に<!--毎年-->大きな手間がかかります。<!--今年は例年より多くのデザインが集まったため、お祭りまでに準備が間に合わない恐れが出てきました。-->そこで、<!--お祭り好きな-->あなたは四角形の配置を調べ、必要な電源の個数を計算するプログラムを作成して実行委員会を手助けすることにしました。
+</p>
+
+<br>
+<center>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE1_illumination">
+</center>
+<br>
+
+<p>
+イルミネーションの個数、各イルミネーションを構成する四角形の情報を入力とし、イルミネーションごとに必要な電源の個数を出力するプログラムを作成してください。重なっていたり接していたりする四角形を 1 つのまとまりと考え、1 つのまとまりに対して電源の個数は 1 つと数えてください。
+</p>
+
+
+
+<H2>Input</H2>
+<p>
+複数のデータセットの並びが入力として与えられます。入力の終わりはゼロひとつの行で示されます。各データセットは以下の形式で与えられます。
+</p>
+
+<pre>
+<var>N</var>
+<var>M<sub>1</sub></var>
+<var>xa<sub>1</sub></var> <var>ya<sub>1</sub></var> <var>xb<sub>1</sub></var> <var>yb<sub>1</sub></var> <var>xc<sub>1</sub></var> <var>yc<sub>1</sub></var> <var>xd<sub>1</sub></var> <var>yd<sub>1</sub></var>
+<var>xa<sub>2</sub></var> <var>ya<sub>2</sub></var> <var>xb<sub>2</sub></var> <var>yb<sub>2</sub></var> <var>xc<sub>2</sub></var> <var>yc<sub>2</sub></var> <var>xd<sub>2</sub></var> <var>yd<sub>2</sub></var>
+:
+<var>xa<sub>M<sub>1</sub></sub></var> <var>ya<sub>M<sub>1</sub></sub></var> <var>xb<sub>M<sub>1</sub></sub></var> <var>yb<sub>M<sub>1</sub></sub></var> <var>xc<sub>M<sub>1</sub></sub></var> <var>yc<sub>M<sub>1</sub></sub></var> <var>xd<sub>M<sub>1</sub></sub></var> <var>yd<sub>M<sub>1</sub></sub></var>
+<var>M<sub>2</sub></var>
+:
+:
+<var>M<sub>N</sub></var>
+:
+:
+</pre>
+
+<p>
+1 行目にイルミネーションの個数 <var>N</var> (1 &le; <var>N</var> &le; 100) が与えられます。続いて、<var>N</var> 個のイルミネーションの情報が与えられます。第 <var>i</var> のイルミネーションの情報として、イルミネーションを構成する四角形の個数 <var>M<sub>i</sub></var> (1 &le; <var>M<sub>i</sub></var> &le; 100) が１行に与えられます。続く <var>M<sub>i</sub></var> 行に <var>j</var> 個目の四角形の頂点 <var>xa<sub>j</sub></var>, <var>ya<sub>j</sub></var>, <var>xb<sub>j</sub></var>, <var>yb<sub>j</sub></var>, <var>xc<sub>j</sub></var>, <var>yc<sub>j</sub></var>, <var>xd<sub>j</sub></var>, <var>yd<sub>j</sub></var> (-1000 以上 1000 以下の整数) が与えられます。
+</p>
+
+<p>
+入力される四角形の頂点座標は、時計回りの順に従って入力されます。ただし、入力データの四角形はすべて凸な四角形とします。
+</p>
+  
+<p>
+データセットの数は 10 を超えません。
+</p>
+
+
+
+<H2>Output</H2>
+<p>
+入力データセットごとに、イルミネーションごとに必要な電源の個数を出力します。出力する電源の個数は各イルミネーションが入力された順番に従ってください。
+</p>
+
+<H2>Sample Input</H2>
+<pre>
+3
+1
+0 0 0 1 1 1 1 0
+2
+0 0 0 1 1 1 1 0
+100 100 100 200 200 200 200 100
+2
+0 0 0 100 100 100 100 0
+10 10 10 20 20 20 20 10
+2
+1
+30 40 40 50 40 20 20 10
+1
+30 40 40 50 40 20 20 10
+0
+</pre>
+
+
+<H2>Output for the Sample Input</H2>
+<pre>
+1
+2
+1
+1
+1
+</pre>
+

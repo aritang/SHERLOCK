@@ -1,0 +1,77 @@
+
+<H1><font color="#000">Problem J: </font> Cruel Bingo</H1>
+
+<p>
+Bingo is a party game played by many players and one game master. Each player is given a bingo card containing <i>N</i><sup>2</sup> different numbers in a <i>N</i> &times; <i>N</i> grid (typically <i>N</i> = 5). The master draws numbers from a lottery one by one during the game. Each time a number is drawn, a player marks a square with that number if it exists. The player’s goal is to have <i>N</i> marked squares in a single vertical, horizontal, or diagonal line and then call “Bingo!” The first player calling “Bingo!” wins the game.
+</p>
+
+<p>
+In ultimately unfortunate cases, a card can have exactly <i>N</i> unmarked squares, or <i>N</i>(<i>N</i>-1) marked squares, but not a bingo pattern. Your task in this problem is to write a program counting how many such patterns are possible from a given initial pattern, which contains zero or more marked squares.
+</p>
+
+<H2>Input</H2>
+
+<p>
+The input is given in the following format:
+</p>
+
+<p>
+<i>N K</i><br>
+<i>x</i><sub>1</sub> <i>y</i><sub>1</sub><br>
+.<br>
+.<br>
+.<br>
+<i>x<sub>K</sub> y<sub>K</sub></i><br>
+</p>
+<p>
+The input begins with a line containing two numbers <i>N</i> (1 &le; <i>N</i> &le; 32) and <i>K</i> (0 &le; <i>K</i> &le; 8), which represent the size of the bingo card and the number of marked squares in the initial pattern respectively.
+Then <i>K</i> lines follow, each containing two numbers <i>x<sub>i</sub></i> and <i>y<sub>i</sub></i> to indicate the square at (<i>x<sub>i</sub></i>, <i>y<sub>i</sub></i>) is marked. The coordinate values are zero-based (i.e. 0 &le; <i>x<sub>i</sub></i>, <i>y<sub>i</sub></i> &le; <i>N</i> - 1). No pair of marked squares coincides.
+</p>
+
+<H2>Output</H2>
+
+<p>
+Count the number of possible non-bingo patterns with exactly <i>N</i> unmarked squares that can be made from the given initial pattern, and print the number in modulo 10007 in a line (since it is supposed to be huge). Rotated and mirrored patterns should be regarded as different and counted each.
+</p>
+
+<H2>Sample Input 1</H2>
+<pre>
+4 2
+0 2
+3 1
+</pre>
+
+<H2>Output for the Sample Input 1</H2>
+<pre>
+6
+</pre>
+
+
+
+<H2>Sample Input 2</H2>
+<pre>
+4 2
+2 3
+3 2
+</pre>
+
+<H2>Output for the Sample Input 2</H2>
+<pre>
+6
+</pre>
+
+
+
+<H2>Sample Input 3</H2>
+<pre>
+10 3
+0 0
+4 4
+1 4
+</pre>
+
+<H2>Output for the Sample Input 3</H2>
+<pre>
+1127
+</pre>
+

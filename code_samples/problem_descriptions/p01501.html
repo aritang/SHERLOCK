@@ -1,0 +1,84 @@
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({ tex2jax: { inlineMath: [["$","$"], ["\\(","\\)"]], processEscapes: true }});
+</script>
+<script type='text/javascript' src='http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
+</script>
+
+<h2>Problem G:
+Shelter
+</h2>
+
+<p>
+  Taro lives in a town with N shelters. The shape of the town is a convex polygon.
+</p>
+
+<p>
+  He'll escape to the nearest shelter in case of emergency. Given the current location, the cost of escape is defined as the square of the distance to the nearest shelter. Because emergency occurs unpredictably, Taro can be at any point inside the town with the same probability. Calculate the expected cost of his escape.
+  </p>
+
+<h3>Input</h3>
+
+<p>
+  The first line contains two integers $M$ and $N$ ($3 \leq M \leq 100,  1 \leq N \leq 100$), which denote the number of vertices of the town and the number of shelters respectively.
+</p>
+
+<p>
+  The following $M$ lines describe the coordinates of the vertices of the town in the conunter-clockwise order. The $i$-th line contains two integers $x_i$ and $y_i$ ($-1000 \leq x_i, y_i \leq 1000$), which indicate the coordinates of the $i$-th vertex. You may assume the polygon is always simple, that is, the edges do not touch or cross each other except for the end points.
+</p>
+
+<p>
+  Then the following $N$ lines describe the coordinates of the shelters. The $i$-th line contains two integers $x_i$ and $y_i$, which indicate the coordinates of the $i$-th shelter. You may assume that every shelter is strictly inside the town and any two shelters do not have same coordinates.
+  </p>
+
+<h3>Output</h3>
+
+<p>
+Output the expected cost in a line. The answer with an absolute error of less than or equal to $10^{-4}$ is considered to be correct.
+</p>
+
+
+
+<h3>Sample Input 1</h3>
+
+<pre>4 1
+0 0
+3 0
+3 3
+0 3
+1 1</pre>
+
+<h3>Sample Output 1</h3>
+
+<pre>2.0000000000</pre>
+
+<h3>Sample Input 2</h3>
+
+<pre>5 2
+2 0
+2 2
+0 2
+-2 0
+0 -2
+0 0
+1 1</pre>
+
+<h3>Sample Output 2</h3>
+
+<pre>1.0000000000</pre>
+
+
+<h3>Sample Input 3</h3>
+
+<pre>4 3
+0 0
+3 0
+3 3
+0 3
+1 1
+1 2
+2 2</pre>
+
+<h3>Sample Output 3</h3>
+
+<pre>0.7500000000</pre>

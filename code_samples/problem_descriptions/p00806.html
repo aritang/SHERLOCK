@@ -1,0 +1,111 @@
+
+<H1><font color="#000">Problem D:</font> 77377</H1>
+
+<p>
+At the risk of its future, International Cellular Phones Corporation (ICPC) invests its resources in developing new mobile phones, which are planned to be equipped with Web browser, mailer, instant messenger, and many other advanced communication tools. Unless members of ICPC can complete this stiff job, it will eventually lose its market share.
+</p>
+<p>
+You are now requested to help ICPC to develop intriguing text input software for small mobile terminals. As you may know, most phones today have twelve buttons, namely, ten number buttons from "<span>0</span>" to "<span>9</span>" and two special buttons "<span>*</span>" and "<span>#</span>". Although the company is very ambitious, it has decided to follow today's standards and conventions. You should not change the standard button layout, and should also pay attention to the following standard button assignment.
+</p>
+<table border=0>
+<tr>
+<td width="80">button</td><td width="80"> 	letters</td><td width="80"> 	button </td><td width="80">letters</td>
+</tr>
+<tr>
+<td>2 </td><td>	a, b, c </td><td>	6 </td><td>	m, n, o</td>
+</tr>
+<tr>
+<td>3 </td><td>	d, e, f </td><td>	7 </td><td>	p, q, r, s</td>
+</tr>
+<tr>
+<td>4 </td><td>	g, h, i 	</td><td>8 </td><td>	t, u, v</td>
+</tr>
+<tr>
+<td>5 </td><td>	j, k, l </td><td>	9 </td><td>	w, x, y, z</td>
+</tr>
+</table>
+
+<p>
+This means that you can only use eight buttons for text input.
+</p>
+<p>
+Most users of current ICPC phones are rushed enough to grudge wasting time on even a single button press. Your text input software should be economical of users' time so that a single button press is suffcient for each character input. In consequence, for instance, your program should accept a sequence of button presses "<span>77377</span>" and produce the word "<span>press</span>". Similarly, it should translate "<span>77377843288866</span>" into "press the button".
+</p>
+<p>
+
+Ummm... It seems impossible to build such text input software since more than one English letter is represented by a digit!. For instance, "<span>77377</span>" may represent not only "press" but also any one of 768 (= 4 &times; 4 &times; 3 &times; 4 &times; 4) character strings. However, we have the good news that the new model of ICPC mobile phones has enough memory to keep a dictionary. You may be able to write a program that filters out <i>false words</i>, i.e., strings not listed in the dictionary. 
+</p>
+
+<H2>Input</H2>
+
+<p>
+The input consists of multiple data sets, each of which represents a dictionary and a sequence of button presses in the following format.
+</p>
+<pre>
+<i>n</i>
+<i>word</i><sub>1</sub>
+.
+.
+.
+<i>word<sub>n</sub></i>
+<i>sequence</i>
+</pre>
+
+<p>
+<i>n</i> in the first line is a positive integer, representing the number of words in the dictionary. The next <i>n</i> lines, each representing a word in the dictionary, only contain lower case letters from `<span>a</span>' to `<span>z</span>'. The order of words in the dictionary is arbitrary (not necessarily in the lexicographic order). No words occur more than once in the dictionary. The last line, sequence, is the sequence of button presses, and only contains digits from `<span>2</span>' to `<span>9</span>'.
+</p>
+<p>
+You may assume that a dictionary has at most one hundred words and that the length of each word is between one and fifty, inclusive. You may also assume that the number of input digits in the <i>sequence</i> is between one and three hundred, inclusive.
+</p>
+<p>
+A line containing a zero indicates the end of the input. 
+</p>
+
+<H2>Output</H2>
+
+<p>
+For each data set, your program should print all sequences that can be represented by the input sequence of button presses. Each sequence should be a sequence of words in the dictionary, and should appear in a single line. The order of lines does not matter.
+</p>
+<p>
+Two adjacent words in a line should be separated by a single space character and the last word should be followed by a single period (`<span>.</span>').
+</p>
+<p>
+Following those output lines, your program should also print a terminating line consisting solely of two hyphens (`<span>--</span>'). If there are no corresponding sequences of words, your program should only print the terminating line.
+</p>
+<p>
+You may assume that for each data set the number of output lines is at most twenty, excluding the terminating line. 
+</p>
+
+<H2>Sample Input</H2>
+<pre>
+5
+push
+press
+the
+button
+bottom
+77377843288866
+4
+i
+am
+going
+go
+42646464
+3
+a
+b
+c
+333
+0
+</pre>
+
+<H2>Output for the Sample Input</H2>
+<pre>
+press the button.
+--
+i am going.
+i am go go i.
+--
+--
+</pre>
+

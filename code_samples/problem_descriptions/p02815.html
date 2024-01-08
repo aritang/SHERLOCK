@@ -1,0 +1,94 @@
+<span class="lang-en">
+<p>Score : <var>500</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>For two sequences <var>S</var> and <var>T</var> of length <var>N</var> consisting of <var>0</var> and <var>1</var>, let us define <var>f(S, T)</var> as follows:</p>
+<ul>
+<li>
+<p>Consider repeating the following operation on <var>S</var> so that <var>S</var> will be equal to <var>T</var>. <var>f(S, T)</var> is the minimum possible total cost of those operations.</p>
+<ul>
+<li>Change <var>S_i</var> (from <var>0</var> to <var>1</var> or vice versa). The cost of this operation is <var>D \times C_i</var>, where <var>D</var> is the number of integers <var>j</var> such that <var>S_j \neq T_j (1 \leq j \leq N)</var> just before this change.</li>
+</ul>
+</li>
+</ul>
+<p>There are <var>2^N \times (2^N - 1)</var> pairs <var>(S, T)</var> of different sequences of length <var>N</var> consisting of <var>0</var> and <var>1</var>. Compute the sum of <var>f(S, T)</var> over all of those pairs, modulo <var>(10^9+7)</var>.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 \leq N \leq 2 \times 10^5</var></li>
+<li><var>1 \leq C_i \leq 10^9</var></li>
+<li>All values in input are integers.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+<var>C_1</var> <var>C_2</var> <var>\cdots</var> <var>C_N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the sum of <var>f(S, T)</var>, modulo <var>(10^9+7)</var>.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>1
+1000000000
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>999999993
+</pre>
+<p>There are two pairs <var>(S, T)</var> of different sequences of length <var>2</var> consisting of <var>0</var> and <var>1</var>, as follows:</p>
+<ul>
+<li><var>S = (0), T = (1):</var> by changing <var>S_1</var> to <var>1</var>, we can have <var>S = T</var> at the cost of <var>1000000000</var>, so <var>f(S, T) = 1000000000</var>.</li>
+<li><var>S = (1), T = (0):</var> by changing <var>S_1</var> to <var>0</var>, we can have <var>S = T</var> at the cost of <var>1000000000</var>, so <var>f(S, T) = 1000000000</var>.</li>
+</ul>
+<p>The sum of these is <var>2000000000</var>, and we should print it modulo <var>(10^9+7)</var>, that is, <var>999999993</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>2
+5 8
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>124
+</pre>
+<p>There are <var>12</var> pairs <var>(S, T)</var> of different sequences of length <var>3</var> consisting of <var>0</var> and <var>1</var>, which include:</p>
+<ul>
+<li><var>S = (0, 1), T = (1, 0)</var></li>
+</ul>
+<p>In this case, if we first change <var>S_1</var> to <var>1</var> then change <var>S_2</var> to <var>0</var>, the total cost is <var>5 \times 2 + 8 = 18</var>. We cannot have <var>S = T</var> at a smaller cost, so <var>f(S, T) = 18</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>5
+52 67 72 25 79
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>269312
+</pre></section>
+</div>
+</span>

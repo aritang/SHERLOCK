@@ -1,0 +1,68 @@
+
+
+
+<h1>Product Sale Lines</h1>
+
+<h2>Problem</h2>
+<p>
+ウニクロ卯月さんと目黒凛さんはSEARIGHT LIVE FESの物販に来ている。下図のように、物販列は二列からなり、横に<var>W</var>人、縦に<var>H</var>人並べる大きさでコの字の形をしている。列の先頭の人は買い物をした後に列からはけ、同じ列の後ろの人々はそれぞれ一人分ずつ列を詰める。
+</p>
+
+<center>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE3_UAPC2016Spring_B1" alt="picture of line" style="width: 80%;">
+</center>
+
+<p>
+二人は最初に物販列の最後尾に隣同士で、それぞれ違う列に（下図オレンジと濃い青色の位置）並んでいる。二人はとても仲がよいため、常にできるだけ近くにいたい。しかし、人のはけ方は列によって違うため、違う列に並んでいる二人の位置は離れてしまう可能性がある。
+</p>
+
+<p>
+あなたの仕事は、列のはけ方が与えられたとき、二人が隣同士になる回数を求めることである。
+ただし、二人ともコの字の角にいる（上図の黒色の状態の）ときは、隣同士とみなさない。また、並んだ直後は隣同士に並んでいるが、これは数えない。
+</p>
+
+<h2>Input</h2>
+<p>入力は以下の形式で与えられる。</p>
+<pre>
+<var>W</var> <var>H</var>
+<var>N</var>
+<var>p<sub>1</sub></var> <var>p<sub>2</sub></var> ... <var>p<sub>N</sub></var>
+</pre>
+
+<p>
+1行目に列の大きさを表す整数<var>W</var>と<var>H</var>が空白区切りで与えられる。<var>W</var>はコの字の横に並べる外側の人数を、<var>H</var>は縦に並べる外側の人数を表す。2行目に人が一人どちらかの列からはける回数<var>N</var>が与えられる。3行目には列のはけ方についての情報<var>p<sub>1</sub></var>...<var>p<sub>N</sub></var>が空白区切りで与えられる。<var>p<sub>i</sub></var>に’0’または’1’であり、’0’のとき、外側の人が一人はけることを、’1’のとき内側の人が一人はけることを表す。ただし、ウニクロ卯月さんまたは目黒凛さんが列から出ることはない。
+</p>
+
+<h2>Constraints</h2>
+<ul>
+  <li>4 &le; <var>W</var> &le; 100</li>
+  <li>4 &le; <var>H</var> &le; 100</li>
+  <li>0 &le; <var>N</var> &le; 100</li>
+</ul>
+
+<h2>Output</h2>
+<p>二人が隣同士になる回数を一行に出力せよ。</p>
+
+<h2>Sample Input 1</h2>
+<pre>
+11 11
+5
+0 0 0 0 0
+</pre>
+
+<h2>Sample Output 1</h2>
+<pre>
+0
+</pre>
+
+<h2>Sample Input 2</h2>
+<pre>
+11 11
+5
+0 0 1 1 1
+</pre>
+
+<h2>Sample Output 2</h2>
+<pre>
+1
+</pre>

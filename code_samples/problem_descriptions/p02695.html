@@ -1,0 +1,103 @@
+<span class="lang-en">
+<p>Score : <var>300</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>Given are positive integers <var>N</var>, <var>M</var>, <var>Q</var>, and <var>Q</var> quadruples of integers ( <var>a_i</var> , <var>b_i</var> , <var>c_i</var> , <var>d_i</var> ).</p>
+<p>Consider a sequence <var>A</var> satisfying the following conditions:</p>
+<ul>
+<li><var>A</var> is a sequence of <var>N</var> positive integers.</li>
+<li><var>1 \leq A_1 \leq A_2 \le \cdots \leq A_N \leq M</var>.</li>
+</ul>
+<p>Let us define a score of this sequence as follows:</p>
+<ul>
+<li>The score is the sum of <var>d_i</var> over all indices <var>i</var> such that <var>A_{b_i} - A_{a_i} = c_i</var>. (If there is no such <var>i</var>, the score is <var>0</var>.)</li>
+</ul>
+<p>Find the maximum possible score of <var>A</var>.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li>All values in input are integers.</li>
+<li><var>2 ≤ N ≤ 10</var></li>
+<li><var>1 \leq M \leq 10</var></li>
+<li><var>1 \leq Q \leq 50</var></li>
+<li><var>1 \leq a_i &lt; b_i \leq N</var> ( <var>i = 1, 2, ..., Q</var> )</li>
+<li><var>0 \leq c_i \leq M - 1</var> ( <var>i = 1, 2, ..., Q</var> )</li>
+<li><var>(a_i, b_i, c_i) \neq (a_j, b_j, c_j)</var> (where <var>i \neq j</var>)</li>
+<li><var>1 \leq d_i \leq 10^5</var> ( <var>i = 1, 2, ..., Q</var> )</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var> <var>M</var> <var>Q</var>
+<var>a_1</var> <var>b_1</var> <var>c_1</var> <var>d_1</var>
+<var>:</var>
+<var>a_Q</var> <var>b_Q</var> <var>c_Q</var> <var>d_Q</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the maximum possible score of <var>A</var>.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>3 4 3
+1 3 3 100
+1 2 2 10
+2 3 2 10
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>110
+</pre>
+<p>When <var>A = \{1, 3, 4\}</var>, its score is <var>110</var>. Under these conditions, no sequence has a score greater than <var>110</var>, so the answer is <var>110</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>4 6 10
+2 4 1 86568
+1 4 0 90629
+2 3 0 90310
+3 4 1 29211
+3 4 3 78537
+3 4 2 8580
+1 2 1 96263
+1 4 2 2156
+1 2 0 94325
+1 4 3 94328
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>357500
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>10 10 1
+1 10 9 1
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>1
+</pre></section>
+</div>
+</span>

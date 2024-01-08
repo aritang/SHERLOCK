@@ -1,0 +1,68 @@
+<h2>F: グリッドの番号</h2>
+
+
+<h3>問題</h3>
+<p>えびちゃんは、横 <var>n</var> 列、縦 <var>2</var> 行のグリッドに <var>1</var> から <var>2 \times n</var> までの整数をちょうど <var>1</var> つずつ書き込もうとしています。</p>
+
+<p>グリッドの各マスにはちょうど <var>1</var> つの整数しか書き込めません。</p>
+
+<p>普通に書き込むだけでは面白くないので、以下のようなルールを定めました。</p>
+
+
+<ul>
+<li>隣り合う <var>2</var> つのマスに書き込まれた整数の、差の絶対値は <var>k</var> 以下である。</li>
+<li>あるマスの右にマスが存在する時、あるマスに書き込まれた整数は、右のマスに書き込まれた整数より真に小さい。</li>
+<li>あるマスの下にマスが存在する時、あるマスに書き込まれた整数は、下のマスに書き込まれた整数より真に小さい。</li>
+</ul>
+
+
+<p>ここで、隣り合う <var>2</var> つのマスとは、あるマスと上下左右の辺を共有するマスのことを表します。</p>
+
+
+<p>
+このような書き込み方は何通りあるでしょうか?
+答えが非常に大きくなる可能性があるので、素数 <var>m</var> で割った余りを出力してください。
+</p>
+
+<h3>補足</h3>
+<p>上記の <var>2</var> 番目のルールと <var>3</var> 番目のルールは、以下の図のように、不等号に違反しないように整数を書き込むことを要求しています。</p>
+
+<!--<object data="image/hupc2019-f-001.png" type="image/png" width="400"></object>-->
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE3_HUPC2019Day1_F_001" width="400"/>
+
+<h3>入力形式</h3>
+<p>入力として整数が 3 つ与えられます。</p>
+<pre><var>n</var> <var>k</var> <var>m</var></pre>
+<h3>制約</h3>
+<ul>
+<li><var>1 \leq n \leq 100</var></li>
+<li><var>1 \leq k \leq 10</var></li>
+<li><var>2 \leq m \leq 10^9+7</var></li>
+<li> <var>m</var> は素数</li>
+</ul>
+
+<h3>出力形式</h3>
+<p>
+数字の書き込み方の通り数を一行に出力してください。
+また、末尾の改行を忘れないように注意してください。
+</p>
+<h3>入力例 1</h3>
+<pre>3 2 7</pre>
+<h3>出力例 1</h3>
+<pre>1</pre>
+
+<!--<object data="image/hupc2019-f-002.png" type="image/png" width="400"></object>-->
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE3_HUPC2019Day1_F_002" width="400"/>
+
+<ul>
+<li>上記の書き込み方が条件を満たし、これ以外に条件を満たす書き込み方は存在しません。</li>
+</ul>
+
+<h3>入力例 2</h3>
+<pre>5 10 11</pre>
+<h3>出力例 2</h3>
+<pre>9</pre>
+
+<ul>
+<li><var>m</var> で割った余りを出力してください。</li>
+</ul>

@@ -1,0 +1,56 @@
+
+
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({ tex2jax: { inlineMath: [["$","$"], ["\\(","\\)"]], skipTags: ["script","noscript","style","textarea","code"], processEscapes: true }});
+</script>
+<script language="JavaScript" type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+
+
+<h2>問題文</h2>
+
+<p>$(X_{1,1}∨X_{1,2})∧(X_{2,1}∨X_{2,2})∧...∧(X_{M,1}∨X_{M,2})$ で表される論理式が与えられる。ただし $X_{i,j} \in \{x_1, x_2, ..., x_N, ~x_1, ~x_2, ..., ~x_N\}$である。<br />
+与えられた論理式が真となるように各変数 $x_i$ ($1 \leq i \leq N$)に真偽値を割り当てたい。そのような割り当て方が何通りあるかを求めよ。</p>
+
+<h2>入力</h2>
+
+<p>入力は以下の形式に従う。与えられる数は全て整数である。</p>
+<pre>$N$ $M$
+$Y_{1,1}$ $Y_{1,2}$
+$Y_{2,1}$ $Y_{2,2}$
+$...$
+$Y_{M,1}$ $Y_{M,2}$</pre>
+<p>$Y_{i,j}&gt;0$ のとき、$X_{i,j} = x_{Y_{i,j}}$ であり、$Y_{i,j}&lt;0$ のとき、$X_{i,j} = ~x_{-Y_{i,j}}$ である。</p>
+
+<h2>制約</h2>
+
+<ul><li>$1 \leq N \leq 1000$</li>
+<li>$N/2 \leq M \leq N$</li>
+<li>$1 \leq |Y_{i,j}| \leq N$</li>
+<li>各変数は論理式に1回か2回だけ現れる。すなわち、任意の $k$ ($1 \leq k \leq N$)に対して $X_{i,j}=x_k$ または $X_{i,j}=~x_k$ となるような $(i,j)$ の組は1個か2個だけ存在する。</li></ul>
+
+<h2>出力</h2>
+
+<p>論理式を真にするような各変数の真偽値の割り当て方が何通りあるかを $10^9+7$ で割った余りを1行に出力せよ。</p>
+
+<h2>Sample Input 1</h2>
+
+<pre>2 1
+1 -2 </pre>
+
+<h2>Output for the Sample Input 1</h2>
+
+<pre>3</pre>
+<p>論理式 $(x1∨~x2)$ を真にする割り当ては $(x1,x2) = (True, True), (True, False), (False, False)$ の3通りである。</p>
+
+<h2>Sample Input 2</h2>
+
+<pre>3 2
+-1 -2
+1 -3</pre>
+
+
+<h2>Output for the Sample Input 2</h2>
+
+<pre>4</pre>
+<p>論理式 $(~x1∨~x2)∧(x1∨~x3)$ を真にする割り当ては $(x1,x2,x3) = (True, False, True), (True, False, False), (False, True, False), (False, False, False)$ の4通りである。</p>

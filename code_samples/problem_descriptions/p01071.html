@@ -1,0 +1,119 @@
+
+
+
+<h1>Monochrome Tile</h1>
+
+<h2>Problem</h2>
+<p>
+  白い正方形のタイルが横方向に <var>W</var> 個、縦方向に <var>H</var> 個、合計 <var>W</var> &times <var>H</var> 個敷き詰められている。
+</p>
+<p>
+  太郎君は、 <var>i</var> 日目の朝に、左から <var>ax<sub>i</sub></var> 番目で上から <var>ay<sub>i</sub></var> 番目のタイルを左上、
+  左から <var>bx<sub>i</sub></var> 番目で上から <var>by<sub>i</sub></var> 番目のタイルを右下にした長方形領域に存在しているタイルがすべて白いかどうかを確認する。
+  もしすべてのタイルが白かった場合、それらのタイルをすべて黒く塗りつぶす。それ以外のときは何もしない。
+</p>
+<p>
+  <var>N</var> 日間のそれぞれの日において、その日の作業が終了した時点で黒く塗りつぶされたタイルが何枚あるかを出力せよ。
+</p>
+
+
+<h2>Input</h2>
+<p>
+  入力は以下の形式で与えられる。
+</p>
+
+<pre>
+<var>W</var> <var>H</var>
+<var>N</var>
+<var>ax<sub>1</sub></var> <var>ay<sub>1</sub></var> <var>bx<sub>1</sub></var> <var>by<sub>1</sub></var>
+<var>ax<sub>2</sub></var> <var>ay<sub>2</sub></var> <var>bx<sub>2</sub></var> <var>by<sub>2</sub></var>
+...
+<var>ax<sub>N</sub></var> <var>ay<sub>N</sub></var> <var>bx<sub>N</sub></var> <var>by<sub>N</sub></var>
+</pre>
+
+<p>
+ 1行目に、2つの整数 <var>W</var> と <var>H</var> が空白区切りで与えられる。
+  2行目に、1つの整数 <var>N</var> が与えられる。
+  3行目からの <var>N</var> 行のうち <var>i</var> 行目には <var>i</var> 日目の朝に確認する長方形領域を表す
+  4つの整数 <var>ax<sub>i</sub></var> <var>ay<sub>i</sub></var> <var>bx<sub>i</sub></var> <var>by<sub>i</sub></var> が空白区切りで与えられる。
+</p>
+
+<h2>Constraints</h2>
+
+<ul>
+   <li>2 &le; <var>W</var> &le; 100000</li>
+  <li>2 &le; <var>H</var> &le; 100000</li>
+  <li>2 &le; <var>N</var> &le; 100000</li>
+  <li>1 &le; <var>ax<sub>i</sub></var> &le; <var>bx<sub>i</sub></var> &le; <var>W</var> (1 &le; <var>i</var> &le; <var>N</var> )</li>
+  <li>1 &le; <var>ay<sub>i</sub></var> &le; <var>by<sub>i</sub></var> &le; <var>H</var> (1 &le; <var>i</var> &le; <var>N</var> )</li>
+</ul>
+
+<h2>Output</h2>
+<p>
+  <var>N</var> 日間のそれぞれの日において、<var>i</var> 日目の作業が終了した時点で黒く塗りつぶされたタイルの枚数を <var>i</var> 行目にを出力せよ。
+</p>
+
+<h2>Sample Input 1</h2>
+
+<pre>
+5 4
+5
+1 1 3 3
+3 2 4 2
+4 3 5 4
+1 4 5 4
+4 1 4 1
+</pre>
+
+<h2>Sample Output 1</h2>
+<pre>
+9
+9
+13
+13
+14
+</pre>
+
+<p>
+  □□□□□<br>
+  □□□□□<br>
+  □□□□□<br>
+  □□□□□<br>
+  <br>
+  ↓  1 1 3 3<br>
+  <br>
+  ■■■□□<br>
+  ■■■□□<br>
+  ■■■□□<br>
+  □□□□□<br>
+  <br>
+  ↓  3 2 4 2　（なにもしない）<br>
+  <br>
+  ■■■□□<br>
+  ■■■□□<br>
+  ■■■□□<br>
+  □□□□□<br>
+  <br>
+  ↓  4 3 5 4<br>
+  <br>
+  ■■■□□<br>
+  ■■■□□<br>
+  ■■■■■<br>
+  □□□■■<br>
+  <br>
+  ↓  1 4 5 4 （なにもしない）<br>
+  <br>
+  ■■■□□<br>
+  ■■■□□<br>
+  ■■■■■<br>
+  □□□■■<br>
+  <br>
+  ↓  4 1 4 1<br>
+  <br>
+  ■■■■□<br>
+  ■■■□□<br>
+  ■■■■■<br>
+  □□□■■<br>
+<br>
+  よって出力は、 9 → 9 → 13 → 13 → 14 となる。
+</p>

@@ -1,0 +1,46 @@
+
+
+
+<h1 id="d-市松模様-checkered-pattern">D : 市松模様 / Checkered Pattern</h1>
+
+<h2 id="問題文">問題文</h2>
+<p>縦横の長さが <var>h, w</var> の長方形があり， 内部には一辺の長さが <var>1</var> の正方形のマスが敷き詰められている． 最も左上のマスを <var>(0,0)</var> とし， <var>(0,0)</var> の <var>i</var> 個下で <var>j</var> 個右のマスを <var>(i,j)</var> のように表すことにすると， <var>(i,j)</var> は <var>i+j</var> が偶数なら赤色に，奇数なら青色に塗られている．</p>
+<p>今，<var>(0,0)</var> の左上の頂点と <var>(h &minus; 1,w &minus; 1)</var> の右下の頂点を線分で結んだ． この線分が通る赤色の部分の長さを <var>a</var>, 青色の部分の長さを <var>b</var> とおいたとき， 比 <var>a : b</var> は整数比となる．<var>a : b</var> を最も簡単にして(互いに素な整数で)表せ．</p>
+<h2 id="入力">入力</h2>
+<pre>
+<var>T</var>
+<var>h_1 \ w_1</var>
+<var>…</var>
+<var>h_T \ w_T</var>
+</pre>
+
+<p><var>1</var> つのファイルに <var>T</var> 個の入力が含まれる． <var>1</var> 行目に <var>T</var>， <var>1+i</var> 行目に <var>T</var> 番目の入力における縦横の長さ <var>h_i</var>, <var>w_i</var> が入力される．</p>
+<h2 id="制約">制約</h2>
+<ul>
+<li>整数である</li>
+<li><var>1 &le; T &le; 1000</var></li>
+<li><var>1 &le; h_i, w_i &le; 10<sup>9</sup></var></li>
+</ul>
+<h2 id="出力">出力</h2>
+<p>各ケースに対する答えを <var>1</var> でスペース区切りで出力せよ． 全体で <var>T</var> 行にわたる．</p>
+<h2 id="サンプル">サンプル</h2>
+<h3 id="サンプル入力1">サンプル入力1</h3>
+<pre>
+3
+2 3
+3 3
+4 3
+</pre>
+
+<h3 id="サンプル出力1">サンプル出力1</h3>
+<pre>
+1 1
+1 0
+1 1
+</pre>
+
+<div class="figure">
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_RUPC2015ACPC2015_D" />
+</div>
+<!-- - - - end nicebady - - - -->
+  

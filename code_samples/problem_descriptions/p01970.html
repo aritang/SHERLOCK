@@ -1,0 +1,79 @@
+<h2>D： 素因数分解の多様性 (The Diversity of Prime Factorization)</h2>
+
+<h3>Problem</h3>
+
+<p>Ebi-chan has the FACTORIZATION MACHINE, which can factorize natural numbers M (greater than 1) in <var>O(</var>$\log$<var> M)</var> time!  But unfortunately, the machine could display only digits and whitespaces.</p>
+
+<p>In general, we consider the factorization of <var>M</var> as <var>p_1^{e_1} \times p_2^{e_2} \times ... \times p_K^{e_K}</var> where (1) <var>i &lt; j</var> implies <var>p_i &lt; p_j</var> and (2) <var>p_i</var> is prime.  Now, she gives M to the machine, and the machine displays according to the following rules in ascending order with respect to <var>i</var>:</p>
+<ul>
+<li> If <var>e_i = 1</var>, then displays <var>p_i</var>,</li>
+<li> otherwise, displays <var>p_i</var> <var>e_i</var>.</li>
+</ul>
+
+<p>For example, if she gives either <code>22</code> or <code>2048</code>, then <code>2 11</code> is displayed.  If either <code>24</code> or <code>54</code>, then <code>2 3 3</code>.</p>
+
+<p>Okay, Ebi-chan has written down the output of the machine, but she notices that she has forgotten to write down the input!  Now, your task is to count how many natural numbers result in a noted output.  Note that Ebi-chan has mistaken writing and no input could result in the output.</p>
+
+<p>The answer could be too large, so, you must output it modulo <var>10^9+7</var> (prime number).</p>
+
+<h3>Input</h3>
+
+<pre>
+<var>N</var>
+<var>q_1</var> <var>q_2</var> $\cdots$ <var>q_N</var>
+</pre>
+
+<p>In the first line, the number of the output of the machine is given.  In the second line, the output of the machine is given.</p>
+
+<h3>Constraints</h3>
+<ul>
+<li> <var>1 \leq N \leq 10^5</var></li>
+<li> <var>2 \leq q_i \leq 10^6</var> (<var>1 \leq i \leq N</var>)</li>
+</ul>
+
+<h3>Output</h3>
+<p>Print the number of the natural numbers that result in the given output of the machine.</p>
+
+<h3>Sample Input 1</h3>
+<pre>
+3
+2 3 3
+</pre>
+
+<h3>Sample Output for Input 1</h3>
+<pre>2</pre>
+
+<p><var>24 = 2^3 \times 3</var> and <var>54 = 2 \times 3^3</var> satisfy the condition.</p>
+
+<h3>Sample Input 2</h3>
+<pre>
+3
+2 3 4
+</pre>
+
+<h3>Sample Output 2 for Input 2</h3>
+<pre>1</pre>
+
+<p>Only <var>162 = 2 \times 3^4</var> satisfies the condition.  Note that <var>4</var> is not prime.</p>
+
+<h3>Sample Input 3</h3>
+<pre>
+3
+3 5 2
+</pre>
+
+<h3>Sample Output for Input 3</h3>
+<pre>1</pre>
+
+<p>Since <var>2 &lt; 3 &lt; 5</var>, only <var>75 = 3 \times 5^2</var> satisfies the condition.</p>
+
+<h3>Sample Input 4</h3>
+<pre>
+1
+4
+</pre>
+
+<h3>Sample Output for Input 4</h3>
+<pre>0</pre>
+
+<p>Ebi-chan should have written down it more carefully.</p>

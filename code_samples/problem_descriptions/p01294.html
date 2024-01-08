@@ -1,0 +1,112 @@
+
+<H1><font color="#000">Problem B:</font> For the Peace</H1>
+
+<p>
+This is a story of a world somewhere far from the earth. In this world, the land is parted into a
+number of countries ruled by empires. This world is not very peaceful: they have been involved
+in army race.
+</p>
+
+<p>
+They are competing in production of missiles in particular. Nevertheless, no countries have
+started wars for years. Actually they have a reason they can’t get into wars - they have
+missiles much more than enough to destroy the entire world. Once a war would begin among
+countries, none of them could remain.
+</p>
+
+<p>
+These missiles have given nothing but scare to people. The competition has caused big financial
+and psychological pressure to countries. People have been tired. Military have been tired. Even
+empires have been tired. No one wishes to keep on missile production.
+</p>
+
+<p>
+So empires and diplomats of all countries held meetings quite a few times toward renouncement
+of missiles and abandon of further production. The meetings were quite difficult as they have
+different matters. However, they overcame such difficulties and finally came to the agreement
+of a treaty. The points include:
+</p>
+
+<ul>
+    <li> Each country will dispose all the missiles of their possession by a certain date.</li>
+    <li> The war potential should not be different by greater than a certain amount <i>d</i> among all
+      countries.</li>
+</ul>
+
+<p>
+Let us describe more details on the second point. Each missile has its capability, which represents
+how much it can destroy the target. The war potential of each country is measured simply by
+the sum of capability over missiles possessed by that country. The treaty requires the difference
+to be not greater than <i>d</i> between the maximum and minimum potential of all the countries.
+</p>
+
+<p>
+Unfortunately, it is not clear whether this treaty is feasible. Every country is going to dispose
+their missiles only in the order of time they were produced, from the oldest to the newest. Some
+missiles have huge capability, and disposal of them may cause unbalance in potential.
+</p>
+
+<p>
+Your task is to write a program to see this feasibility.
+</p>
+
+<H2>Input</H2>
+
+<p>
+The input is a sequence of datasets. Each dataset is given in the following format:
+</p>
+
+<p>
+<i>n d</i><br>
+<i>m</i><sub>1</sub> <i>c</i><sub>1,1</sub> ... <i>c</i><sub>1,<i>m</i><sub>1</sub></sub><br>
+...<br>
+<i>m<sub>n</sub></i> <i>c</i><sub><i>n</i>,1</sub> ... <i>c</i><sub><i>n</i>,<i>m</i><sub><i>n</i></sub></sub><br>
+</p>
+
+<p>
+The first line contains two positive integers <i>n</i> and <i>d</i>, the number of countries and the tolerated
+difference of potential (<i>n</i> &le; 100, <i>d</i> &le; 1000). Then <i>n</i> lines follow. The <i>i</i>-th line begins with a
+non-negative integer <i>m<sub>i</sub></i>, the number of the missiles possessed by the <i>i</i>-th country. It is followed
+by a sequence of <i>m<sub>i</sub></i> positive integers. The <i>j</i>-th integer <i>c</i><sub><i>i</i>,<i>j</i></sub> represents the capability of the <i>j</i>-th
+newest missile of the <i>i</i>-th country (<i>c</i><sub><i>i</i>,<i>j</i></sub> &le; 1000). These integers are separated by a single space.
+Note that the country disposes their missiles in the reverse order of the given sequence.
+</p>
+<p>
+The number of missiles is not greater than 10000. Also, you may assume the difference between
+the maximum and minimum potential does not exceed <i>d</i> in any dataset.
+</p>
+
+<p>
+The input is terminated by a line with two zeros. This line should not be processed.
+</p>
+
+
+<H2>Output</H2>
+
+<p>
+For each dataset, print a single line. If they can dispose all their missiles according to the treaty,
+print "<span>Yes</span>" (without quotes). Otherwise, print "<span>No</span>".
+</p>
+<p>
+Note that the judge is performed in a <i>case-sensitive</i> manner. No extra space or character is
+allowed.
+</p>
+
+<H2>Sample Input</H2>
+<pre>
+3 3
+3 4 1 1
+2 1 5
+2 3 3
+3 3
+3 2 3 1
+2 1 5
+2 3 3
+0 0
+</pre>
+
+<H2>Output for the Sample Input</H2>
+<pre>
+Yes
+No
+</pre>

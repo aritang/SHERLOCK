@@ -1,0 +1,128 @@
+
+<H1><font color="#000">Problem G:</font> Test Case Tweaking</H1>
+
+<p>
+You are a judge of a programming contest. You are preparing a dataset for a graph problem to seek for the cost of the minimum cost path. You've generated some random cases, but they are not interesting. You want to produce a dataset whose answer is a desired value such as the number representing this year 2010. So you will tweak (which means 'adjust') the cost of the minimum cost path to a given value by changing the costs of some edges. The number of changes should be made as few as possible.
+</p>
+
+<p>
+A non-negative integer c and a directed graph <i>G</i> are given. Each edge of <i>G</i> is associated with a cost of a non-negative integer. Given a path from one node of <i>G</i> to another, we can define the cost of the path as the sum of the costs of edges constituting the path. Given a pair of nodes in <i>G</i>, we can associate it with a non-negative cost which is the minimum of the costs of paths connecting them.
+</p>
+
+<p>
+Given a graph and a pair of nodes in it, you are asked to adjust the costs of edges so that the minimum cost path from one node to the other will be the given target cost <i>c</i>. You can assume that <i>c</i> is smaller than the cost of the minimum cost path between the given nodes in the original graph.
+</p>
+
+<p>
+For example, in Figure G.1, the minimum cost of the path from node 1 to node 3 in the given graph is 6. In order to adjust this minimum cost to 2, we can change the cost of the edge from node 1 to node 3 to 2. This direct edge becomes the minimum cost path after the change. 
+</p>
+
+<p>
+For another example, in Figure G.2, the minimum cost of the path from node 1 to node 12 in the given graph is 4022. In order to adjust this minimum cost to 2010, we can change the cost of the edge from node 6 to node 12 and one of the six edges in the right half of the graph. There are many possibilities of edge modification, but the minimum number of modified edges is 2.
+</p>
+
+<H2>Input</H2>
+
+<p>
+The input is a sequence of datasets. Each dataset is formatted as follows.
+</p>
+
+<p>
+<i>n m c</i><br>
+<i>f</i><sub>1</sub> <i>t</i><sub>1</sub> <i>c</i><sub>1</sub><br>
+<i>f</i><sub>2</sub> <i>t</i><sub>2</sub> <i>c</i><sub>2</sub><br>
+.<br>
+.<br>
+.<br>
+<i>f</i><sub><i>m</i></sub> <i>t</i><sub><i>m</i></sub> <i>c</i><sub><i>m</i></sub><br>
+</p>
+
+
+<center>
+<table>
+<tr>
+<td><img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_testCaseTweaking1"></td>
+<td><img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_testCaseTweaking2"></td>
+</tr>
+<tr>
+<td align="center"><p>Figure G.1: Example 1 of graph</p></td>
+<td align="center"><p>Figure G.2: Example 2 of graph</p></td>
+</tr>
+</table>
+</center>
+
+<p>
+The integers <i>n</i>, <i>m</i> and <i>c</i> are the number of the nodes, the number of the edges, and the target cost, respectively, each separated by a single space, where 2 &le; <i>n</i> &le; 100, 1 &le; <i>m</i> &le; 1000 and 0 &le; <i>c</i> &le; 100000.
+</p>
+
+<p>
+Each node in the graph is represented by an integer 1 through <i>n</i>.
+</p>
+
+<p>
+The following <i>m</i> lines represent edges: the integers <i>f<sub>i</sub></i>, <i>t<sub>i</sub></i> and <i>c<sbu>i</sub></i> (1 &le; <i>i</i> &le; <i>m</i>) are the originating node, the destination node and the associated cost of the <i>i</i>-th edge, each separated by a single space. They satisfy 1 &le; <i>f<sub>i</sub></i>, <i>t<sub>i</sub></i> &le; <i>n</i> and 0 &le; <i>c<sub>i</sub></i> &le; 10000. You can assume that <i>f<sub>i</sub></i> &ne; <i>t<sub>i</sub></i> and (<i>f<sub>i</sub></i>, <i>t<sub>i</sub></i>) &ne; (<i>f<sub>j</sub></i>, <i>t<sub>j</sub></i>) when <i>i</i> &ne; <i>j</i>.
+</p>
+
+<p>
+You can assume that, for each dataset, there is at least one path from node 1 to node <i>n</i>, and that the cost of the minimum cost path from node 1 to node <i>n</i> of the given graph is greater than <i>c</i>.
+</p>
+
+<p>
+The end of the input is indicated by a line containing three zeros separated by single spaces.
+</p>
+
+
+<H2>Output</H2>
+
+<p>
+For each dataset, output a line containing the minimum number of edges whose cost(s) should be changed in order to make the cost of the minimum cost path from node 1 to node <i>n</i> equal to the target cost <i>c</i>. Costs of edges cannot be made negative. The output should not contain any other extra characters.
+</p>
+
+<H2>Sample Input</H2>
+<pre>
+3 3 3
+1 2 3
+2 3 3
+1 3 8
+12 12 2010
+1 2 0
+2 3 3000
+3 4 0
+4 5 3000
+5 6 3000
+6 12 2010
+2 7 100
+7 8 200
+8 9 300
+9 10 400
+10 11 500
+11 6 512
+10 18 1
+1 2 9
+1 3 2
+1 4 6
+2 5 0
+2 6 10
+2 7 2
+3 5 10
+3 6 3
+3 7 10
+4 7 6
+5 8 10
+6 8 2
+6 9 11
+7 9 3
+8 9 9
+8 10 8
+9 10 1
+8 2 1
+0 0 0
+</pre>
+
+<H2>Output for the Sample Input</H2>
+<pre>
+1
+2
+3
+</pre>
+

@@ -1,0 +1,147 @@
+
+<H1><font color="#000">Problem E:</font> Confusing Login Names</H1>
+
+<p>
+Meikyokan University is very famous for its research and education in the area of computer
+science. This university has a computer center that has advanced and secure computing facilities
+including supercomputers and many personal computers connected to the Internet.
+</p>
+<p>
+One of the policies of the computer center is to let the students select their own login names.
+Unfortunately, students are apt to select similar login names, and troubles caused by mistakes
+in entering or specifying login names are relatively common. These troubles are a burden on
+the staff of the computer center.
+</p>
+<p>
+To avoid such troubles, Dr. Choei Takano, the chief manager of the computer center, decided
+to stamp out similar and confusing login names. To this end, Takano has to develop a program
+that detects confusing login names.
+</p>
+<p>
+Based on the following four operations on strings, the distance between two login names is
+determined as the minimum number of operations that transforms one login name to the other.
+</p>
+
+<ol>
+<li> Deleting a character at an arbitrary position.</li>
+<li> Inserting a character into an arbitrary position.</li>
+<li> Replacing a character at an arbitrary position with another character.</li>
+<li> Swapping two adjacent characters at an arbitrary position.</li>
+</ol>
+
+<p>
+For example, the distance between “<span>omura</span>” and “<span>murai</span>” is two, because the following sequence
+of operations transforms “<span>omura</span>” to “<span>murai</span>”.
+</p>
+<pre>
+             delete ‘o’        insert ‘i’
+    omura      -->        mura      -->      murai
+</pre>
+<p>
+Another example is that the distance between “<span>akasan</span>” and “<span>kaason</span>” is also two.
+</p>
+<pre>
+            swap ‘a’ and ‘k’         replace ‘a’ with ‘o’
+    akasan        -->           kaasan       -->               kaason
+</pre>
+<p>
+Takano decided that two login names with a small distance are confusing and thus must be
+avoided.
+</p>
+<p>
+Your job is to write a program that enumerates all the confusing pairs of login names.
+</p>
+
+<p>
+Beware that the rules may combine in subtle ways. For instance, the distance between “<span>ant</span>”
+and “<span>neat</span>” is two.
+</p>
+<pre>
+       swap ‘a’ and ‘n’      insert ‘e’
+  ant         -->         nat      -->      neat
+</pre>
+
+<H2>Input</H2>
+
+<p>
+The input consists of multiple datasets. Each dataset is given in the following format.
+</p>
+<pre>
+      <i>n</i>
+      <i>d</i>
+      <i>name</i><sub>1</sub>
+      <i>name</i><sub>2</sub>
+      ...
+      <i>name<sub>n</sub></i>
+</pre>
+<p>
+The first integer <i>n</i> is the number of login names. Then comes a positive integer <i>d</i>. Two login
+names whose distance is less than or equal to <i>d</i> are deemed to be confusing. You may assume
+that 0 &lt; <i>n</i> &le; 200 and 0 &lt; <i>d</i> &le; 2. The <i>i</i>-th student’s login name is given by <i>name<sub>i</sub></i>, which is
+composed of only lowercase letters. Its length is less than 16. You can assume that there are no
+duplicates in <i>name<sub>i</sub></i> (1 &le; <i>i</i> &le; <i>n</i>).
+</p>
+<p>
+The end of the input is indicated by a line that solely contains a zero.
+</p>
+
+<H2>Output</H2>
+
+<p>
+For each dataset, your program should output all pairs of confusing login names, one pair per
+line, followed by the total number of confusing pairs in the dataset.
+</p>
+<p>
+In each pair, the two login names are to be separated only by a comma character (,), and the
+login name that is alphabetically preceding the other should appear first. The entire output of
+confusing pairs for each dataset must be sorted as follows. For two pairs “<i>w</i><sub>1</sub>,<i>w</i><sub>2</sub>” and “<i>w</i><sub>3</sub>,<i>w</i><sub>4</sub>”,
+if <i>w</i><sub>1</sub> alphabetically precedes <i>w</i><sub>3</sub>, or they are the same and <i>w</i><sub>2</sub> precedes <i>w</i><sub>4</sub>, then “<i>w</i><sub>1</sub>,<i>w</i><sub>2</sub>” must
+appear before “<i>w</i><sub>3</sub>,<i>w</i><sub>4</sub>”.
+</p>
+
+<H2>Sample Input</H2>
+<pre>
+8
+2
+omura
+toshio
+raku
+tanaka
+imura
+yoshoi
+hayashi
+miura
+3
+1
+tasaka
+nakata
+tanaka
+1
+1
+foo
+5
+2
+psqt
+abcdef
+abzdefa
+pqrst
+abdxcef
+0
+</pre>
+
+<H2>Output for the Sample Input</H2>
+<pre>
+imura,miura
+imura,omura
+miura,omura
+toshio,yoshoi
+4
+tanaka,tasaka
+1
+0
+abcdef,abdxcef
+abcdef,abzdefa
+pqrst,psqt
+3
+</pre>
+

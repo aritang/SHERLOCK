@@ -1,0 +1,115 @@
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({ tex2jax: { inlineMath: [["$","$"], ["\\(","\\)"]], processEscapes: true }});
+</script>
+<script type='text/javascript' src='http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
+</script>
+
+<h2>D - LR</h2>
+
+<h3>Problem Statement</h3>
+
+<p>
+JAG Kingdom will hold a contest called ICPC (Interesting Contest for Producing Calculation). 
+</p>
+
+<p>
+At the contest, you are given a string composed of <code>?</code>s and <i>usable characters</i>. You should replace all <code>?</code>s in the string with the usable characters to make the string valid mathematical expression, before submitting it. The usable characters are <code>L</code>, <code>R</code>, <code>(</code>, <code>)</code>, <code>,</code>, <code>0</code>, <code>1</code>, <code>2</code>, <code>3</code>, <code>4</code>, <code>5</code>, <code>6</code>, <code>7</code>, <code>8</code>, and <code>9</code>. 
+</p>
+
+<p>
+For example, suppose that you are given the string "R(??3,??1?78??1?)?", then you can submit "R(123,L(1678,213))" as an example. 
+</p>
+
+<p>
+The submitted string will be scored as follows.
+</p>
+
+<ul>
+<li>Let $L$ and $R$ be functions defined by $L(x,y)=x$, $R(x,y)=y$, where $x$ and $y$ are non-negative integers.
+</li>
+<li>The submitted string will be regarded as a mathematical expression, whose value will be the score. For example, the score of the string "R(123,L(1678,213))" is $R(123,L(1678,213)) = R(123,1678) = 1678$.
+</li>
+<li>If the string cannot be evaluated as a mathematical expression about the functions $L$ and $R$, the string will be rejected. For example, "R", "R(3)", "R(3,2", "R(3,2,4)" and "LR(3,2)" are all invalid. </li>
+<li>And strings that contain numbers with extra leading zeros, will be rejected. For example, "R(04,18)" is invalid, while "R(0,18)" is valid.</li>
+</ul>
+
+<p>
+The winner of the contest will be the person getting the highest score. Your friend Jagger, who is going to join the contest, wants to be the winner. You are asked by Jagger to make the program finding the possible highest score for the input string.
+</p>
+
+<h3>Input</h3>
+
+<p>
+The input contains one string in a line, whose length $N$ is between $1$ and $50$, inclusive. 
+</p>
+
+<p>
+You can assume that each element in the string is one of  <code>L</code>, <code>R</code>, <code>(</code>, <code>)</code>, <code>,</code>, <code>0</code>, <code>1</code>, <code>2</code>, <code>3</code>, <code>4</code>, <code>5</code>, <code>6</code>, <code>7</code>, <code>8</code>, <code>9</code>, or <code>?</code>. 
+</p>
+
+<h3>Output</h3>
+
+<p>
+Display the possible highest score in a line for the given string. 
+</p>
+
+<p>
+If it's impossible to get valid strings for the input string, print "invalid" in a line. 
+</p>
+
+<h3>Sample Input 1</h3>
+
+<pre>R?????,2?)</pre>
+
+<h3>Output for the Sample Input 1</h3>
+
+<pre>29</pre>
+
+<h3>Sample Input 2</h3>
+
+<pre>???3??</pre>
+
+<h3>Output for the Sample Input 2</h3>
+
+<pre>999399</pre>
+
+<h3>Sample Input 3</h3>
+
+<pre>????,??,???</pre>
+
+<h3>Output for the Sample Input 3</h3>
+
+<pre>invalid</pre>
+
+<h3>Sample Input 4</h3>
+
+<pre>?????,??,???</pre>
+
+<h3>Output for the Sample Input 4</h3>
+
+<pre>99</pre>
+
+<h3>Sample Input 5</h3>
+
+<pre>L(1111111111111111111111111111111111111111111,2)</pre>
+
+<h3>Output for the Sample Input 5</h3>
+
+<pre>1111111111111111111111111111111111111111111</pre>
+
+<h3>Sample Input 6</h3>
+
+<pre>L?1???????????????????????????????????????????????</pre>
+
+<h3>Output for the Sample Input 6</h3>
+
+<pre>199999999999999999999999999999999999999999999</pre>
+
+<h3>Sample Input 7</h3>
+
+<pre>L?0???????????????????????????????????????????????</pre>
+
+<h3>Output for the Sample Input 7</h3>
+
+<pre>0</pre>

@@ -1,0 +1,102 @@
+<span class="lang-en">
+<p>Score : <var>100</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>You are given two strings <var>s</var> and <var>t</var> consisting of lowercase English letters and an integer <var>L</var>.</p>
+<p>We will consider generating a string of length <var>L</var> by concatenating one or more copies of <var>s</var> and <var>t</var>. Here, it is allowed to use the same string more than once.</p>
+<p>For example, when <var>s =</var> <code>at</code><var>,</var> <var>t =</var> <code>code</code> and <var>L = 6,</var> the strings <code>atatat</code><var>,</var> <code>atcode</code> and <code>codeat</code> can be generated.</p>
+<p>Among the strings that can be generated in this way, find the lexicographically smallest one. In the cases given as input, it is always possible to generate a string of length <var>L</var>.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 ≤ L ≤ 2 × 10^5</var></li>
+<li><var>1 ≤ |s|, |t| ≤ L</var></li>
+<li><var>s</var> and <var>t</var> consist of lowercase English letters.</li>
+<li>It is possible to generate a string of length <var>L</var> in the way described in Problem Statement.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+<var>x_1</var> <var>s_1</var>
+<var>x_2</var> <var>s_2</var>
+<var>:</var>
+<var>x_N</var> <var>s_N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the lexicographically smallest string among the ones that can be generated in the way described in Problem Statement.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>6
+at
+code
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>atatat
+</pre>
+<p>This input corresponds to the example shown in Problem Statement.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>8
+coding
+festival
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>festival
+</pre>
+<p>It is possible that either <var>s</var> or <var>t</var> cannot be used at all in generating a string of length <var>L</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>8
+same
+same
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>samesame
+</pre>
+<p>It is also possible that <var>s = t</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 4</h3><pre>10
+coin
+age
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 4</h3><pre>ageagecoin
+</pre></section>
+</div>
+</span>

@@ -1,0 +1,136 @@
+
+<H1><font color="#000">Problem B: </font>Stylish</H1>
+
+<p>
+<i>Stylish</i> is a programming language whose syntax comprises <i>names</i>, that are sequences of Latin alphabet letters, three types of <i>grouping symbols</i>, periods ('.'), and newlines. Grouping symbols, namely round brackets ('(' and ')'), curly brackets ('{' and '}'), and square brackets ('[' and ']'), must match and be nested properly. Unlike most other programming languages, Stylish uses periods instead of whitespaces for the purpose of term separation. The following is an example of a Stylish program.
+</p>
+
+<pre>
+1 ( Welcome .to
+2 ......... Stylish )
+3 { Stylish .is
+4 .....[.( a. programming . language .fun .to. learn )
+5 .......]
+6 ..... Maybe .[
+7 ....... It. will .be.an. official . ICPC . language
+8 .......]
+9 .....}
+</pre>
+
+
+<p>
+As you see in the example, a Stylish program is indented by periods. The <i>amount of indentation</i> of a line is the number of leading periods of it.
+</p>
+
+<p>
+Your mission is to visit Stylish masters, learn their indentation styles, and become the youngest Stylish master. An indentation style for <i>well-indented</i> Stylish programs is defined by a triple of integers, (<i>R</i>, <i>C</i>, <i>S</i>), satisfying 1 &le; <i>R</i>, <i>C</i>, <i>S</i> &le; 20. <i>R</i>, <i>C</i> and <i>S</i> are amounts of indentation introduced by an open round bracket, an open curly bracket, and an open square bracket, respectively.
+</p>
+
+<p>
+In a well-indented program, the amount of indentation of a line is given by <i>R</i>(<i>r<sub>o</sub></i> &minus; <i>r<sub>c</sub></i>) + <i>C</i>(<i>c<sub>o</sub></i> &minus; <i>c<sub>c</sub></i>) + <i>S</i>(<i>s<sub>o</sub></i> &minus; <i>s<sub>c</sub></i>), where <i>r<sub>o</sub></i>, <i>c<sub>o</sub></i>, and <i>s<sub>o</sub></i> are the numbers of occurrences of open round, curly, and square brackets in all preceding lines, respectively, and <i>r<sub>c</sub></i>, <i>c<sub>c</sub></i>, and <i>s<sub>c</sub></i> are those of close brackets. The first line has no indentation in any well-indented program.
+</p>
+
+<p>
+The above example is formatted in the indentation style (<i>R</i>, <i>C</i>, <i>S</i>) = (9, 5, 2). The only grouping symbol occurring in the first line of the above program is an open round bracket. Therefore the amount of indentation for the second line is 9 &middot; (1 &minus; 0) + 5 &middot; (0 &minus; 0) + 2 &middot;(0 &minus; 0) = 9. The first four lines contain two open round brackets, one open curly bracket, one open square bracket, two close round brackets, but no close curly nor square bracket. Therefore the amount of indentation for the fifth line is 9 &middot; (2 &minus; 2) + 5 &middot; (1 &minus; 0) + 2 &middot; (1 &minus; 0) = 7.
+</p>
+
+<p>
+Stylish masters write only well-indented Stylish programs. Every master has his/her own indentation style.
+</p>
+
+<p>
+Write a program that imitates indentation styles of Stylish masters.
+</p>
+
+<H2>Input</H2>
+
+<p>
+The input consists of multiple datasets. The first line of a dataset contains two integers <i>p</i> (1 &le; <i>p</i> &le; 10) and <i>q</i> (1 &le; <i>q</i> &le; 10). The next <i>p</i> lines form a well-indented program <i>P</i> written by a
+Stylish master and the following <i>q</i> lines form another program <i>Q</i>. You may assume that every line of both programs has at least one character and at most 80 characters. Also, you may assume that no line of <i>Q</i> starts with a period.
+</p>
+
+<p>
+The last dataset is followed by a line containing two zeros.
+</p>
+
+
+<H2>Output</H2>
+
+<p>
+Apply the indentation style of <i>P</i> to <i>Q</i> and output the appropriate amount of indentation for each line of <i>Q</i>. The amounts must be output in a line in the order of corresponding lines of <i>Q</i> and they must be separated by a single space. The last one should not be followed by trailing spaces. If the appropriate amount of indentation of a line of <i>Q</i> cannot be determined uniquely through analysis of <i>P</i>, then output <span>-1</span> for that line.
+</p>
+
+<H2>Sample Input</H2>
+<pre>
+5 4
+(Follow.my.style
+.........starting.from.round.brackets)
+{then.curly.brackets
+.....[.and.finally
+.......square.brackets.]}
+(Thank.you
+{for.showing.me
+[all
+the.secrets]})
+4 2
+(This.time.I.will.show.you
+.........(how.to.use.round.brackets)
+.........[but.not.about.square.brackets]
+.........{nor.curly.brackets})
+(I.learned
+how.to.use.round.brackets)
+4 2
+(This.time.I.will.show.you
+.........(how.to.use.round.brackets)
+.........[but.not.about.square.brackets]
+.........{nor.curly.brackets})
+[I.have.not.learned
+how.to.use.square.brackets]
+2 2
+(Be.smart.and.let.fear.of
+..(closed.brackets).go)
+(A.pair.of.round.brackets.enclosing
+[A.line.enclosed.in.square.brackets])
+1 2
+Telling.you.nothing.but.you.can.make.it
+[One.liner.(is).(never.indented)]
+[One.liner.(is).(never.indented)]
+2 4
+([{Learn.from.my.KungFu
+...}])
+((
+{{
+[[
+]]}}))
+1 2
+Do.not.waste.your.time.trying.to.read.from.emptiness
+(
+)
+2 3
+({Quite.interesting.art.of.ambiguity
+....})
+{
+(
+)}
+2 4
+({[
+............................................................]})
+(
+{
+[
+]})
+0 0
+</pre>
+
+<H2>Output for the Sample Input</H2>
+<pre>
+0 9 14 16
+0 9
+0 -1
+0 2
+0 0
+0 2 4 6
+0 -1
+0 -1 4
+0 20 40 60
+</pre>

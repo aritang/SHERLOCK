@@ -1,0 +1,248 @@
+
+<h2>Development of Small Flying Robots</h2>
+
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_ICPCDomestic2015_H" align="right" width="300">
+
+
+<p>
+You are developing small flying robots in your laboratory.
+</p>
+
+<p>
+The laboratory is a box-shaped building with <i>K</i> levels, each numbered 1 through <i>K</i> from bottom to top.
+The floors of all levels are square-shaped with their edges precisely aligned east-west and north-south.
+Each floor is divided into <i>R</i> × <i>R</i> cells.
+We denote the cell on the <i>z</i>-th level in the <i>x</i>-th column from the west and the <i>y</i>-th row from the south as (<i>x</i>, <i>y</i>, <i>z</i>).
+(Here, <i>x</i> and <i>y</i> are one-based.)
+For each <i>x</i>, <i>y</i>, and <i>z</i> (<i>z</i> &gt; 1),
+the cell (<i>x</i>, <i>y</i>, <i>z</i>) is located immediately above the cell (<i>x</i>, <i>y</i>, <i>z</i> &#8722; 1).
+</p>
+
+<p>
+There are <i>N</i> robots flying in the laboratory,
+each numbered from 1 through <i>N</i>.
+Initially, the <i>i</i>-th robot is located at the cell (<i>x<sub>i</sub></i>, <i>y<sub>i</sub></i>, <i>z<sub>i</sub></i>).
+</p>
+
+<p>
+By your effort so far,
+you successfully implemented the feature to move each flying robot to any place that you planned.
+As the next step, you want to implement a new feature that gathers all
+the robots in some single cell with the lowest energy consumption,
+based on their current locations and the surrounding environment.
+</p>
+
+<p>
+Floors of the level two and above have several holes.
+Holes are rectangular and their edges align with edges of the
+cells on the floors.
+There are <i>M</i> holes in the laboratory building, each numbered 1 through <i>M</i>.
+The <i>j</i>-th hole can be described by five integers
+<i>u</i><sub>1<i>j</i></sub>, <i>v</i><sub>1<i>j</i></sub>, <i>u</i><sub>2<i>j</i></sub>, <i>v</i><sub>2<i>j</i></sub>, and <i>w</i><sub><i>j</i></sub>.
+The <i>j</i>-th hole extends over the cells (<i>x</i>, <i>y</i>, <i>w</i><sub><i>j</i></sub>)
+where
+    <i>u</i><sub>1<i>j</i></sub> &#8804; <i>x</i> &#8804; <i>u</i><sub>2<i>j</i></sub> and
+    <i>v</i><sub>1<i>j</i></sub> &#8804; <i>y</i> &#8804; <i>v</i><sub>2<i>j</i></sub>.
+</p>
+
+<p>
+Possible movements of robots and energy consumption involved are as follows.
+</p>
+
+<ul>
+  <li>You can move a robot from one cell to an adjacent cell, toward one of north, south, east, or west.
+  The robot consumes its energy by 1 for this move.</li>
+  <li> If there is a hole to go through immediately above,
+  you can move the robot upward by a single level.
+  The robot consumes its energy by 100 for this move.</li>
+</ul>
+
+<p>
+The robots never fall down even if there is a hole below.
+Note that you can move two or more robots to the same cell.
+</p>
+
+<p>
+Now, you want to gather all the flying robots at a single cell in the
+<i>K</i>-th level where there is no hole on the floor, with the least energy consumption.
+Compute and output the minimum total energy required by the robots.
+</p>
+
+
+<h3>Input</h3>
+
+
+<p>
+The input consists of at most 32 datasets, each in the following format.
+Every value in the input is an integer.
+</p>
+
+
+
+<blockquote>
+  <i>N</i> <br>
+  <i>M</i> <i>K</i> <i>R</i> <br>
+  <i>x</i><sub>1</sub> <i>y</i><sub>1</sub> <i>z</i><sub>1</sub> <br>
+  ... <br>
+  <i>x</i><sub><i>N</i></sub> <i>y</i><sub><i>N</i></sub> <i>z</i><sub><i>N</i></sub> <br>
+  <i>u</i><sub>11</sub> <i>v</i><sub>11</sub> <i>u</i><sub>21</sub> <i>v</i><sub>21</sub> <i>w</i><sub>1</sub> <br>
+  ... <br>
+  <i>u</i><sub>1<i>M</i></sub> <i>v</i><sub>1<i>M</i></sub> <i>u</i><sub>2<i>M</i></sub> <i>v</i><sub>2<i>M</i></sub> <i>w</i><sub><i>M</i></sub> <br>
+</blockquote>
+
+
+<p>
+<i>N</i> is the number of robots in the laboratory (1 &#8804; <i>N</i> &#8804; 100).
+<i>M</i> is the number of holes (1 &#8804; <i>M</i> &#8804; 50),
+<i>K</i> is the number of levels (2 &#8804; <i>K</i> &#8804; 10),
+and <i>R</i> is the number of cells in one row and also one column on a single floor (3 &#8804; <i>R</i> &#8804; 1,000,000).
+
+</p>
+
+<p>
+For each <i>i</i>,
+integers <i>x<sub>i</sub></i>, <i>y<sub>i</sub></i>, and <i>z<sub>i</sub></i>
+represent the cell that the <i>i</i>-th robot initially located at
+(1 &#8804; <i>x<sub>i</sub></i> &#8804; <i>R</i>,
+ 1 &#8804; <i>y<sub>i</sub></i> &#8804; <i>R</i>,
+ 1 &#8804; <i>z<sub>i</sub></i> &#8804; <i>K</i>).
+Further,
+for each <i>j</i>,
+integers
+<i>u</i><sub>1<i>j</i></sub>, <i>v</i><sub>1<i>j</i></sub>, <i>u</i><sub>2<i>j</i></sub>, <i>v</i><sub>2<i>j</i></sub>, and <i>w</i><sub><i>j</i></sub>
+describe the position and the extent of the <i>j</i>-th hole
+(1 &#8804; <i>u</i><sub>1<i>j</i></sub> &#8804; <i>u</i><sub>2<i>j</i></sub> &#8804; <i>R</i>,
+ 1 &#8804; <i>v</i><sub>1<i>j</i></sub> &#8804; <i>v</i><sub>2<i>j</i></sub> &#8804; <i>R</i>,
+ 2 &#8804; <i>w</i><sub><i>j</i></sub> &#8804; <i>K</i>).
+</p>
+
+<p>
+The following are guaranteed.
+</p>
+
+<ul>
+  <li>In each level higher than or equal to two, there exists at least one hole.</li>
+  <li>In each level, there exists at least one cell not belonging to any holes.</li>
+  <li>No two holes overlap. That is, each cell belongs to at most one hole.</li>
+</ul>
+
+<p>
+Two or more robots can initially be located at the same cell.
+Also note that two neighboring cells may belong to different holes.
+</p>
+
+<p>
+The end of the input is indicated by a line with a single zero.
+</p>
+
+
+
+<h3>Output</h3>
+
+
+<p>
+For each dataset, print the minimum total energy consumption in a single line.
+</p>
+
+
+
+
+<h3>Sample Input</h3>
+
+
+<pre>2
+1 2 8
+1 1 1
+8 8 1
+3 3 3 3 2
+3
+3 2 3
+1 1 2
+1 1 2
+1 1 2
+1 1 1 1 2
+1 2 1 2 2
+2 1 2 1 2
+2
+2 3 100
+100 50 1
+1 50 3
+100 1 100 100 3
+1 1 1 100 2
+5
+6 7 60
+11 11 1
+11 51 1
+51 11 1
+51 51 1
+31 31 1
+11 11 51 51 2
+11 11 51 51 3
+11 11 51 51 4
+11 11 51 51 5
+18 1 54 42 6
+1 43 59 60 7
+5
+6 4 9
+5 5 3
+1 1 1
+1 9 1
+9 1 1
+9 9 1
+3 3 7 7 4
+4 4 6 6 2
+1 1 2 2 3
+1 8 2 9 3
+8 1 9 2 3
+8 8 9 9 3
+5
+10 5 50
+3 40 1
+29 13 2
+39 28 1
+50 50 1
+25 30 5
+3 5 10 10 2
+11 11 14 14 2
+15 15 20 23 2
+40 40 41 50 2
+1 49 3 50 2
+30 30 50 50 3
+1 1 10 10 4
+1 30 1 50 5
+20 30 20 50 5
+40 30 40 50 5
+15
+2 2 1000000
+514898 704203 1
+743530 769450 1
+202298 424059 1
+803485 898125 1
+271735 512227 1
+442644 980009 1
+444735 799591 1
+474132 623298 1
+67459 184056 1
+467347 302466 1
+477265 160425 2
+425470 102631 2
+547058 210758 2
+52246 779950 2
+291896 907904 2
+480318 350180 768473 486661 2
+776214 135749 872708 799857 2
+0
+</pre>
+
+
+<h3>Output for the Sample Input</h3>
+
+
+<pre>216
+6
+497
+3181
+1365
+1930
+6485356
+</pre>

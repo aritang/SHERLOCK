@@ -1,0 +1,100 @@
+<span class="lang-en">
+<p>Score : <var>900</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>Snuke has a sequence <var>p</var>, which is a permutation of <var>(0,1,2, ...,N-1)</var>.
+The <var>i</var>-th element (<var>0</var>-indexed) in <var>p</var> is <var>p_i</var>.</p>
+<p>He can perform <var>N-1</var> kinds of operations labeled <var>1,2,...,N-1</var> any number of times in any order.
+When the operation labeled <var>k</var> is executed, the procedure represented by the following code will be performed:</p>
+<pre>for(int i=k;i&lt;N;i++)
+    swap(p[i],p[i-k]);
+</pre>
+<p>He would like to sort <var>p</var> in increasing order using between <var>0</var> and <var>10^{5}</var> operations (inclusive).
+Show one such sequence of operations.
+It can be proved that there always exists such a sequence of operations under the constraints in this problem.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>2 \leq N \leq 200</var></li>
+<li><var>0 \leq p_i \leq N-1</var></li>
+<li><var>p</var> is a permutation of <var>(0,1,2,...,N-1)</var>.</li>
+</ul>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Partial Scores</h3><ul>
+<li>In the test set worth <var>300</var> points, <var>N \leq 7</var>.</li>
+<li>In the test set worth another <var>400</var> points, <var>N \leq 30</var>.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+<var>p_0</var> <var>p_1</var> <var>...</var> <var>p_{N-1}</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Let <var>m</var> be the number of operations in your solution. In the first line, print <var>m</var>.
+In the <var>i</var>-th of the following <var>m</var> lines, print the label of the <var>i</var>-th executed operation.
+The solution will be accepted if <var>m</var> is at most <var>10^5</var> and <var>p</var> is in increasing order after the execution of the <var>m</var> operations.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>5
+4 2 0 1 3
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>4
+2
+3
+1
+2
+</pre>
+<ul>
+<li>Each operation changes <var>p</var> as shown below:</li>
+</ul>
+<div style="text-align: center;">
+<img alt="9f3b51eb1fe742848f407bdeb7b772e1.png" src="https://atcoder.jp/img/asaporo2/9f3b51eb1fe742848f407bdeb7b772e1.png">
+</img></div>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>9
+1 0 4 3 5 6 2 8 7
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>11
+3
+6
+1
+3
+5
+2
+4
+7
+8
+6
+3
+</pre></section>
+</div>
+</span>

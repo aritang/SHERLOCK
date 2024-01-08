@@ -1,0 +1,199 @@
+<!--<h2>Problem E</h2>-->
+<!-- begin en only -->
+<h3>Cube Surface Puzzle</h3>
+<!-- end en only -->
+
+
+
+<!-- begin en only -->
+<p>
+Given a set of six pieces, &ldquo;Cube Surface Puzzle&rdquo; is to construct a hollow cube with filled surface.
+Pieces of a puzzle is made of a number of small unit cubes laid grid-aligned on a plane.
+For a puzzle constructing a cube of its side length <i>n</i>,
+unit cubes are on either of the following two areas.
+<ul>
+  <li>
+    Core (blue): A square area with its side length <i>n</i>&minus;2.
+    Unit cubes fill up this area.</li>
+ <li>Fringe (red): The area of width 1 unit forming the outer fringe of the core.
+     Each unit square in this area may be empty or with a unit cube on it.</li>
+</ul>
+Each piece is connected with faces of its unit cubes.
+Pieces can be arbitrarily rotated and either side of the pieces can
+be inside or outside of the constructed cube.
+The unit cubes on the core area should come in the centers of the
+faces of the constructed cube.
+</p>
+<!-- end en only -->
+
+
+<!-- begin en only -->
+<p>
+Consider that we have six pieces in Fig. E-1 (The first dataset of Sample Input).
+Then, we can construct a cube as shown in Fig. E-2.
+</p>
+<!-- end en only -->
+
+<center>
+ <img src="https://judgeapi.u-aizu.ac.jp/resources/images/ICPCDomestic2019_E1.png" width="80%">
+ <figcaption style="padding-top: 10px" align="center">
+<!-- begin en only -->
+  Fig. E-1 Pieces from the first dataset of Sample Input
+<!-- end en only -->
+ </figcaption>
+</center>
+
+<center>
+ <img src="https://judgeapi.u-aizu.ac.jp/resources/images/ICPCDomestic2019_E2.png" width="80%">
+ <figcaption style="padding-top: 10px" align="center">
+<!-- begin en only -->
+  Fig. E-2 Constructing a cube
+<!-- end en only -->
+ </figcaption>
+</center>
+
+<!-- begin en only -->
+<p>
+Mr. Hadrian Hex has collected a number of cube surface puzzles.
+One day, those pieces were mixed together and he
+cannot find yet from which six pieces he can construct a cube.
+Your task is to write a program to help Mr. Hex, which judges whether we can construct a cube for a given set of pieces.
+</p>
+<!-- end en only -->
+
+
+
+<h3>Input</h3>
+
+
+
+<!-- begin en only -->
+<p>
+The input consists of at most 200 datasets, each in the following format.
+</p>
+<!-- end en only -->
+
+<blockquote>
+<p>
+<i>n</i><br>
+<i>x</i><sub>1,1</sub><i>x</i><sub>1,2</sub> &hellip; <i>x</i><sub>1,<i>n</i></sub><br>
+<i>x</i><sub>2,1</sub><i>x</i><sub>2,2</sub> &hellip; <i>x</i><sub>2,<i>n</i></sub><br>
+&hellip;<br>
+<i>x</i><sub>6<i>n</i>,1</sub><i>x</i><sub>6<i>n</i>,2</sub> &hellip; <i>x</i><sub>6<i>n</i>,<i>n</i></sub>
+</p>
+</blockquote>
+
+<!-- begin en only -->
+<p>
+  The first line contains an integer <i>n</i> denoting the length of one side of the  cube to be constructed (3 &le; <i>n</i> &le; 9, <i>n</i> is odd).
+The following 6<i>n</i> lines give the six pieces.
+Each piece is described in <i>n</i> lines.
+Each of the lines corresponds to one grid row and each of the characters in
+the line, either &lsquo;X&rsquo; or &lsquo;.&rsquo;, indicates whether or not a unit cube is on
+the corresponding unit square: &lsquo;X&rsquo; means a unit cube is on the column and &lsquo;.&rsquo; means none is there.
+</p>
+<!-- end en only -->
+<!-- begin en only -->
+<p>
+  The core area of each piece is centered in the data for the piece.
+</p>
+<!-- end en only -->
+
+<!-- begin en only -->
+<p>
+The end of the input is indicated by a line containing a zero.
+</p>
+<!-- end en only -->
+
+
+
+<h3>Output</h3>
+
+
+
+<!-- begin en only -->
+<p>
+  For each dataset, output &ldquo;<tt>Yes</tt>&rdquo; if we can construct a cube, or &ldquo;<tt>No</tt>&rdquo; if we cannot.
+</p>
+<!-- end en only -->
+
+
+
+<h3>Sample Input</h3>
+
+
+<pre>
+5
+..XX.
+.XXX.
+XXXXX
+XXXXX
+X....
+....X
+XXXXX
+.XXX.
+.XXX.
+.....
+..XXX
+XXXX.
+.XXXX
+.XXXX
+...X.
+...X.
+.XXXX
+XXXX.
+XXXX.
+.X.X.
+XXX.X
+.XXXX
+XXXXX
+.XXXX
+.XXXX
+XX...
+.XXXX
+XXXXX
+XXXXX
+XX...
+5
+..XX.
+.XXX.
+XXXXX
+XXXX.
+X....
+....X
+XXXXX
+.XXX.
+.XXX.
+.....
+.XXXX
+XXXX.
+.XXXX
+.XXXX
+...X.
+...X.
+.XXXX
+XXXX.
+XXXX.
+.X.X.
+XXX.X
+.XXXX
+XXXXX
+.XXXX
+.XXXX
+XX...
+XXXXX
+XXXXX
+.XXXX
+XX...
+0
+</pre>
+
+
+<h3>Output for the Sample Input</h3>
+
+
+<pre>
+Yes
+No
+</pre>
+

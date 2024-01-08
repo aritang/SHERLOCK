@@ -1,0 +1,109 @@
+
+
+
+<h1>Problem G: Star</h1>
+
+<h2>Problem</h2>
+<p>
+半径1の円に内接する正<var>N</var>/<var>K</var>角形の面積を求めよ。
+</p>
+<p>
+  ただし、正<var>N</var>/<var>K</var>角形を
+「円周上に等間隔に<var>N</var>個の点を取り、
+    <var>K</var>-1個おきにそれぞれの点を結んだ一番外側の図形」
+と定義する。
+</p>
+
+<p>
+例えば、5/2角形は次のように描くことができる。
+まず、半径1の円周上に等間隔に5つの点を取る。<br /><br/>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE3_ACPC2016Day2AIZU_G_image01" alt="Sample Input 2の図" style="width:500px;"><br />
+</p>
+<p>
+次に、それぞれの点を2-1=1つおきに結ぶ。<br /><br/>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE3_ACPC2016Day2AIZU_G_image03" alt="Sample Input 2の図" style="width:500px;"><br />
+</p>
+<p>
+一番外側の図形が正5/2角形になる。<br /><br/>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE3_ACPC2016Day2AIZU_G_image00" alt="Sample Input 2の図" style="width:500px;"><br />
+</p>
+
+<h2>Input</h2>
+<p>
+  入力は以下の形式で与えられる。
+</p>
+
+<pre>
+<var>N</var> <var>K</var>
+</pre>
+
+<p>
+  2つの整数 <var>N</var>, <var>K</var> が1行に与えられる。
+</p>
+
+<h2>Constraints</h2>
+<p>
+  入力は以下の制約を満たす。
+</p>
+<ul>
+  <li>5 &le; <var>N</var> &le; 10<sup>6</sup></li>
+  <li>1 &lt; <var>K</var> &lt; <var>N</var>/2 </li>
+  <li> <var>N</var>,<var>K</var>は互いに素である整数</li>
+</ul>
+
+<h2>Output</h2>
+<p>
+半径1の円に内接する正<var>N</var>/<var>K</var>角形の面積を1行に出力せよ。10<sup>-5</sup>以下の誤差が許容される。
+</p>
+
+<h2>Sample Input 1</h2>
+
+<pre>
+5 2
+</pre>
+
+<h2>Sample Output 1</h2>
+<pre>
+1.12256994
+</pre>
+
+<p>
+正5/2角形は上記の図形である。
+</p>
+
+<h2>Sample Input 2</h2>
+
+<pre>
+20 3
+</pre>
+
+<h2>Sample Output 2</h2>
+<pre>
+2.93114293
+</pre>
+
+<p>
+正20/3角形は下のような図形である。<br /><br/>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE3_ACPC2016Day2AIZU_G_image02" alt="Sample Input 2の図" style="width:500px;"><br />
+</p>
+
+<h2>Sample Input 3</h2>
+
+<pre>
+7 3
+</pre>
+
+<h2>Sample Output 3</h2>
+<pre>
+1.08395920
+</pre>
+<h2>Sample Input 4</h2>
+
+<pre>
+100000 3
+</pre>
+
+<h2>Sample Output 4</h2>
+<pre>
+3.14159265
+</pre>

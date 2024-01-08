@@ -1,0 +1,43 @@
+
+
+
+<h2>G - Derangement / 完全順列</h2>
+
+<h3>Story</h3>
+<p>Dのひとは順列に関する研究をしている。あるときDのひとは、&quot;完全順列 (Derangement)&quot;という順列のクラスを見つけた。「完全な順列とかなんかかっこいい！！！しかもDからはじまる！！！」と廚二病をこじらせたDのひとは、与えられた順列をすべて完全順列に書き換えてしまおうと考えた。</p>
+<h3>Problem</h3>
+<p>長さ<var>n</var>の順列<var>p</var> <var>=</var> <var>(p_1</var> <var>p_2</var> <var>...</var> <var>p_n)</var>が与えられる。<var>i</var>番目の要素と<var>j</var>番目の要素を入れ替える操作には<var>(p_i+p_j) \times |i-j|</var>のコストを要する。このとき、上記の入れ替え操作のみを用いて<var>p</var>を完全順列にするために必要な最小のコストを求めよ。</p>
+<p>ただし、順列<var>q</var>が完全順列であるとは、<var>1 \leq i \leq n</var>について、<var>q_i \neq i</var>が成り立つことを言う。たとえば、<var>(5</var> <var>3</var> <var>1</var> <var>2</var> <var>4)</var>は完全順列であるが、<var>(3</var> <var>2</var> <var>5</var> <var>4</var> <var>1)</var>は<var>4</var>番目の数が<var>4</var>なので完全順列ではない。</p>
+<h3>Input</h3>
+<p>入力は以下の形式からなる。</p>
+<pre><var>n</var>
+<var>p_1</var> <var>p_2</var> ... <var>p_n</var></pre>
+<p><var>1</var>行目は順列の長さ<var>n</var>を表す整数<var>1</var>つからなる。 <var>2</var>行目は<var>n</var>個の整数からなり、<var>i</var>番目の整数は順列<var>p</var>の<var>i</var>番目の要素を表す。それぞれは空白<var>1</var>文字で区切られている。</p>
+
+<p>制約:</p>
+
+<ul>
+<li><var>2 \leq n \leq 100</var></li>
+<li><var>1 \leq p_i \leq n, i \neq j ⇔ p_i \neq p_j</var></li>
+</ul>
+
+
+<h3>Output</h3>
+<p><var>p</var>を完全順列に並び替えるための最小コストを<var>1</var>行に出力せよ。行の最後では必ず改行を行うこと。</p>
+<h3>Sample Input 1</h3>
+<pre>5
+1 2 3 5 4</pre>
+<h3>Sample Output 1</h3>
+<pre>7</pre>
+<p>1と2を入れ替えた後、1と3を入れ替えると、(2 3 1 5 4)となり完全順列である。</p>
+<h3>Sample Input 2</h3>
+<pre>5
+5 3 1 2 4</pre>
+<h3>Sample Output 2</h3>
+<pre>0</pre>
+<p>始めから完全順列である。</p>
+<h3>Sample Input 3</h3>
+<pre>10
+1 3 4 5 6 2 7 8 9 10</pre>
+<h3>Sample Output 3</h3>
+<pre>38</pre>

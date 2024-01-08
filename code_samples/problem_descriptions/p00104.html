@@ -1,0 +1,111 @@
+
+
+<H1>Magic Tile</H1>
+
+<p>
+There is a magic room in a homestead. The room is paved with H &times W tiles. There are five different tiles:
+</p>
+
+<ul>
+<li>Tile with a east-pointing arrow</li>
+<li>Tile with a west-pointing arrow</li>
+<li>Tile with a south-pointing arrow</li>
+<li>Tile with a north-pointing arrow</li>
+<li>Tile with nothing</li>
+</ul>
+<p>
+Once a person steps onto a tile which has an arrow, the mystic force makes the person go to the next tile pointed by the arrow. If the next tile has an arrow, the person moves to the next, ans so on. The person moves on until he/she steps onto a tile which does not have the arrow (the tile with nothing). The entrance of the room is at the northwest corner.
+</p>
+
+<p>
+Your task is to write a program which simulates the movement of the person in the room. The program should read strings which represent the room and print the last position of the person.
+</p>
+
+<p>
+The input represents the room as seen from directly above, and up, down, left and right side of the input correspond to north, south, west and east side of the room respectively. The horizontal axis represents <i>x</i>-axis (from 0 to W-1, inclusive) and the vertical axis represents <i>y</i>-axis (from 0 to H-1, inclusive). The upper left tile corresponds to (0, 0).
+</p>
+<p>
+The following figure shows an example of the input:
+</p>
+
+<pre>
+10 10
+>>>v..>>>v
+...v..^..v
+...>>>^..v
+.........v
+.v<<<<...v
+.v...^...v
+.v...^<<<<
+.v........
+.v...^....
+.>>>>^....
+</pre>
+
+<p>
+Characters represent tiles as follows:
+</p>
+<pre>
+'>': Tile with a east-pointing arrow
+'<': Tile with a west-pointing arrow 
+'^': Tile with a north-pointing arrow 
+'v': Tile with a south-pointing arrow 
+'.': Tile with nothing
+</pre>
+
+<p>
+If the person goes in cycles forever, your program should print "LOOP". You may assume that the person never goes outside of the room.
+</p>
+
+<H2>Input</H2>
+
+<p>
+The input consists of multiple datasets. The input ends with a line which contains two 0. Each dataset consists of:
+</p>
+<pre class="exp">
+H W
+H lines where each line contains W characters
+</pre>
+
+<p>
+You can assume that 0 &lt; W, H &lt; 101.
+</p>
+
+<H2>Output</H2>
+
+<p>
+For each dataset, print the coordinate (X, Y) of the person or "LOOP" in a line. X and Y should be separated by a space.
+</p>
+
+<H2>Sample Input</H2>
+
+<pre>
+10 10
+>>>v..>>>v
+...v..^..v
+>>>>>>^..v
+.........v
+.v<<<<...v
+.v.v.^...v
+.v.v.^<<<<
+.v.v.....v
+.v...^...v
+.>>>>^....
+6 10
+>>>>>>>>>v
+.........v
+.........v
+>>>>v....v
+^...v....v
+^<<<<<<<<<
+0 0
+</pre>
+
+<H2>Output for the Sample Input</H2>
+
+<pre>
+5 7
+LOOP
+</pre>
+
+

@@ -1,0 +1,92 @@
+<span class="lang-en">
+<p>Score : <var>1600</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>Taichi thinks a binary string <var>X</var> of odd length <var>N</var> is <strong>beautiful</strong> if it is possible to apply the following operation <var>\frac{N-1}{2}</var> times so that the only character of the resulting string is <code>1</code> :</p>
+<ul>
+<li>Choose three <strong>consecutive</strong> bits of <var>X</var> and replace them by their median. For example, we can turn <code>00110</code> into <code>010</code> by applying the operation to the middle three bits.</li>
+</ul>
+<p>Taichi has a string <var>S</var> consisting of characters <code>0</code>, <code>1</code> and <code>?</code>. Taichi wants to know the number of ways to replace the question marks with <code>1</code> or <code>0</code> so that the resulting string is beautiful, modulo <var>10^{9} + 7</var>.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 \leq |S| \leq 300000</var></li>
+<li><var>|S|</var> is odd.</li>
+<li>All characters of <var>S</var> are either <code>0</code>, <code>1</code> or <code>?</code>.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>S</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the number of ways to replace the question marks so that the resulting string is beautiful, modulo <var>10^{9} + 7</var>.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>1??00
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>2
+</pre>
+<p>There are <var>4</var> ways to replace the question marks with <code>0</code> or <code>1</code> :</p>
+<ul>
+<li>
+<p><code>11100</code> : This string is beautiful because we can first perform the operation on the last <var>3</var> bits to get <code>110</code> and then on the only <var>3</var> bits to get <code>1</code>.</p>
+</li>
+<li>
+<p><code>11000</code> : This string is beautiful because we can first perform the operation on the last <var>3</var> bits to get <code>110</code> and then on the only <var>3</var> bits to get <code>1</code>.</p>
+</li>
+<li>
+<p><code>10100</code> : This string is not beautiful because there is no sequence of operations such that the final string is <code>1</code>.</p>
+</li>
+<li>
+<p><code>10000</code> :  This string is not beautiful because there is no sequence of operations such that the final string is <code>1</code>.</p>
+</li>
+</ul>
+<p>Thus, there are <var>2</var> ways to form a beautiful string.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>?
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>1
+</pre>
+<p>In this case, <code>1</code> is the only beautiful string.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>?0101???10???00?1???????????????0????????????1????0
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>402589311
+</pre>
+<p>Remember to output your answer modulo <var>10^{9} + 7</var>.</p></section>
+</div>
+</span>

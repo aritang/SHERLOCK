@@ -1,0 +1,88 @@
+<span class="lang-en">
+<p>Score : <var>300</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>AtCoDeer the deer is going on a trip in a two-dimensional plane.
+In his plan, he will depart from point <var>(0, 0)</var> at time <var>0</var>, then for each <var>i</var> between <var>1</var> and <var>N</var> (inclusive), he will visit point <var>(x_i,y_i)</var> at time <var>t_i</var>.</p>
+<p>If AtCoDeer is at point <var>(x, y)</var> at time <var>t</var>, he can be at one of the following points at time <var>t+1</var>: <var>(x+1,y)</var>, <var>(x-1,y)</var>, <var>(x,y+1)</var> and <var>(x,y-1)</var>.
+Note that <strong>he cannot stay at his place</strong>.
+Determine whether he can carry out his plan.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1</var> <var>≤</var> <var>N</var> <var>≤</var> <var>10^5</var></li>
+<li><var>0</var> <var>≤</var> <var>x_i</var> <var>≤</var> <var>10^5</var></li>
+<li><var>0</var> <var>≤</var> <var>y_i</var> <var>≤</var> <var>10^5</var></li>
+<li><var>1</var> <var>≤</var> <var>t_i</var> <var>≤</var> <var>10^5</var></li>
+<li><var>t_i</var> <var>&lt;</var> <var>t_{i+1}</var> (<var>1</var> <var>≤</var> <var>i</var> <var>≤</var> <var>N-1</var>)</li>
+<li>All input values are integers.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+<var>t_1</var> <var>x_1</var> <var>y_1</var>
+<var>t_2</var> <var>x_2</var> <var>y_2</var>
+<var>:</var>
+<var>t_N</var> <var>x_N</var> <var>y_N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>If AtCoDeer can carry out his plan, print <code>Yes</code>; if he cannot, print <code>No</code>.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>2
+3 1 2
+6 1 1
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>Yes
+</pre>
+<p>For example, he can travel as follows: <var>(0,0)</var>, <var>(0,1)</var>, <var>(1,1)</var>, <var>(1,2)</var>, <var>(1,1)</var>, <var>(1,0)</var>, then <var>(1,1)</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>1
+2 100 100
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>No
+</pre>
+<p>It is impossible to be at <var>(100,100)</var> two seconds after being at <var>(0,0)</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>2
+5 1 1
+100 1 1
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>No
+</pre></section>
+</div>
+</span>

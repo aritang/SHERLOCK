@@ -1,0 +1,60 @@
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({ tex2jax: { inlineMath: [["$","$"], ["\\(","\\)"]], processEscapes: true }});
+</script>
+<script type='text/javascript' src='http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
+</script>
+
+<h2>Problem F:
+Rabbit Jumping
+</h2>
+
+<p>
+  There are $K$ rabbits playing on rocks floating in a river. They got tired of playing on the rocks on which they are standing currently, and they decided to move to other rocks. This seemed an easy task initially, but there are so many constraints that they got totally confused.
+</p>
+
+<p>
+  First of all, by one leap, they can only move to a rock within $R$ meters from the current rock. Also, they can never leap over rocks. That is, when they leap in some direction, they should land on the nearest rock in that direction. Furthermore, since they always want to show off that they are courageous, they will never leap to rocks downriver. Finally, since they never want to admit they have been defeated, they never land on a rock if the rock is already visited by other rabbits.
+</p>
+
+<p>
+  In this situation, is it possible for them to move to their destination rocks? If possible, please minimize the sum of their moving distance.
+</p>
+
+<h3>Input</h3>
+
+<p>
+  The first line contains two integers $N$ ($1 \leq N \leq 100$), $K$ ($1 \leq K \leq 3$) and a real number $R$ ($0 \leq R \leq 10^4$), which denote the number of rocks, the number of rabbits, and the maximum distance a rabbit can leap, respectively. The second line contains $K$ numbers $s_1, ...,  s_K$ where $s_i$ denote the rock where the $i$-th rabbit is standing. Similarly, the third line contains $K$ numbers $t_1, ..., t_K$ where $t_i$ denote the destination rock for the $i$-th rabbit. $s_1, ..., s_K$ are distinct, and $t_1, ..., t_K$ are distinct. A destination rock of a rabbit is always different from the rock he/she is standing currently.
+</p>
+
+<p>
+  Then the following $N$ lines describe the positions of the rocks. The $i$-th line in this block contains two integers $x_i$ and $y_i$ ($0 \leq x_i, y_i \leq 10,000$), which indicate the coordinates of the $i$-th rock. The river flows along Y-axis, toward the direction where Y-coordinate decreases. No pair of rocks has identical coordinates.
+</p>
+
+<p>
+You may assume that the answer do not change even if you increase $R$ by up to $10^{-5}$.
+</p>
+
+
+<h3>Output</h3>
+
+<p>
+If all the rabbits can move to their destination rocks, print the minimum total distance they need to leap. If not, print "-1" (without quotes). Your answer may contain at most $10^{-6}$ of absolute error.
+</p>
+
+
+<h3>Sample Input</h3>
+
+<pre>6 3 1.0
+1 2 3
+4 5 6
+0 0
+1 0
+2 0
+0 1
+1 1
+2 1</pre>
+
+<h3>Output for the Sample Input</h3>
+
+<pre>3</pre>

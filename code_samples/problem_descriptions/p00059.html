@@ -1,0 +1,57 @@
+
+
+
+<H1>長方形の重なり</H1>
+
+<p>
+底辺が <var>x</var> 軸に対して平行な 2 つの長方形があります。長方形 A の左下の座標 (<var>xa1</var>, <var>ya1</var>) と右上の座標 (<var>xa2</var>, <var>ya2</var>)、長方形 B の左下の座標 (<var>xb1</var>, <var>yb1</var>) と右上の座標 (<var>xb2</var>, <var>yb2</var>) を読み込んで、長方形 A と長方形 B が一部でも重なっていれば YES を、まったく重なっていなければ NO を出力するプログラムを作成してください。ただし、長方形 A と長方形 B は同じものではないとします。また、接しているものも重なっているとみなします。
+</p>
+
+<center>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE1_intersection">
+</center>
+<br/>
+
+<H2>Input</H2>
+
+<p>
+複数のデータセットが与えられます。各データセットの形式は以下のとおりです。
+</p>
+
+<pre>
+<var>xa1</var> <var>ya1</var> <var>xa2</var> <var>ya2</var> <var>xb1</var> <var>yb1</var> <var>xb2</var> <var>yb2</var>
+</pre>
+
+<p>
+入力される値はそれぞれ -2,000 以上 2,000 以下であり、各値は小数点以下最大 5 桁までの数字を含む実数で与えられます。
+</p>
+
+<p>
+データセットの数は 50 を超えません。
+</p>
+
+
+<H2>Output</H2>
+
+<p>
+各データセットに対して、<span>YES</span> または <span>NO</span> を１行に出力して下さい。
+</p>
+
+
+<H2>Sample Input</H2>
+
+<pre>
+0.0 0.0 5.0 5.0 1.0 1.0 4.0 4.0
+0.0 0.0 4.0 5.0 1.0 1.0 5.0 5.0
+0.0 0.0 4.0 4.0 -3.0 -5.0 2.0 -1.0
+</pre>
+
+<H2>Output for the Sample Input</H2>
+
+<pre>
+YES
+YES
+NO
+</pre>
+
+

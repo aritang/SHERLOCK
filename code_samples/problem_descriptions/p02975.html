@@ -1,0 +1,82 @@
+<span class="lang-en">
+<p>Score : <var>300</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>Snuke has <var>N</var> hats. The <var>i</var>-th hat has an integer <var>a_i</var> written on it.</p>
+<p>There are <var>N</var> camels standing in a circle.
+Snuke will put one of his hats on each of these camels.</p>
+<p>If there exists a way to distribute the hats to the camels such that the following condition is satisfied for every camel, print <code>Yes</code>; otherwise, print <code>No</code>.</p>
+<ul>
+<li>The bitwise XOR of the numbers written on the hats on both adjacent camels is equal to the number on the hat on itself.</li>
+</ul>
+<details>
+<summary style="display: list-item; outline: none;">What is XOR?</summary>
+
+The bitwise XOR <var>x_1 \oplus x_2 \oplus \ldots \oplus x_n</var> of <var>n</var> non-negative integers <var>x_1, x_2, \ldots, x_n</var> is defined as follows:
+
+- When <var>x_1 \oplus x_2 \oplus \ldots \oplus x_n</var> is written in base two, the digit in the <var>2^k</var>'s place (<var>k \geq 0</var>) is <var>1</var> if the number of integers among <var>x_1, x_2, \ldots, x_n</var> whose binary representations have <var>1</var> in the <var>2^k</var>'s place is odd, and <var>0</var> if that count is even.
+
+For example, <var>3 \oplus 5 = 6</var>.
+
+</details>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li>All values in input are integers.</li>
+<li><var>3 \leq N \leq 10^{5}</var></li>
+<li><var>0 \leq a_i \leq 10^{9}</var></li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+<var>a_1</var> <var>a_2</var> <var>\ldots</var> <var>a_{N}</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the answer.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>3
+1 2 3
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>Yes
+</pre>
+<ul>
+<li>If we put the hats with <var>1</var>, <var>2</var>, and <var>3</var> in this order, clockwise, the condition will be satisfied for every camel, so the answer is <code>Yes</code>.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>4
+1 2 4 8
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>No
+</pre>
+<ul>
+<li>There is no such way to distribute the hats; the answer is <code>No</code>.</li>
+</ul></section>
+</div>
+</span>

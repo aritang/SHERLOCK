@@ -1,0 +1,75 @@
+<span class="lang-en">
+<p>Score: <var>900</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3>
+<p>In <var>2937</var>, DISCO creates a new universe called DISCOSMOS to celebrate its <var>1000</var>-th anniversary.</p>
+<p>DISCOSMOS can be described as an <var>H \times W</var> grid. Let <var>(i, j)</var> <var>(1 \leq i \leq H, 1 \leq j \leq W)</var> denote the square at the <var>i</var>-th row from the top and the <var>j</var>-th column from the left.</p>
+<p>At time <var>0</var>, one robot will be placed onto each square. Each robot is one of the following three types:</p>
+<ul>
+<li>Type-H: Does not move at all.</li>
+<li>Type-R: If a robot of this type is in <var>(i, j)</var> at time <var>t</var>, it will be in <var>(i, j+1)</var> at time <var>t+1</var>. If it is in <var>(i, W)</var> at time <var>t</var>, however, it will be instead in <var>(i, 1)</var> at time <var>t+1</var>. (The robots do not collide with each other.)</li>
+<li>Type-D: If a robot of this type is in <var>(i, j)</var> at time <var>t</var>, it will be in <var>(i+1, j)</var> at time <var>t+1</var>. If it is in <var>(H, j)</var> at time <var>t</var>, however, it will be instead in <var>(1, j)</var> at time <var>t+1</var>.</li>
+</ul>
+<p>There are <var>3^{H \times W}</var> possible ways to place these robots. In how many of them will every square be occupied by one robot at times <var>0, T, 2T, 3T, 4T</var>, and all subsequent multiples of <var>T</var>?</p>
+<p>Since the count can be enormous, compute it modulo <var>(10^9 + 7)</var>.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3>
+<ul>
+<li><var>1 \leq H \leq 10^9</var></li>
+<li><var>1 \leq W \leq 10^9</var></li>
+<li><var>1 \leq T \leq 10^9</var></li>
+<li><var>H, W, T</var> are all integers.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3>
+<p>Input is given from Standard Input in the following format:</p>
+<pre><var>H</var> <var>W</var> <var>T</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3>
+<p>Print the number of ways to place the robots that satisfy the condition, modulo <var>(10^9 + 7)</var>.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>2 2 1
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>9
+</pre>
+<p>Shown below are some of the ways to place the robots that satisfy the condition, where <code>.</code>, <code>&gt;</code>, and <code>v</code> stand for Type-H, Type-R, and Type-D, respectively:</p>
+<pre>&gt;&gt;  ..  vv
+..  ..  vv
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>869 120 1001
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>672919729
+</pre></section>
+</div>
+</span>

@@ -1,0 +1,115 @@
+
+<h3>Integral Rectangles</h3>
+
+<p>
+Let us consider rectangles whose height, <i>h</i>, and
+width, <i>w</i>, are both integers. We call such rectangles <em>
+integral rectangles</em>. In this problem, we consider only wide
+integral rectangles, i.e., those with <i>w</i> &gt; <i>h</i>.
+</p>
+
+<p>
+We define the following ordering of wide integral rectangles. Given
+two wide integral rectangles,
+</p>
+
+<ol>
+<li>
+The one shorter in its diagonal line is smaller, and
+</li>
+<li>
+If the two have diagonal lines with the same length, the one shorter
+ in its height is smaller.
+</li>
+</ol>
+
+
+<center>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_integralRectangles-en">
+</center>
+
+
+<p>
+Given a wide integral rectangle, find the smallest wide integral
+rectangle bigger than the given one.
+</p>
+
+
+<h3>Input</h3>
+
+<p>The entire input consists of multiple datasets. The number of
+ datasets is no more than 100. Each dataset describes a wide integral
+ rectangle by specifying its height and width, namely <i>h</i>
+ and <i>w</i>, separated by a space in a line, as follows.
+</p>
+
+<blockquote>
+<i>h</i> <i>w</i>
+</blockquote>
+
+
+<p>
+For each dataset, <i>h</i> and <i>w</i> (&gt;<i>h</i>) are both
+integers greater than 0 and no more than 100. 
+</p>
+
+<p>
+The end of the input is indicated by a line of two zeros separated by a space.
+</p>
+
+
+<h3>Output</h3>
+
+<p>
+For each dataset, print in a line two numbers describing the
+height and width, namely <i>h</i> and <i>w</i> (&gt; <i>h</i>), of the
+smallest wide integral rectangle bigger than the one described in the
+dataset.  Put a space between the numbers. No other
+characters are allowed in the output.
+</p>
+
+<p>
+For any wide integral rectangle given in the input, the width and
+height of the smallest wide integral rectangle bigger than the given
+one are both known to be not greater than 150. 
+</p>
+<p>
+In addition, although
+the ordering of wide integral rectangles uses the comparison of
+lengths of diagonal lines, this comparison can be replaced with that
+of squares (self-products) of lengths of diagonal lines, which can
+avoid unnecessary troubles possibly caused by the use of floating-point
+numbers.
+</p>
+
+
+<h3>Sample Input</h3>
+<pre>
+1 2
+1 3
+2 3
+1 4
+2 4
+5 6
+1 8
+4 7
+98 100
+99 100
+0 0
+</pre>
+
+
+<h3>Output for the Sample Input</h3>
+
+<pre>
+1 3
+2 3
+1 4
+2 4
+3 4
+1 8
+4 7
+2 8
+3 140
+89 109
+</pre>

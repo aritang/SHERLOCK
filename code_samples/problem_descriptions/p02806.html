@@ -1,0 +1,117 @@
+<span class="lang-en">
+<p>Score : <var>200</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3>
+<p>Niwango created a playlist of <var>N</var> songs.
+The title and the duration of the <var>i</var>-th song are <var>s_i</var> and <var>t_i</var> seconds, respectively.
+It is guaranteed that <var>s_1,\ldots,s_N</var> are all distinct.</p>
+<p>Niwango was doing some work while playing this playlist. (That is, all the songs were played once, in the order they appear in the playlist, without any pause in between.)
+However, he fell asleep during his work, and he woke up after all the songs were played.
+According to his record, it turned out that he fell asleep at the very end of the song titled <var>X</var>.</p>
+<p>Find the duration of time when some song was played while Niwango was asleep.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3>
+<ul>
+<li><var>1 \leq N \leq 50</var></li>
+<li><var>s_i</var> and <var>X</var> are strings of length between <var>1</var> and <var>100</var> (inclusive) consisting of lowercase English letters.</li>
+<li><var>s_1,\ldots,s_N</var> are distinct.</li>
+<li>There exists an integer <var>i</var> such that <var>s_i = X</var>.</li>
+<li><var>1 \leq t_i \leq 1000</var></li>
+<li><var>t_i</var> is an integer.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3>
+<p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+<var>s_1</var> <var>t_1</var>
+<var>\vdots</var>
+<var>s_{N}</var> <var>t_N</var>
+<var>X</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3>
+<p>Print the answer.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>3
+dwango 2
+sixth 5
+prelims 25
+dwango
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>30
+</pre>
+<ul>
+<li>While Niwango was asleep, two songs were played: <code>sixth</code> and <code>prelims</code>.</li>
+<li>The answer is the total duration of these songs, <var>30</var>.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>1
+abcde 1000
+abcde
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>0
+</pre>
+<ul>
+<li>No songs were played while Niwango was asleep.</li>
+<li>In such a case, the total duration of songs is <var>0</var>.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>15
+ypnxn 279
+kgjgwx 464
+qquhuwq 327
+rxing 549
+pmuduhznoaqu 832
+dagktgdarveusju 595
+wunfagppcoi 200
+dhavrncwfw 720
+jpcmigg 658
+wrczqxycivdqn 639
+mcmkkbnjfeod 992
+htqvkgkbhtytsz 130
+twflegsjz 467
+dswxxrxuzzfhkp 989
+szfwtzfpnscgue 958
+pmuduhznoaqu
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>6348
+</pre></section>
+</div>
+</span>

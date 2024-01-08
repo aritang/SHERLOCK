@@ -1,0 +1,84 @@
+<span class="lang-en">
+<p>Score : <var>300</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>To make it difficult to withdraw money, a certain bank allows its customers to withdraw only one of the following amounts in one operation:</p>
+<ul>
+<li>
+<p><var>1</var> yen (the currency of Japan)</p>
+</li>
+<li>
+<p><var>6</var> yen, <var>6^2(=36)</var> yen, <var>6^3(=216)</var> yen, ...</p>
+</li>
+<li>
+<p><var>9</var> yen, <var>9^2(=81)</var> yen, <var>9^3(=729)</var> yen, ...</p>
+</li>
+</ul>
+<p>At least how many operations are required to withdraw exactly <var>N</var> yen in total?</p>
+<p>It is not allowed to re-deposit the money you withdrew.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 \leq N \leq 100000</var></li>
+<li><var>N</var> is an integer.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>If at least <var>x</var> operations are required to withdraw exactly <var>N</var> yen in total, print <var>x</var>.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>127
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>4
+</pre>
+<p>By withdrawing <var>1</var> yen, <var>9</var> yen, <var>36(=6^2)</var> yen and <var>81(=9^2)</var> yen, we can withdraw <var>127</var> yen in four operations.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>3
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>3
+</pre>
+<p>By withdrawing <var>1</var> yen three times, we can withdraw <var>3</var> yen in three operations.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>44852
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>16
+</pre></section>
+</div>
+</span>

@@ -1,0 +1,203 @@
+<h1>Problem J: Matrix</h1>
+
+<h2>Problem</h2>
+<p>
+  長さ$H$の数列$A$と長さ$W$の数列$B$が与えられる。<br><br>
+  $H$行$W$列からなる行列$C$を以下のように定義する。<br>
+  $ C_{i,j} = A_i \times B_j (1 \leq i \leq H, 1 \leq j \leq W) $ <br><br>
+  
+  以下の四種類のクエリを合計$Q$回処理せよ。<br>
+
+  <br>クエリ1<br>
+  $1$ $a$ $b$ $v$<br>
+  $ A_i ( a \leq i \leq b) $に$v$を加える <br>
+  
+  <br>クエリ2<br>
+  $2$ $c$ $d$ $v$<br>
+  $ B_j ( c \leq j \leq d) $に$v$を加える <br>
+  
+  <br>クエリ3<br>
+  $3$ $a$ $b$ $c$ $d$<br>
+  $ C_{i,j} ( a \leq i \leq b, c \leq j \leq d) $の最小値とその個数を出力する <br>
+  
+  <br>クエリ4<br>
+  $4$ $a$ $b$ $c$ $d$<br>
+  $ C_{i,j} ( a \leq i \leq b, c \leq j \leq d) $の最大値とその個数を出力する <br>
+  <br>
+  詳しくはサンプル入出力を参考にせよ。<br>
+</p>
+
+<h2>Input</h2>
+<p>入力は以下の形式で与えられる。</p>
+<pre>
+$H$ $W$ $Q$
+$A_1$ $A_2$ ... $A_H$
+$B_1$ $B_2$ ... $B_W$
+$query_1$
+$query_2$
+...
+$query_Q$
+</pre>
+<p>各クエリは以下の四種類のいずれかの形式で与えられる。</p>
+<pre>
+$1$ $a$ $b$ $v$
+$2$ $c$ $d$ $v$
+$3$ $a$ $b$ $c$ $d$
+$4$ $a$ $b$ $c$ $d$
+</pre>
+<p>
+  入力はすべて整数で与えられる。<br>
+  1行目に$H$, $W$, $Q$が空白区切りで与えられる。<br>
+  2行目に数列$A$の要素$A_i$($1 \leq i \leq H$)が空白区切りで与えられる。<br>
+  3行目に数列$B$の要素$B_j$($1 \leq j \leq W$)が空白区切りで与えられる。<br>
+  4行目以降の$Q$行にクエリが改行区切りで与えられる。<br>
+  各クエリ内の数値は全て空白区切りである。
+</p>
+
+<h2>Constraints</h2>
+<p>入力は以下の条件を満たす。</p>
+<ul>
+  <li>$1 \leq H, W, Q\leq 10^5 $</li>
+  <li>$-1000 \leq A_i \leq 1000 $</li>
+  <li>$-1000 \leq B_j \leq 1000 $</li>
+</ul>
+<p>各クエリについて、入力は以下の条件を満たす。<br>
+<ul>
+  <li>$1 \leq a \leq b \leq H$</li>
+  <li>$1 \leq c \leq d \leq W$</li>
+  <li>$-1000 \leq v \leq 1000$</li>
+</ul>
+
+
+<h2>Output</h2>
+<p>
+各クエリ3及びクエリ4について、値と個数を空白区切りで一行に出力せよ。<br>
+</p>
+
+<h2>Sample Input 1</h2>
+<pre>
+4 4 7
+1 2 3 4
+1 2 3 4
+3 2 3 2 3
+4 2 3 2 3
+3 1 1 1 1
+4 1 1 1 1
+1 1 1 1
+3 1 4 1 2
+4 2 3 2 4
+</pre>
+
+<h2>Sample Output 1</h2>
+<pre>
+4 1
+9 1
+1 1
+1 1
+2 2
+12 1
+</pre>
+クエリ1, 2で指定されている範囲は以下の画像の緑色に塗られた領域である。<br>
+クエリ3, 4で指定されている範囲は以下の画像の橙色に塗られた領域である。<br>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/acpc2018_aizu_J1" alt="img1" title="クエリ1, 2, 3, 4"><br>
+クエリ5によって$A_1$に1が加えられる。<br>
+クエリ6で指定されている範囲は以下の画像の水色に塗られた領域である。<br>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/acpc2018_aizu_J2" alt="img2" title="クエリ6"><br>
+クエリ7で指定されている範囲は以下の画像の紫色に塗られた領域である。<br>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/acpc2018_aizu_J3" alt="img3" title="クエリ7"><br>
+
+
+<h2>Sample Input 2</h2>
+<pre>
+4 4 6
+1 1 1 1
+1 1 1 1
+3 1 4 1 4
+4 1 4 1 4
+1 2 3 1
+2 2 3 1
+3 1 4 1 4
+4 1 4 1 4
+</pre>
+
+<h2>Sample Output 2</h2>
+<pre>
+1 16
+1 16
+1 4
+4 4
+</pre>
+
+初期状態の$C$は以下のようになる。<br>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/acpc2018_aizu_J4" alt="img4" ><br>
+
+クエリ3, 4以後の$C$は以下のようになる。<br>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/acpc2018_aizu_J5" alt="img5" ><br>
+
+
+<h2>Sample Input 3</h2>
+<pre>
+4 4 7
+0 1 0 1
+1 0 1 0
+3 2 4 1 3
+4 1 4 1 4
+1 1 4 -1
+3 1 3 1 3
+1 3 3 2
+2 3 3 -2
+3 2 4 2 4
+</pre>
+
+<h2>Sample Output 3</h2>
+<pre>
+0 5
+1 4
+-1 4
+-1 1
+</pre>
+
+
+<h2>Sample Input 4</h2>
+<pre>
+36 4 20
+-523 -460 -536 -885 652 782 513 -558 -521 -808 124 -708 -943 52 -856 -755 -958 913 380 -767 373 -731 -492 213 538 392 -39 509 -840 135 78 -285 -241 522 -572 -915
+-691 -16 812 -385
+4 7 17 4 4
+3 24 33 1 1
+4 3 35 2 4
+3 28 32 4 4
+2 3 3 438
+3 7 15 1 1
+4 2 17 4 4
+3 24 28 2 4
+4 15 16 4 4
+4 18 29 1 1
+3 24 27 2 4
+2 2 3 -828
+3 18 23 3 3
+1 27 31 -701
+2 2 3 298
+1 21 32 237
+2 3 3 -71
+1 14 29 772
+4 13 19 3 3
+3 19 34 1 2
+</pre>
+
+<h2>Sample Output 4</h2>
+<pre>
+368830 1
+-371758 1
+741356 1
+-195965 1
+-354483 1
+368830 1
+-207130 1
+329560 1
+580440 1
+-207130 1
+-323674 1
+1093565 1
+-1068977 1
+</pre>

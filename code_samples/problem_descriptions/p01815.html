@@ -1,0 +1,92 @@
+
+
+
+<h2>Escape</h2>
+
+<p>
+頂点に正の値を持つ無向グラフが与えられる。
+頂点には 1 から <var>N</var> の番号がついており、<var>i</var> 番目の頂点は <var>w_i</var> の値を持っている。
+1 番目の頂点からスタートし、直前に通った辺を通ることができないという制約のもとでグラフ上を移動することができる。
+各頂点では，初めて訪れた時に限りその頂点が持つ値の点数を得られる。
+</p>
+<p>
+取得できる点数の総和の最大値を求めよ。
+</p>
+
+<h3>Constraints</h3>
+<ul>
+<li><var>1  &le;  N  &le;  100000</var></li>
+<li><var>N &minus; 1  &le;  M  &le;  100000</var></li>
+<li><var>1  &le;  w_i  &le;  1000</var></li>
+<li><var>1  &le;  u_i, v_i  &le;  N</var></li>
+<li>多重辺・自己辺は存在しない</li>
+<li>グラフは連結である</li>
+</ul>
+
+<h3>Input Format</h3>
+<p>
+入力は以下の形式で標準入力から与えられる。
+</p>
+<pre>
+<var>N</var> <var>M</var>
+<var>w_1</var> <var>w_2</var> ... <var>w_N</var>
+<var>u_1</var> <var>v_1</var>
+<var>u_2</var> <var>v_2</var>
+...
+<var>u_M</var> <var>v_M</var>
+</pre>
+<p>
+<var>1</var> 行目には<b>グラフ</b>の頂点数 <var>N</var> と辺の数を表す整数 <var>M</var> が入力される。 <br />
+<var>2</var> 行目には各頂点が持つ値 <var>w_i</var> が入力される。 <br />
+さらに続けて <var>M</var> 行に、各辺により繋がれる <var>2</var> 頂点の番号が入力される。<br />
+</p>
+
+<h3>Output Format</h3>
+<p>
+答えを1行に出力せよ。
+</p>
+
+<h3>Sample Input 1</h3>
+<pre>
+6 6
+1 2 3 4 5 6
+1 2
+2 3
+3 4
+1 4
+4 5
+5 6
+</pre>
+
+<h3>Sample Output 1</h3>
+<pre>
+21
+</pre>
+
+<p>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_JAG2015SummerDay2_g_sample1-1" width=150 height=190/> <br/>
+頂点 1→2→3→4→5→6 と進むことで全ての頂点の点数を集めることができます。
+</p>
+
+<h3>Sample Input 2</h3>
+<pre>
+7 8
+1 3 3 5 2 2 3
+1 2
+2 3
+3 1
+1 4
+1 7
+1 5
+1 6
+5 6
+</pre>
+
+<h3>Sample Output 2</h3>
+<pre>
+16
+</pre>
+<p>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_JAG2015SummerDay2_g_sample2" width=240 height=185/> <br/>
+頂点 1→2→3→1→5→6→1→4 と進むことで16点を集めることができます。
+</p>

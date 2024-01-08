@@ -1,0 +1,97 @@
+
+
+<h1>Problem D: Smell Searcher</h1>
+
+<h2>Problem</h2>
+<p>
+廃津大学では強烈な香りを放つ<var>N</var>個の廃材が一列に並んでいます。
+廃材には1から<var>N</var>の番号が順番にふられていて、<var>i</var>番目の廃材は強さ<var>a<sub>i</sub></var>の香りを放っています。
+</p>
+
+<p>
+リヒト君は仕事で、すべての廃材の放つ香りの総和を求めるよう依頼されました。
+香りの総和が<var>M</var>以上になると「大変きつい仕事」とみなされ特別支給金がもらえます。
+</p>
+
+<p>
+  この仕事を行うために、リヒト君は精度<var>R</var>の香り検出器を使います。
+  精度<var>R</var>の香り検出器を使うと<var>i</var>番目の廃材の香りを測ろうとすると同時に<var>i</var>&minus;<var>R</var>,<var>i</var>&minus;<var>R</var>+1,...,<var>i</var>&minus;1,<var>i</var>,<var>i</var>+1,...,<var>i</var>+<var>R</var>&minus;1,<var>i</var>+<var>R</var>番目の廃材の香りも検出されます。言い換えると、閉区間[ max(<var>i</var>&minus;<var>R</var>,1), min(<var>i</var>+<var>R</var>,<var>N</var>) ] の廃材の香りを検出します。ここで、max(<var>a</var>,<var>b</var>)は<var>a</var>と<var>b</var>の最大値、min(<var>a</var>,<var>b</var>)は<var>a</var>と<var>b</var>の最小値を表します。
+
+  ただし、測った廃材の1つ隣の廃材の香りの強さは本来の香りの強さより<var>C</var>減らされ、2つ隣の廃材の強さ香りは本来の香りの強さより2*<var>C</var>減らされて検出されます。つまり、<var>j</var>(0&le;<var>j</var>&le;<var>R</var>)個隣にある廃材の香りの強さは <var>a<sub>i</sub></var> &minus; <var>j</var> * <var>C</var> として検出されます。結果的に、<var>i</var>番目の廃材に精度<var>R</var>の検出器を使うことで検出された香りの強さの最大値が<var>i</var>番目の廃材の香りの強さとして認識されます。
+</p>
+
+<p>
+  精度の高い検出器を使うとその分費用がかかるため、リヒト君は検出器が認識した1から<var>N</var>番目の廃材の香りの総和が<var>M</var>以上になる最低の精度<var>R</var>の値を知りたいと思っています。
+</p>
+
+<h2>Input</h2>
+<p>
+入力は以下の形式で与えられる。
+</p>
+
+<pre>
+<var>N</var> <var>M</var> <var>C</var>
+<var>a<sub>1</sub></var> <var>a<sub>2</sub></var> ... <var>a<sub>N</sub></var>
+</pre>
+
+<p>
+1行目に、1つの整数<var>N</var>,<var>M</var>,<var>C</var>が空白区切りで与えられる。2行目に<var>N</var>つの整数が空白区切りで与えられる。<var>a<sub>i</sub></var>は<var>i</var>番目の廃材の香りの強さを表す。
+</p>
+
+<h2>Constraints</h2>
+<p>
+入力は以下の制約を満たす。
+</p>
+<ul>
+<li>1 &le; <var>N</var> &le; 10<sup>5</sup></li>
+<li>1 &le; <var>M</var> &le; 10<sup>14</sup></li>
+<li>1 &le; <var>C</var> &le; 10<sup>9</sup></li>
+<li>0 &le; <var>a<sub>i</sub></var> &le; 10<sup>9</sup> (1 &le; <var>i</var> &le; <var>N</var>)</li>
+</ul>
+
+<h2>Output</h2>
+<p>
+精度<var>R</var>の検出器を使って認識される廃材の香りの総和を<var>M</var>以上にしたときの<var>R</var>の最小値を出力せよ。
+それが不可能な場合は&minus;1を出力せよ。
+<var>R</var>は必ず0以上であり、負の値の精度は存在しない。
+</p>
+
+<h2>Sample Input1</h2>
+<pre>
+6 25 3
+8 5 1 1 2 6
+</pre>
+
+<h2>Sample Output1</h2>
+<pre>
+1
+</pre>
+<p>
+このとき、精度0の検出器を使うと
+8 + 5 + 1 + 1 + 2 + 6 = 23　で25以上になりません。
+精度1の検出器を使うと
+max(8,5-3) + max(8-3,5,1-3) + max(5-3,1,1-3) + max(1-3,1,2-3) + max(1-3,2,6-3) + max(2-3,6)
+= 8 + 5 + 2 + 1 + 3 + 6 = 25 で25以上になるので1が正解です。
+</p>
+
+<h2>Sample Input2</h2>
+<pre>
+4 10 1
+1 2 3 4
+</pre>
+
+<h2>Sample Output2</h2>
+<pre>
+0
+</pre>
+
+<h2>Sample Input3</h2>
+<pre>
+4 11 1
+1 2 3 4
+</pre>
+
+<h2>Sample Output3</h2>
+<pre>
+-1
+</pre>

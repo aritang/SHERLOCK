@@ -1,0 +1,88 @@
+<span class="lang-en">
+<p>Score : <var>200</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>Katsusando loves omelette rice.</p>
+<p>Besides, he loves crème brûlée, tenderloin steak and so on, and believes that these foods are all loved by everyone.</p>
+<p>To prove that hypothesis, he conducted a survey on <var>M</var> kinds of foods and asked <var>N</var> people whether they like these foods or not.</p>
+<p>The <var>i</var>-th person answered that he/she only likes the <var>A_{i1}</var>-th, <var>A_{i2}</var>-th, <var>...</var>, <var>A_{iK_i}</var>-th food.</p>
+<p>Find the number of the foods liked by all the <var>N</var> people.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li>All values in input are integers.</li>
+<li><var>1 \leq N, M \leq 30</var></li>
+<li><var>1 \leq K_i \leq M</var></li>
+<li><var>1 \leq A_{ij} \leq M</var></li>
+<li>For each <var>i</var> <var>(1 \leq i \leq N)</var>, <var>A_{i1}, A_{i2}, ..., A_{iK_i}</var> are distinct.</li>
+</ul>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var> <var>M</var>
+<var>K_1</var> <var>A_{11}</var> <var>A_{12}</var> <var>...</var> <var>A_{1K_1}</var>
+<var>K_2</var> <var>A_{21}</var> <var>A_{22}</var> <var>...</var> <var>A_{2K_2}</var>
+<var>:</var>
+<var>K_N</var> <var>A_{N1}</var> <var>A_{N2}</var> <var>...</var> <var>A_{NK_N}</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the number of the foods liked by all the <var>N</var> people.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>3 4
+2 1 3
+3 1 2 3
+2 3 2
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>1
+</pre>
+<p>As only the third food is liked by all the three people, <var>1</var> should be printed.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>5 5
+4 2 3 4 5
+4 1 3 4 5
+4 1 2 4 5
+4 1 2 3 5
+4 1 2 3 4
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>0
+</pre>
+<p>Katsusando's hypothesis turned out to be wrong.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>1 30
+3 5 10 30
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>3
+</pre></section>
+</div>
+</span>

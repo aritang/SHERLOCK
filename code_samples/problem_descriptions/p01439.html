@@ -1,0 +1,158 @@
+
+<H1><font color="#000">Problem C:</font>Chinese Classics</H1>
+
+<p>
+Taro, a junior high school student, is working on his homework. Today's homework is to read Chinese classic texts.
+</p>
+
+<p>
+As you know, Japanese language shares the (mostly) same Chinese characters but the order of words is a bit different. Therefore the notation called "returning marks" was invented in order to read Chinese classic texts in the order similar to Japanese language.
+</p>
+
+<p>
+There are two major types of returning marks: 'Re' mark and jump marks. Also there are a couple of jump marks such as one-two-three marks, top-middle-bottom marks. The marks are attached to letters to describe the reading order of each letter in the Chinese classic text. Figure 1 is an example of a Chinese classic text annotated with returning marks, which are the small letters at the bottom-left of the big Chinese letters.
+</p>
+
+<center>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_chinese_classics">
+<p>
+Figure 1: a Chinese classic text
+</p>
+</center>
+
+
+<p>
+Taro generalized the concept of jump marks, and summarized the rules to read Chinese classic texts with returning marks as below. Your task is to help Taro by writing a program that interprets Chinese classic texts with returning marks following his rules, and outputs the order of reading of each letter.
+</p>
+
+<p>
+When two (or more) rules are applicable in each step, the latter in the list below is applied first, then the former.
+</p>
+
+<ol>
+<li> Basically letters are read downwards from top to bottom, i.e. the first letter should be read (or skipped) first, and after the <i>i</i>-th letter is read or skipped, (<i>i</i> + 1)-th letter is read next.
+</li>
+
+<li> Each jump mark has a <i>type</i> (represented with a string consisting of lower-case letters) and a <i>number</i> (represented with a positive integer). A letter with a jump mark whose number is 2 or larger must be skipped.
+</li>
+
+<li> When the <i>i</i>-th letter with a jump mark of type <i>t</i>, number <i>n</i> is read, and when there exists an unread letter <i>L</i> at position less than <i>i</i> that has a jump mark of type <i>t</i>, number <i>n</i> + 1, then <i>L</i> must be read next. If there is no such letter <i>L</i>, the (<i>k</i> + 1)-th letter is read, where <i>k</i> is the index of the most recently read letter with a jump mark of type <i>t</i>, number 1.
+</li>
+
+<li> A letter with a 'Re' mark must be skipped.
+</li>
+
+<li> When the <i>i</i>-th letter is read and (<i>i</i> - 1)-th letter has a 'Re' mark, then (<i>i</i> - 1)-th letter must be read next.
+</li>
+
+<li> No letter may be read twice or more. Once a letter is read, the letter must be skipped in the subsequent steps.
+</li>
+
+<li> If no letter can be read next, finish reading.
+</li>
+</ol>
+
+<p>
+Let's see the first case of the sample input. We begin reading with the first letter because of the rule 1. However, since the first letter has a jump mark '<span>onetwo2</span>', we must follow the rule 2 and skip the letter. Therefore the second letter, which has no returning mark, will be read first.
+</p>
+
+<p>
+Then the third letter will be read. The third letter has a jump mark '<span>onetwo1</span>', so we must follow rule 3 and read a letter with a jump mark `onetwo2' next, if exists. The first letter has the exact jump mark, so it will be read third. Similarly, the fifth letter is read fourth, and then the sixth letter is read.
+</p>
+
+<p>
+Although we have two letters which have the same jump mark '<span>onetwo2</span>', we must not take into account the first letter, which has already been read, and must read the fourth letter. Now we have read all six letters and no letter can be read next, so we finish reading. We have read the second, third, first, fifth, sixth, and fourth letter in this order, so the output is 2 3 1 5 6 4.
+</p>
+
+<H2>Input</H2>
+
+<p>
+The input contains multiple datasets. Each dataset is given in the following format:
+</p>
+
+<p>
+<i>N</i><br>
+<i>mark</i><sub>1</sub><br>
+...<br>
+<i>mark<sub>N</sub></i><br>
+</p>
+
+<p>
+<i>N</i>, a positive integer (1 &le; <i>N</i> &le; 10,000), means the number of letters in a Chinese classic text. <i>mark<sub>i</sub></i> denotes returning marks attached to the <i>i</i>-th letter.
+</p>
+
+<p>
+A 'Re' mark is represented by a single letter, namely, 'v' (quotes for clarity). The description of a jump mark is the simple concatenation of its type, specified by one or more lowercase letter, and a positive integer. Note that each letter has at most one jump mark and at most one 'Re' mark. When the same letter has both types of returning marks, the description of the jump mark comes first, followed by 'v' for the 'Re' mark. You can assume this happens only on the jump marks with the number 1.
+</p>
+
+<p>
+If the <i>i</i>-th letter has no returning mark, <i>mark<sub>i</sub></i> is '-' (quotes for clarity). The length of <i>mark<sub>i</sub></i> never exceeds 20.
+</p>
+
+<p>
+You may assume that input is well-formed, that is, there is exactly one reading order that follows the rules above. And in the ordering, every letter is read exactly once.
+</p>
+
+<p>
+You may also assume that the <i>N</i>-th letter does not have 'Re' mark.
+</p>
+
+<p>
+The input ends when <i>N</i> = 0. Your program must not output anything for this case.
+</p>
+
+<H2>Output</H2>
+
+<p>
+For each dataset, you should output N lines. The first line should contain the index of the letter which is to be read first, the second line for the letter which is to be read second, and so on. All the indices are 1-based.
+</p>
+
+<H2>Sample Input</H2>
+<pre>
+6
+onetwo2
+-
+onetwo1
+onetwo2
+-
+onetwo1
+7
+v
+topbottom2
+onetwo2
+-
+onetwo1
+topbottom1
+-
+6
+baz2
+foo2
+baz1v
+bar2
+foo1
+bar1
+0
+</pre>
+
+<H2>Output for the Sample Input</H2>
+<pre>
+2
+3
+1
+5
+6
+4
+4
+5
+3
+6
+2
+1
+7
+5
+2
+6
+4
+3
+1
+</pre>

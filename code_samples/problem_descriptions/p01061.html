@@ -1,0 +1,143 @@
+
+
+
+<h1>Community Integration</h1>
+<!--
+<p>安倍拾菜々「えぇっ！生まれ故郷のあの村、○○市に合併されてたんですか！？ 20年前に！？」</p>
+-->
+
+<h2>Problem</h2>
+<p>
+<var>N</var>個の村がある。それぞれの村には1から<var>N</var>までの番号がついている。昨今の合併ブームにより、いくつかの村が合併されることになった。合併された2つ以上の村は新しい1つの市となり、どの村とも合併されない村は村のままである。
+</p>
+
+<p>
+あなたは、ある2つの村が合併後に同じ市になる、という情報を複数与えられる。その情報の組み合わせによって、3つ以上の村が1つの市になることもありうる。
+</p>
+
+<p>
+合併後に同じ市になる村同士の情報が与えられたとき、合併後の市の数と村の数の差の絶対値を出力せよ。
+</p>
+
+<h2>Input</h2>
+<p>入力は以下の形式で与えられる。</p>
+<pre>
+<var>N</var> <var>M</var>
+<var>a<sub>1</sub></var> <var>b<sub>1</sub></var>
+<var>a<sub>2</sub></var> <var>b<sub>2</sub></var>
+...
+<var>a<sub>i</sub></var> <var>b<sub>i</sub></var>
+...
+<var>a<sub>M</sub></var> <var>b<sub>M</sub></var>
+</pre>
+
+<p>
+1行目に村の数<var>N</var>と合併についての情報の数<var>M</var>が空白区切りで与えられる。<br>
+2行目から<var>M</var>+1行目に、合併についての情報を表す２つの整数<var>a<sub>i</sub></var>と<var>b<sub>i</sub></var>が空白区切りで与えらる。各情報は<var>a<sub>i</sub></var>番目の村と<var>b<sub>i</sub></var>番目の村が合併後に同じ市になることを示す。ただし、<var>a<sub>i</sub></var>=<var>b<sub>i</sub></var>を満たすような入力は与えられない。
+</p>
+
+<h2>Constraints</h2>
+<ul>
+	<li>1 &le; <var>N</var> &le; 1,000</li>
+	<li>0 &le; <var>M</var> &le; 100</li>
+	<li>1 &le; <var>a<sub>i</sub></var> &le; <var>N</var></li>
+	<li>1 &le; <var>b<sub>i</sub></var> &le; <var>N</var></li>
+</ul>
+
+<h2>Output</h2>
+<p>
+村の数と市の数の差の絶対値を1行に出力せよ。
+</p>
+
+<h2>Sample Input 1</h2>
+<pre>
+3 1
+1 2
+</pre>
+
+<h2>Sample Output 1</h2>
+<pre>
+0
+</pre>
+
+<h2>Sample Input 2</h2>
+<pre>
+4 2
+1 4
+2 3
+</pre>
+
+<h2>Sample Output 2</h2>
+<pre>
+2
+</pre>
+
+<h2>Sample Input 3</h2>
+<pre>
+5 0
+</pre>
+
+<h2>Sample Output 3</h2>
+<pre>
+5
+</pre>
+
+<h2>Sample Input 4</h2>
+<pre>
+3 3
+1 2
+2 3
+3 1
+</pre>
+
+<h2>Sample Output 4</h2>
+<pre>
+1
+</pre>
+<p>
+このケースではすべての村が1つの市に合併されることを表し、その市の中で合併される2つの村をつなぐつなぎ方の全通りが入力として与えられている。
+</p>
+
+<h2>Sample Input 5</h2>
+<pre>
+3 2
+1 2
+2 3
+</pre>
+
+<h2>Sample Output 5</h2>
+<pre>
+1
+</pre>
+<p>
+このケースでは合併される3つの村をつなぐつなぎ方の全通りが入力として与えられているわけではないが、つながっている村をたどればすべての村にたどり着くことができるので、すべての村が一つの市に合併される。
+</p>
+
+<h2>Sample Input 6</h2>
+<pre>
+5 4
+1 2
+2 3
+3 4
+4 5
+</pre>
+
+<h2>Sample Output 6</h2>
+<pre>
+1
+</pre>
+
+<h2>Sample Input 7</h2>
+<pre>
+10 5
+3 4
+1 2
+9 6
+2 6
+2 9
+</pre>
+
+<h2>Sample Output 7</h2>
+<pre>
+2
+</pre>

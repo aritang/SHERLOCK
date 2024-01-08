@@ -1,0 +1,55 @@
+
+<script src="./IMAGE/varmath.js" charset="UTF-8"></script>
+
+<H1>Longest Lane</H1>
+
+<p>
+Mr. KM, the mayor of KM city, decided to build a new elementary school.
+The site for the school has an awkward polygonal shape, which caused several problems.
+The most serious problem was that there was not enough space for a short distance racetrack.
+Your task is to help Mr. KM to calculate the maximum possible length for the racetrack
+that can be built in the site.
+The track can be considered as a straight line segment  whose width can be ignored.
+The boundary of the site has a simple polygonal shape without self-intersection,
+and the track can touch the boundary.
+Note that the boundary might not be convex.
+</p>
+
+<H2>Input</H2>
+
+<p>
+The input consists of multiple test cases, followed by a line containing &quot;0&quot;.
+Each test case has the following format.
+The first line contains an integer <var>N</var> (<var>3 \leq N \leq 100</var>).
+Each of the following <var>N</var> lines contains two integers <var>x_i</var> and <var>y_i</var> (<var>-1,000 \leq x_i, y_i \leq 1,000</var>),
+which describe the coordinates of a vertex of the polygonal border of the site, in counterclockwise order.
+</p>
+
+<H2>Output</H2>
+
+<p>
+For each test case, print its case number and the maximum possible length of the track in a line.
+The answer should be given as a floating point number with an absolute error of at most <var>10^{-6}</var>.
+</p>
+
+<H2>Sample Input</H2>
+
+<pre>
+4
+0 0
+10 0
+10 10
+0 10
+3
+0 0
+1 0
+0 1
+0
+</pre>
+
+<H2>Output for the Sample Input</H2>
+
+<pre>
+Case 1: 14.142135624
+Case 2: 1.41421356
+</pre>

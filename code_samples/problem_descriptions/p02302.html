@@ -1,0 +1,89 @@
+
+<H1>Convex Cut</H1>
+
+<center>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_CGL_CGL_4_C">
+</center>
+<br>
+
+<p>
+  As shown in the figure above, cut a convex polygon <var>g</var> by a line <var>p1p2</var> and print the area of the cut polygon which is on the left-hand side of the line.
+</p>
+
+<p>
+<var>g</var> is represented by a sequence of points <var>p<sub>1</sub></var>, <var>p<sub>2</sub></var>,..., <var>p<sub>n</sub></var> where line segments connecting <var>p<sub>i</sub></var> and <var>p<sub>i+1</sub></var> (1 &le; <var>i</var> &le; <var>n&minus;1</var>) are sides of the convex polygon. The line segment connecting <var>p<sub>n</sub></var> and <var>p<sub>1</sub></var> is also a side of the polygon.
+</p>
+
+<H2>Input</H2>
+
+<p>
+  The input is given in the following format:
+</p>
+
+<pre>
+<var>g</var> (the sequence of the points of the polygon)
+<var>q</var> (the number of queries = the number of target lines)
+1st query
+2nd query
+:
+<var>q</var>th query
+</pre>
+
+<p>
+<var>g</var> is given as a sequence of points <var>p<sub>1</sub></var>,..., <var>p<sub>n</sub></var> in the following format:
+</p>
+
+<pre>
+<var>n</var>
+<var>x<sub>1</sub></var> <var>y<sub>1</sub></var> 
+<var>x<sub>2</sub></var> <var>y<sub>2</sub></var>
+:
+<var>x<sub>n</sub></var> <var>y<sub>n</sub></var>
+</pre>
+
+<p>
+The first integer <var>n</var> is the number of points. The coordinate of the <var>i</var>-th point <var>p<sub>i</sub></var> is given by two integers <var>x<sub>i</sub></var> and <var>y<sub>i</sub></var>. The coordinates of points are given in the order of counter-clockwise visit of them. Note that all interior angles of given convex polygons are less than or equal to 180.
+</p>
+
+<p>
+  For each query, a line represented by two points <var>p1</var> and <var>p2</var> is given. The coordinates of the points are given by four integers <var>p1x</var>, <var>p1y</var>, <var>p2x</var> and <var>p2y</var>.
+</p>
+
+<H2>Output</H2>
+
+<p>
+  For each query, print the area of the cut polygon. The output values should be in a decimal fraction with an error less than 0.00001.
+</p>
+
+<H2>Constraints</H2>
+
+<ul>
+<li>
+3 &le; <var>n</var> &le; 100
+</li>
+<li>
+1 &le; <var>q</var> &le; 100
+</li>
+<li>-10000 &le; <var>x<sub>i</sub></var>, <var>y<sub>i</sub></var> &le; 10000</li>
+<li>-10000 &le; <var>p1x</var>,<var>p1y</var>,<var>p2x</var>,<var>p2y</var> &le; 10000</li>
+<li>No point in <var>g</var> will occur more than once.</li>
+<li><var>p1</var> &ne; <var>p2</var></li>
+</ul>
+
+<H2>Sample Input</H2>
+<pre>
+4
+1 1
+4 1
+4 3
+1 3
+2
+2 0 2 4
+2 4 2 0
+</pre>
+
+<H2>Sample Output</H2>
+<pre>
+2.00000000
+4.00000000
+</pre>

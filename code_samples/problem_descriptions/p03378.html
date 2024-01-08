@@ -1,0 +1,90 @@
+<span class="lang-en">
+<p>Score : <var>200</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>There are <var>N + 1</var> squares arranged in a row, numbered <var>0, 1, ..., N</var> from left to right.</p>
+<p>Initially, you are in Square <var>X</var>.
+You can freely travel between adjacent squares. Your goal is to reach Square <var>0</var> or Square <var>N</var>.
+However, for each <var>i = 1, 2, ..., M</var>, there is a toll gate in Square <var>A_i</var>, and traveling to Square <var>A_i</var> incurs a cost of <var>1</var>.
+It is guaranteed that there is no toll gate in Square <var>0</var>, Square <var>X</var> and Square <var>N</var>.</p>
+<p>Find the minimum cost incurred before reaching the goal.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 \leq N \leq 100</var></li>
+<li><var>1 \leq M \leq 100</var></li>
+<li><var>1 \leq X \leq N - 1</var></li>
+<li><var>1 \leq A_1 &lt; A_2 &lt; ... &lt; A_M \leq N</var></li>
+<li><var>A_i \neq X</var></li>
+<li>All values in input are integers.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var> <var>M</var> <var>X</var>
+<var>A_1</var> <var>A_2</var> <var>...</var> <var>A_M</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the minimum cost incurred before reaching the goal.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>5 3 3
+1 2 4
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>1
+</pre>
+<p>The optimal solution is as follows:</p>
+<ul>
+<li>First, travel from Square <var>3</var> to Square <var>4</var>. Here, there is a toll gate in Square <var>4</var>, so the cost of <var>1</var> is incurred.</li>
+<li>Then, travel from Square <var>4</var> to Square <var>5</var>. This time, no cost is incurred.</li>
+<li>Now, we are in Square <var>5</var> and we have reached the goal.</li>
+</ul>
+<p>In this case, the total cost incurred is <var>1</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>7 3 2
+4 5 6
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>0
+</pre>
+<p>We may be able to reach the goal at no cost.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>10 7 5
+1 2 3 4 6 8 9
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>3
+</pre></section>
+</div>
+</span>

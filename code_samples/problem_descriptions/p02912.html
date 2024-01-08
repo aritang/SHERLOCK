@@ -1,0 +1,99 @@
+<span class="lang-en">
+<p>Score : <var>400</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>Takahashi is going to buy <var>N</var> items one by one.</p>
+<p>The price of the <var>i</var>-th item he buys is <var>A_i</var> yen (the currency of Japan).</p>
+<p>He has <var>M</var> discount tickets, and he can use any number of them when buying an item.</p>
+<p>If <var>Y</var> tickets are used when buying an item priced <var>X</var> yen, he can get the item for <var>\frac{X}{2^Y}</var> (rounded down to the nearest integer) yen.</p>
+<p>What is the minimum amount of money required to buy all the items?</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li>All values in input are integers.</li>
+<li><var>1 \leq N, M \leq 10^5</var></li>
+<li><var>1 \leq A_i \leq 10^9</var></li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var> <var>M</var>
+<var>A_1</var> <var>A_2</var> <var>...</var> <var>A_N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the minimum amount of money required to buy all the items.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>3 3
+2 13 8
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>9
+</pre>
+<p>We can buy all the items for <var>9</var> yen, as follows:</p>
+<ul>
+<li>Buy the <var>1</var>-st item for <var>2</var> yen without tickets.</li>
+<li>Buy the <var>2</var>-nd item for <var>3</var> yen with <var>2</var> tickets.</li>
+<li>Buy the <var>3</var>-rd item for <var>4</var> yen with <var>1</var> ticket.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>4 4
+1 9 3 5
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>6
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>1 100000
+1000000000
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>0
+</pre>
+<p>We can buy the item priced <var>1000000000</var> yen for <var>0</var> yen with <var>100000</var> tickets.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 4</h3><pre>10 1
+1000000000 1000000000 1000000000 1000000000 1000000000 1000000000 1000000000 1000000000 1000000000 1000000000
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 4</h3><pre>9500000000
+</pre></section>
+</div>
+</span>

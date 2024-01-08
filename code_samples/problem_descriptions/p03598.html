@@ -1,0 +1,98 @@
+<span class="lang-en">
+<p>Score : <var>200</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>There are <var>N</var> balls in the <var>xy</var>-plane. The coordinates of the <var>i</var>-th of them is <var>(x_i, i)</var>.
+Thus, we have one ball on each of the <var>N</var> lines <var>y = 1</var>, <var>y = 2</var>, <var>...</var>, <var>y = N</var>.</p>
+<p>In order to collect these balls, Snuke prepared <var>2N</var> robots, <var>N</var> of type A and <var>N</var> of type B.
+Then, he placed the <var>i</var>-th type-A robot at coordinates <var>(0, i)</var>, and the <var>i</var>-th type-B robot at coordinates <var>(K, i)</var>.
+Thus, now we have one type-A robot and one type-B robot on each of the <var>N</var> lines <var>y = 1</var>, <var>y = 2</var>, <var>...</var>, <var>y = N</var>.</p>
+<p>When activated, each type of robot will operate as follows.</p>
+<ul>
+<li>
+<p>When a type-A robot is activated at coordinates <var>(0, a)</var>, it will move to the position of the ball on the line <var>y = a</var>, collect the ball, move back to its original position <var>(0, a)</var> and deactivate itself. If there is no such ball, it will just deactivate itself without doing anything.</p>
+</li>
+<li>
+<p>When a type-B robot is activated at coordinates <var>(K, b)</var>, it will move to the position of the ball on the line <var>y = b</var>, collect the ball, move back to its original position <var>(K, b)</var> and deactivate itself. If there is no such ball, it will just deactivate itself without doing anything.</p>
+</li>
+</ul>
+<p>Snuke will activate some of the <var>2N</var> robots to collect all of the balls. Find the minimum possible total distance covered by robots.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 \leq N \leq 100</var></li>
+<li><var>1 \leq K \leq 100</var></li>
+<li><var>0 &lt; x_i &lt; K</var></li>
+<li>All input values are integers.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Inputs</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+<var>K</var>
+<var>x_1</var> <var>x_2</var> <var>...</var> <var>x_N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Outputs</h3><p>Print the minimum possible total distance covered by robots.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>1
+10
+2
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>4
+</pre>
+<p>There are just one ball, one type-A robot and one type-B robot.</p>
+<p>If the type-A robot is used to collect the ball, the distance from the robot to the ball is <var>2</var>, and the distance from the ball to the original position of the robot is also <var>2</var>, for a total distance of <var>4</var>.</p>
+<p>Similarly, if the type-B robot is used, the total distance covered will be <var>16</var>.</p>
+<p>Thus, the total distance covered will be minimized when the type-A robot is used. The output should be <var>4</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>2
+9
+3 6
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>12
+</pre>
+<p>The total distance covered will be minimized when the first ball is collected by the type-A robot, and the second ball by the type-B robot.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>5
+20
+11 12 9 17 12
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>74
+</pre></section>
+</div>
+</span>

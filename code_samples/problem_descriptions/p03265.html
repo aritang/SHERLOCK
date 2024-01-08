@@ -1,0 +1,75 @@
+<span class="lang-en">
+<p>Score : <var>200</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>There is a square in the <var>xy</var>-plane. The coordinates of its four vertices are <var>(x_1,y_1),(x_2,y_2),(x_3,y_3)</var> and <var>(x_4,y_4)</var> in counter-clockwise order.
+(Assume that the positive <var>x</var>-axis points right, and the positive <var>y</var>-axis points up.)</p>
+<p>Takahashi remembers <var>(x_1,y_1)</var> and <var>(x_2,y_2)</var>, but he has forgot <var>(x_3,y_3)</var> and <var>(x_4,y_4)</var>.</p>
+<p>Given <var>x_1,x_2,y_1,y_2</var>, restore <var>x_3,y_3,x_4,y_4</var>. It can be shown that <var>x_3,y_3,x_4</var> and <var>y_4</var> uniquely exist and have integer values.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>|x_1|,|y_1|,|x_2|,|y_2| \leq 100</var></li>
+<li><var>(x_1,y_1)</var> ≠ <var>(x_2,y_2)</var></li>
+<li>All values in input are integers.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>x_1</var> <var>y_1</var> <var>x_2</var> <var>y_2</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print <var>x_3,y_3,x_4</var> and <var>y_4</var> as integers, in this order.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>0 0 0 1
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>-1 1 -1 0
+</pre>
+<p><var>(0,0),(0,1),(-1,1),(-1,0)</var> is the four vertices of a square in counter-clockwise order.
+Note that <var>(x_3,y_3)=(1,1),(x_4,y_4)=(1,0)</var> is not accepted, as the vertices are in clockwise order.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>2 3 6 6
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>3 10 -1 7
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>31 -41 -59 26
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>-126 -64 -36 -131
+</pre></section>
+</div>
+</span>

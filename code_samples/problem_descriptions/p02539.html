@@ -1,0 +1,87 @@
+<span class="lang-en">
+<p>Score : <var>600</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>There are <var>2N</var> people numbered <var>1</var> through <var>2N</var>.
+The height of Person <var>i</var> is <var>h_i</var>.</p>
+<p>How many ways are there to make <var>N</var> pairs of people such that the following conditions are satisfied?
+Compute the answer modulo <var>998,244,353</var>.</p>
+<ul>
+<li>Each person is contained in exactly one pair.</li>
+<li>For each pair, the heights of the two people in the pair are different.</li>
+</ul>
+<p>Two ways are considered different if for some <var>p</var> and <var>q</var>, Person <var>p</var> and Person <var>q</var> are paired in one way and not in the other.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 \leq N \leq 50,000</var></li>
+<li><var>1 \leq h_i \leq 100,000</var></li>
+<li>All values in input are integers.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+<var>h_1</var>
+<var>:</var>
+<var>h_{2N}</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the answer.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>2
+1
+1
+2
+3
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>2
+</pre>
+<p>There are two ways:</p>
+<ul>
+<li>Form the pair (Person <var>1</var>, Person <var>3</var>) and the pair (Person <var>2</var>, Person <var>4</var>).</li>
+<li>Form the pair (Person <var>1</var>, Person <var>4</var>) and the pair (Person <var>2</var>, Person <var>3</var>).</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>5
+30
+10
+20
+40
+20
+10
+10
+30
+50
+60
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>516
+</pre></section>
+</div>
+</span>

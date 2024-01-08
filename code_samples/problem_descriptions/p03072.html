@@ -1,0 +1,80 @@
+<span class="lang-en">
+<p>Score : <var>200</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>There are <var>N</var> mountains ranging from east to west, and an ocean to the west.</p>
+<p>At the top of each mountain, there is an inn. You have decided to choose where to stay from these inns.</p>
+<p>The height of the <var>i</var>-th mountain from the west is <var>H_i</var>.</p>
+<p>You can certainly see the ocean from the inn at the top of the westmost mountain.</p>
+<p>For the inn at the top of the <var>i</var>-th mountain from the west <var>(i = 2, 3, ..., N)</var>, you can see the ocean if and only if <var>H_1 \leq H_i</var>, <var>H_2 \leq H_i</var>, <var>...</var>, and <var>H_{i-1} \leq H_i</var>.</p>
+<p>From how many of these <var>N</var> inns can you see the ocean?</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li>All values in input are integers.</li>
+<li><var>1 \leq N \leq 20</var></li>
+<li><var>1 \leq H_i \leq 100</var></li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+<var>H_1</var> <var>H_2</var> <var>...</var> <var>H_N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the number of inns from which you can see the ocean.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>4
+6 5 6 8
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>3
+</pre>
+<p>You can see the ocean from the first, third and fourth inns from the west.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>5
+4 5 3 5 4
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>3
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>5
+9 5 6 8 4
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>1
+</pre></section>
+</div>
+</span>

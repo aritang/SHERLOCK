@@ -1,0 +1,80 @@
+<span class="lang-en">
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>There are <var>N</var> piles of candies on the table. The piles are numbered <var>1</var> through <var>N</var>. At first, pile <var>i</var> contains <var>a_i</var> candies.</p>
+<p>Snuke and Ciel are playing a game. They take alternating turns. Snuke goes first. In each turn, the current player must perform one of the following two operations:</p>
+<ol>
+<li>Choose a pile with the largest number of candies remaining, then eat all candies of that pile.</li>
+<li>From each pile with one or more candies remaining, eat one candy.</li>
+</ol>
+<p>The player who eats the last candy on the table, loses the game. Determine which player will win if both players play the game optimally.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1≤N≤10^5</var></li>
+<li><var>1≤a_i≤10^9</var></li>
+</ul>
+</section>
+</div>
+<hr>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>The input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+<var>a_1</var> <var>a_2</var> <var>…</var> <var>a_N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>If Snuke will win, print <code>First</code>. If Ciel will win, print <code>Second</code>.</p>
+</section>
+</div>
+</div>
+<hr>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>2
+1 3
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>First
+</pre>
+<p>At the beginning of the game, pile <var>2</var> contains the most candies. If Snuke eats all candies of this pile, Ciel has no choice but to eat the last candy.</p>
+</section>
+</div>
+<hr>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>3
+1 2 1
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>First
+</pre>
+<p>If Snuke eats one candy from each pile, Ciel is again left with the last candy.</p>
+</section>
+</div>
+<hr>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>3
+1 2 3
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>Second
+</pre></section>
+</div>
+</hr></hr></hr></hr></span>

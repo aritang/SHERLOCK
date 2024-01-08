@@ -1,0 +1,79 @@
+<span class="lang-en">
+<p>Score : <var>200</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>We have held a popularity poll for <var>N</var> items on sale. Item <var>i</var> received <var>A_i</var> votes.</p>
+<p>From these <var>N</var> items, we will select <var>M</var> as popular items. However, we cannot select an item with less than <var>\dfrac{1}{4M}</var> of the total number of votes.</p>
+<p>If <var>M</var> popular items can be selected, print <code>Yes</code>; otherwise, print <code>No</code>.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 \leq M \leq N \leq 100</var></li>
+<li><var>1 \leq A_i \leq 1000</var></li>
+<li><var>A_i</var> are distinct.</li>
+<li>All values in input are integers.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var> <var>M</var>
+<var>A_1</var> <var>...</var> <var>A_N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>If <var>M</var> popular items can be selected, print <code>Yes</code>; otherwise, print <code>No</code>.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>4 1
+5 4 2 1
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>Yes
+</pre>
+<p>There were <var>12</var> votes in total. The most popular item received <var>5</var> votes, and we can select it.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>3 2
+380 19 1
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>No
+</pre>
+<p>There were <var>400</var> votes in total. The second and third most popular items received less than <var>\dfrac{1}{4\times 2}</var> of the total number of votes, so we cannot select them. Thus, we cannot select two popular items.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>12 3
+4 56 78 901 2 345 67 890 123 45 6 789
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>Yes
+</pre></section>
+</div>
+</span>

@@ -1,0 +1,76 @@
+<span class="lang-en">
+<p>Score : <var>600</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>For a non-negative integer <var>K</var>, we define a fractal of level <var>K</var> as follows:</p>
+<ul>
+<li>A fractal of level <var>0</var> is a grid with just one white square.</li>
+<li>When <var>K &gt; 0</var>, a fractal of level <var>K</var> is a <var>3^K \times 3^K</var> grid. If we divide this grid into nine <var>3^{K-1} \times 3^{K-1}</var> subgrids:<ul>
+<li>The central subgrid consists of only black squares.</li>
+<li>Each of the other eight subgrids is a fractal of level <var>K-1</var>.</li>
+</ul>
+</li>
+</ul>
+<p>For example, a fractal of level <var>2</var> is as follows:</p>
+<p><img alt="A fractal of level 2" src="https://img.atcoder.jp/panasonic2020/e3a473bc5b6d3ac74c3ab8130213ef09.png"/></p>
+<p>In a fractal of level <var>30</var>, let <var>(r, c)</var> denote the square at the <var>r</var>-th row from the top and the <var>c</var>-th column from the left.</p>
+<p>You are given <var>Q</var> quadruples of integers <var>(a_i, b_i, c_i, d_i)</var>.
+For each quadruple, find the distance from <var>(a_i, b_i)</var> to <var>(c_i, d_i)</var>.</p>
+<p>Here the distance from <var>(a, b)</var> to <var>(c, d)</var> is the minimum integer <var>n</var> that satisfies the following condition:</p>
+<ul>
+<li>There exists a sequence of white squares <var>(x_0, y_0), \ldots, (x_n, y_n)</var> satisfying the following conditions:<ul>
+<li><var>(x_0, y_0) = (a, b)</var></li>
+<li><var>(x_n, y_n) = (c, d)</var></li>
+<li>For every <var>i (0 \leq i \leq n-1)</var>, <var>(x_i, y_i)</var> and <var>(x_{i+1}, y_{i+1})</var> share a side.</li>
+</ul>
+</li>
+</ul>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 \leq Q \leq 10000</var></li>
+<li><var>1 \leq a_i, b_i, c_i, d_i \leq 3^{30}</var></li>
+<li><var>(a_i, b_i) \neq (c_i, d_i)</var></li>
+<li><var>(a_i, b_i)</var> and <var>(c_i, d_i)</var> are white squares.</li>
+<li>All values in input are integers.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>Q</var>
+<var>a_1 \ b_1 \ c_1 \ d_1</var>
+<var>:</var>
+<var>a_Q \ b_Q \ c_Q \ d_Q</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print <var>Q</var> lines.
+The <var>i</var>-th line should contain the distance from <var>(a_i, b_i)</var> to <var>(c_i, d_i)</var>.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>2
+4 2 7 4
+9 9 1 9
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>5
+8
+</pre>
+<p><img alt="" src="https://img.atcoder.jp/panasonic2020/b590cee9850abdad4109ab940f9efe5a.png"/></p></section>
+</div>
+</span>

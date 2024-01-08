@@ -1,0 +1,87 @@
+
+<H1><font color="#000">Problem I:</font> Light The Room</H1>
+
+<p>
+You are given plans of rooms of polygonal shapes. The walls of the rooms on the plans are
+placed parallel to either <i>x</i>-axis or <i>y</i>-axis. In addition, the walls are made of special materials so
+they reflect light from sources as mirrors do, but only once. In other words, the walls do not
+reflect light already reflected at another point of the walls.
+</p>
+<p>
+Now we have each room furnished with one lamp. Walls will be illuminated by the lamp directly
+or indirectly. However, since the walls reflect the light only once, some part of the walls may
+not be illuminated.
+</p>
+<p>
+You are requested to write a program that calculates the total length of <i>unilluminated</i> part of
+the walls.
+</p>
+
+<center>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE1_lightTheRoom">
+<p>Figure 10: The room given as the second case in Sample Input</p>
+</center>
+
+<H2>Input</H2>
+
+<p>
+The input consists of multiple test cases.
+</p>
+<p>
+The first line of each case contains a single positive even integer <i>N</i> (4 &le; <i>N</i> &le; 20), which indicates
+the number of the corners. The following <i>N</i> lines describe the corners counterclockwise. The
+i-th line contains two integers <i>x<sub>i</sub></i> and <i>y<sub>i</sub></i> , where (<i>x<sub>i</sub></i> , <i>y<sub>i</sub></i> ) indicates the coordinates of the <i>i</i>-th
+corner. The last line of the case contains <i>x'</i> and <i>y'</i> , where (<i>x'</i> , <i>y'</i> ) indicates the coordinates of
+the lamp.
+</p>
+
+<p>
+To make the problem simple, you may assume that the input meets the following conditions:
+</p>
+
+<ul>
+   <li>All coordinate values are integers not greater than 100 in their absolute values.</li>
+   <li>No two walls intersect or touch except for their ends.</li>
+   <li>The walls do not intersect nor touch each other.</li>
+   <li>The walls turn each corner by a right angle.</li>
+   <li>The lamp exists strictly inside the room off the wall.</li>
+   <li>The x-coordinate of the lamp does not coincide with that of any wall; neither does the
+     y-coordinate.</li>
+</ul>
+<p>
+The input is terminated by a line containing a single zero.
+</p>
+
+
+<H2>Output</H2>
+
+<p>
+For each case, output the length of the unilluminated part in one line. The output value may
+have an arbitrary number of decimal digits, but may not contain an error greater than 10<sup>-3</sup> .
+</p>
+
+<H2>Sample Input</H2>
+<pre>
+4
+0 0
+2 0
+2 2
+0 2
+1 1
+6
+2 2
+2 5
+0 5
+0 0
+5 0
+5 2
+1 4
+0
+</pre>
+
+<H2>Output for the Sample Input</H2>
+<pre>
+0.000
+3.000
+</pre>
+

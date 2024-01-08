@@ -1,0 +1,79 @@
+<span class="lang-en">
+<p>Score : <var>100</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>You have three tasks, all of which need to be completed.</p>
+<p>First, you can complete any one task at cost <var>0</var>.</p>
+<p>Then, just after completing the <var>i</var>-th task, you can complete the <var>j</var>-th task at cost <var>|A_j - A_i|</var>.</p>
+<p>Here, <var>|x|</var> denotes the absolute value of <var>x</var>.</p>
+<p>Find the minimum total cost required to complete all the task.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li>All values in input are integers.</li>
+<li><var>1 \leq A_1, A_2, A_3 \leq 100</var></li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>A_1</var> <var>A_2</var> <var>A_3</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the minimum total cost required to complete all the task.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>1 6 3
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>5
+</pre>
+<p>When the tasks are completed in the following order, the total cost will be <var>5</var>, which is the minimum:</p>
+<ul>
+<li>Complete the first task at cost <var>0</var>.</li>
+<li>Complete the third task at cost <var>2</var>.</li>
+<li>Complete the second task at cost <var>3</var>.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>11 5 5
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>6
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>100 100 100
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>0
+</pre></section>
+</div>
+</span>

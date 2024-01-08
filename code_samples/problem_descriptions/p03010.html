@@ -1,0 +1,93 @@
+<span class="lang-en">
+<p>Score : <var>900</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3>
+<p>Diverta City is a new city consisting of <var>N</var> towns numbered <var>1, 2, ..., N</var>.</p>
+<p>The mayor Ringo is planning to connect every pair of two different towns with a bidirectional road. The length of each road is undecided.</p>
+<p>A <em>Hamiltonian path</em> is a path that starts at one of the towns and visits each of the other towns exactly once.
+The reversal of a Hamiltonian path is considered the same as the original Hamiltonian path.</p>
+<p>There are <var>N! / 2</var> Hamiltonian paths. Ringo wants all these paths to have distinct total lengths (the sum of the lengths of the roads on a path), to make the city diverse.</p>
+<p>Find one such set of the lengths of the roads, under the following conditions:</p>
+<ul>
+<li>The length of each road must be a positive integer.</li>
+<li>The maximum total length of a Hamiltonian path must be at most <var>10^{11}</var>.</li>
+</ul>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3>
+<ul>
+<li><var>N</var> is a integer between <var>2</var> and <var>10</var> (inclusive).</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3>
+<p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3>
+<p>Print a set of the lengths of the roads that meets the objective, in the following format:</p>
+<pre><var>w_{1, 1} \ w_{1, 2} \ w_{1, 3} \ ... \ w_{1, N}</var>
+<var>w_{2, 1} \ w_{2, 2} \ w_{2, 3} \ ... \ w_{2, N}</var>
+  <var>:</var>  <var>:</var>     <var>:</var>
+<var>w_{N, 1} \ w_{N, 2} \ w_{N, 3} \ ... \ w_{N, N}</var>
+</pre>
+<p>where <var>w_{i, j}</var> is the length of the road connecting Town <var>i</var> and Town <var>j</var>, which must satisfy the following conditions:</p>
+<ul>
+<li><var>w_{i, i} = 0</var></li>
+<li><var>w_{i, j} = w_{j, i} \ (i \neq j)</var></li>
+<li><var>1 \leq w_{i, j} \leq 10^{11} \ (i \neq j)</var></li>
+</ul>
+<p>If there are multiple sets of lengths of the roads that meet the objective, any of them will be accepted.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>3
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>0 6 15
+6 0 21
+15 21 0
+</pre>
+<p>There are three Hamiltonian paths. The total lengths of these paths are as follows:  </p>
+<ul>
+<li><var>1 → 2 → 3</var>: The total length is <var>6 + 21 = 27</var>.</li>
+<li><var>1 → 3 → 2</var>: The total length is <var>15 + 21 = 36</var>.</li>
+<li><var>2 → 1 → 3</var>: The total length is <var>6 + 15 = 21</var>.</li>
+</ul>
+<p>They are distinct, so the objective is met.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>4
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>0 111 157 193
+111 0 224 239
+157 224 0 258
+193 239 258 0
+</pre>
+<p>There are <var>12</var> Hamiltonian paths, with distinct total lengths.</p></section>
+</div>
+</span>

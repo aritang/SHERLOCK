@@ -1,0 +1,88 @@
+
+
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: { inlineMath: [['\\(','\\)']] }
+  });
+</script>
+<script type='text/javascript' src='http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
+
+<h1 class="ndoc-heading1">Problem K: Collector</h1>
+<p class="ndoc-top">※この物語はフィクションであり、実在の人物、団体などとは一切関係がありません。</p>
+<p class="ndoc-top">最近ソーシャルゲームがとても人気で、
+たくさんの会社がソーシャルゲームを開発しています。</p>
+<p class="ndoc-top">あなたは競合しているソーシャルゲーム開発会社の一つにスパイとして潜入しています。</p>
+<h2 class="ndoc-heading2">問題</h2>
+<p class="ndoc-top">あなたの務めている会社では、ソーシャルゲームを開発している。
+開発しているゲームは、カードを集めて戦うゲームであり、<i>1回300円</i>の有料”ガチャガチャ”を収益の柱にしている。
+このゲームのカードには、”ノーマル”、”レア”、”Sレア”の3種類がある。”Sレア”カードはN種類存在する。
+有料”ガチャガチャ”では、1回行うごとに97％の確率で1枚のレアカードが手に入り、3%の確率で1枚のSレアカードが手に入る。</p>
+<p class="ndoc-top">
+有料”ガチャガチャ”における各Sレアカードの出現割合(合計3%)を操作する権限を持っているあなたは、
+会社の利益を「減少」させることにした。</p>
+<p class="ndoc-top">まず、様々なプレイヤーの有料”ガチャガチャ”の利用傾向を調べたところ、 「各プレイヤーは、
+各々の好きなSレアカードを引くと、 満足し、その後は”ガチャガチャ”の利用を行わない」ということが明らかになった。 以上の情報より、
+あなたは ”各プレイヤーは、特定のSレアカードを好み、そのSレアカードを引くまでガチャガチャをし続ける”
+という仮定の下で会社の利益をモデル化した。</p>
+<p class="ndoc-top">すなわち会社の利益とは、 Sレアカードiを好む人の割合 ×
+Sレアカードiが得られるまでの消費金額の期待値 の総和である。</p>
+<p class="ndoc-top">Sレアカードの出現割合を適切に操作することで、 会社の利益を「最小化」せよ。</p>
+<p class="ndoc-top">ただし、出現割合は以下の条件を満たさなければならない。</p>
+
+<ul class="ndoc-indent">
+<li>Sレアカード全体の出現割合の和は3%である</li>
+<li>各Sレアカードの出現割合は最低0.01%である</li>
+</ul>
+<h2 class="ndoc-heading2">入力</h2>
+
+<pre>
+N (Sレアカードの種類)
+P_1 (カード1が好きな人の割合)
+P_2 (カード2が好きな人の割合)
+...
+P_N (カードNが好きな人の割合)
+</pre>
+<h2 class="ndoc-heading2">出力</h2>
+<p class="ndoc-top">問題文で定義された会社の利益の最小値を出力せよ。</p>
+<h2 class="ndoc-heading2">制約</h2>
+
+<ul class="ndoc-indent">
+<li>\( N \)は整数</li>
+<li>\( 1 \leq N \leq 300 \)</li>
+<li>\( 0.0 \leq P_i (1 \leq i \leq N) \leq 1.0 \)</li>
+<li>\( P_1 + P_2 + \cdots + P_N = 1.0 \)</li>
+<li>\( P_i \)は小数点以下5桁まで与えられる</li>
+<li>誤差は相対\( 10 ^ {-6} \) まで許容される</li>
+</ul>
+<h2 class="ndoc-heading2">入出力例</h2>
+<h3 class="ndoc-heading3">入力1</h3>
+<pre>
+1
+1.00000
+</pre>
+<h3 class="ndoc-heading3">出力1</h3>
+<pre>
+10000
+</pre>
+<h3 class="ndoc-heading3">入力2</h3>
+<pre>
+2
+0.00001
+0.99999
+</pre>
+<h3 class="ndoc-heading3">出力2</h3>
+<pre>
+10063.3444816
+</pre>
+<p>カード1は\( 0.01% \)の割合で出現し、カード2は\( 2.99% \)の割合で出現するように設定する。</p>
+<h3 class="ndoc-heading3">入力3</h3>
+<pre>
+2
+0.50000
+0.50000
+</pre>
+<h3 class="ndoc-heading3">出力3</h3>
+<pre>
+20000.0000000
+</pre>

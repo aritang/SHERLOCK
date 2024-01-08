@@ -1,0 +1,128 @@
+<span class="lang-en">
+<p>Score : <var>1400</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>In a two-dimensional plane, there is a square frame whose vertices are at coordinates <var>(0,0)</var>, <var>(N,0)</var>, <var>(0,N)</var>, and <var>(N,N)</var>.
+The frame is made of mirror glass. A ray of light striking an edge of the frame (but not a vertex) will be reflected so that the angle of incidence is equal to the angle of reflection.
+A ray of light striking a vertex of the frame will be reflected in the direction opposite to the direction it is coming from.</p>
+<p>We will define the <em>path</em> for a grid point (a point with integer coordinates) <var>(i,j)</var> (<var>0&lt;i,j&lt;N</var>) strictly within the frame, as follows:</p>
+<ul>
+<li>The path for <var>(i,j)</var> is the union of the trajectories of four rays of light emitted from <var>(i,j)</var> to <var>(i-1,j-1)</var>, <var>(i-1,j+1)</var>, <var>(i+1,j-1)</var>, and <var>(i+1,j+1)</var>.</li>
+</ul>
+<div style="text-align: center;">
+<img src="https://img.atcoder.jp/nikkei2019-2-qual/f82200c30253b6e06c6043a2c7668735.png">
+<p>Figure: an example of a path for a grid point</p>
+</img></div>
+<p>There is a light bulb at each grid point strictly within the frame. We will assign a state - ON or OFF - to each bulb. The state of the whole set of bulbs are called <em>beautiful</em> if it is possible to turn OFF all the bulbs by repeating the following operation:</p>
+<ul>
+<li>Choose a grid point strictly within the frame, and switch the states of all the bulbs on its path.</li>
+</ul>
+<p>Takahashi has set the states of some of the bulbs, but not for the remaining bulbs.
+Find the number of ways to set the states of the remaining bulbs so that the state of the whole set of bulbs is beautiful, modulo <var>998244353</var>.
+The state of the bulb at the grid point <var>(i,j)</var> is set to be ON if <var>A_{i,j}=</var><code>o</code>, OFF if <var>A_{i,j}=</var><code>x</code>, and unset if <var>A_{i,j}=</var><code>?</code>.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>2 \leq N \leq 1500</var></li>
+<li><var>A_{ij}</var> is <code>o</code>, <code>x</code>, or <code>?</code>.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+<var>A_{1,1}...A_{1,N-1}</var>
+<var>:</var>
+<var>A_{N-1,1}...A_{N-1,N-1}</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the answer.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>4
+o?o
+???
+?x?
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>1
+</pre>
+<p>The state of the whole set of bulbs will be beautiful if we set the state of each bulb as follows:</p>
+<pre>oxo
+xox
+oxo
+</pre>
+<p>We can turn OFF all the bulbs by, for example, choosing the point <var>(1, 1)</var> and switching the states of the bulbs at <var>(1,1)</var>, <var>(1,3)</var>, <var>(2,2)</var>, <var>(3,1)</var>, and <var>(3,3)</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>5
+o?o?
+????
+o?x?
+????
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>0
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>6
+?o???
+????o
+??x??
+o????
+???o?
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>32
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 4</h3><pre>9
+????o??x
+?????x??
+??o?o???
+?o?x????
+???????x
+x?o?o???
+????????
+x?????x?
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 4</h3><pre>4
+</pre></section>
+</div>
+</span>

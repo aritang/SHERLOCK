@@ -1,0 +1,81 @@
+<span class="lang-en">
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>We have an undirected graph with <var>N</var> vertices and <var>M</var> edges. The vertices are numbered <var>1</var> through <var>N</var>, and the edges are numbered <var>1</var> through <var>M</var>. Edge <var>i</var> connects vertices <var>a_i</var> and <var>b_i</var>. The graph is connected.</p>
+<p>On this graph, <var>Q</var> pairs of brothers are participating in an activity called <em>Stamp Rally</em>. The Stamp Rally for the <var>i</var>-th pair will be as follows:</p>
+<ul>
+<li>One brother starts from vertex <var>x_i</var>, and the other starts from vertex <var>y_i</var>.</li>
+<li>The two explore the graph along the edges to visit <var>z_i</var> vertices in total, including the starting vertices. Here, a vertex is counted only once, even if it is visited multiple times, or visited by both brothers.</li>
+<li>The score is defined as the largest index of the edges traversed by either of them. Their objective is to minimize this value.</li>
+</ul>
+<p>Find the minimum possible score for each pair.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>3≤N≤10^5</var></li>
+<li><var>N−1≤M≤10^5</var></li>
+<li><var>1≤a_i&lt;b_i≤N</var></li>
+<li>The given graph is connected.</li>
+<li><var>1≤Q≤10^5</var></li>
+<li><var>1≤x_j&lt;y_j≤N</var></li>
+<li><var>3≤z_j≤N</var></li>
+</ul>
+</section>
+</div>
+<hr>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>The input is given from Standard Input in the following format:</p>
+<pre><var>N</var> <var>M</var>
+<var>a_1</var> <var>b_1</var>
+<var>a_2</var> <var>b_2</var>
+<var>:</var>
+<var>a_M</var> <var>b_M</var>
+<var>Q</var>
+<var>x_1</var> <var>y_1</var> <var>z_1</var>
+<var>x_2</var> <var>y_2</var> <var>z_2</var>
+<var>:</var>
+<var>x_Q</var> <var>y_Q</var> <var>z_Q</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print <var>Q</var> lines. The <var>i</var>-th line should contain the minimum possible score for the <var>i</var>-th pair of brothers.</p>
+</section>
+</div>
+</div>
+<hr>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>5 6
+2 3
+4 5
+1 2
+1 3
+1 4
+1 5
+6
+2 4 3
+2 4 4
+2 4 5
+1 3 3
+1 3 4
+1 3 5
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>1
+2
+3
+1
+5
+5
+</pre></section>
+</div>
+</hr></hr></span>

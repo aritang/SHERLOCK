@@ -1,0 +1,98 @@
+<!--<H1>Network Charging System</H1>-->
+<h1>Charging System for Network</h1>
+
+<p>
+  There is a network consisting of <var>N</var> machines (sequentially numbered from 0 to <var>N</var>-1) interconnected through <var>N</var>-1 bidirectional communication cables. Any two machines can perform bidirectional communication through one or more cables. From time to time, machines in the network are renewed. When a new machine is introduced, the cables directly connected to it are also replaced with thicker ones to cope with the increased volume of communication traffic.
+</p>
+
+<p>
+  The communication fee arising from communication traffic between any two machines is calculated by summing the charges assigned to all the cables routing via the two. A unique charging scheme is employed in this system: if the size of a cable is a multiple of <var>K</var>, then the cable is not charged (free of charge). Other cables are charged according to their sizes.
+</p>
+
+<p>
+  Based on the given information on the network topology and <var>Q</var> instructions, write a program to execute each instruction.
+</p>
+
+<ul>
+
+
+  
+<li>Increase the sizes of all cables directly connected to the machine <var>x</var> by <var>d</var>.</li>
+<li>Report the communication charge between the machines <var>s</var> and <var>t</var>.</li>
+</ul>
+
+
+<h2>Input</h2>
+
+<p>
+  The input is given in the following format.
+</p>
+
+<pre>
+<var>N</var> <var>K</var>
+<var>a_1</var> <var>b_1</var> <var>c_1</var>
+<var>a_2</var> <var>b_2</var> <var>c_2</var>
+:
+<var>a_{N&minus;1}</var> <var>b_{N&minus;1}</var> <var>c_{N&minus;1}</var>
+<var>Q</var>
+<var>query_1</var>
+<var>query_2</var>
+:
+<var>query_Q</var>
+</pre>
+
+<p>
+The first line provides the number of machines <var>N</var> (2 &le; <var>N</var> &le; 10<sup>5</sup>) and the cable size <var>K</var> (1 &le; <var>K</var> &le; 10<sup>5</sup>) (the reference value for determining free of charge cables). Each of subsequent <var>N</var>-1 lines provides the <var>i</var>-th cable information that directly connects two machines <var>a_i</var> and <var>b_i</var> (0 &le; <var>a_i</var> &lt; <var>b_i</var> &le; <var>N</var>-1), followed by the cable’s initial size <var>c_i</var> (1 &le; <var>c_i</var> &le; 10<sup>5</sup>). For any pair of machines, the number of cables directly connecting them is either one or zero. The next line following them provides the number of instructions <var>Q</var> (1 &le; <var>Q</var> &le; 10<sup>5</sup>). Each of the Q lines following it provides the <var>i</var>-th instruction <var>query_i</var>, which is either one of the following two:
+</p>
+
+<pre>
+add <var>x</var> <var>d</var>
+</pre>
+
+<p>
+or
+</p>
+
+<pre>
+send <var>s</var> <var>t</var>
+</pre>
+
+<p>
+  The instruction <span>add</span> <var>x</var> <var>d</var> increase the size of all cables directly connected to machine <var>x</var> (0 &le; <var>x</var> &le; <var>N</var>-1) by <var>d</var> (1 &le; <var>d</var> &le; 10<sup>5</sup>).
+</p>
+
+<p>
+The instruction <span>send</span> <var>s</var> <var>t</var> reports the charge imposed to the communication between the two machines <var>s</var> (0 &le; <var>s</var> &le; <var>N</var>-1) and <var>t</var> (0 &le; <var>t</var> &le; <var>N</var>-1), where <var>s &ne; t</var>.
+  
+</p>
+
+<p>
+  At least one <span>send</span> instruction is included in the input information.
+</p>
+
+<h2>Output</h2>
+
+<p>
+  For each <span>send</span> command, output the communication charge between <var>s</var> and <var>t</var>.
+</p>
+
+<h2>Sample Input 1</h2>
+
+<pre>
+6 3
+0 1 1
+0 2 1
+0 3 1
+2 4 1
+2 5 1
+3
+send 1 4
+add 2 2
+send 1 4
+</pre>
+
+<h2>Sample Output 1</h2>
+<pre>
+3
+1
+</pre>

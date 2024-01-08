@@ -1,0 +1,100 @@
+
+
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({ tex2jax: { inlineMath: [["$","$"], ["\\(","\\)"]], processEscapes: true }});
+</script>
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+
+<H1>ヒバラ海に沈む遺跡</H1>
+
+<p>
+アイヅ考古学会は、ヒバラ海に沈む古代国家イワシロの遺跡調査に乗り出した。遺跡はヒバラ海のどこか一か所に存在する。そこで、探査レーダを使い、海岸線からのレーダ探査で遺跡の位置のおおよその目星を付け、海岸線から最大何メートル離れた位置まで調査しなければならないかを見積もることにした。
+</p>
+
+<center>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_PCK2015_hibara" width="700">
+</center>
+<br/>
+
+<p>
+上図のような直線で表された海岸線上に観測点を設置し、探査レーダを置く。探査レーダでは、観測点を中心とする、ある大きさの半円の範囲に遺跡があるということしかわからない。しかし、複数の観測データを組み合わせることで、より狭い範囲に絞り込むことができる。
+</p>
+
+<p>
+観測点の位置と探査レーダが示す半径からなるいくつかの観測データが与えられたとき、海岸線から最大でどのくらいの距離まで調査する必要があるかを求めるプログラムを作成せよ。
+</p>
+
+
+<h2>Input</h2>
+
+<p>
+入力は以下の形式で与えられる。
+</p>
+
+<pre>
+<var>N</var>
+<var>x<sub>1</sub></var> <var>r<sub>1</sub></var>
+<var>x<sub>2</sub></var> <var>r<sub>2</sub></var>
+:
+<var>x<sub>N</sub></var> <var>r<sub>N</sub></var>
+</pre>
+
+<p>
+１行目に探査レーダによって測定されたデータの数 <var>N</var> (1 &le; <var>N</var> &le; 100000) が与えられる。続く <var>N</var> 行に、観測データ <var>i</var> の海岸線上での位置をメートル単位で表す整数 <var>x<sub>i</sub></var> (0 &le; <var>x<sub>i</sub></var> &le; 1,000,000) と、その位置から半径何メートル以内に遺跡が存在するかを表す整数 <var>r<sub>i</sub></var> (1 &le; <var>r<sub>i</sub></var> &le; 1,000,000) が与えられる。観測点が同じ観測データが２つ以上与えられることもある。
+</p>
+
+<p>
+与えられた観測データが複数の場合、それらすべての半円に含まれる点が必ず存在すると考えてよい。
+</p>
+
+
+<h2>Output</h2>
+
+<p>
+海岸線から最大で何メートルまで調査する必要があるかを実数で出力する。ただし、誤差がプラスマイナス 0.001 メートルを超えてはならない。この条件を満たせば小数点以下は何桁表示してもよい。
+</p>
+
+<h2>Sample Input 1</h2>
+
+<pre>
+2
+0 2
+1 2
+</pre>
+
+<h2>Sample Output 1</h2>
+<pre>
+1.936
+</pre>
+<br/>
+
+
+<h2>Sample Input 2</h2>
+<pre>
+3
+0 3
+1 2
+2 1
+</pre>
+
+<h2>Sample Output 2</h2>
+<pre>
+1.0
+</pre>
+
+<br/>
+
+<h2>Sample Input 3</h2>
+<pre>
+2
+0 1
+3 2
+</pre>
+
+<h2>Sample Output 3</h2>
+<pre>
+0.0
+</pre>

@@ -1,0 +1,58 @@
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({ tex2jax: { inlineMath: [["$","$"], ["\\(","\\)"]], processEscapes: true }});
+</script>
+<script language="JavaScript" type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+
+<H1>Circle in a Rectangle</H1>
+
+<p>
+  Write a program which reads a rectangle and a circle, and determines whether the circle is arranged inside the rectangle. As shown in the following figures, the upper right coordinate $(W, H)$ of the rectangle and the central coordinate $(x, y)$ and radius $r$ of the circle are given.
+</p>
+
+<center>
+<br>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_circle_and_rectangle" title="Circle inside a rectangle" alt="Circle inside a rectangle">
+<br>
+</center>
+<br>
+
+
+
+<H2>Input</H2>
+
+<p>
+  Five integers $W$, $H$, $x$, $y$ and $r$ separated by a single space are given in a line.
+</p>
+
+<H2>Output</H2>
+
+<p>
+  Print "Yes" if the circle is placed inside the rectangle, otherwise "No" in a line.
+</p>
+
+<h2>Constraints</h2>
+
+<ul>
+  <li>$ -100  \leq x, y \leq 100$</li>
+  <li>$ 0  < W, H, r \leq 100$</li>
+</ul>
+
+<H2>Sample Input 1</H2>
+<pre>
+5 4 2 2 1
+</pre>
+<H2>Sample Output 1</H2>
+<pre>
+Yes
+</pre>
+
+
+<H2>Sample Input 2</H2>
+<pre>
+5 4 2 4 1
+</pre>
+<H2>Sample Output 2</H2>
+<pre>
+No
+</pre>

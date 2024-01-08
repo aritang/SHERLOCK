@@ -1,0 +1,84 @@
+<span class="lang-en">
+<p>Score : <var>800</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>You are given a polynomial of degree <var>N</var> with integer coefficients: <var>f(x)=a_Nx^N+a_{N-1}x^{N-1}+...+a_0</var>. Find all prime numbers <var>p</var> that divide <var>f(x)</var> for every integer <var>x</var>.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>0 \leq N \leq 10^4</var></li>
+<li><var>|a_i| \leq 10^9(0\leq i\leq N)</var></li>
+<li><var>a_N \neq 0</var></li>
+<li>All values in input are integers.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+<var>a_N</var>
+<var>:</var>
+<var>a_0</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print all prime numbers <var>p</var> that divide <var>f(x)</var> for every integer <var>x</var>, in ascending order.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>2
+7
+-7
+14
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>2
+7
+</pre>
+<p><var>2</var> and <var>7</var> divide, for example, <var>f(1)=14</var> and <var>f(2)=28</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>3
+1
+4
+1
+5
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre></pre>
+<p>There may be no integers that satisfy the condition.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>0
+998244353
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>998244353
+</pre></section>
+</div>
+</span>

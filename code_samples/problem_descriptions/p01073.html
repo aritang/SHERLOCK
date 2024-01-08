@@ -1,0 +1,71 @@
+
+
+
+<h1>Problem B: Potatoes</h1>
+
+<h2>Problem</h2>
+<p>
+がっちょ君は<var>N</var>面の畑と<var>M</var>個の芋を所有している。各畑にはそれぞれ1から<var>N</var>までの番号が付けられている。がっちょ君は畑に芋を植え収穫することで、芋の数を増やしたいと考えている。
+</p>
+
+<p>
+がっちょ君は一人暮らしであり、1人では<var>K</var>面までの畑しか管理することができない。また、各畑の土の状態や面積は様々で、芋の収穫数や植えることのできる芋の数も様々である。芋を畑<var>i</var>に植えた場合、1年後には畑<var>i</var>に植えた芋1つにつき<var>a<sub>i</sub></var>個の芋を収穫することができる。ただし、畑<var>i</var>には最大でも<var>b<sub>i</sub></var>個の芋しか植えることができない。
+</p>
+
+<p>
+がっちょ君が<var>K</var>面以内の畑に<var>M</var>個以内の芋を植えた時、1年後に所有することができる芋の数の最大値を求めてほしい。
+</p>
+
+<h2>Input</h2>
+<p>入力は以下の形式で与えられる。</p>
+<pre>
+<var>N</var> <var>M</var> <var>K</var>
+<var>a<sub>1</sub></var>&nbsp;<var>a<sub>2</sub></var> ... <var>a<sub>N</sub></var>
+<var>b<sub>1</sub></var>&nbsp;<var>b<sub>2</sub></var> ... <var>b<sub>N</sub></var>
+</pre>
+<p>
+1行目に3個の整数<var>N</var>, <var>M</var>, <var>K</var>が空白区切りで与えられる。<br>
+2行目に<var>N</var>個の整数<var>a<sub>i</sub></var>が空白区切りで与えられる。<br>
+3行目に<var>N</var>個の整数<var>b<sub>i</sub></var>が空白区切りで与えられる。<br>
+</p>
+<h2>Constraints</h2>
+<ul>
+<li>1 &le; <var>N</var> &le; 15</li>
+<li>1 &le; <var>M</var> &le; 10<sup>4</sup></li>
+<li>1 &le; <var>K</var> &le; min(<var>N</var>,3)</li>
+<li>1 &le; <var>a<sub>i</sub></var> &le; 10<sup>3</sup></li>
+<li>1 &le; <var>b<sub>i</sub></var> &le; 10<sup>4</sup></li>
+</ul>
+
+<h2>Output</h2>
+<p>
+芋の数の最大値を1行で出力せよ。
+</p>
+
+<h2>Sample Input 1</h2>
+<pre>
+5 100 3
+2 3 4 5 6
+50 40 20 10 5
+</pre>
+
+<h2>Sample Output 1</h2>
+<pre>
+280
+</pre>
+
+<p>畑1に40個、畑2に40個、畑3に20個植えることで収穫後に280個の芋を所有することができる。</p>
+
+<h2>Sample Input 2</h2>
+<pre>
+5 100 3
+2 3 4 5 100
+50 40 20 10 1
+</pre>
+
+<h2>Sample Output 2</h2>
+<pre>
+339
+</pre>
+
+<p>畑2に40個、畑3に20個、畑5に1個植えることで300個の芋を収穫することができ、植えなかった芋と合わせて答えは339になる。</p>

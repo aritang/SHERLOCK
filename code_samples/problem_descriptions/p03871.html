@@ -1,0 +1,75 @@
+<span class="lang-en">
+<p>Score : <var>1000</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><style>
+   #nck {
+      width: 30px;
+      height: auto;
+   }
+</style>
+<p>There are two (6-sided) dice: a red die and a blue die.
+When a red die is rolled, it shows <var>i</var> with probability <var>p_i</var> percents, and when a blue die is rolled, it shows <var>j</var> with probability <var>q_j</var> percents.</p>
+<p>Petr and tourist are playing the following game.
+Both players know the probabilistic distributions of the two dice.
+First, Petr chooses a die in his will (without showing it to tourist), rolls it, and tells tourist the number it shows.
+Then, tourist guesses the color of the chosen die.
+If he guesses the color correctly, tourist wins. Otherwise Petr wins.</p>
+<p>If both players play optimally, what is the probability that tourist wins the game?</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>0 ≤ p_i, q_i ≤ 100</var></li>
+<li><var>p_1 + ... + p_6 = q_1 + ... + q_6 = 100</var></li>
+<li>All values in the input are integers.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>The input is given from Standard Input in the following format:</p>
+<pre><var>p_1</var> <var>p_2</var> <var>p_3</var> <var>p_4</var> <var>p_5</var> <var>p_6</var>
+<var>q_1</var> <var>q_2</var> <var>q_3</var> <var>q_4</var> <var>q_5</var> <var>q_6</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the probability that tourist wins.
+The absolute error or the relative error must be at most <var>10^{-9}</var>.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>25 25 25 25 0 0
+0 0 0 0 50 50
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>1.000000000000
+</pre>
+<p>tourist can always win the game: If the number is at most <var>4</var>, the color is definitely red. Otherwise the color is definitely blue.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>10 20 20 10 20 20
+20 20 20 10 10 20
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>0.550000000000
+</pre></section>
+</div>
+</span>

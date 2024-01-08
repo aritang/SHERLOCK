@@ -1,0 +1,121 @@
+
+
+<script src="./IMAGE/varmath.js" charset="UTF-8"></script>
+
+
+<h1>Problem F: Prize Game</h1>
+<h2>Problem</h2>
+
+<p>
+新しいゲームセンターが開店することになった。たくさんのお客さんを取り入れるために、全く新しいプライズゲームを設置することになった。
+</p>
+
+<p>
+このプライズゲームは<var>R</var>&times;<var>C</var>のグリッドから構成される。各マスは空白か、1〜18のいずれかの数字が書かれている。プレイヤーはひとつの空白のマスを選択し、そのマスの景品を獲得できる。ただし、マスにある景品はプレイヤーから見ることができない。
+</p>
+
+<p>
+スタッフはこのプライズゲームに景品を設置しなければならない。スタッフは以下のルールが守られていれば、どのように景品を配置してもよい。数字が書かれているマスについて、その数字を<var>x</var>とすると、その数字を中心とする凸型の範囲の中に景品がちょうど<var>x</var>個置かれている必要がある（下の図を参照）。この凸型の出っ張っている部分は上を向いている。また、景品は空白のマスのみに置くことができ、1つのマスに3個まで置くことが出来る。1個も置かないことも可能である。
+</p>
+
+<p>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE3_ACPC2013Aizu_aizuicpc_grid" alt="凸型の範囲の図"><br>
+中央の数字が5だった場合の景品の置き方の例。オレンジ色の部分にちょうど計5個の景品が置かれている必要がある。
+</p>
+
+<p>
+お客さんに景品の場所が簡単に推測されては大損である。そこで、オープニングスタッフであるあなたに、上記ルールに則った景品の置き方の場合の数を数えてもらいたい。ただし、景品は互いに区別できないものとする。答えは大きくなる場合があるので答えの場合の数を1000000007で割った余りを答えなさい。
+</p>
+
+<h2>Input</h2>
+
+
+<pre>
+<var>R</var> <var>C</var>
+<var>a<sub>1,1</sub></var> <var>a<sub>1,2</sub></var> ... <var>a<sub>1,C</sub></var>
+<var>a<sub>2,1</sub></var> <var>a<sub>2,2</sub></var> ... <var>a<sub>2,C</sub></var>
+:
+<var>a<sub>R,1</sub></var> <var>a<sub>R,2</sub></var> ... <var>a<sub>R,C</sub></var>
+</pre>
+
+<p>
+1行目に2つの整数<var>R</var>,<var>C</var>が空白区切りで与えられる。それぞれグリッドの行数と列数を表す。次にプライズゲームを表すグリッドの情報が<var>R</var>行で与えられる。グリッドの情報の<var>i</var>行目には<var>C</var>個の整数 <var>a<sub>i,j</sub></var>が空白区切りで与えられる。<var>a<sub>i,j</sub></var>はグリッドの<var>i</var>行<var>j</var>列のマス情報を表す。0の場合は空白のマス、それ以外の場合は数字<var>a<sub>i,j</var></sub></var>が書かれたマスを表す。また、与えられるグリッドは1行目がプライズゲームの一番上を表し、<var>R</var>行目が一番下を表す。
+</p>
+
+<h2>Constraints</h2>
+<p>入力は以下の条件を満たす。</p>
+<ul>
+
+<li>1 &le; <var>R</var>,<var>C</var> &le; 6</li>
+<li>0 &le; <var>a<sub>i,j</sub></var> &le; 18 (1 &le; <var>i</var> &le; <var>R</var> , 1 &le; <var>j</var> &le; <var>C</var>)</li>
+
+</ul>
+
+<h2>Output</h2>
+<p>ルールに則った景品の置き方の場合の数を1000000007で割った余りを1行に出力せよ。</p>
+
+<h2>Sample Input 1</h2>
+<pre>
+3 3
+0 0 0
+0 18 0
+0 0 0
+</pre>
+
+<h2>Sample Output 1</h2>
+<pre>
+16
+</pre>
+
+<h2>Sample Input 2</h2>
+<pre>
+3 3
+0 0 0
+0 2 0
+0 0 0
+</pre>
+
+<h2>Sample Output 2</h2>
+<pre>
+336
+</pre>
+
+<h2>Sample Input 3</h2>
+<pre>
+3 3
+0 1 0
+1 0 0
+0 1 1
+</pre>
+
+<h2>Sample Output 3</h2>
+<pre>
+1
+</pre>
+
+<h2>Sample Input 4</h2>
+<pre>
+1 1
+1
+</pre>
+
+<h2>Sample Output 4</h2>
+<pre>
+0
+</pre>
+
+<h2>Sample Input 5</h2>
+<pre>
+6 6
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+</pre>
+
+<h2>Sample Output 5</h2>
+<pre>
+80065005
+</pre>

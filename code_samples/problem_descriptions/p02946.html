@@ -1,0 +1,81 @@
+<span class="lang-en">
+<p>Score : <var>200</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>There are <var>2000001</var> stones placed on a number line. The coordinates of these stones are <var>-1000000, -999999, -999998, \ldots, 999999, 1000000</var>.</p>
+<p>Among them, some <var>K</var> consecutive stones are painted black, and the others are painted white.</p>
+<p>Additionally, we know that the stone at coordinate <var>X</var> is painted black.</p>
+<p>Print all coordinates that potentially contain a stone painted black, in ascending order.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 \leq K \leq 100</var></li>
+<li><var>0 \leq X \leq 100</var></li>
+<li>All values in input are integers.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>K</var> <var>X</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print all coordinates that potentially contain a stone painted black, in ascending order, with spaces in between.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>3 7
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>5 6 7 8 9
+</pre>
+<p>We know that there are three stones painted black, and the stone at coordinate <var>7</var> is painted black. There are three possible cases:</p>
+<ul>
+<li>The three stones painted black are placed at coordinates <var>5</var>, <var>6</var>, and <var>7</var>.</li>
+<li>The three stones painted black are placed at coordinates <var>6</var>, <var>7</var>, and <var>8</var>.</li>
+<li>The three stones painted black are placed at coordinates <var>7</var>, <var>8</var>, and <var>9</var>.</li>
+</ul>
+<p>Thus, five coordinates potentially contain a stone painted black: <var>5</var>, <var>6</var>, <var>7</var>, <var>8</var>, and <var>9</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>4 0
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>-3 -2 -1 0 1 2 3
+</pre>
+<p>Negative coordinates can also contain a stone painted black.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>1 100
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>100
+</pre></section>
+</div>
+</span>

@@ -1,0 +1,62 @@
+<span class="lang-en">
+<p>Score : <var>1800</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>Snuke has <var>X+Y</var> balls.
+<var>X</var> of them have an integer <var>A</var> written on them, and the other <var>Y</var> of them have an integer <var>B</var> written on them.</p>
+<p>Snuke will divide these balls into some number of groups.
+Here, every ball should be contained in exactly one group, and every group should contain one or more balls.</p>
+<p>A group is said to be <strong>good</strong> when the sum of the integers written on the balls in that group is a multiple of an integer <var>C</var>.
+Find the maximum possible number of good groups.</p>
+<p>Solve <var>T</var> test cases for each input file.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 \leq T \leq 2 \times 10^4</var></li>
+<li><var>1 \leq A,X,B,Y,C \leq 10^9</var></li>
+<li><var>A \neq B</var></li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format.
+The first line is as follows:</p>
+<pre><var>T</var>
+</pre>
+<p>Then, <var>T</var> test cases follow.
+Each test case is given in the following format:</p>
+<pre><var>A</var> <var>X</var> <var>B</var> <var>Y</var> <var>C</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>For each test case, print a line containing the maximum possible number of good groups.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>3
+3 3 4 4 5
+2 1 1 5 3
+3 1 4 2 5
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>2
+2
+0
+</pre>
+<p>In the first test case, we can have two good groups by making the following groups: <var>\{3,3,4\}</var> and <var>\{3,4,4,4\}</var>.</p>
+<p>In the second test case, we can have two good groups by making the following groups: <var>\{2,1\}, \{1,1,1\},</var> and <var>\{1\}</var>.</p></section>
+</div>
+</span>

@@ -1,0 +1,92 @@
+<span class="lang-en">
+<p>Score: <var>500</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3>
+<p>You are the top spy of AtCoder Kingdom. To prevent the stolen secret from being handed to AlDebaran Kingdom, you have sneaked into the party where the transaction happens.</p>
+<p>There are <var>N</var> attendees in the party, and they are given attendee numbers from <var>1</var> through <var>N</var>. The height of Attendee <var>i</var> is <var>A_i</var>.</p>
+<p>According to an examination beforehand, you know that a pair of attendees satisfying the condition below will make the transaction.</p>
+<ul>
+<li>The absolute difference of their attendee numbers is equal to the sum of their heights.</li>
+</ul>
+<p>There are <var>\frac{N(N-1)}{2}</var> ways to choose two from the <var>N</var> attendees and make a pair. Among them, how many satisfy the condition above?</p>
+<p>P.S.: We cannot let you know the secret.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3>
+<ul>
+<li>All values in input are integers.</li>
+<li><var>2 \leq N \leq 2 \times 10^5</var></li>
+<li><var>1 \leq A_i \leq 10^9\ (1 \leq i \leq N)</var></li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3>
+<p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+<var>A_1</var> <var>A_2</var> <var>\dots</var> <var>A_N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3>
+<p>Print the number of pairs satisfying the condition.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>6
+2 3 3 1 3 1
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>3
+</pre>
+<ul>
+<li><var>A_1 + A_4 = 3</var>, so the pair of Attendee <var>1</var> and <var>4</var> satisfy the condition.</li>
+<li><var>A_2 + A_6 = 4</var>, so the pair of Attendee <var>2</var> and <var>6</var> satisfy the condition.</li>
+<li><var>A_4 + A_6 = 2</var>, so the pair of Attendee <var>4</var> and <var>6</var> satisfy the condition.</li>
+</ul>
+<p>No other pair satisfies the condition, so you should print <var>3</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>6
+5 2 4 2 8 8
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>0
+</pre>
+<p>No pair satisfies the condition, so you should print <var>0</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>32
+3 1 4 1 5 9 2 6 5 3 5 8 9 7 9 3 2 3 8 4 6 2 6 4 3 3 8 3 2 7 9 5
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>22
+</pre></section>
+</div>
+</span>

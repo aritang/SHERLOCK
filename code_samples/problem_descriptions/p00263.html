@@ -1,0 +1,126 @@
+
+
+
+<H1>金剛の型</H1>
+
+<p>
+以下のように、右から 7 ビット分が小数部、続く24 ビット分が整数部で、一番左の 1 ビット分を符号部とする 32 ビット実数型を考える(b<sub>1</sub>, ... , b<sub>32</sub> は 0 か1 を表す）。
+</p>
+
+
+<center>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_kongoType1" width="780">
+</center><br/>
+
+<p>
+この形式を、人が理解しやすい 10 進数表現に直すときは、以下のように解釈する。<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (-1)<sup>符号部</sup> &times; (整数部 + 小数部)
+</p>
+
+<p>
+上の表現で、整数部の値は b<sub>8</sub> ＋ 2<sup>1</sup>&times;b<sub>9</sub> ＋ 2<sup>2</sup>&times;b<sub>10</sub>＋ ... ＋ 2<sup>23</sup>&times;b<sub>31</sub> になる。例えば整数部が
+</p>
+
+<center>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_kongoType2">
+</center><br/>
+
+<p>
+のようになっていた場合、整数部の値は以下のように計算される。<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1 +  2<sup>1</sup> + 2<sup>3</sup> = 1 + 2 + 8 =  11
+</p>
+<p>
+一方、小数部の値は(0.5)<sup>1</sup>&times;b<sub>7</sub>＋(0.5)<sup>2</sup>&times;b<sub>6</sub> ＋ ... ＋ (0.5)<sup>7</sup> &times; b<sub>1</sub> になる。例えば小数部が
+</p>
+
+<center>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_kongoType3">
+</center><br/>
+
+<p>
+のようになっていた場合、小数部は以下のように計算される。<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.5<sup>1</sup> + 0.5<sup>3</sup> = 0.5 + 0.125 = 0.625
+</p>
+
+<p>
+さらに、符号部、整数部、小数部を合わせた以下のようなビット列の場合、
+</p>
+
+<center>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_kongoType4" width="780">
+</center><br/>
+
+
+<p>
+ビット列全体が表す10 進数は、以下のようになる(ただし、-1 の0 乗は1)。<br/>
+(-1)<sup>0</sup> &times; (1 + 2 + 8 + 0.5 + 0.125) = 1 &times; (11.625) = 11.625<br/>
+</p>
+
+<p>
+32 ビットのビット列を Q 個入力すると、それらのビット列が表す実数の10 進表記を一切の誤差無く出
+力するプログラムを作成してください。
+</p>
+
+
+
+<h2>入力</h2>
+
+<p>
+入力は１つのデータセットからなる。入力データは以下の形式で与えられる。
+</p>
+
+<pre>
+Q
+s<sub>1</sub>
+s<sub>2</sub>
+.
+.
+.
+s<sub>Q</sub>
+</pre>
+
+<p>
+1 行目にビット列の数 Q (1 &le; Q &le; 10000)が与えられる。続くQ 行に入力ビット列 s<sub>i</sub> が与えられる。 入力ビット列は 16 進数表記で与えられるとする (例: 0111 1111 1000 1000 0000 0000 0000 0000 は 7f880000 と与えられる) 。つまり、Q 行のそれぞれには、2 進数を 4 ビット分ずつまとめた 16 進数が 8 個、空白をはさまずに並んでいる。10 進数、2 進数、16 進数の対応は以下の表のとおりである。
+</p>
+
+<center>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_kongoType5" width="780">
+</center><br/>
+
+<p>
+16 進数の英字 a から f までは小文字で与えられる。
+</p>
+
+
+<h2>出力</h2>
+<p>
+各ビット列が表す実数の 10 進表記を 1 行ずつ出力する。ただし、小数部において、ある桁以下がすべて 0 の場合、その桁以下は省略するものとするが、例外として小数部が 0 の場合は小数部には 0 ひとつを出力する。
+</p>
+
+
+<h2>入力例</h2>
+
+<pre>
+8
+00000000
+80000000
+00000080
+00000040
+000000c0
+00000100
+80000780
+80000f70
+</pre>
+
+<h2>出力例</h2>
+
+<pre>
+0.0
+-0.0
+1.0
+0.5
+1.5
+2.0
+-15.0
+-30.875
+</pre>

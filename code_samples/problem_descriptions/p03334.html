@@ -1,0 +1,89 @@
+<span class="lang-en">
+<p>Score : <var>800</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>Takahashi is doing a research on sets of points in a plane.
+Takahashi thinks a set <var>S</var> of points in a coordinate plane is a <em>good set</em> when <var>S</var> satisfies both of the following conditions:</p>
+<ul>
+<li>The distance between any two points in <var>S</var> is not <var>\sqrt{D_1}</var>.</li>
+<li>The distance between any two points in <var>S</var> is not <var>\sqrt{D_2}</var>.</li>
+</ul>
+<p>Here, <var>D_1</var> and <var>D_2</var> are positive integer constants that Takahashi specified.</p>
+<p>Let <var>X</var> be a set of points <var>(i,j)</var> on a coordinate plane where <var>i</var> and <var>j</var> are integers and satisfy <var>0 ≤ i,j &lt; 2N</var>.</p>
+<p>Takahashi has proved that, for any choice of <var>D_1</var> and <var>D_2</var>, there exists a way to choose <var>N^2</var> points from <var>X</var> so that the chosen points form a good set.
+However, he does not know the specific way to choose such points to form a good set.
+Find a subset of <var>X</var> whose size is <var>N^2</var> that forms a good set.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 ≤ N ≤ 300</var></li>
+<li><var>1 ≤ D_1 ≤ 2×10^5</var></li>
+<li><var>1 ≤ D_2 ≤ 2×10^5</var></li>
+<li>All values in the input are integers.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var> <var>D_1</var> <var>D_2</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print <var>N^2</var> distinct points that satisfy the condition in the following format:</p>
+<pre><var>x_1</var> <var>y_1</var>
+<var>x_2</var> <var>y_2</var>
+:
+<var>x_{N^2}</var> <var>y_{N^2}</var>
+</pre>
+<p>Here, <var>(x_i,y_i)</var> represents the <var>i</var>-th chosen point.
+<var>0 ≤ x_i,y_i &lt; 2N</var> must hold, and they must be integers.
+The chosen points may be printed in any order.
+In case there are multiple possible solutions, you can output any.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>2 1 2
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>0 0
+0 2
+2 0
+2 2
+</pre>
+<p>Among these points, the distance between <var>2</var> points is either <var>2</var> or <var>2\sqrt{2}</var>, thus it satisfies the condition.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>3 1 5
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>0 0
+0 2
+0 4
+1 1
+1 3
+1 5
+2 0
+2 2
+2 4
+</pre></section>
+</div>
+</span>

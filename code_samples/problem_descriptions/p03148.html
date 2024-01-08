@@ -1,0 +1,112 @@
+<span class="lang-en">
+<p>Score : <var>400</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>There are <var>N</var> pieces of sushi. Each piece has two parameters: "kind of topping" <var>t_i</var> and "deliciousness" <var>d_i</var>.
+You are choosing <var>K</var> among these <var>N</var> pieces to eat.
+Your "satisfaction" here will be calculated as follows:</p>
+<ul>
+<li>The satisfaction is the sum of the "base total deliciousness" and the "variety bonus".</li>
+<li>The base total deliciousness is the sum of the deliciousness of the pieces you eat.</li>
+<li>The variety bonus is <var>x*x</var>, where <var>x</var> is the number of different kinds of toppings of the pieces you eat.</li>
+</ul>
+<p>You want to have as much satisfaction as possible.
+Find this maximum satisfaction.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 \leq K \leq N  \leq 10^5</var></li>
+<li><var>1 \leq t_i \leq N</var></li>
+<li><var>1 \leq d_i \leq 10^9</var></li>
+<li>All values in input are integers.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var> <var>K</var>
+<var>t_1</var> <var>d_1</var>
+<var>t_2</var> <var>d_2</var>
+<var>.</var>
+<var>.</var>
+<var>.</var>
+<var>t_N</var> <var>d_N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the maximum satisfaction that you can obtain.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>5 3
+1 9
+1 7
+2 6
+2 5
+3 1
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>26
+</pre>
+<p>If you eat Sushi <var>1,2</var> and <var>3</var>:</p>
+<ul>
+<li>The base total deliciousness is <var>9+7+6=22</var>.</li>
+<li>The variety bonus is <var>2*2=4</var>.</li>
+</ul>
+<p>Thus, your satisfaction will be <var>26</var>, which is optimal.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>7 4
+1 1
+2 1
+3 1
+4 6
+4 5
+4 5
+4 5
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>25
+</pre>
+<p>It is optimal to eat Sushi <var>1,2,3</var> and <var>4</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>6 5
+5 1000000000
+2 990000000
+3 980000000
+6 970000000
+6 960000000
+4 950000000
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>4900000016
+</pre>
+<p>Note that the output may not fit into a <var>32</var>-bit integer type.</p></section>
+</div>
+</span>

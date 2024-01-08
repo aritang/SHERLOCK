@@ -1,0 +1,94 @@
+
+<H1>Reflection</H1>
+<br/>
+
+<p>
+For given three points <var>p1, p2, p</var>, find the reflection point <var>x</var> of <var>p</var> onto <var>p1p2</var>.
+</p>
+
+<center>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_CGL_CGL_1_B">
+</center>
+
+
+<H2>Input</H2>
+
+<pre>
+<var>x<sub>p1</sub></var> <var>y<sub>p1</sub></var> <var>x<sub>p2</sub></var> <var>y<sub>p2</sub></var>
+<var>q</var>
+<var>x<sub>p<sub>0</sub></sub></var> <var>y<sub>p<sub>0</sub></sub></var>
+<var>x<sub>p<sub>1</sub></sub></var> <var>y<sub>p<sub>1</sub></sub></var>
+...
+<var>x<sub>p<sub>q&minus;1</sub></sub></var> <var>y<sub>p<sub>q&minus;1</sub></sub></var>
+</pre>
+
+<p>
+In the first line, integer coordinates of <var>p1</var> and <var>p2</var> are given. Then, <var>q</var> queries are given for integer coordinates of <var>p</var>.
+</p>
+
+
+<H2>Output</H2>
+
+<!--
+<pre>
+<var>x<sub>t<sub>0</sub></sub></var> <var>y<sub>t<sub>0</sub></sub></var>
+<var>x<sub>t<sub>1</sub></sub></var> <var>y<sub>t<sub>1</sub></sub></var>
+...
+<var>x<sub>t<sub>q-1</sub></sub></var> <var>y<sub>t<sub>q-1</sub></sub></var>
+</pre>
+-->
+
+
+<p>
+For each query, print the coordinate of the reflection point <var>x</var>. The output values should be in a decimal fraction with an error less than 0.00000001.
+</p>
+
+<H2>Constraints</H2>
+
+<ul>
+<li>
+<var>1 &le; q &le; 1000</var>
+</li>
+<li>
+<var>-10000 &le; x<sub>i</sub>, y<sub>i</sub> &le; 10000</var>
+</li>
+<li>
+<var>p1</var> and <var>p2</var> are not identical.
+</li>
+</ul>
+
+
+<H2>Sample Input 1</H2>
+<pre>
+0 0 2 0
+3
+-1 1
+0 1
+1 1
+</pre>
+<H2>Sample Output 1</H2>
+<pre>
+-1.0000000000 -1.0000000000
+0.0000000000 -1.0000000000
+1.0000000000 -1.0000000000
+</pre>
+<br/>
+
+<H2>Sample Input 2</H2>
+<pre>
+0 0 3 4
+3
+2 5
+1 4
+0 3
+</pre>
+<H2>Sample Output 2</H2>
+<pre>
+4.2400000000 3.3200000000
+3.5600000000 2.0800000000
+2.8800000000 0.8400000000
+</pre>
+
+
+
+

@@ -1,0 +1,89 @@
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({ tex2jax: { inlineMath: [["$","$"], ["\\(","\\)"]], processEscapes: true }});
+</script>
+<script language="JavaScript" type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+
+<meta http-equiv="X-UA-Compatible" CONTENT="IE=EmulateIE7" /><style type="text/css">blockquote {
+  font-family: Menlo, Monaco, "Courier New", monospace;
+  color: #333333;
+  display: block;
+  padding: 8.5px;
+  margin: 0 0 9px;
+  font-size: 12px;
+  line-height: 18px;
+  background-color: #f5f5f5;
+  border: 1px solid #ccc;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  white-space: pre;
+  white-space: pre-wrap;
+  word-break: break-all;
+  word-wrap: break-word;
+}</style><div class="part"><h3>Problem Statement</h3><p>Let's consider operations on monochrome images that consist of hexagonal pixels, each of which is colored in either black or white.  Because of the shape of pixels, each of them has exactly six neighbors (e.g. pixels that share an edge with it.)
+</p>
+<p>"<samp>Filtering</samp>" is an operation to determine the color of a pixel from the colors of itself and its six neighbors.  Examples of filterings are shown below.
+</p>
+<p>Example 1: Color a pixel in white when all of its neighboring pixels are white.  Otherwise the color will not change.
+</p>
+<p><img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_JAGAsia2014_NoiseCanceller" height="235" width="488" />
+</p>
+<p>Performing this operation on all the pixels simultaneously results in "<samp>noise canceling,</samp>" which removes isolated black pixels.
+</p>
+<p>Example 2: Color a pixel in white when its all neighboring pixels are black. Otherwise the color will not change.
+</p>
+<p><img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_JAGAsia2014_EdgeDetector" height="235" width="488" />
+</p>
+<p>Performing this operation on all the pixels simultaneously results in "<samp>edge detection,</samp>" which leaves only the edges of filled areas.
+</p>
+<p>Example 3: Color a pixel with the color of the pixel just below it, ignoring any other neighbors.
+</p>
+<p><img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_JAGAsia2014_MoveUp" height="487" width="489" />
+</p>
+<p>Performing this operation on all the pixels simultaneously results in "<samp>shifting up</samp>" the whole image by one pixel.
+</p>
+<p>Applying some filter, such as "<samp>noise canceling</samp>" and "<samp>edge detection,</samp>" twice to any image yields the exactly same result as if they were applied only once.
+We call such filters <i>idempotent</i>. The "<samp>shifting up</samp>" filter is not idempotent since every repeated application shifts the image up by one pixel.
+</p>
+<p>Your task is to determine whether the given filter is idempotent or not.
+</p>
+
+</div><div class="part"><h3>Input</h3>
+<p>The input consists of multiple datasets.  The number of dataset is less than $100$.
+Each dataset is a string representing a filter and has the following format (without spaces between digits).
+</p>
+<blockquote style="font-size:14pt"> $c_0c_1\cdots{}c_{127}$</blockquote>
+
+
+<p>$c_i$ is either '<samp>0</samp>' (represents black) or '<samp>1</samp>' (represents white), which indicates the output of the filter for a pixel when the binary representation of the pixel and its neighboring six pixels is $i$. 
+The mapping from the pixels to the bits is as following:
+</p>
+<p><img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_JAGAsia2014_Bit" height="235" width="226" />
+</p>
+<p>and the binary representation $i$ is defined as $i = \sum_{j=0}^6{\mathit{bit}_j \times 2^j}$,
+where $\mathit{bit}_j$ is $0$ or $1$ if the corresponding pixel is in black or white, respectively.
+Note that the filter is applied on the center pixel, denoted as bit 3.
+</p>
+<p>The input ends with a line that contains only a single "<samp>#</samp>".
+</p>
+
+</div><div class="part"><h3>Output</h3>
+<p>For each dataset, print "<samp>yes</samp>" in a line if the given filter is idempotent, or "<samp>no</samp>" otherwise (quotes are for clarity).
+</p>
+
+</div><div class="part"><h3>Sample Input</h3>
+
+
+<pre>00000000111111110000000011111111000000001111111100000000111111110000000011111111000000001111111100000000111111110000000111111111
+10000000111111110000000011111111000000001111111100000000111111110000000011111111000000001111111100000000111111110000000011111111
+01010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101
+#</pre>
+</div><div class="part"><h3>Output for the Sample Input</h3>
+
+
+<pre>yes
+yes
+no</pre>
+</div>

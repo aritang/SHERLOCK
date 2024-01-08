@@ -1,0 +1,73 @@
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({ tex2jax: { inlineMath: [["$","$"], ["\\(","\\)"]], processEscapes: true }});
+</script>
+<script type='text/javascript' src='http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
+</script>
+
+
+<h2>Cube Dividing</h2>
+
+<p>
+Pablo Cubarson is a well-known cubism artist. He is producing a new piece of work using a cuboid which consists of $A \times B \times C$ unit cubes. He plans to make a beautiful shape by removing $N$ units cubes from the cuboid. When he is about to begin the work, he has noticed that by the removal the cuboid may be divided into several parts disconnected to each other. It is against his aesthetics to divide a cuboid. So he wants to know how many parts are created in his plan.
+</p>
+
+<p>
+Your task is to calculate the number of connected components in the cuboid after removing the $N$ cubes. Two cubes are connected if they share one face.
+</p>
+
+<h3>Input</h3>
+<p>
+The input consists of a single test case. The test case is formatted as follows:<br/>
+<br/>
+$A$ $B$ $C$ $N$<br/>
+$X_1$ $Y_1$ $Z_1$<br/>
+...<br/>
+$X_N$ $Y_N$ $Z_N$<br/>
+</p>
+
+<p>
+The first line contains four integers $A$, $B$, $C$ and $N$. $A$, $B$ and $C$ ($1 \leq  A,B,C \leq 10^6$) denote the size of the cuboid $-$ the cuboid has an $A$ unit width from left to right and a $B$ unit height from bottom to top, and a $C$ unit depth from front to back. $N$ ($0 \leq N \leq 20,000, N \leq A \times B \times C - 1$) denotes the number of the cubes removed in the Cubarson's plan. Each of the following $N$ lines contains three integers $X_i$ ($0 \leq X_i \leq A-1$), $Y_i$ ($0 \leq Y_i \leq B-1$) and $Z_i$ ($0 \leq Z_i \leq C - 1$). They denote that the cube located at the $X_i$-th position from the left, the $Y_i$-th from the bottom and the $Z_i$-th from the front will be removed in the plan. You may assume the given positions are distinct.
+</p>
+
+<h3>Output</h3>
+<p>
+Print the number of the connected components in the cuboid after removing the specified cubes.
+</p>
+
+<h3>Sample Input 1</h3>
+<pre>
+2 2 2 4
+0 0 0
+1 1 0
+1 0 1
+0 1 1
+</pre>
+
+<h3>Output for the Sample Input 1</h3>
+<pre>
+4
+</pre>
+
+<h3>Sample Input 2</h3>
+<pre>
+3 3 3 1
+1 1 1
+</pre>
+
+<h3>Output for the Sample Input 2</h3>
+<pre>
+1
+</pre>
+
+<h3>Sample Input 3</h3>
+<pre>
+1 1 3 2
+0 0 0
+0 0 2
+</pre>
+
+<h3>Output for the Sample Input 3</h3>
+<pre>
+1
+</pre>

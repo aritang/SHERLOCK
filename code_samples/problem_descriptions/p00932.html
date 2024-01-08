@@ -1,0 +1,126 @@
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({ tex2jax: { inlineMath: [["$","$"], ["\\(","\\)"]], processEscapes: true }});
+</script>
+<script type='text/javascript' src='http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
+</script>
+
+<h2>Problem I:
+Sweet War
+</h2>
+
+<p>
+  There are two countries, Imperial Cacao and Principality of Cocoa. Two girls, Alice (the Empress of Cacao) and Brianna (the Princess of Cocoa) are friends and both of them love chocolate very much.
+</p>
+
+<p>
+One day, Alice found a transparent tube filled with chocolate balls (Figure I.1). The tube has only one opening at its top end. The tube is narrow, and the chocolate balls are put in a line. Chocolate balls are identified by integers 1, 2, . . ., $N$ where $N$ is the number of chocolate balls. Chocolate ball 1 is at the top and is next to the opening of the tube. Chocolate ball 2 is next to chocolate ball 1, . . ., and chocolate ball $N$ is at the bottom end of the tube. The chocolate balls can be only taken out from the opening, and therefore the chocolate balls must be taken out in the increasing order of their numbers.
+</p>
+
+<center>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_ICPCAsia2014_I1" width="360"><br>
+<p>Figure I.1. Transparent tube filled with chocolate balls</p>
+</center>
+
+<p>
+Alice visited Brianna to share the tube and eat the chocolate balls together. They looked at the chocolate balls carefully, and estimated that the $nutrition value$ and the $deliciousness$ of chocolate ball $i$ are $r_i$ and $s_i$, respectively. Here, each of the girls wants to maximize the sum of the deliciousness of chocolate balls that she would eat. They are sufficiently wise to resolve this
+conflict peacefully, so they have decided to play a game, and eat the chocolate balls according to the rule of the game as follows:
+</p>
+
+<ol>
+<li> Alice and Brianna have initial energy levels, denoted by nonnegative integers $A$ and $B$, respectively.</li>
+<li> Alice and Brianna takes one of the following two actions in turn:
+  <ul>
+    <li> <b>Pass</b>: she does not eat any chocolate balls. She gets a little hungry $-$ specifically, her energy level is decreased by 1. She cannot pass when her energy level is 0.</li>
+
+    <li><b>Eat</b>: she eats the topmost chocolate ball $-$ let this chocolate ball $i$ (that is, the chocolate ball with the smallest number at that time). Her energy level is increased by $r_i$, the nutrition value of chocolate ball $i$ (and NOT decreased by 1). Of course, chocolate ball $i$ is removed from the tube.
+    </li>
+  </ul>
+<li> Alice takes her turn first.</li>
+<li> The game ends when all chocolate balls are eaten.</li>
+</ol>
+
+<p>
+  You are a member of the staff serving for Empress Alice. Your task is to calculate the sums of deliciousness that each of Alice and Brianna can gain, when both of them play optimally.
+</p>
+
+
+<h3>Input</h3>
+
+<p>
+The input consists of a single test case. The test case is formatted as follows.
+  <br>
+  <br>
+
+$N$ $A$ $B$<br>
+$r_1$ $s_1$<br>
+$r_2$ $s_2$<br>
+.<br>
+.<br>
+.<br>
+$r_N$ $s_N$<br><br>
+
+  The first line contains three integers, $N$, $A$ and $B$. $N$ represents the number of chocolate balls. $A$ and $B$ represent the initial energy levels of Alice and Brianna, respectively. The following $N$ lines describe the chocolate balls in the tube. The chocolate balls are numbered from 1 to $N$, and each of the lines contains two integers, $r_i$ and $s_i$ for $1 \leq i \leq N$. $r_i$ and $s_i$ represent the nutrition value and the deliciousness of chocolate ball $i$, respectively. The input satisfies
+</p>
+
+<ul>
+<li> $1 \leq N \leq 150$,</li>
+<li> $0 \leq A, B, r_i \leq 10^9$,</li>
+<li> $0 \leq s_i$, and</li>
+<li> $\sum^N_{i=1} s_i \leq 150$</li>
+</ul>
+
+
+<h3>Output</h3>
+
+<p>
+Output two integers that represent the total deliciousness that Alice and Brianna can obtain when they play optimally
+</p>
+
+
+
+<h3>Sample Input 1</h3>
+
+<pre>2 5 4
+5 7
+4 8</pre>
+
+<h3>Sample Output 1</h3>
+
+<pre>8 7</pre>
+
+<h3>Sample Input 2</h3>
+
+<pre>3 50 1
+49 1
+0 10
+0 1</pre>
+
+<h3>Sample Output 2</h3>
+
+<pre>10 2</pre>
+
+<h3>Sample Input 3</h3>
+
+<pre>4 3 2
+1 5
+2 46
+92 40
+1 31</pre>
+
+<h3>Sample Output 3</h3>
+
+<pre>77 45</pre>
+
+<h3>Sample Input 4</h3>
+
+<pre>5 2 5
+56 2
+22 73
+2 2
+1 55
+14 18</pre>
+
+<h3>Sample Output 4</h3>
+
+<pre>57 93</pre>

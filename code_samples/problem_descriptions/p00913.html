@@ -1,0 +1,139 @@
+
+<H1><font color="#000">Problem J: </font>Cubic Colonies</H1>
+
+<p>
+In AD 3456, the earth is too small for hundreds of billions of people to live in peace. Interstellar Colonization Project with Cubes (ICPC) is a project that tries to move people on the earth to space colonies to ameliorate the problem. ICPC obtained funding from governments and manufactured space colonies very quickly and at low cost using prefabricated cubic blocks.
+</p>
+
+<p>
+The largest colony looks like a Rubik's cube. It consists of 3 &times; 3 &times; 3 cubic blocks (Figure J.1A). Smaller colonies miss some of the blocks in the largest colony.
+</p>
+
+<p>
+When we manufacture a colony with multiple cubic blocks, we begin with a single block. Then we iteratively glue a next block to existing blocks in a way that faces of them match exactly. Every pair of touched faces is glued.
+</p>
+<center>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_cubicColonies1" style="aling:center"><br/>
+<p>
+Figure J.1: Example of the largest colony and a smaller colony
+</p>
+</center>
+
+<p>
+However, just before the first launch, we found a design flaw with the colonies. We need to add a cable to connect two points on the surface of each colony, but we cannot change the inside of the prefabricated blocks in a short time. Therefore we decided to attach a cable on the surface of each colony. If a part of the cable is not on the surface, it would be sheared off during the launch, so we have to put the whole cable on the surface. We would like to minimize the lengths of the cables due to budget constraints. The dashed line in Figure J.1B is such an example.
+</p>
+
+<p>
+Write a program that, given the shape of a colony and a pair of points on its surface, calculates the length of the shortest possible cable for that colony.
+</p>
+
+
+<H2>Input</H2>
+
+<p>
+The input contains a series of datasets. Each dataset describes a single colony and the pair of the points for the colony in the following format.
+</p>
+
+<p>
+<i>x</i><sub>1</sub> <i>y</i><sub>1</sub> <i>z</i><sub>1</sub> <i>x</i><sub>2</sub> <i>y</i><sub>2</sub> <i>z</i><sub>2</sub><br/>
+<i>b</i><sub>0,0,0</sub><i>b</i><sub>1,0,0</sub><i>b</i><sub>2,0,0</sub><br/>
+<i>b</i><sub>0,1,0</sub><i>b</i><sub>1,1,0</sub><i>b</i><sub>2,1,0</sub><br/>
+<i>b</i><sub>0,2,0</sub><i>b</i><sub>1,2,0</sub><i>b</i><sub>2,2,0</sub><br/>
+<i>b</i><sub>0,0,1</sub><i>b</i><sub>1,0,1</sub><i>b</i><sub>2,0,1</sub><br/>
+<i>b</i><sub>0,1,1</sub><i>b</i><sub>1,1,1</sub><i>b</i><sub>2,1,1</sub><br/>
+<i>b</i><sub>0,2,1</sub><i>b</i><sub>1,2,1</sub><i>b</i><sub>2,2,1</sub><br/>
+<i>b</i><sub>0,0,2</sub><i>b</i><sub>1,0,2</sub><i>b</i><sub>2,0,2</sub><br/>
+<i>b</i><sub>0,1,2</sub><i>b</i><sub>1,1,2</sub><i>b</i><sub>2,1,2</sub><br/>
+<i>b</i><sub>0,2,2</sub><i>b</i><sub>1,2,2</sub><i>b</i><sub>2,2,2</sub><br/>
+</p>
+
+<p>
+(<i>x</i><sub>1</sub>, <i>y</i><sub>1</sub>, <i>z</i><sub>1</sub>) and (<i>x</i><sub>2</sub>, <i>y</i><sub>2</sub>, <i>z</i><sub>2</sub>) are the two distinct points on the surface of the colony, where <i>x</i><sub>1</sub>, <i>x</i><sub>2</sub>, <i>y</i><sub>1</sub>, <i>y</i><sub>2</sub>, <i>z</i><sub>1</sub>, <i>z</i><sub>2</sub> are integers that satisfy 0 &le; <i>x</i><sub>1</sub>, <i>x</i><sub>2</sub>, <i>y</i><sub>1</sub>, <i>y</i><sub>2</sub>, <i>z</i><sub>1</sub>, <i>z</i><sub>2</sub> &le; 3. <i>b<sub>i,j,k</sub></i> is '<span>#</span>' when there is a cubic block whose two diagonal vertices are (<i>i</i>, <i>j</i>, <i>k</i>) and (<i>i</i> + 1, <i>j</i> + 1, <i>k</i> + 1), and <i>b<sub>i,j,k</sub></i> is '<span>.</span>' if there is no block. Figure J.1A corresponds to the first dataset in the sample input, whereas Figure J.1B corresponds to the second. A cable can pass through a zero-width gap between two blocks if they are touching only on their vertices or edges. In Figure J.2A, which is the third dataset in the sample input, the shortest cable goes from the point A (0, 0, 2) to the point B (2, 2, 2), passing through (1, 1, 2), which is shared by six blocks. Similarly, in Figure J.2B (the fourth dataset in the sample input), the shortest cable goes through the gap between two blocks not glued directly. When two blocks share only a single vertex, you can put a cable through the vertex (Figure J.2C; the fifth dataset in the sample input).
+</p>
+
+<p>
+You can assume that there is no colony consisting of all 3 &times; 3 &times; 3 cubes but the center cube.
+</p>
+
+<p>
+Six zeros terminate the input.
+</p>
+<center>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_cubicColonies2" style="aling:center"><br/>
+<p>
+Figure J.2: Dashed lines are the shortest cables. Some blocks are shown partially transparent
+for illustration.
+</p>
+</center>
+
+
+
+<H2>Output</H2>
+
+<p>
+For each dataset, output a line containing the length of the shortest cable that connects the two given points. We accept errors less than 0.0001. You can assume that given two points can be connected by a cable.
+</p>
+
+<H2>Sample Input</H2>
+<pre>
+0 0 0 3 3 3
+###
+###
+###
+###
+###
+###
+###
+###
+###
+3 3 0 0 0 3
+#..
+###
+###
+###
+###
+###
+#.#
+###
+###
+0 0 2 2 2 2
+...
+...
+...
+.#.
+#..
+...
+##.
+##.
+...
+0 1 2 2 1 1
+...
+...
+...
+.#.
+#..
+...
+##.
+##.
+...
+3 2 0 2 3 2
+###
+..#
+...
+..#
+...
+.#.
+..#
+..#
+.##
+0 0 0 0 0 0
+</pre>
+
+<H2>Output for the Sample Input</H2>
+<pre>
+6.70820393249936941515
+6.47870866461907457534
+2.82842712474619029095
+2.23606797749978980505
+2.82842712474619029095
+</pre>

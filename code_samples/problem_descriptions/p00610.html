@@ -1,0 +1,128 @@
+
+<H1><font color="#000000">Problem F:</font> Cleaning Robot 2.0</H1>
+
+<p>
+Dr. Asimov, a robotics researcher, released cleaning robots he developed (see Problem B).  His robots soon became very popular and he got much income.  Now he is pretty rich.  Wonderful.
+</p>
+<p>
+First, he renovated his house.  Once his house had 9 rooms that were arranged in a square, but now his house has <i>N</i> &times; <i>N</i> rooms arranged in a square likewise.  Then he laid either black or white carpet on each room.
+</p>
+<p>
+Since still enough money remained, he decided to spend them for development of a new robot.  And finally he completed.
+</p>
+<p>
+The new robot operates as follows:
+</p>
+
+
+<ul>
+<li>The robot is set on any of <i>N</i> &times; <i>N</i> rooms, with directing any of north, east, west and south.</li>
+<li>The robot detects color of carpets of lefthand, righthand, and forehand adjacent rooms if exists.  If there is exactly one room that its carpet has the same color as carpet of room where it is, the robot changes direction to and moves to and then cleans the room. Otherwise, it halts.  Note that halted robot doesn't clean any longer. Following is some examples of robot's movement.
+
+<br>
+<br>
+<center>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE1_cleaningRobot2">
+<p>Figure 1. An example of the room</p>
+</center>
+<br>
+
+In Figure 1,
+<ul>
+<li>robot that is on room (1,1) and directing north directs east and goes to (1,2).</li>
+<li>robot that is on room (0,2) and directing north directs west and goes to (0,1).</li>
+<li>robot that is on room (0,0) and directing west  halts.</li>
+</ul>
+</li>
+
+
+<li>Since the robot powered by contactless battery chargers that are installed in every rooms, unlike the previous robot, it never stops because of running down of its battery.  It keeps working until it halts.</li>
+</ul>
+
+<p>
+Doctor's house has become larger by the renovation.  Therefore, it is not efficient to let only one robot clean.  Fortunately, he still has enough budget.  So he decided to make a number of same robots and let them clean simultaneously.
+</p>
+<p>
+The robots interacts as follows:
+</p>
+
+<ul>
+<li> No two robots can be set on same room.</li>
+<li> It is still possible for a robot to detect a color of carpet of a room even if the room is occupied by another robot.</li>
+<li> All robots go ahead simultaneously.</li>
+<li> When robots collide (namely, two or more robots are in a single room, or two robots exchange their position after movement), they all halt.  Working robots can take such halted robot away.</li>
+</ul>
+<p>
+On every room dust stacks slowly but constantly.  To keep his house pure, he wants his robots to work so that dust that stacked on any room at any time will eventually be cleaned.
+</p>
+<p>
+After thinking deeply, he realized that there exists a carpet layout such that no matter how initial placements of robots are, this condition never can be satisfied.  Your task is to output carpet layout that there exists at least one initial placements of robots that meets above condition.  Since there may be two or more such layouts, please output the <i>K</i>-th one lexicographically.
+</p>
+
+
+<H2>Input</H2>
+
+<p>
+Input file contains several data sets.
+One data set is given in following format:
+</p>
+
+<pre>
+<i>N K</i>
+</pre>
+
+<p>
+Here, <i>N</i> and <i>K</i> are integers that are explained in the problem description.
+</p>
+<p>
+The end of input is described by a case where <i>N</i> = <i>K</i> = 0.  You should output nothing for this case.
+</p>
+
+
+<H2>Output</H2>
+
+<p>
+Print the <i>K</i>-th carpet layout if exists, "<span>No</span>" (without quotes) otherwise.
+</p>
+<p>
+The carpet layout is denoted by <i>N</i> lines of string that each has exactly <i>N</i> letters.  A room with black carpet and a room with white carpet is denoted by a letter '<span>E</span>' and '<span>.</span>' respectively. Lexicographically order of carpet layout is defined as that of a string that is obtained by concatenating the first row, the second row, ..., and the <i>N</i>-th row in this order.
+</p>
+<p>
+Output a blank line after each data set.
+</p>
+
+<p>
+
+</p>
+
+<H2>Constraints</H2>
+<ul>
+<li>Judge data consists of at most 100 data sets.</li>
+<li>1 &le; <i>N</i> &lt; 64</li>
+<li>1 &le; <i>K</i> &lt;  2<sup>63</sup></li>
+</ul>
+
+<H2>Sample Input</H2>
+<pre>
+2 1
+2 3
+6 4
+0 0
+</pre>
+
+<H2>Output for the Sample Input</H2>
+<pre>
+..
+..
+
+No
+
+..EEEE
+..E..E
+EEE..E
+E..EEE
+E..E..
+EEEE..
+
+</pre>
+

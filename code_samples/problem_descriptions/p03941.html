@@ -1,0 +1,147 @@
+<span class="lang-en">
+<p>Score : <var>1400</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><style>
+   #nck {
+      width: 30px;
+      height: auto;
+   }
+</style>
+<p>In the country there are <var>N</var> cities numbered <var>1</var> through <var>N</var>, which are connected by <var>N-1</var> bidirectional roads. In terms of graph theory, there is a unique simple path connecting every pair of cities. That is, the <var>N</var> cities form a tree. Besides, if we view city <var>1</var> as the root of this tree, the tree will be a full binary tree (a tree is a full binary tree if and only if every non-leaf vertex in the tree has exactly two children). Roads are numbered <var>1</var> through <var>N-1</var>. The <var>i</var>-th road connects city <var>i+1</var> and city <var>a_i</var>. When you pass through road <var>i</var>, the toll you should pay is <var>v_i</var> (if <var>v_i</var> is <var>0</var>, it indicates the road does not require a toll).</p>
+<p>A company in city <var>1</var> will give each employee a family travel and cover a large part of the tolls incurred. Each employee can design the travel by themselves. That is, which cities he/she wants to visit in each day and which city to stay at each night. However, there are some constraints. More details are as follows:</p>
+<ul>
+<li>
+<p>The travel must start and end at city <var>1</var>. If there are <var>m</var> leaves in the tree formed by the cities, then the number of days in the travel must be <var>m+1</var>. At the end of each day, except for the last day, the employee must stay at some hotel in a leaf city. During the whole travel, the employee must stay at all leaf cities exactly once.</p>
+</li>
+<li>
+<p>During the whole travel, all roads of the country must be passed through exactly twice.</p>
+</li>
+<li>
+<p>The amount that the employee must pay for tolls by him/herself is the maximum total toll incurred in a single day during the travel, except the first day and the last day. The remaining tolls will be covered by the company.</p>
+</li>
+</ul>
+<p>Shik, as an employee of this company, has only one hope for his travel. He hopes that the amount he must pay for tolls by himself will be as small as possible. Please help Shik to design the travel which satisfies his hope.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>2 &lt; N &lt; 131,072</var></li>
+<li><var>1 \leq a_i \leq i</var> for all <var>i</var></li>
+<li><var>0 \leq v_i \leq 131,072</var></li>
+<li><var>v_i</var> is an integer</li>
+<li>The given tree is a full binary tree</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>The input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+<var>a_1</var> <var>v_1</var>
+<var>a_2</var> <var>v_2</var>
+<var>:</var>
+<var>a_{N-1}</var> <var>v_{N-1}</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print an integer denoting the minimum amount Shik must pay by himself for tolls incurred during the travel.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>7
+1 1
+1 1
+2 1
+2 1
+3 1
+3 1
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>4
+</pre>
+<p>There are <var>4</var> leaves in the tree formed by the cities (cities <var>4</var>, <var>5</var>, <var>6</var>, and <var>7</var>), so the travel must be <var>5</var> days long. There are <var>4! = 24</var> possible arrangements of the leaf cities to stay during the travel, but some of them are invalid. For example, <var>(4,5,6,7)</var> and <var>(6,7,5,4)</var> are valid orders, but <var>(5,6,7,4)</var> is invalid because the route passes <var>4</var> times through the road connecting city <var>1</var> and city <var>2</var>. The figure below shows the routes of the travel for these arrangements.</p>
+<div style="text-align: center;">
+<img alt="04b39e0341af562ba20ba2d49c6f2b69.jpg" src="https://atcoder.jp/img/agc007/04b39e0341af562ba20ba2d49c6f2b69.jpg">
+</img></div>
+<p>For all valid orders, day <var>3</var> is the day with the maximum total incurred toll of <var>4</var>, passing through <var>4</var> roads.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>9
+1 2
+1 2
+3 2
+3 2
+5 2
+5 2
+7 2
+7 2
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>6
+</pre>
+<p>The following figure shows the route of the travel for one possible arrangement of the stayed cities for the solution. Note that the tolls incurred in the first day and the last day are always covered by the company.</p>
+<div style="text-align: center;">
+<img alt="92271892911b34032766803fa9c9e159.jpg" src="https://atcoder.jp/img/agc007/92271892911b34032766803fa9c9e159.jpg">
+</img></div>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>15
+1 2
+1 5
+3 3
+4 3
+4 3
+6 5
+5 4
+5 3
+6 3
+3 2
+11 5
+11 3
+13 2
+13 1
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>15
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 4</h3><pre>3
+1 0
+1 0
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 4</h3><pre>0
+</pre></section>
+</div>
+</span>

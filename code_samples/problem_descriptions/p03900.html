@@ -1,0 +1,115 @@
+<span class="lang-en">
+<p>Score : <var>1400</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>Takahashi found an integer sequence <var>(A_1,A_2,...,A_N)</var> with <var>N</var> terms. Since it was too heavy to carry, he decided to compress it into a single integer.</p>
+<p>The compression takes place in <var>N-1</var> steps, each of which shorten the length of the sequence by <var>1</var>. Let <var>S</var> be a string describing the steps, and the sequence on which the <var>i</var>-th step is performed be <var>(a_1,a_2,...,a_K)</var>, then the <var>i</var>-th step will be as follows:</p>
+<ul>
+<li>When the <var>i</var>-th character in <var>S</var> is <code>M</code>, let <var>b_i = max(a_i,a_{i+1})</var> <var>(1 ≦ i ≦ K-1)</var>, and replace the current sequence by <var>(b_1,b_2,...,b_{K-1})</var>.</li>
+<li>When the <var>i</var>-th character in <var>S</var> is <code>m</code>, let <var>b_i = min(a_i,a_{i+1})</var> <var>(1 ≦ i ≦ K-1)</var>, and replace the current sequence by <var>(b_1,b_2,...,b_{K-1})</var>.</li>
+</ul>
+<p>Takahashi decided the steps <var>S</var>, but he is too tired to carry out the compression. On behalf of him, find the single integer obtained from the compression.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>2 ≦ N ≦ 10^5</var></li>
+<li><var>1 ≦ A_i ≦ N</var></li>
+<li><var>S</var> consists of <var>N-1</var> characters.</li>
+<li>Each character in <var>S</var> is either <code>M</code> or <code>m</code>.</li>
+</ul>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Partial Scores</h3><ul>
+<li>In the test set worth <var>400</var> points, there exists <var>i (1 ≦ i &lt; N-1)</var> such that the first <var>i</var> characters in <var>S</var> are <code>M</code>, and the remaining characters are <code>m</code>, that is, <var>S</var> is in the form <code>M...Mm...m</code>.</li>
+<li>In the test set worth <var>800</var> points, the odd-number-th characters in <var>S</var> are <code>M</code>, and the even-number-th characters are <code>m</code>, that is, <var>S</var> is in the form <code>MmMmMm...</code>.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>The input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+<var>A_1</var> <var>A_2</var> … <var>A_N</var>
+<var>S</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the single integer obtained from the compression.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>4
+1 2 3 4
+MmM
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>3
+</pre>
+<p>The initial sequence <var>( 1 , 2 , 3 , 4 )</var> is compressed as follows:</p>
+<ul>
+<li>After the first step, the sequence is <var>( 2 , 3 , 4 )</var>.</li>
+<li>After the second step, the sequence is <var>( 2 , 3 )</var>.</li>
+<li>After the third step, the sequence is <var>( 3 )</var>.</li>
+</ul>
+<p>Thus, the single integer obtained from the compression is <var>3</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>5
+3 4 2 2 1
+MMmm
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>2
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>10
+1 8 7 6 8 5 2 2 6 1
+MmmmmMMMm
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>5
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 4</h3><pre>20
+12 7 16 8 7 19 8 19 20 11 7 13 20 3 4 11 19 11 15 5
+mMMmmmMMMMMMmMmmmMM
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 4</h3><pre>11
+</pre></section>
+</div>
+</span>

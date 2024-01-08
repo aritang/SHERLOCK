@@ -1,0 +1,65 @@
+
+
+<script src="./IMAGE/varmath.js" charset="UTF-8"></script>
+
+
+<h1><font color="#000">問題 E</font> Fox Number</h1>
+
+
+<h2>問題文</h2>
+<p>きつねのしえるは数字について考えるのが好きである．ある日，しえるはこの世にねこの数字というものがあることを知り，自分もそのような数字が欲しくなってしまった．そこで，次の性質を満たす数字をとりあえず Fox Number と呼ぶことにした．</p>
+<p>[性質]: 整数 <var>N</var> は <var>k (&ge; 1)</var> 個の素数 <var>p<sub>1</sub>, ..., p<sub>k</sub></var> と正整数 <var>e<sub>1</sub>, ..., e<sub>k</sub></var> で，<var>p<sub>1</sub> &lt; ... &lt; p<sub>k</sub></var>，<var>e<sub>1</sub> &ge; ... &ge; e<sub>k</sub></var> を満たすものによって <var>N = p<sub>1</sub><sup>e<sub>1</sub></sup> × ... ×  p<sub>k</sub><sup>e<sub>k</sub></sup></var> と書けるとき，Fox Number であると呼ぶことにする．</p>
+
+<p>ところでしえるはこの性質をその場の思いつきで決めてしまったのでこれがどういう性質を持っているのか全くわかっていない．そこで，この数字の性質を調べるために区間 <var>[A-B, A+B]</var> に含まれる Fox Number の個数を出力して欲しい．</p>
+
+<h2>入力形式</h2>
+<p><var>1</var> 行目に以下の <var>2</var> つの整数が与えられる．</p>
+<pre><var>A</var> <var>B</var></pre>
+
+<h2>出力形式</h2>
+<p><var>1</var> 行目に，<var>A-B</var> 以上 <var>A+B</var> 以下の Fox Number の個数を出力せよ．</p>
+
+<h2>制約</h2>
+
+<ul>
+<li><var>1 &le; A &le; 10<sup>12</sup></var></li>
+<li><var>0 &le; B &le; 5 × 10<sup>5</sup></var></li>
+</ul>
+
+
+<h2>入出力例</h2>
+<h3>入力例 1</h3>
+<pre>
+18 2
+</pre>
+
+<h3>出力例 1</h3>
+<pre>
+4
+</pre>
+<p><var>16 = 2<sup>4</sup>, 17 = 17<sup>1</sup>, 19 = 19<sup>1</sup>, 20 = 2<sup>2</sup> × 5<sup>1</sup></var> は Fox Number である．一方で <var>18 = 2 × 3<sup>2</sup></var> は Fox Number ではない．合計して <var>4</var> つの Fox Number がある．</p>
+
+<h3>入力例 2</h3>
+<pre>
+100 10
+</pre>
+
+<h3>出力例 2</h3>
+<pre>
+18
+</pre>
+
+<h3>入力例 3</h3>
+<pre>
+123456 789
+
+</pre>
+
+<h3>出力例 3</h3>
+<pre>
+1464
+</pre>
+
+
+
+

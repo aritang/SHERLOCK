@@ -1,0 +1,250 @@
+
+<H1><font color="#000">Problem H: </font>ASCII Expression</H1>
+
+<p>
+Mathematical expressions appearing in old papers and old technical articles are printed with typewriter in several lines, where a fixed-width or monospaced font is required to print characters (digits, symbols and spaces). Let us consider the following mathematical expression.
+</p>
+<center>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_1322_1">
+</center>
+
+<p>
+It is printed in the following four lines:
+</p>
+
+<pre>
+        4   2
+( 1 - ---- )  * - 5 + 6
+        2
+       3
+</pre>
+
+<p>
+where &ldquo;- 5&rdquo; indicates unary minus followed by 5. We call such an expression of lines &ldquo;ASCII expression&rdquo;.
+</p>
+
+<p>
+For helping those who want to evaluate ASCII expressions obtained through optical character recognition (OCR) from old papers, your job is to write a program that recognizes the structure of ASCII expressions and computes their values.
+</p>
+
+<p>
+For the sake of simplicity, you may assume that ASCII expressions are constructed by the following rules. Its syntax is shown in Table H.1.
+</p>	
+
+
+<table>
+<tr>
+<td valign="top" width="28">(1)</td>
+<td>Terminal symbols are &lsquo;<span>0</span>&rsquo;,  &lsquo;<span>1</span>&rsquo;,  &lsquo;<span>2</span>&rsquo;,  &lsquo;<span>3</span>&rsquo;,  &lsquo;<span>4</span>&rsquo;,  &lsquo;<span>5</span>&rsquo;,  &lsquo;<span>6</span>&rsquo;,  &lsquo;<span>7</span>&rsquo;,  &lsquo;<span>8</span>&rsquo;,  &lsquo;<span>9</span>&rsquo;,  &lsquo;<span>+</span>&rsquo;,  &lsquo;<span>-</span>&rsquo;,  &lsquo;<span>*</span>&rsquo;,  &lsquo;<span>(</span>&rsquo;,  &lsquo;<span>)</span>&rsquo;, and  &lsquo;<span>&nbsp;</span>&rsquo;.</td>
+</tr>
+<tr>
+<td valign="top">(2)</td>
+<td>Nonterminal symbols are <i>expr</i>, <i>term</i>, <i>factor</i>, <i>powexpr</i>, <i>primary</i>, <i>fraction</i> and <i>digit</i>. The start symbol is <i>expr</i>.</td>
+</tr>
+<tr>
+<td valign="top">(3)</td>
+<td>A &ldquo;cell&rdquo; is a rectangular region of characters that corresponds to a terminal or nonterminal symbol (Figure H.1). In the cell, there are no redundant rows and columns that consist only of space characters. A cell corresponding to a terminal symbol consists of a single character. A cell corresponding to a nonterminal symbol contains cell(s) corresponding to its descendant(s) but never partially overlaps others.</td>
+</tr>
+<tr>
+<td valign="top">(4)</td>
+<td>Each cell has a base-line, a top-line, and a bottom-line. The base-lines of child cells of the right-hand side of rules I, II, III, and V should be aligned. Their vertical position defines the base-line position of their left-hand side cell.<br>
+Table H.1: Rules for constructing ASCII expressions (similar to Backus-Naur Form) The box indicates the cell of the terminal or nonterminal symbol that corresponds to a rectan- gular region of characters. Note that each syntactically-needed space character is explicitly
+indicated by the period character denoted by, here.</td>
+</tr>
+<tr>
+<td colspan="2"><img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_1322_2">
+</td>
+</tr>
+<tr>
+<td valign="top">(5)</td>
+<td><i>powexpr</i> consists of a <i>primary</i> and an optional <i>digit</i>. The <i>digit</i> is placed one line above the base-line of the <i>primary cell. They are horizontally adjacent to each other. The base-line of a <i>powexpr</i> is that of the <i>primary</i>.</td>
+</tr>
+<tr>
+<td valign="top">(6)</td>
+<td><i>fraction</i> is indicated by three or more consecutive hyphens called &ldquo;vinculum&rdquo;. Its dividend expr is placed just above the vinculum, and its divisor expr is placed just beneath it. The number of the hyphens of the vinculum, denoted by <i>w<sub>h</sub></i>, is equal to 2 + max(<i>w<sub>1</sub></i>, <i>w<sub>2</sub></i>), where <i>w<sub>1</sub></i> and <i>w<sub>2</sub></i> indicate the width of the cell of the dividend and that of the divisor, respectively. These cells are centered, where there are &lceil;(<i>w<sub>h</sub></i>&minus;<i>w<sub>k</sub></i>)/2&rceil; space characters to the left and &lfloor;(<i>w<sub>h</sub></i>&minus;<i>w<sub>k</sub></i>)/2&rfloor; space characters to the right, (<i>k</i> = 1, 2). The base-line of a fraction is at the position of the vinculum.</td>
+<tr>
+<td valign="top">(7)</td>
+<td><i>digit</i> consists of one character.</td>
+</tr>
+</table>
+<br>
+
+
+<p>
+For example, the negative fraction<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_1322_3"> is represented in three lines:
+</p>
+
+<pre>   3
+- ---
+   4</pre>
+
+<p>where the left-most hyphen means a unary minus operator. One space character is required between the unary minus and the vinculum of the fraction.</p>
+
+<p>The fraction <img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_1322_4"> is represented in four lines:</p>
+
+<pre>
+ 3 + 4 * - 2
+-------------
+          2
+   - 1 - 2
+</pre>
+
+<p>
+where the widths of the cells of the dividend and divisor are 11 and 8 respectively. Hence the number of hyphens of the vinculum is 2 + max(11, 8) = 13. The divisor is centered by &lceil;(13&minus;8)/2&rceil; = 3 space characters (hyphens) to the left and &lfloor;(13&minus;8)/2&rfloor; = 2 to the right.
+</p>
+
+<p>
+The <i>powexpr</i> (4<sup>2</sup>)<sup>3</sup> is represented in two lines:
+</p>
+
+<pre>
+   2  3
+( 4  )
+</pre>
+
+<p>
+where the cell for 2 is placed one line above the base-line of the cell for 4, and the cell for 3 is placed one line above the base-line of the cell for a primary (4<sup>2</sup>).
+</p>
+
+<H2>Input</H2>
+
+<p>
+The input consists of multiple datasets, followed by a line containing a zero. Each dataset has the following format.
+</p>
+
+<pre>
+n
+str<sub>1</sub>
+str<sub>2</sub>
+.
+.
+.
+str<sub>n</sub>
+</pre>
+
+<p>
+<i>n</i> is a positive integer, which indicates the number of the following lines with the same length that represent the cell of an ASCII expression. <i>str<sub>k</sub></i> is the <i>k</i>-th line of the cell where each space character is replaced with a period.
+</p>
+
+<p>
+You may assume that <i>n</i> &le; 20 and that the length of the lines is no more than 80.
+</p>
+
+<H2>Output</H2>
+
+<p>
+For each dataset, one line containing a non-negative integer less than 2011 should be output. The integer indicates the value of the ASCII expression in modular arithmetic under modulo 2011. The output should not contain any other characters.
+</p>
+
+<p>
+There is no <i>fraction</i> with the divisor that is equal to zero or a multiple of 2011.
+</p>
+
+<p>
+Note that powexpr <i>x<sup>0</sup></i> is defined as 1, and <i>x<sup>y</sup></i> (y is a positive integer) is defined as the product <i>x&times;x&times;</i>...&times;<i>x</i> where the number of <i>x</i>'s is equal to <i>y</i>.
+</p>
+
+<p>
+A fraction<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_1322_5">is computed as the multiplication of <i>x</i> and the inverse of <i>y</i>, i.e., <i>x</i>&times; inv(<i>y</i>), under <i>y</i> modulo 2011. The inverse of <i>y</i> (1 &le; y < 2011) is uniquely defined as the integer <i>z</i> (1 &le; z < 2011) that satisfies <i>z</i> &times; <i>y</i> &equiv; 1 (mod 2011), since 2011 is a prime number.
+</p>
+
+<H2>Sample Input</H2>
+<pre>
+4
+........4...2..........
+(.1.-.----.)..*.-.5.+.6
+........2..............
+.......3...............
+3
+...3.
+-.---
+...4.
+4
+.3.+.4.*.-.2.
+-------------
+..........2..
+...-.1.-.2...
+2
+...2..3
+(.4..).
+1
+2.+.3.*.5.-.7.+.9
+1
+(.2.+.3.).*.(.5.-.7.).+.9
+3
+.2....3.
+4..+.---
+......5.
+3
+.2......-.-.3.
+4..-.-.-------
+..........5...
+9
+............1............
+-------------------------
+..............1..........
+.1.+.-------------------.
+................1........
+......1.+.-------------..
+..................1......
+...........1.+.-------...
+................1.+.2....
+15
+.................2......
+................---.....
+.......2.........5....3.
+.(.---------.+.-----.)..
+.....7...........3......
+....---.+.1.............
+.....4..................
+------------------------
+.......2................
+......---...............
+.......5.......2....2...
+...(.-----.+.-----.)....
+.......3.......3........
+..............---.......
+...............4........
+2
+.0....2....
+3..+.4..*.5
+20
+............2............................2......................................
+...........3............................3.......................................
+..........----.........................----.....................................
+............4............................4......................................
+.....2.+.------.+.1...............2.+.------.+.1................................
+............2............................2......................................
+...........2............................2........................2..............
+..........----.........................----.....................3...............
+............2............................2.....................----.............
+...........3............................3........................4..............
+(.(.----------------.+.2.+.3.).*.----------------.+.2.).*.2.+.------.+.1.+.2.*.5
+............2............................2.......................2..............
+...........5............................5.......................2...............
+..........----.........................----....................----.............
+............6............................6.......................2..............
+.........------.......................------....................3...............
+............3............................3......................................
+..........----.........................----.....................................
+............2............................2......................................
+...........7............................7.......................................
+0
+</pre>
+
+<H2>Output for the Sample Input</H2>
+
+<pre>
+501
+502
+1
+74
+19
+2010
+821
+821
+1646
+148
+81
+1933
+</pre>

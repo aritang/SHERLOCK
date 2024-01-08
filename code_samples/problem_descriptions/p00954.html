@@ -1,0 +1,82 @@
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({ tex2jax: { inlineMath: [["$","$"], ["\\(","\\)"]], processEscapes: true }});
+</script>
+<script type='text/javascript' src='http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
+</script>
+
+
+<h2>Problem I
+  Skinny Polygon 
+</h2>
+
+<p>
+You are asked to find a polygon that satisfies all the following conditions, given two integers, $x_{bb}$ and $y_{bb}$.
+</p>
+<ul>
+  <li> The number of vertices is either 3 or 4.</li>
+  <li> Edges of the polygon do not intersect nor overlap with other edges, i.e., they do not share any points with other edges except for their endpoints.</li>
+  <li> The $x$- and $y$-coordinates of each vertex are integers. </li>
+  <li> The $x$-coordinate of each vertex is between 0 and $x_{bb}$, inclusive. Similarly, the $y$-coordinate is between 0 and $y_{bb}$, inclusive.</li>
+  <li> At least one vertex has its $x$-coordinate 0.</li>
+  <li> At least one vertex has its $x$-coordinate $x_{bb}$.</li>
+  <li> At least one vertex has its $y$-coordinate 0.</li>
+  <li> At least one vertex has its $y$-coordinate $y_{bb}$.</li>
+  <li> <b>The area of the polygon does not exceed 25000.</b></li>
+</ul>
+
+<p>
+  The polygon may be non-convex.
+  </p>
+
+
+<h3>Input</h3>
+
+<p>
+  The input consists of multiple test cases. The first line of the input contains an integer $n$, which is the number of the test cases ($1 \leq n \leq 10^5$). Each of the following $n$ lines contains a test case formatted as follows.<br/>
+  <br/>
+  $x_{bb}$ $y_{bb}$<br/>
+  <br/>
+  $x_{bb}$ and $y_{bb}$ ($2 \leq x_{bb} \leq 10^9, 2 \leq y_{bb} \leq 10^9$) are integers stated above.
+  </p>
+
+
+
+<h3>Output</h3>
+
+<p>
+  For each test case, output description of one polygon satisfying the conditions stated above, in the following format.<br/>
+  <br/>
+$v$<br/>
+$x_1$ $y_1$<br/>
+.  <br/>
+.  <br/>
+.  <br/>
+$x_v$ $y_v$<br/>
+</p>
+
+<p>
+Here, $v$ is the number of vertices, and each pair of $x_i$ and $y_i$ gives the coordinates of the $i$-th vertex, $(x_i, y_i)$. The first vertex $(x_1, y_1)$ can be chosen arbitrarily, and the rest should be listed either in clockwise or in counterclockwise order.
+</p>
+
+<p>
+When more than one polygon satisfies the conditions, any one of them is acceptable. You can prove that, with the input values ranging as stated above, there is at least one polygon satisfying the conditions.
+</p>
+
+<h3>Sample Input 1</h3>
+
+<pre>2
+5 6
+1000000000 2</pre>
+
+<h3>Sample Output 1</h3>
+
+<pre>4
+5 6
+0 6
+0 0
+5 0
+3
+1000000000 0
+0 2
+999999999 0</pre>

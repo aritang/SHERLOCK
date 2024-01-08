@@ -1,0 +1,87 @@
+<span class="lang-en">
+<p>Score : <var>400</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>There are <var>N</var> mountains in a circle, called Mountain <var>1</var>, Mountain <var>2</var>, <var>...</var>, Mountain <var>N</var> in clockwise order. <var>N</var> is an <em>odd</em> number.</p>
+<p>Between these mountains, there are <var>N</var> dams, called Dam <var>1</var>, Dam <var>2</var>, <var>...</var>, Dam <var>N</var>. Dam <var>i</var> (<var>1 \leq i \leq N</var>) is located between Mountain <var>i</var> and <var>i+1</var> (Mountain <var>N+1</var> is Mountain <var>1</var>).</p>
+<p>When Mountain <var>i</var> (<var>1 \leq i \leq N</var>) receives <var>2x</var> liters of rain, Dam <var>i-1</var> and Dam <var>i</var> each accumulates <var>x</var> liters of water (Dam <var>0</var> is Dam <var>N</var>).</p>
+<p>One day, each of the mountains received a non-negative <strong>even</strong> number of liters of rain.</p>
+<p>As a result, Dam <var>i</var> (<var>1 \leq i \leq N</var>) accumulated a total of <var>A_i</var> liters of water.</p>
+<p>Find the amount of rain each of the mountains received. We can prove that the solution is unique under the constraints of this problem.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li>All values in input are integers.</li>
+<li><var>3 \leq N \leq 10^5-1</var></li>
+<li><var>N</var> is an odd number.</li>
+<li><var>0 \leq A_i \leq 10^9</var></li>
+<li>The situation represented by input can occur when each of the mountains receives a non-negative even number of liters of rain.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+<var>A_1</var> <var>A_2</var> <var>...</var> <var>A_N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print <var>N</var> integers representing the number of liters of rain Mountain <var>1</var>, Mountain <var>2</var>, <var>...</var>, Mountain <var>N</var> received, in this order.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>3
+2 2 4
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>4 0 4
+</pre>
+<p>If we assume Mountain <var>1</var>, <var>2</var>, and <var>3</var> received <var>4</var>, <var>0</var>, and <var>4</var> liters of rain, respectively, it is consistent with this input, as follows:</p>
+<ul>
+<li>Dam <var>1</var> should have accumulated <var>\frac{4}{2} + \frac{0}{2} = 2</var> liters of water.</li>
+<li>Dam <var>2</var> should have accumulated <var>\frac{0}{2} + \frac{4}{2} = 2</var> liters of water.</li>
+<li>Dam <var>3</var> should have accumulated <var>\frac{4}{2} + \frac{4}{2} = 4</var> liters of water.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>5
+3 8 7 5 5
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>2 4 12 2 8
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>3
+1000000000 1000000000 0
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>0 2000000000 0
+</pre></section>
+</div>
+</span>

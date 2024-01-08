@@ -1,0 +1,75 @@
+<span class="lang-en">
+<p>Score : <var>600</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>A <em>tetromino</em> is a figure formed by joining four squares edge to edge.
+We will refer to the following seven kinds of tetromino as I-, O-, T-, J-, L-, S- and Z-tetrominos, respectively:</p>
+<div style="text-align: center;">
+<img alt="a60bcb8e9e8f22e3af51049eda063392.png" src="https://atcoder.jp/img/agc008/a60bcb8e9e8f22e3af51049eda063392.png">
+</img></div>
+<p>Snuke has many tetrominos. The number of I-, O-, T-, J-, L-, S- and Z-tetrominos in his possession are <var>a_I</var>, <var>a_O</var>, <var>a_T</var>, <var>a_J</var>, <var>a_L</var>, <var>a_S</var> and <var>a_Z</var>, respectively.
+Snuke will join <var>K</var> of his tetrominos to form a rectangle that is two squares tall and <var>2K</var> squares wide.
+Here, the following rules must be followed:</p>
+<ul>
+<li>When placing each tetromino, rotation is allowed, but reflection is not.</li>
+<li>Each square in the rectangle must be covered by exactly one tetromino.</li>
+<li>No part of each tetromino may be outside the rectangle.</li>
+</ul>
+<p>Snuke wants to form as large a rectangle as possible.
+Find the maximum possible value of <var>K</var>.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>0≤a_I,a_O,a_T,a_J,a_L,a_S,a_Z≤10^9</var></li>
+<li><var>a_I+a_O+a_T+a_J+a_L+a_S+a_Z≥1</var></li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>The input is given from Standard Input in the following format:</p>
+<pre><var>a_I</var> <var>a_O</var> <var>a_T</var> <var>a_J</var> <var>a_L</var> <var>a_S</var> <var>a_Z</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the maximum possible value of <var>K</var>. If no rectangle can be formed, print <code>0</code>.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>2 1 1 0 0 0 0
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>3
+</pre>
+<p>One possible way to form the largest rectangle is shown in the following figure:</p>
+<div style="text-align: center;">
+<img alt="45515ed2a1dd5e41c5e4ca1f39323d8e.png" src="https://atcoder.jp/img/agc008/45515ed2a1dd5e41c5e4ca1f39323d8e.png">
+</img></div>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>0 0 10 0 0 0 0
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>0
+</pre>
+<p>No rectangle can be formed.</p></section>
+</div>
+</span>

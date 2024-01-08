@@ -1,0 +1,77 @@
+<span class="lang-en">
+<p>Score : <var>100</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>In AtCoder City, there are three stations numbered <var>1</var>, <var>2</var>, and <var>3</var>.</p>
+<p>Each of these stations is operated by one of the two railway companies, A and B. A string <var>S</var> of length <var>3</var> represents which company operates each station. If <var>S_i</var> is <code>A</code>, Company A operates Station <var>i</var>; if <var>S_i</var> is <code>B</code>, Company B operates Station <var>i</var>.</p>
+<p>To improve the transportation condition, for each pair of a station operated by Company A and one operated by Company B, there will be a bus service connecting them.</p>
+<p>Determine if there is a pair of stations that will be connected by a bus service.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li>Each character of <var>S</var> is <code>A</code> or <code>B</code>.</li>
+<li><var>|S| = 3</var></li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>S</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>If there is a pair of stations that will be connected by a bus service, print <code>Yes</code>; otherwise, print <code>No</code>.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>ABA
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>Yes
+</pre>
+<p>Company A operates Station <var>1</var> and <var>3</var>, while Company B operates Station <var>2</var>.</p>
+<p>There will be a bus service between Station <var>1</var> and <var>2</var>, and between Station <var>2</var> and <var>3</var>, so print <code>Yes</code>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>BBA
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>Yes
+</pre>
+<p>Company B operates Station <var>1</var> and <var>2</var>, while Company A operates Station <var>3</var>.</p>
+<p>There will be a bus service between Station <var>1</var> and <var>3</var>, and between Station <var>2</var> and <var>3</var>, so print <code>Yes</code>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>BBB
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>No
+</pre>
+<p>Company B operates all the stations. Thus, there will be no bus service, so print <code>No</code>.</p></section>
+</div>
+</span>

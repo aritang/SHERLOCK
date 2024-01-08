@@ -1,0 +1,141 @@
+
+
+<h1><font color="#000000">Problem A:</font> Pablo Squarson's Headache</h1>
+
+
+
+<!-- begin en only -->
+<p>Pablo Squarson is a well-known cubism artist.  This year's theme for Pablo Squarson is "Squares".  Today we are visiting his studio to see how his masterpieces are given birth.</p>
+<!-- end en only -->
+
+
+<!-- begin en only -->
+<p>At the center of his studio, there is a huuuuuge table and beside it are many, many squares of the same size.  Pablo Squarson puts one of the squares on the table.  Then he places some other squares on the table in sequence.  It seems his methodical nature forces him to place each square side by side to the one that he already placed on, with machine-like precision.</p>
+<!-- end en only -->
+
+
+<!-- begin en only -->
+<p>Oh!  The first piece of artwork is done.  Pablo Squarson seems satisfied with it.  Look at his happy face.</p>
+<!-- end en only -->
+
+
+<!-- begin en only -->
+<p>Oh, what's wrong with Pablo?  He is tearing his hair!  Oh, I see.  He wants to find a box that fits the new piece of work but he has trouble figuring out its size.  Let's help him!</p>
+<!-- end en only -->
+
+
+<!-- begin en only -->
+<p>Your mission is to write a program that takes instructions that record how Pablo made a piece of his artwork and computes its width and height.  It is known that the size of each square is 1.  You may assume that Pablo does not put a square on another.</p>
+<!-- end en only -->
+
+
+<!-- begin en only -->
+<p>I hear someone murmured "A smaller box will do".  No, poor Pablo, shaking his head, is grumbling "My square style does not seem to be understood by illiterates".</p>
+<!-- end en only -->
+
+<p style="text-align: center">
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_D2010_A-1">
+</p>
+
+
+<h3>Input</h3>
+
+
+<!-- begin en only -->
+<p>The input consists of a number of datasets.  Each dataset represents the way Pablo made a piece of his artwork.  The format of a dataset is as follows.</p>
+<!-- end en only -->
+
+<blockquote>
+<span class="math">N</span><br />
+<span class="math">n</span><sub>1</sub> <span class="math">d</span><sub>1</sub><br />
+<span class="math">n</span><sub>2</sub> <span class="math">d</span><sub>2</sub><br />
+...<br />
+<span class="math">n<sub>N</sub></span><sub>-1</sub> <span class="math">d<sub>N</sub></span><sub>-1</sub><br />
+</blockquote>
+
+
+<!-- begin en only -->
+<p>The first line contains the number of squares (= <span class="math">N</span>) used to make the piece of artwork.  The number is a positive integer and is smaller than 200.
+<!-- end en only -->
+
+
+<!-- begin en only -->
+<p>The remaining (<span class="math">N</span>-1) lines in the dataset are square placement instructions.  The line &ldquo;<span class="math">n<sub>i</sub></span> <span class="math">d<sub>i</sub></span>&rdquo; indicates placement of the square numbered <span class="math">i</span> (&le; <span class="math">N</span>-1).  The rules of numbering squares are as follows.  The first square is numbered "zero".  Subsequently placed squares are numbered 1, 2, ..., (<span class="math">N</span>-1).  Note that the input does not give any placement instruction to the first square, which is numbered zero.</p>
+
+<p>A square placement instruction for the square numbered <span class="math">i</span>, namely &ldquo;<span class="math">n<sub>i</sub> d<sub>i</sub></span>&rdquo;, directs it to be placed next to the one that is numbered <span class="math">n<sub>i</sub></span>, towards the direction given by <span class="math">d<sub>i</sub></span>, which denotes leftward (= 0), downward (= 1), rightward (= 2), and upward (= 3).</p> 
+<!-- end en only -->
+
+
+<!-- begin en only -->
+<p>For example, pieces of artwork corresponding to the four datasets shown in <b>Sample Input</b> are depicted below. Squares are labeled by their numbers.</p>
+<!-- end en only -->
+
+<p style="text-align: center">
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_D2010_A-2">
+</p>
+
+
+<!-- begin en only -->
+<p>The end of the input is indicated by a line that contains a single zero.</p>
+<!-- end en only -->
+
+
+<h3>Output</h3>
+
+
+
+<!-- begin en only -->
+<p>For each dataset, output a line that contains the width and the height of the piece of artwork as decimal numbers, separated by a space.  Each line should not contain any other characters.</p>
+<!-- end en only -->
+
+
+<h3>Sample Input</h3>
+
+<pre>
+1
+5
+0 0
+0 1
+0 2
+0 3
+12
+0 0
+1 0
+2 0
+3 1
+4 1
+5 1
+6 2
+7 2
+8 2
+9 3
+10 3
+10
+0 2
+1 2
+2 2
+3 2
+2 1
+5 1
+6 1
+7 1
+8 1
+0
+</pre>
+</blockquote>
+</pre>
+
+
+<h3>Output for the Sample Input</h3>
+
+<pre>
+1 1
+3 3
+4 4
+5 6
+</pre>
+
+
+
+
+

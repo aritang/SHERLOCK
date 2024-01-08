@@ -1,0 +1,109 @@
+<span class="lang-en">
+<p>Score : <var>500</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>There are <var>K</var> items placed on a grid of squares with <var>R</var> rows and <var>C</var> columns. Let <var>(i, j)</var> denote the square at the <var>i</var>-th row (<var>1 \leq i \leq R</var>) and the <var>j</var>-th column (<var>1 \leq j \leq C</var>). The <var>i</var>-th item is at <var>(r_i, c_i)</var> and has the value <var>v_i</var>.</p>
+<p>Takahashi will begin at <var>(1, 1)</var>, the start, and get to <var>(R, C)</var>, the goal. When he is at <var>(i, j)</var>, he can move to <var>(i + 1, j)</var> or <var>(i, j + 1)</var> (but cannot move to a non-existent square).</p>
+<p>He can pick up items on the squares he visits, including the start and the goal, but at most three for each row. It is allowed to ignore the item on a square he visits.</p>
+<p>Find the maximum possible sum of the values of items he picks up.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 \leq R, C \leq 3000</var></li>
+<li><var>1 \leq K \leq \min(2 \times 10^5, R \times C)</var></li>
+<li><var>1 \leq r_i \leq R</var></li>
+<li><var>1 \leq c_i \leq C</var></li>
+<li><var>(r_i, c_i) \neq (r_j, c_j) (i \neq j)</var></li>
+<li><var>1 \leq v_i \leq 10^9</var></li>
+<li>All values in input are integers.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>R</var> <var>C</var> <var>K</var>
+<var>r_1</var> <var>c_1</var> <var>v_1</var>
+<var>r_2</var> <var>c_2</var> <var>v_2</var>
+<var>:</var>
+<var>r_K</var> <var>c_K</var> <var>v_K</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the maximum possible sum of the values of items Takahashi picks up.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>2 2 3
+1 1 3
+2 1 4
+1 2 5
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>8
+</pre>
+<p>He has two ways to get to the goal:</p>
+<ul>
+<li>Visit <var>(1, 1)</var>, <var>(1, 2)</var>, and <var>(2, 2)</var>, in this order. In this case, the total value of the items he can pick up is <var>3 + 5 = 8</var>.</li>
+<li>Visit <var>(1, 1)</var>, <var>(2, 1)</var>, and <var>(2, 2)</var>, in this order. In this case, the total value of the items he can pick up is <var>3 + 4 = 7</var>.</li>
+</ul>
+<p>Thus, the maximum possible sum of the values of items he picks up is <var>8</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>2 5 5
+1 1 3
+2 4 20
+1 2 1
+1 3 4
+1 4 2
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>29
+</pre>
+<p>We have four items in the <var>1</var>-st row. The optimal choices are as follows:</p>
+<ul>
+<li>Visit <var>(1, 1)</var> <var>(1, 2)</var>, <var>(1, 3)</var>, <var>(1, 4)</var>, <var>(2, 4)</var>, and <var>(2, 5)</var>, in this order, and pick up all items except the one on <var>(1, 2)</var>. Then, the total value of the items he picks up will be <var>3 + 4 + 2 + 20 = 29</var>.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>4 5 10
+2 5 12
+1 5 12
+2 3 15
+1 2 20
+1 1 28
+2 4 26
+3 2 27
+4 5 21
+3 5 10
+1 3 10
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>142
+</pre></section>
+</div>
+</span>

@@ -1,0 +1,82 @@
+<span class="lang-en">
+<p>Score : <var>200</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p><var>N</var> <em>Snukes</em> called Snuke <var>1</var>, Snuke <var>2</var>, ..., Snuke <var>N</var> live in a town.</p>
+<p>There are <var>K</var> kinds of snacks sold in this town, called Snack <var>1</var>, Snack <var>2</var>, ..., Snack <var>K</var>. The following <var>d_i</var> Snukes have Snack <var>i</var>: Snuke <var>A_{i, 1}, A_{i, 2}, \cdots, A_{i, {d_i}}</var>.</p>
+<p>Takahashi will walk around this town and make mischief on the Snukes who have no snacks. How many Snukes will fall victim to Takahashi's mischief?</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li>All values in input are integers.</li>
+<li><var>1 \leq N \leq 100</var></li>
+<li><var>1 \leq K \leq 100</var></li>
+<li><var>1 \leq d_i \leq N</var></li>
+<li><var>1 \leq A_{i, 1} &lt; \cdots &lt; A_{i, d_i} \leq N</var></li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var> <var>K</var>
+<var>d_1</var>
+<var>A_{1, 1} \cdots A_{1, d_1}</var>
+<var>\vdots</var>
+<var>d_K</var>
+<var>A_{K, 1} \cdots A_{K, d_K}</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the answer.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>3 2
+2
+1 3
+1
+3
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>1
+</pre>
+<ul>
+<li>Snuke <var>1</var> has Snack <var>1</var>.</li>
+<li>Snuke <var>2</var> has no snacks.</li>
+<li>Snuke <var>3</var> has Snack <var>1</var> and <var>2</var>.</li>
+</ul>
+<p>Thus, there will be one victim: Snuke <var>2</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>3 3
+1
+3
+1
+3
+1
+3
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>2
+</pre></section>
+</div>
+</span>

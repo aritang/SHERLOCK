@@ -1,0 +1,94 @@
+<span class="lang-en">
+<p>Score : <var>1100</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>We have a grid with <var>N</var> rows and <var>M</var> columns of squares.
+Each integer from <var>1</var> to <var>NM</var> is written in this grid once.
+The number written in the square at the <var>i</var>-th row from the top and the <var>j</var>-th column from the left is <var>A_{ij}</var>.</p>
+<p>You need to rearrange these numbers as follows:</p>
+<ol>
+<li>First, for each of the <var>N</var> rows, rearrange the numbers written in it as you like.</li>
+<li>Second, for each of the <var>M</var> columns, rearrange the numbers written in it as you like.</li>
+<li>Finally, for each of the <var>N</var> rows, rearrange the numbers written in it as you like.</li>
+</ol>
+<p>After rearranging the numbers, you want the number written in the square at the <var>i</var>-th row from the top and the <var>j</var>-th column from the left to be <var>M\times (i-1)+j</var>.
+Construct one such way to rearrange the numbers. The constraints guarantee that it is always possible to achieve the objective.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 \leq N,M \leq 100</var></li>
+<li><var>1 \leq A_{ij} \leq NM</var></li>
+<li><var>A_{ij}</var> are distinct.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var> <var>M</var>
+<var>A_{11}</var> <var>A_{12}</var> <var>...</var> <var>A_{1M}</var>
+<var>:</var>
+<var>A_{N1}</var> <var>A_{N2}</var> <var>...</var> <var>A_{NM}</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print one way to rearrange the numbers in the following format:</p>
+<pre><var>B_{11}</var> <var>B_{12}</var> <var>...</var> <var>B_{1M}</var>
+<var>:</var>
+<var>B_{N1}</var> <var>B_{N2}</var> <var>...</var> <var>B_{NM}</var>
+<var>C_{11}</var> <var>C_{12}</var> <var>...</var> <var>C_{1M}</var>
+<var>:</var>
+<var>C_{N1}</var> <var>C_{N2}</var> <var>...</var> <var>C_{NM}</var>
+</pre>
+<p>Here <var>B_{ij}</var> is the number written in the square at the <var>i</var>-th row from the top and the <var>j</var>-th column from the left after Step <var>1</var>, and <var>C_{ij}</var> is the number written in that square after Step <var>2</var>.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>3 2
+2 6
+4 3
+1 5
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>2 6 
+4 3 
+5 1 
+2 1 
+4 3 
+5 6 
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>3 4
+1 4 7 10
+2 5 8 11
+3 6 9 12
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>1 4 7 10 
+5 8 11 2 
+9 12 3 6 
+1 4 3 2 
+5 8 7 6 
+9 12 11 10 
+</pre></section>
+</div>
+</span>

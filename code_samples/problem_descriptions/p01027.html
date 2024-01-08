@@ -1,0 +1,290 @@
+<h1>Problem L: WW</h1>
+<h2>Problem</h2>
+
+<p>
+19XX年、nつの国で連合国軍が結成された。連合国軍に属する各国では、敵軍の侵略から自国を守るために国内に１つ以上の拠点を作り、周囲を警戒している。図１は連合国の例を示し、長方形が各国を、その中にある円がその国の拠点を表す。
+</p>
+
+<br>
+<center>
+<img width="680" src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE3_RitsCamp14Day2_WW1.png" alt="図１"><br>
+図1
+</center>
+<br>
+
+<p>
+敵軍が侵略してきた場合、それを一番最初に発見した拠点からその情報を連合国軍に属する他国または自国の拠点に発信することになっている。
+情報を他の拠点に伝えるには正の整数のコストがかかる。
+</p>
+
+<p>
+また、各国では自国の拠点のうち、連合国軍翻訳通信部(ATIS : Allied Translator and Interpreter Section)に属する兵士が配属されている拠点をちょうど１つだけ持っている。
+この兵士だけが連合国軍に属する全ての国の言語を話すことができ、その他の兵士は自分の国の言語しか話せない。
+その為、情報を受け取った拠点が他国に情報を伝えようとした際にその拠点がATISに属する兵士をもたない場合、そこから自国のATISに属する兵士をもつ拠点に情報を伝え他国に情報を発信してもらう必要がある。
+</p>
+
+<p>
+国毎で各拠点に０から順に[その国がもつ拠点の数-1]までの番号が割り振られており、０番目の拠点にATISに属する兵士がいる。
+つまり、他国の拠点に情報を伝達できるのは０番目の拠点だけであり、その他の拠点から他国へは通信できない。
+また、その国の０番目の拠点に情報が伝わればその国全体に情報が伝わったものとする。
+</p>
+
+<p>
+様々な理由から、全ての拠点の間で通信ができるとは限らない。
+ある拠点から別の拠点に情報を伝える事ができたとしても、その逆が成り立つとは限らない。
+また、ある拠点から別の拠点に情報を伝えた際のコストとその逆でかかるコストが同じとも限らない。
+</p>
+
+<p>
+これらのことを踏まえて、ある拠点が敵軍を発見した際に、連合国軍全体に情報が行き渡るコストの総和が最も少ない伝達方法を知りたい。
+連合国軍に属する全ての国の０番目の拠点に対して最初に敵軍を見つけた拠点から情報が伝達された時、連合国軍全体に情報が行き渡ったものとする。
+</p>
+
+<p>
+敵軍を発見した拠点が質問として与えられるので、最も少ないコストでその情報が連合国軍全体に行き渡る伝達方法とそのコストを出力せよ。
+</p>
+
+<p>
+例えば、以下のケースについて考える ( Sample Input 4、１つめの質問 )
+</p>
+
+<p>
+国neepalの1番目の拠点が敵軍を発見したとする。
+この場合、１番目の拠点から他国へは通信できないため、まず自国の０番目の拠点へ情報を伝える。
+</p>
+
+<p>
+次に、０番目の拠点から国luxenbourg,nowayに情報を伝える。
+neepalからluxenbourgの０番目の拠点へ直接通信することはできるが、３番目の拠点に情報を伝え、そこから０番目の拠点へ伝えたほうがコストが少なく済む。
+この場合、全ての国の０番目の国へ情報を伝えるためにかかる最小のコストは１２となる。
+コストが１２で済む伝達方法は複数存在するが、そのうちのどれか一つを答えとして出力すれば良い。
+</p>
+
+<p>
+以下の図２の赤い矢印はその答えのうちの１つである。
+</p>
+
+<br>
+<center>
+<img width="680" src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE3_RitsCamp14Day2_WW2.png"><br>
+図2
+</center>
+
+
+<h2>Input</h2>
+
+
+<pre>
+<var>n</var>
+<var>countryname<sub>0</sub></var> <var>m<sub>0</sub></var> 
+<var>countryname<sub>1</sub></var> <var>m<sub>1</sub></var>
+…
+<var>countryname<sub>n-1</sub></var> <var>m<sub>n-1</sub></var>
+<var>e</var>
+<var>c1<sub>0</sub></var> <var>v1<sub>0</sub></var> <var>c2<sub>0</sub></var> <var>v2<sub>0</sub></var> <var>cost<sub>0</sub></var>
+<var>c1<sub>1</sub></var> <var>v1<sub>1</sub></var> <var>c2<sub>1</sub></var> <var>v2<sub>1</sub></var> <var>cost<sub>1</sub></var>
+…
+<var>c1<sub>e-1</sub></var> <var>v1<sub>e-1</sub></var> <var>c2<sub>e-1</sub></var> <var>v2<sub>e-1</sub></var> <var>cost<sub>e-1</sub></var>
+<var>q</var> 
+<var>c3<sub>0</sub></var> <var>v3<sub>0</sub></var> 
+<var>c3<sub>1</sub></var> <var>v3<sub>1</sub></var> 
+…
+<var>c3<sub>q-1</sub></var> <var>v3<sub>q-1</sub></var>
+
+</pre>
+<ul>
+<li><var>n</var>は連合国軍に属する国の数を表す</li>
+<li><var>countryname<sub>i</sub></var>は連合国軍に属する<var>i</var>番目の国名を,<var>m<sub>i</sub></var>は<var>i</var>番目の国の拠点の数を表す</li>
+<li><var>e</var>は通信可能な拠点のペアの数を表す</li>
+<li>続く<var>e</var>行には国<var>c1<sub>i</sub></var>の拠点<var>v1<sub>i</sub></var>から国<var>c2<sub>i</sub></var>の拠点<var>v2<sub>i</sub></var>に情報を伝えるのにかかるコスト<var>cost<sub>i</sub></var>が与えられる</li>
+<li><var>q</var>は質問の数を表す</li>
+<li>続く<var>q</var>行には敵軍を発見した国の名前<var>c3<sub>i</sub></var>とその拠点<var>v3<sub>i</sub></var>が与えられる</li>
+<li><var>c1<sub>i</sub></var>,<var>c2<sub>i</sub></var>,<var>c3<sub>i</sub></var>は連合国軍に属する国のいずれかである</li>
+<li><var>v1<sub>i</sub></var>,<var>v2<sub>i</sub></var>,<var>v3<sub>i</sub></var>はその国の拠点の数以上である事は無い</li>
+</ul>
+
+<h2>Constraints</h2>
+
+<ul>
+
+<li> 1 &le; <var>n</var> &le; 26 </li>
+<li> 1 &le; <var>m<sub>i</sub></var> &le; 100</li>
+<li> 0 &le; <var>e</var> &le; 322400</li>
+<li> 0 &le; <var>cost<sub>i</sub></var> &le; 100</li>
+<li> 1 &le; <var>q</var> &le; 10</li>
+<li> <var>countryname</var> は小文字のアルファベット ‘a’ から’z’までで構成される長さ１以上２０以下の文字列である</li>
+<li> 同じ名前の国が2つ以上与えられる事はない</li>
+<li> 通信可能な拠点のペアの<var>c1<sub>i</sub></var>と<var>c2<sub>i</sub></var>が同じ時、<var>v1<sub>i</sub></var>と<var>v2<sub>i</sub></var>は異なる</li>
+<li> 通信可能な拠点のペアの<var>c1<sub>i</sub></var>と<var>c2<sub>i</sub></var>が異なる時、<var>v1<sub>i</sub></var>は必ず0である</li>
+
+</ul>
+
+<h2>Output</h2>
+
+<p>
+各質問に対して以下の形式で答えを出力する。
+</p>
+
+<p>
+各質問に対する答えの最後の行には、５つの '-’ からなる"-----” ( “ は除く ) という1行を出力すること。
+</p>
+
+<p>
+<b>答えが存在する場合</b>
+</p>
+
+<p>1行目に質問で与えられた国の拠点から連合国軍全体に情報が行き渡るために必要なコストの最小値を出力する。</p>
+<p>2行目以降にはその時の伝達方法を出力する。
+伝達方法は以下の形式で表現される。
+</p>
+
+<pre>
+<var>c4<sub>0</sub></var> <var>v4<sub>0</sub></var> <var>c5<sub>0</sub></var> <var>v5<sub>0</sub></var> 
+<var>c4<sub>1</sub></var> <var>v4<sub>1</sub></var> <var>c5<sub>1</sub></var> <var>v5<sub>1</sub></var> 
+...
+</pre>
+
+<p>国<var>c4<sub>i</sub></var>の拠点<var>v4<sub>i</sub></var>から国<var>c5<sub>i</sub></var>の拠点<var>v5<sub>i</sub></var>に情報を伝えたことを表す。</p>
+
+<p>以下の事に気をつける事。</p>
+<ul>
+<li>通信が行われた順番通りに出力する必要はない</li>
+<li>コストの総和が最小となる伝達方法が1つ以上存在する場合、そのうちのいずれか１つを出力すれば良い</li>
+<li>同じ通信可能なペアを２回以上出力してはいけない</li>
+<li><var>c4<sub>i</sub></var>,<var>c5<sub>i</sub></var>は入力で与えられた国のいずれかでなければならない</li>
+<li><var>v4<sub>i</sub></var>,<var>v5<sub>i</sub></var>はその国の拠点の数未満でなければならない</li>
+</ul>
+
+<br>
+<p>
+<b>答えが存在しない場合</b>
+</p>
+
+<p>
+1行に ”Impossible” ( “ は除く ) と出力すること。
+</p>
+
+
+<h2>Sample Input 1</h2>
+<pre>
+3
+frence 1
+usi 1
+powland 1
+2
+usi 0 frence 0 10
+frence 0 powland 0 10
+2
+usi 0
+powland 0
+</pre>
+
+<h2>Sample Output 1</h2>
+<pre>
+20
+usi 0 frence 0
+frence 0 powland 0
+-----
+Impossible
+-----
+</pre>
+
+<h2>Sample Input 2</h2>
+<pre>
+2
+usso 2
+caneda 2
+4
+usso 1 usso 0 1
+usso 0 caneda 0 10
+usso 0 caneda 1 2
+caneda 1 caneda 0 2
+1
+usso 1
+</pre>
+
+<h2>Sample Output 2</h2>
+<pre>
+5
+usso 1 usso 0
+usso 0 caneda 1
+caneda 1 caneda 0
+-----
+</pre>
+
+<h2>Sample Input 3</h2>
+<pre>
+3
+chinax 1
+ok 1
+austraria 2
+6
+chinax 0 austraria 0 5
+austraria 0 chinax 0 5
+austraria 1 austraria 0 1
+ok 0 austraria 0 5
+austraria 0 ok 0 5
+ok 0 austraria 1 1
+2
+chinax 0
+ok 0
+</pre>
+
+<h2>Sample Output 3</h2>
+<pre>
+10
+chinax 0 austraria 0
+austraria 0 ok 0
+-----
+7
+ok 0 austraria 1
+austraria 1 austraria 0
+austraria 0 chinax 0
+-----
+</pre>
+
+<h2>Sample Input 4</h2>
+<pre>
+3
+neepal 2
+luxenbourg 4
+noway 2
+12
+neepal 1 neepal 0 2
+neepal 0 noway 1 2
+neepal 0 luxenbourg 0 10
+neepal 0 luxenbourg 3 2
+luxenbourg 3 luxenbourg 1 2
+luxenbourg 3 luxenbourg 2 2
+luxenbourg 1 luxenbourg 0 2
+luxenbourg 2 luxenbourg 0 2
+noway 1 noway 0 2
+noway 0 neepal 0 2
+noway 0 luxenbourg 3 2
+noway 0 luxenbourg 0 10
+3
+neepal 1
+luxenbourg 3
+noway 1
+</pre>
+
+<h2>Sample Output 4</h2>
+<pre>
+12
+neepal 1 neepal 0
+neepal 0 luxenbourg 3
+luxenbourg 3 luxenbourg 2
+luxenbourg 2 luxenbourg 0
+neepal 0 noway 1
+noway 1 noway 0
+-----
+Impossible
+-----
+10
+noway 1 noway 0
+neepal 0 luxenbourg 3
+luxenbourg 3 luxenbourg 2
+luxenbourg 2 luxenbourg 0
+noway 0 neepal 0
+-----
+</pre>

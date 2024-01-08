@@ -1,0 +1,87 @@
+<span class="lang-en">
+<p>Score : <var>1400</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>You are given strings <var>s</var> and <var>t</var>, both of length <var>N</var>.
+<var>s</var> and <var>t</var> consist of <code>0</code> and <code>1</code>. Additionally, in these strings, the same character never occurs three or more times in a row.</p>
+<p>You can modify <var>s</var> by repeatedly performing the following operation:</p>
+<ul>
+<li>Choose an index <var>i</var> (<var>1 \leq i \leq N</var>) freely and invert the <var>i</var>-th character in <var>s</var> (that is, replace <code>0</code> with <code>1</code>, and <code>1</code> with <code>0</code>), under the condition that the same character would not occur three or more times in a row in <var>s</var> after the operation.</li>
+</ul>
+<p>Your objective is to make <var>s</var> equal to <var>t</var>.
+Find the minimum number of operations required.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 \leq N \leq 5000</var></li>
+<li>The lengths of <var>s</var> and <var>t</var> are both <var>N</var>.</li>
+<li><var>s</var> and <var>t</var> consists of <code>0</code> and <code>1</code>.</li>
+<li>In <var>s</var> and <var>t</var>, the same character never occurs three or more times in a row.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+<var>s</var>
+<var>t</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Find the minimum number of operations required to make <var>s</var> equal to <var>t</var>. It can be proved that the objective is always achievable in a finite number of operations.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>4
+0011
+0101
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>4
+</pre>
+<p>One possible solution is <code>0011</code> → <code>1011</code> → <code>1001</code> → <code>1101</code> → <code>0101</code>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>1
+0
+0
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>0
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>8
+00110011
+10101010
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>10
+</pre></section>
+</div>
+</span>

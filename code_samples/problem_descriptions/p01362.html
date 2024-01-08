@@ -1,0 +1,148 @@
+
+<H1><font color="#000">Problem D:</font> Dice Room</H1>
+
+<p>
+You are playing a popular video game which is famous for its depthful story and interesting
+puzzles. In the game you were locked in a mysterious house alone and there is no way to call for
+help, so you have to escape on yours own. However, almost every room in the house has some
+kind of puzzles and you cannot move to neighboring room without solving them.
+</p>
+
+<p>
+One of the puzzles you encountered in the house is following. In a room, there was a device
+which looked just like a dice and laid on a table in the center of the room. Direction was written
+on the wall. It read:
+</p>
+
+<p>
+      "This cube is a remote controller and you can manipulate a remote room, Dice
+      Room, by it. The room has also a cubic shape whose surfaces are made up of 3x3
+      unit squares and some squares have a hole on them large enough for you to go though
+      it. You can rotate this cube so that in the middle of rotation at least one edge always
+      touch the table, that is, to 4 directions. Rotating this cube affects the remote room
+      in the same way and positions of holes on the room change. To get through the
+      room, you should have holes on at least one of lower three squares on the front and
+      back side of the room."
+</p>
+
+<p>
+You can see current positions of holes by a monitor. Before going to Dice Room, you should
+rotate the cube so that you can go though the room. But you know rotating a room takes some
+time and you don’t have much time, so you should minimize the number of rotation. How many
+rotations do you need to make it possible to get though Dice Room?
+</p>
+
+<H2>Input</H2>
+
+<p>
+The input consists of several datasets. Each dataset contains 6 tables of 3x3 characters which
+describe the initial position of holes on each side. Each character is either '<span>*</span>' or '<span>.</span>'. A hole is
+indicated by '<span>*</span>'. The order which six sides appears in is: front, right, back, left, top, bottom.
+The order and orientation of them are described by this development view:
+</p>
+
+<center>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_diceRoom1">
+<p>
+Figure 4: Dice Room
+</p>
+</center>
+
+<center>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_diceRoom2">
+<p>
+Figure 5: available dice rotations
+</p>
+</center>
+
+<center>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_diceRoom3">
+<p>
+
+</p>
+</center>
+
+
+
+<p>
+
+There is a blank line after each dataset. The end of the input is indicated by a single '<span>#</span>'.
+</p>
+
+
+<H2>Output</H2>
+
+<p>
+Print the minimum number of rotations needed in a line for each dataset. You may assume all
+datasets have a solution.
+
+</p>
+
+<H2>Sample Input</H2>
+<pre>
+...
+...
+.*.
+...
+...
+.*.
+...
+...
+...
+...
+...
+.*.
+...
+...
+.*.
+...
+...
+...
+
+...
+.*.
+...
+*..
+...
+..*
+*.*
+*.*
+*.*
+*.*
+.*.
+*.*
+*..
+.*.
+..*
+*.*
+...
+*.*
+
+...
+.*.
+.*.
+...
+.**
+*..
+...
+...
+.*.
+.*.
+...
+*..
+..*
+...
+.**
+...
+*..
+...
+
+#
+</pre>
+
+<H2>Output for the Sample Input</H2>
+<pre>
+3
+1
+0
+</pre>

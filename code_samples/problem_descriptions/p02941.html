@@ -1,0 +1,93 @@
+<span class="lang-en">
+<p>Score : <var>800</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>There are <var>N</var> positive integers arranged in a circle.</p>
+<p>Now, the <var>i</var>-th number is <var>A_i</var>. Takahashi wants the <var>i</var>-th number to be <var>B_i</var>. For this objective, he will repeatedly perform the following operation:</p>
+<ul>
+<li>Choose an integer <var>i</var> such that <var>1 \leq i \leq N</var>.</li>
+<li>Let <var>a, b, c</var> be the <var>(i-1)</var>-th, <var>i</var>-th, and <var>(i+1)</var>-th numbers, respectively. Replace the <var>i</var>-th number with <var>a+b+c</var>.</li>
+</ul>
+<p>Here the <var>0</var>-th number is the <var>N</var>-th number, and the <var>(N+1)</var>-th number is the <var>1</var>-st number.</p>
+<p>Determine if Takahashi can achieve his objective.
+If the answer is yes, find the minimum number of operations required.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>3 \leq N \leq 2 \times 10^5</var></li>
+<li><var>1 \leq A_i, B_i \leq 10^9</var></li>
+<li>All values in input are integers.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+<var>A_1</var> <var>A_2</var> <var>...</var> <var>A_N</var>
+<var>B_1</var> <var>B_2</var> <var>...</var> <var>B_N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the minimum number of operations required, or <code>-1</code> if the objective cannot be achieved.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>3
+1 1 1
+13 5 7
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>4
+</pre>
+<p>Takahashi can achieve his objective by, for example, performing the following operations:</p>
+<ul>
+<li>Replace the second number with <var>3</var>.</li>
+<li>Replace the second number with <var>5</var>.</li>
+<li>Replace the third number with <var>7</var>.</li>
+<li>Replace the first number with <var>13</var>.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>4
+1 2 3 4
+2 3 4 5
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>-1
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>5
+5 6 5 2 1
+9817 1108 6890 4343 8704
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>25
+</pre></section>
+</div>
+</span>

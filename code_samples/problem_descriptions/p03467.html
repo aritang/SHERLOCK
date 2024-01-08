@@ -1,0 +1,104 @@
+<span class="lang-en">
+<p>Score : <var>1400</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>Consider the following set of rules for encoding strings consisting of <code>0</code> and <code>1</code>:</p>
+<ul>
+<li>Strings <code>0</code> and <code>1</code> can be encoded as <code>0</code> and <code>1</code>, respectively. </li>
+<li>If strings <var>A</var> and <var>B</var> can be encoded as <var>P</var> and <var>Q</var>, respectively, then string <var>AB</var> can be encoded as <var>PQ</var>.</li>
+<li>If string <var>A</var> can be encoded as <var>P</var> and <var>K \geq 2</var> is a positive integer, then string <var>AA...A</var> (<var>A</var> repeated <var>K</var> times) can be encoded as <code>(</code><var>P</var><code>x</code><var>K</var><code>)</code>.</li>
+</ul>
+<p>For example, string <code>001001001</code>, among other possibilities, can be encoded as <code>001001001</code>, <code>00(1(0x2)x2)1</code> and <code>(001x3)</code>.</p>
+<p>Let's call string <var>A</var> a subset of string <var>B</var> if:</p>
+<ul>
+<li><var>A</var> and <var>B</var> are equal in length and consist of <code>0</code> and <code>1</code>;</li>
+<li>for all indices <var>i</var> such that <var>A_i</var> = <code>1</code>, it's also true that <var>B_i</var> = <code>1</code>.</li>
+</ul>
+<p>You are given string <var>S</var> consisting of <code>0</code> and <code>1</code>. Find the total number of distinct encodings of all subsets of <var>S</var>, modulo <var>998244353</var>.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 \leq |S| \leq 100</var></li>
+<li><var>S</var> consists of <code>0</code> and <code>1</code>.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>S</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the total number of distinct encodings of all subsets of <var>S</var> modulo <var>998244353</var>.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>011
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>9
+</pre>
+<p>There are four subsets of <var>S</var>:</p>
+<ul>
+<li><code>011</code> can be encoded as <code>011</code> and <code>0(1x2)</code>;</li>
+<li><code>010</code> can be encoded as <code>010</code>;</li>
+<li><code>001</code> can be encoded as <code>001</code> and <code>(0x2)1</code>;</li>
+<li><code>000</code> can be encoded as <code>000</code>, <code>0(0x2)</code>, <code>(0x2)0</code> and <code>(0x3)</code>.</li>
+</ul>
+<p>Thus, the total number of encodings of all subsets of <var>S</var> is <var>2 + 1 + 2 + 4 = 9</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>0000
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>10
+</pre>
+<p>This time <var>S</var> has only one subset, but it can be encoded in <var>10</var> different ways.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>101110
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>156
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 4</h3><pre>001110111010110001100000100111
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 4</h3><pre>363383189
+</pre>
+<p>Don't forget to take the result modulo <var>998244353</var>.</p></section>
+</div>
+</span>

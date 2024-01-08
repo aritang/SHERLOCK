@@ -1,0 +1,77 @@
+<span class="lang-en">
+<p>Score : <var>200</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>You have <var>N</var> apples, called Apple <var>1</var>, Apple <var>2</var>, Apple <var>3</var>, ..., Apple <var>N</var>. The <em>flavor</em> of Apple <var>i</var> is <var>L+i-1</var>, which can be negative.</p>
+<p>You can make an apple pie using one or more of the apples. The flavor of the apple pie will be the sum of the flavors of the apples used.</p>
+<p>You planned to make an apple pie using all of the apples, but being hungry tempts you to eat one of them, which can no longer be used to make the apple pie.</p>
+<p>You want to make an apple pie that is as similar as possible to the one that you planned to make. Thus, you will choose the apple to eat so that the flavor of the apple pie made of the remaining <var>N-1</var> apples will have the smallest possible absolute difference from the flavor of the apple pie made of all the <var>N</var> apples.</p>
+<p>Find the flavor of the apple pie made of the remaining <var>N-1</var> apples when you choose the apple to eat as above.</p>
+<p>We can prove that this value is uniquely determined.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>2 \leq N \leq 200</var></li>
+<li><var>-100 \leq L \leq 100</var></li>
+<li>All values in input are integers.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var> <var>L</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Find the flavor of the apple pie made of the remaining <var>N-1</var> apples when you optimally choose the apple to eat.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>5 2
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>18
+</pre>
+<p>The flavors of Apple <var>1</var>, <var>2</var>, <var>3</var>, <var>4</var>, and <var>5</var> are <var>2</var>, <var>3</var>, <var>4</var>, <var>5</var>, and <var>6</var>, respectively. The optimal choice is to eat Apple <var>1</var>, so the answer is <var>3+4+5+6=18</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>3 -1
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>0
+</pre>
+<p>The flavors of Apple <var>1</var>, <var>2</var>, and <var>3</var> are <var>-1</var>, <var>0</var>, and <var>1</var>, respectively. The optimal choice is to eat Apple <var>2</var>, so the answer is <var>(-1)+1=0</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>30 -50
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>-1044
+</pre></section>
+</div>
+</span>

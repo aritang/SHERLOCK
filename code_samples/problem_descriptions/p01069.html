@@ -1,0 +1,76 @@
+
+
+
+<h1>Sum of Sequences</h1>
+<h2>Problem</h2>
+
+<p>
+<var>n</var>個の要素を持つ数列<var>A</var>、<var>m</var>個の要素を持つ数列<var>B</var>、
+それぞれが整数<var>c</var>からなる<var>q</var>個のクエリが与えられる。
+
+
+<br>
+各クエリについて、<br>
+数列<var>A</var>の[<var>l<sub>a</sub></var>,<var>r<sub>a</sub></var>]を全て足した数と数列<var>B</var>の[<var>l<sub>b</sub></var>,<var>r<sub>b</sub></var>]を全て足した数の差の絶対値が<var>c</var>になる<var>l<sub>a</sub></var>,<var>r<sub>a</sub></var>,<var>l<sub>b</sub></var>,<var>r<sub>b</sub></var> (0 &le; <var>l<sub>a</sub></var> &le; <var>r<sub>a</sub></var> &le; <var>n</var>&minus;1, 0 &le; <var>l<sub>b</sub></var> &le; <var>r<sub>b</sub></var> &le; <var>m</var>&minus;1, 配列の番号は0番から始まる) の組み合わせの数を求めよ。
+</p>
+
+<h2>Input</h2>
+
+<pre>
+<var>n</var> <var>m</var> <var>q</var>
+<var>a<sub>0</sub></var> <var>a<sub>1</sub></var> ... <var>a<sub>n&minus;1</sub></var>
+<var>b<sub>0</sub></var> <var>b<sub>1</sub></var> ... <var>b<sub>m&minus;1</sub></var>
+<var>c<sub>0</sub></var>
+<var>c<sub>1</sub></var>
+...
+<var>c<sub>q&minus;1</sub></var>
+</pre>
+
+<p>
+入力は全て整数で与えられる。<br>
+1行目に数列の要素数<var>n</var>と<var>m</var>、クエリ数<var>q</var>が与えられる。<br>
+2行目に数列<var>A</var>の要素、3行目に数列<var>B</var>の要素が空白区切りで与えられる。<br>
+4行目から<var>q</var>行に各クエリの値<var>c<sub>i</sub></var>が与えられる。
+</p>
+
+<h2>Constraints</h2>
+
+<ul>
+  <li>1 &le; <var>n</var>, <var>m</var> &le; 4×10<sup>4</sup></li>
+  <li>1 &le; <var>q</var> &le; 10<sup>5</sup></li>
+  <li>1 &le; <var>a<sub>i</sub></var>, <var>b<sub>i</sub></var> &le; 5</li>
+  <li>0 &le; <var>c<sub>i</sub></var> &le; 2×10<sup>5</sup></li>
+</ul>
+
+<h2>Output</h2>
+<p>
+出力は<var>q</var>行からなる。各クエリの組み合わせの数を順番に一行に出力せよ。
+</p>
+
+<h2>Sample Input 1</h2>
+<pre>
+3 3 1
+1 2 3
+3 1 2
+3
+</pre>
+
+<h2>Sample Output 1</h2>
+<pre>
+6
+</pre>
+
+<h2>Sample Input 2</h2>
+<pre>
+5 4 2
+1 2 3 4 5
+2 2 2 2
+11
+12
+</pre>
+
+<h2>Sample Output 2</h2>
+<pre>
+3
+4
+</pre>

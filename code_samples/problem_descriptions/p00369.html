@@ -1,0 +1,71 @@
+<H1>Paper Fortune</H1>
+
+<p>
+If you visit Aizu Akabeko shrine, you will find a unique paper fortune on which a number with more than one digit is written. 
+</p>
+
+<p>
+Each digit ranges from 1 to 9 (zero is avoided because it is considered a bad omen in this shrine). Using this string of numeric values, you can predict how many years it will take before your dream comes true. Cut up the string into more than one segment and compare their values. The difference between the largest and smallest value will give you the number of years before your wish will be fulfilled. Therefore, the result varies depending on the way you cut up the string. For example, if you are given a string 11121314 and divide it into segments, say, as 1,11,21,3,14, then the difference between the largest and smallest is 21 - 1 = 20. Another division 11,12,13,14 produces 3 (i.e. 14 - 11) years. Any random division produces a game of luck. However, you can search the minimum number of years using a program.
+  
+</p>
+
+<p>
+Given a string of numerical characters, write a program to search the minimum years before your wish will be fulfilled.
+  
+</p>
+
+<h2>Input</h2>
+
+<p>
+  The input is given in the following format.
+</p>
+
+<pre>
+<var>n</var>
+</pre>
+
+<p>
+  An integer <var>n</var> is given. Its number of digits is from 2 to 100,000, and each digit ranges from 1 to 9.
+</p>
+
+
+<h2>Output</h2>
+
+<p>
+  Output the minimum number of years before your wish will be fulfilled.
+</p>
+
+<h2>Sample Input 1</h2>
+
+<pre>
+11121314
+</pre>
+
+<h2>Sample Output 1</h2>
+<pre>
+3
+</pre>
+
+
+<h2>Sample Input 2</h2>
+
+<pre>
+123125129
+</pre>
+
+<h2>Sample Output 2</h2>
+<pre>
+6
+</pre>
+
+
+<h2>Sample Input 3</h2>
+
+<pre>
+119138
+</pre>
+
+<h2>Sample Output 3</h2>
+<pre>
+5
+</pre>

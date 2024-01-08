@@ -1,0 +1,70 @@
+<span class="lang-en">
+<p>Score : <var>800</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>You are given integers <var>N,\ A</var> and <var>B</var>.
+Determine if there exists a permutation <var>(P_0,\ P_1,\ ...\ P_{2^N-1})</var> of <var>(0,\ 1,\ ...\ 2^N-1)</var> that satisfies all of the following conditions, and create one such permutation if it exists.</p>
+<ul>
+<li><var>P_0=A</var></li>
+<li><var>P_{2^N-1}=B</var></li>
+<li>For all <var>0 \leq i &lt; 2^N-1</var>, the binary representations of <var>P_i</var> and <var>P_{i+1}</var> differ by exactly one bit.</li>
+</ul>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 \leq N \leq 17</var></li>
+<li><var>0 \leq A \leq 2^N-1</var></li>
+<li><var>0 \leq B \leq 2^N-1</var></li>
+<li><var>A \neq B</var></li>
+<li>All values in input are integers.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var> <var>A</var> <var>B</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>If there is no permutation that satisfies the conditions, print <code>NO</code>.</p>
+<p>If there is such a permutation, print <code>YES</code> in the first line.
+Then, print <var>(P_0,\ P_1,\ ...\ P_{2^N-1})</var> in the second line, with spaces in between.
+If there are multiple solutions, any of them is accepted.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>2 1 3
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>YES
+1 0 2 3
+</pre>
+<p>The binary representation of <var>P=(1,0,2,3)</var> is <var>(01,00,10,11)</var>, where any two adjacent elements differ by exactly one bit.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>3 2 1
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>NO
+</pre></section>
+</div>
+</span>

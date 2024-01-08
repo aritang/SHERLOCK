@@ -1,0 +1,81 @@
+<span class="lang-en">
+<p>Score : <var>500</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>Given are <var>N</var> positive integers <var>A_1,...,A_N</var>.</p>
+<p>Consider positive integers <var>B_1, ..., B_N</var> that satisfy the following condition.</p>
+<p>Condition: For any <var>i, j</var> such that <var>1 \leq i &lt; j \leq N</var>, <var>A_i B_i = A_j B_j</var> holds.</p>
+<p>Find the minimum possible value of <var>B_1 + ... + B_N</var> for such <var>B_1,...,B_N</var>.</p>
+<p>Since the answer can be enormous, print the sum modulo (<var>10^9 +7</var>).</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 \leq N \leq 10^4</var></li>
+<li><var>1 \leq A_i \leq 10^6</var></li>
+<li>All values in input are integers.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+<var>A_1</var> <var>...</var> <var>A_N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the minimum possible value of <var>B_1 + ... + B_N</var> for <var>B_1,...,B_N</var> that satisfy the condition, modulo (<var>10^9 +7</var>).</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>3
+2 3 4
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>13
+</pre>
+<p>Let <var>B_1=6</var>, <var>B_2=4</var>, and <var>B_3=3</var>, and the condition will be satisfied.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>5
+12 12 12 12 12
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>5
+</pre>
+<p>We can let all <var>B_i</var> be <var>1</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>3
+1000000 999999 999998
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>996989508
+</pre>
+<p>Print the sum modulo <var>(10^9+7)</var>.</p></section>
+</div>
+</span>

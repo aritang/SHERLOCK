@@ -1,0 +1,65 @@
+<span class="lang-en">
+<p>Score : <var>700</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>You are given <var>N</var> integers <var>A_1</var>, <var>A_2</var>, ..., <var>A_N</var>.</p>
+<p>Consider the sums of all non-empty subsequences of <var>A</var>. There are <var>2^N - 1</var> such sums, an odd number.</p>
+<p>Let the list of these sums in non-decreasing order be <var>S_1</var>, <var>S_2</var>, ..., <var>S_{2^N - 1}</var>.</p>
+<p>Find the median of this list, <var>S_{2^{N-1}}</var>.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 \leq N \leq 2000</var></li>
+<li><var>1 \leq A_i \leq 2000</var></li>
+<li>All input values are integers.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+<var>A_1</var> <var>A_2</var> <var>...</var> <var>A_N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the median of the sorted list of the sums of all non-empty subsequences of <var>A</var>.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>3
+1 2 1
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>2
+</pre>
+<p>In this case, <var>S = (1, 1, 2, 2, 3, 3, 4)</var>. Its median is <var>S_4 = 2</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>1
+58
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>58
+</pre>
+<p>In this case, <var>S = (58)</var>.</p></section>
+</div>
+</span>

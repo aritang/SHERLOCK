@@ -1,0 +1,92 @@
+<h2>Draw in Straight Lines</h2>
+<P>
+You plan to draw a black-and-white painting on a rectangular canvas. The painting will be a grid array of pixels, either black or white. You can paint black or white lines or dots on the initially white canvas.
+</p>
+
+<p>
+  You can apply a sequence of the following two operations in any order.
+</p>
+
+<ul>
+  <li> Painting pixels on a horizontal or vertical line segment, single pixel wide and two or more pixel long, either black or white. This operation has a cost proportional to the length (the number of pixels) of the line segment multiplied by a specified coefficient in addition to a specified constant cost.
+    </li>
+  <li> Painting a single pixel, either black or white. This operation has a specified constant cost.
+  </li>
+</ul>
+
+<p>
+  You can overpaint already painted pixels as long as the following conditions are satisfied.
+</p>
+<ul>
+  <li> The pixel has been painted at most once before. Overpainting a pixel too many times results in too thick layers of inks, making the picture look ugly. Note that painting a pixel with the same color is also counted as overpainting. For instance, if you have painted a pixel with black twice, you can paint it neither black nor white anymore.
+</li>
+  <li> The pixel once painted white should not be overpainted with the black ink. As the white ink takes very long to dry, overpainting the same pixel black would make the pixel gray, rather than black. The reverse, that is, painting white over a pixel already painted black, has no problem.
+  </li>
+</ul>
+<p>
+  Your task is to compute the minimum total cost to draw the specified image.
+</p>
+
+<h3>Input</h3>
+<p>
+  The input consists of a single test case. The first line contains five integers $n$, $m$, $a$, $b$, and $c$, where $n$ ($1 \leq n \leq 40$) and $m$ ($1 \leq m \leq 40$) are the height and the width of the canvas in the number of pixels, and $a$ ($0 \leq a \leq 40$), $b$ ($0 \leq b \leq 40$), and $c$ ($0 \leq c \leq 40$) are constants defining painting costs as follows. Painting a line segment of length $l$ costs $al + b$ and painting a single pixel costs $c$. These three constants satisfy $c \leq a + b$.
+</p>
+
+<p>
+The next $n$ lines show the black-and-white image you want to draw. Each of the lines contains a string of length $m$. The $j$-th character of the $i$-th string is ‘<span>#</span>’ if the color of the pixel in the $i$-th row and the $j$-th column is to be black, and it is ‘<span>.</span>’ if the color is to be white.
+</p>
+
+<h3>Output</h3>
+<p>
+  Output the minimum cost.
+</p>
+
+<h3>Sample Input 1 </h3>
+<pre>
+3 3 1 2 3
+.#.
+###
+.#.
+</pre>
+<h3>Sample Output 1</h3>
+<pre>
+10
+</pre>
+<h3>Sample Input 2 </h3>
+<pre>
+2 7 0 1 1
+###.###
+###.###
+</pre>
+<h3>Sample Output 2</h3>
+<pre>
+3
+</pre>
+<h3>Sample Input 3 </h3>
+<pre>
+5 5 1 4 4
+..#..
+..#..
+##.##
+..#..
+..#..
+</pre>
+<h3>Sample Output 3</h3>
+<pre>
+24
+</pre>
+<h3>Sample Input 4 </h3>
+<pre>
+7 24 1 10 10
+###...###..#####....###.
+.#...#...#.#....#..#...#
+.#..#......#....#.#.....
+.#..#......#####..#.....
+.#..#......#......#.....
+.#...#...#.#.......#...#
+###...###..#........###.
+</pre>
+<h3>Sample Output 4</h3>
+<pre>
+256
+</pre>

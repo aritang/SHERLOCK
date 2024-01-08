@@ -1,0 +1,86 @@
+
+
+
+
+<H1>Boring Commercial</H1>
+
+<p>
+    Now it is spring holidays. A lazy student has finally passed all final examination, and he decided to just kick back and just watch TV all day. Oh, his
+only source of entertainment is watching TV. And TV commercial, as usual, are
+a big nuisance for him. He can watch any thing on television, but cannot bear
+even a single second of commercial. So to prevent himself from the boredom of
+seeing the boring commercial, he keeps shuffling through the TV channels, so
+that he can watch programs on different channels without seeing even a single
+commercial.
+
+</p>
+
+<p>
+Given the number of channels, and the duration at which the TV commercials
+are showed on each of the channels, you have to write a program which will
+print the longest interval for which the lazy student can watch the television by
+shuffling between the different channels without ever seeing an TV commercial.
+</p>
+<p>    
+For example, consider the simplified situation where there are only three
+television channels, and suppose that he is watching TV from 2100 hrs to 2400
+hrs. Suppose that the commercials are displayed at following time on each of
+the channels.
+</p>
+
+<ul>
+<li> Channel 1: 2100 to 2130, 2200 to 2230 and 2300 to 2330</li>
+<li> Channel 2: 2130 to 2200, 2330 to 2400</li>
+<li> Channel 3: 2100 to 2130, 2330 to 2400</li>
+</ul>
+
+<p>
+    Then in this case, he can watch TV without getting interrupted by commercials for full 3 hours by watching Channel 2 from 2100 to 2130, then Channel 3
+from 2130 to 2330, and then Channel 1 from 2330 to 2400.
+</p>
+
+<H2>Input</H2>
+
+<p>
+The input will consist of several cases. In each case, the first line of the input
+will be n, the number of channels, which will then be followed by p and q, the
+time interval between which he will be watching the TV. It will be followed by
+2n lines, giving the time slots for each of the channels. For each channel, the
+first line will be k, the number of commercial slots, and it will then be followed
+by 2k numbers giving the commercial slots in order.
+</p>
+<p>
+    The input will be terminated by values 0 for each of n, p, q. This case should
+not be processed.
+</p>
+
+<H2>Output</H2>
+
+
+
+<p>
+For each case, you have to output the maximum duration (in minutes) for which
+he can watch television without seeing any commercial.
+</p>
+
+<H2>Sample Input</H2>
+<pre>
+1 2100 2400
+1
+2130 2200
+3 2100 2400
+3
+2100 2130 2200 2230 2300 2330
+2
+2130 2200 2330 2400
+2
+2100 2130 2330 2400
+0 0 0
+
+</pre>
+
+<H2>Output for the Sample Input</H2>
+<pre>
+120
+180
+</pre>

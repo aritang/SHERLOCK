@@ -1,0 +1,80 @@
+<span class="lang-en">
+<p>Score : <var>400</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>Caracal is fighting with a monster.</p>
+<p>The <em>health</em> of the monster is <var>H</var>.</p>
+<p>Caracal can attack by choosing one monster. When a monster is attacked, depending on that monster's health, the following happens:</p>
+<ul>
+<li>If the monster's health is <var>1</var>, it drops to <var>0</var>.</li>
+<li>If the monster's health, <var>X</var>, is greater than <var>1</var>, that monster disappears. Then, two new monsters appear, each with the health of <var>\lfloor X/2 \rfloor</var>.</li>
+</ul>
+<p>(<var>\lfloor r \rfloor</var> denotes the greatest integer not exceeding <var>r</var>.)</p>
+<p>Caracal wins when the healths of all existing monsters become <var>0</var> or below.</p>
+<p>Find the minimum number of attacks Caracal needs to make before winning.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 \leq H \leq 10^{12}</var></li>
+<li>All values in input are integers.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>H</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Find the minimum number of attacks Caracal needs to make before winning.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>2
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>3
+</pre>
+<p>When Caracal attacks the initial monster, it disappears, and two monsters appear, each with the health of <var>1</var>.</p>
+<p>Then, Caracal can attack each of these new monsters once and win with a total of three attacks.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>4
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>7
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>1000000000000
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>1099511627775
+</pre></section>
+</div>
+</span>

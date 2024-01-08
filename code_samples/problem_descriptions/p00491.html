@@ -1,0 +1,150 @@
+
+
+
+<H1>パスタ (Pasta)  </H1>
+
+<h2>  問題</h2>
+<p>
+あなたはパスタが大好物であり，毎日，晩御飯にパスタを作って食べている．あなたはトマトソース，クリームソース，バジルソースの 3 種類のパスタを作ることができる．
+</p>
+
+<p>
+N 日間の晩御飯の予定を考えることにした．それぞれの日に 3 種類のパスタから 1 種類を選ぶ．ただし，同じパスタが続くと飽きてしまうので，3 日以上連続して同じパスタを選んではいけない．また，N 日のうちの K 日分のパスタはすでに決めてある．
+</p>
+
+<p>
+入力として N の値と，K 日分のパスタの情報が与えられたとき，条件をみたす予定が何通りあるかを 10000 で割った余りを求めるプログラムを作成せよ．
+</p>
+
+<h2>  入力</h2>
+<p>
+入力は K + 1 行からなる．
+</p>
+
+<p>
+1 行目には 2 つの整数 N, K (3 ≦ N ≦ 100，1 ≦ K ≦ N) が空白を区切りとして書かれている．
+
+<p>
+1 + i 行目 (1 ≦ i ≦ K) には 2 つの整数 A<sub>i</sub>, B<sub>i</sub> (1 ≦ A<sub>i</sub> ≦ N，1 ≦ B<sub>i</sub> ≦ 3) が空白を区切りとして書かれている．これは，A<sub>i</sub> 日目のパスタはすでに決まっており，B<sub>i</sub> = 1 のときはトマトソースであり，B<sub>i</sub> = 2 のときはクリームソースであり，B<sub>i</sub> = 3 のときはバジルソースであることを表す．A<sub>i</sub> (1 ≦ i ≦ K) は全て異なる．与えられる入力データにおいて，条件をみたす予定は 1 通り以上あることが保証されている．
+</p>
+
+<h2>  出力</h2>
+<p>
+条件をみたす予定が何通りあるかを 10000 で割った余りを 1 行で出力せよ．
+</p>
+
+<h2>  入出力例</h2>
+
+<h3>入力例 1</h3>
+
+  <pre>
+5 3
+3 1
+1 1
+4 2
+</pre>
+
+<h3>出力例 1</h3>
+   <pre>
+6
+</pre>
+
+
+<p>
+入出力例 1 において，あなたは 5 日間の予定を考える．1 日目と 3 日目はトマトソースであり，4 日目はクリームソースである．また，3 日以上連続して同じパスタを選んではいけない．これらの条件をみたす予定は 6 通りある．
+</p>
+
+<table style="margin-left: 50px; margin-right: 50px;">
+ <tr>
+  <th></th>
+  <th>&nbsp;1日目&nbsp;</th>
+  <th>&nbsp;2日目&nbsp;</th>
+  <th>&nbsp;3日目&nbsp;</th>
+  <th>&nbsp;4日目&nbsp;</th>
+  <th>&nbsp;5日目&nbsp;</th>
+ </tr>
+ <tr>
+  <th>予定 1&nbsp;&nbsp;&nbsp;</th>
+  <td align="center">1</td>
+  <td align="center">2</td>
+  <td align="center">1</td>
+  <td align="center">2</td>
+  <td align="center">1</td>
+ </tr>
+ <tr>
+  <th>予定 2&nbsp;&nbsp;&nbsp;</th>
+  <td align="center">1</td>
+  <td align="center">2</td>
+  <td align="center">1</td>
+  <td align="center">2</td>
+  <td align="center">2</td>
+ </tr>
+ <tr>
+  <th>予定 3&nbsp;&nbsp;&nbsp;</th>
+  <td align="center">1</td>
+  <td align="center">2</td>
+  <td align="center">1</td>
+  <td align="center">2</td>
+  <td align="center">3</td>
+ </tr>
+ <tr>
+  <th>予定 4&nbsp;&nbsp;&nbsp;</th>
+  <td align="center">1</td>
+  <td align="center">3</td>
+  <td align="center">1</td>
+  <td align="center">2</td>
+  <td align="center">1</td>
+ </tr>
+ <tr>
+  <th>予定 5&nbsp;&nbsp;&nbsp;</th>
+  <td align="center">1</td>
+  <td align="center">3</td>
+  <td align="center">1</td>
+  <td align="center">2</td>
+  <td align="center">2</td>
+ </tr>
+ <tr>
+  <th>予定 6&nbsp;&nbsp;&nbsp;</th>
+  <td align="center">1</td>
+  <td align="center">3</td>
+  <td align="center">1</td>
+  <td align="center">2</td>
+  <td align="center">3</td>
+ </tr>
+</table>
+<br>
+
+<p>
+この表では，1 はトマトソースを，2 はクリームソースを，3 はバジルソースを表す．
+</p>
+
+<br>
+
+<h3>入力例 2</h3>  
+
+  <pre>
+20 5
+10 2
+4 3
+12 1
+13 2
+9 1
+</pre>
+
+<h3>出力例 2</h3>
+
+   <pre>
+2640
+</pre>
+
+
+
+<p>
+入出力例 2 において，条件をみたす予定は全部で 4112640 通りある．それを 10000 で割った余りである 2640 を出力する．
+</p>
+
+<div class="source">
+<p class="source">
+問題文と自動審判に使われるデータは、<a href="http://www.ioi-jp.org">情報オリンピック日本委員会</a>が作成し公開している問題文と採点用テストデータです。
+</p>
+</div>

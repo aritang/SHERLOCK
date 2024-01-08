@@ -1,0 +1,88 @@
+<h2>Halting Problem</h2>
+
+<p>
+  A unique law is enforced in the Republic of Finite Loop. Under the law, programs that never halt are regarded as viruses. Releasing such a program is a cybercrime. So, you want to make sure that your software products always halt under their normal use.
+</p>
+
+<p>
+  It is widely known that there exists no algorithm that can determine whether an arbitrary given program halts or not for a given arbitrary input. Fortunately, your products are based on a simple computation model given below. So, you can write a program that can tell whether a given program based on the model will eventually halt for a given input.
+</p>
+
+<p>
+  The computation model for the products has only one variable $x$ and $N + 1$ states, numbered $1$ through $N + 1$. The variable $x$ can store any integer value. The state $N + 1$ means that the program has terminated. For each integer $i$ ($1 \leq i \leq N$), the behavior of the program in the state $i$ is described by five integers $a_i$, $b_i$, $c_i$, $d_i$ and $e_i$ ($c_i$ and $e_i$ are indices of states).
+</p>
+
+<p>
+  On start of a program, its state is initialized to $1$, and the value of $x$ is initialized by $x_0$, the input to the program. When the program is in the state $i$ ($1 \leq i \leq N$), either of the following takes place in one execution step:
+</p>
+
+<ul>
+<li> if $x$ is equal to $a_i$, the value of $x$ changes to $x + b_i$ and the program state becomes $c_i$;</li>
+<li> otherwise, the value of $x$ changes to $x + d_i$ and the program state becomes $e_i$.</li>
+</ul>
+
+<p>
+  The program terminates when the program state becomes $N + 1$.
+</p>
+
+<p>
+  Your task is to write a program to determine whether a given program eventually halts or not for a given input, and, if it halts, to compute how many steps are executed. The initialization is not counted as a step.
+</p>
+
+
+<h3>Input</h3>
+<p>
+  The input consists of a single test case of the following format.
+</p>
+<pre>
+$N$ $x_0$
+$a_1$ $b_1$ $c_1$ $d_1$ $e_1$
+.
+.
+.
+$a_N$ $b_N$ $c_N$ $d_N$ $e_N$
+</pre>
+<p>
+  The first line contains two integers $N$ ($1 \leq N \leq 10^5$) and $x_0$ ($−10^{13} \leq x_0 \leq 10^{13}$). The number of the states of the program is $N + 1$. $x_0$ is the initial value of the variable $x$. Each of the next $N$ lines contains five integers $a_i$, $b_i$, $c_i$, $d_i$ and $e_i$ that determine the behavior of the program when it is in the state $i$. $a_i$, $b_i$ and $d_i$ are integers between $−10^{13}$ and $10^{13}$, inclusive. $c_i$ and $e_i$ are integers between $1$ and $N + 1$, inclusive.
+</p>
+
+<h3>Output</h3>
+<p>
+  If the given program eventually halts with the given input, output a single integer in a line which is the number of steps executed until the program terminates. Since the number may be very large, output the number modulo $10^9 + 7$.
+</p>
+<p>
+  Output $-1$ if the program will never halt.
+</p>
+
+<h3>Sample Input 1</h3>
+<pre>
+2 0
+5 1 2 1 1
+10 1 3 2 2
+</pre>
+<h3>Sample Output 1</h3>
+<pre>
+9
+</pre>
+<h3>Sample Input 2 </h3>
+<pre>
+3 1
+0 1 4 2 3
+1 0 1 1 3
+3 -2 2 1 4
+</pre>
+<h3>Sample Output 2</h3>
+<pre>
+-1
+</pre>
+<h3>Sample Input 3</h3>
+<pre>
+3 3
+1 -1 2 2 2
+1 1 1 -1 3
+1 1 4 -2 1
+</pre>
+<h3>Sample Output 3</h3>
+<pre>
+-1
+</pre>

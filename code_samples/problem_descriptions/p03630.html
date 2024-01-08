@@ -1,0 +1,101 @@
+<span class="lang-en">
+<p>Score : <var>700</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>We have a board with an <var>H \times W</var> grid.
+Each square in the grid is painted in black or white. The square at the <var>i</var>-th row from the top and <var>j</var>-th column from the left is black if the <var>j</var>-th character in <var>S_i</var> is <code>#</code>, and white if that character is <code>.</code>.</p>
+<p>Snuke can perform the following operation on the grid any number of times:</p>
+<ul>
+<li>Select a row or column in the grid, and invert the color of all the squares in that row or column (that is, black squares become white and vice versa).</li>
+</ul>
+<p>Then, Snuke draws a rectangle along grid lines. Here, all the squares contained in the rectangle must be painted in black.</p>
+<p>Find the maximum possible area of Snuke's rectangle when the operation is performed optimally.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>2 \leq H \leq 2000</var></li>
+<li><var>2 \leq W \leq 2000</var></li>
+<li><var>|S_i| = W</var></li>
+<li><var>S_i</var> consists of <code>#</code> and <code>.</code>.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>H</var> <var>W</var>
+<var>S_1</var>
+<var>S_2</var>
+<var>:</var>
+<var>S_H</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the maximum possible area of Snuke's rectangle.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>3 3
+..#
+##.
+.#.
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>6
+</pre>
+<p>If the first row from the top and the third column from the left are inverted, a <var>2 \times 3</var> rectangle can be drawn, as shown below:</p>
+<p><img alt="" src="https://atcoder.jp/img/arc081/2995c3921ed4dffc8ee528b63b9c6118.png"/></p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>4 4
+....
+....
+....
+....
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>16
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>10 8
+##...#.#
+##...#.#
+..###.#.
+#.##.#.#
+.#..#.#.
+..##.#.#
+##.#.#..
+...#.#..
+###.#.##
+###..###
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>27
+</pre></section>
+</div>
+</span>

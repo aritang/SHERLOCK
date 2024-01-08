@@ -1,0 +1,82 @@
+
+<H1>Merge Sort</H1>
+
+
+<p>
+Write a program of a Merge Sort algorithm implemented by the following pseudocode. You should also report the number of comparisons in the Merge function.
+</p>
+
+<pre>
+Merge(A, left, mid, right)
+  n1 = mid - left;
+  n2 = right - mid;
+  create array L[0...n1], R[0...n2]
+  for i = 0 to n1-1
+    do L[i] = A[left + i]
+  for i = 0 to n2-1
+    do R[i] = A[mid + i]
+  L[n1] = SENTINEL
+  R[n2] = SENTINEL
+  i = 0;
+  j = 0;
+  for k = left to right-1
+    if L[i] <= R[j]
+      then A[k] = L[i]
+           i = i + 1
+      else A[k] = R[j]
+           j = j + 1
+
+Merge-Sort(A, left, right){
+  if left+1 < right
+    then mid = (left + right)/2;
+         call Merge-Sort(A, left, mid)
+         call Merge-Sort(A, mid, right)
+         call Merge(A, left, mid, right)
+</pre>
+
+
+
+<H2>Input</H2>
+
+<p>
+In the first line <i>n</i> is given. In the second line, <i>n</i> integers are given. 
+</p>
+
+
+<H2>Output</H2>
+
+<p>
+In the first line, print the sequence S. Two consequtive elements should be separated by a space character.
+</p>
+
+<p>
+In the second line, print the number of comparisons.
+</p>
+
+<H2>Constraints</H2>
+
+<ul>
+<li>n &le; 500000</li>
+<li>0 &le; an element in S &le; 10<sup>9</sup></li>
+</ul>
+
+
+<H2>Sample Input 1</H2>
+<pre>
+10
+8 5 9 2 6 3 7 1 10 4
+</pre>
+
+<H2>Sample Output 1</H2>
+<pre>
+1 2 3 4 5 6 7 8 9 10
+34
+</pre>
+
+
+<H2>Notes</H2>
+<!--
+<a href="template/ALDS1_3_A_template.c" target="_blank">Template in C</a>
+-->
+
+

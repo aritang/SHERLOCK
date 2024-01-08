@@ -1,0 +1,84 @@
+<span class="lang-en">
+<p>Score : <var>300</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>We have two permutations <var>P</var> and <var>Q</var> of size <var>N</var> (that is, <var>P</var> and <var>Q</var> are both rearrangements of <var>(1,~2,~...,~N)</var>).</p>
+<p>There are <var>N!</var> possible permutations of size <var>N</var>. Among them, let <var>P</var> and <var>Q</var> be the <var>a</var>-th and <var>b</var>-th lexicographically smallest permutations, respectively. Find <var>|a - b|</var>.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Notes</h3><p>For two sequences <var>X</var> and <var>Y</var>, <var>X</var> is said to be lexicographically smaller than <var>Y</var> if and only if there exists an integer <var>k</var> such that <var>X_i = Y_i~(1 \leq i &lt; k)</var> and <var>X_k &lt; Y_k</var>.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>2 \leq N \leq 8</var></li>
+<li><var>P</var> and <var>Q</var> are permutations of size <var>N</var>.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+<var>P_1</var> <var>P_2</var> <var>...</var> <var>P_N</var>
+<var>Q_1</var> <var>Q_2</var> <var>...</var> <var>Q_N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print <var>|a - b|</var>.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>3
+1 3 2
+3 1 2
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>3
+</pre>
+<p>There are <var>6</var> permutations of size <var>3</var>: <var>(1,~2,~3)</var>, <var>(1,~3,~2)</var>, <var>(2,~1,~3)</var>, <var>(2,~3,~1)</var>, <var>(3,~1,~2)</var>, and <var>(3,~2,~1)</var>. Among them, <var>(1,~3,~2)</var> and <var>(3,~1,~2)</var> come <var>2</var>-nd and <var>5</var>-th in lexicographical order, so the answer is <var>|2 - 5| = 3</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>8
+7 3 5 4 2 1 6 8
+3 8 2 5 4 6 7 1
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>17517
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>3
+1 2 3
+1 2 3
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>0
+</pre></section>
+</div>
+</span>

@@ -1,0 +1,104 @@
+
+<script src="./IMAGE/varmath.js" charset="UTF-8"></script>
+
+<H1>Beautiful Currency</H1>
+
+<p>
+KM country has <var>N</var> kinds of coins and each coin has its value <var>a_i</var>.
+</p>
+
+<p>
+The king of the  country, Kita_masa, thought that the current currency  system is poor,
+and he decided to make it <i>beautiful</i> by changing the values of some (possibly no) coins.
+</p>
+
+<p>
+A currency  system is called beautiful
+if each coin has an integer value and the (<var>i</var>+1)-th smallest value is divisible by the <var>i</var>-th smallest value for all <var>i</var> (<var>1 \leq i \leq N-1</var>).
+</p>
+
+<p>
+For example, the set <var>{1, 5, 10, 50, 100, 500}</var>  is considered as a beautiful system,
+while the set <var>{1, 5, 10, 25, 50, 100}</var>  is NOT,
+because <var>25</var> is not divisible by <var>10</var>.
+</p>
+
+<p>
+Since changing the currency  system may confuse citizens,
+the king, Kita_masa, wants to minimize the maximum value of the confusion ratios.
+Here,  the confusion ratio for the change in the <var>i</var>-th coin is defined as <var>|a_i - b_i| / a_i</var>,
+where <var>a_i</var> and <var>b_i</var> is the value of <var>i</var>-th coin before and after the structure changes, respectively.
+</p>
+
+<p>
+Note that Kita_masa can change the value of each existing coin,
+but he cannot introduce new coins nor eliminate existing coins.
+After the modification, the values of two or more coins may coincide. 
+</p>
+
+<H2>Input</H2>
+
+<p>
+Each dataset contains two lines.
+The first line contains a single integer, <var>N</var>,
+and the second line contains <var>N</var> integers, <var>{a_i}</var>.
+</p>
+
+<p>
+You may assume the following constraints:
+</p>
+
+<p>
+<var>1 \leq N \leq 20</var>
+</p>
+
+<p>
+<var>1 \leq a_1 \lt a_2 \lt...  \lt a_N \lt 10^5</var>
+</p>
+
+<H2>Output</H2>
+
+<p>
+Output one number  that represents the minimum of the maximum value of the confusion ratios.
+The value may be printed with an arbitrary number of decimal digits,
+but may not contain an absolute error greater than or equal to <var>10^{-8}</var>.
+</p>
+
+<H2>Sample Input 1</H2>
+
+<pre>
+3
+6 11 12
+</pre>
+
+<H2>Output for the Sample Input 1</H2>
+
+<pre>
+0.090909090909
+</pre>
+
+<H2>Sample Input 2</H2>
+
+<pre>
+3
+6 11 24
+</pre>
+
+<H2>Output for the Sample Input 2</H2>
+
+<pre>
+0.090909090909
+</pre>
+
+<H2>Sample Input 3</H2>
+
+<pre>
+3
+6 11 30
+</pre>
+
+<H2>Output for the Sample Input 3</H2>
+
+<pre>
+0.166666666667
+</pre>

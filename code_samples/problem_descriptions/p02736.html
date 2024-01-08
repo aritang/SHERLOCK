@@ -1,0 +1,69 @@
+<span class="lang-en">
+<p>Score : <var>700</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>Given is a sequence of <var>N</var> digits <var>a_1a_2\ldots a_N</var>, where each element is <var>1</var>, <var>2</var>, or <var>3</var>.
+Let <var>x_{i,j}</var> defined as follows:</p>
+<ul>
+<li><var>x_{1,j} := a_j</var> <var>\quad</var> (<var>1 \leq j \leq N</var>)</li>
+<li><var>x_{i,j} := | x_{i-1,j} - x_{i-1,j+1} |</var> <var>\quad</var> (<var>2 \leq i \leq N</var> and <var>1 \leq j \leq N+1-i</var>)</li>
+</ul>
+<p>Find <var>x_{N,1}</var>.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>2 \leq N \leq 10^6</var></li>
+<li><var>a_i = 1,2,3</var> <var>(1 \leq i \leq N)</var></li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+<var>a_1</var><var>a_2</var><var>\ldots</var><var>a_N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print <var>x_{N,1}</var>.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>4
+1231
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>1
+</pre>
+<p><var>x_{1,1},x_{1,2},x_{1,3},x_{1,4}</var> are respectively <var>1,2,3,1</var>.</p>
+<p><var>x_{2,1},x_{2,2},x_{2,3}</var> are respectively <var>|1-2| = 1,|2-3| = 1,|3-1| = 2</var>.</p>
+<p><var>x_{3,1},x_{3,2}</var> are respectively <var>|1-1| = 0,|1-2| = 1</var>.</p>
+<p>Finally, <var>x_{4,1} = |0-1| = 1</var>, so the answer is <var>1</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>10
+2311312312
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>0
+</pre></section>
+</div>
+</span>

@@ -1,0 +1,107 @@
+
+
+
+<h1>かくれんぼう</H1>
+
+<p>
+たろう君はかくれんぼうが苦手です。隠れるとすぐ見つかっちゃうし、隠れている子をなかなか見つけることができません。見かねたお父さんは、超高性能位置探索システムを作ってくれました。これを使うと自分の位置を含めて、友達の位置を正確に知ることができます。鬼になったら、隠れている子を探すことが簡単にできるようになりました。
+</p>
+
+<!--
+見つけたい子の位置に行けば、それで OK のはずです。これを使っていることがばれると遊んでもらえなくなるので内緒で使います。
+-->
+
+<p>
+たろう君はさらにこのシステムを進化させ、鬼から自分が見えるか否かを判定する機能を付加することを思いつきました。これができれば、「もういいかい」と言われても、見える位置にいれば「まあだだよ」だし、見えない位置にいれば「もういいよ」ですね。いつも遊んでいる公園には大小さまざまな円筒形の壁があります。この壁は外からは中は見えないし、中から外も見えません。鬼と一緒に中に入ると別の壁がなければ見えちゃいます。
+</p>
+
+<center>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE1_hideandseek">
+</center>
+<br/>
+
+
+<p>
+たろう君はアイデアはいいのですが、ソフトを作るのが苦手です。そこで親友のあなたはたろう君に代わって、「鬼から見えないこと確認システム」のソフトウェアを作ることになりました。公園の壁は固定されていますが、たろう君と鬼のいろいろな位置情報に対して見えるか否かを判定する必要があります。
+</p>
+
+<p>
+公園にある壁の情報(中心の座標 (<var>wx</var>, <var>wy</var>) と 半径 <var>r</var>) とたろう君と鬼の位置情報(たろう君の位置の座標 (<var>tx</var>, <var>ty</var>) と鬼の位置の座標 (<var>sx</var>, <var>sy</var>) ) を入力とし、その位置で鬼からたろう君が見えるか否かを判定するプログラムを作成してください。
+</p>
+
+<p>
+なお、鬼からたろう君が見える場合には Danger、見えない場合には Safe と出力してください。鬼とたろう君の位置を結んだ線分上に壁がある場合には見えないものとし、鬼もたろう君も壁の上にはいないものとします。
+</p>
+
+
+
+
+<H2>Input</H2>
+<p>
+複数のデータセットが与えられます。各データセットは以下の形式で与えられます。
+</p>
+
+<pre>
+<var>n</var>
+<var>wx<sub>1</sub></var> <var>wy<sub>1</sub></var> <var>r<sub>1</sub></var>
+<var>wx<sub>2</sub></var> <var>wy<sub>2</sub></var> <var>r<sub>2</sub></var>
+:
+<var>wx<sub>n</sub></var> <var>wy<sub>n</sub></var> <var>r<sub>n</sub></var>
+<var>m</var>
+<var>tx<sub>1</sub></var> <var>ty<sub>1</sub></var> <var>sx<sub>1</sub></var> <var>sy<sub>1</sub></var>
+<var>tx<sub>2</sub></var> <var>ty<sub>2</sub></var> <var>sx<sub>2</sub></var> <var>sy<sub>2</sub></var>
+:
+<var>tx<sub>m</sub></var> <var>ty<sub>m</sub></var> <var>sx<sub>m</sub></var> <var>sy<sub>m</sub></var>
+</pre>
+
+<p>
+1 行目に円筒形の壁の数 <var>n</var> (0 &le; <var>n</var> &le; 100)、続く <var>n</var> 行に壁 <var>i</var> の中心の座標を表す整数 <var>wx<sub>i</sub></var>, <var>wy<sub>i</sub></var> (0 &le; <var>wx<sub>i</sub></var>, <var>wy<sub>i</sub></var> &le; 255) と半径を表す整数 <var>r<sub>i</sub></var> (1 &le; <var>r<sub>i</sub></var> &le; 255) が与えられます。
+</p>
+
+<p>
+続く行にたろう君と鬼の位置情報の個数 <var>m</var> (m &le; 100)、続く <var>m</var> 行に位置情報 <var>i</var> のたろう君の位置の座標を表す整数 <var>tx<sub>i</sub></var>, <var>ty<sub>i</sub></var> (0 &le; <var>tx<sub>i</sub></var>, <var>ty<sub>i</sub></var>  &le; 255) と鬼の位置の座標を表す整数 <var>sx<sub>i</sub></var>, <var>sy<sub>i</sub></var> (0 &le; <var>sx<sub>i</sub></var>, <var>sy<sub>i</sub></var> &le; 255)  が与えられます。
+</p>
+<p>
+また、円筒形の壁の一部だけが公園にあるということはなく、全ての壁は円筒として、公園の内部に入っています。
+</p>
+
+<p>
+<var>n</var> が 0 のとき入力の終わりを示します。データセットの数は 20 を超えません。
+</p>
+
+<H2>Output</H2>
+
+<p>
+各データセットについて、位置情報 <var>i</var> の判定結果 Danger または Safe を <var>i</var> 行目に出力してください。
+</p>
+
+<H2>Sample Input</H2>
+
+<pre>
+3
+6 6 3
+19 7 4
+21 8 1
+6
+5 4 2 11
+12 4 2 11
+11 9 2 11
+14 3 20 5
+17 9 20 5
+20 10 20 5
+0
+</pre>
+
+<H2>Output for the Sample Input</H2>
+
+<pre>
+Safe
+Safe
+Danger
+Safe
+Danger
+Safe
+</pre>
+
+
+

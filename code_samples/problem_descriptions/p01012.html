@@ -1,0 +1,98 @@
+
+
+<script src="./IMAGE/varmath.js" charset="UTF-8"></script>
+
+<h1>Planarian Regeneration</h1>
+<h2>Problem</h2>
+
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE3_ACPC2013Aizu_aizuicpc_planarian" width="250"><br/>
+<p>
+皆さん、「プラナリア」って知っていますか？<br/>
+プラナリアとは、日本では川の上流の石や枯葉などの裏に張り付いて生息している水生生物です。<br/>
+プラナリアの最も優れた能力はその「再生能力」です。プラナリアの再生能力は著しく、例えば、三等分するとそれぞれが再生し、数週間後には元の完全な状態のプラナリアが3匹できあがります。<br/>
+</p>
+
+<p>
+この度、会津の山奥の上流にて発見された新種のプラナリアの姿は長方形をしていて、プラナリアはある法則により再生します。
+このとき、プラナリアは下の図のように配置し、２つの手段でプラナリアの切断実験を行います。
+</p>
+
+<p>
+まず１つ目の手段として、垂直方向に切ることを考えます。一度の切断では、すべての断片を水平方向の長さが(断片の頭に近い部分):(断片の頭に遠い部分)=<var>m </var>:<var>n </var>になるように切断します。この動作を<var>x </var>回繰り返します。
+</p>
+
+<p>
+次に２つ目の手段として、水平方向に切ることを考えます。一度の切断では、すべての断片を垂直方向の長さが(断片の右端に近い部分):(断片の左端に近い部分)=<var>k </var>:<var>l </var>に切断します。この動作を<var>y </var>回繰り返します。これらの切断によって断片が移動することはありません。
+</p>
+
+<p>
+数週間後に、各断片が元の完全なプラナリアの状態に再生している確率は以下の式により求まります。<br/>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE3_ACPC2013Aizu_aizuicpc_equation_new_ja" width="700"><br/>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE3_ACPC2013Aizu_aizuicpc_explanation_new_ja" width="500"><br/>
+</br>
+上の図は、垂直方向に1:2で2回、水平方向に1:1で1回切断した状態です。
+</p>
+
+<p>
+以上の操作で切断した時の、数週間後に元の姿に再生しているプラナリアの数の期待値を求めてください。元のプラナリアの垂直方向の長さと水平方向の長さはともに1とします。
+</p>
+
+<h2>Input</h2>
+
+<pre>
+<var>m </var> <var>n </var> <var>x </var>
+<var>k </var> <var>l </var> <var>y </var>
+</pre>
+
+<p>
+入力では、6つの整数<var>m </var>, <var>n </var>, <var>x </var>, <var>k </var>, <var>l </var>, <var>y </var>が上記の入力フォーマットで与えられます。<br/>
+これら6つの整数は問題文中のものと対応しており、水平方向に<var>m </var>:<var>n </var>で切断する動作を<var>x </var>回、垂直方向に<var>k </var>:<var>l </var>で切断する動作を<var>y </var>回繰り返します。<br/>
+1 &le; <var>m </var>, <var>n </var>, <var>k </var>, <var>l </var> &le; 100、 0 &le; <var>x </var>, <var>y </var> &le; 40 であり、 <var>m </var>, <var>n </var>と <var>l </var>, <var>k </var>はそれぞれ互いに素です。
+</p>
+
+<h2>Output</h2>
+<p>
+一行に数週間後に元の姿に再生しているプラナリアの数の期待値を出力してください。<br/>
+出力は 10<sup>-6</sup> 以下の誤差ならば許容されます。
+</p>
+
+
+<h2>Sample Input 1</h2>
+<pre>
+1 1 1
+1 1 1
+</pre>
+
+<h2>Sample Output 1</h2>
+<pre>
+0.562500
+</pre>
+
+<h2>Sample Input 2</h2>
+<pre>
+1 2 2
+1 1 1
+</pre>
+
+<h2>Sample Output 2</h2>
+<pre>
+0.490741
+</pre>
+
+<h2>Sample Input 3</h2>
+<pre>
+1 2 0
+3 4 0
+</pre>
+
+<h2>Sample Output 3</h2>
+<pre>
+1.000000
+</pre>
+
+
+
+<h2>Notes</h2>
+<p>
+この問題では、doubleよりも精度の高い浮動小数を使用することを推奨します。
+</p>

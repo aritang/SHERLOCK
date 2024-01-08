@@ -1,0 +1,76 @@
+<H1>Trampoline</H1>
+
+<p>
+  A plurality of trampolines are arranged in a line at 10 m intervals. Each trampoline has its own maximum horizontal distance within which the jumper can jump safely. Starting from the left-most trampoline, the jumper jumps to another trampoline within the allowed jumping range. The jumper wants to repeat jumping until he/she reaches the right-most trampoline, and then tries to return to the left-most trampoline only through jumping. Can the jumper complete the roundtrip without a single stepping-down from a trampoline?
+</p>
+
+<p>
+  Write a program to report if the jumper can complete the journey using the list of maximum horizontal reaches of these trampolines. Assume that the trampolines are points without spatial extent.
+</p>
+
+<h2>Input</h2>
+
+<p>
+  The input is given in the following format.
+</p>
+
+<pre>
+<var>N</var>
+<var>d_1</var>
+<var>d_2</var>
+:
+<var>d_N</var>
+</pre>
+
+<p>
+The first line provides the number of trampolines <var>N</var> (2 &le; <var>N</var> &le; 3 &times; 10<sup>5</sup>). Each of the subsequent <var>N</var> lines gives the maximum allowable jumping distance in integer meters for the <var>i</var>-th trampoline <var>d_i</var> (1 &le; <var>d_i</var> &le; 10<sup>6</sup>).
+</p>
+
+
+<h2>Output</h2>
+
+<p>
+  Output "<span>yes</span>" if the jumper can complete the roundtrip, or "<span>no</span>" if he/she cannot.
+</p>
+
+<h2>Sample Input 1</h2>
+
+<pre>
+4
+20
+5
+10
+1
+</pre>
+
+<h2>Sample Output 1</h2>
+<pre>
+no
+</pre>
+
+<h2>Sample Input 2</h2>
+<pre>
+3
+10
+5
+10
+</pre>
+
+<h2>Sample Output 2</h2>
+<pre>
+no
+</pre>
+
+<h2>Sample Input 3</h2>
+<pre>
+4
+20
+30
+1
+20
+</pre>
+
+<h2>Sample Output 3</h2>
+<pre>
+yes
+</pre>

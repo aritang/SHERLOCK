@@ -1,0 +1,97 @@
+<span class="lang-en">
+<p>Score : <var>600</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>You are given an integer sequence of length <var>N</var>, <var>a =</var> {<var>a_1, a_2, …, a_N</var>}, and an integer <var>K</var>.</p>
+<p><var>a</var> has <var>N(N+1)/2</var> non-empty contiguous subsequences, {<var>a_l, a_{l+1}, …, a_r</var>} <var>(1 ≤ l ≤ r ≤ N)</var>. Among them, how many have an arithmetic mean that is greater than or equal to <var>K</var>?</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li>All input values are integers.</li>
+<li><var>1 ≤ N ≤ 2 \times 10^5</var></li>
+<li><var>1 ≤ K ≤ 10^9</var></li>
+<li><var>1 ≤ a_i ≤ 10^9</var></li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var> <var>K</var>
+<var>a_1</var>
+<var>a_2</var>
+<var>:</var>
+<var>a_N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the number of the non-empty contiguous subsequences with an arithmetic mean that is greater than or equal to <var>K</var>.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>3 6
+7
+5
+7
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>5
+</pre>
+<p>All the non-empty contiguous subsequences of <var>a</var> are listed below:</p>
+<ul>
+<li>{<var>a_1</var>} = {<var>7</var>}</li>
+<li>{<var>a_1, a_2</var>} = {<var>7, 5</var>}</li>
+<li>{<var>a_1, a_2, a_3</var>} = {<var>7, 5, 7</var>}</li>
+<li>{<var>a_2</var>} = {<var>5</var>}</li>
+<li>{<var>a_2, a_3</var>} = {<var>5, 7</var>}</li>
+<li>{<var>a_3</var>} = {<var>7</var>}</li>
+</ul>
+<p>Their means are <var>7</var>, <var>6</var>, <var>19/3</var>, <var>5</var>, <var>6</var> and <var>7</var>, respectively, and five among them are <var>6</var> or greater. Note that {<var>a_1</var>} and {<var>a_3</var>} are indistinguishable by the values of their elements, but we count them individually.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>1 2
+1
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>0
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>7 26
+10
+20
+30
+40
+30
+20
+10
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>13
+</pre></section>
+</div>
+</span>

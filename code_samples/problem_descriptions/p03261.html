@@ -1,0 +1,122 @@
+<span class="lang-en">
+<p>Score : <var>200</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>Takahashi is practicing <em>shiritori</em> alone again today.</p>
+<p>Shiritori is a game as follows:</p>
+<ul>
+<li>In the first turn, a player announces any one word.</li>
+<li>In the subsequent turns, a player announces a word that satisfies the following conditions:<ul>
+<li>That word is not announced before.</li>
+<li>The first character of that word is the same as the last character of the last word announced.</li>
+</ul>
+</li>
+</ul>
+<p>In this game, he is practicing to announce as many words as possible in ten seconds.</p>
+<p>You are given the number of words Takahashi announced, <var>N</var>, and the <var>i</var>-th word he announced, <var>W_i</var>, for each <var>i</var>. Determine if the rules of shiritori was observed, that is, every word announced by him satisfied the conditions.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>N</var> is an integer satisfying <var>2 \leq N \leq 100</var>.</li>
+<li><var>W_i</var> is a string of length between <var>1</var> and <var>10</var> (inclusive) consisting of lowercase English letters.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+<var>W_1</var>
+<var>W_2</var>
+<var>:</var>
+<var>W_N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>If every word announced by Takahashi satisfied the conditions, print <code>Yes</code>; otherwise, print <code>No</code>.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>4
+hoge
+english
+hoge
+enigma
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>No
+</pre>
+<p>As <code>hoge</code> is announced multiple times, the rules of shiritori was not observed.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>9
+basic
+c
+cpp
+php
+python
+nadesico
+ocaml
+lua
+assembly
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>Yes
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>8
+a
+aa
+aaa
+aaaa
+aaaaa
+aaaaaa
+aaa
+aaaaaaa
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>No
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 4</h3><pre>3
+abc
+arc
+agc
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 4</h3><pre>No
+</pre></section>
+</div>
+</span>

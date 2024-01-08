@@ -1,0 +1,74 @@
+<H1>Cross Point</H1>
+<br/>
+
+<p>
+For given two segments <var>s1</var> and <var>s2</var>, print the coordinate of the cross point of them.
+</p>
+
+<p>
+<var>s1</var> is formed by end points <var>p0</var> and <var>p1</var>, and
+<var>s2</var> is formed by end points <var>p2</var> and <var>p3</var>.
+</p>
+
+<H2>Input</H2>
+
+<p>
+The entire input looks like:
+</p>
+
+<pre>
+<var>q</var> (the number of queries)
+1st query
+2nd query
+...
+<var>q</var>th query
+</pre>
+
+<p>
+Each query consists of integer coordinates of end points of <var>s1</var> and <var>s2</var> in the following format:
+</p>
+
+<pre>
+<var>x<sub>p0</sub></var> <var>y<sub>p0</sub></var> <var>x<sub>p1</sub></var> <var>y<sub>p1</sub></var> <var>x<sub>p2</sub></var> <var>y<sub>p2</sub></var> <var>x<sub>p3</sub></var> <var>y<sub>p3</sub></var>
+</pre>
+
+<H2>Output</H2>
+
+<p>
+For each query, print the coordinate of the cross point. The output values should be in a decimal fraction with an error less than 0.00000001.
+</p>
+
+<H2>Constraints</H2>
+
+<ul>
+<li>
+1 &le; <i>q</i> &le; 1000
+</li>
+<li>
+-10000 &le; x<sub>p<sub>i</sub></sub>, y<sub>p<sub>i</sub></sub> &le; 10000
+</li>
+<li>
+<var>p0 &ne; p1</var> and
+<var>p2 &ne; p3</var>.
+</li>
+<li>
+The given segments have a cross point and are not in parallel.
+</li>
+</ul>
+
+<H2>Sample Input</H2>
+<pre>
+3
+0 0 2 0 1 1 1 -1
+0 0 1 1 0 1 1 0
+0 0 1 1 1 0 0 1
+</pre>
+<H2>Sample Output</H2>
+<pre>
+1.0000000000 0.0000000000
+0.5000000000 0.5000000000
+0.5000000000 0.5000000000
+</pre>
+<br/>
+
+

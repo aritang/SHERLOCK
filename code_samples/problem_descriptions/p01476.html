@@ -1,0 +1,71 @@
+
+
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({ tex2jax: { inlineMath: [["$","$"], ["\\(","\\)"]], skipTags: ["script","noscript","style","textarea","code"], processEscapes: true }});
+</script>
+<script language="JavaScript" type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+
+
+<h2>問題文</h2>
+
+<p>実数変数 $X_1, X_2, ...$ があり、何らかの初期値が割り振られている。
+これから $Q$ 個の情報が順番に与えられる。与えられる情報は以下の2種類のいずれかである。</p>
+<ul><li>min $\{X_{a_i}, X_{a_i+1}, ..., X_{b_i}\} = y_i$ である。</li>
+<li>変数 $X_{a_i}, X_{a_i+1}, ..., X_{b_i}$ に $y_i$ を代入する。</li></ul>
+<p>これら $Q$ 個の情報が矛盾しないように各変数の初期値を選べるかどうか判定せよ。</p>
+
+<h2>入力</h2>
+
+<p>入力は以下の形式に従う。与えられる数は全て整数である。</p>
+<pre>$Q$
+$t_1$ $a_1$ $b_1$ $y_1$
+$t_2$ $a_2$ $b_2$ $y_2$
+$...$
+$t_Q$ $a_Q$ $b_Q$ $y_Q$</pre>
+<ol><li>$t_i=0$ のとき、min$\{X_{a_i}, X_{a_i+1}, ..., X_{b_i}\} = y_i$ であることを示している。</li>
+<li>$t_i=1$ のとき、$X_{a_i}, X_{a_i+1}, ..., X_{b_i}$ に $y_i$ を代入することを示している。</li></ol>
+
+<h2>制約</h2>
+
+<ul><li>$1 \leq Q \leq 5 \times 10^4$</li>
+<li>$0 \leq t_i \leq 1$</li>
+<li>$1 \leq a_i \leq b_i \leq 10^9$</li>
+<li>$1 \leq y_i \leq 10^9$</li></ul>
+
+<h2>出力</h2>
+
+<p>全ての情報が矛盾しないような初期値が存在すれば&quot;YES&quot;を、そうでなければ&quot;NO&quot;を1行に出力せよ。</p>
+
+<h2>Sample Input 1</h2>
+
+<pre>5
+0 1 2 8
+0 2 3 9
+0 2 2 11
+1 2 2 7
+0 1 3 7</pre>
+
+<h2>Output for the Sample Input 1</h2>
+
+<pre>YES</pre>
+<p>初期値を、$\{X_1, X_2, X_3\} = \{8, 11, 9\}$ とする。このとき、</p>
+<ol><li> min$\{X_1, X_2\} = $min$\{8, 11\} = 8$</li>
+<li>min$\{X_2, X_3\} = $min$\{11, 9\} = 9$</li>
+<li>min$\{X_2\} =  $min$\{11\} = 11$</li>
+<li>$X_2 = 7$</li>
+<li>min$\{X_1, X_2, X_3\} = $min$\{8, 7, 9\} = 7$</li></ol>
+<p>となり全ての情報と矛盾しない。</p>
+
+<h2>Sample Input 2</h2>
+
+<pre>2
+1 10 100 333
+0 100 1000 555</pre>
+
+
+<h2>Output for the Sample Input 2</h2>
+
+<pre>NO</pre>
+<p>1つ目の情報で $X_{10}$ から $X_{100}$ の値が $333$ になったことが分かる。
+2つ目の情報は min$\{X_{100},...,X_{1000}\}=555$ となることを示しているが、これは $X_{100}=333$ であることから矛盾が生じる。</p>

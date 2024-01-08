@@ -1,0 +1,144 @@
+<span class="lang-en">
+<p>Score : <var>1600</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>A <i>balancing network</i> is an abstract device built up of <var>N</var> wires, thought of as running from left to right,
+and <var>M</var> <i>balancers</i> that connect pairs of wires. The wires are numbered from <var>1</var> to <var>N</var> from top to bottom,
+and the balancers are numbered from <var>1</var> to <var>M</var> from left to right.
+Balancer <var>i</var> connects wires <var>x_i</var> and <var>y_i</var> (<var>x_i &lt; y_i</var>).</p>
+<div style="text-align: center;">
+<img alt="pic1-small-2acea94b.png" src="https://img.atcoder.jp/agc041/pic1-small-2acea94b.png">
+</img></div>
+<p>Each balancer must be in one of two states: <i>up</i> or <i>down</i>.</p>
+<p>Consider a token that starts moving to the right along some wire at a point to the left of all balancers.
+During the process, the token passes through each balancer exactly once.
+Whenever the token encounters balancer <var>i</var>, the following happens:</p>
+<ul>
+<li>If the token is moving along wire <var>x_i</var> and balancer <var>i</var> is in the down state, the token moves down to wire <var>y_i</var> and continues moving to the right.</li>
+<li>If the token is moving along wire <var>y_i</var> and balancer <var>i</var> is in the up state, the token moves up to wire <var>x_i</var> and continues moving to the right.</li>
+<li>Otherwise, the token doesn't change the wire it's moving along.</li>
+</ul>
+<p>Let a state of the balancing network be a string of length <var>M</var>, describing the states of all balancers.
+The <var>i</var>-th character is <code>^</code> if balancer <var>i</var> is in the up state, and <code>v</code> if balancer <var>i</var> is in the down state.</p>
+<p>A state of the balancing network is called <i>uniforming</i> if a wire <var>w</var> exists such that, regardless of the starting wire,
+the token will always end up at wire <var>w</var> and run to infinity along it. Any other state is called <i>non-uniforming</i>.</p>
+<p>You are given an integer <var>T</var> (<var>1 \le T \le 2</var>). Answer the following question:</p>
+<ul>
+<li>If <var>T = 1</var>, find any uniforming state of the network or determine that it doesn't exist.</li>
+<li>If <var>T = 2</var>, find any non-uniforming state of the network or determine that it doesn't exist.</li>
+</ul>
+<p>Note that if you answer just one kind of questions correctly, you can get partial score.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>2 \leq N \leq 50000</var></li>
+<li><var>1 \leq M \leq 100000</var></li>
+<li><var>1 \leq T \leq 2</var></li>
+<li><var>1 \leq x_i &lt; y_i \leq N</var></li>
+<li>All input values are integers.</li>
+</ul>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Partial Score</h3><ul>
+<li><var>800</var> points will be awarded for passing the testset satisfying <var>T = 1</var>.</li>
+<li><var>800</var> points will be awarded for passing the testset satisfying <var>T = 2</var>.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var> <var>M</var> <var>T</var>
+<var>x_1</var> <var>y_1</var>
+<var>x_2</var> <var>y_2</var>
+<var>:</var>
+<var>x_M</var> <var>y_M</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print any uniforming state of the given network if <var>T = 1</var>, or any non-uniforming state if <var>T = 2</var>. If the required state doesn't exist, output <code>-1</code>.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>4 5 1
+1 3
+2 4
+1 2
+3 4
+2 3
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>^^^^^
+</pre>
+<p>This state is uniforming: regardless of the starting wire, the token ends up at wire <var>1</var>.</p>
+<div style="text-align: center;">
+<img alt="pic2-small-2acea94b.png" src="https://img.atcoder.jp/agc041/pic2-small-2acea94b.png">
+</img></div>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>4 5 2
+1 3
+2 4
+1 2
+3 4
+2 3
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>v^^^^
+</pre>
+<p>This state is non-uniforming: depending on the starting wire, the token might end up at wire <var>1</var> or wire <var>2</var>.</p>
+<div style="text-align: center;">
+<img alt="pic3final-small-2acea94b.png" src="https://img.atcoder.jp/agc041/pic3final-small-2acea94b.png"/>
+</div>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>3 1 1
+1 2
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>-1
+</pre>
+<p>A uniforming state doesn't exist.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 4</h3><pre>2 1 2
+1 2
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 4</h3><pre>-1
+</pre>
+<p>A non-uniforming state doesn't exist.</p></section>
+</div>
+</span>

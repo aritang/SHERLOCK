@@ -1,0 +1,136 @@
+
+<H1><font color="#000">Problem A:</font> Grey Area</H1>
+
+
+
+<p>
+Dr. Grey is a data analyst, who visualizes various aspects of data received from all over the
+world everyday. He is extremely good at sophisticated visualization tools, but yet his favorite is
+a simple self-made histogram generator.
+</p>
+
+<p>
+Figure 1 is an example of histogram automatically produced by his histogram.
+</p>
+
+<center>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE1_greyarea1">
+</center>
+
+<p>
+A histogram is a visual display of frequencies of value occurrences as bars. In this example, values
+in the interval 0-9 occur five times, those in the interval 10-19 occur three times, and 20-29
+and 30-39 once each.
+</p>
+<p>
+Dr. Grey’s histogram generator is a simple tool. First, the height of the histogram is fixed, that
+is, the height of the highest bar is always the same and those of the others are automatically
+adjusted proportionately. Second, the widths of bars are also fixed. It can only produce a
+histogram of uniform intervals, that is, each interval of a histogram should have the same width
+(10 in the above example). Finally, the bar for each interval is painted in a grey color, where
+the colors of the leftmost and the rightmost intervals are black and white, respectively, and the
+darkness of bars monotonically decreases at the same rate from left to right. For instance, in
+Figure 1, the darkness levels of the four bars are 1, 2/3, 1/3, and 0, respectively.
+
+</p>
+
+<p>
+In this problem, you are requested to estimate ink consumption when printing a histogram on paper. The amount of ink necessary to draw a bar is proportional to both its area and darkness.
+
+<H2>Input</H2>
+
+<p>
+The input consists of multiple datasets, each of which contains integers and specifies a value
+table and intervals for the histogram generator, in the following format.
+</p>
+
+<p>
+<i>n</i>  <i>w</i><br>
+<i>v<sub>1</sub></i><br>
+<i>v<sub>2</sub></i><br>
+.<br>
+.<br>
+<i>v<sub>n</sub></i><br>
+</p>
+
+<p>
+<i>n</i> is the total number of value occurrences for the histogram, and each of the <i>n</i> lines following
+the first line contains a single value. Note that the same value may possibly occur multiple
+times.
+</p>
+
+<p>
+<i>w</i> is the interval width. A value <i>v</i> is in the first (i.e. leftmost) interval if 0 &le; <i>v</i> &lt; <i>w</i>, the second
+one if <i>w</i> &le; <i>v</i> &lt; 2<i>w</i>, and so on. Note that the interval from 0 (inclusive) to <i>w</i> (exclusive) should
+be regarded as the leftmost even if no values occur in this interval. The last (i.e. rightmost)
+interval is the one that includes the largest value in the dataset.
+</p>
+
+<p>
+You may assume the following.
+</p>
+
+<p>
+                                  1 &le; <i>n</i> &le; 100<br>
+                                  10 &le; <i>w</i> &le; 50<br>
+                                  0 &le; <i>v<sub>i</sub></i> &le; 100 for 1 &le; i &le; <i>n</i><br>
+</p>
+
+<p>
+You can also assume that the maximum value is no less than <i>w</i>. This means that the histogram
+has more than one interval.
+The end of the input is indicated by a line containing two zeros.
+</p>
+
+<H2>Output</H2>
+
+<p>
+For each dataset, output a line containing the amount of ink consumed in printing the histogram.
+</p>
+
+<p>
+One unit of ink is necessary to paint one highest bar black. Assume that 0.01 units of ink per
+histogram is consumed for various purposes except for painting bars such as drawing lines and
+characters (see Figure 1). For instance, the amount of ink consumed in printing the histogram
+in Figure 1 is:
+</p>
+
+<center>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE1_greyarea2">
+</center>
+
+<p>
+Each output value should be in a decimal fraction and may have an error less than 10<sup>-5</sup> .
+</p>
+
+<H2>Sample Input</H2>
+<pre>
+3 50
+100
+0
+100
+3 50
+100
+100
+50
+10 10
+1
+2
+3
+4
+5
+16
+17
+18
+29
+30
+0 0
+</pre>
+
+<H2>Output for the Sample Input</H2>
+<pre>
+0.51
+0.26
+1.4766666666666667
+</pre>
+

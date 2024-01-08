@@ -1,0 +1,136 @@
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({ tex2jax: { inlineMath: [["$","$"], ["\\(","\\)"]], processEscapes: true }});
+</script>
+<script type='text/javascript' src='http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
+</script>
+
+
+<h2>Problem J
+Post Office Investigation</h2>
+
+
+<p>
+In this country, all international mails from abroad are first gathered to the central post office, and then delivered to each destination post office relaying some post offices on the way. The delivery routes between post offices are described by a directed graph $G = (V,E)$, where $V$ is the set of post offices and $E$ is the set of possible mail forwarding steps. Due to the inefficient operations, you cannot expect that the mails are delivered along the shortest route.
+</p>
+
+<p>
+The set of post offices can be divided into a certain number of groups. Here, a group is defined as a set of post offices where mails can be forwarded from any member of the group to any other member, directly or indirectly. The number of post offices in such a group does not exceed 10.
+</p>
+
+<p>
+The post offices frequently receive complaints from customers that some mails are not delivered yet. Such a problem is usually due to system trouble in a single post office, but identifying which is not easy. Thus, when such complaints are received, the customer support sends staff to check the system of each candidate post office. Here, the investigation cost to check the system of the post office $u$ is given by $c_u$, which depends on the scale of the post office.
+</p>
+
+<p>
+Since there are many post offices in the country, and such complaints are frequently received, reducing the investigation cost is an important issue. To reduce the cost, the post service administration determined to use the following scheduling rule: When complaints on undelivered mails are received by the post offices $w_1, ..., w_k$ one day, staff is sent on the next day to investigate a single post office $v$ with the lowest investigation cost among candidates. Here, the post office $v$ is a candidate if all mails from the central post office to the post offices $w_1, ... , w_k$ must go through $v$. If no problem is found in the post office $v$, we have to decide the order of investigating other post offices, but the problem is left to some future days.
+</p>
+
+<p>
+Your job is to write a program that finds the cost of the lowest-cost candidate when the list of complained post offices in a day, described by $w_1, ... , w_k$, is given as a query.
+</p>
+
+
+
+<h3>Input</h3>
+
+<p>
+The input consists of a single test case, formatted as follows.<br>
+<br>
+
+$n$ $m$<br>
+$u_1$ $v_1$<br>
+...<br>
+$u_m$ $v_m$<br>
+$c_1$<br>
+...<br>
+$c_n$<br>
+$q$<br>
+$k_1$ $w_{11}$ ... $w_{1k_1}$<br>
+...<br>
+$k_q$ $w_{q1}$ ... $w_{qk_q}$<br>
+<br>
+
+$n$ is the number of post offices $(2 \leq n \leq 50,000)$, which are numbered from 1 to $n$. Here, post office 1 corresponds to the central post office. $m$ is the number of forwarding pairs of post offices $(1 \leq m \leq 100,000)$. The pair, $u_i$ and $v_i$, means that some of the mails received at post office $u_i$ are forwarded to post office $v_i$ $(i = 1, ..., m)$. $c_j$ is the investigation cost for the post office $j$ $(j = 1,  ..., n, 1 \leq c_j \leq 10^9)$. $q$ $(q \geq 1)$ is the number of queries, and each query is specified by a list of post offices which received undelivered mail complaints. $k_i$ $(k_i \geq 1)$ is the length of the list and $w_{i1}, ...,  w_{ik_i}$ are the distinct post offices in the list. $\sum_{i=1}^{q} k_i \leq 50,000$.
+</p>
+
+<p>
+You can assume that there is at least one delivery route from the central post office to all the post offices.
+</p>
+
+
+
+<h3>Output</h3>
+
+<p>
+For each query, you should output a single integer that is the lowest cost of the candidate of troubled post office.
+</p>
+
+
+<h3>Sample Input 1</h3>
+
+<pre>8 8
+1 2
+1 3
+2 4
+2 5
+2 8
+3 5
+3 6
+4 7
+1000
+100
+100
+10
+10
+10
+1
+1
+3
+2 8 6
+2 4 7
+2 7 8</pre>
+
+<h3>Sample Output 1</h3>
+
+<pre>1000
+10
+100</pre>
+
+
+
+<h3>Sample Input 2</h3>
+
+<pre>10 12
+1 2
+2 3
+3 4
+4 2
+4 5
+5 6
+6 7
+7 5
+7 8
+8 9
+9 10
+10 8
+10
+9
+8
+7
+6
+5
+4
+3
+2
+1
+3
+2 3 4
+3 6 7 8
+3 9 6 3</pre>
+
+<h3>Sample Output 2</h3>
+
+<pre>8
+5
+8</pre>

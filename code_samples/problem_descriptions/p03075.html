@@ -1,0 +1,94 @@
+<span class="lang-en">
+<p>﻿Score: <var>100</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3>
+<p>In AtCoder city, there are five antennas standing in a straight line. They are called Antenna <var>A, B, C, D</var> and <var>E</var> from west to east, and their coordinates are <var>a, b, c, d</var> and <var>e</var>, respectively.<br/>
+Two antennas can communicate directly if the distance between them is <var>k</var> or less, and they cannot if the distance is greater than <var>k</var>.<br/>
+Determine if there exists a pair of antennas that cannot communicate <strong>directly</strong>.<br/>
+Here, assume that the distance between two antennas at coordinates <var>p</var> and <var>q</var> (<var>p &lt; q</var>) is <var>q - p</var>.  </p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3>
+<ul>
+<li><var>a, b, c, d, e</var> and <var>k</var> are integers between <var>0</var> and <var>123</var> (inclusive).</li>
+<li><var>a &lt; b &lt; c &lt; d &lt; e</var></li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3>
+<p>Input is given from Standard Input in the following format:</p>
+<pre><var>a</var>
+<var>b</var>
+<var>c</var>
+<var>d</var>
+<var>e</var>
+<var>k</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3>
+<p>Print <code>:(</code> if there exists a pair of antennas that cannot communicate <strong>directly</strong>, and print <code>Yay!</code> if there is no such pair.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>1
+2
+4
+8
+9
+15
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>Yay!
+</pre>
+<p>In this case, there is no pair of antennas that cannot communicate directly, because:</p>
+<ul>
+<li>the distance between <var>A</var> and <var>B</var> is <var>2 - 1</var> = <var>1</var></li>
+<li>the distance between <var>A</var> and <var>C</var> is <var>4 - 1</var> = <var>3</var></li>
+<li>the distance between <var>A</var> and <var>D</var> is <var>8 - 1</var> = <var>7</var></li>
+<li>the distance between <var>A</var> and <var>E</var> is <var>9 - 1</var> = <var>8</var></li>
+<li>the distance between <var>B</var> and <var>C</var> is <var>4 - 2</var> = <var>2</var></li>
+<li>the distance between <var>B</var> and <var>D</var> is <var>8 - 2</var> = <var>6</var></li>
+<li>the distance between <var>B</var> and <var>E</var> is <var>9 - 2</var> = <var>7</var></li>
+<li>the distance between <var>C</var> and <var>D</var> is <var>8 - 4</var> = <var>4</var></li>
+<li>the distance between <var>C</var> and <var>E</var> is <var>9 - 4</var> = <var>5</var></li>
+<li>the distance between <var>D</var> and <var>E</var> is <var>9 - 8</var> = <var>1</var></li>
+</ul>
+<p>and none of them is greater than <var>15</var>. Thus, the correct output is <code>Yay!</code>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>15
+18
+26
+35
+36
+18
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>:(
+</pre>
+<p>In this case, the distance between antennas <var>A</var> and <var>D</var> is <var>35 - 15</var> = <var>20</var> and exceeds <var>18</var>, so they cannot communicate directly.
+Thus, the correct output is <code>:(</code>.</p></section>
+</div>
+</span>

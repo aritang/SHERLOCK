@@ -1,0 +1,98 @@
+<span class="lang-en">
+<p>Score : <var>800</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>There are <var>N</var> squares arranged in a row, numbered <var>1</var> to <var>N</var> from left to right. Takahashi will stack building blocks on these squares, on which there are no blocks yet.</p>
+<p>He wants to stack blocks on the squares evenly, so he will repeat the following operation until there are <var>H</var> blocks on every square:</p>
+<ul>
+<li>Let <var>M</var> and <var>m</var> be the maximum and minimum numbers of blocks currently stacked on a square, respectively. Choose a square on which <var>m</var> blocks are stacked (if there are multiple such squares, choose any one of them), and add a positive number of blocks on that square so that there will be at least <var>M</var> and at most <var>M + D</var> blocks on that square.</li>
+</ul>
+<p>Tell him how many ways there are to have <var>H</var> blocks on every square by repeating this operation. Since there can be extremely many ways, print the number modulo <var>10^9+7</var>.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>2 \leq N \leq 10^6</var></li>
+<li><var>1 \leq D \leq H \leq 10^6</var></li>
+<li>All values in input are integers.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var> <var>H</var> <var>D</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the number of ways to have <var>H</var> blocks on every square, modulo <var>10^9+7</var>.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>2 2 1
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>6
+</pre>
+<p>The possible transitions of (the number of blocks on Square <var>1</var>, the number of blocks on Square <var>2</var>) are as follows:</p>
+<ul>
+<li>
+<p><var>(0, 0)</var> -&gt; <var>(0, 1)</var> -&gt; <var>(1, 1)</var> -&gt; <var>(1, 2)</var> -&gt; <var>(2, 2)</var></p>
+</li>
+<li>
+<p><var>(0, 0)</var> -&gt; <var>(0, 1)</var> -&gt; <var>(1, 1)</var> -&gt; <var>(2, 1)</var> -&gt; <var>(2, 2)</var></p>
+</li>
+<li>
+<p><var>(0, 0)</var> -&gt; <var>(0, 1)</var> -&gt; <var>(2, 1)</var> -&gt; <var>(2, 2)</var></p>
+</li>
+<li>
+<p><var>(0, 0)</var> -&gt; <var>(1, 0)</var> -&gt; <var>(1, 1)</var> -&gt; <var>(1, 2)</var> -&gt; <var>(2, 2)</var></p>
+</li>
+<li>
+<p><var>(0, 0)</var> -&gt; <var>(1, 0)</var> -&gt; <var>(1, 1)</var> -&gt; <var>(2, 1)</var> -&gt; <var>(2, 2)</var></p>
+</li>
+<li>
+<p><var>(0, 0)</var> -&gt; <var>(1, 0)</var> -&gt; <var>(1, 2)</var> -&gt; <var>(2, 2)</var></p>
+</li>
+</ul>
+<p>Thus, there are six ways to have two blocks on every square.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>2 30 15
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>94182806
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>31415 9265 3589
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>312069529
+</pre>
+<p>Be sure to print the number modulo <var>10^9+7</var>.</p></section>
+</div>
+</span>

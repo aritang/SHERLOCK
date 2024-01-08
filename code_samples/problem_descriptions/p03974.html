@@ -1,0 +1,108 @@
+<span class="lang-en">
+<p>Score : <var>1100</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>There are <var>N</var> strings of lowercase alphabet only. The <var>i</var>-th string is <var>S_i</var>. Every string is unique.</p>
+<p>Provide answers for the <var>Q</var> queries below. The <var>i</var>-th query has the following format:</p>
+<p>Query: An integer <var>k_i</var> and a string <var>p_{i,1}p_{i,2}...p_{i,26}</var> that results from permuting {<code>a</code><var>,</var><code>b</code><var>,...,</var><code>z</code>} are given. Output the sequence of the string <var>S_{k_i}</var> among the <var>N</var> strings in lexicographical order when the literal sequence is <var>p_{i,1}&lt;p_{i,2}&lt;...&lt;p_{i,26}</var>.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 ≦ N,Q ≦ 100000</var></li>
+<li><var>1 ≦ |S_i| (1 ≦ i ≦ N)</var></li>
+<li><var>S_i (1 ≦ i ≦ N)</var> is a string of lowercase alphabet.</li>
+<li>The sum of <var>|S_i|</var> is no more than <var>400000</var>.</li>
+<li>Every <var>S_i</var> is unique.</li>
+<li><var>1 ≦ k_i ≦ N (1 ≦ i ≦ Q)</var></li>
+<li>For all <var>1 ≦ i ≦ Q</var>, <var>p_{i,1}p_{i,2}...p_{i,26}</var> is a permutation of <code>abcd...z</code>.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Inputs are provided from standard inputs in the following form.</p>
+<pre><var>N</var>
+<var>S_1</var>
+:
+<var>S_N</var>
+<var>Q</var>
+<var>k_1</var> <var>p_{1,1}p_{1,2}...p_{1,26}</var>
+:
+<var>k_Q</var> <var>p_{Q,1}p_{Q,2}...p_{Q,26}</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Output <var>Q</var> lines.</p>
+<p>On line <var>i</var>, for the <var>i</var>-th query, output an integer indicating the sequence of the string <var>S_{k_i}</var> among the <var>N</var> strings in lexicographical order.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>5
+aa
+abbaa
+abbba
+aaab
+aaaaaba
+5
+1 abcdefghijklmnopqrstuvwxyz
+2 bacdefghijklmnopqrstuvwxyz
+3 abcdefghijklmnopqrstuvwxyz
+4 bacdefghijklmnopqrstuvwxyz
+5 abcdefghijklmnopqrstuvwxyz
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>1
+2
+5
+4
+2
+</pre>
+<p>When the literal sequence is <code>a</code> <var>&lt;</var> <code>b</code>, sorting the input strings in lexicographical order yields <code>aa</code>, <code>aaaaaba</code>, <code>aaab</code>, <code>abbaa</code>, <code>abbba</code>. The answers to queries <var>1</var>, <var>3</var>, and <var>5</var> are thus <var>1</var>, <var>5</var>, and <var>2</var>, respectively.</p>
+<p>When the literal sequence is <code>b</code> <var>&lt;</var> <code>a</code>, sorting the input strings in lexicographical order yields <code>abbba</code>, <code>abbaa</code>, <code>aa</code>, <code>aaab</code>, <code>aaaaaba</code>. The answers to queries <var>2</var> and <var>4</var> are thus <var>2</var> and <var>4</var>, respectively.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>8
+abrakatabra
+abadaba
+abracadabra
+atcoder
+grand
+contest
+ababa
+a
+6
+3 abcdefghijklmnopqrstuvwxyz
+6 qwertyuiopasdfghjklzxcvbnm
+8 poiuytrewqlkjhgfdsamnbvcxz
+2 qazwsxedcrfvtgbyhnujmikolp
+1 plokmijnuhbygvtfcrdxeszwaq
+4 mnbvcxzasdfghjklpoiuytrewq
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>4
+8
+2
+3
+4
+7
+</pre></section>
+</div>
+</span>

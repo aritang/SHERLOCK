@@ -1,0 +1,74 @@
+
+<H1>Strongly Connected Components</H1>
+
+<p>
+A direced graph is strongly connected if every two nodes are reachable from each other. In a strongly connected component of a directed graph, every two nodes of the component are mutually reachable.
+</p>
+
+<H2>Input</H2>
+
+<p>
+A directed graph <var>G(V, E)</var> and a sequence of queries where each query contains a pair of nodes <var>u</var> and <var>v</var>.
+</p>
+
+<pre>
+<var>|V|</var> <var>|E|</var>
+<var>s<sub>0</sub></var> <var>t<sub>0</sub></var>
+<var>s<sub>1</sub></var> <var>t<sub>1</sub></var>
+:
+<var>s<sub>|E|-1</sub></var> <var>t<sub>|E|-1</sub></var>
+<var>Q</var>
+<var>u<sub>0</sub></var> <var>v<sub>0</sub></var>
+<var>u<sub>1</sub></var> <var>v<sub>1</sub></var>
+:
+<var>u<sub>Q-1</sub></var> <var>v<sub>Q-1</sub></var>
+</pre>
+
+<p>
+<var>|V|</var> is the number of nodes and <var>|E|</var> is the number of edges in the graph. The graph nodes are named with the numbers 0, 1,..., <var>|V|</var>-1 respectively.
+</p>
+
+<p>
+<var>s<sub>i</sub></var> and <var>t<sub>i</sub></var> represent source and target nodes of <var>i</var>-th edge (directed).
+</p>
+
+<p>
+<var>u<sub>i</sub></var> and <var>v<sub>i</sub></var> represent a pair of nodes given as the <var>i</var>-th query.
+</p>
+
+<H2>Output</H2>
+
+<p>
+For each query, pinrt "1" if the given nodes belong to the same strongly connected component, "0" otherwise.
+</p>
+
+<H2>Constraints</H2>
+
+<ul>
+<li>1 &le; <var>|V|</var> &le; 10,000</li>
+<li>0 &le; <var>|E|</var> &le; 30,000</li>
+<li>1 &le; <var>Q</var> &le; 100,000</li>
+</ul>
+
+<H2>Sample Input 1</H2>
+<pre>
+5 6
+0 1
+1 0
+1 2
+2 4
+4 3
+3 2
+4
+0 1
+0 3
+2 3
+3 4
+</pre>
+<H2>Sample Output 1</H2>
+<pre>
+1
+0
+1
+1
+</pre>

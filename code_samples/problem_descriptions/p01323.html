@@ -1,0 +1,164 @@
+
+
+<h1><font color="#000">Problem C:</font> コンパイル</h1>
+
+<p>東京大学に入学したきたまさ君はTSG(東大スーパーゲーマーズ)というサークルに入った。</p>
+<p>このサークルは毎年、駒場祭でゲームを展示しており、きたまさ君もゲームを作成して展示することにした。</p>
+<p>きたまさ君の作成するゲームは次のような、よくある落ち物パズルゲームである。</p>
+<p>
+<ul>
+<li>横6マス×縦12マスの格子状のフィールドがあり、各マスにつき1個のブロックを置くことができる。</li>
+<li>上からブロックが2つ1組で落下してくる。ブロックには赤・緑・青・黄・紫の5色の基本ブロックとお邪魔ブロックの計6種類がある。プレイヤーはブロックを回転、横移動により操作し、落下位置を変更することができる。</li>
+<li>落下してきたブロックがフィールドの床やほかのブロックに衝突すると、その位置にブロックが固定される。</li>
+<li>固定されたブロックと同色のブロックが周囲4方向にある場合、それらは互いにくっつく。ただし、お邪魔ブロックは互いにくっつかない。</li>
+<li>ブロックが4個以上くっつくと消滅し得点となる。お邪魔ブロックの周囲4方向に存在する基本ブロックが消滅すると、そのお邪魔ブロックも一緒に消滅する。ブロックの消滅は、全てのブロックの落下が終了したタイミングで同時に起こる。</li>
+<li>ブロックの消滅により、その上にあったブロックが落下する。このブロックの落下はプレイヤーが操作できない。このとき再びブロックが4個以上くっつくと消滅し、連鎖が起きる。ただし、複数色を同時に消した場合でも、1連鎖扱いとなる。</li>
+</ul>
+</p>
+<p>きたまさ君はこのゲームの大部分のプログラムを書き終えたが、どうしてもブロックがくっついて消滅したときの処理を書くことが出来なかった。そこでサークルの友人であるあなたにその部分のプログラムを書いてもらうことにした。 
+</p>
+
+<h2>Input</h2>
+
+<p>入力は12行からなる。</p>
+<p>入力の <i>i</i> 行目は長さ6の文字列からなり、その <i>j</i> 文字目はフィールドの上から <i>i</i> 行目、左から <i>j</i> 列目のマスの状態を表している。</p>
+<p>マスの状態を表す文字は以下の7つのうちのいずれかである。</p>
+<center>
+<table>
+	<tr><th>文字</th><th>種類</th></tr>
+	<tr><td><span style="font-family: monospace">R</span></td><td>赤</td></tr>
+	<tr><td><span style="font-family: monospace">G</span></td><td>緑</td></tr>
+	<tr><td><span style="font-family: monospace">B</span></td><td>青</td></tr>
+	<tr><td><span style="font-family: monospace">Y</span></td><td>黄</td></tr>
+	<tr><td><span style="font-family: monospace">P</span></td><td>紫</td></tr>
+	<tr><td><span style="font-family: monospace">O</span></td><td>お邪魔</td></tr>
+	<tr><td><span style="font-family: monospace">.</span></td><td>空きマス</td></tr>
+</table>
+</center>
+<p>また、入力に含まれる全てのブロックは床の上か他のブロックの上に乗っている。 
+</p>
+
+<h2>Output</h2>
+
+<p>入力の状態から、ルールに従ってブロックを消していった時の連鎖数を計算し、一行で出力せよ。</p>
+<p>ブロックが一つも消えない場合は0と出力せよ。 
+</p>
+
+
+<h2>Notes on Test Cases</h2>
+
+<p>
+上記入力形式で複数のデータセットが与えられます。
+</p>
+<p>
+入力の1行目にデータセットの数Tが与えられます。
+</p>
+<p>
+各データセットに対して上記出力形式で出力を行うプログラムを作成して下さい。
+</p>
+
+
+<!--
+<h2>Sample Input 1</h2>
+<pre>......
+......
+......
+......
+......
+......
+......
+......
+.RGB..
+RGOP..
+RGBPB.
+RGBPP.
+</pre>
+<h2>Output for Sample Input 1</h2>
+<pre>3 
+</pre>
+
+<h2>Sample Input 2</h2>
+<pre>GBRGYP
+GBRRYP
+BGGRBB
+BPRGYY
+GGPRRY
+BYPPRB
+YGGGPB
+GYYYPR
+YRBRBR
+YBRBRB
+BRBRBR
+BRBRBR
+</pre>
+<h2>Output for Sample Input 2</h2>
+<pre>18 
+</pre>
+
+<h2>Sample Input 3</h2>
+<pre>......
+......
+......
+......
+......
+......
+......
+......
+......
+......
+..OO..
+..OO..
+</pre>
+<h2>Output for Sample Input 3</h2>
+<pre>0 
+</pre>
+-->
+
+
+<h2>Sample Input </h2>
+<pre>
+3
+......
+......
+......
+......
+......
+......
+......
+......
+.RGB..
+RGOP..
+RGBPB.
+RGBPP.
+GBRGYP
+GBRRYP
+BGGRBB
+BPRGYY
+GGPRRY
+BYPPRB
+YGGGPB
+GYYYPR
+YRBRBR
+YBRBRB
+BRBRBR
+BRBRBR
+......
+......
+......
+......
+......
+......
+......
+......
+......
+......
+..OO..
+..OO..
+</pre>
+
+<h2>Output for Sample Input</h2>
+<pre>
+3 
+18 
+0 
+</pre>

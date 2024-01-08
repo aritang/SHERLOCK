@@ -1,0 +1,103 @@
+<span class="lang-en">
+<p>Score : <var>1500</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><style>
+   #nck {
+      width: 30px;
+      height: auto;
+   }
+</style>
+<p>Shik's job is very boring. At day <var>0</var>, his boss gives him a string <var>S_0</var> of length <var>N</var> which consists of only lowercase English letters. In the <var>i</var>-th day after day <var>0</var>, Shik's job is to copy the string <var>S_{i-1}</var> to a string <var>S_i</var>. We denote the <var>j</var>-th letter of <var>S_i</var> as <var>S_i[j]</var>.</p>
+<p>Shik is inexperienced in this job. In each day, when he is copying letters one by one from the first letter to the last letter, he would make mistakes. That is, he sometimes accidentally writes down the same letter that he wrote previously instead of the correct one. More specifically, <var>S_i[j]</var> is equal to either <var>S_{i-1}[j]</var> or <var>S_{i}[j-1]</var>. (Note that <var>S_i[1]</var> always equals to <var>S_{i-1}[1]</var>.)</p>
+<p>You are given the string <var>S_0</var> and another string <var>T</var>.
+Please determine the smallest integer <var>i</var> such that <var>S_i</var> could be equal to <var>T</var>. If no such <var>i</var> exists, please print <code>-1</code>.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 \leq N \leq 1,000,000</var></li>
+<li>The lengths of <var>S_0</var> and <var>T</var> are both <var>N</var>.</li>
+<li>Both <var>S_0</var> and <var>T</var> consist of lowercase English letters.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>The input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+<var>S_0</var>
+<var>T</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the smallest integer <var>i</var> such that <var>S_i</var> could be equal to <var>T</var>. If no such <var>i</var> exists, print <code>-1</code> instead.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>5
+abcde
+aaacc
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>2
+</pre>
+<p><var>S_0</var> = <code>abcde</code>, <var>S_1</var> = <code>aaccc</code> and <var>S_2</var> = <code>aaacc</code> is a possible sequence such that <var>S_2 = T</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>5
+abcde
+abcde
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>0
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>4
+acaa
+aaca
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>2
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 4</h3><pre>5
+abcde
+bbbbb
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 4</h3><pre>-1
+</pre></section>
+</div>
+</span>

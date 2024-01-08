@@ -1,0 +1,139 @@
+<span class="lang-en">
+<p>Score : <var>1200</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>In Takaha-shi, the capital of Republic of AtCoder, there are <var>N</var> roads extending east and west, and <var>M</var> roads extending north and south. There are no other roads.
+The <var>i</var>-th east-west road from the north and the <var>j</var>-th north-south road from the west cross at the intersection <var>(i, j)</var>.
+Two east-west roads do not cross, nor do two north-south roads.
+The distance between two adjacent roads in the same direction is <var>1</var>.</p>
+<p>Each road is one-way; one can only walk in one direction. The permitted direction for each road is described by a string <var>S</var> of length <var>N</var> and a string <var>T</var> of length <var>M</var>, as follows:</p>
+<ul>
+<li>If the <var>i</var>-th character in <var>S</var> is <code>W</code>, one can only walk westward along the <var>i</var>-th east-west road from the north;</li>
+<li>If the <var>i</var>-th character in <var>S</var> is <code>E</code>, one can only walk eastward along the <var>i</var>-th east-west road from the north;</li>
+<li>If the <var>i</var>-th character in <var>T</var> is <code>N</code>, one can only walk northward along the <var>i</var>-th north-south road from the west;</li>
+<li>If the <var>i</var>-th character in <var>T</var> is <code>S</code>, one can only walk southward along the <var>i</var>-th south-west road from the west.</li>
+</ul>
+<p>Process the following <var>Q</var> queries:</p>
+<ul>
+<li>In the <var>i</var>-th query, <var>a_i, b_i, c_i</var> and <var>d_i</var> are given. What is the minimum distance to travel to reach the intersection <var>(c_i, d_i)</var> from the intersection <var>(a_i, b_i)</var> by walking along the roads?</li>
+</ul>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>2 \leq N \leq 100000</var></li>
+<li><var>2 \leq M \leq 100000</var></li>
+<li><var>2 \leq Q \leq 200000</var></li>
+<li><var>|S| = N</var></li>
+<li><var>S</var> consists of <code>W</code> and <code>E</code>.</li>
+<li><var>|T| = M</var></li>
+<li><var>T</var> consists of <code>N</code> and <code>S</code>.</li>
+<li><var>1 \leq a_i \leq N</var></li>
+<li><var>1 \leq b_i \leq M</var></li>
+<li><var>1 \leq c_i \leq N</var></li>
+<li><var>1 \leq d_i \leq M</var></li>
+<li><var>(a_i, b_i) \neq (c_i, d_i)</var></li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var> <var>M</var> <var>Q</var>
+<var>S</var>
+<var>T</var>
+<var>a_1</var> <var>b_1</var> <var>c_1</var> <var>d_1</var>
+<var>a_2</var> <var>b_2</var> <var>c_2</var> <var>d_2</var>
+<var>:</var>
+<var>a_Q</var> <var>b_Q</var> <var>c_Q</var> <var>d_Q</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>In the <var>i</var>-th line, print the response to the <var>i</var>-th query. If the intersection <var>(c_i, d_i)</var> cannot be reached from the intersection <var>(a_i, b_i)</var> by walking along the roads, print <code>-1</code> instead.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>4 5 4
+EEWW
+NSNNS
+4 1 1 4
+1 3 1 2
+4 2 3 2
+3 3 3 5
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>6
+11
+5
+4
+</pre>
+<p>The permitted direction for each road is shown in the following figure (north upward):</p>
+<p><img alt="" src="https://img.atcoder.jp/exawizards2019/bfb8c54cc4098353946320d8c263807e.png"/></p>
+<p>For each of the four queries, a route that achieves the minimum travel distance is as follows:</p>
+<p><img alt="" src="https://img.atcoder.jp/exawizards2019/d1918596004a23a20aa138e591e0ee99.png"/></p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>3 3 2
+EEE
+SSS
+1 1 3 3
+3 3 1 1
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>4
+-1
+</pre>
+<p>The travel may be impossible.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>9 7 10
+EEEEEWEWW
+NSSSNSN
+4 6 9 2
+3 7 6 7
+7 5 3 5
+1 1 8 1
+4 3 5 4
+7 4 6 4
+2 5 8 6
+6 6 2 7
+2 4 7 5
+7 2 9 7
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>9
+-1
+4
+9
+2
+3
+7
+7
+6
+-1
+</pre></section>
+</div>
+</span>

@@ -1,0 +1,100 @@
+<span class="lang-en">
+<p>Score : <var>500</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>Snuke has two boards, each divided into a grid with <var>N</var> rows and <var>N</var> columns.
+For both of these boards, the square at the <var>i</var>-th row from the top and the <var>j</var>-th column from the left is called Square <var>(i,j)</var>.</p>
+<p>There is a lowercase English letter written in each square on the first board. The letter written in Square <var>(i,j)</var> is <var>S_{i,j}</var>. On the second board, nothing is written yet.</p>
+<p>Snuke will write letters on the second board, as follows:</p>
+<ul>
+<li>First, choose two integers <var>A</var> and <var>B</var> ( <var>0 \leq A, B &lt; N</var> ).</li>
+<li>Write one letter in each square on the second board.
+Specifically, write the letter written in Square <var>( i+A, j+B )</var> on the first board into Square <var>(i,j)</var> on the second board.
+Here, the <var>k</var>-th row is also represented as the <var>(N+k)</var>-th row, and the <var>k</var>-th column is also represented as the <var>(N+k)</var>-th column.</li>
+</ul>
+<p>After this operation, the second board is called a <em>good</em> board when, for every <var>i</var> and <var>j</var> ( <var>1 \leq i, j \leq N</var> ), the letter in Square <var>(i,j)</var> and the letter in Square <var>(j,i)</var> are equal.</p>
+<p>Find the number of the ways to choose integers <var>A</var> and <var>B</var> ( <var>0 \leq A, B &lt; N</var> ) such that the second board is a good board.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 \leq N \leq 300</var></li>
+<li><var>S_{i,j}</var> ( <var>1 \leq i, j \leq N</var> ) is a lowercase English letter.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+<var>S_{1,1}S_{1,2}..S_{1,N}</var>
+<var>S_{2,1}S_{2,2}..S_{2,N}</var>
+<var>:</var>
+<var>S_{N,1}S_{N,2}..S_{N,N}</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the number of the ways to choose integers <var>A</var> and <var>B</var> ( <var>0 \leq A, B &lt; N</var> ) such that the second board is a good board.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>2
+ab
+ca
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>2
+</pre>
+<p>For each pair of <var>A</var> and <var>B</var>, the second board will look as shown below:</p>
+<p><img alt="" src="https://img.atcoder.jp/agc023/2414e26dc3abb6dd7bfa0c800bb4af0c.png"/></p>
+<p>The second board is a good board when <var>(A,B) = (0,1)</var> or <var>(A,B) = (1,0)</var>, thus the answer is <var>2</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>4
+aaaa
+aaaa
+aaaa
+aaaa
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>16
+</pre>
+<p>Every possible choice of <var>A</var> and <var>B</var> makes the second board good.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>5
+abcde
+fghij
+klmno
+pqrst
+uvwxy
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>0
+</pre>
+<p>No possible choice of <var>A</var> and <var>B</var> makes the second board good.</p></section>
+</div>
+</span>

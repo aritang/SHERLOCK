@@ -1,0 +1,316 @@
+
+<p>Nathan O. Davis has been running an electronic bulletin board system named JAG-channel. He is now having hard time to add a new feature there --- threaded view.
+</p>
+
+<p>Like many other bulletin board systems, JAG-channel is thread-based. Here a thread (also called a topic) refers to a single conversation with a collection of posts. Each post can be an opening post, which initiates a new thread, or a reply to a previous post in an existing thread.
+</p>
+
+<p>Threaded view is a tree-like view that reflects the logical reply structure among the posts: each post forms a node of the tree and contains its replies as its subnodes in the chronological order (i.e. older replies precede newer ones). Note that a post along with its direct and indirect replies forms a subtree as a whole.
+</p>
+
+<p>Let us take an example. Suppose: a user made an opening post with a message <code>hoge</code>; another user replied to it with <code>fuga</code>; yet another user also replied to the opening post with <code>piyo</code>; someone else replied to the second post (i.e. <code>fuga</code>”) with <code>foobar</code>; and the fifth user replied to the same post with <code>jagjag</code>.
+The tree of this thread would look like:
+</p>
+
+<pre>hoge
+├─fuga
+│　├─foobar
+│　└─jagjag
+└─piyo
+</pre>
+
+<p>For easier implementation, Nathan is thinking of a simpler format: the depth of each post from the opening post is represented by dots. Each reply gets one more dot than its parent post. The tree of the above thread would then look like:
+</section>
+<pre>hoge
+.fuga
+..foobar
+..jagjag
+.piyo
+</pre>
+
+<p>Your task in this problem is to help Nathan by writing a program that prints a tree in the Nathan's format for the given posts in a single thread.
+</p>
+
+<h3>Input</h3>
+
+<p>Input contains a single dataset in the following format:
+</p>
+<pre>
+<var>n</var>
+<var>k_1</var>
+<var>M_1</var>
+<var>k_2</var>
+<var>M_2</var>
+:
+:
+<var>k_n</var>
+<var>M_n</var>
+</pre>
+
+<p>The first line contains an integer <var>n</var> (<var>1 &le; n &le; 1,000</var>), which is the number of posts in the thread.
+Then <var>2n</var> lines follow.
+Each post is represented by two lines:
+the first line contains an integer <var>k_i</var> (<var>k_1 = 0</var>, <var>1 &le; k_i < i</var> for <var>2 &le; i &le; n</var>) and indicates the <var>i</var>-th post is a reply to the <var>k_i</var>-th post;
+the second line contains a string <var>M_i</var> and represents the message of the <var>i</var>-th post.
+<var>k_1</var> is always 0, which means the first post is not replying to any other post, i.e. it is an opening post.
+</p>
+<p>Each message contains 1 to 50 characters, consisting of uppercase, lowercase, and numeric letters.
+</p>
+
+<h3>Output</h3>
+
+<p>Print the given <var>n</var> messages as specified in the problem statement.
+</p>
+
+<h3>Sample Input 1</h3>
+
+<pre>1
+0
+icpc
+</pre>
+
+
+<h3>Output for the Sample Input 1</h3>
+
+
+<pre>icpc
+</pre>
+
+
+<h3>Sample Input 2</h3>
+
+
+<pre>5
+0
+hoge
+1
+fuga
+1
+piyo
+2
+foobar
+2
+jagjag
+</pre>
+
+<h3>Output for the Sample Input 2</h3>
+
+
+<pre>hoge
+.fuga
+..foobar
+..jagjag
+.piyo
+</pre>
+
+<h3>Sample Input 3</h3>
+
+
+<pre>8
+0
+jagjag
+1
+hogehoge
+1
+buhihi
+2
+fugafuga
+4
+ponyoponyo
+5
+evaeva
+4
+nowawa
+5
+pokemon
+</pre>
+
+
+<h3>Output for the Sample Input 3</h3>
+
+
+<pre>jagjag
+.hogehoge
+..fugafuga
+...ponyoponyo
+....evaeva
+....pokemon
+...nowawa
+.buhihi
+</pre>
+
+
+<h3>Sample Input 4</h3>
+
+
+<pre>6
+0
+nakachan
+1
+fan
+2
+yamemasu
+3
+nennryou2
+4
+dannyaku4
+5
+kouzai11
+</pre>
+
+
+<h3>Output for the Sample Input 4</h3>
+
+
+<pre>nakachan
+.fan
+..yamemasu
+...nennryou2
+....dannyaku4
+.....kouzai11
+</pre>
+
+
+<h3>Sample Input 5</h3>
+
+
+<pre>34
+0
+LoveLive
+1
+honoka
+2
+borarara
+2
+sunohare
+2
+mogyu
+1
+eri
+6
+kasikoi
+7
+kawaii
+8
+eriichika
+1
+kotori
+10
+WR
+10
+haetekurukotori
+10
+ichigo
+1
+umi
+14
+love
+15
+arrow
+16
+shoot
+1
+rin
+18
+nyanyanya
+1
+maki
+20
+6th
+20
+star
+22
+nishikino
+1
+nozomi
+24
+spiritual
+25
+power
+1
+hanayo
+27
+darekatasukete
+28
+chottomattete
+1
+niko
+30
+natsuiro
+30
+nikkonikkoni
+30
+sekaino
+33
+YAZAWA
+</pre>
+
+
+<h3>Output for the Sample Input 5</h3>
+
+
+<pre>LoveLive
+.honoka
+..borarara
+..sunohare
+..mogyu
+.eri
+..kasikoi
+...kawaii
+....eriichika
+.kotori
+..WR
+..haetekurukotori
+..ichigo
+.umi
+..love
+...arrow
+....shoot
+.rin
+..nyanyanya
+.maki
+..6th
+..star
+...nishikino
+.nozomi
+..spiritual
+...power
+.hanayo
+..darekatasukete
+...chottomattete
+.niko
+..natsuiro
+..nikkonikkoni
+..sekaino
+...YAZAWA
+</pre>
+
+
+<h3>Sample Input 6</h3>
+
+
+<pre>6
+0
+2ch
+1
+1ostu
+1
+2get
+1
+1otsu
+1
+1ostu
+3
+pgr
+</pre>
+
+<h3>Output for the Sample Input 6</h3>
+
+<pre>2ch
+.1ostu
+.2get
+..pgr
+.1otsu
+.1ostu
+</pre>
+

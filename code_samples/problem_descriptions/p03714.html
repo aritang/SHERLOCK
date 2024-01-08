@@ -1,0 +1,88 @@
+<span class="lang-en">
+<p>Score : <var>500</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>Let <var>N</var> be a positive integer.</p>
+<p>There is a numerical sequence of length <var>3N</var>, <var>a = (a_1, a_2, ..., a_{3N})</var>.
+Snuke is constructing a new sequence of length <var>2N</var>, <var>a'</var>, by removing exactly <var>N</var> elements from <var>a</var> without changing the order of the remaining elements.
+Here, the score of <var>a'</var> is defined as follows: <var>(</var>the sum of the elements in the first half of <var>a') - (</var>the sum of the elements in the second half of <var>a')</var>.</p>
+<p>Find the maximum possible score of <var>a'</var>.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 ≤ N ≤ 10^5</var></li>
+<li><var>a_i</var> is an integer.</li>
+<li><var>1 ≤ a_i ≤ 10^9</var></li>
+</ul>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Partial Score</h3><ul>
+<li>In the test set worth <var>300</var> points, <var>N ≤ 1000</var>.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+<var>a_1</var> <var>a_2</var> <var>...</var> <var>a_{3N}</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the maximum possible score of <var>a'</var>.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>2
+3 1 4 1 5 9
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>1
+</pre>
+<p>When <var>a_2</var> and <var>a_6</var> are removed, <var>a'</var> will be <var>(3, 4, 1, 5)</var>, which has a score of <var>(3 + 4) - (1 + 5) = 1</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>1
+1 2 3
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>-1
+</pre>
+<p>For example, when <var>a_1</var> are removed, <var>a'</var> will be <var>(2, 3)</var>, which has a score of <var>2 - 3 = -1</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>3
+8 2 2 7 4 6 5 3 8
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>5
+</pre>
+<p>For example, when <var>a_2</var>, <var>a_3</var> and <var>a_9</var> are removed, <var>a'</var> will be <var>(8, 7, 4, 6, 5, 3)</var>, which has a score of <var>(8 + 7 + 4) - (6 + 5 + 3) = 5</var>.</p></section>
+</div>
+</span>

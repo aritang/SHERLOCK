@@ -1,0 +1,71 @@
+
+<H1><font color="#000">Problem A:</font> Infected Computer</H1>
+
+<p>
+Adam Ivan is working as a system administrator at Soy Group, Inc. He is now facing at a big trouble:
+a number of computers under his management have been infected by a computer virus. Unfortunately,
+anti-virus system in his company failed to detect this virus because it was very new.
+</p>
+
+<p>
+Adam has identified the first computer infected by the virus and collected the records of all data packets
+sent within his network. He is now trying to identify which computers have been infected. A computer
+is infected when receiving any data packet from any infected computer. The computer is not infected, on
+the other hand, just by sending data packets to infected computers.
+</p>
+<p>
+It seems almost impossible for him to list all infected computers by hand, because the size of the packet
+records is fairly large. So he asked you for help: write a program that can identify infected computers.
+</p>
+
+<H2>Input</H2>
+
+<p>
+The input consists of multiple datasets. Each dataset has the following format:
+</p>
+
+<p>
+<i>N M</i><br>
+<i>t</i><sub>1</sub> <i>s</i><sub>1</sub> <i>d</i><sub>1</sub><br>
+<i>t</i><sub>2</sub> <i>s</i><sub>2</sub> <i>d</i><sub>2</sub><br>
+...<br>
+<i>t<sub>M</sub> s<sub>M</sub> d<sub>M</sub></i><br>
+</p>
+
+<p>
+<i>N</i> is the number of computers; <i>M</i> is the number of data packets; <i>t<sub>i</sub></i> (1 &le; <i>i</i> &le; <i>M</i>) is the time when the <i>i</i>-th
+data packet is sent; <i>s<sub>i</sub></i> and <i>d<sub>i</sub></i> (1 &le; <i>i</i> &le; <i>M</i>) are the source and destination computers of the <i>i</i>-th data packet
+respectively. The first infected computer is indicated by the number 1; the other computers are indicated
+by unique numbers between 2 and <i>N</i>.
+</p>
+<p>
+The input meets the following constraints: 0 &lt; <i>N</i> &le; 20000, 0 &le; <i>M</i> &le; 20000, and 0 &le; <i>t<sub>i</sub></i> &le; 10<sup>9</sup> for
+1 &le; <i>i</i> &le; <i>N</i>; all <i>t<sub>i</sub></i> 's are different; and the source and destination of each packet are always different.
+</p>
+
+<p>
+The last dataset is followed by a line containing two zeros. This line is not a part of any dataset and should not be processed.
+</p>
+
+<H2>Output</H2>
+
+<p>
+For each dataset, print the number of computers infected by the computer virus.
+</p>
+
+<H2>Sample Input</H2>
+<pre>
+3 2
+1 1 2
+2 2 3
+3 2
+2 3 2
+1 2 1
+0 0
+</pre>
+
+<H2>Output for the Sample Input</H2>
+<pre>
+3
+1
+</pre>

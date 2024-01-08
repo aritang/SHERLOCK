@@ -1,0 +1,64 @@
+
+<H1><font color="#000"></font>Flame of Nucleus</H1>
+<!-- Problem D -->
+<p>
+Year 20XX — a nuclear explosion has burned the world. Half the people on the planet have died. Fearful.
+</p>
+<p>
+One city, fortunately, was not directly damaged by the explosion. This city consists of <i>N</i> domes (numbered 1
+through <i>N</i> inclusive) and <i>M</i> bidirectional transportation pipelines connecting the domes. In dome <i>i</i>, <i>P<sub>i</sub></i> citizens
+reside currently and there is a nuclear shelter capable of protecting <i>K<sub>i</sub></i> citizens. Also, it takes <i>D<sub>i</sub></i> days to travel
+from one end to the other end of pipeline <i>i</i>.
+</p>
+<p>
+It has been turned out that this city will be polluted by nuclear radiation in <i>L</i> days after today. So each citizen
+should take refuge in some shelter, possibly traveling through the pipelines. Citizens will be dead if they reach
+their shelters in exactly or more than <i>L</I> days.
+</p>
+<p>
+How many citizens can survive at most in this situation?
+</p>
+
+<H2>Input</H2>
+
+<p>
+The input consists of multiple test cases. Each test case begins with a line consisting of three integers <i>N</i>, <i>M</i>
+and <i>L</i> (1 &le; <i>N</i> &le; 100, <i>M</i> &ge; 0, 1 &le; <i>L</i> &le; 10000). This is followed by <i>M</i> lines describing the configuration of
+transportation pipelines connecting the domes. The <i>i</i>-th line contains three integers <i>A<sub>i</sub></i>, <i>B<sub>i</sub></i> and <i>D<sub>i</sub></i> (1 &le; <i>A<sub>i</sub></i> &lt; <i>B<sub>i</sub></i> &le;
+<i>N</i>, 1 &le; <i>D<sub>i</sub></i> &le; 10000), denoting that the <i>i</i>-th pipeline connects dome <i>A<sub>i</sub></i> and <i>B<sub>i</sub></i>. There is at most one pipeline
+between any pair of domes. Finally, there come two lines, each consisting of <i>N</i> integers. The first gives <i>P</i><sub>1</sub> , . . .,
+<i>P<sub>N</sub></i> (0 &le; <i>P<sub>i</sub></i> &le; 10<sup>6</sup>) and the second gives <i>K</i><sub>1</sub> , . . ., <i>K<sub>N</sub></i> (0 &le; <i>K<sub>i</sub></i> &le; 10<sup>6</sup>).
+</p>
+<p>
+The input is terminated by EOF. All integers in each line are separated by a whitespace.
+</p>
+
+<H2>Output</H2>
+
+<p>
+For each test case, print in a line the maximum number of people who can survive.
+</p>
+
+<H2>Sample Input</H2>
+<pre>
+1 0 1
+51
+50
+2 1 1
+1 2 1
+1000 0
+0 1000
+4 3 5
+1 2 4
+1 3 1
+3 4 2
+0 1000 1000 1000
+3000 0 0 0
+</pre>
+
+<H2>Output for the Sample Input</H2>
+<pre>
+50
+0
+3000
+</pre>

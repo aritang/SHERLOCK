@@ -1,0 +1,82 @@
+<H1>Iron Bars</H1>
+
+<p>
+A boy PCK had <var>N</var> straight iron bars, which were serially indexed. Unfortunately, the first <var>M</var> bars (0 &le; <var>M</var> &le; <var>N</var>) among them were bent during transportation. They all suffered a perpendicular bend at one point.
+</p>
+
+<p>
+  He is planning to make a cube using a set of bars selected using the following rules: <var>X</var> bars from bent ones, <var>Y</var> bars from straight ones, where <var>2X + Y = 12</var>. Any two bars can be jointed only at the apexes of the cube. He wants to count how many types of rectangular parallelepipeds (hereafter RP) he can make using these bars.
+</p>
+
+<p>
+Make a program to count out types (different shapes) of RPs that PCK can make using the following information: the number of bars and length of each one, position of the bend, and the number of bars to be used to construct an RP. Note that any two RPs similar in shape are considered identical: namely if the length of three defining sides of two RPs coincide if arranged in increasing/decreasing order (e.g., three sides of RP <var>i</var> and <var>j</var> are <var>A_i, B_i, C_i</var>, and <var>A_j, B_j</var> and <var>C_j</var> in increasing order, then the relations <var>A_i = A_j, B_i = B_j</var>, and <var>C_i = C_j</var> hold. Note also that the bars are sufficiently thin to allow you to consider them as idealized lines.
+  
+</p>
+
+
+<h2>Input</h2>
+
+<p>
+  The input is given in the following format.
+</p>
+
+<pre>
+<var>N</var> <var>M</var> <var>X</var> <var>Y</var>
+<var>a_1</var>
+<var>a_2</var>
+:
+<var>a_N</var>
+<var>b_1</var>
+<var>b_2</var>
+:
+<var>b_M</var>
+</pre>
+
+<p>
+The first line provides the total number of iron bars and bent bars, and those straight and bent bars used to construct an RP: <var>N</var> (6 &le; <var>N</var> &le; 6000), <var>M</var> (0 &le; <var>M</var> &le; <var>N</var>), <var>X</var> (0 &le; <var>X</var> &le; 6), and <var>Y</var> (0 &le; <var>Y</var> &le; 12). The following relations always hold for them: <var>2X+Y=12</var>, <var>X+Y</var> &le; <var>N</var>, <var>X</var> &le; <var>M</var>. Each of the subsequent <var>N</var> lines provides the length of the <var>i</var>-th bar <var>a_i</var> (1 &le; <var>a_i</var> &le; 6000) in integers. Furthermore, each of the subsequent <var>M</var> lines provides the location at which the <var>i</var>-th bent bar suffered a perpendicular bend <var>b_i</var> (1 &le; <var>b_i</var> &le; 3000) in centimeters from one end of the bar (note: 1 &le; <var>a_i-b_i</var> &le; 3000).
+  
+</p>
+
+
+<h2>Output</h2>
+
+<p>
+  Output the number of constructible rectangular parallelepipeds.
+</p>
+
+<h2>Sample Input 1</h2>
+
+<pre>
+18 8 3 6
+4
+3
+3
+3
+3
+2
+2
+2
+1
+1
+1
+1
+1
+2
+2
+3
+3
+3
+1
+1
+1
+1
+1
+1
+1
+1
+</pre>
+
+<h2>Sample Output 1</h2>
+<pre>
+3
+</pre>

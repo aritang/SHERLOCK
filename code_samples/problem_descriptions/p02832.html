@@ -1,0 +1,95 @@
+<span class="lang-en">
+<p>Score : <var>400</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>We have <var>N</var> bricks arranged in a row from left to right.</p>
+<p>The <var>i</var>-th brick from the left <var>(1 \leq i \leq N)</var> has an integer <var>a_i</var> written on it.</p>
+<p>Among them, you can break at most <var>N-1</var> bricks of your choice.</p>
+<p>Let us say there are <var>K</var> bricks remaining. Snuke will be satisfied if, for each integer <var>i</var> <var>(1 \leq i \leq K)</var>, the <var>i</var>-th of those brick from the left has the integer <var>i</var> written on it.</p>
+<p>Find the minimum number of bricks you need to break to satisfy Snuke's desire. If his desire is unsatisfiable, print <code>-1</code> instead.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li>All values in input are integers.</li>
+<li><var>1 \leq N \leq 200000</var></li>
+<li><var>1 \leq a_i \leq N</var></li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+<var>a_1</var> <var>a_2</var> <var>...</var> <var>a_N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the minimum number of bricks that need to be broken to satisfy Snuke's desire, or print <code>-1</code> if his desire is unsatisfiable.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>3
+2 1 2
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>1
+</pre>
+<p>If we break the leftmost brick, the remaining bricks have integers <var>1</var> and <var>2</var> written on them from left to right, in which case Snuke will be satisfied.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>3
+2 2 2
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>-1
+</pre>
+<p>In this case, there is no way to break some of the bricks to satisfy Snuke's desire.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>10
+3 1 4 1 5 9 2 6 5 3
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>7
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 4</h3><pre>1
+1
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 4</h3><pre>0
+</pre>
+<p>There may be no need to break the bricks at all.</p></section>
+</div>
+</span>

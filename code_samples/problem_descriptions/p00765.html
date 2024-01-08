@@ -1,0 +1,228 @@
+
+<h1>Generic Poker</h1>
+<!-- end en only -->
+
+<!-- begin en only -->
+<p>
+You have a deck of <i>N</i> &times; <i>M</i> cards. Each card in the deck has a rank. The range of ranks is 1 through <i>M</i>, and the deck includes <i>N</i> cards of each rank.
+</p>
+<!-- end en only -->
+
+<!-- begin en only -->
+<p>
+We denote a card with rank <i>m</i> by <i>m</i> here.
+</p>
+<!-- end en only -->
+
+
+
+<!-- begin en only -->
+<p>
+You can draw a hand of <i>L</i> cards at random from the deck.
+If the hand matches the given pattern,
+some bonus will be rewarded.
+A pattern is described as follows.
+</p>
+<!-- end en only -->
+<pre>
+hand_pattern = card_pattern<sub>1</sub> ' ' card_pattern<sub>2</sub> ' ' ... ' ' card_pattern<sub><i>L</i></sub>
+card_pattern = '*' | var_plus
+var_plus = variable | var_plus '+'
+variable = 'a' | 'b' | 'c'
+</pre>
+<p>
+<dl>
+<dt> hand_pattern
+<dd> 
+<!-- begin en only -->
+A hand matches the hand_pattern if each card_pattern in the hand_pattern matches with a distinct card in the hand.
+<!-- end en only -->
+<dt> card_pattern
+<dd> 
+<!-- begin en only -->
+If the card_pattern is an asterisk ('*'), it matches any card. 
+Characters 'a', 'b', and 'c' denote variables and all the occurrences of the same variable match cards of the same rank.
+A card_pattern with a variable followed by plus ('+')
+characters matches a card whose rank is the sum of the rank corresponding to the variable
+and the number of plus characters.
+
+You can assume that, when a hand_pattern includes a card_pattern with
+a variable followed by some number of plus characters, it also
+includes card_patterns with that variable and all smaller numbers (including zero) of plus characters.
+For example, if 'a+++' appears in a hand_pattern, card_patterns 'a',
+'a+', and 'a++' also appear in the hand_pattern.
+<!-- end en only -->
+</dl>
+</p>
+
+<!-- begin en only -->
+<p>
+There is no restriction on which ranks different variables mean.
+For example, 'a' and 'b' may or may not match cards of the same rank.
+</p>
+<!-- end en only -->
+
+<!-- begin en only -->
+<p>
+We show some example hand_patterns. The pattern
+<pre>
+a * b a b 
+</pre>
+matches the hand:
+<pre>
+3 3 10 10 9
+</pre>
+with 'a's and 'b's meaning 3 and 10 (or 10 and 3),
+respectively. This pattern also matches the following hand.
+<pre>
+3 3 3 3 9
+</pre>
+In this case, both 'a's and 'b's mean 3.  The pattern
+<pre>
+a a+ a++ a+++ a++++
+</pre>
+matches the following hand.
+<pre>
+4 5 6 7 8
+</pre>
+In this case, 'a' should mean 4. 
+</p>
+<!-- end en only -->
+
+<!-- begin en only -->
+<p>
+Your mission is to write a program that computes the probability that
+a hand randomly drawn from the deck matches the given hand_pattern.
+</p>
+<!-- end en only -->
+
+
+
+<h3>Input</h3>
+
+
+<!-- begin en only -->
+<p>
+The input is a sequence of datasets. Each dataset is formatted as follows.
+</p>
+<!-- end en only -->
+
+<blockquote>
+<i>N</i> <i>M</i> <i>L</i><br>
+<i>card_pattern<sub>1</sub></i> <i>card_pattern<sub>2</sub></i> ... <i>card_pattern<sub>L</sub></i>
+</blockquote>
+
+<!-- begin en only -->
+<p>
+The first line consists of three positive integers <i>N</i>, <i>M</i>, and <i>L</i>.
+<i>N</i> indicates the number of cards in each rank, <i>M</i> indicates the number of ranks, and <i>L</i> indicates the number of cards in a hand. <i>N</i>, <i>M</i>, and <i>L</i> are constrained as follows.
+</p>
+<!-- end en only -->
+
+<blockquote>
+1 &le; <i>N</i> &le; 7<br>
+1 &le; <i>M</i> &le; 60<br>
+1 &le; <i>L</i> &le; 7<br>
+<i>L</i> &le; <i>N</i> &times; <i>M</i><br>
+</blockquote>
+
+<!-- begin en only -->
+<p>
+The second line describes a hand_pattern.
+</p>
+<!-- end en only -->
+
+
+<!-- begin en only -->
+<p>
+The end of the input is indicated by a line containing three zeros 
+separated by a single space.
+</p>
+<!-- end en only -->
+
+
+
+
+
+<h3>Output</h3>
+
+<!-- begin en only -->
+<p>
+For each dataset, output a line containing a decimal fraction which means the probability of a hand matching the hand_pattern.
+</p>
+<p>
+The output should not contain an error greater than 10<sup>&minus;8</sup>.
+</p>
+<p>
+No other characters should be contained in the output.
+</p>
+<!-- end en only -->
+
+<h3>Sample Input</h3>
+
+<pre>
+1 1 1
+a
+3 3 4
+a+ * a *
+2 2 3
+a a b
+2 2 3
+* * *
+2 2 3
+* b b
+2 2 2
+a a
+2 3 3
+a a+ a++
+2 6 6
+a a+ a++ b b+ b++
+4 13 5
+a a * * *
+4 13 5
+a a b b *
+4 13 5
+a a a * *
+4 13 5
+a a+ a++ a+++ a++++
+4 13 5
+* * * * *
+4 13 5
+a a a b b
+4 13 5
+a a a a *
+7 60 7
+a b a b c c *
+7 60 7
+* * * * * * *
+7 60 7
+a a+ a++ a+++ a++++ a+++++ a++++++
+1 14 4
+b a+ a a
+0 0 0
+</pre>
+
+
+<h3>Output for the Sample Input</h3>
+
+<pre>
+1.0000000000
+0.8809523810
+1.0000000000
+1.0000000000
+1.0000000000
+0.3333333333
+0.4000000000
+0.1212121212
+0.4929171669
+0.0492196879
+0.0228091236
+0.0035460338
+1.0000000000
+0.0014405762
+0.0002400960
+0.0002967709
+1.0000000000
+0.0000001022
+0.0000000000
+</pre>

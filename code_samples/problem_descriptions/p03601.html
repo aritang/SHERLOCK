@@ -1,0 +1,102 @@
+<span class="lang-en">
+<p>Score : <var>300</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>Snuke is making sugar water in a beaker.
+Initially, the beaker is empty. Snuke can perform the following four types of operations any number of times. He may choose not to perform some types of operations.</p>
+<ul>
+<li>Operation 1: Pour <var>100A</var> grams of water into the beaker.</li>
+<li>Operation 2: Pour <var>100B</var> grams of water into the beaker.</li>
+<li>Operation 3: Put <var>C</var> grams of sugar into the beaker.</li>
+<li>Operation 4: Put <var>D</var> grams of sugar into the beaker.</li>
+</ul>
+<p>In our experimental environment, <var>E</var> grams of sugar can dissolve into <var>100</var> grams of water.</p>
+<p>Snuke will make sugar water with the highest possible density.</p>
+<p>The beaker can contain at most <var>F</var> grams of substances (water and sugar combined), and there must not be any undissolved sugar in the beaker.
+Find the mass of the sugar water Snuke will make, and the mass of sugar dissolved in it.
+If there is more than one candidate, any of them will be accepted.</p>
+<p>We remind you that the sugar water that contains <var>a</var> grams of water and <var>b</var> grams of sugar is <var>\frac{100b}{a + b}</var> percent.
+Also, in this problem, pure water that does not contain any sugar is regarded as <var>0</var> percent density sugar water.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 \leq A &lt; B \leq 30</var></li>
+<li><var>1 \leq C &lt; D \leq 30</var></li>
+<li><var>1 \leq E \leq 100</var></li>
+<li><var>100A \leq F \leq 3</var> <var>000</var></li>
+<li><var>A</var>, <var>B</var>, <var>C</var>, <var>D</var>, <var>E</var> and <var>F</var> are all integers.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Inputs</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>A</var> <var>B</var> <var>C</var> <var>D</var> <var>E</var> <var>F</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Outputs</h3><p>Print two integers separated by a space.
+The first integer should be the mass of the desired sugar water, and the second should be the mass of the sugar dissolved in it.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>1 2 10 20 15 200
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>110 10
+</pre>
+<p>In this environment, <var>15</var> grams of sugar can dissolve into <var>100</var> grams of water, and the beaker can contain at most <var>200</var> grams of substances.</p>
+<p>We can make <var>110</var> grams of sugar water by performing Operation 1 once and Operation 3 once.
+It is not possible to make sugar water with higher density.
+For example, the following sequences of operations are infeasible:</p>
+<ul>
+<li>If we perform Operation 1 once and Operation 4 once, there will be undissolved sugar in the beaker.</li>
+<li>If we perform Operation 2 once and Operation 3 three times, the mass of substances in the beaker will exceed <var>200</var> grams.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>1 2 1 2 100 1000
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>200 100
+</pre>
+<p>There are other acceptable outputs, such as:</p>
+<pre>400 200
+</pre>
+<p>However, the output below is not acceptable:</p>
+<pre>300 150
+</pre>
+<p>This is because, in order to make <var>300</var> grams of sugar water containing <var>150</var> grams of sugar, we need to pour exactly <var>150</var> grams of water into the beaker, which is impossible.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>17 19 22 26 55 2802
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>2634 934
+</pre></section>
+</div>
+</span>

@@ -1,0 +1,72 @@
+<h1>Huffman Coding</h1>
+
+<p>We want to encode a given string $S$ to a binary string. Each alphabet character in $S$ should be mapped to a different variable-length code and the code must not be a prefix of others.</p>
+<p>Huffman coding is known as one of ways to obtain a code table for such encoding.</p>
+<p>For example, we consider that appearance frequencycies of each alphabet character in $S$ are as follows:</p>
+<table border="">
+  <tr><th></th><th>a</th><th>b</th><th>c</th><th>d</th><th>e</th><th>f</th></tr>
+  <tr><th>freq.</th><td>45</td><td>13</td><td>12</td><td>16</td><td>9</td><td>5</td></tr>
+  <tr><th>code</th><td>0</td><td>101</td><td>100</td><td>111</td><td>1101</td><td>1100</td></tr>
+</table>
+<p>We can obtain "Huffman codes" (the third row of the table) using Huffman's algorithm.</p>
+<p>The algorithm finds a full binary tree called "Huffman tree" as shown in the following figure.</p>
+<center>
+  <img src="https://judgeapi.u-aizu.ac.jp/resources/images/ALDS1_15_D_tree">
+</center>
+<p>To obtain a Huffman tree, for each alphabet character, we first prepare a node which has no parents and a frequency (weight) of the alphabet character. Then, we repeat the following steps:</p>
+<ol>
+  <li>Choose two nodes, $x$ and $y$, which has no parents and the smallest weights.</li>
+  <li>Create a new node $z$ whose weight is the sum of $x$'s and $y$'s.</li>
+  <li>Add edge linking $z$ to $x$ with label $0$ and to $y$ with label $1$. Then $z$ become their parent.</li>
+  <li>If there is only one node without a parent, which is the root, finish the algorithm. Otherwise, go to step 1.</li>
+</ol>
+<p>Finally, we can find a "Huffman code" in a path from the root to leaves.</p>
+
+<p>Task</p>
+<p>Given a string $S$, output the length of a binary string obtained by using Huffman coding for $S$.</p>
+
+<h2>Input</h2>
+
+<pre>
+$S$
+</pre>
+
+<p>A string $S$ is given in a line.</p>
+
+<h2>Output</h2>
+
+<p>Print the length of a binary string in a line.</p>
+
+<h2>Constraints</h2>
+
+<ul>
+  <li>$1 \le |S| \le 10^5$</li>
+  <li>$S$ consists of lowercase English letters.</li>
+</ul>
+
+<h2>Sample Input 1</h2>
+<pre>
+abca
+</pre>
+<h2>Sample Output 1</h2>
+<pre>
+6
+</pre>
+
+<h2>Sample Input 2</h2>
+<pre>
+aaabbcccdeeeffg
+</pre>
+<h2>Sample Output 2</h2>
+<pre>
+41
+</pre>
+
+<h2>Sample Input 3</h2>
+<pre>
+z
+</pre>
+<h2>Sample Output 3</h2>
+<pre>
+1
+</pre>

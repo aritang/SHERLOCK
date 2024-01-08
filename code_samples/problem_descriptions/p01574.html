@@ -1,0 +1,89 @@
+
+<H1><font color="#000">Problem D: </font> Dial Key</H1>
+
+<p>
+You are a secret agent from the Intelligence Center of Peacemaking Committee. You've just sneaked into a secret laboratory of an evil company, Automated Crime Machines.
+</p>
+
+<p>
+Your mission is to get a confidential document kept in the laboratory. To reach the document, you need to unlock the door to the safe where it is kept. You have to unlock the door in a correct way and with a great care; otherwise an alarm would ring and you would be caught by the secret police.
+</p>
+
+<p>
+The lock has a circular dial with <i>N</i> lights around it and a hand pointing to one of them. The lock also has <i>M</i> buttons to control the hand. Each button has a number <i>L<sub>i</sub></i> printed on it.
+</p>
+
+<p>
+Initially, all the lights around the dial are turned off. When the <i>i</i>-th button is pressed, the hand revolves clockwise by <i>L<sub>i</sub></i> lights, and the pointed light is turned on. You are allowed to press the buttons exactly <i>N</i> times. The lock opens only when you make all the lights turned on.
+</p>
+
+<center>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_dialKey">
+</center>
+
+<p>
+For example, in the case with <i>N</i> = 6, <i>M</i> = 2, <i>L</i><sub>1</sub> = 2 and <i>L</i><sub>2</sub> = 5, you can unlock the door by pressing buttons 2, 2, 2, 5, 2 and 2 in this order.
+</p>
+
+<p>
+There are a number of doors in the laboratory, and some of them don’t seem to be unlockable. Figure out which lock can be opened, given the values <i>N</i>, <i>M</i>, and <i>L<sub>i</sub></i>'s.
+</p>
+
+<H2>Input</H2>
+
+<p>
+The input starts with a line containing two integers, which represent <i>N</i> and <i>M</i> respectively. <i>M</i> lines follow, each of which contains an integer representing <i>L<sub>i</sub></i>.
+</p>
+
+<p>
+It is guaranteed that 1 &le; <i>N</i> &le; 10<sup>9</sup>, 1 &le; <i>M</i> &le; 10<sup>5</sup>, and 1 &le; <i>L<sub>i</sub></i> &le; <i>N</i> for each <i>i</i> = 1, 2, ... <i>N</i>.
+</p>
+
+<H2>Output</H2>
+
+<p>
+Output a line with "Yes" (without quotes) if the lock can be opened, and "No" otherwise.
+</p>
+
+<H2>Sample Input 1</H2>
+<pre>
+6 2
+2
+5
+</pre>
+
+<H2>Output for the Sample Input 1</H2>
+<pre>
+Yes
+</pre>
+
+<br/>
+
+<H2>Sample Input 2</H2>
+<pre>
+3 1
+1
+</pre>
+
+<H2>Output for the Sample Input 2</H2>
+<pre>
+Yes
+</pre>
+
+<br/>
+
+
+
+<H2>Sample Input 3</H2>
+<pre>
+4 2
+2
+4
+</pre>
+
+<H2>Output for the Sample Input 3</H2>
+<pre>
+No
+</pre>
+
+

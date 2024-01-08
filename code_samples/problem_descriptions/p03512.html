@@ -1,0 +1,98 @@
+<span class="lang-en">
+<p>Score : <var>100</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>Consider an infinite sequence <var>a_1,</var> <var>a_2,</var> <var>…</var> Initially, the values of all the terms are <var>0</var>, and from this state we will sequentially perform <var>Q</var> operations. The <var>i</var>-th operation <var>(1 ≤ i ≤ Q)</var> is as follows:</p>
+<ul>
+<li>For every positive integer <var>j</var>, add <var>x_i</var> to the value of <var>a_{j × m_i}</var>.</li>
+</ul>
+<p>Find the value of the largest term after these <var>Q</var> operations.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 ≤ Q ≤ 299</var></li>
+<li><var>2 ≤ m_i ≤ 300</var></li>
+<li><var>-10^6 ≤ x_i ≤ 10^6</var></li>
+<li>All <var>m_i</var> are distinct.</li>
+<li>All input values are integers.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>Q</var>
+<var>m_1</var> <var>x_1</var>
+<var>:</var>
+<var>m_Q</var> <var>x_Q</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the value of the largest term after the <var>Q</var> operations.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>3
+2 10
+3 -20
+6 15
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>10
+</pre>
+<p>The values of each terms in the sequence <var>a_1,</var> <var>a_2,</var> <var>…</var> change as follows:</p>
+<ul>
+<li>Before the operations: <var>0,</var> <var>0,</var> <var>0,</var> <var>0,</var> <var>0,</var> <var>0,</var> <var>…</var></li>
+<li>After the <var>1</var>-st operation: <var>0,</var> <var>10,</var> <var>0,</var> <var>10,</var> <var>0,</var> <var>10,</var> <var>…</var></li>
+<li>After the <var>2</var>-nd operation: <var>0,</var> <var>10,</var> <var>-20,</var> <var>10,</var> <var>0,</var> <var>-10,</var> <var>…</var></li>
+<li>After the <var>3</var>-rd operation: <var>0,</var> <var>10,</var> <var>-20,</var> <var>10,</var> <var>0,</var> <var>5,</var> <var>…</var></li>
+</ul>
+<p>The value of the largest term after all the operations is <var>10</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>3
+10 -3
+50 4
+100 -5
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>1
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>5
+56 114834
+72 -149861
+100 190757
+192 -132693
+240 133108
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>438699
+</pre></section>
+</div>
+</span>

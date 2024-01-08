@@ -1,0 +1,75 @@
+
+<H1>Drawing Lots</H1>
+
+<p>
+Let's play Amidakuji. 
+</p>
+
+<p>
+In the following example, there are five vertical lines and four horizontal lines. The horizontal lines can intersect (jump across) the vertical lines.
+</p>
+
+<center>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE1_amida1">
+</center>
+<br>
+
+<p>
+In the starting points (top of the figure), numbers are assigned to vertical lines in ascending order from left to right. At the first step, 2 and 4 are swaped by the first horizontal line which connects second and fourth vertical lines (we call this operation (2, 4)). Likewise, we perform (3, 5), (1, 2) and (3, 4), then obtain "4 1 2 5 3" in the bottom.
+</p>
+
+<p>
+Your task is to write a program which reads the number of vertical lines <var>w</var> and configurations of horizontal lines and prints the final state of the Amidakuji. In the starting pints, numbers 1, 2, 3, ..., <var>w</var> are assigne to the vertical lines from left to right.
+</p>
+
+<H2>Input</H2>
+
+<pre>
+<var>w</var>
+<var>n</var>
+<var>a<sub>1</sub></var>,<var>b<sub>1</sub></var>
+<var>a<sub>2</sub></var>,<var>b<sub>2</sub></var>
+.
+.
+<var>a<sub>n</sub></var>,<var>b<sub>n</sub></var>
+</pre>
+
+<p>
+<var>w</var> (<var>w</var> &le; 30) is the number of vertical lines. <var>n</var> (<var>n</var> &le; 30) is the number of horizontal lines. A pair of two integers <var>a<sub>i</sub></var> and <var>b<sub>i</sub></var> delimited by a comma represents the <var>i</var>-th horizontal line.
+</p>
+
+<H2>Output</H2>
+
+<p>
+The number which should be under the 1st (leftmost) vertical line<br>
+The number which should be under the 2nd vertical line<br>
+:<br>
+The number which should be under the <var>w</var>-th vertical line<br>
+</p>
+
+<H2>Sample Input</H2>
+
+<pre>
+5
+4
+2,4
+3,5
+1,2
+3,4
+</pre>
+
+<H2>Output for the Sample Input</H2>
+
+<pre>
+4
+1
+2
+5
+3
+</pre>
+
+<!--
+<H2>Hint</H2>
+<a href="IMAGE1/lots.gif">Try it.</a>
+-->
+

@@ -1,0 +1,96 @@
+<span class="lang-en">
+<p>Score : <var>900</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>Akaki, a patissier, can make <var>N</var> kinds of doughnut using only a certain powder called "Okashi no Moto" (literally "material of pastry", simply called Moto below) as ingredient. These doughnuts are called Doughnut <var>1</var>, Doughnut <var>2</var>, <var>...,</var> Doughnut <var>N</var>. In order to make one Doughnut <var>i</var> <var>(1 ≤ i ≤ N)</var>, she needs to consume <var>m_i</var> grams of Moto. She cannot make a non-integer number of doughnuts, such as <var>0.5</var> doughnuts.</p>
+<p>The recipes of these doughnuts are developed by repeated modifications from the recipe of Doughnut <var>1</var>. Specifically, the recipe of Doughnut <var>i</var> <var>(2 ≤ i ≤ N)</var> is a direct modification of the recipe of Doughnut <var>p_i</var> <var>(1 ≤ p_i &lt; i)</var>.</p>
+<p>Now, she has <var>X</var> grams of Moto. She decides to make as many doughnuts as possible for a party tonight. However, since the tastes of the guests differ, she will obey the following condition:</p>
+<ul>
+<li>Let <var>c_i</var> be the number of Doughnut <var>i</var> <var>(1 ≤ i ≤ N)</var> that she makes. For each integer <var>i</var> such that <var>2 ≤ i ≤ N</var>, <var>c_{p_i} ≤ c_i ≤ c_{p_i} + D</var> must hold. Here, <var>D</var> is a predetermined value.</li>
+</ul>
+<p>At most how many doughnuts can be made here? She does not necessarily need to consume all of her Moto.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>2 ≤ N ≤ 50</var></li>
+<li><var>1 ≤ X ≤ 10^9</var></li>
+<li><var>0 ≤ D ≤ 10^9</var></li>
+<li><var>1 ≤ m_i ≤ 10^9</var> <var>(1 ≤ i ≤ N)</var></li>
+<li><var>1 ≤ p_i &lt; i</var> <var>(2 ≤ i ≤ N)</var></li>
+<li>All values in input are integers.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var> <var>X</var> <var>D</var>
+<var>m_1</var>
+<var>m_2</var> <var>p_2</var>
+<var>:</var>
+<var>m_N</var> <var>p_N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the maximum number of doughnuts that can be made under the condition.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>3 100 1
+15
+10 1
+20 1
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>7
+</pre>
+<p>She has <var>100</var> grams of Moto, can make three kinds of doughnuts, and the conditions that must hold are <var>c_1 ≤ c_2 ≤ c_1 + 1</var> and <var>c_1 ≤ c_3 ≤ c_1 + 1</var>. It is optimal to make two Doughnuts <var>1</var>, three Doughnuts <var>2</var> and two Doughnuts <var>3</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>3 100 10
+15
+10 1
+20 1
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>10
+</pre>
+<p>The amount of Moto and the recipes of the doughnuts are not changed from Sample Input 1, but the last conditions are relaxed. In this case, it is optimal to make just ten Doughnuts <var>2</var>. As seen here, she does not necessarily need to make all kinds of doughnuts.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>5 1000000000 1000000
+123
+159 1
+111 1
+135 3
+147 3
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>7496296
+</pre></section>
+</div>
+</span>

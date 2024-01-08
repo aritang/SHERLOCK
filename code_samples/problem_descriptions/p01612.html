@@ -1,0 +1,55 @@
+
+
+
+<h2>社員旅行</h2>
+
+
+<h2>Problem Statement</h2>
+
+<p>あなたの会社には<var>n</var>人の社員が存在する．<var>m</var>個の社員<var>(a_i,b_i)</var>の組について，<var>a_i</var>は<var>b_i</var>の上司である．</p>
+<p>社員<var>x</var>が社員<var>y</var>の実質的な上司であるとは，次のうち少なくとも一方が成り立つことをいう．<br /></p>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li><var>x</var>が<var>y</var>の上司である．</li>
+<li><var>y</var>の実質的な上司である社員<var>z</var>が存在して，<var>x</var>は<var>z</var>の上司である．</li></ul>
+<p>あなたの会社で，自分自身が自分の実質的な上司であるような社員は存在しない．</p>
+<p>あなたの会社では社員が全員参加する社員旅行が計画されている．全社員の要求により，旅館での部屋割りは「よい部屋割り」でなければならない．<br />
+ある部屋割りが「よい部屋割り」であるとは以下の両方が満たされることをいう．<br /></p>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>各社員はどこかの部屋に割り振られる．</li>
+<li>社員<var>x</var>と社員<var>y</var>が同じ部屋に割り振られているとき，<var>x</var>は<var>y</var>の実質的な上司でない．</li></ul>
+<p>幹事の社員は非常に優秀なので，「よい部屋割り」でかつ必要な部屋の数が最小になるように部屋割りを行った．しかし残念なことに予算が不足している．どうしても必要な部屋の数を減らさなければならないらしい．<br />
+そこで，人事部で働くあなたは上司-部下の関係を一つだけ解消することによって，「よい部屋割り」を得るために必要な部屋の数を減らすことにした．<br />
+さて，どの関係を解消すればよいのだろう？</p>
+
+<h2>Input</h2>
+
+<p>入力は以下の形式に従う．与えられる数は全て整数である．</p>
+<pre><var>n</var> <var>m</var>
+<var>a_1</var> <var>b_1</var>
+<var>...</var>
+<var>a_m</var> <var>b_m</var></pre>
+
+<h2>Constraints</h2>
+
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li><var>2≦n≦10^5</var></li>
+<li><var>1≦m≦2 \times 10^5</var></li>
+<li><var>1≦a_i&lt;b_i≦n</var></li>
+<li><var>i \neq j</var>ならば<var>(a_i, b_i) \neq (a_j, b_j)</var></li></ul>
+
+<h2>Output</h2>
+
+<p>次を満たすような<var>i</var>を昇順に1行ずつ出力せよ．</p>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>「<var>a_i</var>が<var>b_i</var>の上司である」という関係を解消したとき，「よい部屋割り」を得るために必要な部屋の数を減らすことができる．</li></ul>
+<p>そのような<var>i</var>が存在しない場合は-1を1行に出力せよ．</p>
+
+<h2>Sample Input 1</h2>
+
+<pre>5 4
+1 2
+2 3
+3 4
+3 5</pre>
+
+
+<h2>Output for the Sample Input 1</h2>
+
+<pre>1
+2</pre>

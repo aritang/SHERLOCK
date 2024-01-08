@@ -1,0 +1,85 @@
+<span class="lang-en">
+<p>Score: <var>300</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>In Republic of Atcoder, there are <var>N</var> prefectures, and a total of <var>M</var> cities that belong to those prefectures.</p>
+<p>City <var>i</var> is established in year <var>Y_i</var> and belongs to Prefecture <var>P_i</var>.</p>
+<p>You can assume that there are no multiple cities that are established in the same year.</p>
+<p>It is decided to allocate a <var>12</var>-digit ID number to each city.</p>
+<p>If City <var>i</var> is the <var>x</var>-th established city among the cities that belong to Prefecture <var>i</var>, the first six digits of the ID number of City <var>i</var> is <var>P_i</var>, and the last six digits of the ID number is <var>x</var>.</p>
+<p>Here, if <var>P_i</var> or <var>x</var> (or both) has less than six digits, zeros are added to the left until it has six digits.</p>
+<p>Find the ID numbers for all the cities.</p>
+<p>Note that there can be a prefecture with no cities.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 \leq N \leq 10^5</var></li>
+<li><var>1 \leq M \leq 10^5</var></li>
+<li><var>1 \leq P_i \leq N</var></li>
+<li><var>1 \leq Y_i \leq 10^9</var></li>
+<li><var>Y_i</var> are all different.</li>
+<li>All values in input are integers.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var> <var>M</var>
+<var>P_1</var> <var>Y_1</var>
+<var>:</var>
+<var>P_M</var> <var>Y_M</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the ID numbers for all the cities, in ascending order of indices (City <var>1</var>, City <var>2</var>, <var>...</var>).</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>2 3
+1 32
+2 63
+1 12
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>000001000002
+000002000001
+000001000001
+</pre>
+<ul>
+<li>As City <var>1</var> is the second established city among the cities that belong to Prefecture <var>1</var>, its ID number is <var>000001000002</var>.</li>
+<li>As City <var>2</var> is the first established city among the cities that belong to Prefecture <var>2</var>, its ID number is <var>000002000001</var>.</li>
+<li>As City <var>3</var> is the first established city among the cities that belong to Prefecture <var>1</var>, its ID number is <var>000001000001</var>.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>2 3
+2 55
+2 77
+2 99
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>000002000001
+000002000002
+000002000003
+</pre></section>
+</div>
+</span>

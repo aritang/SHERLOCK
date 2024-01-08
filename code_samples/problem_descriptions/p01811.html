@@ -1,0 +1,62 @@
+
+
+
+<h2>ABC Gene</h2>
+
+<p>文字列 <code>ABC</code> で表される遺伝子配列がある。あなたは次の操作を何回か行い、この遺伝子配列を書き換えていくことができる。</p>
+
+<ul>
+<li>文字 <code>A</code>，<code>B</code>，<code>C</code> のうち <var>1</var> つを選ぶ。これを <var>x</var> とおく。遺伝子配列に含まれるすべての <var>x</var> をそれぞれ <code>ABC</code> へ同時に置き換える。</li>
+</ul>
+<p><code>A</code>，<code>B</code>，<code>C</code> だけからなる文字列 <var>S</var> が与えられる。遺伝子配列を <var>S</var> に一致させられるか判定せよ。</p>
+
+<h3>Constraints</h3>
+<ul>
+<li><var>1</var> &le; <var>|S|</var>  &le; <var>5,000</var></li>
+<li><var>S</var> は <code>A</code>，<code>B</code>，<code>C</code> だけからなる。</li>
+</ul>
+
+<h3>Input Format</h3>
+<p>入力は以下の形式で標準入力から与えられる。</p>
+<pre>
+<var>S</var>
+</pre>
+
+<h3>Output Format</h3>
+<p>遺伝子配列を <var>S</var> に一致させられるならば <code>Yes</code> を、一致させられないならば <code>No</code> を一行に出力せよ。</p>
+
+<h3>Sample Input 1</h3>
+<pre>
+ABC
+</pre>
+
+<h3>Sample Output 1</h3>
+<pre>
+Yes
+</pre>
+<p>遺伝子配列ははじめから <code>ABC</code> である。</p>
+
+
+<h3>Sample Input 2</h3>
+<pre>
+AABCC
+</pre>
+
+<h3>Sample Output 2</h3>
+<pre>
+Yes
+</pre>
+<p><code>B</code> を選んで操作を行うと <code>ABC</code> → <code>AABCC</code> となる。</p>
+
+
+<h3>Sample Input 3</h3>
+<pre>
+AABCABC
+</pre>
+
+
+<h3>Sample Output 3</h3>
+<pre>
+No
+</pre>
+<p>例えば、<code>C</code> を選んで操作を行っても <code>AABCC</code> → <code>AABCABC</code> とはならない。すべての <code>C</code> をそれぞれ <code>ABC</code> へ同時に置き換えるので、実際は <code>AABCC</code> → <code>AABABCABC</code> となる。</p>

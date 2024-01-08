@@ -1,0 +1,141 @@
+
+ 
+<h1>全探索お姉さんの休日</h1>
+<p>
+全探索お姉さんはとても優秀な女性である。
+お姉さんは格子状の道の経路の数え上げを数千程度なら簡単に数え上げてしまう。
+
+あなたと全探索お姉さんは今、六角形のタイルが敷き詰められた部屋にいる。
+お姉さんは初めて見る六角形にとても興奮している様子である。
+六角形の並びを座標に表すことに不慣れなお姉さんは図1のような座標系で部屋を表した。
+</p>
+
+<center><img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE_rokkaku" height="305" width="247"></center>
+
+<center>図1</center>
+
+<p>
+あなたはこの座標系上である地点からある地点まで移動したい。
+しかし、お姉さんは 1 分ごとに動きたい方向をあなたに指示する。
+いつものお姉さんなら同じ座標の場所を通らないようにあなたに移動の指示を出すだろう。
+しかし、この座標系に不慣れなお姉さんは<var>|x&times;y&times;t|</var>(<var>x</var>：<var>x</var> 座標、<var>y</var>：<var>y</var>座標、<var>t</var>:最初の指示からの経過時間[分])を 6 で割った余り
+に対応する方向（図で示す番号と対応）を指示するだけで、まったくのでたらめな方向にあなたを誘導する。
+</p>
+
+<center><img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE_dir" height="285" width="238"></center>
+
+<center>図2</center>
+
+<p>
+お姉さんを傷つけたくないあなたは、お姉さんの指示をできるだけ守りつつ目的地までたどり着きたい。
+あなたは許された行動は下の 7 つの行動である。
+</p>
+
+<ul>
+<li>方向 0 へ 1 タイル移動
+</li><li>方向 1 へ 1 タイル移動
+</li><li>方向 2 へ 1 タイル移動
+</li><li>方向 3 へ 1 タイル移動
+</li><li>方向 4 へ 1 タイル移動
+</li><li>方向 5 へ 1 タイル移動
+</li><li>その場に留まる
+</li></ul>
+<p>
+お姉さんが指示を出した直後にあなたはこれら行動のうちの必ず1つを行う。
+
+部屋には家具があり家具が配置されているタイルの中に移動することはできない。
+また、<var>y</var> 座標の絶対値が <var>ly</var> を超えたり <var>x</var> 座標の絶対値が <var>lx</var> を超えるような移動は許されていない。
+しかし、お姉さんはそのような移動を指示することがある。
+指示を無視するとはお姉さんが示した方向と異なる方向へ移動するか、
+もしくは、その場に留まることである。
+
+目的地にたどり着くために最小で何度指示を無視すれば良いかを出力せよ。
+目的地にたどり着くことが不可能な場合は -1 を出力せよ。
+</p>
+
+
+<h2>Input</h2>
+<p>
+入力は以下の形式で与えられる。
+</p>
+<blockquote>
+<var>sx</var> <var>sy</var> <var>gx</var> <var>gy</var><br><var>n</var><br><var>x<sub>1</sub></var> <var>y<sub>1</sub></var><br>...<br><var>x<sub>i</sub></var> <var>y<sub>i</sub></var><br>...<br><var>x<sub>n</sub></var> <var>y<sub>n</sub></var><br><var>lx</var> <var>ly</var><br></blockquote>
+
+<p>
+ここで、
+</p>
+
+<ul>
+<li><var>sx</var>, <var>sy</var> は出発地点の座標
+</li><li><var>gx</var>, <var>gy</var> は目的地の座標
+</li><li><var>n</var> は部屋に配置されている家具の数
+</li><li><var>x<sub>i</sub></var>, <var>y<sub>i</sub></var> は家具があるタイルの座標
+</li><li><var>lx</var>, <var>ly</var> は移動できる <var>X</var>, <var>Y</var> それぞれの座標の絶対値の上限
+である。
+</li></ul>
+
+
+<h2>Constraints</h2>
+<ul>
+<li>入力はすべて整数
+</li><li> <var>-lx &le; sx</var>, <var>gx &le; lx</var>
+</li><li> <var>-ly &le; sy</var>, <var>gy &le; ly</var>
+</li><li> <var>(sx, sy) &ne; (gx, gy)</var>
+</li><li> <var>(xi, yi) &ne; (sx, sy)(1&le;i&le;n)</var>
+</li><li> <var>(xi, yi) &ne; (gx, gy)(1&le;i&le;n)</var>
+</li><li> <var>(xi, yi) &ne; (xj, yj)(i &ne; j)</var>
+</li><li> <var>0&le; n &le; 1000</var>
+</li><li> <var>-lx &le; xi &le; lx (1&le;i&le;n)</var>
+</li><li> <var>-ly &le; yi &le; ly (1&le;i&le;n)</var>
+</li><li> <var>0 &lt; lx, ly &le; 100</var>
+</li></ul>
+
+
+<h2>Output</h2>
+<p>
+出力は1つの整数を含む1行で出力せよ。
+目的地にたどり着ける場合は、最小の指示を無視する回数を出力せよ。
+目的地にたどり着くことが不可能な場合は-1を出力せよ。
+</p>
+
+<H2>Sample Input 1</H2>
+
+<pre>0 0 0 2
+0
+2 2
+</pre>
+<H2>Output for the Sample Input 1</H2>
+
+<pre>0
+</pre>
+
+<H2>Sample Input 2</H2>
+
+<pre>0 0 0 2
+6
+0 1
+1 0
+1 -1
+0 -1
+-1 -1
+-1 0
+2 2
+</pre>
+
+<H2>Output for the Sample Input 2</H2>
+
+<pre>-1
+</pre>
+
+<H2>Sample Input 3</H2>
+
+<pre>0 0 0 2
+1
+0 1
+2 2
+</pre>
+
+<H2>Output for the Sample Input 3</H2>
+
+<pre>1
+</pre>

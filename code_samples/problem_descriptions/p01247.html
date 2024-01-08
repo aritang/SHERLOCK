@@ -1,0 +1,86 @@
+
+<H1><font color="#000">Problem G:</font> Japanese Style Pub</H1>
+
+<p>
+You’ve just entered a Japanese-style pub, or an <i>izakaya</i> in Japanese, for a drinking party (called <i>nomi-kai</i>) with
+your dear friends.
+</p>
+<p>
+Now you are to make orders for glasses of hard and soft drink as requested by the participants. But unfortunately,
+most staffs in typical <i>izakayas</i> are part-time workers; they are not used to their work so they make mistakes at a
+certain probability for each order.
+</p>
+<p>
+You are worrying about such mistakes. Today is a happy day for the participants, the dearest friends of yours.
+</p>
+<p>
+Your task is to write a program calculating the probability at which the <i>izakaya</i> staff brings correct drinks for
+the entire orders. Cases in which the staff’s mistakes result in a correct delivery should be counted into the
+probability, since those cases are acceptable for you.
+</p>
+
+<H2>Input</H2>
+
+<p>
+The input consists of multiple test cases. Each test case begins with a line containing an interger <i>N</i> (1 &le; <i>N</i> &le; 8).
+The integer <i>N</i> indicates the number of kinds of drinks available in the <i>izakaya</i>.
+</p>
+<p>
+The following <i>N</i> lines specify the probabilities for the drinks in the format shown below.
+</p>
+<pre>
+       <i>p</i><sub>11</sub> <i>p</i><sub>12</sub> . . . <i>p</i><sub>1<i>N</i></sub>
+       <i>p</i><sub>21</sub> <i>p</i><sub>22</sub> . . . <i>p</i><sub>2<i>N</i></sub>
+      ...
+       <i>p</i><sub><i>N</i>1</sub> <i>p</i><sub><i>N</i>2</sub> . . . <i>p</i><sub><i>NN</i></sub>
+</pre>
+<p>
+Each real number <i>p<sub>ij</sub></i> indicates the probability where the staff delivers a glass of the drink <i>j</i> for an order of the
+drink <i>i</i>. It holds that <i>p<sub>ij</sub></i> &ge; 0 and <i>p</i><sub><i>i</i>1</sub> + <i>p</i><sub><i>i</i>2</sub> + . . . + <i>p</i><sub><i>iN</i></sub> = 1 for 1 &le; <i>i</i>, <i>j</i> &le; <i>N</i>. At the end of each test case, a line
+which contains <i>N</i> comes. The <i>i</i>-th integer <i>n<sub>i</sub></i> represents the number of orders for the drink <i>i</i> by the participants
+(0 &le; <i>n<sub>i</sub></i> &le; 4).
+</p>
+<p>
+The last test case is followed by a line containing a zero.
+</p>
+
+<H2>Output</H2>
+
+<p>
+For Each test case, print a line containing the test case number (beginning with 1) followed by the natural
+logarithm of the probability where the staff brings correct drinks for the entire orders. Print the results with eight
+digits to the right of the decimal point. If the staff cannot bring correct drinks in any case, print “-INFINITY”
+instead. Use the format of the sample output.
+
+</p>
+
+<H2>Sample Input</H2>
+<pre>
+3
+0.7 0.1 0.2
+0.1 0.8 0.1
+0.0 0.0 1.0
+4 3 2 
+8
+0.125 0.125 0.125 0.125 0.125 0.125 0.125 0.125
+0.125 0.125 0.125 0.125 0.125 0.125 0.125 0.125
+0.125 0.125 0.125 0.125 0.125 0.125 0.125 0.125
+0.125 0.125 0.125 0.125 0.125 0.125 0.125 0.125
+0.125 0.125 0.125 0.125 0.125 0.125 0.125 0.125
+0.125 0.125 0.125 0.125 0.125 0.125 0.125 0.125
+0.125 0.125 0.125 0.125 0.125 0.125 0.125 0.125
+0.125 0.125 0.125 0.125 0.125 0.125 0.125 0.125
+2 2 2 2 2 2 2 2
+2
+1 0
+1 0
+2 2
+0
+</pre>
+
+<H2>Output for the Sample Input</H2>
+<pre>
+Case 1: -1.89723999
+Case 2: -8.14438201
+Case 3: -INFINITY
+</pre>

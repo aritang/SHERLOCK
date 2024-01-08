@@ -1,0 +1,78 @@
+<span class="lang-en">
+<p>Score : <var>2000</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>Given are integers <var>N</var> and <var>K</var>, and a prime number <var>P</var>. Find the number, modulo <var>P</var>, of directed graphs <var>G</var> with <var>N</var> vertices that satisfy below. Here, the vertices are distinguishable from each other.</p>
+<ul>
+<li><var>G</var> is a tournament, that is, <var>G</var> contains no duplicated edges or self-loops, and exactly one of the edges <var>u\to v</var> and <var>v\to u</var> exists for any two vertices <var>u</var> and <var>v</var>.</li>
+<li>The in-degree of every vertex in <var>G</var> is at most <var>K</var>.</li>
+<li>For any four distinct vertices <var>a</var>, <var>b</var>, <var>c</var>, and <var>d</var> in <var>G</var>, it is not the case that all of the six edges <var>a\to b</var>, <var>b\to c</var>, <var>c\to a</var>, <var>a\to d</var>, <var>b\to d</var>, and <var>c\to d</var> exist simultaneously.</li>
+</ul>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>4 \leq N \leq 200</var></li>
+<li><var>\frac{N-1}{2} \leq K \leq N-1</var></li>
+<li><var>10^8&lt;P&lt;10^9</var></li>
+<li><var>N</var> and <var>K</var> are integers.</li>
+<li><var>P</var> is a prime number.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var> <var>K</var> <var>P</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the number of directed graphs that satisfy the conditions, modulo <var>P</var>.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>4 3 998244353
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>56
+</pre>
+<p>Among the <var>64</var> graphs with four vertices, <var>8</var> are isomorphic to the forbidden induced subgraphs, and the other <var>56</var> satisfy the conditions.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>7 3 998244353
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>720
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>50 37 998244353
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>495799508
+</pre></section>
+</div>
+</span>

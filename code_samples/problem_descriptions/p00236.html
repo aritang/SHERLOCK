@@ -1,0 +1,108 @@
+
+
+
+<H1>宇宙人のメッセージ</H1>
+
+<p>
+ 宇宙人 Mr.X は地球への来星記念として、地球人に向けてのメッセージを残しました。 Mr.X がメッセージを残す場所に選んだのは古代遺跡として有名な"トロンコ遺跡"でした。  ここはいろいろな大きさの碁盤のマス目に、奇抜な石像が無造作に配置されている不思議な場所でした。
+</p>
+
+<p>
+ Mr.X は、メッセージとして、石像が置かれていない全てのマス目を一度だけ通る、単一の閉曲線を描きました。Mr.X はとても賢く、このような閉曲線を描くことが可能な碁盤であれば必ず閉曲線を描き、メッセージを残しました。しかし、石像の配置によっては、閉曲線を描くことが不可能な碁盤もあり、その場合はメッセージを残しませんでした。 図1の碁盤に描かれている閉曲線は、全ての空いているマス目を一度だけ通っています。Mr.X はこのような閉曲線をメッセージとして残しました。
+</p>
+
+<center>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_UFOMessage1"><br>
+図1
+</center>
+<br>
+
+<p>
+Mr.X は、図2の碁盤に描かれているような閉曲線は描きませんでした。
+</p>
+
+<center>
+<table>
+<tr>
+<td>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_UFOMessage2" width="160">
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_UFOMessage3" width="160">
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_UFOMessage4" width="160">
+</td>
+</tr></table><br>
+図2<br>
+</center>
+
+
+<p>
+ 後に Mr.X のメッセージは、古代遺跡と見事に調和した宇宙人の美として、地球人に夢とロマンを与える伝説となりました。しかし、長年に渡る風化によってメッセージは消えてしまい、伝説だけが残りました。
+</p>
+
+<!--
+<p>
+ トロンコ遺跡の近くに住んでいるあなたは、Mr.X が残したメッセージを巡るツアーを企画したいと考えており、遺跡にあるどの碁盤に Mr.X がメッセージを残したかを知る必要が生じました。 
+</p>
+-->
+
+<p>
+碁盤の情報を入力とし、Mr.X がその碁盤上にメッセージを残した場合は Yes と、残さなかった場合は No と出力するプログラムを作成してください。ただし、全てのマスに石像が配置されている場合は、No と出力することとします。
+</p>
+
+
+<H2>Input</H2>
+
+<p>
+複数のデータセットの並びが入力として与えられます。入力の終わりはゼロふたつの行で示されます。各データセットは以下の形式で与えられます。
+</p>
+
+<pre>
+<var>W</var> <var>H</var>
+<var>c<sub>1,1</sub></var> <var>c<sub>1,2</sub></var> ... <var>c<sub>1,W</sub></var>
+<var>c<sub>2,1</sub></var> <var>c<sub>2,2</sub></var> ... <var>c<sub>2,W</sub></var>
+
+:
+<var>c<sub>H,1</sub></var> <var>c<sub>H,2</sub></var> ... <var>c<sub>H,W</sub></var>
+</pre>
+
+<p>
+1 行目に碁盤の横方向に並ぶマス目の数 <var>W</var>, 縦方向に並ぶマス目の数 <var>H</var> (1 &le; <var>W, H</var> &le; 7) が与えられる。
+</p>
+
+<p>
+続く <var>H</var> 行に碁盤の状態が与えられる。<var>c<sub>i,j</sub></var> は碁盤の <var>i</var> 行目の左から <var>j</var> 番目のマス目を表す整数であり、0 のとき何も置かれていないマス目、1 のとき石像が置かれているマス目を表す。
+</p>
+
+<p>
+データセットの数は 1000 を超えない。
+</p>
+
+<H2>Output</H2>
+
+<p>
+データセットごとに、Yes または No を１行に出力する。
+</p>
+
+<H2>Sample Input</H2>
+
+<pre>
+5 4
+0 0 0 0 0
+0 1 1 0 0
+0 0 1 0 1
+1 0 0 0 1
+5 4
+0 0 0 0 0
+0 1 1 0 0
+0 0 0 0 1
+1 0 0 0 1
+0 0
+</pre>
+
+<H2>Output for the Sample Input</H2>
+
+<pre>
+Yes
+No
+</pre>
+
+

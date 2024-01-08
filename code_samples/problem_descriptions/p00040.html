@@ -1,0 +1,72 @@
+
+
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({ tex2jax: { inlineMath: [["$","$"], ["\\(","\\)"]], processEscapes: true }});
+</script>
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+<H1>アフィン暗号</H1>
+
+<p>
+簡単な暗号法の一つに、アフィン暗号というものがあります。まず、アルファベット a〜z を a = 0, b = 1, c = 2,..., x = 23, y = 24, z = 25 と 0〜25 の数字に置き換えます。そして、以下の式で、原文のアルファベットを置換します。
+</p>
+
+<center>
+<!--
+<p>
+F(γ) = (α・γ＋β) mod 26
+</p>
+-->
+
+<p>
+$F(\gamma) = (\alpha \cdot \gamma + \beta)$ mod $26$
+</p>
+
+</center>
+
+<p>
+ただし、mod 26 は 26 で割った余りを表します。例えば、$\alpha = 3, \beta = 2$ のとき、アルファベットの 'a' (=0) は、$F(0) = (3 \cdot 0 + 2)$ mod $26 =  2$ で 'c' に、アルファベットの 'n' (=13) は $F(13) = (3 \cdot 13 + 2)$ mod $26 = 15$ で 'p' に置換されます。
+このとき、$\gamma$ に対する $F(\gamma)$ が必ず 1 対 1 で対応付けられるように、$\alpha$ と $\beta$ は慎重に選ばれているものとします（$\alpha$ と 26 が互いに素であることが条件）。$\alpha = 4, \beta = 7$ のときのように、$F('a') = 7, F('n') = 7$ と、'a' も 'n' も同じ 'h' に置換されるようなことはありません。また、アルファベット以外の文字は置換されません。
+</p>
+<p>
+暗号化された文字列を元の文章に復号したものを出力するプログラムを作成してください。元の文章には、キーワードとして
+</p>
+
+<pre>
+that
+this
+</pre>
+
+<p>
+のいずれかが必ず含まれているものとします。
+</p>
+
+<H2>Input</H2>
+
+<p>
+複数のデータセットが与えられます。１行目にデータセット数 $n$ ($n \leq 30$) が与えられます。続いて $n$ 行のデータが与えられます。各データセットに英小文字と空白からなる 256 文字以内の暗号化された文章が１行に与えられます。
+</p>
+
+<H2>Output</H2>
+
+<p>
+各データセットに対して、復号した元の文章を１行に出力して下さい。
+</p>
+
+<H2>Sample Input</H2>
+
+<pre>
+1
+y eazqyp pnop pngtg ye obmpngt xmybp mr lygw
+</pre>
+
+<H2>Output for the Sample Input</H2>
+
+<pre>
+i submit that there is another point of view
+</pre>
+
+
+

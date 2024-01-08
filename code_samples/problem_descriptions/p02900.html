@@ -1,0 +1,84 @@
+<span class="lang-en">
+<p>Score : <var>400</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>Given are positive integers <var>A</var> and <var>B</var>.</p>
+<p>Let us choose some number of positive common divisors of <var>A</var> and <var>B</var>.</p>
+<p>Here, any two of the chosen divisors must be coprime.</p>
+<p>At most, how many divisors can we choose?</p>
+<details><summary>Definition of common divisor</summary><div>
+<p>An integer <var>d</var> is said to be a common divisor of integers <var>x</var> and <var>y</var> when <var>d</var> divides both <var>x</var> and <var>y</var>.</p>
+</div></details>
+<details><summary>Definition of being coprime</summary><div>
+<p>Integers <var>x</var> and <var>y</var> are said to be coprime when <var>x</var> and <var>y</var> have no positive common divisors other than <var>1</var>.</p>
+</div></details>
+<details><summary>Definition of dividing</summary><div>
+<p>An integer <var>x</var> is said to divide another integer <var>y</var> when there exists an integer <var>\alpha</var> such that <var>y = \alpha x</var>.</p>
+</div></details>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li>All values in input are integers.</li>
+<li><var>1 \leq A, B \leq 10^{12}</var></li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>A</var> <var>B</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the maximum number of divisors that can be chosen to satisfy the condition.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>12 18
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>3
+</pre>
+<p><var>12</var> and <var>18</var> have the following positive common divisors: <var>1</var>, <var>2</var>, <var>3</var>, and <var>6</var>.</p>
+<p><var>1</var> and <var>2</var> are coprime, <var>2</var> and <var>3</var> are coprime, and <var>3</var> and <var>1</var> are coprime, so we can choose <var>1</var>, <var>2</var>, and <var>3</var>, which achieve the maximum result.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>420 660
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>4
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>1 2019
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>1
+</pre>
+<p><var>1</var> and <var>2019</var> have no positive common divisors other than <var>1</var>.</p></section>
+</div>
+</span>

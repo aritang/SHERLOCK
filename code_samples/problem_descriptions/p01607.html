@@ -1,0 +1,87 @@
+
+
+
+<h2>魔法陣</h2>
+
+
+<h2>Problem Statement</h2>
+
+<p>〜魔法陣の描き方〜</p>
+<ol class="list1" style="padding-left:16px;margin-left:16px"><li>十分広くて真っ白な床を用意します．</li>
+<li>床の座標 <var>(0,0)</var> の点を中心にして，半径 <var>1, 2, ..., R</var> の円を描きます．</li>
+<li>半径 <var>1</var> の円と半径 <var>2</var> の円の間，半径 <var>3</var> の円と半径 <var>4</var> の円の間，<var>...</var> を青色で塗ります．なお，半径 <var>R</var> の円の外には色を塗ってはいけません．</li>
+<li>床に頂点数 <var>N</var> の多角形を一つ描きます．</li>
+<li>多角形の内部の白色の領域を青色で，青色の領域を白色で塗りなおします．</li></ol>
+<p>魔法陣の力は，魔法陣に青色が多く含まれるほど強くなるという．<br />
+そこであなたには，魔法陣に含まれる青い領域の面積を求めてほしい．</p>
+<p>次の図はこの手順で描くことのできる魔法陣の一例である．</p>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE3_Rits_Camp13_Day2_G_example">
+
+
+<h2>Input</h2>
+
+<p>入力は以下の形式に従う．与えられる数は全て整数である．</p>
+<pre><var>N</var> <var>R</var>
+<var>x_1</var> <var>y_1</var>
+<var>...</var>
+<var>x_N</var> <var>y_N</var></pre>
+<p><var>(x_i, y_i)</var> は多角形の <var>i</var> 番目の頂点である．</p>
+
+<h2>Constraints</h2>
+
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li><var>3 ≦ N ≦ 100</var></li>
+<li><var>1 ≦ R ≦ 100</var></li>
+<li>多角形は半径 <var>R</var> の円の内部または円周上に含まれる．</li>
+<li>多角形は自己交差をもたない．</li>
+<li>多角形の頂点は反時計回りの順番で与えられる．</li></ul>
+
+<h2>Output</h2>
+
+<p>青い領域の面積を 1 行に出力せよ．<br />
+出力する値は，真の値との絶対誤差または相対誤差が <var>10^{-8}</var> 未満でなければならない．</p>
+
+<h2>Sample Input 1</h2>
+
+<pre>3 1
+0 0
+1 0
+0 1</pre>
+
+<h2>Output for the Sample Input 1</h2>
+
+<pre>0.500000000</pre>
+
+<h2>Sample Input 2</h2>
+
+<pre>3 2
+0 0
+2 0
+0 2</pre>
+
+<h2>Output for the Sample Input 2</h2>
+
+<pre>8.995574288</pre>
+
+<h2>Sample Input 3</h2>
+
+<pre>3 2
+1 -1
+1 1
+-2 0</pre>
+
+<h2>Output for the Sample Input 3</h2>
+
+<pre>11.123246567</pre>
+
+<h2>Sample Input 4</h2>
+
+<pre>4 3
+1 1
+-1 1
+-1 -1
+1 -1</pre>
+
+
+<h2>Output for the Sample Input 4</h2>
+
+<pre>11.707963268</pre>

@@ -1,0 +1,98 @@
+
+
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: { inlineMath: [['\\(','\\)']] }
+  });
+</script>
+<script type='text/javascript' src='http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
+
+<h1 class="ndoc-heading1">Problem J: Avant-garde Art</h1>
+<p class="ndoc-top">ICPC World Finals 6日目</p>
+<p class="ndoc-top">ロシア構成主義とは、1910年代半ばに始まったソ連における芸術運動である。
+R国に長く滞在していたティー氏は、 そのようなものに感化され、 ICPC World Finalsのリハーサル中にも関わらず、
+クールなデザインを作ることにした。 ティー氏は語る： 「記号は円と線分だけで充分だ。
+線分をいかに美しく交差させるかが重要である。」</p>
+<h2 class="ndoc-heading2">問題</h2>
+<p class="ndoc-top">円周に\(n\)個の座標\( 1, 2, …, n \)を等間隔に割り当てる。
+各座標からはちょうど1本の線分が出ており、 座標\( i \)の線分は異なる座標\( a_{i} \)に結ばれている。
+（逆に、座標\( a_{i} \)の線分は座標\( a_{a_{i}} = i \)に結ばれている。） この状態から高々\( k
+\)本の線分を（座標・長さに関係なく自由に）円周上に結び直すことが出来る。 互いに交差している線分の集合の最大サイズを答えよ。</p>
+<h2 class="ndoc-heading2">入力</h2>
+
+<pre>
+n k
+a<sub>1</sub> a<sub>2</sub> … a<sub>n</sub>
+</pre>
+<p>1行目に座標の数\(n\)、結び直すことのできる線分の数\(k\)が空白区切りで与えられる。
+2行目に座標\(i\)の線分が結ばれる座標を表す\( a_{i} \)が空白区切りで与えられる。</p>
+<h2 class="ndoc-heading2">出力</h2>
+<p class="ndoc-top">高々\(k\)本の線分を結び直した後に
+互いに交差している線分の集合の最大サイズを1行に出力せよ。</p>
+<h2 class="ndoc-heading2">制約</h2>
+
+<ul class="ndoc-indent">
+<li>\( 2 \leq n \leq 8000 \)</li>
+<li>\(n\)は偶数</li>
+<li>\( 0 \leq k \leq \min(n/2, 20) \)</li>
+<li>\( 1 \leq a_{i} \leq n \)</li>
+<li>\( a_{i} \not = i \)
+<ul>
+<li>線分を自分自身に結ぶことは無い</li>
+</ul>
+</li>
+<li>\( a_{i} \not = a_{j} (i \not = j) \)
+<ul>
+<li>同じ座標に2本以上の線分が結ばれることは無い</li>
+</ul>
+</li>
+<li>\( a_{a_{i}} = i \)
+<ul>
+<li>\(i\)から\(j\)に線分が結ばれているならば、\(j\)から\(i\)に線分が結ばれている</li>
+</ul>
+</li>
+</ul>
+<h2 class="ndoc-heading2">入出力例</h2>
+<h3 class="ndoc-heading3">入力1</h3>
+
+<pre>
+8 0
+7 4 6 2 8 3 1 5
+</pre>
+<h3 class="ndoc-heading3">出力1</h3>
+
+<pre>
+2
+</pre>
+<p>
+互いに交差する線分は下図の赤い線分で表される。
+</p>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_uecpc2013_files_art_sample_1" alt="http://k-operafan.info/static/uecpc2013/files/art_sample_1.png" width="400">
+<h3 class="ndoc-heading3">入力2</h3>
+
+<pre>
+8 1
+7 4 6 2 8 3 1 5
+</pre>
+<h3 class="ndoc-heading3">出力2</h3>
+
+<pre>
+3
+</pre>
+<p>
+1,7を結ぶ線分を下図のように結び直せば互いに交差する3つの線分が得られる。
+</p>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_uecpc2013_files_art_sample_2" alt="http://k-operafan.info/static/uecpc2013/files/art_sample_2.png" width="400">
+<h3 class="ndoc-heading3">入力3</h3>
+
+<pre>
+8 0
+5 6 7 8 1 2 3 4
+</pre>
+<h3 class="ndoc-heading3">出力3</h3>
+<pre>
+4
+</pre>
+<p>全ての線分は互いに交差しているため、交差する最大の線分の数は4となる。</p>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_uecpc2013_files_art_sample_3" alt="http://k-operafan.info/static/uecpc2013/files/art_sample_3.png" width="400">

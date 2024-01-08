@@ -1,0 +1,67 @@
+<span class="lang-en">
+<p>Score : <var>400</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>Given a string <var>t</var>, we will call it <em>unbalanced</em> if and only if the length of <var>t</var> is at least <var>2</var>, and more than half of the letters in <var>t</var> are the same. For example, both <code>voodoo</code> and <code>melee</code> are unbalanced, while neither <code>noon</code> nor <code>a</code> is.</p>
+<p>You are given a string <var>s</var> consisting of lowercase letters. Determine if there exists a (contiguous) substring of <var>s</var> that is unbalanced. If the answer is positive, show a position where such a substring occurs in <var>s</var>.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>2 ≦ |s| ≦ 10^5</var></li>
+<li><var>s</var> consists of lowercase letters.</li>
+</ul>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Partial Score</h3><ul>
+<li><var>200</var> points will be awarded for passing the test set satisfying <var>2 ≦ N ≦ 100</var>.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>The input is given from Standard Input in the following format:</p>
+<pre><var>s</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>If there exists no unbalanced substring of <var>s</var>, print <code>-1 -1</code>.</p>
+<p>If there exists an unbalanced substring of <var>s</var>, let one such substring be <var>s_a s_{a+1} ... s_{b}</var> <var>(1 ≦ a &lt; b ≦ |s|)</var>, and print <code><var>a</var> <var>b</var></code>. If there exists more than one such substring, any of them will be accepted.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>needed
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>2 5
+</pre>
+<p>The string <var>s_2 s_3 s_4 s_5</var> <var>=</var> <code>eede</code> is unbalanced. There are also other unbalanced substrings. For example, the output <code>2 6</code> will also be accepted.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>atcoder
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>-1 -1
+</pre>
+<p>The string <code>atcoder</code> contains no unbalanced substring.</p></section>
+</div>
+</span>

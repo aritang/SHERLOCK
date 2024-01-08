@@ -1,0 +1,133 @@
+<span class="lang-en">
+<p>Score : <var>2400</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>There are <var>N</var> people (with different names) and <var>K</var> clubs. For each club you know the list of members (so you have <var>K</var> unordered lists). Each person can be a member of many clubs (and also <var>0</var> clubs) and two different clubs might have exactly the same members.
+The value of the number <var>K</var> is the minimum possible such that the following property can be true for at least one configuration of clubs.
+If every person changes her name (maintaining the property that all names are different) and you know the new <var>K</var> lists of members of the clubs (but you don't know which list corresponds to which club), you are sure that you would be able to match the old names with the new ones.</p>
+<p>Count the number of such configurations of clubs (or say that there are more than <var>1000</var>).
+Two configurations of clubs that can be obtained one from the other if the <var>N</var> people change their names are considered equal.</p>
+<p><strong>Formal statement</strong>:
+A club is a (possibly empty) subset of <var>\{1,\dots, N\}</var> (the subset identifies the members, assuming that the people are indexed by the numbers <var>1, 2,\dots, N</var>).
+A configuration of clubs is an unordered collection of <var>K</var> clubs (not necessarily distinct).
+Given a permutation <var>\sigma(1), \dots, \sigma(N)</var> of <var>\{1,\dots, N\}</var> and a configuration of clubs <var>L=\{C_1, C_2, \dots, C_K\}</var>, we denote with <var>\sigma(L)</var> the configuration of clubs <var>\{\sigma(C_1), \sigma(C_2), \dots, \sigma(C_K)\}</var> (if <var>C</var> is a club,  <var>\sigma(C)=\{\sigma(x):\, x\in C\}</var>).
+A configuration of clubs <var>L</var> is name-preserving if for any pair of distinct permutations <var>\sigma\not=\tau</var>, it holds <var>\sigma(L)\not=\tau(L)</var>.</p>
+<p>You have to count the number of name-preserving configurations of clubs with the minimum possible number of clubs (so <var>K</var> is minimum). Two configurations <var>L_1, L_2</var> such that <var>L_2=\sigma(L_1)</var> (for some permutation <var>\sigma</var>) are considered equal.
+If there are more than <var>1000</var> such configurations, print <var>-1</var>.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>2 \le N \le 2\cdot10^{18}</var></li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>The input is given from Standard Input in the format</p>
+<pre><var>N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>If <var>ans</var> is the number of configurations with the properties described in the statement, you should print on Standard Output</p>
+<pre><var>ans</var>
+</pre>
+<p>If there are more than <var>1000</var> such configurations, print <var>-1</var>.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>2
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>1
+</pre>
+<p>The value of <var>K</var> is <var>1</var> and the unique name-preserving configuration of clubs is <var>\{\{1\}\}</var> (the configuration <var>\{\{2\}\}</var> is considered the same).</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>3
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>1
+</pre>
+<p>The value of <var>K</var> is <var>2</var> and the unique (up to permutation) name-preserving configuration of clubs is <var>\{\{1\}, \{1, 2\}\}</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>4
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>7
+</pre>
+<p>The value of <var>K</var> is <var>3</var> and the name-preserving configurations of clubs with <var>3</var> clubs are:</p>
+<ul>
+<li><var>\{\{1\}, \{2\}, \{1, 3\}\}</var></li>
+<li><var>\{\{1\}, \{1, 2\}, \{2, 3\}\}</var></li>
+<li><var>\{\{1, 2\}, \{1, 2\}, \{1, 3\}\}</var></li>
+<li><var>\{\{1\}, \{1, 2\}, \{1, 2, 3\}\}</var></li>
+<li><var>\{\{1\}, \{2, 3\}, \{1, 2, 4\}\}</var></li>
+<li><var>\{\{1, 2\}, \{1, 3\}, \{1, 2, 4\}</var></li>
+<li><var>\{\{1, 2\}, \{1, 2, 3\}, \{2, 3, 4\}\}</var></li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 4</h3><pre>13
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 4</h3><pre>6
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 5</h3><pre>26
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 5</h3><pre>-1
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 6</h3><pre>123456789123456789
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 6</h3><pre>-1
+</pre></section>
+</div>
+</span>

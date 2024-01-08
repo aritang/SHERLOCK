@@ -1,0 +1,82 @@
+<h1>Treasure Map</h1>
+<p>
+  Mr. Kobou found a bundle of old paper when he was cleaning his family home. On each paper, two series of numbers are written. Strange as it appeared to him, Mr. Kobou further went through the storehouse and found out a note his ancestor left. According to it, the bundle of paper is a treasure map, in which the two sequences of numbers seem to give a clue to the whereabouts of the treasure the ancestor buried.
+</p>
+
+<p>
+  Mr. Kobou’s ancestor divided the area where he buried his treasure in a reticular pattern and used only some of the grid sections. The two series of numbers indicate the locations: the $i$-th member of the first series indicates the number of locations in the $i$-th column (form left) of the grid sections where a part of the treasure is buried, and the $j$-th member of the second indicates the same information regarding the $j$-th row from the top. No more than one piece of treasure is buried in one grid section. An example of a 5 &times; 4 case is shown below. If the pieces of treasure are buried in the grid sections noted as "<span>#</span>" the two series of numbers become "0,2,2,1,1" and "1,1,1,3".
+</p>
+
+<center>
+  <table border="1" style="border-collapse: collapse" cellpadding="8">
+    <tr>
+      <td> </td><td>0</td><td>2</td><td>2</td><td>1</td><td>1</td>
+    </tr>
+    <tr>
+      <td>1</td><td> </td><td> </td><td>#</td><td> </td><td> </td>
+    </tr>
+    <tr>
+      <td>1</td><td> </td><td>#</td><td> </td><td> </td><td> </td>
+    </tr>
+    <tr>
+      <td>1</td><td> </td><td> </td><td> </td><td> </td><td>#</td>
+    </tr>
+    <tr>
+      <td>3</td><td> </td><td>#</td><td>#</td><td>#</td><td> </td>
+    </tr>
+  </table>
+</center>
+<br/>
+
+<p>
+Mr. Kobou’s ancestor seems to be a very careful person. He slipped some pieces of paper with completely irrelevant information into the bundle. For example, a set of number series "3,2,3,0,0" and "4,2,0,0,2" does not match any combination of 5 &times; 5 matrixes. So, Mr. Kobou has first to exclude these pieces of garbage information.
+</p>
+
+<p>
+  Given the set of information written on the pieces of paper, make a program to judge if the information is relevant.
+</p>
+
+<h2>Input</h2>
+<p>
+  The input is given in the following format.
+</p>
+<pre>
+$W$ $H$
+$a_1$ $a_2$ $...$ $a_W$
+$b_1$ $b_2$ $...$ $b_H$ 
+</pre>
+
+<p>
+The first line provides the number of horizontal partitions $W$ ($1 \leq W \leq 1000$) and vertical partitions $H$ ($1 \leq H \leq 1000$). The second line provides the $i$-th member of the first number series $a_i$ ($0 \leq a_i \leq H$) written on the paper, and the third line the $j$-th member of the second series $b_j$ ($0 \leq b_j \leq W$).
+  
+</p>
+
+<h2>Output</h2>
+<p>
+  Output "<span>1</span>" if the information written on the paper is relevant, or "<span>0</span>" otherwise.
+</p>
+
+
+<h2>Sample Input 1 </h2>
+<pre>
+5 4
+0 2 2 1 1
+1 1 1 3
+</pre>
+
+<h2>Sample Output 1</h2>
+<pre>
+1
+</pre>
+
+<h2>Sample Input 2</h2>
+<pre>
+5 5
+3 2 3 0 0
+4 2 0 0 2
+</pre>
+
+<h2>Sample Output 2</h2>
+<pre>
+0 
+</pre>

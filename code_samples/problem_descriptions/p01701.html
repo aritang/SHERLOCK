@@ -1,0 +1,71 @@
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({ tex2jax: { inlineMath: [["$","$"], ["\\(","\\)"]], processEscapes: true }});
+</script>
+<script language="JavaScript" type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+
+<meta http-equiv="X-UA-Compatible" CONTENT="IE=EmulateIE7" /><style type="text/css">blockquote {
+  font-family: Menlo, Monaco, "Courier New", monospace;
+  color: #333333;
+  display: block;
+  padding: 8.5px;
+  margin: 0 0 9px;
+  font-size: 12px;
+  line-height: 18px;
+  background-color: #f5f5f5;
+  border: 1px solid #ccc;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  white-space: pre;
+  white-space: pre-wrap;
+  word-break: break-all;
+  word-wrap: break-word;
+}</style><div class="part"><h3>Problem Statement</h3>
+<p>We can describe detailed direction by repeating the directional names: north, south, east and west. For example, northwest is the direction halfway between north and west, and northnorthwest is between north and northwest. 
+</p>
+<p>In this problem, we describe more detailed direction between north and west as follows.
+</p><ul><li>"<samp>north</samp>" means $0$ degrees.
+</li><li>"<samp>west</samp>" means $90$ degrees.
+</li><li>If the direction $dir$ means $a$ degrees and the sum of the occurrences of "<samp>north</samp>" and "<samp>west</samp>" in $dir$ is $n$ ($\geq$ 1),
+"<samp>north</samp>"$dir$ (the concatenation of "<samp>north</samp>" and $dir$) means $a - \frac{90}{2^n}$ degrees and "<samp>west</samp>"$dir$ means $a + \frac{90}{2^n}$ degrees.
+</li></ul>
+
+
+<p>Your task is to calculate the angle in degrees described by the given direction.
+</p>
+
+</div><hr /><div class="part"><h3>Input</h3>
+
+<p>The input contains several datasets. The number of datasets does not exceed $100$. 
+</p>
+<p>Each dataset is described by a single line that contains a string denoting a direction.
+You may assume the given string can be obtained by concatenating some "<samp>north</samp>" and "<samp>west</samp>",
+the sum of the occurrences of "<samp>north</samp>" and "<samp>west</samp>" in the given string is between $1$ and $20$, inclusive,
+and the angle denoted by the given direction is between $0$ and $90$, inclusive.
+The final dataset is followed by a single line containing only a single "<samp>#</samp>".
+</p>
+
+</div><div class="part"><h3>Output</h3>
+
+<p>For each dataset, print an integer if the angle described by the given direction can be represented as an integer, otherwise print it as an irreducible fraction. Follow the format of the sample output.
+</p>
+
+</div><hr /><div class="part"><h3>Sample Input</h3>
+
+<pre>north
+west
+northwest
+northnorthwest
+westwestwestnorth
+#</pre>
+</div><div class="part"><h3>Output for the Sample Input</h3>
+
+<pre>0
+90
+45
+45/2
+315/4</pre>
+
+</div>

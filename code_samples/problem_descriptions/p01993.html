@@ -1,0 +1,78 @@
+<h2>E: 均衡な辺削除 (Balanced Edge Deletion)</h2>
+
+<h3>問題</h3>
+<p>
+<var>N</var> 頂点 <var>M</var> 辺の重み付き単純無向グラフ <var>G</var> が与えられる。
+頂点には <var>1</var> から <var>N</var>、 辺には <var>1</var> から <var>M</var> の番号がつけられている。
+<var>i</var> 番目の辺は頂点 <var>u_i</var> と <var>v_i</var> を結んでおり、そのコストは <var>w_i</var> である。
+</p>
+
+<p>このグラフに対して、以下の操作を <var>1</var> 度だけ行うことを考える。</p>
+
+<ul>
+<li> <var>G</var> の辺集合から辺を <var>1</var> つ選択し、その辺を削除する。</li>
+</ul>
+
+<p>
+上の操作によってグラフが分割されることがあるので、操作後のグラフを <var>A</var>, <var>B</var> と表記することとする。(分割されない場合、<var>B</var> は空グラフであるとする。)
+<var>W(X)</var> をグラフ <var>X</var> 内にある辺のコストの総和 (グラフに辺が存在しない場合 <var>W(X)=0</var>) とし、$\mathrm{cost}$<var>(A,B)=|W(A)−W(B)|</var> と定義する。$\mathrm{cost}$<var>(A,B)</var> が最小になるような辺 <var>(u,v)</var> を求めよ。複数存在する場合は、<var>u</var> が最小であるものを答えよ。それでも複数存在する場合は、<var>v</var> が最小であるものを答えよ。
+</p>
+
+<h3>入力形式</h3>
+<p>入力は以下の形式で与えられます。</p>
+<pre>
+<var>N</var> <var>M</var>
+<var>u_1</var> <var>v_1</var> <var>w_1</var>
+<var>...</var>
+<var>u_M</var> <var>v_M</var> <var>w_M</var>
+</pre>
+
+<h3>制約</h3>
+<ul>
+<li> <var>2 \leq N \leq 10^5</var></li>
+<li> <var>1 \leq M \leq 10^5</var></li>
+<li> <var>1 \leq u_i &lt; v_i \leq N</var></li>
+<li> <var> i \neq j</var> ならば <var>u_i \neq u_j</var> または <var>v_i \neq v_j</var></li>
+<li> <var>1 \leq w_i \leq 10^9</var></li>
+</ul>
+
+<p>与えられるグラフは連結である。</p>
+
+<h3>出力形式</h3>
+<p>答えとなる辺を以下のように空白区切りで一行に出力せよ。</p>
+
+<pre><var>u</var> <var>v</var></pre>
+
+<ul>
+<li> <var>u, v</var> は整数</li>
+<li> <var>1 \leq u, v \leq N</var></li>
+</ul>
+
+<h3>入力例1</h3>
+<pre>
+5 4
+1 2 1
+2 3 10
+3 4 5
+4 5 1
+</pre>
+<h3>出力例1</h3>
+<pre>2 3</pre>
+
+<h3>入力例2</h3>
+<pre>
+10 11
+1 2 1
+2 3 10
+1 5 2
+3 4 7
+3 5 9
+5 6 8
+6 7 5
+6 8 3
+7 8 12
+7 9 1
+9 10 8
+</pre>
+<h3>出力例2</h3>
+<pre>5 6</pre>

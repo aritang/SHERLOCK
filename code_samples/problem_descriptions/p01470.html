@@ -1,0 +1,54 @@
+
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({ tex2jax: { inlineMath: [["$","$"], ["\\(","\\)"]], skipTags: ["script","noscript","style","textarea","code"], processEscapes: true }});
+</script>
+<script language="JavaScript" type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+
+
+<h2>問題文</h2>
+
+<p>有理数列 $X_0, X_1, X_2, ..., X_N$ がある。各項は以下のように定義される。<br /></p>
+<ol><li>$X_0 = 0$</li>
+<li>$X_i = X_{i-1}$ $op_i$ $Y_i$ ($1 \leq i \leq N$). ただし $op_i$ は $＋$、$−$、$×$、$÷$のいずれかである。</li></ol>
+<p>$X_N$ を求めよ。</p>
+
+<h2>入力</h2>
+
+<p>入力は以下の形式に従う。与えられる数は全て整数である。</p>
+<pre>$N$
+$o_1$ $Y_1$
+$o_2$ $Y_2$
+$...$
+$o_N$ $Y_N$</pre>
+<p>$o_i = 1$ のとき $op_i$ は＋、$o_i = 2$ のとき $op_i$ は−、$o_i = 3$ のとき $op_i$ は×、$o_i = 4$ のとき $op_i$ は÷である。</p>
+
+<h2>制約</h2>
+
+<ul><li>$1 \leq N \leq 10^5$</li>
+<li>$1 \leq o_i \leq 4$</li>
+<li>$-10^6 \leq Y_i \leq 10^6$</li>
+<li>$o_i=4$ ならば $Y_i \neq 0$</li>
+<li>$X_N$ は $-2^{31}$ 以上 $2^{31}$ 未満の整数となる。</li></ul>
+
+<h2>出力</h2>
+
+<p>$X_N$ の値を1行に出力せよ。</p>
+
+<h2>Sample Input 1</h2>
+
+<pre>4
+1 1
+4 2
+2 4
+3 4</pre>
+
+
+<h2>Output for the Sample Input 1</h2>
+
+<pre>-14</pre>
+<p>$X_0 = 0$<br />
+$X_1 = X_0 ＋ 1 = 1$<br />
+$X_2 = X_1 ÷ 2 = 1/2$<br />
+$X_3 = X_2 − 4 = -7/2$<br />
+$X_4 = X_3 × 4 = -14$</p>

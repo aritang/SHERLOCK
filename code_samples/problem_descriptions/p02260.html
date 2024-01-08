@@ -1,0 +1,81 @@
+
+<H1>Selection Sort</H1>
+
+<p>
+Write a program of the Selection Sort algorithm which sorts a sequence A in ascending order. The algorithm should be based on the following pseudocode:
+</p>
+
+<pre>
+SelectionSort(A)
+1 for i = 0 to A.length-1
+2     mini = i
+3     for j = i to A.length-1
+4         if A[j] < A[mini]
+5             mini = j
+6     swap A[i] and A[mini]
+</pre>
+
+<p>
+Note that, indices for array elements are based on 0-origin.
+</p>
+
+<p>
+Your program should also print the number of swap operations defined in line 6 of the pseudocode in the case where i &ne; mini.
+</p>
+
+<H2>Input</H2>
+
+<p>
+The first line of the input includes an integer <i>N</i>, the number of elements in the sequence.
+</p>
+<p>
+In the second line, <i>N</i> elements of the sequence are given separated by space characters.
+</p>
+
+<H2>Output</H2>
+
+<p>
+The output consists of 2 lines. 
+</p>
+
+<p>
+In the first line, please print the sorted sequence. Two contiguous elements of the sequence should be separated by a space character.
+</p>
+
+<p>
+In the second line, please print the number of swap operations.
+</p>
+
+<H2>Constraints</H2>
+
+<p>
+1 &le; <i>N</i> &le; 100
+</p>
+
+
+<H2>Sample Input 1</H2>
+<pre>
+6
+5 6 4 2 1 3
+</pre>
+<H2>Sample Output 1</H2>
+<pre>
+1 2 3 4 5 6
+4
+</pre>
+
+
+<br/>
+
+<H2>Sample Input 2</H2>
+<pre>
+6
+5 2 4 6 1 3
+</pre>
+<H2>Sample Output 2</H2>
+<pre>
+1 2 3 4 5 6
+3
+</pre>
+
+

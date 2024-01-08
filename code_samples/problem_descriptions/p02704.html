@@ -1,0 +1,97 @@
+<span class="lang-en">
+<p>Score : <var>600</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>Given are an integer <var>N</var> and arrays <var>S</var>, <var>T</var>, <var>U</var>, and <var>V</var>, each of length <var>N</var>.
+Construct an <var>N×N</var> matrix <var>a</var> that satisfy the following conditions:</p>
+<ul>
+<li><var>a_{i,j}</var> is an integer.</li>
+<li><var>0 \leq a_{i,j}  \lt 2^{64}</var>.</li>
+<li>If <var>S_{i} = 0</var>, the bitwise AND of the elements in the <var>i</var>-th row is <var>U_{i}</var>.</li>
+<li>If <var>S_{i} = 1</var>, the bitwise OR of the elements in the <var>i</var>-th row is <var>U_{i}</var>.</li>
+<li>If <var>T_{i} = 0</var>, the bitwise AND of the elements in the <var>i</var>-th column is <var>V_{i}</var>.</li>
+<li>If <var>T_{i} = 1</var>, the bitwise OR of the elements in the <var>i</var>-th column is <var>V_{i}</var>.</li>
+</ul>
+<p>However, there may be cases where no matrix satisfies the conditions.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li>All values in input are integers.</li>
+<li><var> 1 \leq N \leq 500 </var></li>
+<li><var> 0 \leq S_{i} \leq 1 </var></li>
+<li><var> 0 \leq T_{i} \leq 1  </var></li>
+<li><var> 0 \leq U_{i} \lt 2^{64}  </var></li>
+<li><var> 0 \leq V_{i} \lt 2^{64}  </var></li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+<var>S_{1}</var> <var>S_{2}</var> <var>...</var>  <var>S_{N}</var>
+<var>T_{1}</var> <var>T_{2}</var> <var>...</var>  <var>T_{N}</var>
+<var>U_{1}</var> <var>U_{2}</var> <var>...</var>  <var>U_{N}</var>
+<var>V_{1}</var> <var>V_{2}</var> <var>...</var>  <var>V_{N}</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>If there exists a matrix that satisfies the conditions, print one such matrix in the following format:</p>
+<pre><var>a_{1,1}</var> <var>...</var>  <var>a_{1,N}</var>
+<var>:</var>
+<var>a_{N,1}</var> <var>...</var>  <var>a_{N,N}</var>
+</pre>
+<p>Note that any matrix satisfying the conditions is accepted.</p>
+<p>If no matrix satisfies the conditions, print <var>-1</var>.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>2
+0 1
+1 0
+1 1
+1 0
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>1 1
+1 0
+</pre>
+<p>In Sample Input <var>1</var>, we need to find a matrix such that:</p>
+<ul>
+<li>the bitwise AND of the elements in the <var>1</var>-st row is <var>1</var>;</li>
+<li>the bitwise OR of the elements in the <var>2</var>-nd row is <var>1</var>;</li>
+<li>the bitwise OR of the elements in the <var>1</var>-st column is <var>1</var>;</li>
+<li>the bitwise AND of the elements in the <var>2</var>-nd column is <var>0</var>.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>2
+1 1
+1 0
+15 15
+15 11
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>15 11
+15 11
+</pre></section>
+</div>
+</span>

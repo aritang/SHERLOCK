@@ -1,0 +1,146 @@
+<h1>Problem F: Coupling</h1>
+<h2>Problem</h2>
+
+<p>
+愛津大学では毎年大規模な合コンが行われています。<br>
+今年は<var>N</var>人の男性と<var>M</var>人の女性が参加します。<br>
+それぞれ男性は0から順に<var>N</var>&minus;1までIDが割り振られおり、女性は0から順に<var>M</var>&minus;1までIDが割り振られています。
+</p>
+
+<p>
+この合コンでは自分の「大好きな人」と「そこそこ好きな人」のIDを提示します。<br>
+男性はそれぞれ女性のIDを、女性はそれぞれ男性のIDを提示します。<br>
+</p>
+
+<p>
+その後、以下のルールに従ってカップルが成立します。
+</p>
+<ol>
+<li>男性は複数の女性、女性は複数の男性とカップルになってはいけない。</li>
+<li>互いに「大好きな人」と提示した男性と女性でペアができる。<br>そこから、任意のペアを選びカップルを作ることができる。</li>
+<li>片方が「大好きな人」、もう片方が「そこそこ好きな人」と提示した男性と女性でペアができる。<br> そこから、任意のペアを選びカップルを作ることができる。</li>
+<li>互いに「そこそこ好きな人」と提示した男性と女性でペアができる。<br> そこから、任意のペアを選びカップルを作ることができる。</li>
+<li>ルール2で出来たカップル、ルール3で出来たカップル、ルール4で出来たカップルの順にカップルの数が最大になるようにカップルが成立する。</li>
+</ol>
+
+<p>
+サジ君はこの合コンの主催者です。
+近年では参加者の数が多くなり手動でカップルの数を把握するのが大変になってきました。そこでプログラマーであるあなたは、サジ君の手伝いをすることにしました。上記のルールに従ってカップルを作った時の「大好きな人」同士のカップルの数と「大好きな人」と「そこそこ好きな人」によるカップルの数と「そこそこ好きな人」同士のカップルの数を出力するプログラムを作成してください。
+</p>
+
+<h2>Input</h2>
+<p>
+入力は以下の形式で与えられる。
+</p>
+
+<pre>
+<var>N</var> <var>M</var>
+<var>L1</var>
+<var>a<sub>1</sub></var> <var>b<sub>1</sub></var>
+<var>a<sub>2</sub></var> <var>b<sub>2</sub></var>
+:
+<var>a<sub>L1</sub></var> <var>b<sub>L1</sub></var>
+<var>L2</var>
+<var>c<sub>1</sub></var> <var>d<sub>1</sub></var>
+<var>c<sub>2</sub></var> <var>d<sub>2</sub></var>
+:
+<var>c<sub>L2</sub></var> <var>d<sub>L2</sub></var>
+<var>L3</var>
+<var>e<sub>1</sub></var> <var>f<sub>1</sub></var>
+<var>e<sub>2</sub></var> <var>f<sub>2</sub></var>
+:
+<var>e<sub>L3</sub></var> <var>f<sub>L3</sub></var>
+<var>L4</var>
+<var>g<sub>1</sub></var> <var>h<sub>1</sub></var>
+<var>g<sub>2</sub></var> <var>h<sub>2</sub></var>
+:
+<var>g<sub>L4</sub></var> <var>h<sub>L4</sub></var>
+
+</pre>
+<p>
+  1行目にそれぞれ男性の参加者の数と女性の参加者の数を表す2つの整数<var>N</var>,<var>M</var>が与えられる。次に男性側の大好きな人を表すデータの数<var>L1</var>が与えられる。続くL1行に<var>a<sub>i</sub></var>と<var>b<sub>i</sub></var>が空白区切りで与えられる。それぞれ、ID<var>a<sub>i</sub></var>の男性がID<var>b<sub>i</sub></var>の女性を「大好き」であることを示す。
+</p>
+<p>
+  続く行に男性側のそこそこ好きな人を表すデータの数<var>L2</var>が与えられる。続くL2行に<var>c<sub>i</sub></var>と<var>d<sub>i</sub></var>が空白区切りで与えられる。それぞれ、ID<var>c<sub>i</sub></var>の男性がID<var>d<sub>i</sub></var>の女性を「そこそこ好き」であることを示す。次に女性側の大好きな人を表すデータの数<var>L3</var>が与えられる。続くL3行に<var>e<sub>i</sub></var>と<var>f<sub>i</sub></var>が空白区切りで与えられる。それぞれ、ID<var>e<sub>i</sub></var>の女性がIDの<var>f<sub>i</sub></var>の男性を「大好き」であることを示す。
+</p>
+<p>
+  続く行に女性側のそこそこ好きな人を表すデータの数<var>L4</var>が与えられる。続くL4行に<var>g<sub>i</sub></var>と<var>h<sub>i</sub></var>が空白区切りで与えられる。それぞれ、ID<var>g<sub>i</sub></var>の女性がID<var>h<sub>i</sub></var>の男性を「そこそこ好き」であることを示す。
+</p>
+
+<h2>Constraints</h2>
+<p>入力は以下の条件を満たす。</p>
+<ul>
+
+<li>1 &le; <var>N</var>,<var>M</var> &le; 100</li>
+<li>0 &le; <var>a<sub>i</sub></var>,<var>c<sub>i</sub></var>,<var>f<sub>i</sub></var>,<var>h<sub>i</sub></var> &le; <var>N</var>&minus;1</li>
+<li>0 &le; <var>b<sub>i</sub></var>,<var>d<sub>i</sub></var>,<var>e<sub>i</sub></var>,<var>g<sub>i</sub></var> &le; <var>M</var>&minus;1</li>
+<li>0 &le; <var>L1</var>,<var>L2</var>,<var>L3</var>,<var>L4</var> &le; 2000</li>
+<li><var>L1</var> &gt; 0, <var>L2</var> &gt; 0 において (<var>a<sub>i</sub></var>,<var>b<sub>i</sub></var>) ≠ (<var>c<sub>j</sub></var>, <var>d<sub>j</sub></var>) ( 0 &le; <var>i</var> &lt; <var>L1</var>, 0 &le; <var>j</var> &lt; <var>L2</var> )</li>
+<li><var>L3</var> &gt; 0, <var>L4</var> &gt; 0 において (<var>e<sub>i</sub></var>,<var>f<sub>i</sub></var>) ≠ (<var>g<sub>j</sub></var>, <var>h<sub>j</sub></var>) ( 0 &le; <var>i</var> &lt; <var>L3</var>, 0 &le; <var>j</var> &lt; <var>L4</var> )</li>
+<li> (<var>a<sub>i</sub></var>,<var>b<sub>i</sub></var>) ≠ (<var>a<sub>j</sub></var>, <var>b<sub>j</sub></var>) ( <var>i</var> ≠ <var>j</var> )　( 0 &le; <var>i</var> &lt; <var>L1</var>, 0 &le; <var>j</var> &lt; <var>L1</var> )</li>
+<li> (<var>c<sub>i</sub></var>,<var>d<sub>i</sub></var>) ≠ (<var>c<sub>j</sub></var>, <var>d<sub>j</sub></var>) ( <var>i</var> ≠ <var>j</var> )　( 0 &le; <var>i</var> &lt; <var>L2</var>, 0 &le; <var>j</var> &lt; <var>L2</var> )</li>
+<li> (<var>e<sub>i</sub></var>,<var>f<sub>i</sub></var>) ≠ (<var>e<sub>j</sub></var>, <var>f<sub>j</sub></var>) ( <var>i</var> ≠ <var>j</var> )　( 0 &le; <var>i</var> &lt; <var>L3</var>, 0 &le; <var>j</var> &lt; <var>L3</var> )</li>
+<li> (<var>g<sub>i</sub></var>,<var>h<sub>i</sub></var>) ≠ (<var>g<sub>j</sub></var>, <var>h<sub>j</sub></var>) ( <var>i</var> ≠ <var>j</var> )　( 0 &le; <var>i</var> &lt; <var>L4</var>, 0 &le; <var>j</var> &lt; <var>L4</var> )</li>
+</ul>
+
+<h2>Output</h2>
+<p>問題文のルールに従ってカップルが成立した時の、「大好きな人」同士のペアの数と「大好きな人」と「そこそこ好きな人」のペアの数と「そこそこ好き」同士のペアの数を空白区切りで1行に出力せよ。</p>
+
+<h2>Sample Input 1</h2>
+<pre>
+3 3
+3
+0 0
+1 1
+2 2
+2
+1 0
+2 1
+3
+1 1
+2 2
+0 1
+2
+1 0
+2 0
+</pre>
+
+<h2>Sample Output 1</h2>
+<pre>
+2 0 0
+</pre>
+<p>
+この場合男性1と女性1、男性2と女性2が大好き同士でカップルとなり「大好き同士」のペア数が2になる。
+すると、男性0のことが「大好き」な女性も「そこそこ好き」な女性もいなくなってしまいます。
+また、女性0のことが「大好き」な男性も「そこそこ好き」な男性もいなくなってしまうため以降カップルは成立しなくなります。
+</p>
+
+<h2>Sample input 2</h2>
+<pre>5 5
+5
+4 1
+2 2
+1 4
+1 3
+4 2
+5
+1 1
+1 2
+3 3
+3 0
+3 4
+5
+2 3
+2 2
+0 3
+0 2
+4 1
+5
+2 0
+4 0
+1 0
+4 3
+2 1
+</pre>
+<h2>Sample Output2</h2>
+<pre>2 1 0</pre>

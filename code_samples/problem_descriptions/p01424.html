@@ -1,0 +1,96 @@
+
+<script src="./IMAGE/varmath.js" charset="UTF-8"></script>
+
+<H1>Palindrome Generator</H1>
+
+<p>
+A palidrome craftsperson starts to work in the early morning, 
+with the clear air allowing him to polish up his palindromes.
+</p>
+
+<p>
+On this morning, he is making his pieces to submit to the International Contest for Palindrome Craftspeople.
+</p>
+
+<p>
+By the way, in order to make palindromes, he uses a special dictionary which contains a set of words and a set of ordered pairs of the words.
+Any words and any ordered pairs of consecutive words in his palindromes must appear in the dictionary.
+</p>
+
+<p>
+We already have his dictionary, so let's estimate how long a palindrome he can make.
+</p>
+
+<H2>Input</H2>
+
+<p>
+The first line in the data set consists of two integers <var>N</var> (<var>1 \leq N \leq 100</var>) and <var>M</var> (<var>0 \leq M \leq 1\,000</var>).
+<var>N</var> describes the number of words in the dictionary and <var>M</var> describes the number of ordered pairs of words.
+</p>
+
+<p>
+The following <var>N</var> lines describe the words he can use.
+The <var>i</var>-th line (<var>1</var>-based) contains the word <var>i</var>, which consists of only lower-case letters and whose length is between <var>1</var> and <var>10</var>, inclusive.
+</p>
+
+<p>
+The following <var>M</var> lines describe the ordered pairs of consecutive words he can use.
+The <var>j</var>-th line (<var>1</var>-based) contains two integers <var>X_j</var> and <var>Y_j</var> (<var>1 \leq X_j, Y_j \leq N</var>).
+<var>X_j</var> describes the (<var>1</var>-based) index of the former word in the palindrome and <var>Y_j</var> describes that of the latter word.
+</p>
+
+<H2>Output</H2>
+
+<p>
+Print the maximal length of the possible palindrome in a line.
+If he can make no palidromes, print &quot;0&quot;.
+If he can make arbitrary long palindromes, print &quot;-1&quot;. 
+</p>
+
+<H2>Sample Input 1</H2>
+
+<pre>
+2 2
+ab
+ba
+1 1
+1 2
+</pre>
+
+<H2>Output for the Sample Input 1</H2>
+
+<pre>
+4
+</pre>
+
+<H2>Sample Input 2</H2>
+
+<pre>
+2 2
+ab
+ba
+1 1
+2 2
+</pre>
+
+<H2>Output for the Sample Input 2</H2>
+
+<pre>
+0
+</pre>
+
+<H2>Sample Input 3</H2>
+
+<pre>
+2 2
+ab
+a
+1 1
+1 2
+</pre>
+
+<H2>Output for the Sample Input 3</H2>
+
+<pre>
+-1
+</pre>

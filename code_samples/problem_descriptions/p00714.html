@@ -1,0 +1,268 @@
+
+
+<h1> 
+<font color="#000">Problem E:</font> Water Tank
+</h1>
+
+<p>
+Mr. Denjiro is a science teacher.
+
+Today he has just received a specially ordered water tank that
+will certainly be useful for his innovative experiments on water
+flow.
+</p>
+
+
+<CENTER>
+<TABLE>
+<TR>
+  <TD ALIGN="center"><img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE1_water1"></TD>
+</TR>
+<TR>
+  <TD ALIGN="center">Figure 1: The water tank</TD>
+</TR>
+</TABLE>
+</CENTER>
+
+<p>
+The size of the tank is 100cm (Width) * 50cm (Height) * 30cm (Depth)
+ (see Figure 1).
+
+For the experiments, he fits several partition boards inside of
+the tank parallel to the sideboards.
+
+The width of each board is equal to the depth of the tank, i.e. 30cm.
+The height of each board is less than that of the tank, i.e. 50 cm,
+and differs one another.
+
+The boards are so thin that he can neglect the thickness in the experiments.
+</p>
+
+
+<CENTER>
+<TABLE>
+<TR>
+  <TD ALIGN="center"><img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE1_water2"></TD>
+</TR>
+<TR>
+  <TD ALIGN="center">Figure 2: The front view of the tank</TD>
+</TR>
+</TABLE>
+</CENTER>
+
+
+<P>
+The front view of the tank is shown in Figure 2.
+</P>
+
+<P>
+    There are several faucets above the tank and he turns them on at
+    the beginning of his experiment.  The tank is initially empty.
+    Your mission is to write a
+    computer program to simulate water flow in the tank.
+</P>
+
+
+
+
+
+<h2>Input</h2>
+
+
+<p>
+The input consists of multiple data sets.
+
+<I>D</I> is the number of the data sets.
+</p>
+
+<DIR>
+<I>D</I><BR>
+<I>DataSet</I><SUB>1</SUB><BR>
+<I>DataSet</I><SUB>2</SUB><BR>
+...<BR>
+<I>DataSet</I><SUB><I>D</I></SUB><BR>
+</DIR>
+
+
+
+<p>
+The format of each data set 
+(<I>DataSet</I><SUB><I>d</I></SUB>   , 1 &lt;= <I>d</I> &lt;= <I>D</I>) 
+is as follows.
+</p>
+
+<DIR>
+<I>N</I><BR>
+<I>B</I><SUB>1</SUB>  <I>H</I><SUB>1</SUB><BR>
+<I>B</I><SUB>2</SUB>  <I>H</I><SUB>2</SUB><BR>
+...<BR>
+<I>B</I><SUB><I>N</I></SUB>  <I>H</I><SUB><I>N</I></SUB><BR>
+<I>M</I><BR>
+<I>F</I><SUB>1</SUB>  <I>A</I><SUB>1</SUB><BR>
+<I>F</I><SUB>2</SUB>  <I>A</I><SUB>2</SUB><BR>
+...<BR>
+<I>F</I><SUB><I>M</I></SUB>  <I>A</I><SUB><I>M</I></SUB><BR>
+<I>L</I><BR>
+<I>P</I><SUB>1</SUB>  <I>T</I><SUB>1</SUB><BR>
+<I>P</I><SUB>2</SUB>  <I>T</I><SUB>2</SUB><BR>
+...<BR>
+<I>P</I><SUB><I>L</I></SUB>  <I>T</I><SUB><I>L</I></SUB><BR>
+</DIR>
+
+
+<P>
+Each line in the data set contains one or two integers.
+</P>
+
+<P>
+<I>N</I> is the number of the boards he sets in the tank .
+<I>B<SUB>i</SUB></I> and <I>H<SUB>i</SUB></I>
+ are the <I>x</I>-position (cm) and the height (cm) 
+of the <I>i</I>-th board, 
+where 1 &lt;= <I>i</I> &lt;= <I>N</I> .
+</P>
+<P>
+    <I>H<SUB>i</SUB></I> s differ from one another.  You may assume the
+    following.
+</P>
+
+
+<BLOCKQUOTE>
+0 &lt; <I>N</I> &lt; 10 , <BR>
+0 &lt; <I>B</I><SUB>1</SUB> &lt; <I>B</I><SUB>2</SUB> &lt; ... &lt; <I>B<SUB>N</SUB></I> &lt; 100 , <BR>
+0 &lt; <I>H</I><SUB>1</SUB> &lt; 50 ,
+0 &lt; <I>H</I><SUB>2</SUB> &lt; 50 ,
+ ..., 0 &lt; <I>H<SUB>N</SUB></I> &lt; 50.
+</BLOCKQUOTE>
+
+
+<P>
+<I>M</I> is the number of the faucets above the tank .
+<I>F<SUB>j</SUB></I> and <I>A<SUB>j</SUB></I> are 
+the <I>x</I>-position (cm) and the amount of water flow (cm<SUP>3</SUP>/second)
+of the <I>j</I>-th faucet ,
+where 1 &lt;= <I>j</I> &lt;= <I>M</I> .
+</P>
+
+<P>
+There is no faucet just above any boards .
+Namely, none of <I>F<SUB>j</SUB></I> is equal to <I>B<SUB>i</SUB></I> .
+</P>
+
+<P>
+You may assume the following .
+</P>
+
+</P>
+
+
+
+<BLOCKQUOTE>
+0 &lt; <I>M</I> &lt;10 , <BR>
+0 &lt; <I>F<SUB>1</SUB></I> &lt; <I>F<SUB>2</SUB></I> &lt; ... 
+&lt; <I>F<SUB>M</SUB></I> &lt; 100 ,<BR>
+0 &lt; <I>A</I><SUB>1</SUB> &lt; 100, 
+0 &lt; <I>A</I><SUB>2</SUB> &lt; 100, ...
+0 &lt; <I>A<SUB>M</SUB></I> &lt; 100.
+</BLOCKQUOTE>
+
+
+
+<P>
+<I>L</I> is the number of observation time and location.
+<I>P<SUB>k</SUB></I> is the <I>x</I>-position (cm) of the <I>k</I>-th
+observation point.
+<I>T<SUB>k</SUB></I> is the <I>k</I>-th observation time in seconds from the beginning.
+</P>
+<P>
+None of <I>P<SUB>k</SUB></I> 
+is equal to <I>B<SUB>i</SUB></I> .
+</P>
+<P>
+You may assume the following .
+</P>
+
+
+<BLOCKQUOTE>
+0 &lt; <I>L</I> &lt; 10 , <BR>
+0 &lt; <I>P</I><SUB>1</SUB> &lt; 100,
+0 &lt; <I>P</I><SUB>2</SUB> &lt; 100, ..., 
+0 &lt; <I>P<SUB>L</SUB></I> &lt; 100 , <BR>
+0 &lt; <I>T</I><SUB>1</SUB> &lt; 1000000, 
+0 &lt; <I>T</I><SUB>2</SUB> &lt; 1000000, 
+... ,
+0 &lt; <I>T<SUB>L</SUB></I> &lt; 1000000.
+</BLOCKQUOTE>
+
+
+<h2>Output</h2>
+
+
+<P>
+For each data set,
+your program should output <I>L</I> lines each containing 
+one real number which represents the height (cm) of the water level specified 
+by the <I>x</I>-position <I>P</I><SUB><I>k</I></SUB> 
+at the time <I>T</I><SUB><I>k</I></SUB>.
+</p>
+<P>
+Each answer may not have an error greater than 0.001.
+As long as this condition is satisfied,
+you may output any number of digits after the decimal point.
+</P>
+<P>
+After the water tank is filled to the brim,
+the water level at any <I>P<SUB>k</SUB></I> is equal to the
+height of the tank, that is, 50 cm.
+</P>
+
+
+<h2>Sample Input</h2>
+<pre>
+2
+5
+15 40
+35 20
+50 45
+70 30
+80 10
+3
+20 3
+60 2
+65 2
+6
+40 4100
+25 7500
+10 18000
+90 7000
+25 15000
+25 22000
+5
+15 40
+35 20
+50 45
+70 30
+80 10
+2
+60 4
+75 1
+3
+60 6000
+75 6000
+85 6000
+</pre>
+
+<h2>Output for the Sample Input</h2>
+<pre>
+0.666667
+21.4286
+36.6667
+11.1111
+40.0
+50.0
+30.0
+13.3333
+13.3333
+</pre>
+
+

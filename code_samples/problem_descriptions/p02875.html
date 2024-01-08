@@ -1,0 +1,79 @@
+<span class="lang-en">
+<p>Score : <var>800</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>Given is a positive even number <var>N</var>.</p>
+<p>Find the number of strings <var>s</var> of length <var>N</var> consisting of <code>A</code>, <code>B</code>, and <code>C</code> that satisfy the following condition:</p>
+<ul>
+<li><var>s</var> can be converted to the empty string by repeating the following operation:<ul>
+<li>Choose two consecutive characters in <var>s</var> and erase them. However, choosing <code>AB</code> or <code>BA</code> is not allowed.</li>
+</ul>
+</li>
+</ul>
+<p>For example, <code>ABBC</code> satisfies the condition for <var>N=4</var>, because we can convert it as follows: <code>ABBC</code> → (erase <code>BB</code>) → <code>AC</code> → (erase <code>AC</code>) → <code>(empty)</code>.</p>
+<p>The answer can be enormous, so compute the count modulo <var>998244353</var>.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>2 \leq N \leq 10^7</var></li>
+<li><var>N</var> is an even number.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the number of strings that satisfy the conditions, modulo <var>998244353</var>.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>2
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>7
+</pre>
+<p>Except <code>AB</code> and <code>BA</code>, all possible strings satisfy the conditions.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>10
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>50007
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>1000000
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>210055358
+</pre></section>
+</div>
+</span>

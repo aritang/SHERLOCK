@@ -1,0 +1,93 @@
+<span class="lang-en lang-child hidden-lang">
+<div id="task-statement">
+				Max Score: <var>1000</var> Points <br/>
+<section>
+<h3>Problem Statement</h3>
+					There is a railroad company in Atcoder Kingdom, "Atcoder Railroad". <br/>
+					There are <var>N + 1</var> stations numbered <var>0, 1, 2, ..., N</var> along a railway. <br/>
+					Currently, two kinds of train are operated, local and express. <br/>
+					A local train stops at every station, and it takes one minute from station <var>i</var> to <var>i + 1</var>, and vice versa. <br/>
+					An express train only stops at station <var>S_0, S_1, S_2, ..., S_{K-1} (0 = S_0 &lt; S_1 &lt; S_2 &lt; ... &lt; S_{K-1} = N)</var>. It takes one minute from station <var>S_i</var> to <var>S_{i + 1}</var>, and vice versa. <br/>
+					But the president of Atcoder Railroad, Semiexp said it is not very convenient so he planned to operate one more kind of train, "semi-express". <br/>
+					The stations where the semi-express stops (This is <var>T_0, T_1, T_2, ..., T_{L-1}</var>, <var>0 = T_0 &lt; T_1 &lt; T_2 &lt; ... &lt; T_{L-1} = N</var>) have to follow following conditions: <br/>
+					From station <var>T_i</var> to <var>T_{i+1}</var> takes 1 minutes, and vice versa. <br/>
+<ul>
+<li>The center of Atcoder Kingdom is station <var>0</var>, and you have to be able to go to station <var>i</var> atmost <var>X</var> minutes.</li>
+<li>If the express stops at the station, semi-express should stops at the station.</li>
+</ul>
+					Print the number of ways of the set of the station where semi-express stops (sequence <var>T</var>). <br/>
+					Since the answer can be large, print the number modulo <var>10^9 + 7</var>. <br/>
+</section>
+</div>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input Format</h3>
+<pre>
+<var>N</var> <var>K</var> <var>X</var>
+<var>S_0</var> <var>S_1</var> <var>S_2</var> ... <var>S_{K-1}</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output Format</h3>
+						Print the number of ways of the set of the station where semi-express stops, mod <var>10^9 + 7</var> in one line. <br/>
+						Print <code>\n</code> (line break) in the end. <br/>
+</section>
+<section>
+<h3>Constraints</h3>
+<ul>
+<li><var>2 ≤ K ≤ 2500</var>.</li>
+<li><var>1 ≤ X ≤ 2500</var>.</li>
+<li><var>S_0 = 0, S_{K-1} = N</var>.</li>
+<li><var>1 ≤ S_{i + 1} - S_i ≤ 10000</var>.</li>
+</ul>
+</section>
+<section>
+<h3>Scoring</h3>
+						Subtask 1 [<var>120</var> points] <br/>
+<ul>
+<li><var>N, K, X ≤ 15</var>.</li>
+</ul>
+						Subtask 2 [<var>90</var> points] <br/>
+<ul>
+<li><var>K, X ≤ 15</var>.</li>
+<li><var>S_{i + 1} - S_i ≤ 15</var>.</li>
+</ul>
+						Subtask 3 [<var>260</var> points] <br/>
+<ul>
+<li><var>K, X ≤ 40</var>.</li>
+<li><var>S_{i + 1} - S_i ≤ 40</var>.</li>
+</ul>
+						Subtask 4 [<var>160</var> points] <br/>
+<ul>
+<li><var>K, X ≤ 300</var>.</li>
+<li><var>S_{i + 1} - S_i ≤ 300</var>.</li>
+</ul>
+						Subtask 5 [<var>370</var> points] <br/>
+<ul>
+<li>There are no additional constraints.</li>
+</ul>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3>
+<pre>
+7 2 3
+0 7
+</pre>
+</section>
+<section>
+<h3>Sample Output 1</h3>
+<pre>
+55
+</pre>
+						The set of trains that stops station <var>0</var> and <var>7</var>, and can't satisfy the condition is: <br/>
+<var>[0, 7], [0, 1, 7], [0, 1, 2, 7], [0, 1, 6, 7], [0, 1, 2, 6, 7], [0, 1, 2, 3, 6, 7], [0, 1, 2, 5, 6, 7], [0, 1, 2, 3, 5, 6, 7], [0, 1, 2, 3, 4, 5, 6, 7]</var>, <var>9</var> ways.<br/>
+						Therefore, the number of ways is <var>2^6 - 9 = 55</var>. <br/>
+</section>
+</div>
+</div>
+</span>

@@ -1,0 +1,91 @@
+<h1>Problem G. Additions</h1>
+<!--
+Time Limit: 2 sec
+Memory Limit: 512 MB
+  -->
+<p>
+  You are given an integer $N$ and a string consisting of '<span>+</span>' and digits. You are asked to transform the string into a valid formula whose calculation result is smaller than or equal to $N$ by modifying some characters. Here, you replace one character with another character any number of times, and the converted string should still consist of '<span>+</span>' and digits. Note that leading zeros and unary positive are prohibited.
+</p>
+
+<p>
+  For instance, '<span>0123+456</span>' is assumed as invalid because leading zero is prohibited. Similarly, '<span>+1+2</span>' and '<span>2++3</span>' are also invalid as they each contain a unary expression. On the other hand, '<span>12345</span>', '<span>0+1+2</span>' and '<span>1234+0+0</span>' are all valid.
+</p>
+
+<p>
+  Your task is to find the minimum number of the replaced characters. If there is no way to make a valid formula smaller than or equal to $N$, output $-1$ instead of the number of the replaced characters.
+</p>
+
+
+<h2>Input</h2>
+<p>
+  The input consists of a single test case in the following format.
+</p>
+
+<pre>
+$N$
+$S$
+</pre>
+<p>
+  The first line contains an integer $N$, which is the upper limit of the formula ($1 \leq N \leq 10^9$). The second line contains a string $S$, which consists of '<span>+</span>' and digits and whose length is between $1$ and $1,000$, inclusive. Note that it is <b><i>not</i></b> guaranteed that initially $S$ is a valid formula.
+</p>
+
+<h2>Output</h2>
+<p>
+  Output the minimized number of the replaced characters. If there is no way to replace, output $-1$ instead.
+</p>
+
+<h2>Examples</h2>
+
+<h2>Sample Input 1</h2>
+<pre>
+100
++123
+</pre>
+<h2>Output for Sample Input 1</h2>
+<pre>
+2
+</pre>
+
+<h2>Sample Input 2</h2>
+<pre>
+10
++123
+</pre>
+<h2>Output for Sample Input 2</h2>
+<pre>
+4
+</pre>
+<h2>Sample Input 3</h2>
+<pre>
+1
++123
+</pre>
+
+<h2>Output for Sample Input 3</h2>
+<pre>
+-1
+</pre>
+
+<h2>Sample Input 4</h2>
+<pre>
+10
+++1+
+</pre>
+<h2>Output for Sample Input 4</h2>
+<pre>
+2
+</pre>
+
+<h2>Sample Input 5</h2>
+<pre>
+2000
+1234++7890
+</pre>
+
+<h2>Output for Sample Input 5</h2>
+<pre>
+2
+</pre>
+<p>
+  In the first example, you can modify the first two characters and make a formula '<span>1+23</span>', for instance. In the second example, you should make '<span>0+10</span>' or '<span>10+0</span>' by replacing all the characters. In the third example, you cannot make any valid formula less than or equal to $1$.
+</p>

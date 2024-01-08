@@ -1,0 +1,59 @@
+
+<H1><font color="#000">Problem E:</font> Hide-and-seek</H1>
+
+<p>
+<i>Hide-and-seek</i> is a children’s game. Players hide here and there, and one player called <i>it</i> tries to find all
+the other players.
+</p>
+<p>
+Now you played <i>it</i> and found all the players, so it’s turn to hide from <i>it</i>. Since you have got tired of
+running around for finding players, you don’t want to play <i>it</i> again. So you are going to hide yourself at
+the place as far as possible from <i>it</i>. But where is that?
+</p>
+<p>
+Your task is to find the place and calculate the maximum possible distance from <i>it</i> to the place to hide.
+</p>
+
+<H2>Input</H2>
+
+<p>
+The input contains a number of test cases.
+</p>
+<p>
+The first line of each test case contains a positive integer <i>N</i> (<i>N</i> &le; 1000). The following N lines give
+the map where hide-and-seek is played. The map consists of <i>N corridors</i>. Each line contains four real
+numbers <i>x</i><sub>1</sub>, <i>y</i><sub>1</sub>, <i>x</i><sub>2</sub>, and <i>y</i><sub>2</sub>, where (<i>x</i><sub>1</sub>, <i>y</i><sub>1</sub> ) and (<i>x</i><sub>2</sub>, <i>y</i><sub>2</sub> ) indicate the two end points of the corridor. All
+corridors are straight, and their widths are negligible. After these <i>N</i> lines, there is a line containing two
+real numbers <i>sx</i> and <i>sy</i>, indicating the position of <i>it</i>. You can hide at an arbitrary place of any corridor,
+and <i>it</i> always walks along corridors. Numbers in the same line are separated by a single space.
+</p>
+<p>
+It is guaranteed that <i>its</i> starting position (<i>sx</i>, <i>sy</i>) is located on some corridor and linked to all corridors
+directly or indirectly.
+</p>
+<p>
+The end of the input is indicated by a line containing a single zero.
+</p>
+
+<H2>Output</H2>
+
+<p>
+For each test case, output a line containing the distance along the corridors from ‘it”s starting position
+to the farthest position. The value may contain an error less than or equal to 0.001. You may print any
+number of digits below the decimal point.
+</p>
+
+<H2>Sample Input</H2>
+<pre>
+2
+0 0 3 3
+0 4 3 1
+1 1
+0
+</pre>
+
+<H2>Output for the Sample Input</H2>
+<pre>
+4.243
+</pre>
+

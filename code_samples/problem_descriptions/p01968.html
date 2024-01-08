@@ -1,0 +1,87 @@
+<h2>B： 階層的計算機 (Hierarchical Calculator)</h2>
+
+<h3>Problem</h3>
+
+<p>Ebi-chan has <var>N</var> formulae: <var>y = a_i x</var> for <var>i =1, ..., N</var> (inclusive).  Now she considers a subsequence of indices with length <var>k</var>: <var>s_1</var>, <var>s_2</var>, <var>...</var>, <var>s_k</var>.  At first, let <var>x_0</var> be <var>1</var> and evaluate <var>s_1</var>-th formulae with <var>x = x_0</var>.  Next, let <var>x_1</var> be the output of <var>s_1</var> and evaluate <var>s_2</var>-th formulae with <var>x = x_1</var>, and so on.</p>
+
+<p>She wants to maximize the final output of the procedure, <var>x_{s_k}</var>.  If there are many candidates, she wants the """shortest one""".  If there are still many candidates, she wants the """lexicographically smallest one""".</p>
+
+<p>Sequence <var>s</var> is lexicographically smaller than sequence <var>t</var>, if and only if either of the following conditions hold:</p>
+<ul>
+<li> there exists <var>m &lt; |s|</var> such that <var>s_i = t_i</var> for <var>i</var> in <var>1</var> to <var>m</var> (inclusive) and <var>s_{m+1} &lt; t_{m+1}</var>, or</li>
+<li> <var>s_i = t_i</var> for <var>i</var> in <var>1</var> to <var>|s|</var> (inclusive) and <var>|s| &lt; |t|</var>,</li>
+</ul>
+<p>where <var>|s|</var> is the length of the <var>s</var>.</p>
+
+<h3>Input</h3>
+<pre>
+<var>N</var>
+<var>a_1</var> <var>a_2</var> $\cdots$ <var>a_N</var>
+</pre>
+
+<h3>Constraints</h3>
+
+<ul>
+<li> <var>1 \leq N \leq 60</li>
+<li> <var>-2 \leq a_i \leq 2</var> for <var>i=1, ...,N</var> (inclusive)</li>
+<li> Every input is given as the integer.</li>
+</ul>
+
+<h3>Output</h3>
+<p>Output <var>k+1</var> lines.  First line, the length of the sequence, <var>k</var>.  Following <var>k</var> lines, the index of the <var>i</var>-th element of the subsequence, <var>s_i</var> (one element per line).</p>
+
+<h3>Sample Input 1</h3>
+<pre>
+4
+2 0 -2 1
+</pre>
+
+<h3>Sample Output for Input 1</h3>
+<pre>
+1
+1
+</pre>
+
+<p>She evaluates the first one and gets the maximum value <var>2</var>.</p>
+
+<h3>Sample Input 2</h3>
+<pre>
+3
+2 -2 -2
+</pre>
+
+<h3>Sample Output for Input 2</h3>
+<pre>
+3
+1
+2
+3
+</pre>
+
+<p>She evaluates all of them and gets the maximum value <var>8</var>.</p>
+
+<h3>Sample Input 3</h3>
+<pre>
+2
+-1 0
+</pre>
+
+<h3>Sample Output for Input 3</h3>
+<pre>0</pre>
+<p>She evaluates none of them and gets the maximum value <var>0</var>.  Empty sequence is the shorter and lexicographically smaller than any other sequences.</p>
+
+<h3>Sample Input 4</h3>
+<pre>
+5
+-1 2 1 -2 -1
+</pre>
+
+<h3>Sample Output for Input 4</h3>
+<pre>
+3
+1
+2
+4
+</pre>
+
+<p>She evaluates $\langle$<var> 1, 2, 4 </var>$\rangle$ ones and gets the maximum value <var>4</var>.  Note that $\langle$<var> 2, 4, 5 </var>$\rangle$ is not lexicographically smallest one.</p>

@@ -1,0 +1,102 @@
+<span class="lang-en">
+<p>Score : <var>700</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>Takahashi found an undirected connected graph with <var>N</var> vertices and <var>M</var> edges. The vertices are numbered <var>1</var> through <var>N</var>. The <var>i</var>-th edge connects vertices <var>a_i</var> and <var>b_i</var>, and has a weight of <var>c_i</var>.</p>
+<p>He will play <var>Q</var> rounds of a game using this graph. In the <var>i</var>-th round, two vertices <var>S_i</var> and <var>T_i</var> are specified, and he will choose a subset of the edges such that any vertex can be reached from at least one of the vertices <var>S_i</var> or <var>T_i</var> by traversing chosen edges.</p>
+<p>For each round, find the minimum possible total weight of the edges chosen by Takahashi.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 ≦ N ≦ 4,000</var></li>
+<li><var>1 ≦ M ≦ 400,000</var></li>
+<li><var>1 ≦ Q ≦ 100,000</var></li>
+<li><var>1 ≦ a_i,b_i,S_i,T_i ≦ N</var></li>
+<li><var>1 ≦ c_i ≦ 10^{9}</var></li>
+<li><var>a_i \neq b_i</var></li>
+<li><var>S_i \neq T_i</var></li>
+<li>The given graph is connected.</li>
+</ul>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Partial Scores</h3><ul>
+<li>In the test set worth <var>200</var> points, <var>Q = 1</var>.</li>
+<li>In the test set worth another <var>300</var> points, <var>Q ≦ 3000</var>.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>The input is given from Standard Input in the following format:</p>
+<pre><var>N</var> <var>M</var>
+<var>a_1</var> <var>b_1</var> <var>c_1</var>
+<var>a_2</var> <var>b_2</var> <var>c_2</var>
+:
+<var>a_M</var> <var>b_M</var> <var>c_M</var>
+<var>Q</var>
+<var>S_1</var> <var>T_1</var>
+<var>S_2</var> <var>T_2</var>
+:
+<var>S_Q</var> <var>T_Q</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print <var>Q</var> lines. The <var>i</var>-th line should contain the minimum possible total weight of the edges chosen by Takahashi.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>4 3
+1 2 3
+2 3 4
+3 4 5
+2
+2 3
+1 4
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>8
+7
+</pre>
+<p>We will examine each round:</p>
+<ul>
+<li>In the <var>1</var>-st round, choosing edges <var>1</var> and <var>3</var> achieves the minimum total weight of <var>8</var>.</li>
+<li>In the <var>2</var>-nd round, choosing edges <var>1</var> and <var>2</var> achieves the minimum total weight of <var>7</var>.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>4 6
+1 3 5
+4 1 10
+2 4 6
+3 2 2
+3 4 5
+2 1 3
+1
+2 3
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>8
+</pre>
+<p>This input satisfies the additional constraints for both partial scores.</p></section>
+</div>
+</span>

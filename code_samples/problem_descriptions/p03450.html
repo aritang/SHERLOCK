@@ -1,0 +1,126 @@
+<span class="lang-en">
+<p>Score : <var>400</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>There are <var>N</var> people standing on the <var>x</var>-axis.
+Let the coordinate of Person <var>i</var> be <var>x_i</var>.
+For every <var>i</var>, <var>x_i</var> is an integer between <var>0</var> and <var>10^9</var> (inclusive).
+It is possible that more than one person is standing at the same coordinate.</p>
+<p>You will given <var>M</var> pieces of information regarding the positions of these people.
+The <var>i</var>-th piece of information has the form <var>(L_i, R_i, D_i)</var>.
+This means that Person <var>R_i</var> is to the right of Person <var>L_i</var> by <var>D_i</var> units of distance, that is, <var>x_{R_i} - x_{L_i} = D_i</var> holds.</p>
+<p>It turns out that some of these <var>M</var> pieces of information may be incorrect.
+Determine if there exists a set of values <var>(x_1, x_2, ..., x_N)</var> that is consistent with the given pieces of information.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 \leq N \leq 100</var> <var>000</var></li>
+<li><var>0 \leq M \leq 200</var> <var>000</var></li>
+<li><var>1 \leq L_i, R_i \leq N</var> (<var>1 \leq i \leq M</var>)</li>
+<li><var>0 \leq D_i \leq 10</var> <var>000</var> (<var>1 \leq i \leq M</var>)</li>
+<li><var>L_i \neq R_i</var> (<var>1 \leq i \leq M</var>)</li>
+<li>If <var>i \neq j</var>, then <var>(L_i, R_i) \neq (L_j, R_j)</var> and <var>(L_i, R_i) \neq (R_j, L_j)</var>.</li>
+<li><var>D_i</var> are integers.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var> <var>M</var>
+<var>L_1</var> <var>R_1</var> <var>D_1</var>
+<var>L_2</var> <var>R_2</var> <var>D_2</var>
+<var>:</var>
+<var>L_M</var> <var>R_M</var> <var>D_M</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>If there exists a set of values <var>(x_1, x_2, ..., x_N)</var> that is consistent with all given pieces of information, print <code>Yes</code>; if it does not exist, print <code>No</code>.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>3 3
+1 2 1
+2 3 1
+1 3 2
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>Yes
+</pre>
+<p>Some possible sets of values <var>(x_1, x_2, x_3)</var> are <var>(0, 1, 2)</var> and <var>(101, 102, 103)</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>3 3
+1 2 1
+2 3 1
+1 3 5
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>No
+</pre>
+<p>If the first two pieces of information are correct, <var>x_3 - x_1 = 2</var> holds, which is contradictory to the last piece of information.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>4 3
+2 1 1
+2 3 5
+3 4 2
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>Yes
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 4</h3><pre>10 3
+8 7 100
+7 9 100
+9 8 100
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 4</h3><pre>No
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 5</h3><pre>100 0
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 5</h3><pre>Yes
+</pre></section>
+</div>
+</span>

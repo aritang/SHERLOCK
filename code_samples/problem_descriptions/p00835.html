@@ -1,0 +1,135 @@
+
+<H1><font color="#000">Problem I:</font> Crossing Prisms</H1>
+
+<p>
+Prof. Bocchan is a mathematician and a sculptor. He likes to create sculptures with mathematics.
+</p>
+<p>
+His style to make sculptures is very unique. He uses two identical prisms. Crossing them at right
+angles, he makes a polyhedron that is their intersection as a new work. Since he finishes it up
+with painting, he needs to know the surface area of the polyhedron for estimating the amount
+of pigment needed.
+</p>
+<p>
+For example, let us consider the two identical prisms in Figure 1. The definition of their cross
+section is given in Figure 2. The prisms are put at right angles with each other and their
+intersection is the polyhedron depicted in Figure 3. An approximate value of its surface area
+is 194.8255.
+</p>
+
+<center>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE1_crossingPrisms1">
+<p>Figure 1: Two identical prisms at right angles</p>
+</center>
+
+<p>
+Given the shape of the cross section of the two identical prisms, your job is to calculate the
+surface area of his sculpture.
+
+</p>
+
+
+
+
+<H2>Input</H2>
+
+<p>
+The input consists of multiple datasets, followed by a single line containing only a zero. The
+first line of each dataset contains an integer <i>n</i> indicating the number of the following lines, each
+of which contains two integers <i>a<sub>i</sub></i> and <i>b<sub>i</sub></i> (<i>i</i> = 1, ... , <i>n</i>).
+</p>
+
+<center>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE1_crossingPrisms2">
+<p>Figure 2: Outline of the cross section</p>
+</center>
+
+<center>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE1_crossingPrisms3">
+<p>Figure 3: The intersection</p>
+</center>
+
+
+<p>
+A closed path formed by the given points (<i>a</i><sub>1</sub>, <i>b</i><sub>1</sub>), (<i>a</i><sub>2</sub>, <i>b</i><sub>2</sub> ), ... , (<i>a<sub>n</sub></i>, <i>b<sub>n</sub></i>), (<i>a</i><sub><i>n</i>+1</sub>, <i>b</i><sub><i>n</i>+1</sub>)(= (<i>a</i><sub>1</sub>, <i>b</i><sub>1</sub>))
+indicates the outline of the cross section of the prisms. The closed path is simple, that is, it does
+not cross nor touch itself. The right-hand side of the line segment from (<i>a<sub>i</sub></i>, <i>b<sub>i</sub></i>) to (<i>a<sub>i</sub></i>+1 , <i>b<sub>i</sub></i>+1 ) is the inside of the section.
+</p>
+<p>
+You may assume that 3 &le; <i>n</i> &le; 4, 0 &le; <i>a<sub>i</sub></i> &le; 10 and 0 &le; <i>b<sub>i</sub></i> &le; 10 (<i>i</i> = 1, ... , <i>n</i>).
+</p>
+<p>
+One of the prisms is put along the <i>x</i>-axis so that the outline of its cross section at <i>x</i> = <i>&zeta;</i> is
+indicated by points (<i>x<sub>i</sub></i>, <i>y<sub>i</sub></i>, <i>z<sub>i</sub></i> ) = (<i>&zeta;</i>, <i>a<sub>i</sub></i>, <i>b<sub>i</sub></i>) (0 &le; <i>&zeta;</i> &le; 10, <i>i</i> = 1, ... , <i>n</i>). The other prism is put
+along the <i>y</i>-axis so that its cross section at <i>y</i> = <i>&eta;</i> is indicated by points (<i>x<sub>i</sub></i>, <i>y<sub>i</sub></i>, <i>z<sub>i</sub></i>) = (<i>a<sub>i</sub></i>, <i>&eta;</i>, <i>b<sub>i</sub></i>)
+(0 &le; <i>&eta;</i> &le; 10, <i>i</i> = 1, ... , <i>n</i>).
+
+</p>
+
+
+<H2>Output</H2>
+
+<p>
+The output should consist of a series of lines each containing a single decimal fraction. Each
+number should indicate an approximate value of the surface area of the polyhedron defined by the corresponding dataset. The value may contain an error less than or equal to 0.0001. You
+may print any number of digits below the decimal point.
+
+
+</p>
+
+<H2>Sample Input</H2>
+<pre>
+4
+5 0
+0 10
+7 5
+10 5
+4
+7 5
+10 5
+5 0
+0 10
+4
+0 10
+10 10
+10 0
+0 0
+3
+0 0
+0 10
+10 0
+4
+0 10
+10 5
+0 0
+9 5
+4
+5 0
+0 10
+5 5
+10 10
+4
+0 5
+5 10
+10 5
+5 0
+4
+7 1
+4 1
+0 1
+9 5
+0
+</pre>
+
+<H2>Output for the Sample Input</H2>
+<pre>
+194.8255
+194.8255
+600.0000
+341.4214
+42.9519
+182.5141
+282.8427
+149.2470
+</pre>
+

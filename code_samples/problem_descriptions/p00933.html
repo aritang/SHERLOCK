@@ -1,0 +1,83 @@
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({ tex2jax: { inlineMath: [["$","$"], ["\\(","\\)"]], processEscapes: true }});
+</script>
+<script type='text/javascript' src='http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
+</script>
+
+<h2>Problem J:
+Exhibition
+</h2>
+
+<p>
+  The city government is planning an exhibition and collecting industrial products. There are $n$ candidates of industrial products for the exhibition, and the city government decided to choose $k$ of them. They want to minimize the total price of the $k$ products. However, other criteria such as their sizes and weights should be also taken into account. To address this issue, the city government decided to use the following strategy: The $i$-th product has three parameters, price, size, and weight, denoted by $x_i$, $y_i$, and $z_i$, respectively. Then, the city government chooses $k$ items $i_1, . . . , i_k$ ($1 \leq i_j \leq n$) that minimizes the evaluation measure
+
+  \[
+e = (\sum^k_{j=1}x_{ij}) (\sum^k_{j=1}y_{ij}) (\sum^k_{j=1}z_{ij}),
+  \]
+
+  which incorporates the prices, the sizes, and the weights of products. If there are two or more choices that minimize $e$, the government chooses one of them uniformly at random.
+</p>
+
+<p>
+You are working for the company that makes the product 1. The company has decided to cut the price, reduce the size, and/or reduce the weight of the product so that the city government may choose the product of your company, that is, to make the probability of choosing the product positive. We have three parameters $A$, $B$, and $C$. If we want to reduce the price, size, and weight to $(1 − \alpha)x_1$, $(1 − \beta)y_1$, and $(1 − \gamma)z_1$ ($0 \leq \alpha, \beta, \gamma \leq 1$), respectively, then we have to invest $\alpha A + \beta B + \gamma C$ million yen. We note that the resulting price, size, and weight do not have to be integers. Your task is to compute the minimum investment required to make the city government possibly choose the product of your company. You may assume that employees of all the other companies are too lazy to make such an effort.
+  </p>
+
+<h3>Input</h3>
+
+<p>
+  The input consists of a single test case with the following format.<br>
+  <br>
+  
+$n$ $k$ $A$ $B$ $C$<br>
+$x_1$ $y_1$ $z_1$<br>
+$x_2$ $y_2$ $z_2$<br>
+.<br>
+.<br>
+.<br>
+$x_n$ $y_n$ $z_n$<br>
+  <br>
+  
+  The first line contains five integers. The integer $n$ ($1 \leq n \leq 50$) is the number of industrial products, and the integer $k$ ($1 \leq k \leq n$) is the number of products that will be chosen by the city government. The integers $A$, $B$, $C$ ($1 \leq A, B, C \leq 100$) are the parameters that determine the cost of changing the price, the size, and the weight, respectively, of the product 1.
+</p>
+
+<p>
+Each of the following $n$ lines contains three integers, $x_i$, $y_i$, and $z_i$ ($1 \leq x_i, y_i, z_i \leq 100$), which are the price, the size, and the weight, respectively, of the $i$-th product.
+</p>
+
+
+<h3>Output</h3>
+
+<p>
+Output the minimum cost (in million yen) in order to make the city government possibly choose the product of your company. The output should not contain an absolute error greater than $10^{−4}$.
+</p>
+
+
+
+<h3>Sample Input 1</h3>
+
+<pre>6 5 1 2 3
+5 5 5
+1 5 5
+2 5 4
+3 5 3
+4 5 2
+5 5 1</pre>
+
+<h3>Sample Output 1</h3>
+
+<pre>0.631579</pre>
+
+<h3>Sample Input 2</h3>
+
+<pre>6 1 1 2 3
+10 20 30
+1 2 3
+2 4 6
+3 6 9
+4 8 12
+5 10 15</pre>
+
+<h3>Sample Output 2</h3>
+
+<pre>0.999000</pre>

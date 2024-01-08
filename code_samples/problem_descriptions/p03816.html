@@ -1,0 +1,65 @@
+<span class="lang-en">
+<p>Score : <var>400</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>Snuke has decided to play a game using cards.
+He has a deck consisting of <var>N</var> cards. On the <var>i</var>-th card from the top, an integer <var>A_i</var> is written.</p>
+<p>He will perform the operation described below zero or more times, so that the values written on the remaining cards will be pairwise distinct. Find the maximum possible number of remaining cards. Here, <var>N</var> is odd, which guarantees that at least one card can be kept.</p>
+<p>Operation: Take out three arbitrary cards from the deck. Among those three cards, eat two: one with the largest value, and another with the smallest value. Then, return the remaining one card to the deck.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>3 ≦ N ≦ 10^{5}</var></li>
+<li><var>N</var> is odd.</li>
+<li><var>1 ≦ A_i ≦ 10^{5}</var></li>
+<li><var>A_i</var> is an integer.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>The input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+<var>A_1</var> <var>A_2</var> <var>A_3</var> ... <var>A_{N}</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the answer.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>5
+1 2 1 3 7
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>3
+</pre>
+<p>One optimal solution is to perform the operation once, taking out two cards with <var>1</var> and one card with <var>2</var>. One card with <var>1</var> and another with <var>2</var> will be eaten, and the remaining card with <var>1</var> will be returned to deck. Then, the values written on the remaining cards in the deck will be pairwise distinct: <var>1</var>, <var>3</var> and <var>7</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>15
+1 3 5 2 1 3 2 8 8 6 2 6 11 1 1
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>7
+</pre></section>
+</div>
+</span>

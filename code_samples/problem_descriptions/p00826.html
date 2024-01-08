@@ -1,0 +1,108 @@
+
+<H1><font color="#000">Problem H:</font> Monster Trap</H1>
+
+<p>
+Once upon a time when people still believed in magic, there was a great wizard Aranyaka
+Gondlir. After twenty years of hard training in a deep forest, he had finally mastered ultimate
+magic, and decided to leave the forest for his home.
+</p>
+<p>
+Arriving at his home village, Aranyaka was very surprised at the extraordinary desolation. A
+gloom had settled over the village. Even the whisper of the wind could scare villagers. It was a
+mere shadow of what it had been.
+</p>
+<p>
+What had happened? Soon he recognized a sure sign of an evil monster that is immortal. Even
+the great wizard could not kill it, and so he resolved to seal it with magic. Aranyaka could cast
+a spell to create a monster trap: once he had drawn a line on the ground with his magic rod,
+the line would function as a barrier wall that any monster could not get over. Since he could
+only draw straight lines, he had to draw several lines to complete a monster trap, i.e., magic
+barrier walls enclosing the monster. If there was a gap between barrier walls, the monster could
+easily run away through the gap.
+</p>
+<p>
+For instance, a complete monster trap without any gaps is built by the barrier walls in the left
+figure, where “M” indicates the position of the monster. In contrast, the barrier walls in the
+right figure have a loophole, even though it is almost complete.
+</p>
+
+<center>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE1_monsterTrap">
+</center>
+
+<p>
+Your mission is to write a program to tell whether or not the wizard has successfully sealed the
+monster.
+</p>
+
+<H2>Input</H2>
+
+<p>
+The input consists of multiple data sets, each in the following format.
+</p>
+
+<pre>
+<i>n</i>
+<i>x</i><sub>1</sub> <i>y</i><sub>1</sub>  <i>x'</i><sub>1</sub> <i>y'</i><sub>1</sub>
+<i>x</i><sub>2</sub> <i>y</i><sub>2</sub>  <i>x'</i><sub>2</sub> <i>y'</i><sub>2</sub>
+      ...
+<i>x</i><sub><i>n</i></sub> <i>y</i><sub><i>n</i></sub>  <i>x'</i><sub><i>n</i></sub> <i>y'</i><sub><i>n</i></sub>
+</pre>
+
+<p>
+The first line of a data set contains a positive integer n, which is the number of the line segments
+drawn by the wizard. Each of the following <i>n</i> input lines contains four integers <i>x</i>, <i>y</i>, <i>x'</i>, and
+<i>y'</i>, which represent the <i>x</i>- and <i>y</i>-coordinates of two points (<i>x</i>, <i>y</i>) and (<i>x'</i>, <i>y'</i> ) connected by a line
+segment. You may assume that all line segments have non-zero lengths. You may also assume
+that <i>n</i> is less than or equal to 100 and that all coordinates are between -50 and 50, inclusive.
+</p>
+<p>
+For your convenience, the coordinate system is arranged so that the monster is always on the
+origin (0, 0). The wizard never draws lines crossing (0, 0).
+</p>
+<p>
+You may assume that any two line segments have at most one intersection point and that no
+three line segments share the same intersection point. You may also assume that the distance
+between any two intersection points is greater than 10<sup>-5</sup>.
+</p>
+<p>
+An input line containing a zero indicates the end of the input.
+</p>
+
+
+<H2>Output</H2>
+
+<p>
+For each data set, print “yes” or “no” in a line. If a monster trap is completed, print “yes”.
+Otherwise, i.e., if there is a loophole, print “no”.
+</p>
+
+<H2>Sample Input</H2>
+<pre>
+8
+-7 9 6 9
+-5 5 6 5
+-10 -5 10 -5
+-6 9 -9 -6
+6 9 9 -6
+-1 -2 -3 10
+1 -2 3 10
+-2 -3 2 -3
+8
+-7 9 5 7
+-5 5 6 5
+-10 -5 10 -5
+-6 9 -9 -6
+6 9 9 -6
+-1 -2 -3 10
+1 -2 3 10
+-2 -3 2 -3
+0
+</pre>
+
+<H2>Output for the Sample Input</H2>
+<pre>
+yes
+no
+</pre>
+

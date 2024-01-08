@@ -1,0 +1,82 @@
+<span class="lang-en">
+<p>Score : <var>200</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>The development of algae in a pond is as follows.</p>
+<p>Let the total weight of the algae at the beginning of the year <var>i</var> be <var>x_i</var> gram. For <var>i≥2000</var>, the following formula holds:</p>
+<ul>
+<li><var>x_{i+1} = rx_i - D</var></li>
+</ul>
+<p>You are given <var>r</var>, <var>D</var> and <var>x_{2000}</var>. Calculate <var>x_{2001}</var>, <var>...</var>, <var>x_{2010}</var> and print them in order.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>2 ≤ r ≤ 5</var></li>
+<li><var>1 ≤ D ≤ 100</var></li>
+<li><var>D &lt; x_{2000} ≤ 200</var></li>
+<li>All values in input are integers.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>r</var> <var>D</var> <var>x_{2000}</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print <var>10</var> lines. The <var>i</var>-th line (<var>1 ≤ i ≤ 10</var>) should contain <var>x_{2000+i}</var> as an integer.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>2 10 20
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>30
+50
+90
+170
+330
+650
+1290
+2570
+5130
+10250
+</pre>
+<p>For example, <var>x_{2001} = rx_{2000} - D = 2 \times 20 - 10 = 30</var> and <var>x_{2002} = rx_{2001} - D = 2 \times 30 - 10 = 50</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>4 40 60
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>200
+760
+3000
+11960
+47800
+191160
+764600
+3058360
+12233400
+48933560
+</pre></section>
+</div>
+</span>

@@ -1,0 +1,103 @@
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({ tex2jax: { inlineMath: [["$","$"], ["\\(","\\)"]], processEscapes: true }});
+</script>
+<script type='text/javascript' src='http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
+</script>
+
+
+<h2>Shifting a Matrix</h2>
+
+<p>
+You are given $N \times N$ matrix $A$ initialized with $A_{i,j} = (i - 1)N + j$, where $A_{i,j}$ is the entry of the $i$-th row and the $j$-th column of $A$. Note that $i$ and $j$ are 1-based.
+</p>
+
+<p>
+You are also given an operation sequence which consists of the four types of shift operations: left, right, up, and down shifts. More precisely, these operations are defined as follows:
+</p>
+
+<ul>
+<li> Left shift with $i$: circular shift of the $i$-th row to the left, i.e., setting previous $A_{i,k}$ to new $A_{i,k-1}$ for $2 \leq k \leq N$, and previous $A_{i,1}$ to new $A_{i,N}$.</li>
+<li> Right shift with $i$: circular shift of the $i$-th row to the right, i.e., setting previous $A_{i,k}$ to new $A_{i,k+1}$ for $1 \leq k \leq N - 1$, and previous $A_{i,N}$ to new $A_{i,1}$.</li>
+<li> Up shift with $j$: circular shift of the $j$-th column to the above, i.e., setting previous $A_{k,j}$ to new $A_{k-1,j}$ for $2 \leq k \leq N$, and previous $A_{1,j}$ to new $A_{N,j}$.</li>
+<li> Down shift with $j$: circular shift of the $j$-th column to the below, i.e., setting previous $A_{k,j}$ to new $A_{k+1,j}$ for $1 \leq k \leq N - 1$, and previous $A_{N,j}$ to new $A_{1,j}$.
+</ul>
+
+<p>
+An operation sequence is given as a string. You have to apply operations to a given matrix from left to right in a given string. Left, right, up, and down shifts are referred as 'L', 'R', 'U', and 'D' respectively in a string, and the following number indicates the row/column to be shifted. For example, "R25" means we should perform right shift with 25. In addition, the notion supports repetition of operation sequences. An operation sequence surrounded by a pair of parentheses must be repeated exactly $m$ times, where $m$ is the number following the close parenthesis. For example, "(L1R2)10" means we should repeat exactly 10 times the set of the two operations:
+left shift with 1 and right shift with 2 in this order.
+</p>
+<p>
+Given operation sequences are guaranteed to follow the following BNF:
+</p>
+
+<pre>
+&lt;sequence&gt; := &lt;sequence&gt;&lt;repetition&gt; | &lt;sequence&gt;&lt;operation&gt; | &lt;repetition&gt; | &lt;operation&gt;
+&lt;repetition&gt; := '('&lt;sequence&gt;')'&lt;number&gt;
+&lt;operation&gt; := &lt;shift>&lt;number&gt;
+&lt;shift&gt; := 'L' | 'R' | 'U' | 'D'
+&lt;number&gt; := &lt;nonzero_digit&gt; |&lt;number&gt;&lt;digit&gt;
+&lt;digit&gt; := '0' | &lt;nonzero_digit&gt;
+&lt;nonzero_digit&gt; := '1' | '2' | '3' | '4' | '5' | '6' | '7' | '8' | '9'
+</pre>
+
+<p>
+Given $N$ and an operation sequence as a string, make a program to compute the $N \times N$ matrix after operations indicated by the operation sequence.
+</p>
+
+<h3>Input</h3>
+<p>
+The input consists of a single test case. The test case is formatted as follows.<br/>
+<br/>
+$N$ $L$<br/>
+$S$<br/>
+</p>
+
+<p>
+The first line contains two integers $N$ and $L$, where $N$ ($1 \leq N \leq 100$) is the size of the given matrix and $L$ ($2 \leq L \leq 1,000$) is the length of the following string. The second line contains a string $S$ representing the given operation sequence. You can assume that $S$ follows the above BNF. You can also assume numbers representing rows and columns are no less than 1 and no more than $N$, and the number of each repetition is no less than 1 and no more than $10^9$ in the given string.
+</p>
+
+<h3>Output</h3>
+<p>
+Output the matrix after the operations in $N$ lines, where the $i$-th line contains single-space separated $N$ integers representing the $i$-th row of $A$ after the operations.
+</p>
+
+
+<h3>Sample Input 1</h3>
+<pre>
+3 2
+R1
+</pre>
+
+<h3>Output for the Sample Input 1</h3>
+<pre>
+3 1 2
+4 5 6
+7 8 9
+</pre>
+
+<h3>Sample Input 2</h3>
+<pre>
+3 7
+(U2)300
+</pre>
+
+<h3>Output for the Sample Input 2</h3>
+<pre>
+1 2 3
+4 5 6
+7 8 9
+</pre>
+
+<h3>Sample Input 3</h3>
+<pre>
+3 7
+(R1D1)3
+</pre>
+
+<h3>Output for the Sample Input 3</h3>
+<pre>
+3 4 7
+1 5 6
+2 8 9
+</pre>

@@ -1,0 +1,81 @@
+
+
+<h1><font color="#000">Problem B:</font> 完全数</h1>
+
+
+
+  <p>
+    ある整数 <var>N</var> に対し，その数自身を除く約数の和を <var>S</var>
+    とする．
+    <var>N</var> = <var>S</var> のとき
+    <var>N</var> は完全数 (perfect number)，
+    <var>N</var> &gt; <var>S</var> のとき
+    <var>N</var> は不足数 (deficient number)，
+    <var>N</var> &lt; <var>S</var> のとき
+    <var>N</var> は過剰数 (abundant number) と呼ばれる．
+    与えられた整数が，完全数・不足数・過剰数のどれであるかを
+    判定するプログラムを作成せよ．
+  </p>
+
+  <p>
+    プログラムの実行時間が制限時間を越えないように注意すること．
+  </p>
+
+  <h2>Input</h2>
+  <p>
+    入力はデータセットの並びからなる．
+    データセットの数は 100 以下である．
+  </p>
+
+  <p>
+    各データセットは整数 <var>N</var>
+    (0 &lt; <var>N</var> &le; 100000000) のみを含む1行からなる．
+  </p>
+
+  <p>
+    最後のデータセットの後に，入力の終わりを示す 0 と書かれた1行がある．
+  </p>
+
+  <h2>Output</h2>
+  <p>
+    各データセットに対し，
+    整数 <var>N</var> が完全数ならば &ldquo;<code>perfect number</code>&rdquo;，
+    不足数ならば &ldquo;<code>deficient number</code>&rdquo;，
+    過剰数ならば &ldquo;<code>abundant number</code>&rdquo; という文字列を
+    1行に出力せよ．
+  </p>
+
+  <h2>Sample Input</h2>
+  <pre>
+1
+2
+3
+4
+6
+12
+16
+28
+33550336
+99999998
+99999999
+100000000
+0
+</pre>
+
+  <h2>Output for the Sample Input</h2>
+  <pre>
+deficient number
+deficient number
+deficient number
+deficient number
+perfect number
+abundant number
+deficient number
+perfect number
+perfect number
+deficient number
+deficient number
+abundant number
+</pre>
+
+

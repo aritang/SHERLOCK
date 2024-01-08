@@ -1,0 +1,105 @@
+
+<script src="./IMAGE/varmath.js" charset="UTF-8"></script>
+
+<H1>Carpenters' Language</H1>
+
+<p>
+International Carpenters Professionals Company (ICPC) is a top construction company with a lot of expert carpenters.
+What makes ICPC a top company is their original language.
+</p>
+
+<p>
+The syntax of the language is simply given in CFG as follows:
+</p>
+
+<pre>
+S -&gt; SS | (S) | )S( | &epsilon;
+</pre>
+
+<p>
+In other words, a right parenthesis can be closed by a left parenthesis and a left parenthesis can be closed by a right parenthesis in this language.
+</p>
+
+<p>
+Alex, a grad student mastering linguistics, decided to study ICPC's language. 
+As a first step of the study, he needs to judge whether a text is well-formed in the language or not.
+Then, he asked you, a great programmer, to write a program for the judgement.
+</p>
+
+<p>
+Alex's request is as follows: You have an empty string S in the beginning, and construct longer string by inserting a sequence of '(' or ')' into the string.
+You will receive <var>q</var> queries, each of which consists of three elements <var>(p, c, n)</var>, where <var>p</var> is 
+the position to insert, <var>n</var> is the number of characters to insert and <var>c</var> is either '(' or ')', the character to insert.
+For each query, your program should insert <var>c</var> repeated by <var>n</var> times into the <var>p</var>-th position of S from the beginning.
+Also it should output, after performing each insert operation, &quot;Yes&quot; if S is in the language and &quot;No&quot; if S is not in the language.
+</p>
+
+<p>
+Please help Alex to support his study, otherwise he will fail to graduate the college.
+</p>
+
+<H2>Input</H2>
+
+<p>
+The first line contains one integer <var>q</var> (<var>1 \leq q \leq 10^5</var>) indicating the number of queries, follows 
+<var>q</var> lines of three elements, <var>p_i</var>, <var>c_i</var>, <var>n_i</var>, separated by a single space (<var>1 \leq i \leq q</var>, <var>c_i = '(' or ')'</var>, 
+<var>0 \leq p_i \leq </var> length of S before <var>i</var>-th query, <var>1 \leq n \leq 2^{20}</var>).
+It is guaranteed that all the queries in the input are valid.
+</p>
+
+<H2>Output</H2>
+
+<p>
+For each query, output &quot;Yes&quot; if S is in the language and &quot;No&quot; if S is not in the language.
+</p>
+
+<H2>Sample Input 1</H2>
+
+<pre>
+3
+0 ( 10
+10 ) 5
+10 ) 5 
+</pre>
+
+<H2>Output for the Sample Input 1</H2>
+
+<pre>
+No
+No
+Yes
+</pre>
+
+<H2>Sample Input 2</H2>
+
+<pre>
+3
+0 ) 10
+10 ( 5
+10 ( 5
+</pre>
+
+<H2>Output for the Sample Input 2</H2>
+
+<pre>
+No
+No
+Yes
+</pre>
+
+<H2>Sample Input 3</H2>
+
+<pre>
+3
+0 ( 10
+10 ) 20
+0 ( 10
+</pre>
+
+<H2>Output for the Sample Input 3</H2>
+
+<pre>
+No
+No
+Yes
+</pre>

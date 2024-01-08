@@ -1,0 +1,79 @@
+<span class="lang-en">
+<p>Score : <var>100</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>Takahashi wants to be a member of some web service.</p>
+<p>He tried to register himself with the ID <var>S</var>, which turned out to be already used by another user.</p>
+<p>Thus, he decides to register using a string obtained by appending one character at the end of <var>S</var> as his ID.</p>
+<p>He is now trying to register with the ID <var>T</var>. Determine whether this string satisfies the property above.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>S</var> and <var>T</var> are strings consisting of lowercase English letters.</li>
+<li><var>1 \leq |S| \leq 10</var></li>
+<li><var>|T| = |S| + 1</var></li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>S</var>
+<var>T</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>If <var>T</var> satisfies the property in Problem Statement, print <code>Yes</code>; otherwise, print <code>No</code>.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>chokudai
+chokudaiz
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>Yes
+</pre>
+<p><code>chokudaiz</code> can be obtained by appending <code>z</code> at the end of <code>chokudai</code>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>snuke
+snekee
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>No
+</pre>
+<p><code>snekee</code> cannot be obtained by appending one character at the end of <code>snuke</code>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>a
+aa
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>Yes
+</pre></section>
+</div>
+</span>

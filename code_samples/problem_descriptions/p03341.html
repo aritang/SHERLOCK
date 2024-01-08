@@ -1,0 +1,85 @@
+<span class="lang-en">
+<p>Score : <var>300</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>There are <var>N</var> people standing in a row from west to east.
+Each person is facing east or west.
+The directions of the people is given as a string <var>S</var> of length <var>N</var>.
+The <var>i</var>-th person from the west is facing east if <var>S_i =</var> <code>E</code>, and west if <var>S_i =</var> <code>W</code>.</p>
+<p>You will appoint one of the <var>N</var> people as the leader, then command the rest of them to face in the direction of the leader.
+Here, we do not care which direction the leader is facing.</p>
+<p>The people in the row hate to change their directions, so you would like to select the leader so that the number of people who have to change their directions is minimized.
+Find the minimum number of people who have to change their directions.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>2 \leq N \leq 3 \times 10^5</var></li>
+<li><var>|S| = N</var></li>
+<li><var>S_i</var> is <code>E</code> or <code>W</code>.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+<var>S</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the minimum number of people who have to change their directions.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>5
+WEEWW
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>1
+</pre>
+<p>Assume that we appoint the third person from the west as the leader.
+Then, the first person from the west needs to face east and has to turn around.
+The other people do not need to change their directions, so the number of people who have to change their directions is <var>1</var> in this case.
+It is not possible to have <var>0</var> people who have to change their directions, so the answer is <var>1</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>12
+WEWEWEEEWWWE
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>4
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>8
+WWWWWEEE
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>3
+</pre></section>
+</div>
+</span>

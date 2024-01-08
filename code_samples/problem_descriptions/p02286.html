@@ -1,0 +1,207 @@
+<H1>Treap</H1>
+
+<p>
+  A binary search tree can be unbalanced depending on features of data. For example, if we insert $n$ elements into a binary search tree in ascending order, the tree become a list, leading to long search times. One of strategies is to randomly shuffle the elements to be inserted. However, we should consider to maintain the balanced binary tree where different operations can be performed one by one depending on requirement.
+</p>
+
+<p>
+  We can maintain the balanced binary search tree by assigning a priority randomly selected to each node and by ordering nodes based on the following properties. Here, we assume that all priorities are distinct and also that all keys are distinct.
+</p>
+
+<ul>
+  <li><b>binary-search-tree property.</b> If $v$ is a <b>left child</b> of $u$, then $v.key < u.key$ and if $v$ is a <b>right child</b> of $u$, then $u.key < v.key$</li>
+  <li><b>heap property.</b> If $v$ is a <b>child</b> of $u$, then $v.priority < u.priority$</li>
+</ul>
+
+<p>
+  This combination of properties is why the tree is called Treap (tree + heap).
+</p>
+
+<p>
+  An example of Treap is shown in the following figure.
+</p>
+
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/ALDS1_8_D_treap">
+
+<p>
+  <b>Insert</b><br>
+  To insert a new element into a Treap, first of all, insert a node which a randomly selected priority value is assigned in the same way for ordinal binary search tree. For example, the following figure shows the Treap after a node with key = 6 and priority = 90 is inserted.
+</p>
+
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/ALDS1_8_D_treap_insert">
+
+<p>
+It is clear that this Treap violates the heap property, so we need to modify the structure of the tree by <b>rotate</b> operations. The rotate operation is to change parent-child relation while maintaing the binary-search-tree property.
+</p>
+
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/ALDS1_8_D_rotate">
+
+<p>
+  The rotate operations can be implemented as follows.
+</p>
+
+<table>
+  <tr>
+    <td width="340">
+<pre>
+rightRotate(Node t)
+    Node s = t.left
+    t.left = s.right
+    s.right = t
+    return s // the new root of subtree
+</pre>
+</td>
+<td width="340">
+<pre>
+leftRotate(Node t)
+    Node s = t.right
+    t.right = s.left
+    s.left = t
+    return s // the new root of subtree
+</pre>
+</td>
+</tr>
+</table>
+
+<p>
+  The following figure shows processes of the rotate operations after the insert operation to maintain the properties.
+</p>
+
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/ALDS1_8_D_insert_rotate">
+
+<p>
+  The insert operation with rotate operations can be implemented as follows.
+</p>
+
+<pre>
+insert(Node t, int key, int priority)            // search the corresponding place recursively
+    if t == NIL
+        return Node(key, priority)               // create a new node when you reach a leaf
+    if key == t.key
+        return t                                 // ignore duplicated keys
+
+    if key < t.key                               // move to the left child
+        t.left = insert(t.left, key, priority)   // update the pointer to the left child
+        if t.priority < t.left.priority          // rotate right if the left child has higher priority
+            t = rightRotate(t)
+    else                                         // move to the right child
+        t.right = insert(t.right, key, priority) // update the pointer to the right child
+        if t.priority < t.right.priority         // rotate left if the right child has higher priority
+            t = leftRotate(t)
+
+  return t
+</pre>
+
+
+<p>
+  <b>Delete</b><br>
+  To delete a node from the Treap, first of all, the target node should be moved until it becomes a leaf by rotate operations. Then, you can remove the node (the leaf). These processes can be implemented as follows.
+</p>
+
+<pre>
+delete(Node t, int key)                        // seach the target recursively
+    if t == NIL
+        return NIL
+    if key < t.key                             // search the target recursively
+        t.left = delete(t.left, key)
+    else if key > t.key
+        t.right = delete(t.right, key)
+    else
+        return _delete(t, key)
+    return t
+
+_delete(Node t, int key)                       // if t is the target node
+    if t.left == NIL && t.right == NIL         // if t is a leaf
+        return NIL
+    else if t.left == NIL                      // if t has only the right child, then perform left rotate
+        t = leftRotate(t)
+    else if t.right == NIL                     // if t has only the left child, then perform right rotate
+        t = rightRotate(t)
+    else                                       // if t has both the left and right child
+        if t.left.priority > t.right.priority  // pull up the child with higher priority
+            t = rightRotate(t)
+        else
+            t = leftRotate(t)
+    return delete(t, key)
+</pre>
+
+
+<p>
+  Write a program which performs the following operations to a Treap $T$ based on the above described algorithm.
+</p>
+
+<ul>
+<li><span>insert </span>($k$, $p$): Insert a node containing $k$ as key and $p$ as priority to $T$.</li>
+<li><span>find </span>($k$): Report whether $T$ has a node containing $k$.</li>
+<li><span>delete </span>($k$): Delete a node containing $k$.</li>
+<li><span>print</span>(): Print the keys of the binary search tree by inorder tree walk and preorder tree walk respectively.</li>
+</ul>
+
+<H2>Input</H2>
+
+    <p>
+In the first line, the number of operations $m$ is given. In the following $m$ lines, operations represented by <span>insert </span>$k \; p$, <span>find </span>$k$, <span>delete </span>$k$ or print are given.
+</p>
+
+<H2>Output</H2>
+
+<p>
+For each find($k$) operation, print "<span>yes</span>" if $T$ has a node containing $k$, "<apan>no</span>" if not.
+</p>
+
+<p>
+  In addition, for each print operation, print a list of keys obtained by inorder tree walk and preorder tree walk in a line respectively. Put a space character <u>before each key</u>.
+</p>
+
+<H2>Constraints</H2>
+
+<ul>
+<li>The number of operations $ \leq 200,000$</li>
+<li>$0 \leq k, p  \leq 2,000,000,000$</li>
+<li>The height of the binary tree does not exceed 50 if you employ the above algorithm</li>
+<li>The keys in the binary search tree are all different.</li>
+<li>The priorities in the binary search tree are all different.</li>
+<li>The size of output $\leq 10$ MB</li>
+
+</ul>
+
+<H2>Sample Input 1</H2>
+<pre>
+16
+insert 35 99
+insert 3 80
+insert 1 53
+insert 14 25
+insert 80 76
+insert 42 3
+insert 86 47
+insert 21 12
+insert 7 10
+insert 6 90
+print
+find 21
+find 22
+delete 35
+delete 99
+print
+</pre>
+
+<H2>Sample Output 1</H2>
+<pre>
+ 1 3 6 7 14 21 35 42 80 86
+ 35 6 3 1 14 7 21 80 42 86
+yes
+no
+ 1 3 6 7 14 21 42 80 86
+ 6 3 1 80 14 7 21 42 86
+</pre>
+
+
+<H2>Reference</H2>
+
+<ul>
+  <li>Introduction to Algorithms, Thomas H. Cormen, Charles E. Leiserson, Ronald L. Rivest, and Clifford Stein. The MIT Press.</li>
+  <li>Randomized Search Trees, R. Seidel, C.R. Aragon.</li>
+</ul>
+
+

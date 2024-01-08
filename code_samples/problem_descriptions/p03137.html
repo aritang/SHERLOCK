@@ -1,0 +1,91 @@
+<span class="lang-en">
+<p>Score : <var>300</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>We will play a one-player game using a number line and <var>N</var> pieces.</p>
+<p>First, we place each of these pieces at some integer coordinate.</p>
+<p>Here, multiple pieces can be placed at the same coordinate.</p>
+<p>Our objective is to visit all of the <var>M</var> coordinates <var>X_1, X_2, ..., X_M</var> with these pieces, by repeating the following move:</p>
+<p><strong>Move</strong>: Choose a piece and let <var>x</var> be its coordinate. Put that piece at coordinate <var>x+1</var> or <var>x-1</var>.</p>
+<p>Note that the coordinates where we initially place the pieces are already regarded as visited.</p>
+<p>Find the minimum number of moves required to achieve the objective.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li>All values in input are integers.</li>
+<li><var>1 \leq N \leq 10^5</var></li>
+<li><var>1 \leq M \leq 10^5</var></li>
+<li><var>-10^5 \leq X_i \leq 10^5</var></li>
+<li><var>X_1, X_2, ..., X_M</var> are all different.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var> <var>M</var>
+<var>X_1</var> <var>X_2</var> <var>...</var> <var>X_M</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Find the minimum number of moves required to achieve the objective.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>2 5
+10 12 1 2 14
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>5
+</pre>
+<p>The objective can be achieved in five moves as follows, and this is the minimum number of moves required.</p>
+<ul>
+<li>Initially, put the two pieces at coordinates <var>1</var> and <var>10</var>.</li>
+<li>Move the piece at coordinate <var>1</var> to <var>2</var>.</li>
+<li>Move the piece at coordinate <var>10</var> to <var>11</var>.</li>
+<li>Move the piece at coordinate <var>11</var> to <var>12</var>.</li>
+<li>Move the piece at coordinate <var>12</var> to <var>13</var>.</li>
+<li>Move the piece at coordinate <var>13</var> to <var>14</var>.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>3 7
+-10 -3 0 9 -100 2 17
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>19
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>100 1
+-100000
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>0
+</pre></section>
+</div>
+</span>

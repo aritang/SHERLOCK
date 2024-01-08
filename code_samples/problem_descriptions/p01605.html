@@ -1,0 +1,72 @@
+
+
+
+<h2>replace</h2>
+
+
+<h2>Problem Statement</h2>
+
+<p>文字列<var>S</var>が与えられる．
+以下の処理を<var>Q</var>個順番に行う．</p>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li><var>S</var>に含まれる文字<var>c_i</var>を全て同時に文字列<var>p_i</var>で置き換える．</li></ul>
+<p>最後に文字列<var>S</var>の<var>A</var>文字目から<var>B</var>文字目まで(1-indexed)を出力せよ．</p>
+
+<h2>Input</h2>
+
+<p>入力は以下の形式に従う．与えられる数は全て整数である．</p>
+<pre><var>S</var>
+<var>Q</var> <var>A</var> <var>B</var>
+<var>c_1</var> <var>p_1</var>
+<var>...</var>
+<var>c_Q</var> <var>p_Q</var></pre>
+
+<h2>Constraints</h2>
+
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li><var>1≦Q≦3 \times 10^5</var></li>
+<li><var>1≦A≦B≦10^{18}</var></li>
+<li><var>B-A≦10^5</var></li>
+<li><var>1≦|S|≦10</var></li>
+<li><var>1≦|p_i|≦10</var></li>
+<li><var>S</var>は小文字のアルファベットからなる文字列である．</li>
+<li><var>c_i</var>は小文字のアルファベット1文字である．</li>
+<li><var>p_i</var>は&quot;.&quot;(ピリオド)1文字または小文字のアルファベットからなる文字列である．<var>p_i=</var>&quot;.&quot;(ピリオド)のとき，<var>p_i</var>は空文字列として扱いなさい．</li></ul>
+
+<h2>Output</h2>
+
+<p><var>Q</var>個の処理を順に行った後，<var>B</var>が<var>|S|</var>よりも大きかったときは&quot;.&quot;(ピリオド)を1行に出力せよ．<br />
+それ以外のときは文字列<var>S</var>の<var>A</var>文字目から<var>B</var>文字目まで(1-indexed)を出力せよ．</p>
+
+<h2>Sample Input 1</h2>
+
+<pre>abaz
+3 1 5
+a cab
+b .
+c x</pre>
+
+<h2>Output for the Sample Input 1</h2>
+
+<pre>xaxaz</pre>
+<p>文字列<var>S</var>は，abaz → cabbcabz → cacaz → xaxazと変化する．</p>
+
+<h2>Sample Input 2</h2>
+
+<pre>original
+1 2 5
+x notchange</pre>
+
+<h2>Output for the Sample Input 2</h2>
+
+<pre>rigi</pre>
+
+<h2>Sample Input 3</h2>
+
+<pre>aaaa
+2 1 1
+a .
+a nothing</pre>
+
+
+<h2>Output for the Sample Input 3</h2>
+
+<pre>.</pre>

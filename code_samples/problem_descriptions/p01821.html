@@ -1,0 +1,75 @@
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({ tex2jax: { inlineMath: [["$","$"], ["\\(","\\)"]], processEscapes: true }});
+</script>
+<script type='text/javascript' src='http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
+</script>
+
+
+
+
+<h2>Problem D:
+Identity Function</h2>
+
+<p>
+You are given an integer $N$, which is greater than 1.<br>
+Consider the following functions:
+</p>
+<ul>
+<li> $f(a) = a^N$  mod  $N$ </li>
+<li> $F_1(a) = f(a)$</li>
+<li> $F_{k+1}(a) = F_k(f(a))$ $(k = 1,2,3,...)$</li>
+</ul>
+
+<p>
+Note that we use mod to represent the integer modulo operation. For a non-negative integer $x$
+and a positive integer $y$, $x$ mod $y$ is the remainder of $x$ divided by $y$.
+</p>
+
+<p>
+Output the minimum positive integer $k$ such that $F_k(a) = a$ for all positive integers $a$ less than
+$N$. If no such $k$ exists, output -1.
+</p>
+
+<h3>Input</h3>
+<p>
+The input consists of a single line that contains an integer $N$ ($2 \leq N \leq 10^9$), whose meaning is
+described in the problem statement.
+</p>
+
+<h3>Output</h3>
+<p>
+Output the minimum positive integer $k$ such that $F_k(a) = a$ for all positive integers $a$ less than
+$N$, or -1 if no such $k$ exists.
+</p>
+
+<h3>Sample Input</h3>
+<pre>
+3
+</pre>
+
+<h3>Output for the Sample Input</h3>
+<pre>
+1
+</pre>
+
+<h3>Sample Input</h3>
+<pre>
+4
+</pre>
+
+<h3>Output for the Sample Input</h3>
+<pre>
+-1
+</pre>
+
+<h3>Sample Input</h3>
+<pre>
+15
+</pre>
+
+<h3>Output for the Sample Input</h3>
+<pre>
+2
+</pre>
+

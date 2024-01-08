@@ -1,0 +1,112 @@
+<span class="lang-en">
+<p>Score : <var>700</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>Snuke and Ciel went to a strange stationery store. Each of them got a transparent graph paper with <var>H</var> rows and <var>W</var> columns.</p>
+<p>Snuke painted some of the cells red in his paper. Here, the cells painted red were <em>4-connected</em>, that is, it was possible to traverse from any red cell to any other red cell, by moving to vertically or horizontally adjacent red cells only.</p>
+<p>Ciel painted some of the cells blue in her paper. Here, the cells painted blue were 4-connected.</p>
+<p>Afterwards, they precisely overlaid the two sheets in the same direction. Then, the intersection of the red cells and the blue cells appeared purple.</p>
+<p>You are given a matrix of letters <var>a_{ij}</var> (<var>1≤i≤H</var>, <var>1≤j≤W</var>) that describes the positions of the purple cells. If the cell at the <var>i</var>-th row and <var>j</var>-th column is purple, then <var>a_{ij}</var> is <code>#</code>, otherwise <var>a_{ij}</var> is <code>.</code>. Here, it is guaranteed that <strong>no outermost cell is purple</strong>. That is, if <var>i=1, H</var> or <var>j = 1, W</var>, then <var>a_{ij}</var> is <code>.</code>.</p>
+<p>Find a pair of the set of the positions of the red cells and the blue cells that is consistent with the situation described. It can be shown that a solution always exists.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>3≤H,W≤500</var></li>
+<li><var>a_{ij}</var> is <code>#</code> or <code>.</code>.</li>
+<li>If <var>i=1,H</var> or <var>j=1,W</var>, then <var>a_{ij}</var> is <code>.</code>.</li>
+<li>At least one of <var>a_{ij}</var> is <code>#</code>.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>The input is given from Standard Input in the following format:</p>
+<pre><var>H</var> <var>W</var>
+<var>a_{11}</var><var>...</var><var>a_{1W}</var>
+<var>:</var>
+<var>a_{H1}</var><var>...</var><var>a_{HW}</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print a pair of the set of the positions of the red cells and the blue cells that is consistent with the situation, as follows:</p>
+<ul>
+<li>The first <var>H</var> lines should describe the positions of the red cells.</li>
+<li>The following <var>1</var> line should be empty.</li>
+<li>The following <var>H</var> lines should describe the positions of the blue cells.</li>
+</ul>
+<p>The description of the positions of the red or blue cells should follow the format of the description of the positions of the purple cells.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>5 5
+.....
+.#.#.
+.....
+.#.#.
+.....
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>.....
+#####
+#....
+#####
+.....
+
+.###.
+.#.#.
+.#.#.
+.#.#.
+.....
+</pre>
+<p>One possible pair of the set of the positions of the red cells and the blue cells is as follows:</p>
+<p><img src="/img/agc/004/gatbantar/C_1.png"/></p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>7 13
+.............
+.###.###.###.
+.#.#.#...#...
+.###.#...#...
+.#.#.#.#.#...
+.#.#.###.###.
+.............
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>.............
+.###########.
+.###.###.###.
+.###.###.###.
+.###.###.###.
+.###.###.###.
+.............
+
+.............
+.###.###.###.
+.#.#.#...#...
+.###.#...#...
+.#.#.#.#.#...
+.#.#########.
+.............
+</pre>
+<p>One possible pair of the set of the positions of the red cells and the blue cells is as follows:</p>
+<p><img src="/img/agc/004/gatbantar/C_2.png"/></p></section>
+</div>
+</span>

@@ -1,0 +1,65 @@
+
+
+
+<h2>監獄</h2>
+
+
+<p>無限人の囚人たちがいる。はじめ、囚人たちは <var>0, 1, 2,</var> ... と番号が振られている。</p>
+<p>次の操作を <var>N</var> 回行う。</p>
+
+<ul>
+<li><var>0</var> 番目の囚人を釈放し、<var>k, 2k, 3k,</var> ... 番目の囚人たちを処刑する。</li>
+<li>その後、残った囚人たちに番号を振り直す。このとき、元の番号が小さい囚人から順に <var>0, 1, 2, </var> ... と番号を振る。</li>
+</ul>
+<p><var>N</var> 回目の操作で釈放される囚人がはじめに振られていた番号を求めよ。</p>
+
+
+<h3>Constraints</h3>
+
+<ul>
+<li><var>1</var> &le; <var>N</var> &le; <var>10^5</var></li>
+<li><var>2</var> &le; <var>k</var>  &le; <var>10^5</var></li>
+<li>答えは <var>10^{18}</var> 以下である。</li>
+</ul>
+
+<h3>Input Format</h3>
+<p>入力は以下の形式で標準入力から与えられる。</p>
+<pre>
+<var>N</var> <var>k</var>
+</pre>
+
+<h3>Output Format</h3>
+<p>答えを一行に出力せよ。</p>
+
+
+<h3>Sample Input 1</h3>
+<pre>
+4 2
+</pre>
+</section>
+
+<h3>Sample Output 1</h3>
+<pre>
+7
+</pre>
+
+
+<h3>Sample Input 2</h3>
+<pre>
+1 3
+</pre>
+
+<h3>Sample Output 2</h3>
+<pre>
+0
+</pre>
+
+<h3>Sample Input 3</h3>
+<pre>
+100000 100000
+</pre>
+
+<h3>Sample Output 3</h3>
+<pre>
+99999
+</pre>

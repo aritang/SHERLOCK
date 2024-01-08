@@ -1,0 +1,94 @@
+<span class="lang-en">
+<p>Score : <var>200</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>Takahashi wants to gain muscle, and decides to work out at AtCoder Gym.</p>
+<p>The exercise machine at the gym has <var>N</var> buttons, and exactly one of the buttons is lighten up.
+These buttons are numbered <var>1</var> through <var>N</var>.
+When Button <var>i</var> is lighten up and you press it, the light is turned off, and then Button <var>a_i</var> will be lighten up. It is possible that <var>i=a_i</var>.
+When Button <var>i</var> is not lighten up, nothing will happen by pressing it.</p>
+<p>Initially, Button <var>1</var> is lighten up. Takahashi wants to quit pressing buttons when Button <var>2</var> is lighten up.</p>
+<p>Determine whether this is possible. If the answer is positive, find the minimum number of times he needs to press buttons.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>2 ≤ N ≤ 10^5</var></li>
+<li><var>1 ≤ a_i ≤ N</var></li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+<var>a_1</var>
+<var>a_2</var>
+:
+<var>a_N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print <var>-1</var> if it is impossible to lighten up Button <var>2</var>.
+Otherwise, print the minimum number of times we need to press buttons in order to lighten up Button <var>2</var>.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>3
+3
+1
+2
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>2
+</pre>
+<p>Press Button <var>1</var>, then Button <var>3</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>4
+3
+4
+1
+2
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>-1
+</pre>
+<p>Pressing Button <var>1</var> lightens up Button <var>3</var>, and vice versa, so Button <var>2</var> will never be lighten up.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>5
+3
+3
+4
+2
+4
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>3
+</pre></section>
+</div>
+</span>

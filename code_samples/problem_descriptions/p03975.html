@@ -1,0 +1,134 @@
+<span class="lang-en">
+<p>Score : <var>66</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3>
+<p>
+  Summer vacation ended at last and the second semester has begun.
+  You, a Kyoto University student, came to university and heard a rumor that somebody will barricade the entrance of your classroom.
+  The barricade will be built just before the start of the <var>A</var>-th class and removed by Kyoto University students just before the start of the <var>B</var>-th class.
+  All the classes conducted when the barricade is blocking the entrance will be cancelled and you will not be able to attend them.
+  Today you take <var>N</var> classes and class <var>i</var> is conducted in the <var>t_i</var>-th period.
+  You take at most one class in each period.
+  Find the number of classes you can attend.
+</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3>
+<ul>
+<li><var>1 \leq N \leq 1000</var></li>
+<li><var>1 \leq A &lt; B \leq 10^9 </var></li>
+<li><var>1 \leq t_i \leq 10^9</var></li>
+<li>All <var>t_i</var> values are distinct.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3>
+<p><var>N</var>, <var>A</var> and <var>B</var> are given on the first line and <var>t_i</var> is given on the <var>(i+1)</var>-th line. </p>
+<pre>
+<var>N</var> <var>A</var> <var>B</var>
+<var>t<sub>1</sub></var>
+:
+<var>t<sub>N</sub></var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3>
+<p>Print the number of classes you can attend. </p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3>
+<pre>
+5 5 9
+4
+3
+6
+9
+1
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3>
+<pre>
+4
+</pre>
+<p>You can not only attend the third class. </p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3>
+<pre>
+5 4 9
+5
+6
+7
+8
+9
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3>
+<pre>
+1
+</pre>
+<p>You can only attend the fifth class. </p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3>
+<pre>
+4 3 6
+9
+6
+8
+1
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3>
+<pre>
+4
+</pre>
+<p>You can attend all the classes. </p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Input 4</h3>
+<pre>
+2 1 2
+1
+2
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 4</h3>
+<pre>
+1
+</pre>
+<p>You can not attend the first class, but can attend the second. </p>
+</section>
+</div>
+</span>

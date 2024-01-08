@@ -1,0 +1,161 @@
+<span class="lang-en">
+<p>Score : <var>800</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>Let <var>N</var> be a positive even number.</p>
+<p>We have a permutation of <var>(1, 2, ..., N)</var>, <var>p = (p_1, p_2, ..., p_N)</var>.
+Snuke is constructing another permutation of <var>(1, 2, ..., N)</var>, <var>q</var>, following the procedure below.</p>
+<p>First, let <var>q</var> be an empty sequence.
+Then, perform the following operation until <var>p</var> becomes empty:</p>
+<ul>
+<li>Select two adjacent elements in <var>p</var>, and call them <var>x</var> and <var>y</var> in order. Remove <var>x</var> and <var>y</var> from <var>p</var> (reducing the length of <var>p</var> by <var>2</var>), and insert <var>x</var> and <var>y</var>, preserving the original order, at the beginning of <var>q</var>.</li>
+</ul>
+<p>When <var>p</var> becomes empty, <var>q</var> will be a permutation of <var>(1, 2, ..., N)</var>.</p>
+<p>Find the lexicographically smallest permutation that can be obtained as <var>q</var>.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>N</var> is an even number.</li>
+<li><var>2 ≤ N ≤ 2 × 10^5</var></li>
+<li><var>p</var> is a permutation of <var>(1, 2, ..., N)</var>.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+<var>p_1</var> <var>p_2</var> <var>...</var> <var>p_N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the lexicographically smallest permutation, with spaces in between.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>4
+3 2 4 1
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>3 1 2 4
+</pre>
+<p>The solution above is obtained as follows:</p>
+<table>
+<thead>
+<tr>
+<th align="center"><var>p</var></th>
+<th align="center"><var>q</var></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><var>(3, 2, 4, 1)</var></td>
+<td align="center"><var>()</var></td>
+</tr>
+<tr>
+<td align="center">↓</td>
+<td align="center">↓</td>
+</tr>
+<tr>
+<td align="center"><var>(3, 1)</var></td>
+<td align="center"><var>(2, 4)</var></td>
+</tr>
+<tr>
+<td align="center">↓</td>
+<td align="center">↓</td>
+</tr>
+<tr>
+<td align="center"><var>()</var></td>
+<td align="center"><var>(3, 1, 2, 4)</var></td>
+</tr>
+</tbody>
+</table>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>2
+1 2
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>1 2
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>8
+4 6 3 2 8 5 7 1
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>3 1 2 7 4 6 8 5
+</pre>
+<p>The solution above is obtained as follows:</p>
+<table>
+<thead>
+<tr>
+<th align="center"><var>p</var></th>
+<th align="center"><var>q</var></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><var>(4, 6, 3, 2, 8, 5, 7, 1)</var></td>
+<td align="center"><var>()</var></td>
+</tr>
+<tr>
+<td align="center">↓</td>
+<td align="center">↓</td>
+</tr>
+<tr>
+<td align="center"><var>(4, 6, 3, 2, 7, 1)</var></td>
+<td align="center"><var>(8, 5)</var></td>
+</tr>
+<tr>
+<td align="center">↓</td>
+<td align="center">↓</td>
+</tr>
+<tr>
+<td align="center"><var>(3, 2, 7, 1)</var></td>
+<td align="center"><var>(4, 6, 8, 5)</var></td>
+</tr>
+<tr>
+<td align="center">↓</td>
+<td align="center">↓</td>
+</tr>
+<tr>
+<td align="center"><var>(3, 1)</var></td>
+<td align="center"><var>(2, 7, 4, 6, 8, 5)</var></td>
+</tr>
+<tr>
+<td align="center">↓</td>
+<td align="center">↓</td>
+</tr>
+<tr>
+<td align="center"><var>()</var></td>
+<td align="center"><var>(3, 1, 2, 7, 4, 6, 8, 5)</var></td>
+</tr>
+</tbody>
+</table></section>
+</div>
+</span>

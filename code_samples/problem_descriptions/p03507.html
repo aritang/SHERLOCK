@@ -1,0 +1,90 @@
+<span class="lang-en">
+<p>Score : <var>100</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>In your garden, there is a long and narrow flowerbed that stretches infinitely to the east. You have decided to plant <var>N</var> kinds of flowers in this empty flowerbed. For convenience, we will call these <var>N</var> kinds of flowers Flower <var>1,</var> <var>2,</var> <var>…,</var> <var>N</var>. Also, we will call the position that is <var>p</var> centimeters from the west end of the flowerbed Position <var>p</var>.</p>
+<p>You will plant Flower <var>i</var> <var>(1 ≤ i ≤ N)</var> as follows: first, plant one at Position <var>w_i</var>, then plant one every <var>d_i</var> centimeters endlessly toward the east. That is, Flower <var>i</var> will be planted at the positions <var>w_i,</var> <var>w_i + d_i,</var> <var>w_i + 2 d_i,</var> <var>…</var> Note that more than one flower may be planted at the same position.</p>
+<p>Find the position at which the <var>K</var>-th flower from the west is planted. If more than one flower is planted at the same position, they are counted individually.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 ≤ N ≤ 10^5</var></li>
+<li><var>1 ≤ K ≤ 10^9</var></li>
+<li><var>1 ≤ w_i ≤ 10^{18}</var></li>
+<li><var>1 ≤ d_i ≤ 10^9</var></li>
+<li>All input values are integers.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var> <var>K</var>
+<var>w_1</var> <var>d_1</var>
+<var>:</var>
+<var>w_N</var> <var>d_N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>When the <var>K</var>-th flower from the west is planted at Position <var>X</var>, print the value of <var>X</var>. (The westmost flower is counted as the <var>1</var>-st flower.)</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>2 6
+20 10
+25 15
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>50
+</pre>
+<p>Two kinds of flowers are planted at the following positions:</p>
+<ul>
+<li>Flower <var>1</var>: Position <var>20,</var> <var>30,</var> <var>40,</var> <var>50,</var> <var>60,</var> <var>…</var></li>
+<li>Flower <var>2</var>: Position <var>25,</var> <var>40,</var> <var>55,</var> <var>70,</var> <var>85,</var> <var>…</var></li>
+</ul>
+<p>The sixth flower from the west is the Flower <var>1</var> planted at Position <var>50</var>. Note that the two flowers planted at Position <var>40</var> are counted individually.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>3 9
+10 10
+10 10
+10 10
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>30
+</pre>
+<p>Three flowers are planted at each of the positions <var>10,</var> <var>20,</var> <var>30,</var> <var>…</var> Thus, the ninth flower from the west is planted at Position <var>30</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>1 1000000000
+1000000000000000000 1000000000
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>1999999999000000000
+</pre></section>
+</div>
+</span>

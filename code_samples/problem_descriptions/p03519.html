@@ -1,0 +1,110 @@
+<span class="lang-en">
+<p>Score : <var>700</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>You are given two sequences <var>a</var> and <var>b</var>, both of length <var>2N</var>. The <var>i</var>-th elements in <var>a</var> and <var>b</var> are <var>a_i</var> and <var>b_i</var>, respectively.
+Using these sequences, Snuke is doing the job of calculating the <em>beauty</em> of pairs of <strong>balanced sequences of parentheses</strong> (defined below) of length <var>2N</var>.
+The beauty of a pair <var>(s,t)</var> is calculated as follows:</p>
+<ul>
+<li>Let <var>X=0</var>.</li>
+<li>For each <var>i</var> between <var>1</var> and <var>2N</var> (inclusive), increment <var>X</var> by <var>a_i</var> if <var>s_i = t_i</var>, and increment <var>X</var> by <var>b_i</var> otherwise.</li>
+<li>The beauty of <var>(s,t)</var> is the final value of <var>X</var>.</li>
+</ul>
+<p>You will be given <var>Q</var> queries. Process them in order.
+In the <var>i</var>-th query, update the value of <var>a_{p_i}</var> to <var>x_i</var>, and the value of <var>b_{p_i}</var> to <var>y_i</var>. Then, find the maximum possible beauty of a pair of balanced sequences of parentheses.</p>
+<p>In this problem, only the sequences below are defined to be balanced sequences of parentheses.</p>
+<ul>
+<li>An empty string</li>
+<li>The concatenation of <code>(</code>, <var>s</var>, <code>)</code> in this order, where <var>s</var> is a balanced sequence of parentheses</li>
+<li>The concatenation of <var>s</var>, <var>t</var> in this order, where <var>s</var> and <var>t</var> are balanced sequences of parentheses</li>
+</ul>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 \leq N,Q \leq 10^{5}</var></li>
+<li><var>-10^{9} \leq a_i,b_i,x_i,y_i \leq 10^{9}</var></li>
+<li><var>1 \leq p_i \leq 2N</var></li>
+<li>All input values are integers.</li>
+</ul>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Partial Scores</h3><ul>
+<li>In the test set worth <var>200</var> points, <var>N \leq 5</var> and <var>Q \leq 10</var>.</li>
+<li>In the test set worth <var>300</var> points, <var>Q = 1</var>.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var> <var>Q</var>
+<var>a_1</var> <var>a_2</var> <var>...</var> <var>a_{2N}</var>
+<var>b_1</var> <var>b_2</var> <var>...</var> <var>b_{2N}</var>
+<var>p_1</var> <var>x_1</var> <var>y_1</var>
+<var>:</var>
+<var>p_Q</var> <var>x_Q</var> <var>y_Q</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print <var>Q</var> lines. The <var>i</var>-th line should contain the response to the <var>i</var>-th query.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>2 2
+1 1 7 3
+4 2 3 3
+2 4 6
+3 2 5
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>15
+15
+</pre>
+<ul>
+<li>The first query updates <var>a</var> and <var>b</var> to <var>a=(1,4,7,3),b=(4,6,3,3)</var>. The maximum possible beauty is <var>15</var> for <var>(s,t) =(</var><code>()()</code>,<code>()()</code><var>)</var>.</li>
+<li>The second query updates <var>a</var> and <var>b</var> to <var>a=(1,4,2,3),b=(4,6,5,3)</var>. The maximum possible beauty is <var>15</var> for <var>(s,t) =(</var><code>()()</code>,<code>(())</code><var>)</var>.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>7 7
+34 -20 -27 42 44 29 9 11 20 44 27 19 -31 -29
+46 -50 -11 20 28 46 12 13 33 -22 -48 -27 35 -17
+7 27 34
+12 -2 22
+4 -50 -12
+3 -32 15
+8 -7 23
+3 -30 11
+4 -2 23
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>311
+312
+260
+286
+296
+292
+327
+</pre></section>
+</div>
+</span>

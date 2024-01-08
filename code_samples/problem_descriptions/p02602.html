@@ -1,0 +1,102 @@
+<span class="lang-en">
+<p>Score: <var>300</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3>
+<p>M-kun is a student in Aoki High School, where a year is divided into <var>N</var> terms.<br/>
+There is an exam at the end of each term. According to the scores in those exams, a student is given a grade for each term, as follows:</p>
+<ul>
+<li>For the first through <var>(K-1)</var>-th terms: not given.</li>
+<li>For each of the <var>K</var>-th through <var>N</var>-th terms: the multiplication of the scores in the last <var>K</var> exams, including the exam in the graded term.</li>
+</ul>
+<p>M-kun scored <var>A_i</var> in the exam at the end of the <var>i</var>-th term.<br/>
+For each <var>i</var> such that <var>K+1 \leq i \leq N</var>, determine whether his grade for the <var>i</var>-th term is <strong>strictly</strong> greater than the grade for the <var>(i-1)</var>-th term.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3>
+<ul>
+<li><var>2 \leq N \leq 200000</var></li>
+<li><var>1 \leq K \leq N-1</var></li>
+<li><var>1 \leq A_i \leq 10^{9}</var></li>
+<li>All values in input are integers.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3>
+<p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var> <var>K</var>
+<var>A_1</var> <var>A_2</var> <var>A_3</var> <var>\ldots</var> <var>A_N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3>
+<p>Print the answer in <var>N-K</var> lines.<br/>
+The <var>i</var>-th line should contain <code>Yes</code> if the grade for the <var>(K+i)</var>-th term is greater than the grade for the <var>(K+i-1)</var>-th term, and <code>No</code> otherwise.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>5 3
+96 98 95 100 20
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>Yes
+No
+</pre>
+<p>His grade for each term is computed as follows:</p>
+<ul>
+<li><var>3</var>-rd term: <var>(96 \times 98 \times 95) = 893760</var></li>
+<li><var>4</var>-th term: <var>(98 \times 95 \times 100) = 931000</var></li>
+<li><var>5</var>-th term: <var>(95 \times 100 \times 20) = 190000</var></li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>3 2
+1001 869120 1001
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>No
+</pre>
+<p>Note that the output should be <code>No</code> if the grade for the <var>3</var>-rd term is equal to the grade for the <var>2</var>-nd term.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>15 7
+3 1 4 1 5 9 2 6 5 3 5 8 9 7 9
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>Yes
+Yes
+No
+Yes
+Yes
+No
+Yes
+Yes
+</pre></section>
+</div>
+</span>

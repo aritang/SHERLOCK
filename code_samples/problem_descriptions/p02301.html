@@ -1,0 +1,70 @@
+
+<H1>Diameter of a Convex Polygon</H1>
+<br/>
+
+<p>
+Find the diameter of a convex polygon <var>g</var>. In other words, find a pair of points that have maximum distance between them.
+</p>
+
+<H2>Input</H2>
+
+<pre>
+<var>n</var>
+<var>x<sub>1</sub></var> <var>y<sub>1</sub></var> 
+<var>x<sub>2</sub></var> <var>y<sub>2</sub></var>
+:
+<var>x<sub>n</sub></var> <var>y<sub>n</sub></var>
+</pre>
+
+<p>
+The first integer <var>n</var> is the number of points in <var>g</var>. 
+</p>
+
+<p>
+In the following lines, the coordinate of the <var>i</var>-th point <var>p<sub>i</sub></var> is given by two real numbers <var>x<sub>i</sub></var> and <var>y<sub>i</sub></var>. The coordinates of points are given in the order of counter-clockwise visit of them. Each value is a real number with at most 6 digits after the decimal point.
+</p>
+
+<H2>Output</H2>
+
+<p>
+Print the diameter of <var>g</var> in a line. The output values should be in a decimal fraction with an error less than 0.000001.
+</p>
+
+<H2>Constraints</H2>
+
+<ul>
+<li>
+3 &le; <var>n</var> &le; 80000
+</li>
+<li>
+-100 &le; <var>x<sub>i</sub></var>, <var>y<sub>i</sub></var> &le; 100
+</li>
+<li>No point in the <var>g</var> will occur more than once.</li>
+</ul>
+
+<H2>Sample Input 1</H2>
+<pre>
+3
+0.0 0.0
+4.0 0.0
+2.0 2.0
+</pre>
+<H2>Sample Output 1</H2>
+<pre>
+4.00
+</pre>
+
+<H2>Sample Input 2</H2>
+<pre>
+4
+0.0 0.0
+1.0 0.0
+1.0 1.0
+0.0 1.0
+</pre>
+<H2>Sample Output 2</H2>
+<pre>
+1.414213562373
+</pre>
+
+

@@ -1,0 +1,130 @@
+
+
+<H1>White Bird</H1>
+
+<p>
+Angry Birds is  a mobile game  of a big craze all over the world.
+You were convinced that it was a waste of time to play the game, so you decided to  create an automatic solver.
+</p>
+
+<center>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE_2308-bird-3">
+</center>
+
+<p>
+You are describing a routine that optimizes the white bird's strategy to defeat a pig (enemy) by hitting an egg bomb.
+The white bird  follows a parabolic trajectory  from the initial position,
+and it can vertically drop egg bombs on the way.
+</p>
+
+<p>
+ In order to make it easy to solve,  the following conditions hold for the stages.
+</p>
+
+<ul>
+<li><var>N</var> obstacles are put on the stage.</li>
+<li>Each obstacle is a rectangle whose sides are parallel to the coordinate axes.</li>
+<li>The pig is put on the point <var>(X, Y)</var>.</li>
+<li>You can launch the white bird  in any direction at an initial velocity <var>V</var> from the origin.</li>
+<li>If the white bird collides with an obstacle, it becomes  unable to drop egg bombs.</li>
+<li>If the egg bomb collides with an obstacle, the egg bomb is vanished.</li>
+</ul>
+
+<p>
+The acceleration of gravity is <var>9.8 {\rm m/s^2}</var>.
+Gravity exerts a force  on the objects in the decreasing direction of <var>y</var>-coordinate.
+</p>
+
+<H2>Input</H2>
+
+<p>
+A dataset follows the format shown below:
+</p>
+
+<p>
+<var>N</var> <var>V</var> <var>X</var> <var>Y</var><br/>
+<var>L_1</var> <var>B_1</var> <var>R_1</var> <var>T_1</var><br/>
+<var>...</var><br/>
+<var>L_N</var> <var>B_N</var> <var>R_N</var> <var>T_N</var><br/>
+</p>
+
+<p>
+All inputs are integer.
+</p>
+
+<ul>
+<li><var>N</var>: the number of obstacles</li>
+<li><var>V</var>: the initial speed of the white bird</li>
+<li><var>X</var>, <var>Y</var>: the position of the pig</li>
+</ul>
+
+<p>
+(<var>0 \leq N \leq 50</var>, <var>0 \leq V \leq 50</var>, <var>0 \leq X, Y \leq 300</var>, <var>X \neq 0</var>)
+</p>
+
+<p>
+for <var>1 \leq i \leq N,</var>
+</p>
+
+<ul>
+<li><var>L_i</var>: the x-coordinate of the left side of the <var>i</var>-th obstacle</li>
+<li><var>B_i</var>: the y-coordinate of the bottom side of the <var>i</var>-th obstacle</li>
+<li><var>R_i</var>: the x-coordinate of the right side of the <var>i</var>-th obstacle</li>
+<li><var>T_i</var>: the y-coordinate of the top side of the <var>i</var>-th obstacle</li>
+</ul>
+
+<p>
+(<var>0 \leq L_i, B_i, R_i, T_i \leq 300</var>)
+</p>
+
+<p>
+It is guaranteed that the answer remains unaffected  by a change of <var>L_i</var>, <var>B_i</var>, <var>R_i</var> and <var>T_i</var> in <var>10^{-6}</var>.
+</p>
+
+<H2>Output</H2>
+
+<p>
+ Yes/No<br/>
+</p>
+
+<p>
+You should answer whether the white bird can drop an egg bomb toward the pig.
+</p>
+
+<H2>Sample Input 1</H2>
+
+<pre>
+0 7 3 1
+</pre>
+
+<H2>Output for the Sample Input 1</H2>
+
+<pre>
+Yes
+</pre>
+
+<H2>Sample Input 2</H2>
+
+<pre>
+1 7 3 1
+1 1 2 2
+</pre>
+
+<H2>Output for the Sample Input 2</H2>
+
+<pre>
+No
+</pre>
+
+<H2>Sample Input 3</H2>
+
+<pre>
+1 7 2 2
+0 1 1 2
+</pre>
+
+<H2>Output for the Sample Input 3</H2>
+
+<pre>
+No
+</pre>

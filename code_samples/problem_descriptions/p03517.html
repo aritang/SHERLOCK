@@ -1,0 +1,170 @@
+<span class="lang-en">
+<p>Score : <var>700</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>Ringo has an undirected graph <var>G</var> with <var>N</var> vertices numbered <var>1,2,...,N</var> and <var>M</var> edges numbered <var>1,2,...,M</var>.
+Edge <var>i</var> connects Vertex <var>a_{i}</var> and <var>b_{i}</var> and has a length of <var>w_i</var>.</p>
+<p>Now, he is in the middle of painting these <var>N</var> vertices in <var>K</var> colors numbered <var>1,2,...,K</var>. Vertex <var>i</var> is already painted in Color <var>c_i</var>, except when <var>c_i = 0</var>, in which case Vertex <var>i</var> is not yet painted.</p>
+<p>After he paints each vertex that is not yet painted in one of the <var>K</var> colors, he will give <var>G</var> to Snuke.</p>
+<p>Based on <var>G</var>, Snuke will make another undirected graph <var>G'</var> with <var>K</var> vertices numbered <var>1,2,...,K</var> and <var>M</var> edges.
+Initially, there is no edge in <var>G'</var>. The <var>i</var>-th edge will be added as follows:</p>
+<ul>
+<li>Let <var>x</var> and <var>y</var> be the colors of the two vertices connected by Edge <var>i</var> in <var>G</var>.</li>
+<li>Add an edge of length <var>w_i</var> connecting Vertex <var>x</var> and <var>y</var> in <var>G'</var>.</li>
+</ul>
+<p>What is the minimum possible sum of the lengths of the edges in the minimum spanning tree of <var>G'</var>? If <var>G'</var> will not be connected regardless of how Ringo paints the vertices, print <var>-1</var>.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 \leq N,M \leq 10^{5}</var></li>
+<li><var>1 \leq K \leq N</var></li>
+<li><var>0 \leq c_i \leq K</var></li>
+<li><var>1 \leq a_i,b_i \leq N</var></li>
+<li><var>1 \leq w_i \leq 10^{9}</var></li>
+<li>The given graph may NOT be simple or connected.</li>
+<li>All input values are integers.</li>
+</ul>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Partial Scores</h3><ul>
+<li>In the test set worth <var>100</var> points, <var>N = K</var> and <var>c_i = i</var>.</li>
+<li>In the test set worth another <var>100</var> points, <var>c_i \neq 0</var>.</li>
+<li>In the test set worth another <var>200</var> points, <var>c_i = 0</var>.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var> <var>M</var> <var>K</var>
+<var>c_1</var> <var>c_2</var> <var>...</var> <var>c_{N}</var>
+<var>a_1</var> <var>b_1</var> <var>w_1</var>
+<var>:</var>
+<var>a_M</var> <var>b_M</var> <var>w_M</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the answer.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>4 3 3
+1 0 1 2
+1 2 10
+2 3 20
+2 4 50
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>60
+</pre>
+<p><var>G'</var> will only be connected when Vertex <var>2</var> is painted in Color <var>3</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>5 2 4
+0 0 0 0 0
+1 2 10
+2 3 10
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>-1
+</pre>
+<p>Regardless of how Ringo paints the vertices, two edges is not enough to connect four vertices as one.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>9 12 9
+1 2 3 4 5 6 7 8 9
+6 9 9
+8 9 6
+6 7 85
+9 5 545631016
+2 1 321545
+1 6 33562944
+7 3 84946329
+9 7 15926167
+4 7 53386480
+5 8 70476
+4 6 4549
+4 8 8
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>118901402
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 4</h3><pre>18 37 12
+5 0 4 10 8 7 2 10 6 0 9 12 12 11 11 11 0 1
+17 1 1
+11 16 7575
+11 15 9
+10 10 289938980
+5 10 17376
+18 4 1866625
+8 11 959154208
+18 13 200
+16 13 2
+2 7 982223
+12 12 9331
+13 12 8861390
+14 13 743
+2 10 162440
+2 4 981849
+7 9 1
+14 17 2800
+2 7 7225452
+3 7 85
+5 17 4
+2 13 1
+10 3 45
+1 15 973
+14 7 56553306
+16 17 70476
+7 18 9
+9 13 27911
+18 14 7788322
+11 11 8925
+9 13 654295
+2 10 9
+10 1 545631016
+3 4 5
+17 12 1929
+2 11 57
+1 5 4
+1 17 7807368
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 4</h3><pre>171
+</pre></section>
+</div>
+</span>

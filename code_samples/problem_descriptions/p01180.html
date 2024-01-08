@@ -1,0 +1,64 @@
+
+<H1><font color="#000"></font>The Closest Circle</H1>
+
+<p>
+You are given <i>N</i> non-overlapping circles in xy-plane. The radius of each circle varies, but the radius of
+the largest circle is not double longer than that of the smallest.
+</p>
+
+<center>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE1_closestCircle1">
+<p>Figure 1: The Sample Input</p>
+</center>
+
+<p>
+The distance between two circles <i>C</i><sub>1</sub> and <i>C</i><sub>2</sub> is given by the usual formula
+</p>
+
+<center>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE1_closestCircle2">
+</center>
+
+<p>
+where (<i>x<sub>i</sub></i>, <i>y<sub>i</sub></i> ) is the coordinates of the center of the circle <i>C<sub>i</sub></i>, and <i>r<sub>i</sub></i> is the radius of <i>C<sub>i</sub></i>, for <i>i</i> = 1, 2.
+</p>
+<p>
+Your task is to write a program that finds the closest pair of circles and print their distance.
+</p>
+
+
+<H2>Input</H2>
+
+<p>
+The input consists of a series of test cases, followed by a single line only containing a single zero, which
+indicates the end of input.
+</p>
+<p>
+Each test case begins with a line containing an integer <i>N</i> (2 &le; <i>N</i> &le; 100000), which indicates the number
+of circles in the test case. <i>N</i> lines describing the circles follow. Each of the <i>N</i> lines has three decimal
+numbers <i>R</i>, <i>X</i>, and <i>Y</i>. R represents the radius of the circle. <i>X</i> and <i>Y</i> represent the <i>x</i>- and <i>y</i>-coordinates of
+the center of the circle, respectively.
+</p>
+
+<H2>Output</H2>
+
+<p>
+For each test case, print the distance between the closest circles. You may print any number of digits
+after the decimal point, but the error must not exceed 0.00001.
+</p>
+
+<H2>Sample Input</H2>
+<pre>
+4
+1.0 0.0 0.0
+1.5 0.0 3.0
+2.0 4.0 0.0
+1.0 3.0 4.0
+0
+</pre>
+
+<H2>Output for the Sample Input</H2>
+<pre>
+0.5
+</pre>
+

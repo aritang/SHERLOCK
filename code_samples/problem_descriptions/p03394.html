@@ -1,0 +1,66 @@
+<span class="lang-en">
+<p>Score : <var>600</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>Nagase is a top student in high school. One day, she's analyzing some properties of special sets of positive integers.  </p>
+<p>She thinks that a set <var>S = \{a_{1}, a_{2}, ..., a_{N}\}</var> of <strong>distinct</strong> positive integers is called <strong>special</strong> if for all <var>1 \leq i \leq N</var>, the gcd (greatest common divisor) of <var>a_{i}</var> and the sum of the remaining elements of <var>S</var> is <strong>not</strong> <var>1</var>.</p>
+<p>Nagase wants to find a <strong>special</strong> set of size <var>N</var>. However, this task is too easy, so she decided to ramp up the difficulty. Nagase challenges you to find a <strong>special</strong> set of size <var>N</var> such that the gcd of all elements are <var>1</var> and the elements of the set does not exceed <var>30000</var>.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>3 \leq N \leq 20000</var></li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Output <var>N</var> space-separated integers, denoting the elements of the set <var>S</var>. <var>S</var> must satisfy the following conditions :</p>
+<ul>
+<li>The elements must be <strong>distinct</strong> positive integers not exceeding <var>30000</var>.</li>
+<li>The gcd of all elements of <var>S</var> is <var>1</var>, i.e. there does not exist an integer <var>d &gt; 1</var> that divides all elements of <var>S</var>.</li>
+<li><var>S</var> is a <strong>special</strong> set.</li>
+</ul>
+<p>If there are multiple solutions, you may output any of them. The elements of <var>S</var> may be printed in any order. It is guaranteed that at least one solution exist under the given contraints.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>3
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>2 5 63
+</pre>
+<p><var>\{2, 5, 63\}</var> is special because <var>gcd(2, 5 + 63) = 2, gcd(5, 2 + 63) = 5, gcd(63, 2 + 5) = 7</var>. Also, <var>gcd(2, 5, 63) = 1</var>. Thus, this set satisfies all the criteria.</p>
+<p>Note that <var>\{2, 4, 6\}</var> is not a valid solution because <var>gcd(2, 4, 6) = 2 &gt; 1</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>4
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>2 5 20 63
+</pre>
+<p><var>\{2, 5, 20, 63\}</var> is special because <var>gcd(2, 5 + 20 + 63) = 2, gcd(5, 2 + 20 + 63) = 5, gcd(20, 2 + 5 + 63) = 10, gcd(63, 2 + 5 + 20) = 9</var>. Also, <var>gcd(2, 5, 20, 63) = 1</var>. Thus, this set satisfies all the criteria.</p></section>
+</div>
+</span>

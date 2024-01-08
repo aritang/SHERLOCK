@@ -1,0 +1,83 @@
+
+<!--
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<title>problem</title>
+</head>
+<body bgcolor="#FFFFFF">
+<link rel="stylesheet" href="../problem_e.css" type="text/css" />
+-->
+
+
+<H1>Extraordinary Girl (II)</H1>
+
+<p>
+    She loves e-mail so much! She sends e-mails by her cellular phone to
+her friends when she has breakfast, she talks with other friends, and even
+when she works in the library! Her cellular phone has somewhat simple
+layout (Figure 1). Pushing button 1 once displays a character (’), pushing
+</p>
+
+<center>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE1_1003">
+</center>
+
+<p>
+it twice in series displays a character (,), and so on, and pushing it 6 times
+displays (’) again. Button 2 corresponds to charaters (abcABC), and, for
+example, pushing it four times displays (A). Button 3-9 have is similar to
+button 1. Button 0 is a special button: pushing it once make her possible
+to input characters in the same button in series. For example, she has to
+push “20202” to display “aaa” and “660666” to display “no”. In addition,
+pushing button 0 n times in series (n > 1) displays n − 1 spaces. She never
+pushes button 0 at the very beginning of her input. Here are some examples
+of her input and output:
+</p>
+
+
+<pre>
+              666660666 --> No
+44444416003334446633111 --> I’m fine.
+20202202000333003330333 --> aaba f ff
+</pre>
+
+
+<p>
+    One day, the chief librarian of the library got very angry with her and
+hacked her cellular phone when she went to the second floor of the library
+to return books in shelves. Now her cellular phone can only display button
+numbers she pushes. Your task is to write a program to convert the sequence
+of button numbers into correct characters and help her continue her e-mails!
+</p>
+
+<H2>Input</H2>
+
+<p>
+Input consists of several lines. Each line contains the sequence of button
+numbers without any spaces. You may assume one line contains no more
+than 10000 numbers. Input terminates with EOF.
+
+</p>
+
+<H2>Output</H2>
+
+<p>
+For each line of input, output the corresponding sequence of characters in
+one line.
+
+</p>
+
+<H2>Sample Input</H2>
+<pre>
+666660666
+44444416003334446633111
+20202202000333003330333
+</pre>
+
+<H2>Output for the Sample Input</H2>
+<pre>
+No
+I'm fine.
+aaba  f ff
+</pre>

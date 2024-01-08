@@ -1,0 +1,117 @@
+<span class="lang-en">
+<p>Score : <var>600</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>There are <var>N</var> piles of stones. The <var>i</var>-th pile has <var>A_i</var> stones.</p>
+<p>Aoki and Takahashi are about to use them to play the following game:</p>
+<ul>
+<li>Starting with Aoki, the two players alternately do the following operation:<ul>
+<li>Operation: Choose one pile of stones, and remove one or more stones from it.</li>
+</ul>
+</li>
+<li>When a player is unable to do the operation, he loses, and the other player wins.</li>
+</ul>
+<p>When the two players play optimally, there are two possibilities in this game: the player who moves first always wins, or the player who moves second always wins, only depending on the initial number of stones in each pile.</p>
+<p>In such a situation, Takahashi, the second player to act, is trying to guarantee his win by moving at least zero and at most <var>(A_1 - 1)</var> stones from the <var>1</var>-st pile to the <var>2</var>-nd pile before the game begins.</p>
+<p>If this is possible, print the minimum number of stones to move to guarantee his victory; otherwise, print <code>-1</code> instead.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>2 \leq N \leq 300</var></li>
+<li><var>1 \leq A_i \leq 10^{12}</var></li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+<var>A_1</var> <var>\ldots</var> <var>A_N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the minimum number of stones to move to guarantee Takahashi's win; otherwise, print <code>-1</code> instead.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>2
+5 3
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>1
+</pre>
+<p>Without moving stones, if Aoki first removes <var>2</var> stones from the <var>1</var>-st pile, Takahashi cannot win in any way.</p>
+<p>If Takahashi moves <var>1</var> stone from the <var>1</var>-st pile to the <var>2</var>-nd before the game begins so that both piles have <var>4</var> stones, Takahashi can always win by properly choosing his actions.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>2
+3 5
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>-1
+</pre>
+<p>It is not allowed to move stones from the <var>2</var>-nd pile to the <var>1</var>-st.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>3
+1 1 2
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>-1
+</pre>
+<p>It is not allowed to move all stones from the <var>1</var>-st pile.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 4</h3><pre>8
+10 9 8 7 6 5 4 3
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 4</h3><pre>3
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 5</h3><pre>3
+4294967297 8589934593 12884901890
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 5</h3><pre>1
+</pre>
+<p>Watch out for overflows.</p></section>
+</div>
+</span>

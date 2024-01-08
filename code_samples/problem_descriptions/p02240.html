@@ -1,0 +1,65 @@
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({ tex2jax: { inlineMath: [["$","$"], ["\\(","\\)"]], processEscapes: true }});
+</script>
+<script language="JavaScript" type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML">
+</script>
+
+<H1>Connected Components</H1>
+
+<p>
+  Write a program which reads relations in a SNS (Social Network Service), and judges that given pairs of users are reachable each other through the network.
+</p>
+
+<H2>Input</H2>
+
+<p>
+  In the first line, two integer $n$ and $m$ are given. $n$ is the number of users in the SNS and $m$ is the number of relations in the SNS. The users in the SNS are identified by IDs $0, 1, ..., n-1$.
+</p>
+
+<p>
+  In the following $m$ lines, the relations are given. Each relation is given by two integers $s$ and $t$ that represents $s$ and $t$ are friends (and reachable each other).
+</p>
+
+<p>
+  In the next line, the number of queries $q$ is given. In the following $q$ lines, $q$ queries are given respectively. Each query consists of two integers $s$ and $t$ separated by a space character.
+</p>
+
+<H2>Output</H2>
+
+<p>
+  For each query, print "yes" if $t$ is reachable from $s$ through the social network, "no" otherwise.
+</p>
+
+<H2>Constraints</H2>
+
+<ul>
+<li>$2 \leq n \leq 100,000$</li>
+<li>$0 \leq m \leq 100,000$</li>
+<li>$1 \leq q \leq 10,000$</li>
+</ul>
+
+<H2>Sample Input</H2>
+<pre>
+10 9
+0 1
+0 2
+3 4
+5 7
+5 6
+6 7
+6 8
+7 8
+8 9
+3
+0 1
+5 9
+1 3
+</pre>
+
+<H2>Sample Output</H2>
+<pre>
+yes
+yes
+no
+</pre>

@@ -1,0 +1,113 @@
+<span class="lang-en">
+<p>Score : <var>1600</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>Joisino has a bar of length <var>N</var>, which has <var>M</var> marks on it.
+The distance from the left end of the bar to the <var>i</var>-th mark is <var>X_i</var>.</p>
+<p>She will place several squares on this bar.
+Here, the following conditions must be met:</p>
+<ul>
+<li>Only squares with integral length sides can be placed.</li>
+<li>Each square must be placed so that its bottom side touches the bar.</li>
+<li>The bar must be completely covered by squares.
+That is, no square may stick out of the bar, and no part of the bar may be left uncovered.</li>
+<li>The boundary line of two squares may not be directly above a mark.</li>
+</ul>
+<div style="text-align: center;">
+<img src="https://atcoder.jp/img/agc013/placing_example.jpg">
+<p>Examples of arrangements that satisfy/violate the conditions</p>
+</img></div>
+<p>The <em>beauty</em> of an arrangement of squares is defined as the <strong>product</strong> of the areas of all the squares placed.
+Joisino is interested in the sum of the beauty over all possible arrangements that satisfy the conditions.
+Write a program to find it.
+Since it can be extremely large, print the sum modulo <var>10^9+7</var>.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li>All input values are integers.</li>
+<li><var>1 \leq N \leq 10^9</var></li>
+<li><var>0 \leq M \leq 10^5</var></li>
+<li><var>1 \leq X_1 &lt; X_2 &lt; ... &lt; X_{M-1} &lt; X_M \leq N-1</var></li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var> <var>M</var>
+<var>X_1</var> <var>X_2</var> <var>...</var> <var>X_{M-1}</var> <var>X_M</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the sum of the beauty over all possible arrangements that satisfy the conditions, modulo <var>10^9+7</var>.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>3 1
+2
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>13
+</pre>
+<p>There are two possible arrangements:</p>
+<ul>
+<li>Place a square of side length <var>1</var> to the left, and place another square of side length <var>2</var> to the right</li>
+<li>Place a square of side length <var>3</var></li>
+</ul>
+<p>The sum of the beauty of these arrangements is <var>(1 \times 1 \times 2 \times 2) + (3 \times 3) = 13</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>5 2
+2 3
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>66
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>10 9
+1 2 3 4 5 6 7 8 9
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>100
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 4</h3><pre>1000000000 0
+
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 4</h3><pre>693316425
+</pre></section>
+</div>
+</span>

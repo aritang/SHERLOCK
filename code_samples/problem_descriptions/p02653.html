@@ -1,0 +1,79 @@
+<span class="lang-en">
+<p>Score : <var>800</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>Snuke has a string <var>x</var> of length <var>N</var>.
+Initially, every character in <var>x</var> is <code>0</code>.</p>
+<p>Snuke can do the following two operations any number of times in any order:</p>
+<ul>
+<li>Choose <var>A</var> consecutive characters in <var>x</var> and replace each of them with <code>0</code>.</li>
+<li>Choose <var>B</var> consecutive characters in <var>x</var> and replace each of them with <code>1</code>.</li>
+</ul>
+<p>Find the number of different strings that <var>x</var> can be after Snuke finishes doing operations.
+This count can be enormous, so compute it modulo <var>(10^9+7)</var>.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 \leq N \leq 5000</var></li>
+<li><var>1 \leq A,B \leq N</var></li>
+<li>All values in input are integers.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var> <var>A</var> <var>B</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the number of different strings that <var>x</var> can be after Snuke finishes doing operations, modulo <var>(10^9+7)</var>.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>4 2 3
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>11
+</pre>
+<p>For example, <var>x</var> can be <code>0011</code> or <code>1111</code> in the end, but cannot be <code>0110</code>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>10 7 2
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>533
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>1000 100 10
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>828178524
+</pre></section>
+</div>
+</span>

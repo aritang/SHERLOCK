@@ -1,0 +1,76 @@
+<span class="lang-en">
+<p>Score: <var>200</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>A country decides to build a palace.</p>
+<p>In this country, the average temperature of a point at an elevation of <var>x</var> meters is <var>T-x \times 0.006</var> degrees Celsius.</p>
+<p>There are <var>N</var> places proposed for the place. The elevation of Place <var>i</var> is <var>H_i</var> meters.</p>
+<p>Among them, Princess Joisino orders you to select the place whose average temperature is the closest to <var>A</var> degrees Celsius, and build the palace there.</p>
+<p>Print the index of the place where the palace should be built.</p>
+<p>It is guaranteed that the solution is unique.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 \leq N \leq 1000</var></li>
+<li><var>0 \leq T \leq 50</var></li>
+<li><var>-60 \leq A \leq T</var></li>
+<li><var>0 \leq H_i \leq 10^5</var></li>
+<li>All values in input are integers.</li>
+<li>The solution is unique.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+<var>T</var> <var>A</var>
+<var>H_1</var> <var>H_2</var> <var>...</var> <var>H_N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the index of the place where the palace should be built.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>2
+12 5
+1000 2000
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>1
+</pre>
+<ul>
+<li>The average temperature of Place <var>1</var> is <var>12-1000 \times 0.006=6</var> degrees Celsius.</li>
+<li>The average temperature of Place <var>2</var> is <var>12-2000 \times 0.006=0</var> degrees Celsius.</li>
+</ul>
+<p>Thus, the palace should be built at Place <var>1</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>3
+21 -11
+81234 94124 52141
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>3
+</pre></section>
+</div>
+</span>

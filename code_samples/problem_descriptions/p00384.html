@@ -1,0 +1,85 @@
+<h1>Dungeon 2</h1>
+　
+<p>
+  Bob is playing a game called "Dungeon 2" which is the sequel to the popular "Dungeon" released last year. The game is played on a map consisting of $N$ rooms and $N-1$ roads connecting them. The roads allow bidirectional traffic and the player can start his tour from any room and reach any other room by way of multiple of roads. A point is printed in each of the rooms.
+</p>
+
+<p>
+  Bob tries to accumulate the highest score by visiting the rooms by cleverly routing his character "Tora-Tora." He can add the point printed in a room to his score only when he reaches the room for the first time. He can also add the points on the starting and ending rooms of Tora-Tora’s journey. The score is reduced by one each time Tora-Tore passes a road. Tora-Tora can start from any room and end his journey in any room.
+</p>
+
+<p>
+  Given the map information, make a program to work out the maximum possible score Bob can gain.
+</p>
+
+<h2>Input</h2>
+<p>
+The input is given in the following format.
+</p>
+<pre>
+$N$
+$p_1$
+$p_2$
+$...$
+$p_N$
+$s_1$ $t_1$
+$s_2$ $t_2$
+$...$
+$s_{N-1}$ $t_{N-1}$
+</pre>
+
+<p>
+The first line provides the number of rooms $N$ ($1 \leq N \leq 100,000$). Each of the subsequent $N$ lines provides the point of the $i$-th room $p_i$ ($-100 \leq p_i \leq 100$) in integers. Each of the subsequent lines following these provides the information on the road directly connecting two rooms, where $s_i$ and $t_i$ ($1 \leq s_i < t_i \leq N$) represent the numbers of the two rooms connected by it. Not a single pair of rooms are connected by more than one road.																													 
+</p>
+
+<h2>Output</h2>
+<p>
+  Output the maximum possible score Bob can gain.
+</p>
+
+<h2>Sample Input 1</h2>
+<pre>
+7
+6
+1
+-1
+4
+3
+3
+1
+1 2
+2 3
+3 4
+3 5
+5 6
+5 7
+</pre>
+
+<h2>Sample Output 1</h2>
+<pre>
+10
+</pre>
+<p>
+  For example, the score is maximized by routing the rooms in the following sequence: $6 \rightarrow 5 \rightarrow 3 \rightarrow 4 \rightarrow 3 \rightarrow 2 \rightarrow 1$.
+</p>
+<h2>Sample Input 2</h2>
+<pre>
+4
+5
+0
+1
+1
+1 2
+2 3
+2 4
+</pre>
+
+<h2>Sample Output 2</h2>
+<pre>
+5
+</pre>
+<p>
+  The score is maximized if Tora-Tora stats his journey from room 1 and ends in the same room.
+</p>
+
+ 

@@ -1,0 +1,111 @@
+<span class="lang-en">
+<p>Score : <var>1900</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><style>
+   #nck {
+      width: 30px;
+      height: auto;
+   }
+</style>
+<p>One day, Takahashi was given the following problem from Aoki:</p>
+<ul>
+<li>You are given a tree with <var>N</var> vertices and an integer <var>K</var>. The vertices are numbered <var>1</var> through <var>N</var>. The edges are represented by pairs of integers <var>(a_i, b_i)</var>.</li>
+<li>For a set <var>S</var> of vertices in the tree, let <var>f(S)</var> be the minimum number of the vertices in a subtree of the given tree that contains all vertices in <var>S</var>.</li>
+<li>There are <img id="nck" src="https://atcoder.jp/img/agc005/ea29e9345ef75e7d965febb790a5aad1.png"/> ways to choose <var>K</var> vertices from the trees. For each of them, let <var>S</var> be the set of the chosen vertices, and find the sum of <var>f(S)</var> over all <img id="nck" src="https://atcoder.jp/img/agc005/ea29e9345ef75e7d965febb790a5aad1.png"/> ways.</li>
+<li>Since the answer may be extremely large, print it modulo <var>924844033</var>(prime).</li>
+</ul>
+<p>Since it was too easy for him, he decided to solve this problem for all <var>K = 1,2,...,N</var>.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>2 ≦ N ≦ 200,000</var></li>
+<li><var>1 ≦ a_i, b_i ≦ N</var></li>
+<li>The given graph is a tree.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>The input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+<var>a_1</var> <var>b_1</var>
+<var>a_2</var> <var>b_2</var>
+<var>:</var>
+<var>a_{N-1}</var> <var>b_{N-1}</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print <var>N</var> lines. The <var>i</var>-th line should contain the answer to the problem where <var>K=i</var>, modulo <var>924844033</var>.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>3
+1 2
+2 3
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>3
+7
+3
+</pre>
+<p><img alt="" src="https://atcoder.jp/img/agc005/44e2fd5d5e0fe66d1d238ee502639e4e.png"/></p>
+<p>The diagram above illustrates the case where <var>K=2</var>. The chosen vertices are colored pink, and the subtrees with the minimum number of vertices are enclosed by red lines.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>4
+1 2
+1 3
+1 4
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>4
+15
+13
+4
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>7
+1 2
+2 3
+2 4
+4 5
+4 6
+6 7
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>7
+67
+150
+179
+122
+45
+7
+</pre></section>
+</div>
+</span>

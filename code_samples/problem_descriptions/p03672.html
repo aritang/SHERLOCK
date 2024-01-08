@@ -1,0 +1,100 @@
+<span class="lang-en">
+<p>Score : <var>200</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>We will call a string that can be obtained by concatenating two equal strings an <em>even</em> string.
+For example, <code>xyzxyz</code> and <code>aaaaaa</code> are even, while <code>ababab</code> and <code>xyzxy</code> are not.</p>
+<p>You are given an even string <var>S</var> consisting of lowercase English letters.
+Find the length of the longest even string that can be obtained by deleting one or more characters from the end of <var>S</var>.
+It is guaranteed that such a non-empty string exists for a given input.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>2 \leq |S| \leq 200</var></li>
+<li><var>S</var> is an even string consisting of lowercase English letters.</li>
+<li>There exists a non-empty even string that can be obtained by deleting one or more characters from the end of <var>S</var>.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>S</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the length of the longest even string that can be obtained.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>abaababaab
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>6
+</pre>
+<ul>
+<li><code>abaababaab</code> itself is even, but we need to delete at least one character.</li>
+<li><code>abaababaa</code> is not even.</li>
+<li><code>abaababa</code> is not even.</li>
+<li><code>abaabab</code> is not even.</li>
+<li><code>abaaba</code> is even. Thus, we should print its length, <var>6</var>.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>xxxx
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>2
+</pre>
+<ul>
+<li><code>xxx</code> is not even.</li>
+<li><code>xx</code> is even.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>abcabcabcabc
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>6
+</pre>
+<p>The longest even string that can be obtained is <code>abcabc</code>, whose length is <var>6</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 4</h3><pre>akasakaakasakasakaakas
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 4</h3><pre>14
+</pre>
+<p>The longest even string that can be obtained is <code>akasakaakasaka</code>, whose length is <var>14</var>.</p></section>
+</div>
+</span>

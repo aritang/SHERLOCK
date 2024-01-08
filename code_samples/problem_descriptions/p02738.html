@@ -1,0 +1,82 @@
+<span class="lang-en">
+<p>Score : <var>1200</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>Given is a positive integer <var>N</var>.
+Find the number of permutations <var>(P_1,P_2,\cdots,P_{3N})</var> of <var>(1,2,\cdots,3N)</var> that can be generated through the procedure below.
+This number can be enormous, so print it modulo a prime number <var>M</var>.</p>
+<ul>
+<li>Make <var>N</var> sequences <var>A_1,A_2,\cdots,A_N</var> of length <var>3</var> each, using each of the integers <var>1</var> through <var>3N</var> exactly once.</li>
+<li>Let <var>P</var> be an empty sequence, and do the following operation <var>3N</var> times.<ul>
+<li>Among the elements that are at the beginning of one of the sequences <var>A_i</var> that is non-empty, let the smallest be <var>x</var>.</li>
+<li>Remove <var>x</var> from the sequence, and add <var>x</var> at the end of <var>P</var>.</li>
+</ul>
+</li>
+</ul>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 \leq N \leq 2000</var></li>
+<li><var>10^8 \leq M \leq 10^9+7</var></li>
+<li><var>M</var> is a prime number.</li>
+<li>All values in input are integers.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var> <var>M</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the number of permutations modulo <var>M</var>.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>1 998244353
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>6
+</pre>
+<p>All permutations of length <var>3</var> count.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>2 998244353
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>261
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>314 1000000007
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>182908545
+</pre></section>
+</div>
+</span>

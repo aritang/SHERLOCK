@@ -1,0 +1,106 @@
+<h2>Wall Painting</h2>
+<p>
+  Here stands a wall made of a number of vertical panels. The panels are not painted yet.
+</p>
+
+<p>
+  You have a number of robots each of which can paint panels in a single color, either red, green, or blue. Each of the robots, when activated, paints panels between a certain position and another certain position in a certain color. The panels painted and the color to paint them are fixed for each of the robots, but which of them are to be activated and the order of their activation can be arbitrarily decided.
+</p>
+
+<p>
+  You’d like to have the wall painted to have a high <i>aesthetic value</i>. Here, the aesthetic value of the wall is defined simply as the sum of aesthetic values of the panels of the wall, and the aesthetic value of a panel is defined to be:
+</p>
+
+<ul>
+<li> 0, if the panel is left unpainted.</li>
+<li> The bonus value specified, if it is painted only in a single color, no matter how many times it is painted.</li>
+<li> The penalty value specified, if it is once painted in a color and then overpainted in one or more different colors.</li>
+</ul>
+
+<h3>Input</h3>
+<p>
+  The input consists of a single test case of the following format.
+</p>
+<pre>
+$n$ $m$ $x$ $y$
+$c_1$ $l_1$ $r_1$
+.
+.
+.
+$c_m$ $l_m$ $r_m$
+</pre>
+
+<p>
+  Here, $n$ is the number of the panels ($1 \leq n \leq 10^9$) and $m$ is the number of robots ($1 \leq m \leq 2 \times 10^5$). $x$ and $y$ are integers between $1$ and $10^5$, inclusive. $x$ is the bonus value and $-y$ is the penalty value. The panels of the wall are consecutively numbered $1$ through $n$. The $i$-th robot, when activated, paints all the panels of numbers $l_i$ through $r_i$ ($1 \leq l_i \leq r_i \leq n$) in color with color number $c_i$ ($c_i \in \{1, 2, 3\}$). Color numbers 1, 2, and 3 correspond to red, green, and blue, respectively.
+</p>
+
+<h3>Output</h3>
+<p>
+  Output a single integer in a line which is the maximum achievable aesthetic value of the wall.</p>
+
+
+<h3>Sample Input 1 </h3>
+<pre>
+8 5 10 5
+1 1 7
+3 1 2
+1 5 6
+3 1 4
+3 6 8
+</pre>
+<h3>Sample Output 1</h3>
+<pre>
+70
+</pre>
+<h3>Sample Input 2 </h3>
+<pre>
+26 3 9 7
+1 11 13
+3 1 11
+3 18 26
+</pre>
+<h3>Sample Output 2</h3>
+<pre>
+182
+</pre>
+<h3>Sample Input 3 </h3>
+<pre>
+21 10 10 5
+1 10 21
+3 4 16
+1 1 7
+3 11 21
+3 1 16
+3 3 3
+2 1 17
+3 5 18
+1 7 11
+2 3 14
+</pre>
+<h3>Sample Output 3</h3>
+<pre>
+210
+</pre>
+<h3>Sample Input 4 </h3>
+<pre>
+21 15 8 7
+2 12 21
+2 1 2
+3 6 13
+2 13 17
+1 11 19
+3 3 5
+1 12 13
+3 2 2
+1 12 15
+1 5 17
+1 2 3
+1 1 9
+1 8 12
+3 8 9
+3 2 9
+</pre>
+<h3>Sample Output 4</h3>
+<pre>
+153
+</pre>

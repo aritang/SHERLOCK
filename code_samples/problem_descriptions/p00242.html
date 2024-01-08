@@ -1,0 +1,78 @@
+
+
+
+<H1>入力候補</H1>
+
+<p>
+携帯電話には、メールなどの文章を効率良く入力するために入力候補を表示する機能が搭載されています。これは、使われる頻度が高い単語を記録しておき、入力された文字を頭文字に持つ単語を入力候補として提示するものです。例えば、普段”computer”という単語を多く入力しているなら、”c”と入力するだけで候補として”computer”が提示されます。このような機能の基本部分を作成してみましょう。
+</p>
+
+<p>
+文章、文字を入力とし、その文字を頭文字に持つ単語を出現数の順に出力するプログラムを作成してください。ただし、出現数が同じ単語が複数ある場合は、辞書式順序で出力します。出力する単語は最大5つまでとします。該当する単語が存在しない場合は”NA”と出力してください。
+</p>
+
+
+<h2>入力</h2>
+
+<p>
+複数のデータセットが与えられます。入力の終わりはゼロひとつで表されます。各データセットは以下の形式で与えられます。
+</p>
+
+<pre>
+<var>n</var>
+<var>line<sub>1</sub></var>
+<var>line<sub>2</sub></var>
+:
+<var>line<sub>n</sub></var>
+<var>k</var>
+</pre>
+
+<p>
+1行目に文章の行数 <var>n</var> (1 &le; <var>n</var> &le; 10) が与えられます。続く <var>n</var> 行に文章が与えられます。文章は半角英小文字と半角空白からなり、１行の文字数は1文字以上1024文字以下とします。空白によって区切られる単語は1文字以上20文字以下です。
+</p>
+
+<p>
+続く行に頭文字 <var>k</var> が半角英字で与えられます。
+</p>
+
+<p>
+データセットの数は 100 を超えません。
+</p>
+
+
+<h2>出力</h2>
+<p>
+データセットごとに、指定された文字を頭文字にもつ単語または”NA” を出力します。
+</p>
+
+
+<h2>入力例</h2>
+
+<pre>
+1
+ben likes bananas the best among many fruits because bananas are sweet and cheap
+b
+1
+winners get to visit aizu and the university of aizu and make many friends as well
+a
+3
+ask alex about
+the answer for the
+assignment on android apps
+a
+2
+programming is both
+a sport and an intellectual puzzle
+c
+0
+</pre>
+
+
+<h2>出力例</h2>
+
+<pre>
+bananas because ben best
+aizu and as
+about alex android answer apps
+NA
+</pre>

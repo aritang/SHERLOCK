@@ -1,0 +1,157 @@
+
+<script src="./IMAGE/varmath.js" charset="UTF-8"></script>
+
+<H1>On or Off</H1>
+
+<p>
+Saving electricity is very important!
+</p>
+
+<p>
+You are in the office represented as <var>R \times C</var> grid  that consists of walls and rooms.
+It is guaranteed that, for any pair of rooms in the office, there exists exactly one route between the two rooms.
+It takes 1 unit of time for you to move to the next room (that is, the grid adjacent to the current room).
+Rooms are so dark that you need to switch on a light when you enter a room.
+When you leave the room, you can either leave the light on, or
+of course you can switch off the light. Each room keeps consuming electric power while the light is on.
+</p>
+
+<p>
+Today you have a lot of tasks  across the office.
+ Tasks are given as a list of coordinates, and they need to be done in the specified order.  
+To save electricity, you want to finish all the tasks with the minimal amount of electric power.
+</p>
+
+<p>
+The problem is not so easy though, because you  will consume electricity not only when light is on, but also when you switch on/off the light.
+
+Luckily, you know the cost of power consumption per  unit time and also the cost to switch on/off the light for all the rooms in the office.
+Besides, you are so smart that you don't need any  time to do the tasks themselves.
+So please   figure out the optimal strategy  to minimize the amount of electric power consumed.
+</p>
+
+<p>
+After you finished all the tasks, please DO NOT leave the light on at any room.
+It's obviously wasting!
+</p>
+
+<H2>Input</H2>
+
+<p>
+The first line of the input contains three positive integers <var>R</var> (<var>0 \lt R \leq 50</var>), <var>C</var> (<var>0 \lt C \leq 50</var>) and <var>M</var> (<var>2 \leq M \leq 1000</var>).
+The following <var>R</var> lines, which contain <var>C</var> characters each, describe the  layout of the office.
+ '.' describes a room and  '#' describes a wall.
+</p>
+
+<p>
+
+
+
+This is followed by three matrices with <var>R</var> rows, <var>C</var> columns each.
+Every elements of the matrices are positive integers.
+The <var>(r, c)</var> element in the first matrix describes the power consumption per unit of time for the room at the coordinate <var>(r, c)</var>.
+The <var>(r, c)</var> element in the second matrix and the third matrix describe the cost to turn on the light and the cost to turn off the light, respectively, in the room at the coordinate <var>(r, c)</var>.
+</p>
+
+<p>
+Each of the last <var>M</var> lines contains two positive integers, which describe the coodinates of the room for you to do the task.
+</p>
+
+<p>
+Note that you cannot do  the <var>i</var>-th task if  any of the <var>j</var>-th task (<var>0 \leq j \leq i</var>) is left undone.
+</p>
+
+<H2>Output</H2>
+
+<p>
+Print one integer  that describes the minimal amount of electric power consumed when you finished all the tasks.
+</p>
+
+<H2>Sample Input 1</H2>
+
+<pre>
+1 3 2
+...
+1 1 1
+1 2 1
+1 1 1
+0 0
+0 2
+</pre>
+
+<H2>Output for the Sample Input 1</H2>
+
+<pre>
+7
+</pre>
+
+<H2>Sample Input 2</H2>
+
+<pre>
+3 3 5
+...
+.##
+..#
+1 1 1
+1 0 0
+1 1 0
+3 3 3
+3 0 0
+3 3 0
+5 4 5
+4 0 0
+5 4 0
+1 0
+2 1
+0 2
+2 0
+0 0
+</pre>
+
+<H2>Output for the Sample Input 2</H2>
+
+<pre>
+77
+</pre>
+
+<H2>Sample Input 3</H2>
+
+<pre>
+5 5 10
+#.###
+#....
+###.#
+..#.#
+#....
+0 12 0 0 0
+0 4 3 2 10
+0 0 0 99 0
+11 13 0 2 0
+0 1 1 2 1
+0 4 0 0 0
+0 13 8 2 4
+0 0 0 16 0
+1 1 0 2 0
+0 2 3 1 99
+0 2 0 0 0
+0 12 2 12 2
+0 0 0 3 0
+4 14 0 16 0
+0 2 14 2 90
+0 1
+3 0
+4 4
+1 4
+1 1
+4 4
+1 1
+4 3
+3 0
+1 4
+</pre>
+
+<H2>Output for the Sample Input 3</H2>
+
+<pre>
+777
+</pre>

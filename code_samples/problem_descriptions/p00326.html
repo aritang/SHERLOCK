@@ -1,0 +1,162 @@
+
+
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({ tex2jax: { inlineMath: [["$","$"], ["\\(","\\)"]], processEscapes: true }});
+</script>
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+
+<H1>スケジューラ</H1>
+
+<p>
+あなたはユニークなオペレーティングシステム「ウンズグネ１５」の開発に取り組んでおり、性能を決定付けるスケジューラの設計に頭を悩ませている。スケジューラとは、実行すべき処理をタスクという単位で表現し、それらをどの順序で実行するかを決定するプログラムである。スケジューラはタスクに１から <var>N</var> の番号をつけて管理する。全てのタスクは <var>K</var> 個の属性 <var>f<sub>1</sub></var>, <var>f<sub>2</sub></var>,..., <var>f<sub>K</sub></var> を持ち、各属性にはそれぞれ固有の値が設定されている。ただし、ある２つのタスクについて、対応する属性の値すべてが同じになることはない。
+</p>
+
+<p>
+あるタスクには、そのタスクの実行を始める前までに実行を完了していなければならないタスクが与えられることがある。タスクＡがタスクＢの前に完了していなければならないことを「タスクＡ &rarr; タスクＢ」と表す。例えば、タスク１ &rarr; タスク２、タスク３ &rarr; タスク２という関係があれば、タスク２を処理する前にタスク１とタスク３の両方の処理が終わっていなければならない。このような関係をタスク間の依存関係という。ただし、あるタスクから依存関係をたどっていって、そのタスクにたどり着くことはない。
+</p>
+
+<p>
+スケジューラは依存関係に従って、実行順序を決定する。しかし、依存関係だけでは順序が一通りに定まらない場合がある。そのような場合は、各タスクが持つ属性の値によって、次に処理するタスクを選択する。
+</p>
+
+<p>
+ウンズグネ１５のタスクは属性を複数もつため、すべての属性の値を考慮して実行順序を決定する必要がある。そのために、属性を比較する順番を定める評価順序を用いる。評価順序が最も先の属性を比較し、その属性の値が最も大きいタスクを選択する。そのようなタスクが複数ある場合は、評価順序がその次の属性で比較し、以下同様な手順を繰り返す。例えば、以下の3 つの属性を持つ3 つのタスクについて考える。
+</p>
+
+<center>
+<table width="500">
+  <tr>
+    <td width="200">タスク＼属性</td>
+    <td width="100"><var>f<sub>1</sub></var></td>
+    <td width="100"><var>f<sub>2</sub></var></td>
+    <td width="100"><var>f<sub>3</sub></var></td>
+  </tr>
+  <tr>
+    <td>X</td> <td>3</td> <td>3</td> <td>2</td>
+  </tr>
+  <tr>
+    <td>Y</td> <td>3</td> <td>2</td> <td>2</td>
+  </tr>
+  <tr>
+    <td>Z</td> <td>3</td> <td>1</td> <td>3</td>
+  </tr>
+</table>
+</center>
+<br/>
+
+
+<p>
+評価順序が<var>f<sub>1</sub></var> <var>f<sub>2</sub></var> <var>f<sub>3</sub></var>、<var>f<sub>2</sub></var> <var>f<sub>1</sub></var> <var>f<sub>3</sub></var>、または <var>f<sub>2</sub></var> <var>f<sub>3</sub></var> <var>f<sub>1</sub></var> に設定されている場合は、タスクX が選ばれる。また、評価順序が <var>f<sub>1</sub></var> <var>f<sub>3</sub></var> <var>f<sub>2</sub></var>、<var>f<sub>3</sub></var> <var>f<sub>1</sub></var> <var>f<sub>2</sub></var>、または <var>f<sub>3</sub></var> <var>f<sub>2</sub></var> <var>f<sub>1</sub></var> に設定されている場合はタスクZ が選ばれる。
+</p>
+
+<p>
+ウンズグネ１５のスケジューラの特徴は、属性の評価順序が途中で何度でも変更できることである。評価順序は、ある個数のタスクの実行が完了した時点で変更できる。ただし、スケジューラが最初に使う評価順序はあらかじめ決まっている。
+</p>
+
+<p>
+各タスクの属性の値、タスクの依存関係、評価順序の変更情報が与えられたとき、タスクを実行する順序を報告するプログラムを作成せよ。
+</p>
+
+<h2>Input</h2>
+
+<p>
+入力は以下の形式で与えられる。
+</p>
+
+<pre>
+<var>N</var> <var>K</var>
+<var>f<sub>1,1</sub></var> <var>f<sub>1,2</sub></var> ... <var>f<sub>1,K</sub></var>
+<var>f<sub>2,1</sub></var> <var>f<sub>2,2</sub></var> ... <var>f<sub>2,K</sub></var>
+:
+<var>f<sub>N,1</sub></var> <var>f<sub>N,2</sub></var> ... <var>f<sub>N,K</sub></var>
+<var>D</var>
+<var>a<sub>1</sub></var> <var>b<sub>1</sub></var>
+<var>a<sub>2</sub></var> <var>b<sub>2</sub></var>
+:
+<var>a<sub>D</sub></var> <var>b<sub>D</sub></var>
+<var>e<sub>0,1</sub></var> <var>e<sub>0,2</sub></var> ... <var>e<sub>0,K</sub></var>
+<var>R</var>
+<var>m<sub>1</sub></var> <var>e<sub>1,1</sub></var> <var>e<sub>1,2</sub></var> ...… <var>e<sub>1,K</sub></var>
+<var>m<sub>2</sub></var> <var>e<sub>2,1</sub></var> <var>e<sub>2,2</sub></var> ...… <var>e<sub>2,K</sub></var>
+:
+<var>m<sub>R</sub></var> <var>e<sub>R,1</sub></var> <var>e<sub>R,2</sub></var> ...… <var>e<sub>R,K</sub></var>
+</pre>
+
+<p>
+１行目に、タスクの数 <var>N</var> (2 &le; <var>N</var> &le; 50000) と、各タスクが持つ属性の数 <var>K</var> (1 &le; <var>K</var> &le; 4) が与えられる。続く <var>N</var> 行に、タスク <var>i</var> が持つ属性の値 <var>f<sub>i,j</sub></var> (1 &le; <var>f<sub>i,j</sub></var> &le; 100000) が与えられる。続く１行に、依存関係の個数 <var>D</var> (0 &le; <var>D</var> &le; 200000) が与えられる。続く <var>D</var> 行に依存関係 <var>a<sub>i</sub></var> &rarr; <var>b<sub>i</sub></var> (1 &le; <var>a<sub>i</sub></var>, <var>b<sub>i</sub></var> &le; <var>N</var>) が与えられる。
+</p>
+
+<p>
+続く１行に、最初の評価順序 <var>e<sub>0,j</sub></var> (1 &le; <var>e<sub>0,j</sub></var> &le; <var>K</var>) が与えられる。続く１行に、評価順序の変更回数 <var>R</var> (0 &le; <var>R</var> &lt; <var>N</var>) が与えられる。続く <var>R</var> 行に、評価順序の変更情報が与えられる。<var>i</var> 回目の変更情報は、実行が完了したタスクの個数 <var>m<sub>i</sub></var> (1 &le; <var>m<sub>i</sub></var> &lt; <var>N</var>) と評価順序 <var>e<sub>i,j</sub></var> (1 &le; <var>e<sub>i,j</sub></var> &le; <var>K</var>) からなり、全部で <var>m<sub>i</sub></var> 個のタスクの実行が完了した時点で、評価順序を <var>e<sub>i,1</sub></var>, <var>e<sub>i,2</sub></var>,... , <var>e<sub>i,K</sub></var> に変更することを示す。
+</p>
+
+<p>
+評価順序の変更情報は以下の条件を満たす。
+</p>
+<ul>
+<li> <var>e<sub>i,1</sub></var>, <var>e<sub>i,2</sub></var>,..., <var>e<sub>i,K</sub></var> 中に同じ値は２つ以上現れない。</li>
+<li> <var>i</var> &lt; <var>j</var> のとき、 <var>m<sub>i</sub></var> &lt; <var>m<sub>j</sub></var> である。</li>
+</ul>
+
+
+<h2>Output</h2>
+
+<p>
+スケジューラが処理する順番に、タスクの番号を出力する。
+</p>
+
+<h2>Sample Input 1</h2>
+
+<pre>
+5 3
+1 5 2
+3 8 5
+1 2 3
+5 5 5
+4 8 2
+0
+1 2 3
+2
+2 2 3 1
+4 3 1 2
+</pre>
+
+<h2>Sample Output 1</h2>
+<pre>
+4
+5
+2
+1
+3
+</pre>
+<br/>
+
+
+<h2>Sample Input 2</h2>
+<pre>
+5 2
+1 1
+2 1
+3 1
+4 4
+5 2
+3
+1 4
+2 4
+2 5
+1 2
+1
+3 2 1
+</pre>
+
+<h2>Sample Output 2</h2>
+<pre>
+3
+2
+5
+1
+4
+</pre>

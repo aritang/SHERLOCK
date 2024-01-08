@@ -1,0 +1,78 @@
+<span class="lang-en">
+<p>Score: <var>200</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3>
+<p>Takahashi, who works at DISCO, is standing before an iron bar.
+The bar has <var>N-1</var> notches, which divide the bar into <var>N</var> sections. The <var>i</var>-th section from the left has a length of <var>A_i</var> millimeters.</p>
+<p>Takahashi wanted to choose a notch and cut the bar at that point into two parts with the same length.
+However, this may not be possible as is, so he will do the following operations some number of times <strong>before</strong> he does the cut:</p>
+<ul>
+<li>Choose one section and expand it, increasing its length by <var>1</var> millimeter. Doing this operation once costs <var>1</var> yen (the currency of Japan).</li>
+<li>Choose one section of length at least <var>2</var> millimeters and shrink it, decreasing its length by <var>1</var> millimeter. Doing this operation once costs <var>1</var> yen.</li>
+</ul>
+<p>Find the minimum amount of money needed before cutting the bar into two parts with the same length.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3>
+<ul>
+<li><var>2 \leq N \leq 200000</var></li>
+<li><var>1 \leq A_i \leq 2020202020</var></li>
+<li>All values in input are integers.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3>
+<p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+<var>A_1</var> <var>A_2</var> <var>A_3</var> <var>...</var> <var>A_N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3>
+<p>Print an integer representing the minimum amount of money needed before cutting the bar into two parts with the same length.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>3
+2 4 3
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>3
+</pre>
+<p>The initial lengths of the sections are <var>[2, 4, 3]</var> (in millimeters). Takahashi can cut the bar equally after doing the following operations for <var>3</var> yen:</p>
+<ul>
+<li>Shrink the second section from the left. The lengths of the sections are now <var>[2, 3, 3]</var>.</li>
+<li>Shrink the first section from the left. The lengths of the sections are now <var>[1, 3, 3]</var>.</li>
+<li>Shrink the second section from the left. The lengths of the sections are now <var>[1, 2, 3]</var>, and we can cut the bar at the second notch from the left into two parts of length <var>3</var> each.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>12
+100 104 102 105 103 103 101 105 104 102 104 101
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>0
+</pre></section>
+</div>
+</span>

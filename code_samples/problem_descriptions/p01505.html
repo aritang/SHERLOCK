@@ -1,0 +1,89 @@
+
+<script src="./IMAGE/varmath.js" charset="UTF-8"></script>
+
+<H1>Billiards Sorting</H1>
+
+<p>
+Rotation is one of  several popular pocket billiards games.
+It uses 15 balls numbered from 1 to 15, and set  them up  as illustrated in the following figure  at the beginning of a game.
+(Note:  the ball order  is  modified from  real-world Rotation rules for simplicity of the problem.)
+</p>
+
+<pre>
+        [ 1]
+      [ 2][ 3]
+    [ 4][ 5][ 6]
+  [ 7][ 8][ 9][10]
+[11][12][13][14][15]
+</pre>
+
+<p>
+You are an engineer  developing an automatic billiards machine.
+For the first step you  had to  build a machine that sets up the initial condition.
+This project  went well, and finally  made up a machine that  could arrange the balls in the triangular shape.
+However, unfortunately, it  could not place the balls in the correct order.
+</p>
+
+<p>
+So now you are trying to  build another machine that fixes the order of balls by swapping   them.
+To cut off the cost, it is only allowed to swap the ball #1 with its neighboring balls that are  not  in the same  row.
+For example, in the  case below,  only the following pairs can be swapped: (1,2), (1,3), (1,8), and (1,9).
+</p>
+
+<pre>
+        [ 5]
+      [ 2][ 3]
+    [ 4][ 1][ 6]
+  [ 7][ 8][ 9][10]
+[11][12][13][14][15]
+</pre>
+
+<p>
+Write a program that calculates the minimum number of swaps required.
+</p>
+
+<H2>Input</H2>
+
+<p>
+The first line of each test case has an integer <var>N</var> (<var>1 \leq N \leq 5</var>), which is  the number of the rows.
+</p>
+
+<p>
+The following <var>N</var> lines describe how the balls are arranged by the first machine;
+the <var>i</var>-th of them consists of exactly <var>i</var> integers, which are the ball numbers.
+</p>
+
+<p>
+The input terminates when <var>N</var> = 0. Your program must not output for this case.
+</p>
+
+<H2>Output</H2>
+
+<p>
+For each test case, print its case number and the minimum number of swaps.
+</p>
+
+<p>
+You can assume that any arrangement can be fixed by not more than 45 swaps.
+</p>
+
+<H2>Sample Input</H2>
+
+<pre>
+2
+3
+2 1
+4
+9
+2 4
+8 5 3
+7 1 6 10
+0
+</pre>
+
+<H2>Output for the Sample Input</H2>
+
+<pre>
+Case 1: 1
+Case 2: 13
+</pre>

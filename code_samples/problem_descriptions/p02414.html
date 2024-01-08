@@ -1,0 +1,71 @@
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({ tex2jax: { inlineMath: [["$","$"], ["\\(","\\)"]], processEscapes: true }});
+</script>
+<script language="JavaScript" type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML">
+</script>
+
+<h1>Matrix Multiplication</h1><br>
+
+<p>
+Write a program which reads a $n \times m$ matrix $A$ and a $m \times l$ matrix $B$, and prints their product, a $n \times l$ matrix $C$. An element of matrix $C$ is obtained by the following formula:
+</p>
+
+\[
+c_{ij} = \sum_{k=1}^m a_{ik}b_{kj}
+\]
+
+<p>
+  where $a_{ij}$, $b_{ij}$ and $c_{ij}$ are elements of $A$, $B$ and $C$ respectively.
+</p>
+
+<h2>Input</h2>
+<p>
+  In the first line, three integers $n$, $m$ and $l$ are given separated by space characters
+</p>
+<p>
+  In the following lines, the $n \times m$ matrix $A$ and the $m \times l$ matrix $B$ are given.
+</p>
+
+<h2>Output</h2>
+
+<p>
+  Print elements of the $n \times l$ matrix $C$ ($c_{ij}$). Print a single space character between adjacent elements.
+</p>
+
+<h2>Constraints</h2>
+
+<ul>
+<li>$1 \leq n, m, l \leq 100$</li>
+<li>$0 \leq a_{ij}, b_{ij} \leq 10000$</li>
+</ul>
+
+<h2>Sample Input</h2>
+
+<pre>
+3 2 3
+1 2
+0 3
+4 5
+1 2 1
+0 3 2
+</pre>
+
+
+<h2>Sample Output</h2>
+
+<pre>
+1 8 5
+0 9 6
+4 23 14
+</pre>
+
+<h2>Note</h2>
+
+
+<center>
+<a href="commentary.jsp?id=ITP1_7_D">
+<div class="button">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;解説&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+</a>	
+</center>
+

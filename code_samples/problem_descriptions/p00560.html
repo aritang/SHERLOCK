@@ -1,0 +1,213 @@
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({ tex2jax: { inlineMath: [["$","$"], ["\\(","\\)"]], processEscapes: true }});
+</script>
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+
+<h1>Semiexpress</h1>
+
+<p>
+  The JOI Railways is the only railway company in the Kingdom of JOI. There are $N$ stations numbered from $1$ to $N$ along a railway. Currently, two kinds of trains are operated; one is express and the other one is local.
+</p>
+
+<p>
+  A local train stops at every station. For each $i$ ($1 \leq i &lt; N$), by a local train, it takes $A$ minutes from the station $i$ to the station ($i + 1$).
+								  </p>
+<p>
+  An express train stops only at the stations $S_1, S_2, ..., S_M$ ($1 = S_1 &lt; S_2 &lt; ... &lt; S_M = N$). For each $i$ ($1 \leq i &lt; N$), by an express train, it takes $B$ minutes from the station $i$ to the station ($i + 1$).
+</p>
+
+<p>
+  The JOI Railways plans to operate another kind of trains called "semiexpress." For each $i$ ($1 \leq i &lt; N$), by a semiexpress train, it takes $C$ minutes from the station $i$ to the station ($i + 1$). The stops of semiexpress trains are not yet determined. But they must satisfy the following conditions:
+</p>
+
+<ul>
+<li> Semiexpress trains must stop at every station where express trains stop.</li>
+<li> Semiexpress trains must stop at $K$ stations exactly.</li>
+</ul>
+
+<p>
+  The JOI Railways wants to maximize the number of stations (except for the station 1) to which we can travel from the station 1 within $T$ minutes. The JOI Railways plans to determine the stops of semiexpress trains so that this number is maximized. We do not count the standing time of trains.
+</p>
+
+<p>
+  When we travel from the station 1 to another station, we can take trains only to the direction where the numbers of stations increase. If several kinds of trains stop at the station $i$ ($2 \leq i \leq N - 1$), you can transfer between any trains which stop at that station.
+</p>
+
+<p>
+When the stops of semiexpress trains are determined appropriately, what is the maximum number of stations (except for the station 1) to which we can travel from the station 1 within $T$ minutes?
+</p>
+
+<h3>Task</h3>
+
+<p>
+Given the number of stations of the JOI Railways, the stops of express trains, the speeds of the trains, and maximum travel time, write a program which calculates the maximum number of stations which satisfy the condition on the travel time.
+</p>
+
+
+<h3>Input</h3>
+<p>
+  Read the following data from the standard input.
+</p>
+
+<ul>
+<li> The first line of input contains three space separated integers $N$, $M$, $K$. This means there are $N$ stations of the JOI Railways, an express train stops at $M$ stations, and a semiexpress train stops at $K$ stations,</li>
+<li>The second line of input contains three space separated integers $A$, $B$, $C$. This means it takes $A$, $B$, $C$ minutes by a local, express, semiexpress train to travel from a station to the next station, respectively.</li>
+>li> The third line of input contains an integer $T$. This means the JOI Railways wants to maximize the number of stations (except for the station 1) to which we can travel from the station 1 within $T$ minutes.</li>
+<li> The $i$-th line ($1 \leq i \leq M$) of the following $M$ lines contains an integer $S_i$. This means an express train stops at the station $S_i$.</li>
+</ul>
+
+
+<h3>Output</h3>
+
+<p>
+  Write one line to the standard output. The output contains the maximum number of stations satisfying the condition on the travel time.
+</p>
+
+
+<h3>Constraints</h3>
+<p>
+All input data satisfy the following conditions.
+</p>
+
+<ul>
+<li>$2 \leq N \leq 1 000 000 000．$</li>
+<li>$2 \leq M \leq K \leq 3 000．$</li>
+<li>$K \leq N．$</li>
+<li>$1 \leq B &lt; C &lt; A \leq 1 000 000 000．$</li>
+<li>$1 \leq T \leq 10^{18}$</li>
+<li>$1 = S_1 &lt; S_2 &lt; ... &lt; S_M = N$</li>
+</ul>
+
+<h3>Sample Input and Output</h3>
+<h3>Sample Input 1</h3>
+<pre>
+10 3 5
+10 3 5
+30
+1
+6
+10
+</pre>
+
+<h3>Sample Output 1</h3>
+<pre>
+8
+</pre>
+<p>
+  In this sample input, there are 10 stations of the JOI Railways. An express train stops at three stations 1, 6, 10. Assume that the stops of an semiexpress train are 1, 5, 6, 8, 10. Then, among the stations 2, 3, ...10, we can travel from the station 1 to every station except for the station 9 within 30 minutes.
+</p>
+
+<p>
+For some $i$, the travel time and the route from the station 1 to the station $i$ are as follows:
+</p>
+
+<ul>
+<li>From the station 1 to the station 3, we can travel using a local train only. The travel time is 20 minutes.</li>
+<li> From the station 1 to the station 7, we travel from the station 1 to the station 6 by an express train, and transfer to a local train. The travel time is 25 minutes.</li>
+<li> From the station 1 to the station 8, we travel from the station 1 to the station 6 by an express train, and transfer to a semiexpress train. The travel time is 25 minutes.</li>
+<li> From the station 1 to the station 9, we travel from the station 1 to the station 6 by an express train, from the station 6 to the station 8 by a semiexpress train, and from the station 8 to the station 9 by a local train. In total, the travel time is 35 minutes.</li>
+</ul>
+
+<h3>Sample Input 2</h3>
+<pre>
+10 3 5
+10 3 5
+25
+1
+6
+10
+</pre>
+
+<h3>Sample Output 2</h3>
+<pre>
+7
+</pre>
+
+<h3>Sample Input 3</h3>
+<pre>
+90 10 12
+100000 1000 10000
+10000
+1
+10
+20
+30
+40
+50
+60
+70
+80
+90
+</pre>
+
+<h3>Sample Output 2</h3>
+<pre>
+2
+</pre>
+
+<h3>Sample Input 4</h3>
+<pre>
+12 3 4
+10 1 2
+30
+1
+11
+12
+</pre>
+
+<h3>Sample Output 4</h3>
+
+<pre>
+8
+</pre>
+
+
+
+<h3>Sample Input 5</h3>
+<pre>
+300 8 16
+345678901 123456789 234567890
+12345678901
+1
+10
+77
+82
+137
+210
+297
+300
+</pre>
+
+<h3>Sample Output 5</h3>
+
+<pre>
+72
+</pre>
+
+<h3>Sample Input 6</h3>
+<pre>
+1000000000 2 3000
+1000000000 1 2
+1000000000
+1
+1000000000
+</pre>
+
+<h3>Sample Output 6</h3>
+
+<pre>
+3000
+</pre>
+
+<div class="source">
+  <p class="source">
+    <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commonse License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png"/></a>
+  </p>
+  <p class="source">
+    <a href="https://www.ioi-jp.org/joi/2016/2017-ho/index.html">The 16th Japanese Olympiad in Informatics (JOI 2016/2017)
+Final Round</a>
+  </p>
+</div>

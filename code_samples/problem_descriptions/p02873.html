@@ -1,0 +1,65 @@
+<span class="lang-en">
+<p>Score : <var>300</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>Given is a string <var>S</var> of length <var>N-1</var>.
+Each character in <var>S</var> is <code>&lt;</code> or <code>&gt;</code>.</p>
+<p>A sequence of <var>N</var> non-negative integers, <var>a_1,a_2,\cdots,a_N</var>, is said to be <em>good</em> when the following condition is satisfied for all <var>i</var> (<var>1 \leq i \leq N-1</var>):</p>
+<ul>
+<li>If <var>S_i=</var> <code>&lt;</code>: <var>a_i&lt;a_{i+1}</var></li>
+<li>If <var>S_i=</var> <code>&gt;</code>: <var>a_i&gt;a_{i+1}</var></li>
+</ul>
+<p>Find the minimum possible sum of the elements of a good sequence of <var>N</var> non-negative integers.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>2 \leq N \leq 5 \times 10^5</var></li>
+<li><var>S</var> is a string of length <var>N-1</var> consisting of <code>&lt;</code> and <code>&gt;</code>.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>S</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Find the minimum possible sum of the elements of a good sequence of <var>N</var> non-negative integers.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>&lt;&gt;&gt;
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>3
+</pre>
+<p><var>a=(0,2,1,0)</var> is a good sequence whose sum is <var>3</var>.
+There is no good sequence whose sum is less than <var>3</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>&lt;&gt;&gt;&gt;&lt;&lt;&gt;&lt;&lt;&lt;&lt;&lt;&gt;&gt;&gt;&lt;
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>28
+</pre></section>
+</div>
+</span>

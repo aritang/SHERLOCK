@@ -1,0 +1,140 @@
+
+<H1><font color="#000">Problem A:</font> Membership Management</H1>
+
+<p>
+Peter is a senior manager of Agile Change Management (ACM) Inc., where each employee is a member of one or more task groups. Since ACM is agile, task groups are often reorganized and their members frequently change, so membership management is his constant headache.
+</p>
+
+<p>
+Peter updates the membership information whenever any changes occur: for instance, the following line written by him means that Carol and Alice are the members of the Design Group.
+</p>
+
+<pre>
+design:carol,alice.
+</pre>
+
+<p>
+The name preceding the colon is the group name and the names following it specify its members.
+</p>
+
+<p>
+A smaller task group may be included in a larger one. So, a group name can appear as a member of another group, for instance, as follows. 
+</p>
+
+<pre>
+development:alice,bob,design,eve.
+</pre>
+
+<p>
+Simply unfolding the design above gives the following membership specification, which is equivalent to the original.
+</p>
+
+<pre>
+development:alice,bob,carol,alice,eve.
+</pre>
+
+<p>
+In this case, however, alice occurs twice. After removing one of the duplicates, we have the following more concise specification.
+</p>
+
+<pre>
+development:alice,bob,carol,eve.
+</pre>
+
+<p>
+Your mission in this problem is to write a program that, given group specifications, identifies group members.
+</p>
+
+<p>
+Note that Peter's specifications can include deeply nested groups. In the following, for instance, the group one contains a single member dave.
+</p>
+
+<pre>
+one:another.
+another:yetanother.
+yetanother:dave.
+</pre>
+
+
+<H2>Input</H2>
+
+<p>
+The input is a sequence of datasets, each being in the following format.
+</p>
+
+<p>
+<i>n</i><br>
+<i>group</i><sub>1</sub><span>:</span><i>member</i><sub>1,1</sub>,...,<i>member</i><sub>1,<i>m</i><sub>1</sub></sub><span>.</span><br>
+<span>.</span><br>
+<span>.</span><br>
+<span>.</span><br>
+<i>group</i><sub><i>i</i></sub><span>:</span><i>member</i><sub><i>i</i>,1</sub>,...,<i>member</i><sub><i>i</i>,<i>m</i><sub><i>i</i></sub></sub><span>.</span><br>
+<span>.</span><br>
+<span>.</span><br>
+<span>.</span><br>
+<i>group</i><sub><i>n</i></sub><span>:</span><i>member</i><sub><i>n</i>,1</sub>,...,<i>member</i><sub><i>n</i>,<i>m</i><sub><i>n</i></sub></sub><span>.</span><br>
+</p>
+
+<p>
+The first line contains n, which represents the number of groups and is a positive integer no more than 100. Each of the following n lines contains the membership information of a group: <i>group</i><sub><i>i</i></sub> (1 &le; <i>i</i> &le; <i>n</i>) is the name of the <i>i</i>-th task group and is followed by a colon (<span>:</span>) and then the list of its <i>m<sub>i</sub></i> member s that are delimited by a comma (<span>,</span>) and terminated by a period (<span>.</span>).
+</p>
+
+<p>
+Those group names are mutually different. Each <i>m<sub>i</sub></i> (1 &le; <i>i</i> &le; <i>n</i>) is between 1 and 10, inclusive. A <i>member</i> is another group name if it is one of <i>group</i><sub>1</sub>, <i>group</i><sub>2</sub>,..., or groupn. Otherwise it is an employee name.
+</p>
+
+<p>
+There are no circular (or recursive) definitions of group(s). You may assume that <i>m<sub>i</sub></i> member names of a group are mutually different.
+</p>
+
+<p>
+Each group or employee name is a non-empty character string of length between 1 and 15, inclusive, and consists of lowercase letters.
+</p>
+
+<p>
+The end of the input is indicated by a line containing a zero.
+</p>
+
+
+<H2>Output</H2>
+
+<p>
+For each dataset, output the number of employees included in the first group of the dataset, that is <i>group</i><sub>1</sub>, in a line. No extra characters should occur in the output.
+</p>
+
+<H2>Sample Input</H2>
+<pre>
+2
+development:alice,bob,design,eve.
+design:carol,alice.
+3
+one:another.
+another:yetanother.
+yetanother:dave.
+3
+friends:alice,bob,bestfriends,carol,fran,badcompany.
+bestfriends:eve,alice.
+badcompany:dave,carol.
+5
+a:b,c,d,e.
+b:c,d,e,f.
+c:d,e,f,g.
+d:e,f,g,h.
+e:f,g,h,i.
+4
+aa:bb.
+cc:dd,ee.
+ff:gg.
+bb:cc.
+0
+</pre>
+
+<H2>Output for the Sample Input</H2>
+<pre>
+4
+1
+6
+4
+2
+</pre>
+

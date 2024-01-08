@@ -1,0 +1,155 @@
+
+
+
+<h1>Courage Test</h1>
+
+<p>
+P「今日は肝試し企画の番組の収録だ。」<br><br>
+
+O型智絵里「き、きもだめし……」<br><br>
+
+四村かな子「智絵里ちゃん大丈夫？」<br><br>
+
+月野茜「さすがPさん！一行で状況が明晰判明にわかる素晴らしい解説です！さあ！火の玉に向かって走りましょう！」<br><br>
+
+P「ルールは簡単、みんなで協力してこのエリアのすべての神社にお参りしてくるだけだ。」<br><br>
+
+茜「オーソドックスですね！早速神社に向かって走りましょう！」<br><br>
+
+かな子「でもここ、日本有数の神社密度で行かなくちゃいけない神社がたくさんあるんじゃなかったっけ……」<br><br>
+
+かな子「でも茜ちゃんがいれば心強いよ！」<br><br>
+
+P「ちなみにスタートは全員違う神社からスタート、合流も禁止だ。それじゃあ智絵里とかな子は初期位置についてくれ」<br><br>
+
+智絵里「うぅ……」<br><br>
+
+かな子「お、お菓子を持っていけば大丈夫！」<br><br>
+
+智絵里「頑張る……」<br><br>
+
+茜「プロデューサー！私はどうすれば！」<br><br>
+
+P「お前は賑やかしだ」<br><br>
+
+茜「えっ」<br><br>
+
+P「座ってろ」<br><br>
+
+茜「」<br><br>
+</p>
+
+<h2>Problem</h2>
+<p>
+それぞれ1~<var>n</var>の番号が付けられた<var>n</var>個の神社と<var>n</var>-1本の道がある。各道は神社<var>a<sub>i</sub></var>と神社<var>b<sub>i</sub></var>を繋ぎ、双方向に移動することができる。それぞれの神社は、任意の神社から1本以上の道を経由して到達することができる。また、任意の2つの神社の間の(迂回しない)経路は一意に定まる。
+</p>
+
+<p>
+    O型智絵里ちゃんと四村かな子ちゃんがそれぞれ神社<var>u</var>と神社<var>v</var>にいる。
+</p>
+<p>
+今、2人を任意に移動させることを考える。移動とは、ある神社から1本の道を経由して別の神社に進むことである。
+その際、以下のルールを満たしたい。
+</p>
+
+<ol>
+  <li>2人合わせて全ての神社を訪問する。</li>
+  <li>2人の移動数を同じにする。</li>
+  <li>1つの神社, 道は1人しか通れず、さらに1度しか通ることができない。</li>
+  <li>神社<var>u</var>, <var>v</var>は既に訪れているものとし、通ることはできない。</li>
+</ol>
+
+<p>
+これらのルールを満たすことができるかどうかを判定し、できる場合は"Yes"を、できない場合は"No"を出力せよ。
+</p>
+
+<h2>Input</h2>
+<p>入力は以下の形式で与えられる。</p>
+<pre>
+<var>n</var> <var>u</var> <var>v</var>
+<var>a<sub>1</sub></var> <var>b<sub>1</sub></var>
+<var>a<sub>2</sub></var> <var>b<sub>2</sub></var>
+...
+<var>a<sub>n&minus;1</sub></var> <var>b<sub>n&minus;1</sub></var>
+</pre>
+<p>
+    1行目に3つの整数<var>n</var>, <var>u</var>, <var>v</var>が空白区切りで与えられる。<br>
+    2行目から<var>n</var>行目までに、2つの整数<var>a<sub>i</sub></var>, <var>b<sub>i</sub></var>が空白区切りで与えられる。
+</p>
+
+<h2>Constraints</h2>
+
+<ul>
+    <li>2 &le; <var>n</var> &le; 10<sup>5</sup></li>
+    <li>1 &le; <var>a<sub>i</sub></var>, <var>b<sub>i</sub></var>, <var>u</var>, <var>v</var> &le; <var>n</var></li>
+    <li><var>u</var> &ne; <var>v</var></li>
+    <li><var>a<sub>i</sub></var> &lt; <var>b<sub>i</sub></var></li>
+    <li>(<var>a<sub>i</sub></var>, <var>b<sub>i</sub></var>) &ne; (<var>a<sub>j</sub></var>, <var>b<sub>j</sub></var>) (<var>i</var> &ne; <var>j</var>)</li>
+</ul>
+
+<h2>Output</h2>
+<p>
+    ルールを満たすことができる場合は"Yes"を、できない場合は"No"を1行に出力する。
+</p>
+
+<h2>Sample Input 1</h2>
+<pre>
+4 1 4
+1 2
+2 3
+3 4
+</pre>
+
+<h2>Sample Output 1</h2>
+<pre>
+Yes
+</pre>
+<p><img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE3_UAPC2016Spring_D1" alt="Sample Diagram 1" style="width: 30%;"></p>
+
+<h2>Sample Input 2</h2>
+<pre>
+8 3 6
+1 2
+2 4
+3 4
+4 5
+5 6
+6 7
+7 8
+</pre>
+
+<h2>Sample Output 2</h2>
+<pre>
+No
+</pre>
+<p><img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE3_UAPC2016Spring_D2" alt="Sample Diagram 2" style="width: 30%;"></p>
+
+<h2>Sample Input 3</h2>
+<pre>
+4 2 3
+1 2
+2 3
+3 4
+</pre>
+
+<h2>Sample Output 3</h2>
+<pre>
+Yes
+</pre>
+<p><img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE3_UAPC2016Spring_D3" alt="Sample Diagram 3" style="width: 30%;"></p>
+
+<h2>Sample Input 4</h2>
+<pre>
+6 1 5
+1 2
+1 4
+2 3
+4 5
+3 6
+</pre>
+
+<h2>Sample Output 4</h2>
+<pre>
+No
+</pre>
+<p><img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE3_UAPC2016Spring_D4" alt="Sample Diagram 4" style="width: 30%;"></p>

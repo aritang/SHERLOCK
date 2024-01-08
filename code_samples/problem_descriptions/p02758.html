@@ -1,0 +1,139 @@
+<span class="lang-en">
+<p>Score : <var>600</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>There are <var>N</var> robots numbered <var>1</var> to <var>N</var> placed on a number line. Robot <var>i</var> is placed at coordinate <var>X_i</var>. When activated, it will travel the distance of <var>D_i</var> in the positive direction, and then it will be removed from the number line. All the robots move at the same speed, and their sizes are ignorable.</p>
+<p>Takahashi, who is a mischievous boy, can do the following operation any number of times (possibly zero) as long as there is a robot remaining on the number line.</p>
+<ul>
+<li>Choose a robot and activate it. This operation cannot be done when there is a robot moving.</li>
+</ul>
+<p>While Robot <var>i</var> is moving, if it touches another robot <var>j</var> that is remaining in the range <var>[X_i, X_i + D_i)</var> on the number line, Robot <var>j</var> also gets activated and starts moving. This process is repeated recursively.</p>
+<p>How many possible sets of robots remaining on the number line are there after Takahashi does the operation some number of times? Compute this count modulo <var>998244353</var>, since it can be enormous.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 \leq N \leq 2 \times 10^5</var></li>
+<li><var>-10^9 \leq X_i \leq 10^9</var></li>
+<li><var>1 \leq D_i \leq 10^9</var></li>
+<li><var>X_i \neq X_j (i \neq j)</var></li>
+<li>All values in input are integers.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+<var>X_1</var> <var>D_1</var>
+<var>:</var>
+<var>X_N</var> <var>D_N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the number of possible sets of robots remaining on the number line, modulo <var>998244353</var>.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>2
+1 5
+3 3
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>3
+</pre>
+<p>There are three possible sets of robots remaining on the number line: <var>\{1, 2\}</var>, <var>\{1\}</var>, and <var>\{\}</var>.</p>
+<p>These can be achieved as follows:</p>
+<ul>
+<li>
+<p>If Takahashi activates nothing, the robots <var>\{1, 2\}</var> will remain.</p>
+</li>
+<li>
+<p>If Takahashi activates Robot <var>1</var>, it will activate Robot <var>2</var> while moving, after which there will be no robots on the number line. This state can also be reached by activating Robot <var>2</var> and then Robot <var>1</var>.</p>
+</li>
+<li>
+<p>If Takahashi activates Robot <var>2</var> and finishes doing the operation, the robot <var>\{1\}</var> will remain.</p>
+</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>3
+6 5
+-1 10
+3 3
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>5
+</pre>
+<p>There are five possible sets of robots remaining on the number line: <var>\{1, 2, 3\}</var>, <var>\{1, 2\}</var>, <var>\{2\}</var>, <var>\{2, 3\}</var>, and <var>\{\}</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>4
+7 10
+-10 3
+4 3
+-4 3
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>16
+</pre>
+<p>None of the robots influences others.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 4</h3><pre>20
+-8 1
+26 4
+0 5
+9 1
+19 4
+22 20
+28 27
+11 8
+-3 20
+-25 17
+10 4
+-18 27
+24 28
+-11 19
+2 27
+-2 18
+-1 12
+-24 29
+31 29
+29 7
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 4</h3><pre>110
+</pre>
+<p>Remember to print the count modulo <var>998244353</var>.</p></section>
+</div>
+</span>

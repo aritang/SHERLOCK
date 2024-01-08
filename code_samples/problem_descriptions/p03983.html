@@ -1,0 +1,131 @@
+<span class="lang-en">
+<p>Score : <var>300</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3>
+<p>
+          Eli- <var>1</var> started a part-time job handing out leaflets for <var>N</var> seconds. 
+          Eli- <var>1</var> wants to hand out as many leaflets as possible with her special ability, Cloning.  
+          Eli- <var>gen</var> can perform two kinds of actions below. 
+	</p>
+<ul>
+<li> Clone herself and generate Eli- <var>(gen + 1)</var> .  (one Eli- <var>gen</var> (cloning) and one Eli- <var>(gen + 1)</var> (cloned) exist as a result of Eli-<var>gen</var> 's cloning.)
+            This action takes <var>gen \times C</var> ( <var>C</var> is a coefficient related to cloning. ) seconds. </li>
+<li> Hand out one leaflet. This action takes one second regardress of the generation ( <var>=gen</var> ). </li>
+</ul>
+<p>
+          They can not hand out leaflets while cloning. 
+          Given <var>N</var> and <var>C</var> , find the maximum number of leaflets Eli- <var>1</var> and her clones can hand out in total modulo <var>1000000007</var> (<var>= 10^9 + 7</var>). 
+	</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3>
+<ul>
+<li> <var>1 \leq Q \leq 100000 = 10^5</var> </li>
+<li> <var>1 \leq N_q \leq 100000 = 10^5</var> </li>
+<li> <var>1 \leq C_q \leq 20000 = 2 \times 10^4</var> </li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3>
+<p>The input is given from Standard Input in the following format: </p>
+<pre>
+<var>Q</var>
+<var>N_1</var> <var>C_1</var>
+:
+<var>N_Q</var> <var>C_Q</var>
+</pre>
+<p>The input consists of multiple test cases. On line <var>1</var> ,  <var>Q</var> that represents the number of test cases is given. 
+            Each test case is given on the next <var>Q</var> lines.
+            For the test case <var>q</var> ( <var>1 \leq q \leq Q</var> ) , <var>N_q</var> and 
+            <var>C_q</var> are given separated by a single space. 
+            <var>N_q</var> and <var>C_q</var> represent the working time and the coefficient related to cloning for test case <var>q</var> respectively. 
+	  </p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3>
+<p>
+            For each test case, Print the maximum number of leaflets Eli- <var>1</var> and her clones can hand out modulo <var>1000000007</var> ( <var>= 10^9 + 7</var> ). 
+	</p></section>
+</div>
+<div class="part">
+<section>
+<h3>Partial Scores</h3>
+<p> <var>30</var> points will be awarded for passing the test set satisfying the condition: <var>Q = 1</var> . </p>
+<p>Another <var>270</var> points will be awarded for passing the test set without addtional constraints and you can get <var>300</var> points in total. </p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3>
+<pre>
+2
+20 8
+20 12
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3>
+<pre>
+24
+20
+</pre>
+<p> For the first test case, while only <var>20</var> leaflets can be handed out without cloning,
+	  <var>24</var> leaflets can be handed out by cloning first and two people handing out<var>12</var> leaflets each. </p>
+<p> For the second test case, since two people can only hand out <var>8</var> leaflets each if Eli- <var>1</var> clones, she should hand out <var>20</var> leaflets without cloning. </p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3>
+<pre>
+1
+20 3
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3>
+<pre>
+67
+</pre>
+<p>One way of handing out 67 leaflets is like the following image. Each black line means cloning, and each red line means handing out. </p>
+<div style="text-align: center;">
+<img src="/img/other/kupc2016/sushi/sample2.png"/>
+</div>
+<p> This case satisfies the constraint of the partial score. </p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3>
+<pre>
+1
+200 1
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3>
+<pre>
+148322100
+</pre>
+<p> Note that the value modulo <var>1000000007</var> ( <var>10^9 + 7</var> ) must be printed. </p>
+<p> This case satisfies the constraint of the partial score. </p>
+</section>
+</div>
+</span>

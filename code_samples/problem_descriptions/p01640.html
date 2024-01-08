@@ -1,0 +1,123 @@
+
+
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: { inlineMath: [['\\(','\\)']] }
+  });
+</script>
+<script type='text/javascript' src='http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
+
+<h1 class="ndoc-heading1">Problem G: Get Lost</h1>
+<p class="ndoc-top">ICPC World Finals 5日目</p>
+<p class="ndoc-top">ティー氏はR国の街で迷ってしまった。
+困ったことに、街並みが似ているため、自分が今どこにいるかが全く分からない。
+R国は「おそろしあ」であるから、敵に襲撃される前にホテルへ戻らねばならない。 幸い、どのように曲がって来たかだけは覚えているので、
+行き当たりばったりに進んでみよう。</p>
+<h2 class="ndoc-heading2">問題</h2>
+<p class="ndoc-top">\( w \times h \)マスの二次元格子状のマップがある。 左上のマスの座標を\(
+(1, 1) \)、右下のマスの座標を\( (w, h) \)とする。 マップの周りは壁で囲まれており、
+\(n\)個の障害物が座標\( (x_{i}, y_{i}) (1 \leq i \leq n) \)に置かれている。
+さらに、命令列\( r_{1}r_{2} \cdots r_{m} \)と目的座標\( (g_{x}, g_{y})
+\)が与えられる。 開始座標と進行方向の設定後、歩行者は以下の移動規則に従って歩行を開始する。</p>
+<p class="ndoc-top">1. カウンタを\( i=1
+\)に初期化し、開始座標と進行方向（上・下・左・右）を設定する。<br/>
+2. 壁・障害物に出会うまで直進する。<br/>
+3. 壁・障害物の手前で次のいずれかを実行する。<br/>
+3. a. \( i&gt;m \)、すなわち命令が無ければ歩行を終了する。<br/>
+3. b. 命令\( r_{i} \)がLならば左、Rならば右へ方向転換する。<br/>
+4. \( i \)をインクリメントする。<br/>
+5. 2.に戻る。</p>
+<p class="ndoc-top">歩行開始から歩行終了までに通過した座標（開始座標を含む）に目的座標\( (g_{x},
+g_{y}) \)が含まれれば、歩行者が目的地に辿り着いたと解釈する。
+目的地に辿り着くことのできる開始座標・進行方向の組み合わせは何通りあるかを求めよ。
+ただし、開始座標には障害物やマップ外の座標を設定することはできないとする。 （目的座標を設定することはできる。）</p>
+<h2 class="ndoc-heading2">入力</h2>
+<pre>
+w h g<sub>x</sub> g<sub>y</sub> n
+x<sub>1</sub> y<sub>1</sub>
+…
+x<sub>n</sub> y<sub>n</sub>
+r<sub>1</sub>r<sub>2</sub> … r<sub>m</sub>
+</pre>
+<p>1行目に マップの横幅\(w\)、縦幅\(h\)、目的地のx座標\( g_{x} \)、目的地のy座標\( g_{y}
+\)、障害物の数\(n\)が空白区切りで与えられる。 2行目から\( n+1 \)行目に 各障害物の座標\( (x_{i},
+y_{i}) \)が空白区切りで与えられる。 \( n+2 \)行目に長さ\(m\)の命令列\( r_{1}r_{2} \cdots
+r_{m} \)が与えられる。</p>
+<h2 class="ndoc-heading2">出力</h2>
+<p class="ndoc-top">目的地に辿り着けるような 開始座標・進行方向の組み合わせの数を1行に出力せよ。</p>
+<h2 class="ndoc-heading2">制約</h2>
+
+<ul class="ndoc-indent">
+<li>入力は全て整数である</li>
+<li>\( 2 \leq w, h \leq 10^{5}(= 100000) \)</li>
+<li>\( 0 \leq n \leq 10^{5}(= 100000) \)</li>
+<li>\( 1 \leq g_{x}, x_{i} \leq w \)</li>
+<li>\( 1 \leq g_{y}, y_{i} \leq h \)</li>
+<li>\( (x_{i}, y_{i}) \not = (g_{x}, g_{y}) (1 \leq i \leq n)
+\)</li>
+<li>\( (x_{i}, y_{i}) \not = (x_{j}, y_{j}) (i \not = j) \)</li>
+<li>\( r_{i} \in \{ L, R \} (1 \leq i \leq m) \)</li>
+<li>\( 1 \leq m \leq 20 \)</li>
+</ul>
+<h2 class="ndoc-heading2">入出力例</h2>
+<h3 class="ndoc-heading3">入力1</h3>
+
+<pre>
+3 3 3 2 2
+1 1
+2 2
+RL
+</pre>
+<h3 class="ndoc-heading3">出力1</h3>
+
+<pre>
+9
+</pre>
+<p>以下の5通りの歩行に加え、 目的座標を開始座標とする歩行（4通り）が目的座標を通過する。</p>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_uecpc2013_files_lost_sample_1" alt="http://k-operafan.info/static/uecpc2013/files/lost_sample_1.png" width="600">
+<h3 class="ndoc-heading3">入力2</h3>
+
+<pre>
+4 4 3 1 4
+1 1
+3 2
+1 3
+4 3
+RR
+</pre>
+<h3 class="ndoc-heading3">出力2</h3>
+
+<pre>
+13
+</pre>
+<p>以下の開始座標・進行方向から開始する歩行は目的座標を通過する。</p>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_uecpc2013_files_lost_sample_2" alt="http://k-operafan.info/static/uecpc2013/files/lost_sample_2.png" width="300">
+<h3 class="ndoc-heading3">入力3</h3>
+
+<pre>
+100000 100000 46597 49716 17
+38713 77141
+46598 78075
+66177 49715
+58569 77142
+48303 12742
+32829 65105
+32830 78076
+70273 27408
+48302 21196
+27119 54458
+38714 65104
+46598 54457
+27118 12743
+60242 21197
+60241 1101
+58568 27409
+93581 1100
+LLRRLLLLRRLL
+</pre>
+<h3 class="ndoc-heading3">出力3</h3>
+
+<pre>
+647505
+</pre>

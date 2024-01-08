@@ -1,0 +1,107 @@
+<span class="lang-en">
+<p>Score : <var>100</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>There are <var>N</var> flowers arranged in a row.
+For each <var>i</var> (<var>1 \leq i \leq N</var>), the height and the beauty of the <var>i</var>-th flower from the left is <var>h_i</var> and <var>a_i</var>, respectively.
+Here, <var>h_1, h_2, \ldots, h_N</var> are all distinct.</p>
+<p>Taro is pulling out some flowers so that the following condition is met:</p>
+<ul>
+<li>The heights of the remaining flowers are monotonically increasing from left to right.</li>
+</ul>
+<p>Find the maximum possible sum of the beauties of the remaining flowers.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li>All values in input are integers.</li>
+<li><var>1 \leq N \leq 2 × 10^5</var></li>
+<li><var>1 \leq h_i \leq N</var></li>
+<li><var>h_1, h_2, \ldots, h_N</var> are all distinct.</li>
+<li><var>1 \leq a_i \leq 10^9</var></li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+<var>h_1</var> <var>h_2</var> <var>\ldots</var> <var>h_N</var>
+<var>a_1</var> <var>a_2</var> <var>\ldots</var> <var>a_N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the maximum possible sum of the beauties of the remaining flowers.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>4
+3 1 4 2
+10 20 30 40
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>60
+</pre>
+<p>We should keep the second and fourth flowers from the left.
+Then, the heights would be <var>1, 2</var> from left to right, which is monotonically increasing, and the sum of the beauties would be <var>20 + 40 = 60</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>1
+1
+10
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>10
+</pre>
+<p>The condition is met already at the beginning.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>5
+1 2 3 4 5
+1000000000 1000000000 1000000000 1000000000 1000000000
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>5000000000
+</pre>
+<p>The answer may not fit into a 32-bit integer type.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 4</h3><pre>9
+4 2 5 8 3 6 1 7 9
+6 8 8 4 6 3 5 7 5
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 4</h3><pre>31
+</pre>
+<p>We should keep the second, third, sixth, eighth and ninth flowers from the left.</p></section>
+</div>
+</span>

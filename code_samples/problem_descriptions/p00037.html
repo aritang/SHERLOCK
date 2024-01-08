@@ -1,0 +1,79 @@
+
+
+
+<H1>格子上の経路</H1>
+
+<p>
+上から見ると図 1 のような形の格子状の広場があります。この格子の各辺に「壁」があるかないかを 0 と 1 の並びで表します。点 A に立って壁に右手をつき、壁に右手をついたまま、矢印の方向に歩き続けて再び点 A に戻ってくるまでの経路を出力するプログラムを作成してください。
+</p>
+<center>
+<table>
+<tr><th>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE1_pathOnGrid1">
+</t></tr>
+</table>
+<table>
+<tr><th>
+図1
+</th></tr>
+</table>
+</center>
+<br/>
+
+<H2>Input</H2>
+
+<p>
+入力は９行からなり、以下の図 2 に示すように、壁がある場合を 1、ない場合を 0 として、以下の形式で与えられます。
+<br><br>
+1 行目は一番上の横線の壁の有無を左から 0 と 1 で表した文字列<br>
+2 行目はその下の縦線の壁の有無を左から0 と1 で表した文字列<br>
+3 行目は上から2 本目の横線の壁の有無を左から0 と1 で表した文字列<br>
+...<br>
+9 行目は一番下の横線の壁の有無を左から0 と1 で表した文字列<br>
+</p>
+
+<center>
+<table>
+<tr><th>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE1_pathOnGrid2">
+</th></tr>
+<tr><th>
+図2 (壁あるところを太線で表しています)　　(対応する数字のならび)
+</th></tr>
+</table>
+</center>
+<br/>
+
+<p>
+ただし、図１の太線に示すように、点 A から右に 1 区画分は必ず壁があるものとします。すなわち、1 行目の 1 文字目は常に 1 です。
+</p>
+
+<H2>Output</H2>
+
+
+<p>
+「図の左方向に一区画分進む」を '<span>L</span>'、「図の右方向に一区画分進む」を '<span>R</span>'、「図の上方向に一区画分進む」を '<span>U</span>'、「図の下方向に一区画分進む」を '<span>D</span>' で表わし、進む順に '<span>L</span>', '<span>R</span>', '<span>U</span>', '<span>D</span>' を１行に並べて出力します。
+</p>
+
+
+<H2>Sample Input</H2>
+
+<pre>
+1111
+00001
+0110
+01011
+0010
+01111
+0010
+01001
+0111
+</pre>
+
+<H2>Output for the Sample Input</H2>
+
+<pre>
+RRRRDDDDLLLUUURRDDLURULLDDDRRRUUUULLLL
+</pre>
+
+

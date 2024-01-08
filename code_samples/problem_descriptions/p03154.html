@@ -1,0 +1,71 @@
+<span class="lang-en">
+<p>Score : <var>900</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>There is a rectangular sheet of paper with height <var>H+1</var> and width <var>W+1</var>. We introduce an <var>xy</var>-coordinate system so that the four corners of the sheet are <var>(0, 0)</var>, <var>(W + 1, 0)</var>, <var>(0, H + 1)</var> and <var>(W + 1, H + 1)</var>.</p>
+<p>This sheet can be cut along the lines <var>x = 1,2,...,W</var> and the lines <var>y = 1,2,...,H</var>. Consider a sequence of operations of length <var>K</var> where we choose <var>K</var> of these <var>H + W</var> lines and cut the sheet along those lines one by one in some order.</p>
+<p>Let the score of a cut be the number of pieces of paper that exist just after the cut. The score of a sequence of operations is the sum of the scores of all of the <var>K</var> cuts.</p>
+<p>Find the sum of the scores of all possible sequences of operations of length <var>K</var>. Since this value can be extremely large, print the number modulo <var>10^9 + 7</var>.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 \leq H,W \leq 10^7</var></li>
+<li><var>1 \leq K \leq H + W</var></li>
+<li><var>H, W</var> and <var>K</var> are integers.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>H</var> <var>W</var> <var>K</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the sum of the scores, modulo <var>10^9 + 7</var>.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>2 1 2
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>34
+</pre>
+<p>Let <var>x_1</var>, <var>y_1</var> and <var>y_2</var> denote the cuts along the lines <var>x = 1</var>, <var>y = 1</var> and <var>y = 2</var>, respectively. The six possible sequences of operations and the score of each of them are as follows:</p>
+<ul>
+<li><var>y_1, y_2</var>: <var>2 + 3 = 5</var></li>
+<li><var>y_2, y_1</var>: <var>2 + 3 = 5</var></li>
+<li><var>y_1, x_1</var>: <var>2 + 4 = 6</var></li>
+<li><var>y_2, x_1</var>: <var>2 + 4 = 6</var></li>
+<li><var>x_1, y_1</var>: <var>2 + 4 = 6</var></li>
+<li><var>x_1, y_2</var>: <var>2 + 4 = 6</var></li>
+</ul>
+<p>The sum of these is <var>34</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>30 40 50
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>616365902
+</pre>
+<p>Be sure to print the sum modulo <var>10^9 + 7</var>.</p></section>
+</div>
+</span>

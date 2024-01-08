@@ -1,0 +1,88 @@
+<span class="lang-en">
+<p>Score : <var>1400</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>We will recursively define <em>uninity</em> of a tree, as follows: (<em>Uni</em> is a Japanese word for sea urchins.)</p>
+<ul>
+<li>A tree consisting of one vertex is a tree of uninity <var>0</var>.</li>
+<li>Suppose there are zero or more trees of uninity <var>k</var>, and a vertex <var>v</var>. If a vertex is selected from each tree of uninity <var>k</var> and connected to <var>v</var> with an edge, the resulting tree is a tree of uninity <var>k+1</var>.</li>
+</ul>
+<p>It can be shown that a tree of uninity <var>k</var> is also a tree of uninity <var>k+1,k+2,...</var>, and so forth.</p>
+<p>You are given a tree consisting of <var>N</var> vertices.
+The vertices of the tree are numbered <var>1</var> through <var>N</var>, and the <var>i</var>-th of the <var>N-1</var> edges connects vertices <var>a_i</var> and <var>b_i</var>.</p>
+<p>Find the minimum <var>k</var> such that the given tree is a tree of uninity <var>k</var>.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>2 ≦ N ≦ 10^5</var></li>
+<li><var>1 ≦ a_i, b_i ≦ N(1 ≦ i ≦ N-1)</var></li>
+<li>The given graph is a tree.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>The input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+<var>a_1</var> <var>b_1</var>
+:
+<var>a_{N-1}</var> <var>b_{N-1}</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the minimum <var>k</var> such that the given tree is a tree of uninity <var>k</var>.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>7
+1 2
+2 3
+2 4
+4 6
+6 7
+7 5
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>2
+</pre>
+<p>A tree of uninity <var>1</var> consisting of vertices <var>1</var>, <var>2</var>, <var>3</var> and <var>4</var> can be constructed from the following: a tree of uninity <var>0</var> consisting of vertex <var>1</var>, a tree of uninity <var>0</var> consisting of vertex <var>3</var>, a tree of uninity <var>0</var> consisting of vertex <var>4</var>, and vertex <var>2</var>.</p>
+<p>A tree of uninity <var>1</var> consisting of vertices <var>5</var> and <var>7</var> can be constructed from the following: a tree of uninity <var>1</var> consisting of vertex <var>5</var>, and vertex <var>7</var>.</p>
+<p>A tree of uninity <var>2</var> consisting of vertices <var>1</var>, <var>2</var>, <var>3</var>, <var>4</var>, <var>5</var>, <var>6</var> and <var>7</var> can be constructed from the following: a tree of uninity <var>1</var> consisting of vertex <var>1</var>, <var>2</var>, <var>3</var> and <var>4</var>, a tree of uninity <var>1</var> consisting of vertex <var>5</var> and <var>7</var>, and vertex <var>6</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>12
+1 2
+2 3
+2 4
+4 5
+5 6
+6 7
+7 8
+5 9
+9 10
+10 11
+11 12
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>3
+</pre></section>
+</div>
+</span>

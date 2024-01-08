@@ -1,0 +1,99 @@
+
+
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({ tex2jax: { inlineMath: [["$","$"], ["\\(","\\)"]], processEscapes: true }});
+</script>
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+
+<H1>静かな町</H1>
+
+<p>
+  アイヅ国では、毎年、駅伝大会が開催されています。アイヅ国には <var>N</var> 個の町が点在しており、それぞれ 1 から <var>N</var> までの番号が付いています。いくつかの町の間は、互いに直接行き来できる道でつながっています。また、どの町の間もいくつかの道を辿って行き来ができます。大会のコースは、次のようにして決めます。
+</p>
+
+<ul>
+<li> ２つの町のすべての組み合わせについて、最短経路の距離を求める。</li>
+<li> それらの中で、最短経路の距離が最大になるような２つの町を、スタートの町とゴールの町とする。町の組み合わせが複数ある場合、そのうちのどれか一つを選ぶ。</li>
+<li> 選ばれたスタートの町とゴールの町の間の最短経路を大会のコースとする。最短経路が複数ある場合、そのうちのどれか一つを選ぶ。</li>
+</ul>
+
+<p>
+ヤマト国から来たお坊さんのトクイツは、アイヅ国のできるだけ静かな町に新しいお寺を開きたいと考えています。そのため、駅伝大会のコースに使われる可能性がない町を知りたがっています。
+</p>
+
+<br/>
+
+<p>
+アイヅ国の町を結ぶ道の情報が与えられたとき、駅伝大会のコースに使われる可能性がない町を求めるプログラムを作成せよ。
+</p>
+
+
+<h2>Input</h2>
+
+<p>
+  入力は以下の形式で与えられる。
+</p>
+
+<pre>
+<var>N</var> <var>R</var>
+<var>s<sub>1</sub></var> <var>t<sub>1</sub></var> <var>d<sub>1</sub></var>
+<var>s<sub>2</sub></var> <var>t<sub>2</sub></var> <var>d<sub>2</sub></var>
+:
+<var>s<sub>R</sub></var> <var>t<sub>R</sub></var> <var>d<sub>R</sub></var>
+</pre>
+
+<p>
+１行目に町の数 <var>N</var> (2 &le; <var>N</var> &le; 1500) と、町の間を直接つなぐ道の数 <var>R</var> (1 &le; <var>R</var> &le; 3000) が与えられる。続く <var>R</var> 行に２つの町を双方向に直接つなぐ道が与えられる。<var>s<sub>i</sub></var> と <var>t<sub>i</sub></var> (1 &le; <var>s<sub>i</sub></var> &lt; <var>t<sub>i</sub></var> &le; <var>N</var>) は <var>i</var> 番目の道がつなぐ２つの町の番号を表し、<var>d<sub>i</sub></var> (1 &le; <var>d<sub>i</sub></var> &le; 1000) はその道の長さを表す。ただし、どの２つの町についても、それらを直接つなぐ道は高々１本とする。
+</p>
+
+<h2>Output</h2>
+
+<p>
+与えられた道の情報に対して、駅伝大会のコースになることがない町をすべて出力する。１行目に駅伝大会のコースになることがない町の数 <var>M</var> を出力する。続く <var>M</var> 行に、そのような町の番号を昇順で出力する。
+</p>
+
+<h2>Sample Input 1</h2>
+
+<pre>
+4 5
+1 2 2
+1 3 2
+2 3 1
+2 4 2
+3 4 1
+</pre>
+
+<h2>Sample Output 1</h2>
+<pre>
+1
+2
+</pre>
+
+<h2>Sample Input 2</h2>
+
+<pre>
+7 11
+1 2 2
+1 3 1
+2 4 2
+2 5 2
+2 6 1
+3 4 1
+3 5 1
+3 6 1
+4 7 2
+5 7 2
+6 7 1
+</pre>
+
+<h2>Sample Output 2</h2>
+
+<pre>
+3
+2
+4
+5
+</pre>

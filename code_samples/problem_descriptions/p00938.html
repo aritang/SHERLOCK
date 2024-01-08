@@ -1,0 +1,142 @@
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({ tex2jax: { inlineMath: [["$","$"], ["\\(","\\)"]], processEscapes: true }});
+</script>
+<script type='text/javascript' src='http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
+</script>
+
+
+<h2>Problem D
+Wall Clocks</h2>
+
+<p>
+You are the manager of a chocolate sales team. Your team customarily takes tea breaks every two hours, during which varieties of new chocolate products of your company are served. Everyone looks forward to the tea breaks so much that they frequently give a glance at a wall clock.
+</p>
+
+<p>
+Recently, your team has moved to a new office. You have just arranged desks in the office. One team member asked you to hang a clock on the wall in front of her desk so that she will not be late for tea breaks. Naturally, everyone seconded her.
+</p>
+
+<p>
+You decided to provide an enough number of clocks to be hung in the field of view of everyone. Your team members will be satisfied if they have at least one clock (regardless of the orientation of the clock) in their view, or, more precisely, within 45 degrees left and 45 degrees right (both ends inclusive) from the facing directions of their seats. In order to buy as few clocks as possible, you should write a program that calculates the minimum number of clocks needed to
+meet everyone's demand.
+</p>
+
+<p>
+The office room is rectangular aligned to north-south and east-west directions. As the walls are tall enough, you can hang clocks even above the door and can assume one's eyesight is not blocked by other members or furniture. You can also assume that each clock is a point (of size zero), and so you can hang a clock even on a corner of the room.
+</p>
+
+<p>
+For example, assume that there are two members. If they are sitting facing each other at positions shown in Figure D.1(A), you need to provide two clocks as they see distinct sections of the wall. If their seats are arranged as shown in Figure D.1(B), their fields of view have a common point on the wall. Thus, you can meet their demands by hanging a single clock at the point. In Figure D.1(C), their fields of view have a common wall section. You can meet their demands with a single clock by hanging it anywhere in the section. Arrangements (A), (B), and (C) in Figure D.1 correspond to Sample Input 1, 2, and 3, respectively.
+</p>
+
+
+<h3>Input</h3>
+
+<p>
+The input consists of a single test case, formatted as follows.<br>
+<br>
+
+$n$ $w$ $d$<br>
+$x_1$ $y_1$ $f_1$<br>
+...<br>
+$x_n$ $y_n$ $f_n$<br>
+<br>
+</p>
+
+<center>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_ICPCAsia2015_WallClocks" width="680"><br>
+<p>Figure D.1. Arrangements of seats and clocks. Gray area indicates field of view.</p>
+</center>
+
+<p>
+All numbers in the test case are integers. The first line contains the number of team members $n$ $(1 \leq n \leq 1,000)$ and the size of the office room $w$ and $d$ $(2 \leq w, d \leq 100,000)$. The office room has its width $w$ east-west, and depth $d$ north-south. Each of the following $n$ lines indicates the position and the orientation of the seat of a team member. Each member has a seat at a distinct position $(x_i, y_i)$ facing the direction $f_i$, for $i = 1, ..., n$. Here $1 \leq x_i \leq w - 1, 1 \leq y_i \leq d - 1$, and $f_i$ is one of <span>N</span>, <span>E</span>, <span>W</span>, and <span>S</span>, meaning north, east, west, and south, respectively. The position $(x, y)$ means $x$ distant from the west wall and $y$ distant from the south wall.
+</p>
+
+
+<h3>Output</h3>
+
+<p>
+Print the minimum number of clocks needed.
+</p>
+
+
+<h3>Sample Input 1</h3>
+
+<pre>2 10 6
+4 4 E
+6 4 W</pre>
+
+<h3>Sample Output 1</h3>
+
+<pre>2</pre>
+
+
+
+<h3>Sample Input 2</h3>
+
+<pre>2 10 6
+2 4 E
+6 4 W</pre>
+
+<h3>Sample Output 2</h3>
+
+<pre>1</pre>
+
+
+
+<h3>Sample Input 3</h3>
+
+<pre>2 10 6
+3 2 S
+6 4 W</pre>
+
+<h3>Sample Output 3</h3>
+
+<pre>1</pre>
+
+
+
+
+<h3>Sample Input 4</h3>
+
+<pre>6 10 6
+1 5 N
+7 1 N
+8 2 E
+9 1 S
+4 4 S
+3 3 W</pre>
+
+<h3>Sample Output 4</h3>
+
+<pre>3</pre>
+
+
+
+<h3>Sample Input 5</h3>
+
+<pre>4 10 6
+4 3 W
+2 4 N
+4 4 W
+3 3 S</pre>
+
+<h3>Sample Output 5</h3>
+
+<pre>2</pre>
+
+
+
+
+<h3>Sample Input 6</h3>
+
+<pre>4 100000 40000
+25000 25000 S
+20000 30000 S
+75000 25000 S
+80000 30000 S</pre>
+
+<h3>Sample Output 6</h3>
+
+<pre>1</pre>

@@ -1,0 +1,176 @@
+
+<H1><font color="#000">Problem J:</font> Infected Land</H1>
+
+<p>
+The earth is under an attack of a deadly virus. Luckily, prompt actions of the Ministry of
+Health against this emergency successfully confined the spread of the infection within a square
+grid of areas. Recently, public health specialists found an interesting pattern with regard to the
+transition of infected areas. At each step in time, every area in the grid changes its infection
+state according to infection states of its directly (horizontally, vertically, and diagonally) adjacent
+areas.
+</p>
+
+<ul>
+    <li> An infected area continues to be infected if it has two or three adjacent infected areas.</li>
+    <li> An uninfected area becomes infected if it has exactly three adjacent infected areas.</li>
+    <li> An area becomes free of the virus, otherwise.</li>
+</ul>
+
+<p>
+Your mission is to fight against the virus and disinfect all the areas. The Ministry of Health
+lets an anti-virus vehicle prototype under your command. The functionality of the vehicle is
+summarized as follows.
+</p>
+
+<ul>
+    <li> At the beginning of each time step, you move the vehicle to one of the eight adjacent areas.
+      The vehicle is not allowed to move to an infected area (to protect its operators from the
+      virus). It is not allowed to stay in the same area.</li>
+    <li> Following vehicle motion, all the areas, except for the area where the vehicle is in, change
+      their infection states according to the transition rules described above.<br>
+      Special functionality of the vehicle protects its area from virus infection even if the area
+      is adjacent to exactly three infected areas. Unfortunately, this virus-protection capability
+      of the vehicle does not last. Once the vehicle leaves the area, depending on the infection
+      states of the adjacent areas, the area can be infected.<br>
+      The area where the vehicle is in, which is <i>uninfected</i>, has the same effect to its adjacent
+      areas as an <i>infected</i> area as far as the transition rules are concerned.</li>
+</ul>
+
+<p>
+The following series of figures illustrate a sample scenario that successfully achieves the goal.
+</p>
+
+<p>
+Initially, your vehicle denoted by <span>@</span> is found at (1, 5) in a 5 &times; 5-grid of areas, and you see some
+infected areas which are denoted by <span>#</span>'s.
+</p>
+
+<center>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE1_infectedLand">
+</center>
+
+<p>
+Firstly, at the beginning of time step 1, you move your vehicle diagonally to the southwest,
+that is, to the area (2, 4). Note that this vehicle motion was possible because this area was not
+infected at the start of time step 1.
+</p>
+
+<p>
+Following this vehicle motion, infection state of each area changes according to the transition
+rules. The column "1-end" of the figure illustrates the result of such changes at the end of time
+step 1. Note that the area (3, 3) becomes infected because there were two adjacent infected areas
+and the vehicle was also in an adjacent area, three areas in total.
+</p>
+
+<p>
+In time step 2, you move your vehicle to the west and position it at (2, 3).
+</p>
+
+<p>
+Then infection states of other areas change. Note that even if your vehicle had exactly three
+infected adjacent areas (west, southwest, and south), the area that is being visited by the vehicle
+is <i>not</i> infected. The result of such changes at the end of time step 2 is as depicted in "2-end".
+</p>
+
+<p>
+Finally, in time step 3, you move your vehicle to the east. After the change of the infection
+states, you see that all the areas have become virus free! This completely disinfected situation
+is the goal. In the scenario we have seen, you have successfully disinfected all the areas in three
+time steps by commanding the vehicle to move (1) southwest, (2) west, and (3) east.
+</p>
+
+<p>
+Your mission is to find the length of the shortest sequence(s) of vehicle motion commands that
+can successfully disinfect all the areas.
+</p>
+
+<H2>Input</H2>
+
+<p>
+The input is a sequence of datasets. The end of the input is indicated by a line containing a
+single zero. Each dataset is formatted as follows.
+</p>
+
+<p>
+        <i>n</i><br>
+       <i>a</i><sub>11</sub>   <i>a</i><sub>12</sub> ...   <i>a</i><sub>1<i>n</i></sub><br>
+       <i>a</i><sub>21</sub>   <i>a</i><sub>22</sub> ...   <i>a</i><sub>2<i>n</i></sub><br>
+...<br>
+       <i>a</i><sub><i>n</i>1</sub>   <i>a</i><sub><i>n</i>2</sub> ...   <i>a</i><sub><i>nn</i></sub><br>
+</p>
+
+<p>
+Here, <i>n</i> is the size of the grid. That means that the grid is comprised of <i>n</i> &times; <i>n</i> areas. You
+may assume 1 &le; <i>n</i> &le; 5. The rest of the dataset consists of <i>n</i> lines of <i>n</i> letters. Each letter <i>a<sub>ij</sub></i>
+specifies the state of the area at the beginning: '<span>#</span>' for infection, '<span>.</span>' for free of virus, and '<span>@</span>' for
+the initial location of the vehicle. The only character that can appear in a line is '<span>#</span>', '<span>.</span>', or '<span>@</span>'.
+Among <i>n</i> &times; <i>n</i> areas, there exists exactly one area which has '<span>@</span>'.
+</p>
+
+<H2>Output</H2>
+
+<p>
+For each dataset, output the minimum number of time steps that is required to disinfect all the
+areas. If there exists no motion command sequence that leads to complete disinfection, output
+<span>-1</span>. The output should not contain any other extra character.
+
+</p>
+
+<H2>Sample Input</H2>
+<pre>
+3
+...
+.@.
+...
+3
+.##
+.#.
+@##
+3
+##.
+#..
+@..
+5
+....@
+##...
+#....
+...#.
+##.##
+5
+#...#
+...#.
+#....
+...##
+..@..
+5
+#....
+.....
+.....
+.....
+..@..
+5
+#..#.
+#.#.#
+.#.#.
+....#
+.#@##
+5
+..##.
+..#..
+#....
+#....
+.#@..
+0
+</pre>
+
+<H2>Output for the Sample Input</H2>
+<pre>
+0
+10
+-1
+3
+2
+1
+6
+4
+</pre>

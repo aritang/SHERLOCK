@@ -1,0 +1,316 @@
+
+
+<h1> Markup language has Declined</h1>
+<h2> E: マークアップ言語は衰退しました</h2>
+<p>
+わたしたち人類がゆるやかな衰退を迎えて，はや数世紀．
+すでに地球は”ぷろぐらまー”のものだったりします．
+平均身長170センチで7頭身，高い知能を持ち，こーでぃんぐが大好きなぷろぐらまーさんたち．
+わたしは，そんなぷろぐらまーさんと人との間を取り持つ重要な職，国際公務員の” えすいー ”となり，故郷のニブンキの里に帰ってきました．
+祖父の年齢でも現役でできる仕事なのだから，さぞや楽なのだろうとこの職を選んだのですが…．
+</p>
+<p>
+ある日，ぷろぐらまーさんたちが渡してくれたのは，2枚の設計書のようなもの．
+そのぷろぐらまーさん曰く，テキストとスクリプトを利用して，様々な情報を容易に交換できるのだと言います．
+</p>
+<p>
+1枚目の設計書は，文章構造を表すファイルの説明でした．
+このファイルのファイル名が.dmlで終わり，DMLファイルと呼ばれます．
+</p>
+<p>
+DMLファイルの中は，タグと呼ばれる文字列で挟むことで文章の構造を表しています．
+タグは，開始タグと終了タグが存在し，
+</p>
+<pre>
+&lt;開始タグ名&gt;内容&lt;/終了タグ名&gt;
+</pre>
+<p>
+の要素で表されます．
+このとき，開始タグ名と終了タグ名は同じ文字列で表されます．
+</p>
+<p>
+タグは入れ子構造にすることができ，&lt;tagA&gt;&lt;tagB&gt;&lt;/tagB&gt;&lt;/tagA&gt;のようにしても構いません．
+また，&lt;tagA&gt;&lt;tagB&gt;&lt;/tagA&gt;&lt;/tagB&gt;のような構造は許されません．
+</p>
+<p>
+DMLファイル内のタグ名はいくつか特殊なものを除いて任意の文字列です．
+特殊なタグは以下の5つです．
+</p>
+<ul>
+<li> タグ名：dml</li>
+ <ul>
+<li> 全てのタグの根を表します．</li>
+ </ul>
+ <ul>
+<li> この開始タグは必ずファイルの先頭1度だけに現れ，このタグの終了タグはファイルの末尾に1度だけ出現します．</li>
+ </ul>
+<li> タグ名：script</li>
+ <ul>
+<li> 必ずdmlタグで囲まれた中で先頭，もしくはこの終了タグに連続して現れます．</li>
+ </ul>
+ <ul>
+<li> このタグは内部に入れ子構造を持つことが出来ません．</li>
+ </ul>
+ <ul>
+<li> このタグに囲まれたスクリプトファイルを関連付けます．</li>
+ </ul>
+ <ul>
+<li> このタグに囲まれた文字列は出力されません．</li>
+ </ul>
+<li> タグ名：br</li>
+ <ul>
+<li> 表示に際し，改行を行います．</li>
+ </ul>
+ <ul>
+<li> 終了タグを持ちません．</li>
+ </ul>
+<li> タグ名：link</li>
+ <ul>
+<li> このタグは内部に入れ子構造を持つことが出来ません．</li>
+ </ul>
+ <ul>
+<li> ユーザがこのタグに囲まれた文字列をクリックすると，現在の画面全てを消去し，その文字列で表されるファイル名のDMLファイルを表示します．</li>
+ </ul>
+<li> タグ名：button</li>
+ <ul>
+<li> このタグは内部に入れ子構造を持つことが出来ません．</li>
+ </ul>
+ <ul>
+<li> ユーザがこのタグに囲まれた文字列をクリックすると，scriptタグによって関連付けられているスクリプトの中から，その文字列で表される名前のサブルーチンを実行します．</li>
+ </ul>
+</ul>
+<p>
+
+タグ名は，アルファベットの大文字，小文字のみで表されます．
+タグ名にスペースが現れることはありません．
+DMLファイル中に現れる文字列は，アルファベットの大文字，小文字，スペース，'&lt;'，'&gt;'，'/'となります．
+また，同名のタグが存在することもありえます．
+</p>
+<p>
+scriptタグ以外で囲まれたタグ以外の文字列は，画面の左上(0, 0)から左詰めで出力され，
+画面端かbrタグが出現するまで改行されません．
+</p>
+<p>
+2枚目の設計書は，DMLファイル中のボタンを押した時の動作を表すDSファイルの説明でした．
+DSファイルは，サブルーチンが並べられています．
+</p>
+<pre>
+サブルーチン名 {
+ 式;
+ 式;
+ ...;
+}
+</pre>
+<p>
+
+セミコロンは式の終わりを表します．
+</p>
+<p>
+例えば，DMLファイル中に，&lt;title&gt;?&lt;/title&gt;で囲まれた文章があるとします．
+そのとき可能な式は以下の4つの代入式です．
+</p>
+<pre>
+title.visible = true;
+title.visible = false;
+title.visible != true;
+title.visible != false;
+</pre>
+<p>
+
+visibleへの真偽値の代入は，そのタグの内容を表示するかしないかを変更します．表示され無くなった場合には，それ以降の文章は左に詰められます．
+最初やlinkタグのクリックによって現在表示しているDMLファイルが書き変わった時，初期値は全てtrueになっています．
+</p>
+<p>
+'!='は否定の代入を表します．
+上の例では，1行目と4行目，2行目と3行目はそれぞれ等価です．
+</p>
+<p>
+また式は，以下のように複数の値を同時に変更することもできます．
+</p>
+<pre>
+titleA.visible = titleB.visible = true;
+</pre>
+<p>
+この時，右から順に処理が行われます．
+すなわち，
+</p>
+<pre>
+titleB.visible = true;
+titleA.visible = titleB.visible;
+</pre>
+<p>
+の2行と等価です．
+ただし，この表し方は便宜上であって，スクリプト内で文の最も右において，タグによる指定が行われることはありません．
+また，
+</p>
+<pre>
+titleA.visible != titleB.visible = true;
+</pre>
+<p>
+は
+</p>
+<pre>
+titleB.visible = true;
+titleA.visible != titleB.visible;
+</pre>
+<p>
+と等価です．
+</p>
+<p>
+タグの指定方法は，'.'で絞り込むことによって行われます．
+例えば，
+</p>
+<pre>
+dml.body.title
+</pre>
+<p>
+は，dmlタグに囲まれた，bodyタグに囲まれた，titleタグを指します．
+ただし，scriptタグとbrタグが絞り込みにつかわれたり，指定されることはありません．
+</p>
+<p>
+このとき，絞り込まれる要素が直接囲まれているとは限らないことに注意して下さい．
+例えば， &lt;a&gt;&lt;b&gt;&lt;c&gt;&lt;/c&gt;&lt;/b&gt;&lt;/a&gt; とあるとき，a.b.cでもa.cでもcを指すことができます．
+</p>
+<p>
+また，同名のタグが存在する場合には，指定されたタグが1つとは限りません．
+指定したタグが存在しない場合には，表示に影響は与えられませんが，複数の値を同時に変更する際に現れた場合には，存在している場合と同様に評価されます．
+</p>
+<p>
+BNFは以下のようになります．
+</p>
+<pre>
+&lt;script_file&gt; :: = &lt;subroutine&gt; | &lt;script_file&gt; &lt;subroutine&gt;
+&lt;subroutine&gt; ::= &lt;identifier&gt; '{' &lt;expressions&gt; '}'
+&lt;expressions&gt; ::= &lt;expression&gt; ';' | &lt;expressions&gt; &lt;expression&gt; ';'
+&lt;expression&gt; ::= &lt;visible_var&gt; '=' &lt;visible_exp_right&gt;
+                   | &lt;visible_var&gt; '!=' &lt;visible_exp_right&gt;
+                   | &lt;visible_var&gt; '=' &lt;expression&gt;
+                   | &lt;visible_var&gt; '!=' &lt;expression&gt;
+&lt;visible_exp_right&gt; ::= 'true' | 'false'
+&lt;visible_var&gt; ::= &lt;selector&gt; '.visible'
+&lt;selector&gt; ::= &lt;identifier&gt; | &lt;selector&gt; '.' &lt;identifier&gt;
+&lt;identifier&gt; ::= &lt;alphabet&gt; | &lt;identifier&gt; &lt;alphabet&gt;
+&lt;alphabet&gt; ::= 'a' | 'b' | 'c' | 'd' | 'e' | 'f' | 'g'
+                 | 'h' | 'i' | 'j' | 'k' | 'l' | 'm' | 'n'
+                 | 'o' | 'p' | 'q' | 'r' | 's' | 't' | 'u'
+                 | 'v' | 'w' | 'x' | 'y' | 'z'
+                 | 'A' | 'B' | 'C' | 'D' | 'E' | 'F' | 'G'
+                 | 'H' | 'I' | 'J' | 'K' | 'L' | 'M' | 'N'
+                 | 'O' | 'P' | 'Q' | 'R' | 'S' | 'T' | 'U'
+                 | 'V' | 'W' | 'X' | 'Y' | 'Z'
+</pre>
+<p>
+
+頭が痛くなりそうですね．ならないですか？そうですか．
+</p>
+<p>
+ユーザは，最初のDMLファイルが表示された後，画面上の座標(<i>x</i>, <i>y</i>)をクリックします．
+すると，その場所のlinkやbuttonに応じて，画面が変化します．
+それ以外の場所をクリックしたらですか？なにも起こりませんよ．流石に．
+</p>
+<p>
+さて，どんなものができるのでしょう？
+大好物のえなじーどりんくでも渡しつつ，見守ることにします．
+</p>
+<h2> Input</h2>
+<p>
+
+入力は，次の形式で与えられる．
+</p>
+<pre>
+<i>N</i>
+<i>filename<sub>1</sub></i>
+<i>file<sub>1</sub></i>
+<i>filename<sub>2</sub></i>
+<i>file<sub>2</sub></i>
+...
+<i>filename<sub>N</sub></i>
+<i>file<sub>N</sub></i>
+<i>M</i>
+<i>w<sub>1</sub></i> <i>h<sub>1</sub></i> <i>s<sub>1</sub></i> <i>startfile<sub>1</sub></i>
+<i>x<sub>11</sub></i> <i>y<sub>11</sub></i>
+...
+<i>x<sub>1s1</sub></i> <i>y<sub>1s1</sub></i>
+...
+<i>w<sub>M</sub></i> <i>h<sub>M</sub></i> <i>s<sub>M</sub></i> <i>startfile<sub>M</sub></i>
+<i>x<sub>M1</sub></i> <i>y<sub>11</sub></i>
+...
+<i>x<sub>MsM</sub></i> <i>y<sub>MsM</sub></i>
+... 
+</pre>
+<p>
+
+<i>N</i>(1 &lt;= <i>N</i> &lt;= 20)は，ファイルの数を表し，その後，ファイル名とファイルの内容が交互に与えられる．
+filenameは，任意のアルファベット16文字に'.dml'または'.ds'が加えられた形で表される．
+'.dml'で終わる場合はDMLファイルであり，'.ds'で終わる場合はDSファイルである．
+ファイルの文字列は一行で与えられ，500文字以下である．
+</p>
+<p>
+<i>M</i>(1 &lt;= <i>M</i> &lt;= 50)は訪れたユーザの数を表す．
+ユーザ1人につき，画面の幅w，高さh(1 &lt;= <i>w * h</i> &lt;= 500)，操作数<i>s</i>(0 &lt;= <i>s</i> &lt;= 50)，開始DMLファイル名と，<i>s</i>行のクリックした座標<i>x</i>, <i>y</i>(0 &lt;= <i>x</i> &lt; <i>w</i>, 0 &lt;= <i>y</i> &lt; <i>h</i>)が与えられる．
+</p>
+<p>
+DSファイルに空白は含まれない．
+また，与えられるDMLファイル中のタグは必ず閉じられている．
+入力の全体を通して，スクリプト内に同名のサブルーチン名が現れることはない．
+</p>
+<h2> Output</h2>
+<p>
+
+ユーザ1人につき，最終的な画面を幅<i>w</i>, 高さ<i>h</i>で出力して下さい．
+画面の右下を超えた分については出力しません．
+ある行において，出力する文字が無くなった場合には，その行が<i>w</i>文字になるまで'.'を出力して下さい．
+</p>
+<h2> Sample Input 1</h2>
+<pre>
+1
+index.dml
+&lt;dml&gt;&lt;title&gt;Markup language has Declined&lt;/title&gt;&lt;br&gt;Programmers world&lt;/dml&gt;
+1
+15 3 0 index
+</pre>
+<h2> Sample Output 1</h2>
+<pre>
+Markup language
+ has Declined..
+Programmers wor
+</pre>
+<h2> Sample Input 2</h2>
+<pre>
+2
+hello.dml
+&lt;dml&gt;&lt;link&gt;cut&lt;/link&gt;&lt;/dml&gt;
+cut.dml
+&lt;dml&gt;hello very short&lt;/dml&gt;
+1
+10 2 1 hello
+1 0
+</pre>
+<h2> Sample Output 2</h2>
+<pre>
+hello very
+ short....
+</pre>
+<h2> Sample Input 3</h2>
+<pre>
+2
+index.dml
+&lt;dml&gt;&lt;script&gt;s&lt;/script&gt;slip&lt;fade&gt;akkariin&lt;/fade&gt;&lt;br&gt;&lt;button&gt;on&lt;/button&gt; &lt;button&gt;off&lt;/button&gt;&lt;/dml&gt;
+s.ds
+on{fade.visible=true;}off{fade.visible!=true;}
+2
+15 3 0 index
+15 3 3 index
+3 1
+1 1
+3 1
+</pre>
+<h2> Sample Output 3</h2>
+<pre>
+slipakkariin...
+on off.........
+...............
+slip...........
+on off.........
+...............
+</pre>

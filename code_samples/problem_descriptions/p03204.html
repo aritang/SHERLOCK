@@ -1,0 +1,113 @@
+<span class="lang-en">
+<p>Score : <var>1200</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>Takahashi's office has <var>N</var> rooms. Each room has an ID from <var>1</var> to <var>N</var>.
+There are also <var>N-1</var> corridors, and the <var>i</var>-th corridor connects Room <var>a_i</var> and Room <var>b_i</var>.
+It is known that we can travel between any two rooms using only these corridors.</p>
+<p>Takahashi has got lost in one of the rooms. Let this room be <var>r</var>.
+He decides to get back to his room, Room <var>1</var>, by repeatedly traveling in the following manner:</p>
+<ul>
+<li>Travel to the room with the smallest ID among the rooms that are adjacent to the rooms already visited, but not visited yet.</li>
+</ul>
+<p>Let <var>c_r</var> be the number of travels required to get back to Room <var>1</var>.
+Find all of <var>c_2,c_3,...,c_N</var>.
+Note that, no matter how many corridors he passes through in a travel, it still counts as one travel.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>2 \leq N \leq 2\times 10^5</var></li>
+<li><var>1 \leq a_i,b_i \leq N</var></li>
+<li><var>a_i \neq b_i</var></li>
+<li>The graph given as input is a tree.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+<var>a_1</var> <var>b_1</var>
+<var>:</var>
+<var>a_{N-1}</var> <var>b_{N-1}</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print <var>c_r</var> for each <var>r</var>, in the following format:</p>
+<pre><var>c_2</var> <var>c_3</var> <var>...</var> <var>c_N</var>
+</pre>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>6
+1 5
+5 6
+6 2
+6 3
+6 4
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>5 5 5 1 5
+</pre>
+<p>For example, if Takahashi was lost in Room <var>2</var>, he will travel as follows:</p>
+<ul>
+<li>Travel to Room <var>6</var>.</li>
+<li>Travel to Room <var>3</var>.</li>
+<li>Travel to Room <var>4</var>.</li>
+<li>Travel to Room <var>5</var>.</li>
+<li>Travel to Room <var>1</var>.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>6
+1 2
+2 3
+3 4
+4 5
+5 6
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>1 2 3 4 5
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>10
+1 5
+5 6
+6 10
+6 4
+10 3
+10 8
+8 2
+4 7
+4 9
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>7 5 3 1 3 4 7 4 5
+</pre></section>
+</div>
+</span>

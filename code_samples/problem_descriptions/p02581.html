@@ -1,0 +1,84 @@
+<span class="lang-en">
+<p>Score : <var>600</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>We have <var>3N</var> cards arranged in a row from left to right, where each card has an integer between <var>1</var> and <var>N</var> (inclusive) written on it. The integer written on the <var>i</var>-th card from the left is <var>A_i</var>.</p>
+<p>You will do the following operation <var>N-1</var> times:</p>
+<ul>
+<li>Rearrange the five leftmost cards in any order you like, then remove the three leftmost cards. If the integers written on those three cards are all equal, you gain <var>1</var> point.</li>
+</ul>
+<p>After these <var>N-1</var> operations, if the integers written on the remaining three cards are all equal, you will gain <var>1</var> additional point.</p>
+<p>Find the maximum number of points you can gain.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 \leq N \leq 2000</var></li>
+<li><var>1 \leq A_i \leq N</var></li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+<var>A_1</var> <var>A_2</var> <var>\cdots</var> <var>A_{3N}</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the maximum number of points you can gain.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>2
+1 2 1 2 2 1
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>2
+</pre>
+<p>Let us rearrange the five leftmost cards so that the integers written on the six cards will be <var>2\ 2\ 2\ 1\ 1\ 1</var> from left to right.</p>
+<p>Then, remove the three leftmost cards, all of which have the same integer <var>2</var>, gaining <var>1</var> point.</p>
+<p>Now, the integers written on the remaining cards are <var>1\ 1\ 1</var>.</p>
+<p>Since these three cards have the same integer <var>1</var>, we gain <var>1</var> more point.</p>
+<p>In this way, we can gain <var>2</var> points - which is the maximum possible.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>3
+1 1 2 2 3 3 3 2 1
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>1
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>3
+1 1 2 2 2 3 3 3 1
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>3
+</pre></section>
+</div>
+</span>

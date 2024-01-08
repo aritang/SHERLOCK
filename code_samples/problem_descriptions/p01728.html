@@ -1,0 +1,175 @@
+
+
+
+<p>
+ヘリリンは二次元平面上における長さ<var>2L</var>の線分の形状をしている。<br>
+ヘリリンのまわりには、線分の形状をしたいくつかの障害物が存在している。
+</p>
+
+<p>ヘリリンは障害物に接すると体力が削られてしまう。<br>
+完璧主義のヘリリンは無傷でゴールすることにした。
+</p>
+
+<p>ヘリリンは以下の行動ができる。
+</p>
+
+<ul>
+<li> 平行移動
+</li>
+<li> ヘリリンを表す線分の中点を中心として、反時計周りにちょうど <var> 180 / r </var> 度だけ回転する
+</li></ul>
+
+<p>ただし、二次元平面は上方向に<var>y</var>軸をとる。
+</p>
+
+<p>ヘリリンのまわりに、2 点 S, G がある。<br>
+始めはヘリリンの中心は点 S にあって、<var>x</var>軸に平行な状態になっている。
+</p>
+
+<p>ヘリリンは、平行移動するのは得意だが、回転するのは不得意である。<br>
+あなたの仕事は、ヘリリンが中心を点 S から点 G まで移動させるまでに必要な、最小の回転行動の回数を求めることである。<br>
+移動させることができない場合は、そのことも検出せよ。
+</p>
+
+<p>
+ただし、以下のことに注意せよ。
+</p>
+
+<ul><li> ヘリリンは移動しながら回転することはできない。
+</li><li> ヘリリンが回転する途中で障害物にぶつかりうる場合は、回転することはできない。
+</li><li> 障害物が互いに交差していることはあり得る。
+</li><li> 線分は十分小さい有限の太さを持つものとして扱う。最後のサンプルを見よ。
+</ul>
+
+
+<h2>Input</h2>
+
+<p>入力は以下の形式で与えられる。
+</p>
+
+<pre>
+<var>L</var> <var>r</var><br><var>s<sub>x</sub></var> <var>s<sub>y</sub></var><br><var>g<sub>x</sub></var> <var>g<sub>y</sub></var><br><var>n</var><br><var>x<sub>11</sub></var> <var>y<sub>11</sub></var> <var>x<sub>12</sub></var> <var>y<sub>12</sub></var><br>...<br><var>x<sub>n1</sub></var> <var>y<sub>n1</sub></var> <var>x<sub>n2</sub></var> <var>y<sub>n2</sub></var></pre>
+
+<p><var>L</var>はヘリリンの半分の長さを表す。
+<var>r</var>は回転角度を定めるものである。
+<var>(s<sub>x</sub>, s<sub>y</sub>)</var>は点 S、<var>(g<sub>x</sub>, g<sub>y</sub>)</var>は点 G の座標である。
+<var>n</var>は障害物の数を表す。
+<var>(x<sub>i1</sub>, y<sub>i1</sub>)</var>と<var>(x<sub>i2</sub>, y<sub>i2</sub>)</var>は<var>i</var>番目の障害物を表す線分の端点である。
+</p>
+
+<h3>Constraints</h3>
+
+<p>入力は以下の制約を満たす。
+</p>
+
+<ul><li> <var> 1 &le; n &le; 30 </var>
+</li><li> <var> 2&le; r &le; 11 </var>
+</li><li> <var> 1 &le; L &le; 10<sup>5</sup> </var>
+</li><li> 入力に含まれる座標の各成分は絶対値が<var>10<sup>5</sup></var>以下
+</li><li> 入力に含まれる数値はすべて整数
+</li><li> <var>i = 1, . . . , n</var>について<var> (x<sub>i1</sub>, y<sub>i1</sub>) &ne; (x<sub>i2</sub>, y<sub>i2</sub>) </var>
+</li><li> ヘリリンをスタート地点にx軸に水平な状態で配置したとき、障害物との（線分と線分との）距離は<var> 10<sup>&minus;3</sup> </var>より大きい
+</li><li> 障害物を表す線分の端点を、両方向に<var> 10<sup>&minus;3</sup> </var>だけ延ばしても縮めても解は変わらない
+</li><li> <var>L</var>を <var> 10<sup>&minus;3</sup> </var>だけ増減させても解は変わらない
+</li><li> 障害物の線分を<var>l<sub>i</sub></var>と書くことにすると、<var>1 &le; i &le; j &le; n</var>であって、<var>l<sub>i</sub></var>と<var>l<sub>j</sub></var>の距離が<var>2L</var>以下であるような組<var>(i, j)</var>は高々100個
+</li><li> ゴール地点は障害物に乗っていることはない
+</li></ul>
+
+
+
+<h2>Output</h2>
+<p>スタート地点からゴール地点まで移動するために必要な最小の回転行動の回数を1行に出力せよ。
+移動させることができない場合は、-1を1行に出力せよ。
+</p>
+
+<h2>Sample Input 1</h2>
+
+<pre>1 2
+3 3
+2 -1
+4
+1 0 1 5
+0 1 4 1
+0 4 6 4
+5 0 5 5
+</pre>
+
+
+<h2>Output for the Sample Input 1</h2>
+
+<pre>1
+</pre>
+<ul><li> ヘリリンを90度回転させることで、隙間を抜けることができる。
+</li></ul>
+
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_JAGSummerCamp2013Day3_KuruKuruKururin_sample1" height="600" width="600"><br>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_JAGSummerCamp2013Day3_KuruKuruKururin_a" height="100" width="700"><br>
+<br>
+
+<h2>Sample Input 2</h2>
+
+<pre>1 2
+3 3
+2 -1
+4
+1 0 1 5
+0 1 6 1
+0 4 6 4
+5 0 5 5
+</pre>
+
+<h2>Output for the Sample Input 2</h2>
+
+<pre>-1
+</pre>
+<ul><li> ヘリリンは完全に囲まれているので、ゴールまで移動することができない。
+</li></ul>
+
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_JAGSummerCamp2013Day3_KuruKuruKururin_sample2" height="600" width="600"><br>
+
+<h2>Sample Input 3</h2>
+
+<pre>1 4
+3 3
+7 0
+5
+1 0 1 5
+0 1 6 1
+0 4 6 4
+8 0 2 5
+6 0 4 2
+</pre>
+
+<h2>Output for the Sample Input 3</h2>
+
+<pre>3
+</pre>
+<ul><li> 斜めの経路を通るためには、3回反時計周りに回転しなければならない。
+</li></ul>
+
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_JAGSummerCamp2013Day3_KuruKuruKururin_sample3" height="600" width="600"><br>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_JAGSummerCamp2013Day3_KuruKuruKururin_b" height="100" width="700"><br>
+<br>
+
+<h2>Sample Input 4</h2>
+
+<pre>2 2
+4 2
+4 5
+5
+1 5 2 0
+0 4 3 4
+0 1 8 1
+7 0 7 5
+8 4 5 4
+</pre>
+
+
+<h2>Output for the Sample Input 4</h2>
+
+<pre>-1
+</pre>
+<ul><li> ヘリリンは障害物にぴったり接することができないので、隙間のところで回転してゴールまで移動することはできない。
+</li></ul>
+
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_JAGSummerCamp2013Day3_KuruKuruKururin_sample4" height="370" width="567">

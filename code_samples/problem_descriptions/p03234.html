@@ -1,0 +1,99 @@
+<span class="lang-en">
+<p>Score : <var>900</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>There are <var>2N</var> points evenly spaced on the circumference of a circle.
+These points are numbered <var>1</var> to <var>2N</var> in clockwise order, starting from some of them.</p>
+<p>Snuke will divide these points into <var>N</var> pairs, then for each pair, he will draw a line segment connecting the two points.
+After the line segments are drawn, two points are <em>connected</em> when one can reach from one of those points to the other by traveling only on the line segments.
+<em>The number of the connected parts</em> here is the number of the connected components in the graph with <var>2N</var> vertices, corresponding to the <var>2N</var> points, where every pair of vertices corresponding to two connected points is connected with an edge.</p>
+<p>Snuke has already decided <var>K</var> of the pairs, and the <var>i</var>-th of them is a pair of Point <var>A_i</var> and Point <var>B_i</var>.</p>
+<p>He is thinking of trying all possible ways to make the remaining <var>N-K</var> pairs and counting the number of the connected parts for each of those ways.
+Find the sum of those numbers of the connected parts.
+As the answer can be extremely large, compute the sum modulo <var>10^9+7</var>.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 \leq N \leq 300</var></li>
+<li><var>0 \leq K \leq N</var></li>
+<li><var>1 \leq A_i,B_i \leq 2N</var></li>
+<li><var>A_1,\ A_2,\ ...\ A_K,\ B_1,\ B_2,\ ...\ B_K</var> are all distinct.</li>
+<li>All values in input are integers.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var> <var>K</var>
+<var>A_1</var> <var>B_1</var>
+<var>A_2</var> <var>B_2</var>
+<var>:</var>
+<var>A_K</var> <var>B_K</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the sum of the numbers of the connected parts for all possible ways to make the remaining <var>N-K</var> pairs.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>2 0
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>5
+</pre>
+<p>There are three ways to draw line segments, as shown below, and the number of the connected parts for these ways are <var>2</var>, <var>2</var> and <var>1</var>, respectively.
+Thus, the answer is <var>2+2+1=5</var>.</p>
+<p><img alt="" src="https://img.atcoder.jp/agc028/b5dcbaf5c8caf26b4e7e4915954565f7.png"/></p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>4 2
+5 2
+6 1
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>6
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>20 10
+10 18
+11 17
+14 7
+4 6
+30 28
+19 24
+29 22
+25 32
+38 34
+36 39
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>27087418
+</pre></section>
+</div>
+</span>

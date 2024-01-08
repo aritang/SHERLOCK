@@ -1,0 +1,129 @@
+<span class="lang-en">
+<p>Score : <var>500</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>A robot is put at the origin in a two-dimensional plane.
+Initially, the robot is facing in the positive <var>x</var>-axis direction.</p>
+<p>This robot will be given an instruction sequence <var>s</var>.
+<var>s</var> consists of the following two kinds of letters, and will be executed in order from front to back.</p>
+<ul>
+<li><code>F</code> : Move in the current direction by distance <var>1</var>.</li>
+<li><code>T</code> : Turn <var>90</var> degrees, either clockwise or counterclockwise.</li>
+</ul>
+<p>The objective of the robot is to be at coordinates <var>(x, y)</var> after all the instructions are executed.
+Determine whether this objective is achievable.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>s</var> consists of <code>F</code> and <code>T</code>.</li>
+<li><var>1 \leq |s| \leq 8</var> <var>000</var></li>
+<li><var>x</var> and <var>y</var> are integers.</li>
+<li><var>|x|, |y| \leq |s|</var></li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>s</var>
+<var>x</var> <var>y</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>If the objective is achievable, print <code>Yes</code>; if it is not, print <code>No</code>.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>FTFFTFFF
+4 2
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>Yes
+</pre>
+<p>The objective can be achieved by, for example, turning counterclockwise in the first <code>T</code> and turning clockwise in the second <code>T</code>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>FTFFTFFF
+-2 -2
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>Yes
+</pre>
+<p>The objective can be achieved by, for example, turning clockwise in the first <code>T</code> and turning clockwise in the second <code>T</code>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>FF
+1 0
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>No
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 4</h3><pre>TF
+1 0
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 4</h3><pre>No
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 5</h3><pre>FFTTFF
+0 0
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 5</h3><pre>Yes
+</pre>
+<p>The objective can be achieved by, for example, turning counterclockwise in the first <code>T</code> and turning counterclockwise in the second <code>T</code>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 6</h3><pre>TTTT
+1 0
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 6</h3><pre>No
+</pre></section>
+</div>
+</span>

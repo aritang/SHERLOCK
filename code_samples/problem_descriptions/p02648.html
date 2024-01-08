@@ -1,0 +1,120 @@
+<span class="lang-en">
+<p>Score : <var>700</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>We have a rooted binary tree with <var>N</var> vertices, where the vertices are numbered <var>1</var> to <var>N</var>.
+Vertex <var>1</var> is the root, and the parent of Vertex <var>i</var> (<var>i \geq 2</var>) is Vertex <var>\left[ \frac{i}{2} \right]</var>.</p>
+<p>Each vertex has one item in it. The item in Vertex <var>i</var> has a value of <var>V_i</var> and a weight of <var>W_i</var>.
+Now, process the following query <var>Q</var> times:</p>
+<ul>
+<li>Given are a vertex <var>v</var> of the tree and a positive integer <var>L</var>.
+  Let us choose some (possibly none) of the items in <var>v</var> and the ancestors of <var>v</var> so that their total weight is at most <var>L</var>.
+  Find the maximum possible total value of the chosen items.</li>
+</ul>
+<p>Here, Vertex <var>u</var> is said to be an ancestor of Vertex <var>v</var> when <var>u</var> is an indirect parent of <var>v</var>, that is, there exists a sequence of vertices <var>w_1,w_2,\ldots,w_k</var> (<var>k\geq 2</var>) where <var>w_1=v</var>, <var>w_k=u</var>, and <var>w_{i+1}</var> is the parent of <var>w_i</var> for each <var>i</var>.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li>All values in input are integers.</li>
+<li><var>1 \leq N &lt; 2^{18}</var></li>
+<li><var>1 \leq Q \leq 10^5</var></li>
+<li><var>1 \leq V_i \leq 10^5</var></li>
+<li><var>1 \leq W_i \leq 10^5</var></li>
+<li>For the values <var>v</var> and <var>L</var> given in each query, <var>1 \leq v \leq N</var> and <var>1 \leq L \leq 10^5</var>.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Let <var>v_i</var> and <var>L_i</var> be the values <var>v</var> and <var>L</var> given in the <var>i</var>-th query.
+Then, Input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+<var>V_1</var> <var>W_1</var>
+<var>:</var>
+<var>V_N</var> <var>W_N</var>
+<var>Q</var>
+<var>v_1</var> <var>L_1</var>
+<var>:</var>
+<var>v_Q</var> <var>L_Q</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>For each integer <var>i</var> from <var>1</var> through <var>Q</var>,
+the <var>i</var>-th line should contain the response to the <var>i</var>-th query.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>3
+1 2
+2 3
+3 4
+3
+1 1
+2 5
+3 5
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>0
+3
+3
+</pre>
+<p>In the first query, we are given only one choice: the item with <var>(V, W)=(1,2)</var>. Since <var>L = 1</var>, we cannot actually choose it, so our response should be <var>0</var>.</p>
+<p>In the second query, we are given two choices: the items with <var>(V, W)=(1,2)</var> and <var>(V, W)=(2,3)</var>. Since <var>L = 5</var>, we can choose both of them, so our response should be <var>3</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>15
+123 119
+129 120
+132 112
+126 109
+118 103
+115 109
+102 100
+130 120
+105 105
+132 115
+104 102
+107 107
+127 116
+121 104
+121 115
+8
+8 234
+9 244
+10 226
+11 227
+12 240
+13 237
+14 206
+15 227
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>256
+255
+250
+247
+255
+259
+223
+253
+</pre></section>
+</div>
+</span>

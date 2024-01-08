@@ -1,0 +1,113 @@
+
+<script src="./IMAGE/varmath.js" charset="UTF-8"></script>
+
+<H1>Runaway Domino</H1>
+
+<p>
+``Domino effect'' is a famous play using dominoes.
+A player sets up a chain of dominoes stood.
+After a chain is formed, the player topples one end of the dominoes.
+The first domino topples the second domino, the second topples the third and so on.
+</p>
+
+<p>
+You are playing domino effect.
+Before you finish to set up a chain of domino,
+a domino block started to topple, unfortunately.
+You have to stop the toppling as soon as possible.
+</p>
+
+<p>
+The domino chain forms a polygonal line on a two-dimensional coordinate system without self intersections.
+The toppling starts from a certain point on the domino chain
+and continues toward the both end of the chain.
+If the toppling starts on an end of the chain, the toppling continue toward the other end.
+The toppling of a direction stops when you touch the toppling point or the toppling reaches an end of the domino chain.
+</p>
+
+<p>
+You can assume that:
+</p>
+
+<ul>
+<li> You are a point without volume on the two-dimensional coordinate system.</li>
+<li> The toppling stops soon after touching the toppling point.</li>
+<li> You can step over the domino chain without toppling it.</li>
+</ul>
+
+<p>
+You will given the form of the domino chain, the starting point of the toppling,
+your coordinates when the toppling started, the toppling velocity and the your velocity.
+You are task is to write a program that calculates your optimal move to stop the toppling at the earliest timing and
+calculates the minimum time to stop the toppling.
+</p>
+
+<H2>Input</H2>
+
+<p>
+The first line contains one integer <var>N</var>,
+which denotes the number of vertices in the polygonal line of the domino chain <var>(2 \leq N \leq 1000)</var>.
+Then <var>N</var> lines follow, each consists of two integers <var>x_{i}</var> and <var>y_{i}</var>,
+which denote the coordinates of the <var>i</var>-th vertex <var>(-10,000 \leq x, y \leq 10000)</var>.
+The next line consists of three integers <var>x_{t}</var>, <var>y_{t}</var> and <var>v_{t}</var>,
+which denote the coordinates of the starting point and the velocity of the toppling.
+The last line consists of three integers <var>x_{p}</var>, <var>y_{p}</var> and <var>v_{p}</var>,
+which denotes the coordinates of you when the toppling started and the velocity <var>(1 \leq v_{t} \lt v_{p} \leq 10)</var>.
+You may assume that the starting point of the toppling lies on the polygonal line.
+</p>
+
+<H2>Output</H2>
+
+<p>
+Print the minimum time to stop the toppling.
+The output must have a relative or absolute error less than <var>10^{-6}</var>.
+</p>
+
+<H2>Sample Input 1</H2>
+
+<pre>
+2
+0 0
+15 0
+5 0 1
+10 10 2
+</pre>
+
+<H2>Output for the Sample Input 1</H2>
+
+<pre>
+5.0
+</pre>
+
+<H2>Sample Input 2</H2>
+
+<pre>
+3
+-10 0
+0 0
+0 10
+-1 0 1
+3 0 2
+</pre>
+
+<H2>Output for the Sample Input 2</H2>
+
+<pre>
+4.072027
+</pre>
+
+<H2>Sample Input 3</H2>
+
+<pre>
+2
+0 0
+10 0
+5 0 1
+9 0 3 
+</pre>
+
+<H2>Output for the Sample Input 3</H2>
+
+<pre>
+2.0
+</pre>

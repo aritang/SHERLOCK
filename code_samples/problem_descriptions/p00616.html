@@ -1,0 +1,97 @@
+
+<H1><font color="#000000">Problem B:</font> Cubes Without Holes</H1>
+
+<p>
+There is a cube which consists of <i>n</i> &times; <i>n</i> &times; <i>n</i> small cubes. Small cubes have marks on their surfaces. An example where <i>n</i> = 4 is shown in the following figure.
+</p>
+
+
+<br>
+<center>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE1_cubesWithoutHoles">
+</center>
+<br>
+
+<p>
+Then, 
+次に、上図（右）に示すように、印のついた表面から、反対の面まで水平または垂直に貫通する穴をあける。
+</p>
+
+<p>
+あなたの仕事は、<i>n</i> と 印の位置を読み込み、穴の空いていない小さい立方体の個数を数えるプログラムを作成することである。
+</p>
+
+<H2>Input</H2>
+
+<p>
+入力はいくつかのデータセットからなる。各データセットは以下の形式で与えられる：
+</p>
+
+<pre>
+<i>n h</i>
+<i>c</i><sub>1</sub> <i>a</i><sub>1</sub> <i>b</i><sub>1</sub>
+<i>c</i><sub>2</sub> <i>a</i><sub>2</sub> <i>b</i><sub>2</sub>
+   .
+   .
+   .
+<i>c</i><sub><i>h</i></sub> <i>a</i><sub><i>h</i></sub> <i>b</i><sub><i>h</i></sub>
+</pre>
+
+<p>
+<i>h</i> は印の数を示す整数である。これに続く <i>h</i> 行によって <i>h</i> 個の印の位置が入力される。印の位置を指定するために下図に示す座標軸を用いることにする。(<i>x</i>, <i>y</i>, <i>z</i>) = (1, 1, 1) が左下奥の立方体、(<i>x</i>, <i>y</i>, <i>z</i>) = (<i>n</i>, <i>n</i>, <i>n</i>) が右上手前の立方体を示す。
+</p>
+
+<br>
+<center>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE1_cubesWithoutHolesXYZ">
+</center>
+<br>
+
+<p>
+<i>c<sub>i</sub></i> は <i>i</i> 番目の印がつけられている平面を示す文字列である。<i>c<sub>i</sub></i> は "<span>xy</span>" 、"<span>xz</span>"、 "<span>yz</span>"　のいづれかであり、それぞれ <i>i</i> 番目の印が <i>xy</i> 平面、<i>xz</i> 平面、 <i>yz</i> 平面上にあることを示す。
+</p>
+
+<p>
+<i>a<sub>i</sub></i>, <i>b<sub>i</sub></i>　は　<i>c<sub>i</sub></i> で示された平面上の座標を示す。 <i>xy</i> 平面、<i>xz</i> 平面、<i>yz</i> 平面のとき、<i>a<sub>i</sub></i>, <i>b<sub>i</sub></i> はそれぞれ平面の座標 (<i>x</i>, <i>y</i>)、(<i>x</i>, <i>z</i>)、(<i>y</i>, <i>z</i>) を示す。例えば、上図において、印 A, B, C の <i>c<sub>i</sub></i>, <i>a<sub>i</sub></i>, <i>b<sub>i</sub></i> の値はそれぞれ、"<span>xy 4 4</span>", "<span>xz 1 2</span>", "<span>yz 2 3</span>" となる。
+</p>
+
+<p>
+<i>n</i>, <i>h</i> がともに 0 のとき、入力の終わりを示す。
+</p>
+
+
+
+
+<p>
+<i>n</i> &le; 500, <i>h</i> &le; 200 と仮定してよい。
+</p>
+
+
+<H2>Output</H2>
+
+<p>
+各データセットに対して、穴の空いていない立方体の数を１行に出力せよ。
+</p>
+
+
+<H2>Sample Input</H2>
+<pre>
+4 3
+xy 4 4
+xz 1 2
+yz 2 3
+4 5
+xy 1 1
+xy 3 3
+xz 3 3
+yz 2 1
+yz 3 3
+0 0
+</pre>
+
+<H2>Output for the Sample Input</H2>
+<pre>
+52
+46
+</pre>
+

@@ -1,0 +1,78 @@
+
+
+
+<h1>Problem B: GPA JANKEN</h1>
+
+<h2>Problem</h2>
+<p>
+GPAとは「Galaxy Point of Aizu」の略で、0から4までの実数値を取る。<br>
+GPAじゃんけんは二人で行うゲームである。各々が「じゃんけん、ぽん（ほい）」の合図で互いにグー、チョキ、パーのどれか好きな手を出した後、GPAが高い人が勝者となり、低い人が敗者となる。同じ場合は引き分けとなる。
+</p>
+<p>
+<var>N</var> 人のGPAのデータが与えられるので、総当たり戦をした時のそれぞれの勝ち点を出力せよ。<br>
+ただし、勝ち点は勝ちの時3、引き分けの時1、負けの時0とする。
+</p>
+<p>
+    総当たり戦とはすべての参加者が自分以外の参加者と丁度一回ずつ対戦する方式である。
+</p>
+
+
+<h2>Input</h2>
+<p>入力は以下の形式で与えられる。</p>
+<pre>
+<var>N</var>
+<var>a<sub>1</sub></var>
+<var>a<sub>2</sub></var>
+...
+<var>a<sub>N</sub></var>
+</pre>
+<p>
+一行目にGPAじゃんけんをする人数 <var>N</var> が与えられる。<br>
+    続く <var>N</var> 行に <var>i</var> 番目の人のGPAのデータ <var>a<sub>i</sub></var> が一行に与えられる。
+</p>
+
+<h2>Constraints</h2>
+<p>入力は以下の条件を満たす。</p>
+<ul>
+    <li>2 &le; <var>N</var> &le; 10<sup>5</sup></li>
+    <li><var>N</var> は整数</li>
+    <li>0.000 &le; <var>a<sub>i</sub></var> &le; 4.000 ( 1 &le; <var>i</var> &le; <var>N</var> )</li>
+    <li><var>a<sub>i</sub></var> は実数 ( 1 &le; <var>i</var> &le; <var>N</var> )</li>
+    <li>各GPAは小数点以下3桁まで与えられる</li>
+</ul>
+
+<h2>Output</h2>
+<p>
+  <var>i</var> 行目に <var>i</var> 番目の人の勝ち点を一行に出力せよ。
+  ( 1 &le; <var>i</var>  &le; <var>N</var> )<br>
+</p>
+
+<h2>Sample Input 1</h2>
+<pre>
+3
+1.000
+3.000
+3.000
+</pre>
+
+<h2>Sample Output 1</h2>
+<pre>
+0
+4
+4
+</pre>
+
+<h2>Sample Input 2</h2>
+<pre>
+3
+1.000
+2.000
+3.000
+</pre>
+
+<h2>Sample Output 2</h2>
+<pre>
+0
+3
+6
+</pre>

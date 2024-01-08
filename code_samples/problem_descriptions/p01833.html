@@ -1,0 +1,108 @@
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({ tex2jax: { inlineMath: [["$","$"], ["\\(","\\)"]], processEscapes: true }});
+</script>
+<script type='text/javascript' src='http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
+</script>
+
+
+<h2>Modern Announce Network</h2>
+
+<p>
+Today, modern teenagers use SNS to communicate with each other.
+</p>
+
+<p>
+In a high school, $N$ students are using an SNS called ICPC (International Community for Programming Contest). Some pairs of these $N$ students are 'friends' on this SNS, and can send messages to each other. Among these $N$ students, $A$ first grade students, $B$ second grade students, and $C$ third grade students are members of the Programming Society. Note that there may be some students who are not the members of the Programming Society, so $A+B +C$ can be less than $N$.
+</p>
+
+<p>
+There are good relationships between members of the same grade in the Society. Thus, there is a chat group in the SNS for each grade, and the Society members of the same grade can communicate with each other instantly via their group chat. On the other hand, the relationships between any different grades are not so good, and there are no chat group for the entire Society and the entire high school.
+</p>
+
+<p>
+In order to broadcast a message to all the Society members on the SNS, the administrator of the Society came up with a method: the administrator tells the message to one of the $N$ students and have them spread the message on the SNS via the chat groups and their friends. (The administrator itself does not have an account for the SNS.) As the members of the same grade can broadcast the message by the chat group for the grade, we can assume that if one of a grade gets the message, all other members of that grade also get the message instantly. Therefore, if the message is told to at least one member of each grade, we can assume that the message is broadcasted to the all members of the Society on the SNS.
+</p>
+
+<p>
+Because it is bothering to communicate between friends, we want to minimize the number of communications between friends. What is the minimum number of communications between friends to broadcast a message to all the Society members? Who is the first person to whom the administrator should tell the message to achieve the minimum communications?
+</p>
+
+<h3>Input</h3>
+<p>
+The input consists of a single test case. The test case is formatted as follows:<br/>
+<br/>
+$N$ $A$ $B$ $C$<br/>
+$a_1$ ... $a_A$<br/>
+$b_1$ ... $b_B$<br/>
+$c_1$ ... $c_C$<br/>
+$M$<br/>
+$x_1$ $y_1$<br/>
+...<br/>
+$x_M$ $y_M$<br/>
+</p>
+
+<p>
+The first line contains four integers $N$, $A$, $B$, and $C$. $N$ ($3 \leq N \leq 10,000$) denotes the number of students in the SNS, and $A$, $B$ and $C$ ($1 \leq A,B,C \leq N$ and $A + B + C \leq N$) denote the number of members of the first, second, and third grade respectively. Each student on the SNS is represented by a unique numeric ID between 1 and $N$. The second line contains $A$ integers $a_1, ...,  a_A$ ($1 \leq a_1, ..., a_A \leq N$), which are the IDs of members of the first grade. The third line contains $B$ integers $b_1, ..., b_B$ ($1 \leq b_1, ..., b_B \leq N$), which are the IDs of members of the second grade. The fourth line contains $C$ integers $c_1, ..., c_C$ ($1 \leq c_1, ... , c_C \leq N$), which are the IDs of members of the third grade. You can assume that $a_1, ..., a_A, b_1, ... , b_B, c_1, ..., c_C$ are distinct. The fifth line contains an integer $M$ ($2 \leq M \leq 500,000$). $M$ denotes the number of pairs of students who are friends in the SNS. The $i$-th line of the following $M$ lines contains two integers $x_i$ and $y_i$ ($1 \leq x_i, y_i \leq N$), which means the student with ID $x_i$ and the student with ID $y_i$ are friends in the SNS. You can assume that $x_i \ne y_i$ ($1 \leq i \leq M$), and ($x_i \ne x_j$ or $y_i \ne y_j$) and ($x_i \ne y_j$ or $y_i \ne x_j$) if $i \ne j$ ($1 \leq i, j \leq M$). You can also assume that a message can be delivered from any student to any student in the SNS via the friends and group chat.
+</p>
+
+<h3>Output</h3>
+<p>
+Output the minimum number of communications between friends (not including group chat) to broadcast a message among all the Society members, and the ID of the student to whom the administrator should tell the message in order to achieve the minimum number of communications, separated by a single space. If there are multiple students that satisfy the above constraints, output the minimum ID of such students.
+</p>
+
+<h3>Sample Input 1</h3>
+<pre>
+4 2 1 1
+1 2
+3
+4
+3
+1 2
+2 4
+3 4
+</pre>
+
+<h3>Output for the Sample Input 1</h3>
+<pre>
+2 1
+</pre>
+
+<h3>Sample Input 2</h3>
+<pre>
+4 1 1 1
+2
+3
+4
+4
+1 2
+1 3
+1 4
+2 4
+</pre>
+
+<h3>Output for the Sample Input 2</h3>
+<pre>
+3 1
+</pre>
+
+<h3>Sample Input 3</h3>
+<pre>
+8 1 2 2
+5
+4 6
+3 8
+7
+1 2
+2 3
+3 4
+5 6
+6 7
+7 8
+2 6
+</pre>
+
+<h3>Output for the Sample Input 3</h3>
+<pre>
+2 3
+</pre>

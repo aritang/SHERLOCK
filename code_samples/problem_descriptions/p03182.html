@@ -1,0 +1,133 @@
+<span class="lang-en">
+<p>Score : <var>100</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>Consider a string of length <var>N</var> consisting of <code>0</code> and <code>1</code>.
+The score for the string is calculated as follows:</p>
+<ul>
+<li>For each <var>i</var> (<var>1 \leq i \leq M</var>), <var>a_i</var> is added to the score if the string contains <code>1</code> at least once between the <var>l_i</var>-th and <var>r_i</var>-th characters (inclusive).</li>
+</ul>
+<p>Find the maximum possible score of a string.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li>All values in input are integers.</li>
+<li><var>1 \leq N \leq 2 × 10^5</var></li>
+<li><var>1 \leq M \leq 2 × 10^5</var></li>
+<li><var>1 \leq l_i \leq r_i \leq N</var></li>
+<li><var>|a_i| \leq 10^9</var></li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var> <var>M</var>
+<var>l_1</var> <var>r_1</var> <var>a_1</var>
+<var>l_2</var> <var>r_2</var> <var>a_2</var>
+<var>:</var>
+<var>l_M</var> <var>r_M</var> <var>a_M</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the maximum possible score of a string.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>5 3
+1 3 10
+2 4 -10
+3 5 10
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>20
+</pre>
+<p>The score for <code>10001</code> is <var>a_1 + a_3 = 10 + 10 = 20</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>3 4
+1 3 100
+1 1 -10
+2 2 -20
+3 3 -30
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>90
+</pre>
+<p>The score for <code>100</code> is <var>a_1 + a_2 = 100 + (-10) = 90</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>1 1
+1 1 -10
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>0
+</pre>
+<p>The score for <code>0</code> is <var>0</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 4</h3><pre>1 5
+1 1 1000000000
+1 1 1000000000
+1 1 1000000000
+1 1 1000000000
+1 1 1000000000
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 4</h3><pre>5000000000
+</pre>
+<p>The answer may not fit into a 32-bit integer type.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 5</h3><pre>6 8
+5 5 3
+1 1 10
+1 6 -8
+3 6 5
+3 4 9
+5 5 -2
+1 3 -6
+4 6 -7
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 5</h3><pre>10
+</pre>
+<p>For example, the score for <code>101000</code> is <var>a_2 + a_3 + a_4 + a_5 + a_7 = 10 + (-8) + 5 + 9 + (-6) = 10</var>.</p></section>
+</div>
+</span>

@@ -1,0 +1,114 @@
+<span class="lang-en">
+<p>Score : <var>300</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3>
+<p>Given is a permutation <var>P_1, \ldots, P_N</var> of <var>1, \ldots, N</var>.
+Find the number of integers <var>i</var> <var>(1 \leq i \leq N)</var> that satisfy the following condition:  </p>
+<ul>
+<li>For any integer <var>j</var> <var>(1 \leq j \leq i)</var>, <var>P_i \leq P_j</var>.</li>
+</ul>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3>
+<ul>
+<li><var>1 \leq N \leq 2 \times 10^5</var></li>
+<li><var>P_1, \ldots, P_N</var> is a permutation of <var>1, \ldots, N</var>.  </li>
+<li>All values in input are integers.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3>
+<p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+<var>P_1</var> <var>...</var> <var>P_N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3>
+<p>Print the number of integers <var>i</var> that satisfy the condition.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>5
+4 2 5 1 3
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>3
+</pre>
+<p><var>i=1</var>, <var>2</var>, and <var>4</var> satisfy the condition, but <var>i=3</var> does not - for example, <var>P_i &gt; P_j</var> holds for <var>j = 1</var>.<br/>
+Similarly, <var>i=5</var> does not satisfy the condition, either. Thus, there are three integers that satisfy the condition.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>4
+4 3 2 1
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>4
+</pre>
+<p>All integers <var>i</var> <var>(1 \leq i \leq N)</var> satisfy the condition.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>6
+1 2 3 4 5 6
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>1
+</pre>
+<p>Only <var>i=1</var> satisfies the condition.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 4</h3><pre>8
+5 7 4 2 6 8 1 3
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 4</h3><pre>4
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 5</h3><pre>1
+1
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 5</h3><pre>1
+</pre></section>
+</div>
+</span>

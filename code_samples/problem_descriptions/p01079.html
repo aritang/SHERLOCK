@@ -1,0 +1,140 @@
+
+
+
+<h1>Problem H: Hogemon Get</h1>
+
+<h2>Problem</h2>
+<p>
+がっちょ君は人気のゲームHogemon Getに熱中している。がっちょ君が住んでいる会津国はそれぞれ1から<var>N</var>の番号がついている<var>N</var>個の町からなる。また、会津国には<var>M</var>本の道があり、すべての道は異なる2つの町を結んでいる。がっちょ君は道を双方向に移動することができるが、道以外を通って、ある町から別の町に行くことはできない。</p>
+
+<p>
+Hogemon Getでは、町<var>i</var>でボールを<var>d<sub>i</sub></var>個入手することができる。ただし、ある町で再びボールを入手するためには、最後にその町でボールを入手してから15分以上経過している必要がある。なお、がっちょ君は町1、町<var>N</var>を含むすべての町を何度でも訪れることができる。
+</p>
+
+<p>
+がっちょ君は最初、町1にいて、町<var>N</var>に<var>R</var>分以内で移動しなければならない。つまり、<var>R</var>分後に町<var>N</var>にいる必要がある。がっちょ君は移動の際に、最大でいくつのボールを入手することができるだろうか。
+</p>
+
+<h2>Input</h2>
+<p>入力は以下の形式で与えられる。</p>
+<pre>
+<var>N</var> <var>M</var> <var>R</var>
+<var>d<sub>1</sub></var> <var>d<sub>2</sub></var> ... <var>d<sub>N</sub></var>
+<var>a<sub>1</sub></var> <var>b<sub>1</sub></var> <var>c<sub>1</sub></var>
+<var>a<sub>2</sub></var> <var>b<sub>2</sub></var> <var>c<sub>2</sub></var>
+...
+<var>a<sub>M</sub></var> <var>b<sub>M</sub></var> <var>c<sub>M</sub></var>
+</pre>
+<p>
+入力はすべて整数である。<br>
+1行目に町の個数<var>N</var>,道の本数<var>M</var>,制限時間<var>R</var>が空白区切りで与えられる。<br>
+2行目に町<var>i</var>(<var>i</var>=1,2,...,<var>N</var>)に訪れることで入手することができるボールの個数<var>d<sub>i</sub></var>が空白区切りで与えられる。<br>
+3行目から<var>M</var>+2行目に道<var>j</var>(<var>j</var>=1,2,...,<var>M</var>)の情報<var>a<sub>j</sub></var>,<var>b<sub>j</sub></var>,<var>c<sub>j</sub></var>が空白区切りで与えられる。<var>j</var>番目の道は町<var>a<sub>j</sub></var>と町<var>b<sub>j</sub></var>の間を<var>c<sub>j</sub></var>分で移動できることを表す。
+</p>
+
+<h2>Constraints</h2>
+<ul>
+    <li>3 &le; <var>N</var> &le; 30</li>
+    <li><var>N</var>-1 &le; <var>M</var> &le; min(<var>N</var>&times;(<var>N</var>-1)/2, 300)
+    <li>10 &le; <var>R</var> &le; 1000</li>
+    <li>0 &le; <var>d<sub>i</sub></var> &le; 10</li>
+    <li><var>d<sub>1</sub></var>&nbsp;=&nbsp;<var>d<sub>N</sub></var>&nbsp;=&nbsp;0</li>
+    <li>1 &le; <var>a<sub>j</sub></var> &lt; <var>b<sub>j</sub></var> &le; <var>N</var></li>
+    <li>5 &le; <var>c<sub>j</sub></var> &le; 100</li>
+    <li>町1から町<var>N</var>へは<var>R</var>分以内で移動できることが保証されている</li>
+    <li>ある2つの町の組に対して2本以上の道があることはない</li>
+</ul>
+
+
+<h2>Output</h2>
+<p>
+町1から町<var>N</var>へ<var>R</var>分以内に移動するまでに入手することができる最大のボールの個数を1行で出力せよ。
+</p>
+
+<h2>Sample Input 1</h2>
+<pre>
+5 4 40
+0 1 1 1 0
+1 2 5
+2 3 5
+3 4 5
+4 5 5
+</pre>
+
+<h2>Sample Output 1</h2>
+<pre>
+6
+</pre>
+
+
+<div style="width: 500px;">
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE3_ACPC2016Day2AIZU_H_figure1" alt="図1" style="width: 500px;">
+</div>
+<br>
+
+
+<table border="1">
+<tr><td width="100">経過時間(分)</td><td width="100">町の番号</td><td width="120">ボールの数(個)</td></tr>
+<tr><td>0</td><td>1</td><td>0</td></tr>
+<tr> <td>5</td><td>2</td><td>1</td></tr>
+<tr> <td>10</td><td>3</td><td>2</td></tr>
+<tr> <td>15</td><td>4</td><td>3</td></tr>
+<tr> <td>20</td><td>3</td><td>3</td></tr> 
+<tr> <td>25</td><td>2</td><td>4</td></tr>
+<tr> <td>30</td><td>3</td><td>5</td></tr>
+<tr> <td>35</td><td>4</td><td>6</td></tr>
+<tr> <td>40</td><td>5</td><td>6</td></tr>
+</table>
+<p>
+
+※経過時間20分の町3では最後に町3でボールを入手してから15分経過していないのでボールを入手することができない。
+</p>
+
+<h2>Sample Input 2</h2>
+<pre>
+4 3 100
+0 3 1 0
+1 2 5
+2 3 30
+3 4 5
+</pre>
+
+<h2>Sample Output 2</h2>
+<pre>
+16
+</pre>
+
+
+<div style="width: 500px;">
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE3_ACPC2016Day2AIZU_H_figure2" alt="図2" style="width: 500px;">
+</div>
+<br>
+
+<table border="1">
+<tr><td width="100">経過時間(分)</td><td width="100">町の番号</td><td width="120">ボールの数(個)</td></tr>
+<tr style="text-align:right" ><td>0</td><td>1</td><td>0</td></tr>
+<tr> <td>5</td><td>2</td><td>3</td></tr>
+<tr> <td>20</td><td>2</td><td>6</td></tr>
+<tr> <td>35</td><td>2</td><td>9</td></tr>
+<tr> <td>50</td><td>2</td><td>12</td></tr>
+<tr> <td>65</td><td>2</td><td>15</td></tr>
+<tr> <td>95</td><td>3</td><td>16</td></tr>
+<tr> <td>100</td><td>4</td><td>16</td></tr>
+</table>
+<br/>
+
+
+<h2>Sample Input 3</h2>
+<pre>
+5 4 50
+0 1 1 10 0
+1 2 10
+2 3 10
+2 4 10
+4 5 10
+</pre>
+
+<h2>Sample Output 3</h2>
+<pre>
+22
+</pre>

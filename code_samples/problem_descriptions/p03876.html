@@ -1,0 +1,102 @@
+<span class="lang-en">
+<p>Score : <var>1500</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><style>
+   #nck {
+      width: 30px;
+      height: auto;
+   }
+</style>
+<p>Construct an <var>N</var>-gon that satisfies the following conditions:</p>
+<ul>
+<li>The polygon is simple (see notes for the definition).</li>
+<li>Each edge of the polygon is parallel to one of the coordinate axes.</li>
+<li>Each coordinate is an integer between <var>0</var> and <var>10^9</var>, inclusive.</li>
+<li>The vertices are numbered <var>1</var> through <var>N</var> in counter-clockwise order.</li>
+<li>The internal angle at the <var>i</var>-th vertex is exactly <var>a_i</var> degrees.</li>
+</ul>
+<p>In case there are multiple possible answers, you can output any.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Notes</h3><p>A polygon is called simple if each edge has a positive length, and no two edges have a common point (except for adjacent edges touching at a vertex).</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>3 ≤ N ≤ 1000</var></li>
+<li><var>a_i</var> is either <var>90</var> or <var>270</var>.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>The input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+<var>a_1</var>
+:
+<var>a_N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>In case the answer exists, print the answer in the following format:</p>
+<pre><var>x_1</var> <var>y_1</var>
+:
+<var>x_N</var> <var>y_N</var>
+</pre>
+<p>Here <var>(x_i, y_i)</var> are the coordinates of the <var>i</var>-th vertex.</p>
+<p>In case the answer doesn't exist, print a single <code>-1</code>.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>8
+90
+90
+270
+90
+90
+90
+270
+90
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>0 0
+2 0
+2 1
+3 1
+3 2
+1 2
+1 1
+0 1
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>3
+90
+90
+90
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>-1
+</pre></section>
+</div>
+</span>

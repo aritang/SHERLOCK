@@ -1,0 +1,80 @@
+<span class="lang-en">
+<p>Score : <var>600</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>There is a tree with <var>N</var> vertices numbered <var>1</var> to <var>N</var>.
+The <var>i</var>-th edge in this tree connects Vertex <var>a_i</var> and Vertex <var>b_i</var>, and the color and length of that edge are <var>c_i</var> and <var>d_i</var>, respectively.
+Here the color of each edge is represented by an integer between <var>1</var> and <var>N-1</var> (inclusive). The same integer corresponds to the same color, and different integers correspond to different colors.</p>
+<p>Answer the following <var>Q</var> queries:</p>
+<ul>
+<li>Query <var>j</var> (<var>1 \leq j \leq Q</var>): assuming that the length of every edge whose color is <var>x_j</var> is changed to <var>y_j</var>, find the distance between Vertex <var>u_j</var> and Vertex <var>v_j</var>. (The changes of the lengths of edges do not affect the subsequent queries.)</li>
+</ul>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>2 \leq N \leq 10^5</var></li>
+<li><var>1 \leq Q \leq 10^5</var></li>
+<li><var>1 \leq a_i, b_i \leq N</var></li>
+<li><var>1 \leq c_i \leq N-1</var></li>
+<li><var>1 \leq d_i \leq 10^4</var></li>
+<li><var>1 \leq x_j \leq N-1</var></li>
+<li><var>1 \leq y_j \leq 10^4</var></li>
+<li><var>1 \leq u_j &lt; v_j \leq N</var></li>
+<li>The given graph is a tree.</li>
+<li>All values in input are integers.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var> <var>Q</var>
+<var>a_1</var> <var>b_1</var> <var>c_1</var> <var>d_1</var>
+<var>:</var>
+<var>a_{N-1}</var> <var>b_{N-1}</var> <var>c_{N-1}</var> <var>d_{N-1}</var>
+<var>x_1</var> <var>y_1</var> <var>u_1</var> <var>v_1</var>
+<var>:</var>
+<var>x_Q</var> <var>y_Q</var> <var>u_Q</var> <var>v_Q</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print <var>Q</var> lines. The <var>j</var>-th line (<var>1 \leq j \leq Q</var>) should contain the answer to Query <var>j</var>.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>5 3
+1 2 1 10
+1 3 2 20
+2 4 4 30
+5 2 1 40
+1 100 1 4
+1 100 1 5
+3 1000 3 4
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>130
+200
+60
+</pre>
+<p>The graph in this input is as follows:</p>
+<p><img alt="Figure" src="https://img.atcoder.jp/ghi/ca75688b08f73eb63a30ce6daa54a781.png"/></p>
+<p>Here the edges of Color <var>1</var> are shown as solid red lines, the edge of Color <var>2</var> is shown as a bold green line, and the edge of Color <var>4</var> is shown as a blue dashed line.</p>
+<ul>
+<li>Query <var>1</var>: Assuming that the length of every edge whose color is <var>1</var> is changed to <var>100</var>, the distance between Vertex <var>1</var> and Vertex <var>4</var> is <var>100 + 30 = 130</var>.</li>
+<li>Query <var>2</var>: Assuming that the length of every edge whose color is <var>1</var> is changed to <var>100</var>, the distance between Vertex <var>1</var> and Vertex <var>5</var> is <var>100 + 100 = 200</var>.</li>
+<li>Query <var>3</var>: Assuming that the length of every edge whose color is <var>3</var> is changed to <var>1000</var> (there is no such edge), the distance between Vertex <var>3</var> and Vertex <var>4</var> is <var>20 + 10 + 30 = 60</var>. Note that the edges of Color <var>1</var> now have their original lengths.</li>
+</ul></section>
+</div>
+</span>

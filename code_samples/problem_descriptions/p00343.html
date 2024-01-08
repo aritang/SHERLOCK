@@ -1,0 +1,83 @@
+
+
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({ tex2jax: { inlineMath: [["$","$"], ["\\(","\\)"]], processEscapes: true }});
+</script>
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+
+<H1>必勝７並べ </H1>
+
+<p>
+  トランプを使ったゲームに「７並べ」があります。ここではそれを簡単にしたゲームを考えます。１から１３の番号がそれぞれ書かれた１３枚のカードを使って７並べをします。対戦は、２者だけで次のようにゲームを進めます。
+</p>
+
+<ol>
+<li> 「場」に７のカードを置きます。</li>
+<li> ２者には、残りのカードがランダムに６枚ずつ配布されます。</li>
+<li> 先手の手持ちのカードのうち、場にあるカードの番号と連続する番号のカードがあれば、そのうちの１枚を場に置きます。プレイヤーはカードが置ける場合には必ず置かなければいけません。無いときに限り、カードを出さずに相手の番になります。</li>
+<li> 後手も同じ要領で、手持ちのカードを場に置きます。</li>
+<li> 手順３と４を繰り返して、一方の手持ちのカードがなくなるまで続けます。先に手持ちのカードをすべて場に置けた方が勝者となります。</li>
+</ol>
+
+<br/>
+
+<p>
+先手のカードの番号が与えられたとき、後手がどのようにカードを出してきても、先手が勝つ手順が少なくとも一つあるかを判定して出力するプログラムを作成せよ。
+</p>
+
+
+<h2>Input</h2>
+
+<p>
+  入力は以下の形式で与えられる。
+</p>
+
+<pre>
+<var>N</var>
+<var>game<sub>1</sub></var>
+<var>game<sub>2</sub></var>
+:
+<var>game<sub>N</sub></var>
+</pre>
+
+<p>
+  １行目には、ゲームを行う回数 <var>N</var> (1 &le; <var>N</var> &le; 100) が与えられる。続く <var>N</var> 行に、<var>i</var> 回目のゲームの情報 <var>game<sub>i</sub></var> が与えられる。各 <var>game<sub>i</sub></var> は、以下の形式で与えられる。
+</p>
+
+<pre>
+<var>f<sub>1</sub></var> <var>f<sub>2</sub></var> <var>f<sub>3</sub></var> <var>f<sub>4</sub></var> <var>f<sub>5</sub></var> <var>f<sub>6</sub></var>
+</pre>
+
+<p>
+<var>f<sub>j</sub></var> (1 &le; <var>f<sub>j</sub></var> &le; 13, <var>f<sub>j</sub></var> &ne; 7) は先手に配られるカードの番号である。ただし、同じ行に番号が重複して現れることはない（<var>j</var> &ne; <var>k</var> について <var>f<sub>j</sub></var> &ne; <var>f<sub>k</sub></var>)。
+</p>
+
+
+<h2>Output</h2>
+
+<p>
+各ゲームについて、後手がどのようにカードを出してきても、先手が勝つ手順が少なくとも一つある場合「yes」、そうでない場合「no」と１行に出力する。
+</p>
+
+<h2>Sample Input 1</h2>
+
+<pre>
+5
+1 2 3 4 5 6
+1 3 5 6 8 4
+1 2 3 4 5 8
+1 2 4 5 10 11
+1 2 3 6 9 11
+</pre>
+
+<h2>Sample Output 1</h2>
+<pre>
+yes
+yes
+no
+yes
+no
+</pre>

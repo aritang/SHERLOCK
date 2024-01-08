@@ -1,0 +1,145 @@
+
+
+<h1><font color="#000">Problem D:</font> 無矛盾な単位系</h1>
+
+<pre>
+京、垓、{禾予}、穣、溝、澗、正、載、極、恒河沙、阿僧祇、那由他、不可思議、無量大数
+分、厘、毛、糸、忽、微、繊、沙、塵、埃、渺、漠、模糊、逡巡、須臾、瞬息、弾指、刹那、六徳、虚空、清浄、阿頼耶、阿摩羅、涅槃寂静
+</pre>
+
+<p>これらが何か分かるだろうか。これらは全て10の累乗につけられた数詞である。</p>
+<pre>
+京 = 10<sup>16</sup>, 垓 = 10<sup>20</sup>, {禾予} = 10<sup>24</sup>, 穣 = 10<sup>28</sup>, 溝 = 10<sup>32</sup>, ...
+分 = 10<sup>-1</sup>、厘 = 10<sup>-2</sup>、毛 = 10<sup>-3</sup>、糸 = 10<sup>-4</sup>、忽 = 10<sup>-5</sup>, ...</pre>
+
+<p>ではこれらが実用的に使われているのを見たことはあるだろうか？無いのではなかろうか？ 過去の先人達が熟考の末にこれらの命名を行ったにもかかわらず、これらの数詞が日の目を見られないとはなんと勿体無いことだろう。</p>
+<p>この問題は、コンテスト参加者の皆様にこれらの数詞を知ってもらうために作られたものである。以下に問題の概要を示す。</p>
+<pre>1 km = 10<sup>3</sup> m</pre>
+<p>上記のような単位間の関係が入力として与えられる。この問題では、左辺における単位が右辺における単位の10の累乗倍となっているような単位間の関係だけが与えられる。
+単位間の関係が矛盾しているとは、与えられた関係から以下の関係が同時に成り立つことをいう。</p>
+<pre>
+1 A = 10<sup>x</sup> B
+1 A = 10<sup>y</sup> B
+</pre>
+<p>
+ただし、 x&ne;yであり、 AとBは任意の単位。
+</p>
+<p>入力として与えられた単位間の関係が矛盾しているかどうか判定せよ。 なお、入力は簡易のため指数表記で与えられる。 
+</p>
+
+<h2>Input</h2>
+
+<p>入力の一行目に、単位間の関係の個数を示す整数 N (1&le; N &le; 100) が与えられる。</p>
+<p>続くN行に、単位間の関係が含まれる。
+単位間の関係は以下のフォーマットで与えられる。</p>
+<p>"1 A = 10^x B"</p>
+<p>A, B は単位を示す。AとBは相異なっており、それぞれ空白を含まないアルファベット小文字1〜16文字からなる。x は -100から100までの整数である。
+"1 A = 10^x B" が定義されたとき、 "1 B = 10^-x A" も暗黙のうちに定義されているものとする。</p>
+<p>
+任意の単位系のペアが2回以上定義されることはない。
+すなわち、"1 kilobyte = 10^3 byte", "1 kilobyte = 10^1 byte" のような関係が、同時に入力に含まれることはない。
+同様に、"1 kilobyte = 10^3 byte", "1 byte = 10^-3 kilobyte" のような関係が、同時に入力に含まれることはない。 
+</p>
+
+<h2>Output</h2>
+
+<p>与えられた単位系が矛盾していなければ Yes を、 矛盾していれば No を出力せよ。 
+</p>
+
+
+
+<h2>Notes on Test Cases</h2>
+
+<p>
+上記入力形式で複数のデータセットが与えられます。各データセットに対して上記出力形式で出力を行うプログラムを作成して下さい。
+</p>
+
+<p>
+N が 0 のとき入力の終わりを示します。
+</p>
+
+
+<!--
+<h2>Sample Input 1</h2>
+<pre>3
+1 km = 10^3 m
+1 m = 10^2 cm
+1 km = 10^5 cm
+</pre>
+<h2>Output for Sample Input 1</h2>
+<pre>Yes
+</pre>
+
+<h2>Sample Input 2</h2>
+<pre>7
+1 kilometre = 10^3 metre
+1 megametre = 10^3 kilometre
+1 metre = 10^-6 megametre
+1 terametre = 10^3 gigametre
+1 petametre = 10^3 terametre
+1 gigametre = 10^-6 petametre
+1 metre = 10^-15 petametre
+</pre>
+<h2>Output for Sample Input 2</h2>
+<pre>Yes
+</pre>
+
+<h2>Sample Input 3</h2>
+<pre>4
+1 a = 10^2 b
+1 a = 10^3 c
+1 b = 10^2 c
+1 c = 10^1 d
+</pre>
+<h2>Output for Sample Input 3</h2>
+<pre>No
+</pre>
+
+<h2>Sample Input 4</h2>
+<pre>4
+1 acm = 10^2 icpc
+1 icpc = 10^3 utpc
+1 utpc = 10^4 topcoder
+1 topcoder = 10^-1 acm
+</pre>
+<h2>Output for Sample Input 4</h2>
+<pre>No
+</pre>
+-->
+
+<h2>Sample Input</h2>
+<pre>
+3
+1 km = 10^3 m
+1 m = 10^2 cm
+1 km = 10^5 cm
+7
+1 kilometre = 10^3 metre
+1 megametre = 10^3 kilometre
+1 metre = 10^-6 megametre
+1 terametre = 10^3 gigametre
+1 petametre = 10^3 terametre
+1 gigametre = 10^-6 petametre
+1 metre = 10^-15 petametre
+4
+1 a = 10^2 b
+1 a = 10^3 c
+1 b = 10^2 c
+1 c = 10^1 d
+4
+1 acm = 10^2 icpc
+1 icpc = 10^3 utpc
+1 utpc = 10^4 topcoder
+1 topcoder = 10^-1 acm
+0
+</pre>
+
+
+<h2>Output for Sample Input</h2>
+<pre>
+Yes
+Yes
+No
+No
+</pre>
+

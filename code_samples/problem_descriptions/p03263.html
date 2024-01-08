@@ -1,0 +1,107 @@
+<span class="lang-en">
+<p>Score : <var>400</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>There is a grid of square cells with <var>H</var> horizontal rows and <var>W</var> vertical columns. The cell at the <var>i</var>-th row and the <var>j</var>-th column will be denoted as Cell <var>(i, j)</var>.</p>
+<p>In Cell <var>(i, j)</var>, <var>a_{ij}</var> coins are placed.</p>
+<p>You can perform the following operation any number of times:</p>
+<p>Operation: Choose a cell that was not chosen before and contains one or more coins, then move one of those coins to a vertically or horizontally adjacent cell.</p>
+<p>Maximize the number of cells containing an even number of coins.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li>All values in input are integers.</li>
+<li><var>1 \leq H, W \leq 500</var></li>
+<li><var>0 \leq a_{ij} \leq 9</var></li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>H</var> <var>W</var>
+<var>a_{11}</var> <var>a_{12}</var> <var>...</var> <var>a_{1W}</var>
+<var>a_{21}</var> <var>a_{22}</var> <var>...</var> <var>a_{2W}</var>
+<var>:</var>
+<var>a_{H1}</var> <var>a_{H2}</var> <var>...</var> <var>a_{HW}</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print a sequence of operations that maximizes the number of cells containing an even number of coins, in the following format:</p>
+<pre><var>N</var>
+<var>y_1</var> <var>x_1</var> <var>y_1'</var> <var>x_1'</var>
+<var>y_2</var> <var>x_2</var> <var>y_2'</var> <var>x_2'</var>
+<var>:</var>
+<var>y_N</var> <var>x_N</var> <var>y_N'</var> <var>x_N'</var>
+</pre>
+<p>That is, in the first line, print an integer <var>N</var> between <var>0</var> and <var>H \times W</var> (inclusive), representing the number of operations.</p>
+<p>In the <var>(i+1)</var>-th line (<var>1 \leq i \leq N</var>), print four integers <var>y_i, x_i, y_i'</var> and <var>x_i'</var> (<var>1 \leq y_i, y_i' \leq H</var> and <var>1 \leq x_i, x_i' \leq W</var>), representing the <var>i</var>-th operation. These four integers represents the operation of moving one of the coins placed in Cell <var>(y_i, x_i)</var> to a vertically or horizontally adjacent cell, <var>(y_i', x_i')</var>.</p>
+<p>Note that if the specified operation violates the specification in the problem statement or the output format is invalid, it will result in <em>Wrong Answer</em>.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>2 3
+1 2 3
+0 1 1
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>3
+2 2 2 3
+1 1 1 2
+1 3 1 2
+</pre>
+<p>Every cell contains an even number of coins after the following sequence of operations:</p>
+<ul>
+<li>Move the coin in Cell <var>(2, 2)</var> to Cell <var>(2, 3)</var>.</li>
+<li>Move the coin in Cell <var>(1, 1)</var> to Cell <var>(1, 2)</var>.</li>
+<li>Move one of the coins in Cell <var>(1, 3)</var> to Cell <var>(1, 2)</var>.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>3 2
+1 0
+2 1
+1 0
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>3
+1 1 1 2
+1 2 2 2
+3 1 3 2
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>1 5
+9 9 9 9 9
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>2
+1 1 1 2
+1 3 1 4
+</pre></section>
+</div>
+</span>

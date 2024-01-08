@@ -1,0 +1,73 @@
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({ tex2jax: { inlineMath: [["$","$"], ["\\(","\\)"]], processEscapes: true }});
+</script>
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+
+<H1>Tangent to a Circle</H1>
+
+<p>
+  Find the tangent lines between a point $p$ and a circle $c$.
+</p>
+
+<H2>Input</H2>
+
+<p>
+  The input is given in the following format.
+</p>
+
+<p>
+$px \; py$ <br>
+$cx \; cy \; r$
+</p>
+
+<p>
+$px$ and $py$ represents the coordinate of the point $p$. $cx$, $cy$ and $r$ represents the center coordinate and radius of the circle $c$ respectively. All input values are given in integers.
+</p>
+
+<H2>Output</H2>
+
+<p>
+  Print coordinates of the tangent points on the circle $c$ based on the following rules.
+</p>
+
+<ul>
+<li> Print the coordinate with smaller $x$ first. In case of a tie, print the coordinate with smaller $y$ first.</li>
+</ul>
+
+<p>
+  The output values should be in a decimal fraction with an error less than 0.00001.
+</p>
+
+<H2>Constraints</H2>
+<ul>
+<li>$-1,000 \leq px, py, cx, cy \leq 1,000$</li>
+<li>$1 \leq r \leq 1,000$</li>
+<li>Distance between $p$ and the center of $c$ is greater than the radius of $c$.</li>
+</ul>
+
+<H2>Sample Input 1</H2>
+<pre>
+0 0
+2 2 2
+</pre>
+
+<H2>Sample Output 1</H2>
+<pre>
+0.0000000000 2.0000000000
+2.0000000000 0.0000000000
+</pre>
+
+<H2>Sample Input 2</H2>
+<pre>
+-3 0
+2 2 2
+</pre>
+
+<H2>Sample Output 2</H2>
+<pre>
+0.6206896552 3.4482758621
+2.0000000000 0.0000000000
+</pre>

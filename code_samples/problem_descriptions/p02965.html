@@ -1,0 +1,102 @@
+<span class="lang-en">
+<p>Score : <var>900</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>We have a sequence of <var>N</var> integers: <var>x=(x_0,x_1,\cdots,x_{N-1})</var>.
+Initially, <var>x_i=0</var> for each <var>i</var> (<var>0 \leq i \leq N-1</var>).</p>
+<p>Snuke will perform the following operation <strong>exactly</strong> <var>M</var> times:</p>
+<ul>
+<li>Choose two distinct indices <var>i, j</var> (<var>0 \leq i,j \leq N-1,\ i \neq j</var>).
+Then, replace <var>x_i</var> with <var>x_i+2</var> and <var>x_j</var> with <var>x_j+1</var>.</li>
+</ul>
+<p>Find the number of different sequences that can result after <var>M</var> operations.
+Since it can be enormous, compute the count modulo <var>998244353</var>.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>2 \leq N \leq 10^6</var></li>
+<li><var>1 \leq M \leq 5 \times 10^5</var></li>
+<li>All values in input are integers.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var> <var>M</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the number of different sequences that can result after <var>M</var> operations, modulo <var>998244353</var>.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>2 2
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>3
+</pre>
+<p>After two operations, there are three possible outcomes:</p>
+<ul>
+<li><var>x=(2,4)</var></li>
+<li><var>x=(3,3)</var></li>
+<li><var>x=(4,2)</var></li>
+</ul>
+<p>For example, <var>x=(3,3)</var> can result after the following sequence of operations:</p>
+<ul>
+<li>First, choose <var>i=0,j=1</var>, changing <var>x</var> from <var>(0,0)</var> to <var>(2,1)</var>.</li>
+<li>Second, choose <var>i=1,j=0</var>, changing <var>x</var> from <var>(2,1)</var> to <var>(3,3)</var>.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>3 2
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>19
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>10 10
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>211428932
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 4</h3><pre>100000 50000
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 4</h3><pre>3463133
+</pre></section>
+</div>
+</span>

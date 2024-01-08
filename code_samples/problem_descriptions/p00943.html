@@ -1,0 +1,101 @@
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({ tex2jax: { inlineMath: [["$","$"], ["\\(","\\)"]], processEscapes: true }});
+</script>
+<script type='text/javascript' src='http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
+</script>
+
+
+<h2>Problem I
+Routing a Marathon Race</h2>
+
+
+<p>
+As a member of the ICPC (Ibaraki Committee of Physical Competitions), you are responsible for planning the route of a marathon event held in the City of Tsukuba. A great number of runners, from beginners to experts, are expected to take part.
+</p>
+
+<p>
+You have at hand a city map that lists all the street segments suited for the event and all the junctions on them. The race is to start at the junction in front of Tsukuba High, and the goal is at the junction in front of City Hall, both of which are marked on the map.
+</p>
+
+<p>
+To avoid congestion and confusion of runners of divergent skills, the route should not visit the same junction twice. Consequently, although the street segments can be used in either direction, they can be included at most once in the route. As the main objective of the event is in recreation and health promotion of citizens, time records are not important and the route distance can be arbitrarily decided.
+</p>
+
+<p>
+A number of personnel have to be stationed at every junction on the route. Junctions <i>adjacent</i> to them, i.e., junctions connected directly by a street segment to the junctions on the route, also need personnel staffing to keep casual traffic from interfering the race. The same number of personnel is required when a junction is on the route and when it is adjacent to one, but different junctions require different numbers of personnel depending on their sizes and shapes, which are also indicated on the map.
+</p>
+
+<p>
+The municipal authorities are eager in reducing the costs including the personnel expense for
+events of this kind. Your task is to write a program that plans a route with the minimum
+possible number of personnel required and outputs that number.
+</p>
+
+
+<h3>Input</h3>
+
+<p>
+The input consists of a single test case representing a summary city map, formatted as follows.<br>
+<br>
+
+$n$ $m$<br>
+$c_1$<br>
+...<br>
+$c_n$<br>
+$i_1$ $j_1$<br>
+...<br>
+$i_m$ $j_m$<br>
+<br>
+
+The first line of a test case has two positive integers, $n$ and $m$. Here, $n$ indicates the number of junctions in the map $(2 \leq n \leq 40)$, and $m$ is the number of street segments connecting adjacent junctions. Junctions are identified by integers 1 through $n$.
+</p>
+
+<p>
+Then comes $n$ lines indicating numbers of personnel required. The $k$-th line of which, an integer $c_k$ $(1 \leq c_k \leq 100)$, is the number of personnel required for the junction $k$.
+</p>
+
+<p>
+The remaining $m$ lines list street segments between junctions. Each of these lines has two integers $i_k$ and $j_k$, representing a segment connecting junctions $i_k$ and $j_k$ $(i_k \ne j_k)$. There is at most one street segment connecting the same pair of junctions.
+</p>
+
+<p>
+The race starts at junction 1 and the goal is at junction $n$. It is guaranteed that there is at least one route connecting the start and the goal junctions.
+</p>
+
+<h3>Output</h3>
+
+<p>
+Output an integer indicating the minimum possible number of personnel required.
+</p>
+
+<center>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_ICPCAsia2015_RoutingAMarathonRace"><br>
+<p>
+Figure I.1. The Lowest-Cost Route for Sample Input 1
+</p>
+</center>
+
+<p>
+Figure I.1 shows the lowest-cost route for Sample Input 1. The arrows indicate the route and the circles painted gray are junctions requiring personnel assignment. The minimum number of required personnel is 17 in this case.
+</p>
+
+<h3>Sample Input 1</h3>
+
+<pre>6 6
+3
+1
+9
+4
+3
+6
+1 2
+1 4
+2 6
+5 4
+6 5
+3 2</pre>
+
+<h3>Sample Output 1</h3>
+
+<pre>17</pre>

@@ -1,0 +1,128 @@
+<span class="lang-en">
+<p>Score : <var>800</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>Takahashi and Aoki will take <var>N</var> exams numbered <var>1</var> to <var>N</var>.
+They have decided to compete in these exams.
+The winner will be determined as follows:</p>
+<ul>
+<li>
+<p>For each exam <var>i</var>, Takahashi decides its <em>importance</em> <var>c_i</var>, which must be an integer between <var>l_i</var> and <var>u_i</var> (inclusive).</p>
+</li>
+<li>
+<p>Let <var>A</var> be <var>\sum_{i=1}^{N} c_i \times</var> (Takahashi's score on Exam <var>i</var>), and <var>B</var> be <var>\sum_{i=1}^{N} c_i \times</var> (Aoki's score on Exam <var>i</var>). Takahashi wins if <var>A \geq B</var>, and Aoki wins if <var>A &lt; B</var>.</p>
+</li>
+</ul>
+<p>Takahashi knows that Aoki will score <var>b_i</var> on Exam <var>i</var>, with his supernatural power.</p>
+<p>Takahashi himself, on the other hand, will score <var>0</var> on all the exams without studying more. For each hour of study, he can increase his score on some exam by <var>1</var>. (He can only study for an integer number of hours.)
+However, <strong>he cannot score more than <var>X</var> on an exam</strong>, since the perfect score for all the exams is <var>X</var>.</p>
+<p>Print the minimum number of study hours required for Takahashi to win.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 \leq N \leq 10^5</var></li>
+<li><var>1 \leq X \leq 10^5</var></li>
+<li><var>0 \leq b_i \leq X</var> <var>(1 \leq i \leq N)</var></li>
+<li><var>1 \leq l_i \leq u_i \leq 10^5</var> <var>(1 \leq i \leq N)</var></li>
+<li>All values in input are integers.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var> <var>X</var>
+<var>b_1</var> <var>l_1</var> <var>u_1</var>
+<var>b_2</var> <var>l_2</var> <var>u_2</var>
+<var>:</var>
+<var>b_N</var> <var>l_N</var> <var>u_N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the minimum number of study hours required for Takahashi to win.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>2 100
+85 2 3
+60 1 1
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>115
+</pre>
+<p>One optimal strategy is as follows:</p>
+<ul>
+<li>
+<p>Choose <var>c_1 = 3, c_2 = 1</var>.</p>
+</li>
+<li>
+<p>Study to score <var>100</var> on Exam <var>1</var> and <var>15</var> on Exam <var>2</var>.</p>
+</li>
+</ul>
+<p>Then, <var>A = 3 \times 100 + 1 \times 15 = 315</var>, <var>B = 3 \times 85 + 1 \times 60 = 315</var> and Takahashi will win.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>2 100
+85 2 3
+60 10 10
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>77
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>1 100000
+31415 2718 2818
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>31415
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 4</h3><pre>10 1000
+451 4593 6263
+324 310 6991
+378 1431 7068
+71 1757 9218
+204 3676 4328
+840 6221 9080
+684 1545 8511
+709 5467 8674
+862 6504 9835
+283 4965 9980
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 4</h3><pre>2540
+</pre></section>
+</div>
+</span>

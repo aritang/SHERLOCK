@@ -1,0 +1,94 @@
+<span class="lang-en">
+<p>Score : <var>400</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>We have <var>N</var> points in a two-dimensional plane.<br/>
+The coordinates of the <var>i</var>-th point <var>(1 \leq i \leq N)</var> are <var>(x_i,y_i)</var>.<br/>
+Let us consider a rectangle whose sides are parallel to the coordinate axes that contains <var>K</var> or more of the <var>N</var> points in its interior.<br/>
+Here, points on the sides of the rectangle are considered to be in the interior.<br/>
+Find the minimum possible area of such a rectangle.  </p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>2 \leq K \leq N \leq 50</var> </li>
+<li><var>-10^9 \leq x_i,y_i \leq 10^9 (1 \leq i \leq N)</var> </li>
+<li><var>x_i≠x_j (1 \leq i&lt;j \leq N)</var> </li>
+<li><var>y_i≠y_j (1 \leq i&lt;j \leq N)</var> </li>
+<li>All input values are integers. (Added at 21:50 JST)  </li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:  </p>
+<pre><var>N</var> <var>K</var>  
+<var>x_1</var> <var>y_1</var>
+<var>:</var>  
+<var>x_{N}</var> <var>y_{N}</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the minimum possible area of a rectangle that satisfies the condition.  </p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>4 4
+1 4
+3 3
+6 2
+8 1
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>21
+</pre>
+<p>One rectangle that satisfies the condition with the minimum possible area has the following vertices: <var>(1,1)</var>, <var>(8,1)</var>, <var>(1,4)</var> and <var>(8,4)</var>.<br/>
+Its area is <var>(8-1) × (4-1) = 21</var>.  </p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>4 2
+0 0
+1 1
+2 2
+3 3
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>1
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>4 3
+-1000000000 -1000000000
+1000000000 1000000000
+-999999999 999999999
+999999999 -999999999
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>3999999996000000001
+</pre>
+<p>Watch out for integer overflows.  </p></section>
+</div>
+</span>

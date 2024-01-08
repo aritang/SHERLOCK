@@ -1,0 +1,83 @@
+<span class="lang-en">
+<p>Score : <var>400</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>Given is a string <var>S</var> consisting of <code>L</code> and <code>R</code>.</p>
+<p>Let <var>N</var> be the length of <var>S</var>. There are <var>N</var> squares arranged from left to right, and the <var>i</var>-th character of <var>S</var> from the left is written on the <var>i</var>-th square from the left.</p>
+<p>The character written on the leftmost square is always <code>R</code>, and the character written on the rightmost square is always <code>L</code>.</p>
+<p>Initially, one child is standing on each square.</p>
+<p>Each child will perform the move below <var>10^{100}</var> times:</p>
+<ul>
+<li>Move one square in the direction specified by the character written in the square on which the child is standing. <code>L</code> denotes left, and <code>R</code> denotes right.</li>
+</ul>
+<p>Find the number of children standing on each square after the children performed the moves.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>S</var> is a string of length between <var>2</var> and <var>10^5</var> (inclusive).</li>
+<li>Each character of <var>S</var> is <code>L</code> or <code>R</code>.</li>
+<li>The first and last characters of <var>S</var> are <code>R</code> and <code>L</code>, respectively.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>S</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the number of children standing on each square after the children performed the moves, in order from left to right.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>RRLRL
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>0 1 2 1 1
+</pre>
+<ul>
+<li>After each child performed one move, the number of children standing on each square is <var>0, 2, 1, 1, 1</var> from left to right.</li>
+<li>After each child performed two moves, the number of children standing on each square is <var>0, 1, 2, 1, 1</var> from left to right.</li>
+<li>After each child performed <var>10^{100}</var> moves, the number of children standing on each square is <var>0, 1, 2, 1, 1</var> from left to right.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>RRLLLLRLRRLL
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>0 3 3 0 0 0 1 1 0 2 2 0
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>RRRLLRLLRRRLLLLL
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>0 0 3 2 0 2 1 0 0 0 4 4 0 0 0 0
+</pre></section>
+</div>
+</span>

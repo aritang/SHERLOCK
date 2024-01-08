@@ -1,0 +1,64 @@
+<span class="lang-en">
+<p>Score : <var>100</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>You are given an array <var>a_0, a_1, ..., a_{N-1}</var> of length <var>N</var>. Process <var>Q</var> queries of the following types.</p>
+<ul>
+<li><code>0 p x</code>: <var>a_p \gets a_p + x</var></li>
+<li><code>1 l r</code>: Print <var>\sum_{i = l}^{r - 1}{a_i}</var>.</li>
+</ul>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 \leq N, Q \leq 500,000</var></li>
+<li><var>0 \leq a_i, x \leq 10^9</var></li>
+<li><var>0 \leq p &lt; N</var></li>
+<li><var>0 \leq l_i &lt; r_i \leq N</var></li>
+<li>All values in Input are integer.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var> <var>Q</var>
+<var>a_0</var> <var>a_1</var> ... <var>a_{N - 1}</var>
+<var>\textrm{Query}_0</var>
+<var>\textrm{Query}_1</var>
+:
+<var>\textrm{Query}_{Q - 1}</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>For each query of the latter type, print the answer.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>5 5
+1 2 3 4 5
+1 0 5
+1 2 4
+0 3 10
+1 0 5
+1 0 3
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>15
+7
+25
+6
+</pre></section>
+</div>
+</span>

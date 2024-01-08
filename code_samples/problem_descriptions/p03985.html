@@ -1,0 +1,104 @@
+<span class="lang-en">
+<p>Score : <var>300</var> points</p>
+<div class="part">
+<section>
+<h3>Story</h3>
+<p>I am a Summoner who can invoke monsters. I can embody the pictures of monsters drawn on sketchbooks. 
+<p>I recently have received a request from Primate Research Institute of Kyoto University to invoke "Hundred Eyes Monster". 
+<p>What an great honor it is to contribute to the prosperity of the primate research of Kyoto University!
+I decided to paint an extremely high-quarity monster to the best of my ability. </p>
+<p>I have already painted the forehead and mouth and this time I am going to paint as many eyes as possible between the forehead and mouth. 
+Well...I cannot wait to see the complete painting. 
+
+<h3>Problem Statement</h3>
+<p>
+Two circles <var>A</var>, <var>B</var> are given on a two-dimensional plane. 
+The coordinate of the center and radius of circle <var>A</var> is (<var>x_A</var>, <var>y_A</var>) and <var>r_A</var> respectively. 
+The coordinate of the center and radius of circle <var>B</var> is (<var>x_B</var>, <var>y_B</var>) and <var>r_B</var> respectively. 
+These two circles have no intersection inside. 
+Here, we consider a set of circles <var>S</var> that satisfies the following conditions. 
+</p>
+<ul>
+<li>Each circle in <var>S</var> touches both <var>A</var> and <var>B</var>, and does not have common points with them inside the circle. </li>
+<li>Any two different circles in <var>S</var> have no common points inside them.
+</li></ul>
+<p>
+Write a program that finds the maximum number of elements in <var>S</var>. 
+</p>
+</p></p></p></section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3>
+<ul>
+<li><var>1 \leq T \leq 50000</var></li>
+<li><var>-10^5 \leq x_A \leq 10^5</var></li>
+<li><var>-10^5 \leq y_A \leq 10^5</var></li>
+<li><var>-10^5 \leq x_B \leq 10^5</var></li>
+<li><var>-10^5 \leq y_B \leq 10^5</var></li>
+<li><var>1 \leq r_A \leq 10^5</var></li>
+<li><var>1 \leq r_B \leq 10^5</var></li>
+<li><var>{r_A}^2 + {r_B}^2 &lt; (x_A - x_B)^2 + (y_A - y_B)^2</var></li>
+<li>All values given as input are integers.</li>
+<li>It is guaranteed that, when the radiuses of <var>A</var> and <var>B</var> change by <var>0.0005</var>, the answer does not change.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3>
+<p>The input consists of multiple test cases and is given from Standard Input in the following format:
+<pre>
+<var>T</var>
+<var>testcase_1</var>
+:
+<var>testcase_T</var>
+</pre>
+Each test case is given with the following format. 
+<pre>
+<var>x_A</var> <var>y_A</var> <var>r_A</var> <var>x_B</var> <var>y_B</var> <var>r_B</var>
+</pre>
+</p></section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3>
+<p>
+The output consists of <var>T</var> lines. 
+On line <var>i</var> (<var>1 \leq i \leq T</var>), putput the maximum number of elements in <var>S</var> in <var>i</var>-th test case.
+</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3>
+<pre>
+4
+0 -3 2 0 3 2
+0 0 9 8 8 2
+0 0 9 10 10 5
+0 0 707 1000 1000 707
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3>
+<pre>
+3
+10
+21
+180
+</pre>
+You can arrange circles ,for example, like the following images in Sample 1, 2. <br/>
+<div style="text-align: center;">
+<img src="/img/other/kupc2016/sushi/img00.png"/>
+<img src="/img/other/kupc2016/sushi/img01.png"/>
+</div>
+</section>
+</div>
+</span>

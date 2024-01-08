@@ -1,0 +1,91 @@
+
+
+
+<script language="JavaScript" type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML">
+</script>
+
+<h1>Problem L: Select Sets</h1>
+
+<h2>Problem</h2>
+<p>
+  整数の集合が<var>N</var>個ある。 これらの集合にはそれぞれ1から<var>N</var>までの番号が割り振られている。<var>i</var>番目の集合の要素数は<var>K<sub>i</sub></var>であり、その集合の要素の中で<var>j</var>番目に小さい整数は<var>a<sub>i,j</sub></var>である。
+</p>
+
+<p>
+太郎君はこの中から任意の数だけ集合を選ぶことになった。  ただ適当に選ぶだけではつまらないと思った太郎君は、少なくとも3つの集合を選ぶことにした。また、"選んだ集合の和集合の要素数"と"選んだ集合の積集合の要素数"の積ができるだけ大きくなるように選ぶことにした。
+</p>
+
+<p>
+太郎君が最適に集合を選んだとき、"選んだ集合の和集合の要素数"と"選んだ集合の積集合の要素数"の積の最大値を求めよ。
+</p>
+
+
+
+<h2>Input</h2>
+<p>入力は以下の形式で与えられる。</p>
+<pre>
+<var>N</var>
+<var>K<sub>1</sub></var> <var>a<sub>1,1</sub></var> <var>a<sub>1,2</sub></var> ... <var>a<sub>1,K<sub>1</sub></sub></var>
+<var>K<sub>2</sub></var> <var>a<sub>2,1</sub></var> <var>a<sub>2,2</sub></var> ... <var>a<sub>2,K<sub>2</sub></sub></var>
+...
+<var>K<sub>N</sub></var> <var>a<sub>N,1</sub></var> <var>a<sub>N,2</sub></var> ... <var>a<sub>N,K<sub>N</sub></sub></var>
+</pre>
+
+
+<h2>Constraints</h2>
+<p>入力は以下の条件を満たす。</p>
+<ul>
+  <li>入力は全て整数である。</li>
+  <li>3 &le; <var>N</var> &le; 20,000</li>
+  <li>1 &le; <var>a<sub>i,j</sub></var> &le; 22</li>
+  <li> <var>a<sub>i,j</sub></var> &lt; <var>a<sub>i,j+1</sub></var>
+    ( 1 &le; <var>i</var> &le; <var>N</var> )
+    ( 1 &le; <var>j</var> &lt; <var>K<sub>i</sub></var>)</li>
+</ul>
+
+<h2>Output</h2>
+<p>
+  太郎君が最適に選んだときの"選んだ集合の和集合の要素数"と"選んだ集合の積集合の要素数"の積の最大値を出力せよ。
+</p>
+
+<h2>Sample Input 1</h2>
+<pre>
+4
+1 5
+2 3 5
+3 3 5 7
+4 3 5 7 9
+</pre>
+
+<h2>Sample Output 1</h2>
+<pre>
+8
+</pre>
+
+<h2>Sample Input 2</h2>
+<pre>
+5
+4 1 4 5 6
+4 1 7 8 9
+3 1 2 3
+3 1 2 3
+3 1 2 3
+</pre>
+
+<h2>Sample Output 2</h2>
+<pre>
+9
+</pre>
+
+<h2>Sample Input 3</h2>
+<pre>
+3
+2 3 4
+2 2 5
+2 1 6
+</pre>
+
+<h2>Sample Output 3</h2>
+<pre>
+0
+</pre>

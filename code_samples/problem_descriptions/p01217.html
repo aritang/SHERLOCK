@@ -1,0 +1,56 @@
+
+<H1><font color="#000">Problem B:</font> Jaggie Spheres</H1>
+
+<p>
+Let <i>J</i>(<i>n</i>) be a three-dimensional body that
+</p>
+<ul>
+    <li> is a union of unit cubes whose all vertices lie on integer coordinates,</li>
+
+    <li> contains all points that are closer than the distance of &radic;<i>n</i> to the origin, and</li>
+    <li> is the smallest of all such bodies.</li>
+</ul>
+<p>
+The figure below shows how <i>J</i>(1), <i>J</i>(2), and <i>J</i>(3) look.
+</p>
+
+<center>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE1_jaggieSpheres">
+<p>Figure 1: Jaggie Spheres for <i>n</i> = 1, 2, 3</p>
+</center>
+
+<p>
+Your task is to calculate how many faces <i>J</i>(<i>n</i>) have. Here, we define two square belong to the same face
+if they are parallel and share an edge, but don’t if they share just a vertex.
+
+</p>
+
+<H2>Input</H2>
+
+<p>
+The input consists of multiple data sets, each of which comes with a single line containing an integer <i>n</i>
+(1 &le; <i>n</i> &le; 1000000). The end of input is indicated by <i>n</i> = 0.
+</p>
+
+<H2>Output</H2>
+
+<p>
+For each data set, print the number of faces <i>J</i>(<i>n</i>) have.
+</p>
+
+<H2>Sample Input</H2>
+<pre>
+1
+2
+3
+4
+0
+</pre>
+
+<H2>Output for the Sample Input</H2>
+<pre>
+6
+30
+30
+6
+</pre>

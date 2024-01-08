@@ -1,0 +1,86 @@
+
+
+
+<h2>B - Doctor Course Is Recommended / D進どうですか？</h2>
+
+<h3>Story</h3>
+<p>DのひとはD進を決意したので、博士後期課程入学試験を受けることにした。筆記試験はマークシート形式であった。自身の専門分野の問題ばかりだったので、Dのひとはすぐにすべての正答を導くことができた。しかし、ここで大きな問題に気づいた。Dのひとは宗教上の理由から、解答用紙には'D'としか書くことができなかったのだ。また、'D'と書くためには尋常ではない集中力を使うため，'D'と書くことのできる個数も決まっている。Dのひとが本当にD進することができるか調べるため、解答・配点を踏まえ、上記の条件を満たした上で得られる最大の得点を求めてみよう。</p>
+<h3>Problem</h3>
+<p>'A','B','C','D','E'の<var>5</var>択からなるマークシート問題がある。<var>1</var>つの解答欄は空欄<var>1</var>マス、もしくは<var>2</var>マスから構成されており、それぞれの解答欄について、マス全てが想定されている解答と等しいとき、解答欄に割り当てられた点数を得る。解答欄毎の解答と配点が与えられる。<var>D</var>個のマスまで'D'とマークし、残りのマスを空マスにしなければならないとき、得られる点数の最大値を求めよ。</p>
+<h3>Input</h3>
+<p>入力は以下の形式で与えられる。</p>
+<pre><var>D</var>
+<var>x</var>
+<var>a_1</var> <var>p_1</var>
+<var>...</var>
+<var>a_x</var> <var>p_x</var>
+<var>y</var>
+<var>b_1</var><var>c_1</var> <var>q_1</var>
+<var>...</var>
+<var>b_y</var><var>c_y</var> <var>q_y</var></pre>
+<p><var>1</var>行目は、'D'と書くことのできる最大回数を表す<var>1</var>つの整数<var>D</var>からなる。 <var>2</var>行目は、空欄<var>1</var>マスからなる解答欄の個数を表す<var>1</var>つの整数<var>x</var>からなる。 続く<var>x</var>行は、空欄<var>1</var>マスからなる解答欄の情報が与えられる。 <var>i+2</var>行目(<var>1 \leq i \leq x</var>)は空欄<var>1</var>マスからなる<var>i</var>番目の解答欄の正答を表す文字<var>a_i</var>、配点を表す整数<var>p_i</var>が空白区切りで書かれている。 <var>x+3</var>行目は、空欄<var>2</var>マスからなる解答欄の個数を表す<var>1</var>つの整数<var>y</var>からなる。 続く<var>y</var>行は、空欄<var>2</var>マスからなる解答欄の情報が与えられる。 <var>j+x+3</var>行目(<var>1 \leq j \leq y</var>)は空欄<var>2</var>マスからなる<var>j</var>番目の解答欄の正答を表す<var>2</var>つの文字<var>b_j</var>と<var>c_j</var>、配点を表す整数<var>q_j</var>からなる。 <var>b_j</var>と<var>c_j</var>の間に空白は存在しないが、<var>c_j</var>と<var>q_j</var>の間は空白で区切られている。</p>
+
+
+<p>制約:</p>
+
+<!--<blockquote>-->
+<ul>
+<li><var>1 \leq D \leq 13</var> (=0xD)</li>
+<li><var>0 \leq x</var>, <var>0 \leq y</var>, <var>1 \leq x + 2y \leq 20</var></li>
+<li><var>a_i</var>, <var>b_j</var>, <var>c_j</var> <var>\in \{A,B,C,D,E\}</var></li>
+<li><img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_HUPC2014_eq" alt="sum" align="middle"/></li>
+</ul>
+<!--</blockquote>-->
+
+<h3>Output</h3>
+<p>上記の制約を満たして得られる最大得点を1行に出力せよ。行の最後では必ず改行を行うこと。</p>
+<h3>Sample Input 1</h3>
+<pre>2
+3
+D 30
+D 50
+D 20
+0</pre>
+<h3>Sample Output 1</h3>
+<pre>80</pre>
+<p>1,2番目の解答欄にDと記入し、3番目の解答欄を空白とすることで最大得点80が得られる。</p>
+<h3>Sample Input 2</h3>
+<pre>4
+0
+2
+DB 60
+DD 40</pre>
+<h3>Sample Output 2</h3>
+<pre>40</pre>
+<p>2つのマスからなる解答欄は両方とも正解しなければ得点が得られない。</p>
+<h3>Sample Input 3</h3>
+<pre>13
+2
+C 15
+A 23
+2
+BD 42
+EE 20</pre>
+<h3>Sample Output 3</h3>
+<pre>0</pre>
+<p>D進だめです。</p>
+<h3>Sample Input 4</h3>
+<pre>3
+3
+D 10
+D 15
+D 45
+1
+DD 30</pre>
+<h3>Sample Output 4</h3>
+<pre>75</pre>
+<h3>Sample Input 5</h3>
+<pre>3
+3
+D 25
+D 20
+D 25
+1
+DD 30</pre>
+<h3>Sample Output 5</h3>
+<pre>70</pre>

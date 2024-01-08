@@ -1,0 +1,66 @@
+<span class="lang-en">
+<p>Score : <var>200</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>Snuke signed up for a new website which holds programming competitions.
+He worried that he might forget his password, and he took notes of it.
+Since directly recording his password would cause him trouble if stolen,
+he took two notes: one contains the characters at the odd-numbered positions, and the other contains the characters at the even-numbered positions.</p>
+<p>You are given two strings <var>O</var> and <var>E</var>. <var>O</var> contains the characters at the odd-numbered positions retaining their relative order, and <var>E</var> contains the characters at the even-numbered positions retaining their relative order.
+Restore the original password.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>O</var> and <var>E</var> consists of lowercase English letters (<code>a</code> - <code>z</code>).</li>
+<li><var>1 \leq |O|,|E| \leq 50</var></li>
+<li><var>|O| - |E|</var> is either <var>0</var> or <var>1</var>.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>O</var>
+<var>E</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the original password.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>xyz
+abc
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>xaybzc
+</pre>
+<p>The original password is <code>xaybzc</code>. Extracting the characters at the odd-numbered positions results in <code>xyz</code>, and extracting the characters at the even-numbered positions results in <code>abc</code>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>atcoderbeginnercontest
+atcoderregularcontest
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>aattccooddeerrbreeggiunlnaerrccoonntteesstt
+</pre></section>
+</div>
+</span>

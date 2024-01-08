@@ -1,0 +1,197 @@
+
+<h1><font color="#000000">Problem D:</font> Twirling Robot </h1>
+<!-- end en only -->
+
+
+
+<!-- begin en only -->
+<p>
+Let's play a game using a robot on a rectangular board 
+covered with a square mesh (Figure D-1).
+The robot is initially set at the start square in the northwest corner
+facing the east direction.
+The goal of this game is to lead the robot
+to the goal square in the southeast corner.
+</p>
+<!-- end en only -->
+
+<center>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE1_2008D1"><br><br>
+<!-- begin en only -->
+Figure D-1: Example of a board
+<!-- end en only -->
+</center>
+
+
+<!-- begin en only -->
+<p>
+The robot can execute the following five types of commands.
+<dl>
+<dt> "Straight":</dt>
+<dd> Keep the current direction of the robot, and move forward to the next square.</dd>
+<dt> "Right":</dt>
+<dd> Turn right with 90 degrees from the current direction, and move forward to the next square.</dd>
+<dt> "Back":</dt>
+<dd> Turn to the reverse direction, and move forward to the next square.</dd>
+<dt> "Left":</dt>
+<dd> Turn left with 90 degrees from the current direction, and move forward to the next square.</dd>
+<dt> "Halt":</dt>
+<dd> Stop at the current square to finish the game.</dd>
+</dl>
+</p>
+<!-- end en only -->
+
+<!-- begin en only -->
+<p>
+Each square has one of these commands assigned as shown in Figure D-2.
+The robot executes the command assigned to the square where it resides,
+unless the player gives another command to be executed instead.
+Each time the player gives an explicit command, 
+the player has to pay the cost that depends on the command type.
+</p>
+<!-- end en only -->
+
+<center>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE1_2008D2"><br><br>
+<!-- begin en only -->
+Figure D-2: Example of commands assigned to squares
+<!-- end en only -->
+</center>
+
+
+<!-- begin en only -->
+<p>
+The robot can visit the same square several times during a game.
+The player loses the game when the robot goes out of the board
+or it executes a "Halt" command before arriving at the goal square.
+</p>
+<!-- end en only -->
+
+<!-- begin en only -->
+<p>
+Your task is to write a program that calculates the minimum cost to lead the robot
+from the start square to the goal one.
+</p>
+<!-- end en only -->
+
+
+
+<h3>Input</h3>
+
+
+<!-- begin en only -->
+<p>
+The input is a sequence of datasets. 
+The end of the input is indicated by a line containing two zeros separated by a space.
+Each dataset is formatted as follows.
+</p>
+<!-- end en only -->
+
+<p>
+<blockquote>
+<i>w h</i><br>
+<i>s</i>(1,1)  ... <i>s</i>(1,<i>w</i>)<br>
+<i>s</i>(2,1)  ... <i>s</i>(2,<i>w</i>)<br>
+...<br>
+<i>s</i>(<i>h</i>,1)  ... <i>s</i>(<i><i>h</i></i>,<i>w</i>)<br>
+<i>c</i><sub>0</sub> <i>c</i><sub>1</sub> <i>c</i><sub>2</sub> <i>c</i><sub>3</sub>
+</blockquote>
+</p>
+
+
+<!-- begin en only -->
+<p>
+The integers <i>h</i> and <i>w</i> are the numbers of rows and columns of the board, 
+respectively.
+You may assume 2 &le; <i>h</i> &le; 30 and 2 &le; <i>w</i> &le; 30. 
+Each of the following <i>h</i> lines consists of <i>w</i> numbers delimited by a space.
+The number <i>s</i>(<i>i</i>, <i>j</i>) represents the command assigned to the square 
+in the <i>i</i>-th row and the <i>j</i>-th column as follows.
+<ul>
+<li> 0: "Straight"</li> 
+<li> 1: "Right"</li>
+<li> 2: "Back"</li>
+<li> 3: "Left"</li>
+<li> 4: "Halt"</li>
+</ul>
+
+</p>
+<!-- end en only -->
+
+<!-- begin en only -->
+<p>
+You can assume that a "Halt" command is assigned to the goal square.
+Note that "Halt" commands may be assigned to other squares, too.
+</p>
+<!-- end en only -->
+
+
+<!-- begin en only -->
+<p>
+The last line of a dataset contains four integers 
+<i>c</i><sub>0</sub>, <i>c</i><sub>1</sub>, <i>c</i><sub>2</sub>, and <i>c</i><sub>3</sub>, delimited by a space,  
+indicating the costs that the player has to pay 
+when the player gives
+"Straight", "Right", "Back", and "Left" commands
+respectively.
+The player cannot give "Halt" commands.
+You can assume that all the values of 
+<i>c</i><sub>0</sub>, <i>c</i><sub>1</sub>, <i>c</i><sub>2</sub>, and <i>c</i><sub>3</sub>
+are between 1 and 9, inclusive.
+</p>
+<!-- end en only -->
+
+
+
+
+
+<h3>Output</h3>
+
+<!-- begin en only -->
+<p>
+For each dataset, print a line only having a decimal integer indicating the minimum cost 
+required to lead the robot to the goal.
+No other characters should be on the output line.
+</p>
+<!-- end en only -->
+
+
+<h3>Sample Input</h3>
+
+<pre>
+8 3
+0 0 0 0 0 0 0 1
+2 3 0 1 4 0 0 1
+3 3 0 0 0 0 0 4
+9 9 1 9
+4 4
+3 3 4 0
+1 2 4 4
+1 1 1 0
+0 2 4 4
+8 7 2 1
+2 8
+2 2
+4 1
+0 4
+1 3
+1 0
+2 1
+0 3
+1 4
+1 9 3 1
+0 0
+</pre>
+
+
+<h3>Output for the Sample Input</h3>
+
+<pre>
+1
+11
+6
+</pre>
+
+
+
+

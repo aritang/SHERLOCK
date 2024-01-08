@@ -1,0 +1,99 @@
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({ tex2jax: { inlineMath: [["$","$"], ["\\(","\\)"]], processEscapes: true }});
+</script>
+<script language="JavaScript" type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+
+<meta http-equiv="X-UA-Compatible" CONTENT="IE=EmulateIE7" /><style type="text/css">blockquote {
+  font-family: Menlo, Monaco, "Courier New", monospace;
+  color: #333333;
+  display: block;
+  padding: 8.5px;
+  margin: 0 0 9px;
+  font-size: 12px;
+  line-height: 18px;
+  background-color: #f5f5f5;
+  border: 1px solid #ccc;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  white-space: pre;
+  white-space: pre-wrap;
+  word-break: break-all;
+  word-wrap: break-word;
+}</style><div class="part"><h3>Problem Statement</h3><p>We have planted $N$ flower seeds, all of which come into different flowers.
+We want to make all the flowers come out together.
+</p>
+<p>Each plant has a value called vitality, which is initially zero.
+Watering and spreading fertilizers cause changes on it, and the $i$-th plant will come into flower if its vitality is equal to or greater than $\mathit{th}_i$.
+Note that $\mathit{th}_i$ may be negative because some flowers require no additional nutrition.
+</p>
+<p>Watering effects on all the plants.
+Watering the plants with $W$ liters of water changes the vitality of the $i$-th plant by $W \times \mathit{vw}_i$ for all $i$ ($1 \le i \le n$), and costs $W \times \mathit{pw}$ yen, where $W$ need not be an integer.
+$\mathit{vw}_i$ may be negative because some flowers hate water.
+</p>
+<p>We have $N$ kinds of fertilizers, and the $i$-th fertilizer effects only on the $i$-th plant.
+Spreading $F_i$ kilograms of the $i$-th fertilizer changes the vitality of the $i$-th plant by $F_i \times \mathit{vf}_i$, and costs $F_i \times \mathit{pf}_i$ yen, where $F_i$ need not be an integer as well.
+Each fertilizer is specially made for the corresponding plant, therefore $\mathit{vf}_i$ is guaranteed to be positive.
+</p>
+<p>Of course, we also want to minimize the cost.
+Formally, our purpose is described as &quot;to minimize $W \times \mathit{pw} + \sum_{i=1}^{N}(F_i \times \mathit{pf}_i)$ under $W \times \mathit{vw}_i + F_i \times \mathit{vf}_i \ge \mathit{th}_i$, $W \ge 0$, and $F_i \ge 0$ for all $i$ ($1 \le i \le N$)&quot;.
+Your task is to calculate the minimum cost.
+</p>
+
+</div><div class="part"><h3>Input</h3>
+
+<p>The input consists of multiple datasets.
+The number of datasets does not exceed $100$, and the data size of the input does not exceed $20\mathrm{MB}$.
+Each dataset is formatted as follows.
+</p>
+
+<blockquote style="font-size:14pt">$N$<br>$\mathit{pw}$<br>$\mathit{vw}_1$ $\mathit{pf}_1$ $\mathit{vf}_1$ $\mathit{th}_1$<br>:<br>:<br>$\mathit{vw}_N$ $\mathit{pf}_N$ $\mathit{vf}_N$ $\mathit{th}_N$</blockquote>
+
+<p>The first line of a dataset contains a single integer $N$, number of flower seeds.
+The second line of a dataset contains a single integer $\mathit{pw}$, cost of watering one liter.
+Each of the following $N$ lines describes a flower. The $i$-th line contains four integers, $\mathit{vw}_i$, $\mathit{pf}_i$, $\mathit{vf}_i$, and $\mathit{th}_i$, separated by a space.
+</p>
+<p>You can assume that $1 \le N \le 10^5$, $1 \le \mathit{pw} \le 100$, $-100 \le \mathit{vw}_i \le 100$, $1 \le \mathit{pf}_i \le 100$, $1 \le \mathit{vf}_i \le 100$, and $-100 \le \mathit{th}_i \le 100$.
+</p>
+<p>The end of the input is indicated by a line containing a zero.
+</p>
+
+</div><div class="part"><h3>Output</h3>
+
+<p>For each dataset, output a line containing the minimum cost to make all the flowers come out.
+The output must have an absolute or relative error at most $10^{-4}$.
+</p>
+
+</div><div class="part"><h3>Sample Input</h3>
+
+<pre>3
+10
+4 3 4 10
+5 4 5 20
+6 5 6 30
+3
+7
+-4 3 4 -10
+5 4 5 20
+6 5 6 30
+3
+1
+-4 3 4 -10
+-5 4 5 -20
+6 5 6 30
+3
+10
+-4 3 4 -10
+-5 4 5 -20
+-6 5 6 -30
+0</pre>
+</div><div class="part"><h3>Output for the Sample Input</h3>
+
+<pre>43.5
+36
+13.5
+0</pre>
+
+</div>

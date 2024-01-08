@@ -1,0 +1,128 @@
+
+<H1><font color="#000">Problem J:</font> The Teacher’s Side of Math</H1>
+
+<p>
+One of the tasks students routinely carry out in their mathematics classes is to solve a polynomial equation. It is, given a polynomial, say <i>X</i><sup>2</sup> - 4<i>X</i> + 1, to find its roots (2 &plusmn; &radic;3).
+</p>
+
+<p>
+If the students’ task is to find the roots of a given polynomial, the teacher’s task is then to find a polynomial that has a given root. Ms. Galsone is an enthusiastic mathematics teacher who is bored with finding solutions of quadratic equations that are as simple as <i>a</i> + <i>b</i>&radic;<i>c</i>. She wanted to make higher-degree equations whose solutions are a little more complicated. As usual in problems in mathematics classes, she wants to maintain all coefficients to be integers and keep the degree of the polynomial as small as possible (provided it has the specified root). Please help her by writing a program that carries out the task of the teacher’s side.
+</p>
+
+<p>
+You are given a number t of the form:
+</p>
+
+<center>
+<p>
+    t = <sup><i>m</i></sup>&radic;<i>a</i>+<sup><i>n</i></sup>&radic;<i>b</i>
+</p>
+</center>
+
+<p>
+where <i>a</i> and <i>b</i> are distinct prime numbers, and <i>m</i> and <i>n</i> are integers greater than 1.
+</p>
+
+<p>
+In this problem, you are asked to find t's <i>minimal polynomial on integers</i>, which is the polynomial <i>F</i>(<i>X</i>) = <i>a<sub>d</sub>X<sup>d</sup></i> + <i>a</i><sub><i>d</i>-1</sub><i>X</i><sup><i>d</i>-1</sup> + ... + <i>a</i><sub>1</sub><i>X</i> + <i>a</i><sub>0</sub> satisfying the following conditions.
+</p>
+
+<ol>
+   <li> Coefficients <i>a</i><sub>0</sub>, ... , <i>a<sub>d</sub></i> are integers and <i>a<sub>d</sub></i> &gt; 0.</li>
+   <li> <i>F</i>(<i>t</i>) = 0.</li>
+   <li> The degree <i>d</i> is minimum among polynomials satisfying the above two conditions.</li>
+   <li> <i>F</i>(<i>X</i>) is primitive. That is, coefficients <i>a</i><sub>0</sub>, ... , <i>a<sub>d</sub></i> have no common divisors greater than one.</li>
+</ol>
+
+<p>
+For example, the minimal polynomial of &radic;3+ &radic;2 on integers is <i>F</i>(<i>X</i>) = <i>X</i><sup>4</sup> - 10<i>X</i><sup>2</sup> + 1. Verifying <i>F</i>(<i>t</i>) = 0 is as simple as the following (<i>&alpha;</i> = 3, <i>&beta;</i> = 2).
+</p>
+
+<p>
+<i>F</i>(<i>t</i>) = (<i>&alpha;</i> + <i>&beta;</i>)<sup>4</sup> - 10(<i>&alpha;</i> + <i>&beta;</i>)<sup>2</sup> + 1
+</p>
+
+<p>
+= (<i>&alpha;</i><sup>4</sup> + 4<i>&alpha</i><sup>3</sup><i>&beta;</i> + 6<i>&alpha;</i><sup>2</sup><i>&beta;</i><sup>2</sup> + 4<i>&alpha;&beta;</i><sup>3</sup> + <i>&beta;</i><sup>4</sup> ) - 10(<i>&alpha;</i><sup>2</sup> + 2<i>&alpha;&beta;</i> + <i>&beta;</i><sup>2</sup>) + 1
+</p>
+
+<p>
+= 9 + 12<i>&alpha;&beta;</i> + 36 + 8<i>&alpha;&beta;</i> + 4 - 10(3 + 2<i>&alpha;&beta;</i> + 2) + 1
+</p>
+
+<p>
+= (9 + 36 + 4 - 50 + 1) + (12 + 8 - 20)<i>&alpha;&beta;</i>
+</p>
+
+<p>
+                     = 0
+</p>
+
+<p>
+Verifying that the degree of <i>F</i>(<i>t</i>) is in fact minimum is a bit more difficult. Fortunately, under
+the condition given in this problem, which is that <i>a</i> and <i>b</i> are distinct prime numbers and <i>m</i> and <i>n</i> greater than one, the degree of the minimal polynomial is always <i>mn</i>. Moreover, it is
+always <i>monic</i>. That is, the coefficient of its highest-order term (<i>a<sub>d</sub></i>) is one.
+</p>
+
+<H2>Input</H2>
+
+<p>
+The input consists of multiple datasets, each in the following format.
+</p>
+
+<center><p>
+                                         <i>   a    m   b      n</i>
+</p></center>
+
+<p>
+This line represents <sup><i>m</i></sup>&radic;<i>a</i> + <sup><i>n</i></sup>&radic;<i>b</i>. The last dataset is followed by a single line consisting of four zeros. Numbers in a single line are separated by a single space.
+</p>
+<p>
+Every dataset satisfies the following conditions.
+</p>
+
+<ol>
+
+   <li>  <sup><i>m</i></sup>&radic;<i>a</i> + <sup><i>n</i></sup>&radic;<i>b</i> &le; 4.</li>
+   <li> <i>mn</i> &le; 20.</li>
+   <li> The coefficients of the answer <i>a</i><sub>0</sub>, ... , <i>a<sub>d</sub></i> are between (-2<sup>31</sup> + 1) and (2<sup>31</sup> - 1), inclusive.
+</ol>
+
+<H2>Output</H2>
+
+<p>
+For each dataset, output the coefficients of its minimal polynomial on integers <i>F</i>(<i>X</i>) = <i>a<sub>d</sub>X<sup>d</sup></i> + <i>a</i><sub><i>d</i>-1</sub><i>X</i><sup><i>d</i>-1</sup> + ... + <i>a</i><sub>1</sub><i>X</i> + <i>a</i><sub>0</sub>, in the following format.
+</p>
+
+<center><p>
+                                        <i>a<sub>d</sub></i>     <i>a</i><sub><i>d</i>-1</sub>    ...   <i>a</i><sub>1</sub> <i>a</i><sub>0</sub>
+</p>
+</center>
+
+<p>
+Non-negative integers must be printed without a sign (+ or -). Numbers in a single line must
+be separated by a single space and no other characters or extra spaces may appear in the output.
+</p>
+
+<H2>Sample Input</H2>
+<pre>
+3 2 2 2
+3 2 2 3
+2 2 3 4
+31 4 2 3
+3 2 2 7
+0 0 0 0
+</pre>
+
+<H2>Output for the Sample Input</H2>
+<pre>
+1 0 -10 0 1
+1 0 -9 -4 27 -36 -23
+1 0 -8 0 18 0 -104 0 1
+1 0 0 -8 -93 0 24 -2976 2883 -32 -3720 -23064 -29775
+1 0 -21 0 189 0 -945 -4 2835 -252 -5103 -1260 5103 -756 -2183
+</pre>
+
+
+
+

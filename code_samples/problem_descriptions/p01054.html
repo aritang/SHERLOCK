@@ -1,0 +1,80 @@
+
+
+
+<h1>String Conversion</h1>
+<h2>Problem</h2>
+
+<p>
+ジェニファーとマリアンはカーラに文字列<var>S</var>をプレゼントしました。<br>
+しかし、カーラは文字列<var>S</var>をもらっても嬉しくありません。<br>
+文字列<var>T</var>が欲しかったのです。<br>
+3人は協力して文字列<var>S</var>を文字列<var>T</var>に変えることにしました。<br>
+</p>
+
+<p>
+最初にジェニファーが文字を任意の順番に並び替えます。
+</p>
+<p>
+次にマリアンが２種類のアルファベットの小文字を交換することを任意の回数行います。<br>
+この操作では、例えば以下のように、文字列中の同じ文字が全て交換されます。<br>
+</p>
+<ul>
+<li><var>aab</var> &rarr; <var>a</var>と<var>b</var>を交換 &rarr; <var>bba</var></li>
+<li><var>aab</var> &rarr; <var>a</var>と<var>c</var>を交換 &rarr; <var>ccb</var></li>
+</ul>
+
+<p>
+最後にカーラがある1文字を別の1文字に置換することを<var>T</var>になるまで繰り返します。<br>
+ジェニファーとマリアンはカーラの置換回数が少なくなるようにしてあげることにしました。<br>
+カーラが行う置換の回数の最小値を求めてください。
+</p>
+
+<h2>Input</h2>
+
+<pre>
+<var>n</var>
+<var>S</var>
+<var>T</var>
+</pre>
+
+<p>
+1行目に文字列の長さ<var>n</var>が与えられる。<br>
+2行目に文字列<var>S</var>、3行目に文字列<var>T</var>が与えられる。
+</p>
+
+<h2>Constraints</h2>
+
+<ul>
+<li>1 &le; <var>n</var> &le; 10<sup>5</sup></li>
+<li><var>S</var>,<var>T</var>は<var>'a'~'z'</var>のみを含む</li>
+<li>|<var>S</var>| = |<var>T</var>| = <var>n</var></li>
+</ul>
+
+<h2>Output</h2>
+<p>
+カーラの最少の置換回数を1行に出力せよ。
+</p>
+
+<h2>Sample Input 1</h2>
+<pre>
+3
+abc
+xyz
+</pre>
+
+<h2>Sample Output 1</h2>
+<pre>
+0
+</pre>
+
+<h2>Sample Input 2</h2>
+<pre>
+5
+aaabb
+xyxyz
+</pre>
+
+<h2>Sample Output 2</h2>
+<pre>
+1
+</pre>

@@ -1,0 +1,93 @@
+<span class="lang-en">
+<p>Score : <var>100</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>In a long narrow forest stretching east-west, there are <var>N</var> beasts. Below, we will call the point that is <var>p</var> meters from the west end Point <var>p</var>. The <var>i</var>-th beast from the west <var>(1 ≤ i ≤ N)</var> is at Point <var>x_i</var>, and can be sold for <var>s_i</var> yen (the currency of Japan) if captured.</p>
+<p>You will choose two integers <var>L</var> and <var>R</var> <var>(L ≤ R)</var>, and throw a net to cover the range from Point <var>L</var> to Point <var>R</var> including both ends, <var>[L, R]</var>. Then, all the beasts in the range will be captured. However, the net costs <var>R - L</var> yen and your profit will be <var>(</var>the sum of <var>s_i</var> over all captured beasts <var>i) - (R - L)</var> yen.</p>
+<p>What is the maximum profit that can be earned by throwing a net only once?</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 ≤ N ≤ 2 × 10^5</var></li>
+<li><var>1 ≤ x_1 &lt; x_2 &lt; ... &lt; x_N ≤ 10^{15}</var></li>
+<li><var>1 ≤ s_i ≤ 10^9</var></li>
+<li>All input values are integers.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+<var>x_1</var> <var>s_1</var>
+<var>x_2</var> <var>s_2</var>
+<var>:</var>
+<var>x_N</var> <var>s_N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>When the maximum profit is <var>X</var> yen, print the value of <var>X</var>.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>5
+10 20
+40 50
+60 30
+70 40
+90 10
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>90
+</pre>
+<p>If you throw a net covering the range <var>[L = 40, R = 70]</var>, the second, third and fourth beasts from the west will be captured, generating the profit of <var>s_2 + s_3 + s_4 - (R - L) = 90</var> yen. It is not possible to earn <var>91</var> yen or more.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>5
+10 2
+40 5
+60 3
+70 4
+90 1
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>5
+</pre>
+<p>The positions of the beasts are the same as Sample 1, but the selling prices dropped significantly, so you should not aim for two or more beasts. By throwing a net covering the range <var>[L = 40, R = 40]</var>, you can earn <var>s_2 - (R - L) = 5</var> yen, and this is the maximum possible profit.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>4
+1 100
+3 200
+999999999999999 150
+1000000000000000 150
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>299
+</pre></section>
+</div>
+</span>

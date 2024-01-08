@@ -1,0 +1,82 @@
+<span class="lang-en">
+<p>Score : <var>600</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>Given are two integer sequences of <var>N</var> elements each: <var>A_1,...,A_N</var> and <var>B_1,...,B_N</var>.
+Determine if it is possible to do the following operation at most <var>N-2</var> times (possibly zero) so that, for every integer <var>i</var> from <var>1</var> to <var>N</var>, <var>A_i \leq B_i</var> holds:</p>
+<ul>
+<li>Choose two distinct integers <var>x</var> and <var>y</var> between <var>1</var> and <var>N</var> (inclusive), and swap the values of <var>A_x</var> and <var>A_y</var>.</li>
+</ul>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>2 \leq N \leq 10^5</var></li>
+<li><var>1 \leq A_i,B_i \leq 10^9</var></li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+<var>A_1</var> <var>A_2</var> <var>...</var> <var>A_N</var>
+<var>B_1</var> <var>B_2</var> <var>...</var> <var>B_N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>If the objective is achievable, print <code>Yes</code>; if it is not, print <code>No</code>.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>3
+1 3 2
+1 2 3
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>Yes
+</pre>
+<p>We should swap the values of <var>A_2</var> and <var>A_3</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>3
+1 2 3
+2 2 2
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>No
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>6
+3 1 2 6 3 4
+2 2 8 3 4 3
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>Yes
+</pre></section>
+</div>
+</span>

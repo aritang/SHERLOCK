@@ -1,0 +1,74 @@
+<span class="lang-en">
+<p>Score : <var>1500</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>There is an undirected connected graph with <var>N</var> vertices numbered <var>1</var> through <var>N</var>.
+The lengths of all edges in this graph are <var>1</var>.
+It is known that for each <var>i (1≦i≦N)</var>, the distance between vertex <var>1</var> and vertex <var>i</var> is <var>A_i</var>, and the distance between vertex <var>2</var> and vertex <var>i</var> is <var>B_i</var>.
+Determine whether there exists such a graph.
+If it exists, find the minimum possible number of edges in it.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>2≦N≦10^5</var></li>
+<li><var>0≦A_i,B_i≦N-1</var></li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>The input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+<var>A_1</var> <var>B_1</var>
+<var>A_2</var> <var>B_2</var>
+:
+<var>A_N</var> <var>B_N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>If there exists a graph satisfying the conditions, print the minimum possible number of edges in such a graph. Otherwise, print <code>-1</code>.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>4
+0 1
+1 0
+1 1
+2 1
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>4
+</pre>
+<p>The figure below shows two possible graphs. The graph on the right has fewer edges.</p>
+<p><img alt="" src="https://atcoder.jp/img/code-festival-2016-final/dd1e04d837fd7fc1be56b231cd8c2a17.png"/></p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>3
+0 1
+1 0
+2 2
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>-1
+</pre>
+<p>Such a graph does not exist.</p></section>
+</div>
+</span>

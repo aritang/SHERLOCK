@@ -1,0 +1,81 @@
+<span class="lang-en">
+<p>Score: <var>200</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3>
+<p>There are three positive integers <var>A</var>, <var>B</var> and <var>C</var> written on a blackboard. E869120 performs the following operation <var>K</var> times:</p>
+<ul>
+<li>Choose one integer written on the blackboard and let the chosen integer be <var>n</var>. Replace the chosen integer with <var>2n</var>.</li>
+</ul>
+<p>What is the largest possible sum of the integers written on the blackboard after <var>K</var> operations?</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3>
+<ul>
+<li><var>A, B</var> and <var>C</var> are integers between <var>1</var> and <var>50</var> (inclusive).</li>
+<li><var>K</var> is an integer between <var>1</var> and <var>10</var> (inclusive).</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3>
+<p>Input is given from Standard Input in the following format:</p>
+<pre><var>A</var> <var>B</var> <var>C</var>
+<var>K</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3>
+<p>Print the largest possible sum of the integers written on the blackboard after <var>K</var> operations by E869220.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>5 3 11
+1
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>30
+</pre>
+<p>In this sample, <var>5, 3, 11</var> are initially written on the blackboard, and E869120 can perform the operation once.<br/>
+There are three choices:  </p>
+<ol>
+<li>Double <var>5</var>: The integers written on the board after the operation are <var>10, 3, 11</var>.</li>
+<li>Double <var>3</var>: The integers written on the board after the operation are <var>5, 6, 11</var>.</li>
+<li>Double <var>11</var>: The integers written on the board after the operation are <var>5, 3, 22</var>.</li>
+</ol>
+<p>If he chooses 3., the sum of the integers written on the board afterwards is <var>5 + 3 + 22 = 30</var>, which is the largest among 1. through 3.  </p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>3 3 4
+2
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>22
+</pre>
+<p>E869120 can perform the operation twice. The sum of the integers eventually written on the blackboard is maximized as follows:  </p>
+<ul>
+<li>First, double <var>4</var>. The integers written on the board are now <var>3, 3, 8</var>.  </li>
+<li>Next, double <var>8</var>. The integers written on the board are now <var>3, 3, 16</var>.  </li>
+</ul>
+<p>Then, the sum of the integers eventually written on the blackboard is <var>3 + 3 + 16 = 22</var>.</p></section>
+</div>
+</span>

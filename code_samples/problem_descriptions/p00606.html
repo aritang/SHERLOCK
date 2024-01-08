@@ -1,0 +1,90 @@
+
+<H1><font color="#000000">Problem B:</font> Cleaning Robot</H1>
+
+<p>
+Dr. Asimov, a robotics researcher, loves to research, but hates houseworks and his house were really dirty. So, he has developed a cleaning robot.
+</p>
+
+<p>
+As shown in the following figure, his house has 9 rooms, where each room is identified by an alphabet:
+</p>
+
+<br>
+<center>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE1_cleaningRobot">
+</center>
+<br>
+
+<p>
+The robot he developed operates as follows:
+</p>
+<ul>
+<li>
+If the battery runs down, the robot stops.
+</li>
+<li> If not so, the robot chooses a direction from four cardinal points with the equal probability, and moves to the room in that direction. Then, the robot clean the room and consumes 1 point of the battery. 
+</li>
+
+<li>
+However, if there is no room in that direction, the robot does not move and remains the same room. In addition, there is a junk room in the house where the robot can not enter, and the robot also remains when it tries to enter the junk room. The robot also consumes 1 point of the battery when it remains the same place.
+</li>
+</ul>
+
+<p>
+A battery charger for the robot is in a room. It would be convenient for Dr. Asimov if the robot stops at the battery room when its battery run down.
+</p>
+
+<p>
+Your task is to write a program which computes the probability of the robot stopping at the battery room.
+</p>
+
+<H2>Input</H2>
+
+<p>
+The input consists of several datasets. Each dataset consists of:
+</p>
+
+<pre>
+<i>n</i>
+<i>s t b</i>
+</pre>
+
+<p>
+<i>n</i> is an integer that indicates the initial battery point. <i>s</i>, <i>t</i>, <i>b</i> are alphabets respectively represent the room where the robot is initially, the battery room, and the junk room.
+</p>
+
+<p>
+The input ends with a dataset which consists of single 0 for <i>n</i>. Your program should not output for this dataset.
+</p>
+
+<H2>Output</H2>
+
+<p>
+For each dataset, print the probability as a floating point number in a line. The answer may not have an error greater than 0.000001.
+</p>
+
+<H2>Constraints</H2>
+<ul>
+<li>Judge data includes at most 100 data sets.</li>
+<li><i>n</i> &le; 15</li>
+<li><i>s</i>, <i>t</i>, <i>b</i> are distinct.</li>
+</ul>
+
+<H2>Sample Input</H2>
+<pre>
+1
+E A C
+1
+E B C
+2
+E A B
+0
+</pre>
+
+<H2>Output for the Sample Input</H2>
+<pre>
+0.00000000
+0.25000000
+0.06250000
+</pre>
+

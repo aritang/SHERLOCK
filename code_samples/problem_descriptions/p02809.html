@@ -1,0 +1,96 @@
+<span class="lang-en">
+<p>Score : <var>800</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3>
+<p>Niwango has <var>N</var> cards, numbered <var>1,2,\ldots,N</var>.
+He will now arrange these cards in a row.</p>
+<p>Niwango wants to know if there is a way to arrange the cards while satisfying all the <var>N</var> conditions below.
+To help him, determine whether such a way exists. If the answer is yes, also find the lexicographically smallest such arrangement.</p>
+<ul>
+<li>To the immediate right of Card <var>1</var> (if any) is NOT Card <var>a_1</var>.</li>
+<li>To the immediate right of Card <var>2</var> (if any) is NOT Card <var>a_2</var>.</li>
+<li><var>\vdots</var></li>
+<li>To the immediate right of Card <var>N</var> (if any) is NOT Card <var>a_N</var>.</li>
+</ul>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3>
+<ul>
+<li><var>2 \leq N \leq 10^{5}</var></li>
+<li><var>1 \leq a_i \leq N</var></li>
+<li><var>a_i \neq i</var></li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3>
+<p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+<var>a_1</var> <var>a_2</var> <var>\ldots</var> <var>a_N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3>
+<p>If no arrangements satisfy the conditions, print <code>-1</code>. If such arrangements exist, print the lexicographically smallest such arrangement, in the following format:</p>
+<pre><var>b_1</var> <var>b_2</var> <var>\ldots</var> <var>b_N</var>
+</pre>
+<p>Here, <var>b_i</var> represents the <var>i</var>-th card from the left.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>4
+2 3 4 1
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>1 3 2 4
+</pre>
+<ul>
+<li>The arrangement <var>(1,2,3,4)</var> is lexicographically smaller than <var>(1,3,2,4)</var>, but is invalid, since it violates the condition "to the immediate right of Card <var>1</var> is not Card <var>2</var>."</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>2
+2 1
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>-1
+</pre>
+<ul>
+<li>If no arrangements satisfy the conditions, print <code>-1</code>.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>13
+2 3 4 5 6 7 8 9 10 11 12 13 12
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>1 3 2 4 6 5 7 9 8 10 12 11 13
+</pre></section>
+</div>
+</span>

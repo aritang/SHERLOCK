@@ -1,0 +1,101 @@
+
+<H1>Doubly Linked List</H1>
+
+<p>
+Your task is to implement a double linked list.
+</p>
+
+<p>
+Write a program which performs the following operations:
+</p>
+<ul>
+<li>insert x: insert an element with key x into the front of the list.</li>
+<li>delete x: delete the first element which has the key of x from the list. If there is not such element, you need not do anything.</li>
+<li>deleteFirst: delete the first element from the list. </li>
+<li>deleteLast: delete the last element from the list. </li>
+</ul>
+
+
+<H2>Input</H2>
+
+<p>
+The input is given in the following format:
+</p>
+
+<p>
+<i>n</i><br>
+<i>command</i><sub>1</sub> <br>
+<i>command</i><sub>2</sub> <br>
+...<br>
+<i>command<sub>n</sub></i> <br>
+</p>
+
+
+<p>
+In the first line, the number of operations <i>n</i> is given. In the following <i>n</i> lines, the above mentioned operations are given in the following format:
+</p>
+
+<ul>
+<li><span>insert x</span></li>
+<li><span>delete x</span></li>
+<li><span>deleteFirst </span></li>
+<li><span>deleteLast </span></li>
+</ul>
+
+
+<H2>Output</H2>
+
+<p>
+Print all the element (key) in the list after the given operations. Two consequtive keys should be separated by a single space.
+</p>
+
+<H2>Constraints</H2>
+
+<ul>
+<li>The number of operations &le; 2,000,000</li>
+<li>The number of delete operations &le; 20</li>
+<li>0 &le; value of a key &le; 10<sup>9</sup></li>
+<li>The number of elements in the list does not exceed 10<sup>6</sup></li>
+<li>For a delete, deleteFirst or deleteLast operation, there is at least one element in the list.</li>
+</ul>
+
+<H2>Sample Input 1</H2>
+<pre>
+7
+insert 5
+insert 2
+insert 3
+insert 1
+delete 3
+insert 6
+delete 5
+</pre>
+<H2>Sample Output 1</H2>
+<pre>
+6 1 2
+</pre>
+
+<H2>Sample Input 2</H2>
+<pre>
+9
+insert 5
+insert 2
+insert 3
+insert 1
+delete 3
+insert 6
+delete 5
+deleteFirst
+deleteLast
+</pre>
+<H2>Sample Output 2</H2>
+<pre>
+1
+</pre>
+
+
+<!--
+<H2>Notes</H2>
+
+<a href="template/ALDS1_3_C_template.c" target="_blank">Template in C</a>
+-->

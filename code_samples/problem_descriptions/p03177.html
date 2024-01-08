@@ -1,0 +1,155 @@
+<span class="lang-en">
+<p>Score : <var>100</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>There is a simple directed graph <var>G</var> with <var>N</var> vertices, numbered <var>1, 2, \ldots, N</var>.</p>
+<p>For each <var>i</var> and <var>j</var> (<var>1 \leq i, j \leq N</var>), you are given an integer <var>a_{i, j}</var> that represents whether there is a directed edge from Vertex <var>i</var> to <var>j</var>.
+If <var>a_{i, j} = 1</var>, there is a directed edge from Vertex <var>i</var> to <var>j</var>; if <var>a_{i, j} = 0</var>, there is not.</p>
+<p>Find the number of different directed paths of length <var>K</var> in <var>G</var>, modulo <var>10^9 + 7</var>.
+We will also count a path that traverses the same edge multiple times.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li>All values in input are integers.</li>
+<li><var>1 \leq N \leq 50</var></li>
+<li><var>1 \leq K \leq 10^{18}</var></li>
+<li><var>a_{i, j}</var> is <var>0</var> or <var>1</var>.</li>
+<li><var>a_{i, i} = 0</var></li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var> <var>K</var>
+<var>a_{1, 1}</var> <var>\ldots</var> <var>a_{1, N}</var>
+<var>:</var>
+<var>a_{N, 1}</var> <var>\ldots</var> <var>a_{N, N}</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the number of different directed paths of length <var>K</var> in <var>G</var>, modulo <var>10^9 + 7</var>.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>4 2
+0 1 0 0
+0 0 1 1
+0 0 0 1
+1 0 0 0
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>6
+</pre>
+<p><var>G</var> is drawn in the figure below:</p>
+<p><img alt="" src="https://img.atcoder.jp/dp/paths_0_muffet.png"/></p>
+<p>There are six directed paths of length <var>2</var>:</p>
+<ul>
+<li><var>1</var> → <var>2</var> → <var>3</var></li>
+<li><var>1</var> → <var>2</var> → <var>4</var></li>
+<li><var>2</var> → <var>3</var> → <var>4</var></li>
+<li><var>2</var> → <var>4</var> → <var>1</var></li>
+<li><var>3</var> → <var>4</var> → <var>1</var></li>
+<li><var>4</var> → <var>1</var> → <var>2</var></li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>3 3
+0 1 0
+1 0 1
+0 0 0
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>3
+</pre>
+<p><var>G</var> is drawn in the figure below:</p>
+<p><img alt="" src="https://img.atcoder.jp/dp/paths_1_muffet.png"/></p>
+<p>There are three directed paths of length <var>3</var>:</p>
+<ul>
+<li><var>1</var> → <var>2</var> → <var>1</var> → <var>2</var></li>
+<li><var>2</var> → <var>1</var> → <var>2</var> → <var>1</var></li>
+<li><var>2</var> → <var>1</var> → <var>2</var> → <var>3</var></li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>6 2
+0 0 0 0 0 0
+0 0 1 0 0 0
+0 0 0 0 0 0
+0 0 0 0 1 0
+0 0 0 0 0 1
+0 0 0 0 0 0
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>1
+</pre>
+<p><var>G</var> is drawn in the figure below:</p>
+<p><img alt="" src="https://img.atcoder.jp/dp/paths_2_muffet.png"/></p>
+<p>There is one directed path of length <var>2</var>:</p>
+<ul>
+<li><var>4</var> → <var>5</var> → <var>6</var></li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 4</h3><pre>1 1
+0
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 4</h3><pre>0
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 5</h3><pre>10 1000000000000000000
+0 0 1 1 0 0 0 1 1 0
+0 0 0 0 0 1 1 1 0 0
+0 1 0 0 0 1 0 1 0 1
+1 1 1 0 1 1 0 1 1 0
+0 1 1 1 0 1 0 1 1 1
+0 0 0 1 0 0 1 0 1 0
+0 0 0 1 1 0 0 1 0 1
+1 0 0 0 1 0 1 0 0 0
+0 0 0 0 0 1 0 0 0 0
+1 0 1 1 1 0 1 1 1 0
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 5</h3><pre>957538352
+</pre>
+<p>Be sure to print the count modulo <var>10^9 + 7</var>.</p></section>
+</div>
+</span>

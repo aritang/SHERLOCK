@@ -1,0 +1,93 @@
+<span class="lang-en">
+<p>Score : <var>100</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>Takahashi recorded his daily life for the last few days as a integer sequence of length <var>2N</var>, as follows:</p>
+<ul>
+<li><var>a_1, b_1, a_2, b_2, ... , a_N, b_N</var></li>
+</ul>
+<p>This means that, starting from a certain time <var>T</var>, he was:</p>
+<ul>
+<li>sleeping for exactly <var>a_1</var> seconds</li>
+<li>then awake for exactly <var>b_1</var> seconds</li>
+<li>then sleeping for exactly <var>a_2</var> seconds</li>
+<li>:</li>
+<li>then sleeping for exactly <var>a_N</var> seconds</li>
+<li>then awake for exactly <var>b_N</var> seconds</li>
+</ul>
+<p>In this record, he waked up <var>N</var> times.</p>
+<p>Takahashi is wondering how many times he waked up early during the recorded period.</p>
+<p>Here, he is said to <em>wake up early</em> if he wakes up between <var>4:00</var> AM and <var>7:00</var> AM, inclusive.</p>
+<p>If he wakes up more than once during this period, each of these awakenings is counted as waking up early.</p>
+<p>Unfortunately, he forgot the time <var>T</var>.</p>
+<p>Find the maximum possible number of times he waked up early during the recorded period.</p>
+<p>For your information, a day consists of <var>86400</var> seconds, and the length of the period between <var>4:00</var> AM and <var>7:00</var> AM is <var>10800</var> seconds.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 \leq N \leq 10^5</var></li>
+<li><var>1 \leq a_i, b_i \leq 10^5</var></li>
+<li><var>a_i</var> and <var>b_i</var> are integers.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>The input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+<var>a_1</var> <var>b_1</var>
+<var>a_2</var> <var>b_2</var>
+:
+<var>a_N</var> <var>b_N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the maximum possible number of times he waked up early during the recorded period.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>3
+28800 57600
+28800 57600
+57600 28800
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>2
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>10
+28800 57600
+4800 9600
+6000 1200
+600 600
+300 600
+5400 600
+6000 5760
+6760 2880
+6000 12000
+9000 600
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>5
+</pre></section>
+</div>
+</span>

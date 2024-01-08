@@ -1,0 +1,70 @@
+
+<H1>Range Sum Query</H1>
+
+<p>
+Write a program which manipulates a sequence <var>A</var> = {<var>a<sub>1</sub>, a<sub>2</sub>, . . . , a<sub>n</sub></var>} with the following operations:
+</p>
+
+<ul>
+<li><var>add(i, x)</var>: add <var>x</var> to <var>a<sub>i</sub></var>.</li>
+<li><var>getSum(s, t)</var>: print the sum of <var>a<sub>s</sub>, a<sub>s+1</sub>,...,a<sub>t</sub></var>.</li>
+</ul>
+
+<p>
+Note that the initial values of <var>a<sub>i</sub></var> (<var>i = 1, 2, . . . , n</var>) are 0.
+</p>
+
+<H2>Input</H2>
+
+
+<pre>
+<var>n</var> <var>q</var>
+<var>com<sub>1</sub></var> <var>x<sub>1</sub></var> <var>y<sub>1</sub></var>
+<var>com<sub>2</sub></var> <var>x<sub>2</sub></var> <var>y<sub>2</sub></var>
+...
+<var>com<sub>q</sub></var> <var>x<sub>q</sub></var> <var>y<sub>q</sub></var>
+</pre>
+
+<p>
+In the first line, <var>n</var> (the number of elements in <var>A</var>) and <var>q</var> (the number of queries) are given. Then, <var>q</var> queries are given where <var>com</var> represents the type of queries. '0' denotes <var>add(x<sub>i</sub>, y<sub>i</sub>)</var> and '1' denotes <var>getSum(x<sub>i</sub>, y<sub>i</sub>)</var>.
+</p>
+
+
+<H2>Output</H2>
+
+<p>
+For each <var>getSum</var> operation, print the sum in a line.
+</p>
+
+<H2>Constraints</H2>
+
+<ul>
+<li>
+<var>1 &le; n &le; 100000</var>
+</li>
+<li>
+<var>1 &le; q &le; 100000</var>
+</li>
+<li>
+If <var>com<sub>i</sub></var> is 0, then <var>1 &le; x<sub>i</sub> &le; n</var>, <var>0 &le; y<sub>i</sub> &le; 1000</var>.
+</li>
+<li>
+If <var>com<sub>i</sub></var> is 1, then <var>1 &le; x<sub>i</sub> &le; n</var>, <var>1 &le; y<sub>i</sub> &le; n</var>.
+</li>
+</ul>
+
+
+<H2>Sample Input 1</H2>
+<pre>
+3 5
+0 1 1
+0 2 2
+0 3 3
+1 1 2
+1 2 2
+</pre>
+<H2>Sample Output 1</H2>
+<pre>
+3
+2
+</pre>

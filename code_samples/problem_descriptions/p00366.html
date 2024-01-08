@@ -1,0 +1,79 @@
+<H1>Electric Metronome</H1>
+
+<p>
+  A boy PCK is playing with <var>N</var> electric metronomes. The <var>i</var>-th metronome is set to tick every <var>t_i</var> seconds. He started all of them simultaneously.
+</p>
+
+<p>
+He noticed that, even though each metronome has its own ticking interval, all of them tick simultaneously from time to time in certain intervals. To explore this interesting phenomenon more fully, he is now trying to shorten the interval of ticking in unison by adjusting some of the metronomes’ interval settings. Note, however, that the metronomes do not allow any shortening of the intervals.
+  
+</p>
+
+<p>
+  Given the number of metronomes and their preset intervals <var>t_i</var> (sec), write a program to make the tick-in-unison interval shortest by adding a non-negative integer <var>d_i</var> to the current interval setting of the <var>i</var>-th metronome, and report the minimum value of the sum of all <var>d_i</var>.
+</p>
+
+<h2>Input</h2>
+
+<p>
+  The input is given in the following format.
+</p>
+
+<pre>
+<var>N</var>
+<var>t_1</var>
+<var>t_2</var>
+:
+<var>t_N</var>
+</pre>
+
+<p>
+The first line provides the number of metronomes <var>N</var> (1 &le; <var>N</var> &le; 10<sup>5</sup>). Each of the subsequent <var>N</var> lines provides the preset ticking interval <var>t_i</var> (1 &le; <var>t_i</var> &le; 10<sup>4</sup>) of the <var>i</var>-th metronome.
+  
+</p>
+
+
+<h2>Output</h2>
+
+<p>
+  Output the minimum value.
+</p>
+
+<h2>Sample Input 1</h2>
+
+<pre>
+3
+3
+6
+8
+</pre>
+
+<h2>Sample Output 1</h2>
+<pre>
+3
+</pre>
+
+<p>
+If we have three metronomes each with a ticking interval of 3, 6, and 8 seconds, respectively, simultaneous activation of these will produce a tick in unison every 24 seconds. By extending the interval by 1 second for the first, and 2 seconds for the second metronome, the interval of ticking in unison will be reduced to 8 seconds, which is the shortest possible for the system.
+  
+</p>
+
+
+<h2>Sample Input 2</h2>
+
+<pre>
+2
+10
+10
+</pre>
+
+<h2>Sample Output 2</h2>
+<pre>
+0
+</pre>
+
+<p>
+
+If two metronomes are both set to 10 seconds, then simultaneous activation will produce a tick in unison every 10 seconds, which is the shortest possible for this system.
+  
+</p>

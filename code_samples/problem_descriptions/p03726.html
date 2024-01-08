@@ -1,0 +1,105 @@
+<span class="lang-en">
+<p>Score : <var>900</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>There is a tree with <var>N</var> vertices numbered <var>1</var> through <var>N</var>.
+The <var>i</var>-th of the <var>N-1</var> edges connects vertices <var>a_i</var> and <var>b_i</var>.</p>
+<p>Initially, each vertex is uncolored.</p>
+<p>Takahashi and Aoki is playing a game by painting the vertices. In this game, they alternately perform the following operation, starting from Takahashi:</p>
+<ul>
+<li>Select a vertex that is not painted yet.</li>
+<li>If it is Takahashi who is performing this operation, paint the vertex white; paint it black if it is Aoki.</li>
+</ul>
+<p>Then, after all the vertices are colored, the following procedure takes place:</p>
+<ul>
+<li>Repaint every white vertex that is adjacent to a black vertex, in black.</li>
+</ul>
+<p>Note that all such white vertices are repainted simultaneously, not one at a time.</p>
+<p>If there are still one or more white vertices remaining, Takahashi wins; if all the vertices are now black, Aoki wins.
+Determine the winner of the game, assuming that both persons play optimally.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>2 ≤ N ≤ 10^5</var></li>
+<li><var>1 ≤ a_i,b_i ≤ N</var></li>
+<li><var>a_i ≠ b_i</var></li>
+<li>The input graph is a tree.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+<var>a_1</var> <var>b_1</var>
+:
+<var>a_{N-1}</var> <var>b_{N-1}</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print <code>First</code> if Takahashi wins; print <code>Second</code> if Aoki wins.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>3
+1 2
+2 3
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>First
+</pre>
+<p>Below is a possible progress of the game:</p>
+<ul>
+<li>First, Takahashi paint vertex <var>2</var> white.</li>
+<li>Then, Aoki paint vertex <var>1</var> black.</li>
+<li>Lastly, Takahashi paint vertex <var>3</var> white.</li>
+</ul>
+<p>In this case, the colors of vertices <var>1</var>, <var>2</var> and <var>3</var> after the final procedure are black, black and white, resulting in Takahashi's victory.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>4
+1 2
+2 3
+2 4
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>First
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>6
+1 2
+2 3
+3 4
+2 5
+5 6
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>Second
+</pre></section>
+</div>
+</span>

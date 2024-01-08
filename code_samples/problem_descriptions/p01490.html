@@ -1,0 +1,72 @@
+
+
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({ tex2jax: { inlineMath: [["$","$"], ["\\(","\\)"]], processEscapes: true }});
+</script>
+<script type='text/javascript' src='http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
+</script>
+
+<h2>Problem E:
+HullMarathon
+</h2>
+
+<p>
+  うさぎはフルマラソンという競技が好きである. この競技はチームで行う. チームメンバーは競技開始前に原点に集まる. 競技開始と同時に走り出し, 1 分後に立ち止まる．このとき，チームメンバーの位置の凸包の面積が最も大きなチームが勝ちとなる.
+</p>
+
+<p>
+  あなたは $N$ 匹のうさぎからなるチームの監督である. $i$ 匹目のうさぎは 1 分で $r_i$ 移動することができる. このチームが最適な戦略をとった場合の, 1 分後の凸包の面積の最大値を求めよ.
+</p>
+
+<h3>Constraints</h3>
+<ul>
+<li>$N$ will be between 3 and 8, inclusive.</li>
+<li>$r_i$ will be an integer between 1 and 1,000, inclusive.</li>
+</ul>
+
+<h3>Input</h3>
+
+<p>
+  入力は以下の形式で与えられる:<br>
+  <br>
+$N$<br>
+$r_1$<br>
+...<br>
+$r_N$<br>
+<br>
+</p>
+
+
+<h3>Output</h3>
+
+<p>
+凸包の面積の最大値を表す実数を 1 行に出力せよ. 小数点以下何桁出力してもよいが, 絶対誤差または相対誤差が $10^{-6}$ 以下のとき Accepted になる.
+</p>
+
+
+<h3>Sample Input 1</h3>
+
+<pre>4
+5
+8
+58
+85</pre>
+
+<h3>Sample Output 1</h3>
+
+<pre>2970.000000000</pre>
+
+<h3>Sample Input 2</h3>
+
+<pre>6
+1
+1
+1
+1
+1
+1</pre>
+
+<h3>Sample Output 2</h3>
+
+<pre>2.598076211</pre>

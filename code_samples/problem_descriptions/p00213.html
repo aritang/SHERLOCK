@@ -1,0 +1,118 @@
+
+
+
+<H1>>土地分割</H1>
+
+<p>
+ ハウジングメーカーの山田ハウスは、新たな目玉商品として、学校や病院など環境が充実している緑ホームタウンの分譲地を売り出しました。この分譲地は複数の区画に分割されており、好きなだけ購入できますが、購入する区画を合わせた土地の形状は長方形(正方形を含む)でなければなりません。
+</p>
+<p>
+ 山田ハウスは、全区画が完売した分譲地を管理するため購入者ごとに境界線を引き、その区画の 1つに購入者番号を書いた看板を設置しておきました。境界線は地面に木の枝で線を引いただけのものであったため、数日後の豪雨により消えてしまい看板だけが残りました。図 1 は看板のあった区画に、その区画を買った購入者番号を記したものです。これでは分譲地がどのように買われたか分かりません。救いは事務所の引き出しにあった購入者番号 <var>b</var> と購入区画数 <var>k</var> のメモ(図 2)が見つかったことです。
+</p>
+<br>
+<center>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE1_partitionTable"><br/>
+<p>図１（左）：看板の配置、図2（右）：メモ</p>
+</center>
+
+<p>
+ プログラマーであるあなたは、プログラムを書いて山田ハウスを助けることになりました。分譲地の大きさ <var>X &times; Y</var> 、購入者数 <var>n</var> 、メモの情報 <var>b</var>、 <var>k</var> 、及び看板の位置情報 <var>s</var> を入力とし、図 3 に示すように各区画の購入者を出力するプログラムを作成してください。
+</p>
+
+<br>
+<center>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE1_partition2R"><br/>
+<p>
+図3：各区画の購入者
+</p>
+</center>
+
+<p>
+与えられた情報について、以下の場合は NA と出力します。
+</p>
+<ul>
+  <li> 区画を区別する方法が存在しない場合</li>
+  <li> 区画を区別する方法が複数存在する場合</li>
+</ul>
+
+
+
+<H2>Input</H2>
+<p>
+複数のデータセットの並びが入力として与えられます。入力の終わりはゼロが３つの行で示されます。各データセットは以下の形式で与えられます。
+</p>
+
+<pre>
+<var>X</var> <var>Y</var> <var>n</var>
+<var>b<sub>1</sub></var> <var>k<sub>1</sub></var>
+<var>b<sub>2</sub></var> <var>k<sub>2</sub></var>
+:
+<var>b<sub>n</sub></var> <var>k<sub>n</sub></var>
+<var>s<sub>11</sub></var> <var>s<sub>21</sub></var> ... <var>s<sub>X1</sub></var>
+<var>s<sub>12</sub></var> <var>s<sub>22</sub></var> ... <var>s<sub>X2</sub></var>
+:
+<var>s<sub>1Y</sub></var> <var>s<sub>2Y</sub></var> ... <var>s<sub>XY</sub></var>
+</pre>
+
+<p>
+1 行目に<var>X, Y, n</var> (1 &le; <var>X, Y</var> &le; 10, 1 &le; <var>n</var> &le; 15) が与えられます。続く <var>n</var> 行にメモの <var>i</var> 行目に書かれた情報 <var>b<sub>i</sub></var> (1 &le; <var>b<sub>i</sub></var> &le; <var>n</var>), <var>k<sub>i</sub></var> (1 &le; <var>k<sub>i</sub></var> &le; 100) が与えられます。
+</p>
+
+<p>
+続く <var>Y</var> 行に区画情報の <var>i</var> 行目の情報 <var>s<sub>ij</sub></var> が与えられます。<var>s<sub>ij</sub></var> は<var>i</var> 行目の左から <var>j</var> 番目の区画の看板情報を表します。看板の情報 <var>s<sub>ij</sub></var> として、その区画に看板が無い場合は 0 、看板がある場合はその区画の購入者番号が与えられます。
+</p>
+
+<p>
+データセットの数は 50  を超えません。
+</p>
+
+
+
+<H2>Output</H2>
+<p>
+入力データセットごとに、購入者情報またはNA を出力します。
+</p>
+
+<H2>Sample Input</H2>
+<pre>
+5 4 6
+1 6
+2 4
+3 3
+4 4
+5 1
+6 2
+0 0 1 0 0
+0 0 0 2 0
+0 0 0 3 0
+0 4 5 0 6
+3 3 1
+1 9
+0 0 1
+0 0 0
+0 0 0
+4 4 4
+1 6
+2 2
+3 4
+4 4
+0 1 0 0
+0 0 0 2
+0 0 3 0
+0 4 0 0
+0 0 0
+</pre>
+
+
+<H2>Output for the Sample Input</H2>
+<pre>
+1 1 1 2 2
+1 1 1 2 2
+4 4 3 3 3
+4 4 5 6 6
+1 1 1
+1 1 1
+1 1 1
+NA
+</pre>
+

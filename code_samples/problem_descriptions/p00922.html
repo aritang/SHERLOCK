@@ -1,0 +1,81 @@
+
+<H1><font color="#000">Problem I: </font>Hidden Tree</H1>
+
+<p>
+Consider a binary tree whose leaves are assigned integer weights. Such a tree is called <i>balanced</i> if, for every non-leaf node, the sum of the weights in its left subtree is equal to that in the right subtree. For instance, the tree in the following figure is balanced.
+</p>
+
+
+<center>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_hiddenTree" style="aling:center"><br/>
+<span>
+Figure I.1. A balanced tree
+</span>
+</center>
+<br/>
+
+
+
+<p>
+A balanced tree is said to be hidden in a sequence <var>A</var>, if the integers obtained by listing the weights of all leaves of the tree from left to right form a subsequence of <var>A</var>. Here, a subsequence is a sequence that can be derived by deleting zero or more elements from the original sequence without changing the order of the remaining elements.
+</p>
+
+<p>
+For instance, the balanced tree in the figure above is hidden in the sequence 3 4 1 3 1 2 4 4 6, because 4 1 1 2 4 4 is a subsequence of it.
+</p>
+
+<p>
+Now, your task is to find, in a given sequence of integers, the balanced tree with the largest number of leaves hidden in it. In fact, the tree shown in Figure I.1 has the largest number of leaves among the balanced trees hidden in the sequence mentioned above.
+</p>
+
+
+
+<H2>Input</H2>
+
+<p>
+The input consists of multiple datasets. Each dataset represents a sequence <var>A</var> of integers in the format
+</p>
+
+<pre>
+<var>N</var>
+<var>A<sub>1</sub></var> <var>A<sub>2</sub></var> . . . <var>A<sub>N</sub></var>
+</pre>
+
+<p>
+where 1 &le; <var>N</var> &le; 1000 and 1 &le; <var>A<sub>i</sub></var> &le; 500 for 1 &le; <var>i</var> &le; <var>N</var>. <var>N</var> is the length of the input sequence, and <var>A<sub>i</sub></var> is the <var>i</var>-th element of the sequence.
+</p>
+
+<p>
+The input ends with a line consisting of a single zero. The number of datasets does not exceed 50.
+</p>
+
+
+<H2>Output</H2>
+
+<p>
+For each dataset, find the balanced tree with the largest number of leaves among those hidden in <var>A</var>, and output, in a line, the number of its leaves.
+</p>
+
+<H2>Sample Input</H2>
+<pre>
+9
+3 4 1 3 1 2 4 4 6
+4
+3 12 6 3
+10
+10 9 8 7 6 5 4 3 2 1
+11
+10 9 8 7 6 5 4 3 2 1 1
+8
+1 1 1 1 1 1 1 1
+0
+</pre>
+
+<H2>Output for the Sample Input</H2>
+<pre>
+6
+2
+1
+5
+8
+</pre>

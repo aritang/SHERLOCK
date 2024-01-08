@@ -1,0 +1,115 @@
+
+
+
+<h1>Problem E : Connect</h1>
+<p>
+<i>r</i> × <i>c</i> のグリッドが与えられる。<br>
+グリッドのいくつかのマスには1から8までの数字が書かれている。<br>
+</p>
+<p>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_ACPC2012Day2_img_puzzle_05" height="150" witdh="150">
+</p>
+
+<p>
+数字が書かれているマスと他の数字が書かれているマスを線で結ぶ必要がある。<br>
+数字が書かれているマスについて、そのマスに書かれている本数だけ、他のマスとの間に線を結ぶ必要がある。<br>
+ただし、線を結べるのは上下左右方向だけで、一つの方向について、最大２本までである。<br>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_ACPC2012Day2_img_puzzle_06" height="150" witdh="150">
+<br>
+
+<br>
+他の数字を跨いで線で結ぶことはできない。<br>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_ACPC2012Day2_img_puzzle_12" height="150" witdh="150"><br>
+<br>
+また、次のように交差してしまう結び方をすることはできない。<br>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_ACPC2012Day2_img_puzzle_08" height="150" witdh="150">
+</p>
+
+<p>
+グリッドが入力として与えられるので、数字が書かれているマス全てを正しく結ぶ方法が、何通りあるのかを数えて欲しい。<br>
+</p>
+
+<h2>Input</h2>
+<p>
+入力は以下のフォーマットで与えられる。
+</p>
+
+<pre>
+<i>r</i> <i>c</i> 
+<i>grid<sub>1</sub></i>
+.
+.
+.
+<i>grid<sub>r-1</sub></i>
+</pre>
+
+<p>
+<i>grid<sub>i</sub></i> は長さcの文字列で、1から8までの数字か"."からなる。
+</p>
+
+<p>
+入力は以下の制約を満たす<br>
+1 &le; <i>r,c</i> &le; 10
+</p>
+
+<h2>Output</h2>
+<p>
+答えの値を100,000,007で割った余りを1行に出力せよ
+</p>
+
+<h2>Sample Input 1</h2>
+<pre>
+3 3
+.1.
+1.1
+.1.
+</pre>
+
+<h2>Sample Output 1</h2>
+<pre>
+0
+</pre>
+
+<h2>Sample Input 2</h2>
+<pre>
+1 3
+1.1
+</pre>
+
+<h2>Sample Output 2</h2>
+<pre>
+1
+</pre>
+
+<h2>Sample Input 3</h2>
+<pre>
+3 3
+4.2
+...
+2..
+</pre>
+
+<h2>Sample Output 3</h2>
+<pre>
+1
+</pre>
+
+<h2>Sample Input 4</h2>
+<pre>
+7 7
+2.3.1.1
+.......
+2......
+.......
+..3.3..
+.......
+2.2.4.3
+</pre>
+
+<h2>Sample Output 4</h2>
+<pre>
+10
+</pre>
+
+
+

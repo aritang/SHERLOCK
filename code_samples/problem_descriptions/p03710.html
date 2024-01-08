@@ -1,0 +1,93 @@
+<span class="lang-en">
+<p>Score : <var>1700</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>Kenus, the organizer of <em>International Euclidean Olympiad</em>, is seeking a pair of two integers that requires many steps to find its greatest common divisor using the Euclidean algorithm.</p>
+<p>You are given <var>Q</var> queries. The <var>i</var>-th query is represented as a pair of two integers <var>X_i</var> and <var>Y_i</var>, and asks you the following: among all pairs of two integers <var>(x,y)</var> such that <var>1 ≤ x ≤ X_i</var> and <var>1 ≤ y ≤ Y_i</var>, find the maximum <em>Euclidean step count</em> (defined below), and how many pairs have the maximum step count, modulo <var>10^9+7</var>.</p>
+<p>Process all the queries. Here, the Euclidean step count of a pair of two non-negative integers <var>(a,b)</var> is defined as follows:</p>
+<ul>
+<li><var>(a,b)</var> and <var>(b,a)</var> have the same Euclidean step count.</li>
+<li><var>(0,a)</var> has a Euclidean step count of <var>0</var>.</li>
+<li>If <var>a &gt; 0</var> and <var>a ≤ b</var>, let <var>p</var> and <var>q</var> be a unique pair of integers such that <var>b=pa+q</var> and <var>0 ≤ q &lt; a</var>. Then, the Euclidean step count of <var>(a,b)</var> is the Euclidean step count of <var>(q,a)</var> plus <var>1</var>.</li>
+</ul>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 ≤ Q ≤ 3 × 10^5</var></li>
+<li><var>1 ≤ X_i,Y_i ≤ 10^{18}(1 ≤ i ≤ Q)</var></li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>The input is given from Standard Input in the following format:</p>
+<pre><var>Q</var>
+<var>X_1</var> <var>Y_1</var>
+<var>:</var>
+<var>X_Q</var> <var>Y_Q</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>For each query, print the maximum Euclidean step count, and the number of the pairs that have the maximum step count, modulo <var>10^9+7</var>, with a space in between.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>3
+4 4
+6 10
+12 11
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>2 4
+4 1
+4 7
+</pre>
+<p>In the first query, <var>(2,3)</var>, <var>(3,2)</var>, <var>(3,4)</var> and <var>(4,3)</var> have a Euclidean step count of <var>2</var>. No pairs have a step count of more than <var>2</var>.</p>
+<p>In the second query, <var>(5,8)</var> has a Euclidean step count of <var>4</var>.</p>
+<p>In the third query, <var>(5,8)</var>, <var>(8,5)</var>, <var>(7,11)</var>, <var>(8,11)</var>, <var>(11,7)</var>, <var>(11,8)</var>, <var>(12,7)</var> have a Euclidean step count of <var>4</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>10
+1 1
+2 2
+5 1000000000000000000
+7 3
+1 334334334334334334
+23847657 23458792534
+111111111 111111111
+7 7
+4 19
+9 10
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>1 1
+1 4
+4 600000013
+3 1
+1 993994017
+35 37447
+38 2
+3 6
+3 9
+4 2
+</pre></section>
+</div>
+</span>

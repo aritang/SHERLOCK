@@ -1,0 +1,74 @@
+<span class="lang-en">
+<p>Score : <var>100</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p><em>ButCoder Inc.</em> runs a programming competition site called <em>ButCoder</em>. In this site, a user is given an integer value called rating that represents his/her skill, which changes each time he/she participates in a contest. The initial value of a new user's rating is <var>0</var>, and a user whose rating reaches <var>K</var> or higher is called <em>Kaiden</em> ("total transmission"). Note that a user's rating may become negative.</p>
+<p>Hikuhashi is a new user in ButCoder. It is estimated that, his rating increases by <var>A</var> in each of his odd-numbered contests (first, third, fifth, ...), and decreases by <var>B</var> in each of his even-numbered contests (second, fourth, sixth, ...).</p>
+<p>According to this estimate, after how many contests will he become Kaiden for the first time, or will he never become Kaiden?</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 ≤ K, A, B ≤ 10^{18}</var></li>
+<li>All input values are integers.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>K</var> <var>A</var> <var>B</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>If it is estimated that Hikuhashi will never become Kaiden, print <code>-1</code>. Otherwise, print the estimated number of contests before he become Kaiden for the first time.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>4000 2000 500
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>5
+</pre>
+<p>Each time Hikuhashi participates in a contest, his rating is estimated to change as <var>0</var> → <var>2000</var> → <var>1500</var> → <var>3500</var> → <var>3000</var> → <var>5000</var> → <var>…</var> After his fifth contest, his rating will reach <var>4000</var> or higher for the first time.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>4000 500 2000
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>-1
+</pre>
+<p>Each time Hikuhashi participates in a contest, his rating is estimated to change as <var>0</var> → <var>500</var> → <var>-1500</var> → <var>-1000</var> → <var>-3000</var> → <var>-2500</var> → <var>…</var> He will never become Kaiden.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>1000000000000000000 2 1
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>1999999999999999997
+</pre>
+<p>The input and output values may not fit into <var>32</var>-bit integers.</p></section>
+</div>
+</span>

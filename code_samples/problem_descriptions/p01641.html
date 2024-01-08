@@ -1,0 +1,195 @@
+
+
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: { inlineMath: [['\\(','\\)']] }
+  });
+</script>
+<script type='text/javascript' src='http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
+
+<h1 class="ndoc-heading1">Problem H: Brainf*ck</h1>
+<p class="ndoc-top">
+BさんはBrainf*ckが大好きで、学校で出された課題も全てBrainf*ckを使って提出している。
+最近そんなBさんに洗脳され、先生が課題を解く言語をBrainf*ckに限定してしまった。</p>
+<p class="ndoc-top">このままでは皆が単位を落としてしまう。
+あなたは、Brainf*ckプログラムを生成するプログラムを作ることで、皆の単位を救い出す手伝いをすることにした。</p>
+<p class="ndoc-top">
+もちろん、Brainf*ckプログラムを生成するプログラムはBrainf*ckで記述する必要はない。</p>
+<h2 class="ndoc-heading2">問題</h2>
+<p class="ndoc-top">指定された文字列\( s \)を出力するBrainf*ckプログラムを生成せよ。</p>
+<h3 class="ndoc-heading3">Brainf*ck言語仕様</h3>
+<p class="ndoc-top">ジャッジで用いるBrainf*ckの言語仕様を記す。</p>
+<p class="ndoc-top">Brainf*ckプログラムは文字列で記述される。
+プログラム文字列は角括弧(<span style=
+"font-family: monospace;">[</span>および<span style=
+"font-family: monospace;">]</span>)の対応が取れている必要があるが、それ以外の制限はない。</p>
+<p class="ndoc-top">
+Brainf*ckプログラムが実行される時、バイト配列とその要素を指し示すポインターを持つ。バイト配列は無限の大きさを持ち、8bit非負整数の情報を保持することができる。
+これをC言語で表すと次のようになる。</p>
+<pre>
+unsigned char memory[100000]; // バイト配列（実際にはもっと広大な領域を確保する）
+unsigned char *ptr = memory; // バイト配列の要素を指し示すポインター
+</pre>
+<p class="ndoc-top">Brainf*ckでは1つの命令は1文字で表され、命令には以下の7種類がある。</p>
+<style>
+.brainfuck {
+  border-collapse: collapse;
+  border: solid 1px #999;
+  font-size: 100%;
+}
+
+.brainfuck th, .brainfuck td{
+  border: solid 1px #999;
+  padding: 4px 6px;
+}
+
+.brainfuck th {
+  background: #E6E6E6;
+  text-align: center;
+  color: #666;
+}
+</style>
+<table class="brainfuck">
+<thead>
+<tr>
+<th style="width: 2em;">
+文字
+</th>
+<th>
+意味
+</th>
+<th>
+C言語での記述法
+</th>
+</tr>
+</thead>
+<tr>
+<td>
+<tt class="backtick">+</tt>
+</td>
+<td>
+ポインターが示すバイト配列の要素の値を1増やす。値が255の時は0になる。
+</td>
+<td>
+<tt class="backtick">(*ptr)++;</tt>
+</td>
+</tr>
+<tr>
+<td>
+<tt class="backtick">-</tt>
+</td>
+<td>
+ポインターが示すバイト配列の要素の値を1減らす。値が0の時は255になる。
+</td>
+<td>
+<tt class="backtick">(*ptr)--;</tt>
+</td>
+</tr>
+<tr>
+<td>
+<tt class="backtick">&gt;</tt>
+</td>
+<td>
+ポインターが示すバイト配列の要素の位置を正に1ずらす。
+</td>
+<td>
+<tt class="backtick">ptr++;</tt>
+</td>
+</tr>
+<tr>
+<td>
+<tt class="backtick">&lt;</tt>
+</td>
+<td>
+ポインターが示すバイト配列の要素の位置を負に1ずらす。
+</td>
+<td>
+<tt class="backtick">ptr--;</tt>
+</td>
+</tr>
+<tr>
+<td>
+<tt class="backtick">[</tt>
+</td>
+<td>
+ポインターが示すバイト配列の要素の値が0ならば、対応する<tt class=
+"backtick">]</tt>に飛ぶ。そうでなければ次の命令に進む。
+</td>
+<td>
+<tt class="backtick">while(*ptr)&nbsp;{</tt>
+</td>
+</tr>
+<tr>
+<td>
+<tt class="backtick">]</tt>
+</td>
+<td>
+ポインターが示すバイト配列の要素の値が0ならば、対応する<tt class="backtick">[</tt>に飛ぶ。そうでなければ次の命令に進む。
+</td>
+<td>
+<tt class="backtick">}&nbsp;do&nbsp;while(*ptr);</tt>
+</td>
+</tr>
+<tr>
+<td>
+<tt class="backtick">.</tt>
+</td>
+<td>
+ポインターが示すバイト配列の要素の値をASCIIコードと見なし、文字を出力する。
+</td>
+<td>
+<tt class="backtick">putchar(*ptr);</tt>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="ndoc-top">命令は先頭から順に実行され、命令を表す文字ではない文字はコメントとして無視される。</p>
+<p class="ndoc-top">
+以上のBrainf*ckの仕様はおおよそ一般に使われているBrainf*ckと同様なものなので、<a href=
+"http://ja.wikipedia.org/wiki/Brainfuck">http://ja.wikipedia.org/wiki/Brainfuck</a>などを参考にすることができる。ただし、<a href="http://k-operafan.info/static/uecpc2013/files/brainfuck.c">ジャッジに用いるBrainf*ck</a>は、一文字入力命令を使用することはできないので注意すること。</p>
+<h2 class="ndoc-heading2">入力</h2>
+<p class="ndoc-top">1行に1000文字以内の文字列\( s \)が与えられる。</p>
+<h2 class="ndoc-heading2">出力</h2>
+<p class="ndoc-top">Brainf*ckコードを20000文字以内で出力せよ。実行結果が\( s
+\)に一致した任意のプログラムがAcceptされる。</p>
+<h2 class="ndoc-heading2">制約</h2>
+
+<ul class="ndoc-indent">
+<li>\( 1 \leq |s| \leq 1000 \)</li>
+<li>\( s \)はASCII文字列</li>
+<li>\( s \)にはASCIIコード33〜126の文字しか含まれない（記号、英字、数字のみで空白や制御文字を含まない）</li>
+<li>出力したプログラムの長さは空白、改行、コメントを含めて\( 20000 \)文字までを許容する</li>
+<li>命令は\( 10^7 \)回実行されるとストップする</li>
+<li>Brainf*ckプログラムは最後に改行を出力してはならない</li>
+</ul>
+<h2 class="ndoc-heading2">入出力例</h2>
+<h3 class="ndoc-heading3">入力1</h3>
+<pre>
+ABC
+</pre>
+<h3 class="ndoc-heading3">出力1</h3>
+<pre>
+++++++++[&gt;++++++++&lt;-]&gt;+.+.+.
+</pre>
+<h3 class="ndoc-heading3">入力2</h3>
+<pre>
+HelloWorld!!
+</pre>
+<h3 class="ndoc-heading3">出力2</h3>
+<pre>
++++++++++[&gt;++++++++&lt;-]&gt;.&lt;+++++[&gt;+++++&lt;-]&gt;++++.+++++++..+++.[&gt;+&gt;+&lt;&lt;-]++++[&gt;------&lt;-]&gt;.&gt;.+++.--
+----.--------.[-]++++++[&gt;+++++&lt;-]&gt;+++..
+</pre>
+<p>入力に空白が含まれることはない。</p>
+<h3 class="ndoc-heading3">入力3</h3>
+<pre>
+!"#$%&amp;'()*+,-./0123456789:;&lt;=&gt;?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~
+</pre>
+<h3 class="ndoc-heading3">出力3</h3>
+<pre>
++++++++++++++++++++++++++++++++++.+.+.+.+.+.+.+.+.+.+.+.+.+.+.+.+.+.+.+.+.+.+.+.+.+.+.+.+.+.+
++.+.+.+.+.+.+.+.+.+.+.+.+.+.+.+.+.+.+.+.+.+.+.+.+.+.+.+.+.+.+.+.+.+.+.+.+.+.+.+.+.+.+.+.+.+.+
+.+.+.+.+.+.+.+.+.+.+.+.+.+.+.+.+.
+</pre>
+<p>このケースは33から126のASCIIコードを順番に並べたものである。</p>

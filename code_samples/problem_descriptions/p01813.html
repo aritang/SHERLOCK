@@ -1,0 +1,77 @@
+
+
+
+<h2>坑道数式</h2>
+
+<p>
+ある日廃坑を探検していたあなたは、坑道に長い数式 <var>S</var> が書かれているのを発見した。大きな数が好きなあなたは、チョークを取り出し、数式を計算した結果ができるだけ大きくなるように<code>(</code>または<code>)</code>を書き加えることにした。書き加えた後も数式になっていなければならないとすると、最大でいくつにできるか。
+</p>
+<p>
+文字と文字の間は十分広く空いていて、<code>(</code>または<code>)</code>であればいくつでも書き加えることができる。最終的に数式になっていれば、最初のかっこの対応が崩れるように<code>(</code>または<code>)</code>を書いてもよい（Sample 2参照）。
+また、ここでは以下のBNFで定義される&lt;expr&gt;を数式と呼ぶ。数式中の数は全て一桁である。
+<pre>
+&lt;expr&gt;  ::= "(" &lt;expr&gt; ")"
+         | &lt;term&gt; "+" &lt;term&gt;
+         | &lt;term&gt; "-" &lt;term&gt;
+&lt;term&gt;  ::= &lt;digit&gt; | &lt;expr&gt;
+&lt;digit&gt; ::= "0" | "1" | "2" | "3" | "4"
+          | "5" | "6" | "7" | "8" | "9"
+</pre>
+</p>
+
+<h3>Constraints</h3>
+<ul>
+<li><var>3 &le; |S| &le; 200</var></li>
+</ul>
+
+<p>
+<var>S</var> は数式を表す。
+</p>
+
+
+<h3>Input Format</h3>
+<p>
+入力は以下の形式で標準入力から与えられる。
+</p>
+<pre>
+<var>S</var>
+</pre>
+
+<h3>Output Format</h3>
+<p>
+答えを整数で出力せよ。
+</p>
+
+<h3>Sample Input 1</h3>
+
+<pre>
+1-(2+3-4+5)
+</pre>
+
+<h3>Sample Output 1</h3>
+<pre>
+5
+</pre>
+<p>1-(2+3-(4+5))が最大となる。</p>
+
+<h3>Sample Input 2</h3>
+<pre>
+1-(2+3+4)
+</pre>
+
+<h3>Sample Output 2</h3>
+<pre>
+0
+</pre>
+<p>(1-(2+3)+4)が最大となる。</p>
+
+<h3>Sample Input 3</h3>
+<pre>
+1-(2+3)
+</pre>
+
+<h3>Sample Output 3</h3>
+<pre>
+-4
+</pre>
+<p>1-(2)+(3)はここでいう数式ではないことに注意。</p>

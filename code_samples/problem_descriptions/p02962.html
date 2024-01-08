@@ -1,0 +1,94 @@
+<span class="lang-en">
+<p>Score : <var>600</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>Given are two strings <var>s</var> and <var>t</var> consisting of lowercase English letters. Determine if the number of non-negative integers <var>i</var> satisfying the following condition is finite, and find the maximum value of such <var>i</var> if the number is finite.</p>
+<ul>
+<li>There exists a non-negative integer <var>j</var> such that the concatenation of <var>i</var> copies of <var>t</var> is a substring of the concatenation of <var>j</var> copies of <var>s</var>.</li>
+</ul>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Notes</h3><ul>
+<li>
+<p>A string <var>a</var> is a substring of another string <var>b</var> if and only if there exists an integer <var>x</var> <var>(0 \leq x \leq |b| - |a|)</var> such that, for any <var>y</var> <var>(1 \leq y \leq |a|)</var>, <var>a_y = b_{x+y}</var> holds.</p>
+</li>
+<li>
+<p>We assume that the concatenation of zero copies of any string is the empty string. From the definition above, the empty string is a substring of any string. Thus, for any two strings <var>s</var> and <var>t</var>, <var>i = 0</var> satisfies the condition in the problem statement.</p>
+</li>
+</ul>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 \leq |s| \leq 5 \times 10^5</var></li>
+<li><var>1 \leq |t| \leq 5 \times 10^5</var></li>
+<li><var>s</var> and <var>t</var> consist of lowercase English letters.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>s</var>
+<var>t</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>If the number of non-negative integers <var>i</var> satisfying the following condition is finite, print the maximum value of such <var>i</var>; if the number is infinite, print <code>-1</code>.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>abcabab
+ab
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>3
+</pre>
+<p>The concatenation of three copies of <var>t</var>, <code>ababab</code>, is a substring of the concatenation of two copies of <var>s</var>, <code>abcabababcabab</code>, so <var>i = 3</var> satisfies the condition.</p>
+<p>On the other hand, the concatenation of four copies of <var>t</var>, <code>abababab</code>, is not a substring of the concatenation of any number of copies of <var>s</var>, so <var>i = 4</var> does not satisfy the condition.</p>
+<p>Similarly, any integer greater than <var>4</var> does not satisfy the condition, either. Thus, the number of non-negative integers <var>i</var> satisfying the condition is finite, and the maximum value of such <var>i</var> is <var>3</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>aa
+aaaaaaa
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>-1
+</pre>
+<p>For any non-negative integer <var>i</var>, the concatenation of <var>i</var> copies of <var>t</var> is a substring of the concatenation of <var>4i</var> copies of <var>s</var>. Thus, there are infinitely many non-negative integers <var>i</var> that satisfy the condition.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>aba
+baaab
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>0
+</pre>
+<p>As stated in Notes, <var>i = 0</var> always satisfies the condition.</p></section>
+</div>
+</span>

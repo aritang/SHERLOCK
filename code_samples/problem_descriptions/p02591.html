@@ -1,0 +1,94 @@
+<span class="lang-en">
+<p>Score : <var>1000</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>Inspired by the tv series <em>Stranger Things</em>, bear Limak is going for a walk between two mirror worlds.</p>
+<p>There are two perfect binary trees of height <var>H</var>,
+    each with the standard numeration of vertices from <var>1</var> to <var>2^H-1</var>.
+The root is <var>1</var> and the children of <var>x</var> are <var>2 \cdot x</var> and <var>2 \cdot x + 1</var>.</p>
+<p>Let <var>L</var> denote the number of leaves in a single tree, <var>L = 2^{H-1}</var>.</p>
+<p>You are given a permutation <var>P_1, P_2, \ldots, P_L</var> of numbers <var>1</var> through <var>L</var>.
+It describes <var>L</var> <em>special</em> edges that connect leaves of the two trees.
+There is a special edge between vertex <var>L+i-1</var> in the first tree and vertex <var>L+P_i-1</var> in the second tree.</p>
+<p align="center"><img alt="graph for sample1" src="https://img.atcoder.jp/agc047/nice_wide_example.png"/></p>
+<p align="center"><em>drawing for the first sample test, permutation <var>P = (2, 3, 1, 4)</var>, special edges in green</em></p>
+<p>Let's define <em>product</em> of a cycle as the product of numbers in its vertices.
+Compute the sum of products of all simple cycles that have <strong>exactly two special edges</strong>, modulo <var>(10^9+7)</var>.</p>
+<p>A simple cycle is a cycle of length at least 3, without repeated vertices or edges.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>2 \leq H \leq 18</var></li>
+<li><var>1 \leq P_i \leq L</var> where <var>L = 2^{H-1}</var></li>
+<li><var>P_i \neq P_j</var> (so this is a permutation)</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format (where <var>L = 2^{H-1}</var>).</p>
+<pre><var>H</var>
+<var>P_1</var> <var>P_2</var> <var>\cdots</var> <var>P_L</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Compute the sum of products of simple cycles that have exactly two special edges.
+Print the answer modulo <var>(10^9+7)</var>.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>3
+2 3 1 4
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>121788
+</pre>
+<p>The following drawings show two valid cycles (but there are more!) with products
+    <var>2 \cdot 5 \cdot 6 \cdot 3 \cdot 1 \cdot 2 \cdot 5 \cdot 4 = 7200</var>
+    and <var>1 \cdot 3 \cdot 7 \cdot 7 \cdot 3 \cdot 1 \cdot 2 \cdot 5 \cdot 4 \cdot 2 = 35280</var>.
+The third cycle is invalid because it doesn't have exactly two special edges.</p>
+<p align="center"><img alt="three cycles" src="https://img.atcoder.jp/agc047/3_trees_font.png"/></p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>2
+1 2
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>36
+</pre>
+<p>The only simple cycle in the graph indeed has two special edges, and the product of vertices is
+    <var>1 \cdot 3 \cdot 3 \cdot 1 \cdot 2 \cdot 2 = 36</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>5
+6 14 15 7 12 16 5 4 11 9 3 10 8 2 13 1
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>10199246
+</pre></section>
+</div>
+</span>

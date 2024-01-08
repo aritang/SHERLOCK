@@ -1,0 +1,70 @@
+<span class="lang-en">
+<p>Score : <var>900</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>Takahashi has an empty string <var>S</var> and a variable <var>x</var> whose initial value is <var>0</var>.</p>
+<p>Also, we have a string <var>T</var> consisting of <code>0</code> and <code>1</code>.</p>
+<p>Now, Takahashi will do the operation with the following two steps <var>|T|</var> times.</p>
+<ul>
+<li>Insert a <code>0</code> or a <code>1</code> at any position of <var>S</var> of his choice.</li>
+<li>Then, increment <var>x</var> by the sum of the digits in the odd positions (first, third, fifth, ...) of <var>S</var>. For example, if <var>S</var> is <code>01101</code>, the digits in the odd positions are <code>0</code>, <code>1</code>, <code>1</code> from left to right, so <var>x</var> is incremented by <var>2</var>.</li>
+</ul>
+<p>Print the maximum possible final value of <var>x</var> in a sequence of operations such that <var>S</var> equals <var>T</var> in the end.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 \leq |T| \leq 2 \times 10^5</var></li>
+<li><var>T</var> consists of <code>0</code> and <code>1</code>.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>T</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the maximum possible final value of <var>x</var> in a sequence of operations such that <var>S</var> equals <var>T</var> in the end.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>1101
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>5
+</pre>
+<p>Below is one sequence of operations that maximizes the final value of <var>x</var> to <var>5</var>.</p>
+<ul>
+<li>Insert a <code>1</code> at the beginning of <var>S</var>. <var>S</var> becomes <code>1</code>, and <var>x</var> is incremented by <var>1</var>.</li>
+<li>Insert a <code>0</code> to the immediate right of the first character of <var>S</var>. <var>S</var> becomes <code>10</code>, and <var>x</var> is incremented by <var>1</var>.</li>
+<li>Insert a <code>1</code> to the immediate right of the second character of <var>S</var>. <var>S</var> becomes <code>101</code>, and <var>x</var> is incremented by <var>2</var>.</li>
+<li>Insert a <code>1</code> at the beginning of <var>S</var>. <var>S</var> becomes <code>1101</code>, and <var>x</var> is incremented by <var>1</var>.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>0111101101
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>26
+</pre></section>
+</div>
+</span>

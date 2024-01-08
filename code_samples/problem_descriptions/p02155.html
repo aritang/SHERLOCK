@@ -1,0 +1,86 @@
+<h1>Problem G: First Kiss</h1>
+
+<h2>Problem</h2>
+<p>
+  ビット君の通う男子校では昼休みにキッポーゲームが行われている。<br>
+  この学校のキッポーゲームは少し変わっていることで有名だ。<br>
+  まず、$N$本のキッポーを用意する。$i$本目のキッポーの長さは$a_i$である。<br>
+  
+  先手と後手が交互にキッポーを食べる。<br>
+  すごい長さのキッポーを一気に食べると喉に刺さってしまうので、$1$以上$D$以下の好きな長さだけ食べる。<br>
+  彼らは不器用なので、整数長でのみキッポーを食べることができる。<br>
+  
+  最初にいずれかのキッポーが食べつくされたとき、食べきった人の負けとなる。<br>
+  
+  両者が最適に行動したとき、先手が勝つなら"First"、後手が勝つなら"Second"を出力せよ。<br>
+  
+</p>
+
+<h2>Input</h2>
+<p>入力は以下の形式で与えられる。</p>
+<pre>
+$N$ $D$
+$a_1$ $a_2$ $...$ $a_N$
+</pre>
+<p>
+  入力はすべて整数で与えられる。
+</p>
+
+<h2>Constraints</h2>
+<p>入力は以下の条件を満たす。</p>
+<ul>
+  <li>$1 \le N \le 3\times 10^5$</li>
+  <li>$1 \le D \le 10^9$</li>
+  <li>$1 \le a_i \le 10^9$</li>
+</ul>
+
+
+<h2>Output</h2>
+<p>
+  両者が最適に行動したとき、どちらが勝つか出力せよ。<br>
+  先手が勝つなら"First"、後手が勝つなら"Second"を出力せよ。<br>
+</p>
+
+<h2>Sample Input 1</h2>
+<pre>
+1 1
+2
+</pre>
+
+<h2>Sample Output 1</h2>
+<pre>
+First
+</pre>
+
+<h2>Sample Input 2</h2>
+<pre>
+2 25
+19 19
+</pre>
+
+<h2>Sample Output 2</h2>
+<pre>
+Second
+</pre>
+
+<h2>Sample Input 3</h2>
+<pre>
+3 5
+10 8 4
+</pre>
+
+<h2>Sample Output 3</h2>
+<pre>
+First
+</pre>
+
+<h2>Sample Input 4</h2>
+<pre>
+4 10
+3 8 5 2
+</pre>
+
+<h2>Sample Output 4</h2>
+<pre>
+Second
+</pre>

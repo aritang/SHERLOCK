@@ -1,0 +1,159 @@
+
+<H1><font color="#000">Problem G: </font>Let There Be Light</H1>
+
+<p>
+Suppose that there are some light sources and many spherical balloons. All light sources have sizes small enough to be modeled as point light sources, and they emit light in all directions. The surfaces of the balloons absorb light and do not reflect light. Surprisingly in this world, balloons may overlap.
+</p>
+
+<p>
+You want the total illumination intensity at an objective point as high as possible. For this purpose, some of the balloons obstructing lights can be removed. Because of the removal costs, however, there is a certain limit on the number of balloons to be removed. Thus, you would like to remove an appropriate set of balloons so as to maximize the illumination intensity at the objective point.
+</p>
+
+<p>
+The following figure illustrates the configuration specified in the first dataset of the sample input given below. The figure shows the <i>xy</i>-plane, which is enough because, in this dataset, the <i>z</i>-coordinates of all the light sources, balloon centers, and the objective point are zero. In the figure, light sources are shown as stars and balloons as circles. The objective point is at the origin, and you may remove up to 4 balloons. In this case, the dashed circles in the figure correspond to the balloons to be removed.
+</p>
+
+<center>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_letThereBeLight">
+<p>
+Figure G.1: First dataset of the sample input.
+</p>
+</center>
+
+<H2>Input</H2>
+
+<p>
+The input is a sequence of datasets. Each dataset is formatted as follows.
+</p>
+
+<p>
+<i>N M R</i><br/>
+<i>S</i><sub>1<i>x</i></sub> <i>S</i><sub>1<i>y</i></sub> <i>S</i><sub>1<i>z</i></sub> <i>S</i><sub>1<i>r</i></sub><br/>
+...<br/>
+<i>S</i><sub><i>Nx</i></sub> <i>S</i><sub><i>Ny</i></sub> <i>S</i><sub><i>Nz</i></sub> <i>S</i><sub><i>Nr</i></sub><br/>
+<i>T</i><sub>1<i>x</i></sub> <i>T</i><sub>1<i>y</i></sub> <i>T</i><sub>1<i>z</i></sub> <i>T</i><sub>1<i>b</i></sub><br/>
+...<br/>
+<i>T</i><sub><i>Mx</i></sub> <i>T</i><sub><i>My</i></sub> <i>T</i><sub><i>Mz</i></sub> <i>T</i><sub><i>Mb</i></sub><br/>
+<i>E<sub>x</sub> E<sub>y</sub> E<sub>z</sub></i><br/>
+</p>
+
+<p>
+The first line of a dataset contains three positive integers, <i>N</i>, <i>M</i> and <i>R</i>, separated by a single space. <i>N</i> means the number of balloons that does not exceed 2000. <i>M</i> means the number of light sources that does not exceed 15. <i>R</i> means the number of balloons that may be removed, which does not exceed <i>N</i>.
+</p>
+
+<p>
+Each of the <i>N</i> lines following the first line contains four integers separated by a single space. (<i>S<sub>ix</sub></i>, <i>S<sub>iy</sub></i>, <i>S<sub>iz</sub></i>) means the center position of the <i>i</i>-th balloon and <i>S<sub>ir</sub></i> means its radius.
+</p>
+
+<p>
+Each of the following <i>M</i> lines contains four integers separated by a single space. (<i>T<sub>jx</sub></i>, <i>T<sub>jy</sub></i>, <i>T<sub>jz</sub></i>) means the position of the <i>j</i>-th light source and <i>T<sub>jb</sub></i> means its brightness.
+</p>
+
+<p>
+The last line of a dataset contains three integers separated by a single space. (<i>E<sub>x</sub></i>, <i>E<sub>y</sub></i>, <i>E<sub>z</sub></i>) means the position of the objective point.
+</p>
+
+<p>
+<i>S<sub>ix</sub></i>, <i>S<sub>iy</sub></i>, <i>S<sub>iz</sub></i>, <i>T<sub>jx</sub></i>, <i>T<sub>jy</sub></i>, <i>T<sub>jz</sub></i>, <i>E<sub>x</sub></i>, <i>E<sub>y</sub></i> and <i>E<sub>z</sub></i> are greater than -500, and less than 500. <i>S<sub>ir</sub></i> is greater than 0, and less than 500. <i>T<sub>jb</sub></i> is greater than 0, and less than 80000.
+</p>
+
+<p>
+At the objective point, the intensity of the light from the <i>j</i>-th light source is in inverse proportion to the square of the distance, namely
+</p>
+
+<p style="text-align:center">
+<i>T<sub>jb</sub></i> / { (<i>T<sub>jx</sub></i> &minus; <i>E<sub>x</sub></i>)<sup>2</sup> + (<i>T<sub>jy</sub></i> &minus; <i>E<sub>y</sub></i>)<sup>2</sup> + (<i>T<sub>jz</sub></i> &minus; <i>E<sub>z</sub></i>)<sup>2</sup> }, 
+</p>
+
+<p>
+if there is no balloon interrupting the light. The total illumination intensity is the sum of the above.
+</p>
+
+<p>
+You may assume the following.
+</p>
+
+<ol>
+<li> The distance between the objective point and any light source is not less than 1.</li>
+<li> For every <i>i</i> and <i>j</i>, even if <i>S<sub>ir</sub></i> changes by &epsilon; (|&epsilon;| &lt; 0.01), whether the <i>i</i>-th balloon hides the <i>j</i>-th light or not does not change.
+</ol>
+
+<p>
+The end of the input is indicated by a line of three zeros.
+</p>
+
+
+
+<H2>Output</H2>
+
+<p>
+For each dataset, output a line containing a decimal fraction which means the highest possible illumination intensity at the objective point after removing <i>R</i> balloons. The output should not contain an error greater than 0.0001.
+</p>
+
+
+<H2>Sample Input</H2>
+<pre>
+12 5 4
+0 10 0 1
+1 5 0 2
+1 4 0 2
+0 0 0 2
+10 0 0 1
+3 -1 0 2
+5 -1 0 2
+10 10 0 15
+0 -10 0 1
+10 -10 0 1
+-10 -10 0 1
+10 10 0 1
+0 10 0 240
+10 0 0 200
+10 -2 0 52
+-10 0 0 100
+1 1 0 2
+0 0 0
+12 5 4
+0 10 0 1
+1 5 0 2
+1 4 0 2
+0 0 0 2
+10 0 0 1
+3 -1 0 2
+5 -1 0 2
+10 10 0 15
+0 -10 0 1
+10 -10 0 1
+-10 -10 0 1
+10 10 0 1
+0 10 0 260
+10 0 0 200
+10 -2 0 52
+-10 0 0 100
+1 1 0 2
+0 0 0
+5 1 3
+1 2 0 2
+-1 8 -1 8
+-2 -3 5 6
+-2 1 3 3
+-4 2 3 5
+1 1 2 7
+0 0 0
+5 1 2
+1 2 0 2
+-1 8 -1 8
+-2 -3 5 6
+-2 1 3 3
+-4 2 3 5
+1 1 2 7
+0 0 0
+0 0 0
+</pre>
+
+<H2>Output for the Sample Input</H2>
+<pre>
+3.5
+3.6
+1.1666666666666667
+0.0
+</pre>

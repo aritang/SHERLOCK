@@ -1,0 +1,86 @@
+<span class="lang-en">
+<p>Score : <var>100</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>Alice and Bob are playing <em>One Card Poker</em>.<br/>
+One Card Poker is a two-player game using playing cards.  </p>
+<p>Each card in this game shows an integer between <code>1</code> and <code>13</code>, inclusive.<br/>
+The <em>strength</em> of a card is determined by the number written on it, as follows:  </p>
+<p>Weak <code>2</code> <var>&lt;</var> <code>3</code> <var>&lt;</var> <code>4</code> <var>&lt;</var> <code>5</code> <var>&lt;</var> <code>6</code> <var>&lt;</var> <code>7</code> <var>&lt;</var> <code>8</code> <var>&lt;</var> <code>9</code> <var>&lt;</var> <code>10</code> <var>&lt;</var> <code>11</code> <var>&lt;</var> <code>12</code> <var>&lt;</var> <code>13</code> <var>&lt;</var> <code>1</code> Strong  </p>
+<p>One Card Poker is played as follows:  </p>
+<ol>
+<li>Each player picks one card from the deck. The chosen card becomes the player's hand.</li>
+<li>The players reveal their hands to each other. The player with the stronger card wins the game.<br/>
+If their cards are equally strong, the game is drawn.  </li>
+</ol>
+<p>You are watching Alice and Bob playing the game, and can see their hands.<br/>
+The number written on Alice's card is <var>A</var>, and the number written on Bob's card is <var>B</var>.<br/>
+Write a program to determine the outcome of the game.  </p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1≦A≦13</var> </li>
+<li><var>1≦B≦13</var> </li>
+<li><var>A</var> and <var>B</var> are integers.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>The input is given from Standard Input in the following format:</p>
+<pre><var>A</var> <var>B</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print <code>Alice</code> if Alice will win. Print <code>Bob</code> if Bob will win. Print <code>Draw</code> if the game will be drawn.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>8 6
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>Alice
+</pre>
+<p><code>8</code> is written on Alice's card, and <code>6</code> is written on Bob's card.
+Alice has the stronger card, and thus the output should be <code>Alice</code>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>1 1
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>Draw
+</pre>
+<p>Since their cards have the same number, the game will be drawn.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>13 1
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>Bob
+</pre></section>
+</div>
+</span>

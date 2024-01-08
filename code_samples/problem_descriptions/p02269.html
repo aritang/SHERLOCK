@@ -1,0 +1,90 @@
+
+<H1>Search III</H1>
+
+<p>
+Your task is to write a program of a simple <i>dictionary</i> which implements the following instructions:
+</p>
+
+<ul>
+<li><b>insert <i>str</i></b>: insert a string <i>str</i> in to the dictionary</li>
+<li><b>find <i>str</i></b>: if the distionary contains <i>str</i>, then print '<span>yes</span>', otherwise print '<span>no</span>'</li>
+</ul>
+</ul>
+
+
+
+
+<H2>Input</H2>
+
+<p>
+In the first line <i>n</i>, the number of instructions is given. In the following <i>n</i> lines, <i>n</i> instructions are given in the above mentioned format.
+</p>
+
+
+<H2>Output</H2>
+
+<p>
+Print <span>yes</span> or <span>no</span> for each find instruction in a line.
+</p>
+
+<H2>Constraints</H2>
+
+<ul>
+<li>A string consists of '<span>A</span>', '<span>C</span>', '<span>G</span>', or '<span>T</span>'</li>
+<li>1 &le; length of a string &le; 12</li>
+<li> <i>n</i> &le; 1000000 </li>
+</ul>
+
+
+<H2>Sample Input 1</H2>
+<pre>
+5
+insert A
+insert T
+insert C
+find G
+find A
+</pre>
+
+<H2>Sample Output 1</H2>
+<pre>
+no
+yes
+</pre>
+
+<H2>Sample Input 2</H2>
+<pre>
+13
+insert AAA
+insert AAC
+insert AGA
+insert AGG
+insert TTT
+find AAA
+find CCC
+find CCC
+insert CCC
+find CCC
+insert T
+find TTT
+find T
+</pre>
+
+<H2>Sample Output 2</H2>
+
+<pre>
+yes
+no
+no
+yes
+yes
+yes
+</pre>
+
+
+<H2>Notes</H2>
+
+<a href="template/ALDS1_4_C_template.c" target="_blank">Template in C</a>
+
+
+

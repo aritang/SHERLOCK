@@ -1,0 +1,77 @@
+
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: { inlineMath: [['\\(','\\)']] }
+  });
+</script>
+<script type='text/javascript' src='http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
+<h1 class="ndoc-heading1">Problem B: Time Complexity</h1>
+<p class="ndoc-top">ICPC World Finals 1日目</p>
+<p class="ndoc-top">プログラミングコンテストではプログラムの実行時間を把握する事が重要だ。
+実行時間の見積もりを誤り、 時間制限をオーバーしてしまうコードを書いてしまうと、 そのぶん時間をロスしてしまう。
+ICPCのようにコンピュータが1台しか使えないチーム戦ではなおさらである。</p>
+<p class="ndoc-top">そこで、ICPC World
+Finalsを前に控えたティー氏はプログラムの実行時間を暗算で求める訓練を始めることにした。
+「logは定数のようなもの」なので、まずは多項式に取り組むとしよう。</p>
+<h2 class="ndoc-heading2">問題</h2>
+<p class="ndoc-top">ある問題の答えを計算するプログラムと、それを実行するコンピュータがある。
+問題の入力を表す正整数\(n\)、 入力\(n\)に応じてプログラム中で実行される命令の数を表す多項式\(f(n)\)、
+コンピュータの1命令の実行時間\(T\)[ナノ秒]（=\( 10^{-9} \)[秒]）が与えられる。
+多項式\(f(n)\)の回数だけ命令を実行した時のプログラムの総実行時間が1秒「以下」であるかを判定し、
+1秒「以下」であるならば総実行時間を求めよ。</p>
+<h2 class="ndoc-heading2">入力</h2>
+<pre>
+n T
+f(n)
+</pre>
+<p>1行目に 問題の入力を表す正整数\(n\)と 1命令の実行時間[ナノ秒]を表す整数\(T\)が空白区切りで与えられる。
+2行目に実行される命令の数を表す多項式\(f(n)\)が与えられる。</p>
+<p class="ndoc-top">多項式\( f(n) \)は以下のBNFで表される。</p>
+<pre>
+&lt;poly&gt; ::= &lt;poly&gt; "+" &lt;mono&gt; | &lt;mono&gt;
+&lt;mono&gt; ::= "n^" &lt;num&gt;
+&lt;num&gt; ::= "0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9"
+</pre>
+<p class="ndoc-top">ここで各単項式n^kは、\(n\)の\(k\)乗を表す。</p>
+<h2 class="ndoc-heading2">出力</h2>
+<p class="ndoc-top">
+プログラムの総実行時間が1秒「以下」である場合には総実行時間を[ナノ秒]単位で、1秒を「超過」する場合には"TLE"を1行に出力せよ。</p>
+<h2 class="ndoc-heading2">制約</h2>
+<p class="ndoc-top"></p>
+<ul class="ndoc-indent">
+<li>\( 1 \leq n \leq 10^{9}(= 1000000000) \)</li>
+<li>\( 1 \leq T \leq 10^{9}(= 1000000000) \)</li>
+<li>多項式\( f(n) \)の次数は0以上9以下、単項式の数は1以上10以下</li>
+</ul>
+<h2 class="ndoc-heading2">入出力例</h2>
+<h3 class="ndoc-heading3">入力1</h3>
+<pre>
+100 100
+n^1+n^2+n^3
+</pre>
+<h3 class="ndoc-heading3">出力1</h3>
+<pre>
+101010000
+</pre>
+<p>総実行時間は\( (100^{1} + 100^{2} + 100^{3}) \times 100 \)[ナノ秒]である。</p>
+<h3 class="ndoc-heading3">入力2</h3>
+<pre>
+1000 1
+n^3+n^0
+</pre>
+<h3 class="ndoc-heading3">出力2</h3>
+<pre>
+TLE
+</pre>
+<p>総実行時間は\( 1000^{3} + 1000^{0} = 10^{9}+1 \)[ナノ秒]であり、1[秒]を超えてしまう。</p>
+<h3 class="ndoc-heading3">入力3</h3>
+<pre>
+100000000 100000000
+n^3
+</pre>
+<h3 class="ndoc-heading3">出力3</h3>
+<pre>
+TLE
+</pre>
+<p>総実行時間は\( (10^{8})^{3} \times 10^{8} = 10^{32} \)[ナノ秒]である。</p>

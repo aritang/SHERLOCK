@@ -1,0 +1,85 @@
+<h1>Problem E: Rooted Tree Game</h1>
+
+<h2>Problem</h2>
+<p>
+初期状態として複数の根付き木が与えられる。これに対しAliceとBobはゲームを行う。ゲームは2人交互に行い、先手がAliceで後手がBobである。ターンが回ってきたプレイヤーは以下の行動を取る。
+</p>
+
+<ol>
+<li>根(親を持たない頂点)を1つ選択する。この頂点を<var>S</var>とする。</li>
+<li><var>S</var>を根とする根付き木に含まれる頂点を選択する(ここでは<var>S</var>も選択可能)。この頂点を<var>T</var>とする。</li>
+<li><var>S</var>から<var>T</var>への経路上にある頂点を、<var>S</var>と<var>T</var>も含めすべて削除する。また、削除された頂点が端点であるような辺もすべて削除する。</li>
+</ol>
+
+<p>
+ターンが回ってきた時点で頂点がすべて削除されていた場合、そのプレイヤーの負けとなる。
+</p>
+
+<p>
+AliceとBobが常に最適な行動を取る時、与えられた初期状態に対し、勝利するプレイヤーを判定せよ。
+</p>
+
+<p>
+以下の図は、プレイヤーの行動の例を示す。<br>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE3_AizuCamp14_Day2_E_img.png" width="700" alt="プレイヤーの行動の例">
+</p>
+
+<h2>Input</h2>
+<p>
+入力は以下の形式で与えられる。
+</p>
+
+<pre>
+<var>N</var> <var>M</var>
+<var>p<sub>1</sub></var>
+<var>p<sub>2</sub></var>
+:
+<var>p<sub>M</sub></var>
+</pre>
+
+<p>
+1行目に、初期状態の頂点数<var>N</var>と辺の数<var>M</var>が空白区切りで与えられる。この時、各頂点を表す番号は1~<var>N</var>である。次の<var>M</var>行では、辺の情報が与えられる。このうち<var>i</var>行目では1つの整数<var>p<sub>i</sub></var>が与えられる。これは、頂点<var>p<sub>i</sub></var>から頂点<var>i</var>への辺があることを表す。言い換えると、頂点<var>i</var>の親が頂点<var>p<sub>i</sub></var>であることを表す。
+</p>
+
+<h2>Constraints</h2>
+<p>
+入力は以下の制約を満たす。
+</p>
+<ul>
+<li>1 &le; <var>N</var> &le; 1000</li>
+<li>0 &le; <var>M</var> &lt; N</li>
+<li><var>i</var> &lt; <var>p<sub>i</sub></var> &le; N ( 1 &le; <var>i</var> &le; <var>M</var> )</li>
+</ul>
+
+<h2>Output</h2>
+<p>
+勝利するプレイヤーの名前(AliceまたはBob)を1行に出力せよ。
+</p>
+
+<h2>Sample Input1</h2>
+<pre>
+6 3
+4
+4
+5
+</pre>
+
+<h2>Sample Output1</h2>
+<pre>
+Alice
+</pre>
+
+<h2>Sample Input2</h2>
+<pre>
+6 4
+2
+5
+4
+5
+</pre>
+
+<h2>Sample Output2</h2>
+<pre>
+Bob
+</pre>
+

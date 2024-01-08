@@ -1,0 +1,69 @@
+
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({ tex2jax: { inlineMath: [["$","$"], ["\\(","\\)"]], processEscapes: true }});
+</script>
+<script language="JavaScript" type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+
+<p>
+<var>w</var> を正整数，<var>p</var> を長さ2<sup>2<var>w</var>+1</sup> の文字列とする．<var>(w, p)</var>- セルオートマトンとは次のようなものである．
+</p>
+<ul>
+<li> 0 または 1 の状態をとることのできるセルが無限個一次元に並んでいる．</var>
+<li> 時刻 0 に，すぬけ君は好きな有限個のマスを選んで状態を 1 にすることができる．残りのセルは 0 である．</li>
+<li> 時刻 <var>t (&gt; 0)</var> のセル <var>x</var> の状態 <var>f(t, x)</var> は，<var>f(t &minus; 1, x &minus; w), . . . , f(t &minus; 1, x + w)</var> によって以下のように定まる:<br>
+
+
+\begin{eqnarray}
+f(t, x) = p[ \sum^w_{i=-w}2^{w+i} f(t − 1, x + i)] \;\;\;\;\;\;\;\;\;\;(1)
+\end{eqnarray}
+
+</li>
+</ul>
+
+
+<p>
+すぬけ君は，時刻 0 にどのように初期状態を選んでも 1 の個数が初期状態から変わらないようなセルオートマトンが好きである．整数 <var>w</var> と文字列 <var>s</var> が与えられたとき，辞書順で <var>s</var> 以上の文字列 <var>p</var> であって　<var>(w, p)</var>− セルオートマトンがすぬけ君に好かれるような最小の <var>p</var> を求めよ．
+</p>
+
+<h2>Constraints</h2>
+<ul>
+<li> 1 &le; <var>w</var> &le; 3</li>
+<li> <var>|s|</var> = 2<sup>2<var>w</var>+1</sup></li>
+<li> <var>s</var> に現れる文字は '0', '1' のみである</li>
+</ul>
+
+<h2>Input</h2>
+<pre>
+<var>w</var>
+<var>s</var>
+</pre>
+
+<h2>Output</h2>
+<p>
+条件を満たす最小の <var>p</var> を出力せよ．そのようなものが存在しないときは "<span>no</span>" と出力せよ．
+</p>
+
+<h2>Sample Input 1</h2>
+<pre>
+1
+00011000
+</pre>
+
+<h2>Sample Output 1</h2>
+<pre>
+00011101
+</pre>
+
+<h2>Sample Input 2</h2>
+<pre>
+1
+11111111
+</pre>
+
+<h2>Sample Output 2</h2>
+<pre>
+no
+</pre>
+
+

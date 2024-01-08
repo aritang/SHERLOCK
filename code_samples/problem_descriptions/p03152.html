@@ -1,0 +1,108 @@
+<span class="lang-en">
+<p>Score : <var>500</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>Consider writing each of the integers from <var>1</var> to <var>N \times M</var> in a grid with <var>N</var> rows and <var>M</var> columns, without duplicates.
+Takahashi thinks it is not fun enough, and he will write the numbers under the following conditions:</p>
+<ul>
+<li>The largest among the values in the <var>i</var>-th row <var>(1 \leq i \leq N)</var> is <var>A_i</var>.</li>
+<li>The largest among the values in the <var>j</var>-th column <var>(1 \leq j \leq M)</var> is <var>B_j</var>.</li>
+</ul>
+<p>For him, find the number of ways to write the numbers under these conditions, modulo <var>10^9 + 7</var>.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 \leq N \leq 1000</var></li>
+<li><var>1 \leq M \leq 1000</var></li>
+<li><var>1 \leq A_i \leq N \times M</var></li>
+<li><var>1 \leq B_j \leq N \times M</var></li>
+<li><var>A_i</var> and <var>B_j</var> are integers.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var> <var>M</var>
+<var>A_1</var> <var>A_2</var> <var>...</var> <var>A_{N}</var>
+<var>B_1</var> <var>B_2</var> <var>...</var> <var>B_{M}</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the number of ways to write the numbers under the conditions, modulo <var>10^9 + 7</var>.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>2 2
+4 3
+3 4
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>2
+</pre>
+<p><var>(A_1, A_2) = (4, 3)</var> and <var>(B_1, B_2) = (3, 4)</var>. In this case, there are two ways to write the numbers, as follows:</p>
+<ul>
+<li><var>1</var> in <var>(1, 1)</var>, <var>4</var> in <var>(1, 2)</var>, <var>3</var> in <var>(2, 1)</var> and <var>2</var> in <var>(2, 2)</var>.</li>
+<li><var>2</var> in <var>(1, 1)</var>, <var>4</var> in <var>(1, 2)</var>, <var>3</var> in <var>(2, 1)</var> and <var>1</var> in <var>(2, 2)</var>.</li>
+</ul>
+<p>Here, <var>(i, j)</var> denotes the square at the <var>i</var>-th row and the <var>j</var>-th column.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>3 3
+5 9 7
+3 6 9
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>0
+</pre>
+<p>Since there is no way to write the numbers under the condition, <var>0</var> should be printed. </p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>2 2
+4 4
+4 4
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>0
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 4</h3><pre>14 13
+158 167 181 147 178 151 179 182 176 169 180 129 175 168
+181 150 178 179 167 180 176 169 182 177 175 159 173
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 4</h3><pre>343772227
+</pre></section>
+</div>
+</span>

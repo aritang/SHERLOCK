@@ -1,0 +1,88 @@
+<span class="lang-en">
+<p>Score : <var>500</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>Given is a string <var>S</var> of length <var>N</var>.</p>
+<p>Find the maximum length of a non-empty string that occurs twice or more in <var>S</var> as contiguous substrings without overlapping.</p>
+<p>More formally, find the maximum positive integer <var>len</var> such that there exist integers <var>l_1</var> and <var>l_2</var> ( <var>1 \leq l_1, l_2 \leq N - len + 1</var> ) that satisfy the following:</p>
+<ul>
+<li>
+<p><var>l_1 + len \leq l_2</var></p>
+</li>
+<li>
+<p><var>S[l_1+i] = S[l_2+i] (i = 0, 1, ..., len - 1)</var></p>
+</li>
+</ul>
+<p>If there is no such integer <var>len</var>, print <var>0</var>.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>2 \leq N \leq 5 \times 10^3</var></li>
+<li><var>|S| = N</var></li>
+<li><var>S</var> consists of lowercase English letters.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+<var>S</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the maximum length of a non-empty string that occurs twice or more in <var>S</var> as contiguous substrings without overlapping. If there is no such non-empty string, print <var>0</var> instead.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>5
+ababa
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>2
+</pre>
+<p>The strings satisfying the conditions are: <code>a</code>, <code>b</code>, <code>ab</code>, and <code>ba</code>. The maximum length among them is <var>2</var>, which is the answer.
+Note that <code>aba</code> occurs twice in <var>S</var> as contiguous substrings, but there is no pair of integers <var>l_1</var> and <var>l_2</var> mentioned in the statement such that <var>l_1 + len \leq l_2</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>2
+xy
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>0
+</pre>
+<p>No non-empty string satisfies the conditions.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>13
+strangeorange
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>5
+</pre></section>
+</div>
+</span>

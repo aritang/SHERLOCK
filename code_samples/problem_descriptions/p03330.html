@@ -1,0 +1,94 @@
+<span class="lang-en">
+<p>Score : <var>400</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>There is a grid with <var>N</var> rows and <var>N</var> columns of squares. Let <var>(i,j)</var> be the square at the <var>i</var>-th row from the top and the <var>j</var>-th column from the left.</p>
+<p>These squares have to be painted in one of the <var>C</var> colors from Color <var>1</var> to Color <var>C</var>. Initially, <var>(i,j)</var> is painted in Color <var>c_{i,j}</var>.</p>
+<p>We say the grid is a <em>good</em> grid when the following condition is met for all <var>i,j,x,y</var> satisfying <var>1 \leq i,j,x,y \leq N</var>:</p>
+<ul>
+<li>If <var>(i+j) \% 3=(x+y) \% 3</var>, the color of <var>(i,j)</var> and the color of <var>(x,y)</var> are the same.</li>
+<li>If <var>(i+j) \%  3 \neq (x+y) \% 3</var>, the color of <var>(i,j)</var> and the color of <var>(x,y)</var> are different.</li>
+</ul>
+<p>Here, <var>X \% Y</var> represents <var>X</var> modulo <var>Y</var>.</p>
+<p>We will repaint zero or more squares so that the grid will be a good grid.</p>
+<p>For a square, the <em>wrongness</em> when the color of the square is <var>X</var> before repainting and <var>Y</var> after repainting, is <var>D_{X,Y}</var>.</p>
+<p>Find the minimum possible sum of the wrongness of all the squares.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 \leq N \leq 500</var></li>
+<li><var>3 \leq C \leq 30</var></li>
+<li><var>1 \leq D_{i,j} \leq 1000 (i \neq j),D_{i,j}=0 (i=j)</var></li>
+<li><var>1 \leq c_{i,j} \leq C</var></li>
+<li>All values in input are integers.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var> <var>C</var>
+<var>D_{1,1}</var> <var>...</var> <var>D_{1,C}</var>
+<var>:</var>
+<var>D_{C,1}</var> <var>...</var> <var>D_{C,C}</var>
+<var>c_{1,1}</var> <var>...</var> <var>c_{1,N}</var>
+<var>:</var>
+<var>c_{N,1}</var> <var>...</var> <var>c_{N,N}</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>If the minimum possible sum of the wrongness of all the squares is <var>x</var>, print <var>x</var>.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>2 3
+0 1 1
+1 0 1
+1 4 0
+1 2
+3 3
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>3
+</pre>
+<ul>
+<li>Repaint <var>(1,1)</var> to Color <var>2</var>. The wrongness of <var>(1,1)</var> becomes <var>D_{1,2}=1</var>.</li>
+<li>Repaint <var>(1,2)</var> to Color <var>3</var>. The wrongness of <var>(1,2)</var> becomes <var>D_{2,3}=1</var>.</li>
+<li>Repaint <var>(2,2)</var> to Color <var>1</var>. The wrongness of <var>(2,2)</var> becomes <var>D_{3,1}=1</var>.</li>
+</ul>
+<p>In this case, the sum of the wrongness of all the squares is <var>3</var>.</p>
+<p>Note that <var>D_{i,j} \neq D_{j,i}</var> is possible.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>4 3
+0 12 71
+81 0 53
+14 92 0
+1 1 2 1
+2 1 1 2
+2 2 1 3
+1 1 2 2
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>428
+</pre></section>
+</div>
+</span>

@@ -1,0 +1,93 @@
+
+
+
+<H1>Maximum Sum Sequence II</H1>
+
+<p>
+与えられた整数の行列
+</p>
+
+<pre>
+<var>a<sub>1,1</sub></var> <var>a<sub>1,2</sub></var> ... <var>a<sub>1,n</sub></var>
+<var>a<sub>2,1</sub></var> <var>a<sub>2,2</sub></var> ... <var>a<sub>2,n</sub></var>
+:
+<var>a<sub>n,1</sub></var> <var>a<sub>n,2</sub></var> ... <var>a<sub>n, n</sub></var>
+</pre>
+
+<p>
+で、縦・横方向に１つ以上連続した項（部分行列）の和の最大値を出力して終了するプログラムを作成して下さい。
+</p>
+
+<H2>Input</H2>
+<p>
+入力データは以下の形式で与えられます。
+</p>
+
+<pre>
+<var>n</var>
+<var>a<sub>1,1</sub></var> <var>a<sub>1,2</sub></var> ... <var>a<sub>1,n</sub></var>
+<var>a<sub>2,1</sub></var> <var>a<sub>2,2</sub></var> ... <var>a<sub>2,n</sub></var>
+:
+<var>a<sub>n,1</sub></var> <var>a<sub>n,2</sub></var> ... <var>a<sub>n, n</sub></var>
+</pre>
+
+<p>
+<var>n</var> は 1 以上 100 以下、<var>a<sub>i,j</sub></var> は -10000 以上 10000 以下です。
+
+
+<H2>Output</H2>
+
+<p>
+最大値を 1 行に出力して下さい。
+</p>
+
+<H2>Sample Input 1</H2>
+<pre>
+3
+1 -2 3
+-4 5 6
+7 8 -9
+</pre>
+
+<H2>Output for the Sample Input 1</H2>
+
+<pre>
+16
+</pre>
+
+<p>
+この入力の場合、以下の部分行列の項の和が最大となります。
+</p>
+<pre>
+-4 5
+7 8
+</pre>
+
+
+<br/>
+
+<H2>Sample Input 2</H2>
+<pre>
+4
+1 3 -9 2
+2 7 -1 5
+-8 3 2 -1
+5 0 -3 1
+</pre>
+
+<H2>Output for the Sample Input 2</H2>
+
+<pre>
+15
+</pre>
+
+<p>
+この入力の場合、以下の部分行列の項の和が最大となります。
+</p>
+<pre>
+7 -1 5
+3 2 -1
+</pre>
+
+
+

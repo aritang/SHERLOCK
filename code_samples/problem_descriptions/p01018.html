@@ -1,0 +1,92 @@
+<h1>Problem C: Warping Girl</h1>
+<h2>Problem</h2>
+
+<p>
+会津魔法学校は, 魔法を使える者が集まる学校である. その学校の生徒の一人であるハルカは, 魔法陣の上でワープの魔法を使う事ができる.
+</p>
+
+<p>
+彼女の家から学校には, 長さ <var>L</var> の一直線状の道がある. また, この道には所々魔法陣が描かれている.<br>
+彼女は毎日この道を使って学校に通っているため, できるだけ短い時間で学校に辿り着きたいと思っている.
+</p>
+
+<p>
+そこでプログラマーであるあなたは, 彼女に学校まで行くときにかかる最小の時間を教えてあげることにした.
+</p>
+
+<p>
+ハルカは, <var>1</var> 分で距離 <var>1</var> だけ歩いて先に進むことができる ( ＊戻ることはできない)．また, ワープの魔法陣が書いてある位置 <var>P<sub>i</sub></var> で魔法を唱えることで, <var>P<sub>i</sub></var> からちょうど <var>D<sub>i</sub></var> だけ進んだ場所に <var>T<sub>i</sub></var> 分で移動することができる.  移動先に魔法陣がある場合も, 連続してワープ魔法を使用することができる.
+</p>
+
+<p>
+彼女の家の位置は <var>0</var>、学校の位置は <var>L</var> である.
+</p>
+
+<h2>Input</h2>
+<pre>
+<var>L</var> <var>n</var>
+<var>P<sub>1</sub></var> <var>D<sub>1</sub></var> <var>T<sub>1</sub></var>
+<var>P<sub>2</sub></var> <var>D<sub>2</sub></var> <var>T<sub>2</sub></var>
+.
+.
+<var>P<sub>n</sub></var> <var>D<sub>n</sub></var> <var>T<sub>n</sub></var>
+</pre>
+
+<p>
+１行目に道の長さ <var>L</var>, 魔法陣の数 <var>n</var> が与えられる.
+次に <var>n</var> 個の魔法陣の状態が与えられる.
+<var>P<sub>i</sub></var> は <var>i</var> 番目の魔法陣がある位置, <var>D<sub>i</sub></var> は <var>i</var> 番目の魔法陣からワープする距離, <var>T<sub>i</sub></var> は <var>i</var> 番目の魔法陣を使ってワープしたときにかかる時間を表す.
+</p>
+
+<h2>Constraints</h2>
+<p>入力は以下の条件を満たす. </p>
+
+<ul>
+<li>与えられる数は全て整数である</li>
+<li>1 &le; <var>L</var> &le; <var>10<sup>9</sup></var>
+<li>0 &le; <var>n</var> &le; <var>min(10<sup>3</sup>, L)</var> (<var>min</var> は<var>A, B</var> の小さい方を表す)
+<li>0 &le; <var>P<sub>i</sub></var> &le; <var>L - 1</var>
+<li>0 &le; <var>D<sub>i</sub></var> &le; <var>L - P<sub>i</sub></var>
+<li>0 &le; <var>T<sub>i</sub></var> &le; <var>10<sup>3</sup></var>
+
+<li><var>P<sub>i</sub></var> ≠ <var>P<sub>j</sub></var>
+</ul>
+
+<h2>Output</h2>
+<p>学校に辿り着くための最小の時間を一行に出力せよ.</p>
+
+<h2>Sample Input 1</h2>
+<pre>
+10 3
+2 2 1
+4 2 1
+8 1 1
+</pre>
+
+<h2>Sample Output 1</h2>
+<pre>
+8
+</pre>
+
+<h2>Sample Input 2</h2>
+<pre>
+10 2
+2 3 1
+3 5 1
+</pre>
+
+<h2>Sample Output 2</h2>
+
+<pre>
+6
+</pre>
+
+<h2>Sample Input 3</h2>
+<pre>
+1 0
+</pre>
+
+<h2>Sample Output 3</h2>
+<pre>
+1
+</pre>

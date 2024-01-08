@@ -1,0 +1,71 @@
+
+
+<h1><font color="#000">Problem J:</font> 多項式の解の個数</h1>
+
+<p>きたまさ君は大学でさまざまな変換について研究している。最近、きたまさ君が興味を持っている変換は次のようなものである。 N+1個の整数 a<sub>0</sub>, ..., a<sub>N</sub> を固定し、整数 z を入力とする。また P を素数とする。</p>
+<blockquote>
+t = ( a<sub>N</sub>z<sup>N</sup> + a<sub>N-1</sub>z<sup>N-1</sup> + ... + a<sub>2</sub>z<sup>2</sup> + a<sub>1</sub>z + a<sub>0</sub> ) mod P
+</blockquote>
+<p>きたまさ君はこの変換によって t = 0 になってしまう z がいくつもあることに気がついた。 そこで、きたまさ君は友人でありスーパープログラマーでもあるあなたに、変換後に t = 0 になる z が 0〜P-1 にいくつあるかを計算してもらうことにした。 
+</p>
+
+<h2>Input</h2>
+
+<p>入力は次の形式で与えられる。</p>
+<pre>N P
+a<sub>0</sub> a<sub>1</sub> ... a<sub>N</sub> </pre>
+<p>入力の1行目には整数Nと素数Pがスペース文字で区切られて与えられる。これらは、問題文で与えられたとおりである。 0 &le; N &le; 100, 2 &le; P &le; 10<sup>9</sup> を満たす。</p>
+<p>次の1行には a<sub>0</sub>〜a<sub>N</sub> がスペース文字で区切られて与えられる。これらは |a<sub>i</sub>| &le; 10<sup>9</sup> を満たす整数である。また a<sub>N</sub> &ne; 0 である。
+</p>
+
+<h2>Output</h2>
+
+<p>変換後に0になるような z (0 &le; z &lt; P) の個数を出力せよ。 
+</p>
+
+<h2>Notes on Test Cases</h2>
+
+<p>
+上記入力形式で複数のデータセットが与えられます。各データセットに対して上記出力形式で出力を行うプログラムを作成して下さい。
+</p>
+
+<p>
+N, P がともに 0 のとき入力の終わりを示します。
+</p>
+
+<!--
+<h2>Sample Input 1</h2>
+<pre>
+2 3
+1 2 1
+</pre>
+<h2>Output for Sample Input 1</h2>
+<pre>
+1
+</pre>
+
+<h2>Sample Input 2</h2>
+<pre>
+2 3
+1 2 6
+</pre>
+<h2>Output for Sample Input 2</h2>
+<pre>
+1
+</pre>
+-->
+
+<h2>Sample Input </h2>
+<pre>
+2 3
+1 2 1
+2 3
+1 2 6
+0 0
+</pre>
+
+<h2>Output for Sample Input </h2>
+<pre>
+1
+1
+</pre>

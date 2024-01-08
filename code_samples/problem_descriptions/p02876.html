@@ -1,0 +1,117 @@
+<span class="lang-en">
+<p>Score : <var>1100</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>We have <var>N</var> balance beams numbered <var>1</var> to <var>N</var>.
+The length of each beam is <var>1</var> meters.
+Snuke walks on Beam <var>i</var> at a speed of <var>1/A_i</var> meters per second, and Ringo walks on Beam <var>i</var> at a speed of <var>1/B_i</var> meters per second.</p>
+<p>Snuke and Ringo will play the following game:</p>
+<ul>
+<li>First, Snuke connects the <var>N</var> beams in any order of his choice and makes a long beam of length <var>N</var> meters.</li>
+<li>Then, Snuke starts at the left end of the long beam. At the same time, Ringo starts at a point chosen uniformly at random on the long beam. Both of them walk to the right end of the long beam.</li>
+<li>Snuke wins if and only if he catches up to Ringo before Ringo reaches the right end of the long beam. That is, Snuke wins if there is a moment when Snuke and Ringo stand at the same position, and Ringo wins otherwise.</li>
+</ul>
+<p>Find the probability that Snuke wins when Snuke arranges the <var>N</var> beams so that the probability of his winning is maximized.</p>
+<p>This probability is a rational number, so we ask you to represent it as an irreducible fraction <var>P/Q</var> (to represent <var>0</var>, use <var>P=0, Q=1</var>).</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 \leq N \leq 10^5</var></li>
+<li><var>1 \leq A_i,B_i \leq 10^9</var></li>
+<li>All values in input are integers.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+<var>A_1</var> <var>B_1</var>
+<var>A_2</var> <var>B_2</var>
+<var>\vdots</var>
+<var>A_N</var> <var>B_N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the numerator and denominator of the irreducible fraction that represents the maximum probability of Snuke's winning.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>2
+3 2
+1 2
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>1 4
+</pre>
+<p>When the beams are connected in the order <var>2,1</var> from left to right, the probability of Snuke's winning is <var>1/4</var>, which is the maximum possible value.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>4
+1 5
+4 7
+2 1
+8 4
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>1 2
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>3
+4 1
+5 2
+6 3
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>0 1
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 4</h3><pre>10
+866111664 178537096
+705445072 318106937
+472381277 579910117
+353498483 865935868
+383133839 231371336
+378371075 681212831
+304570952 16537461
+955719384 267238505
+844917655 218662351
+550309930 62731178
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 4</h3><pre>697461712 2899550585
+</pre></section>
+</div>
+</span>

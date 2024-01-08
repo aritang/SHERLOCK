@@ -1,0 +1,205 @@
+
+<!-- begin en only -->
+<h1><font color="#000000">Problem G:</font>  Laser Beam Reflections</h1>
+<!-- end en only -->
+
+
+
+<!-- begin en only -->
+<p>
+A laser beam generator, a target object and some mirrors are 
+placed on a plane.
+The mirrors stand upright on the plane,
+and both sides of the mirrors are flat and can reflect beams.
+To point the beam at the target,
+you may set the beam to several directions because of different reflections.
+Your job is to find the shortest beam path
+from the generator to the target and answer the length of the path.
+</p>
+<!-- end en only -->
+
+<!-- begin en only -->
+<p>
+Figure G-1 shows examples of possible beam paths,
+where the bold line represents the shortest one.
+</p>
+<!-- end en only -->
+
+<center>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_D2010_G-0" align="center"><br><br>
+<!-- begin en only -->
+Figure G-1: Examples of possible paths
+<!-- end en only -->
+</center>
+
+
+<h3>Input</h3>
+
+
+
+<!-- begin en only -->
+<p>
+The input consists of a number of datasets. The end of the input is indicated by a line containing a zero. 
+</p>
+<!-- end en only -->
+
+
+<!-- begin en only -->
+<p>
+Each dataset is formatted as follows. 
+Each value in the dataset except <i>n</i> is an integer no less than 0 and no more than 100.
+</p>
+<!-- end en only -->
+
+<p></p>
+
+<blockquote>
+<i>n</i><br>
+<i>PX</i><sub>1</sub> <i>PY</i><sub>1</sub> <i>QX</i><sub>1</sub> <i>QY</i><sub>1</sub><br>
+...<br>
+<i>PX<sub><i>n</i></sub></i> <i>PY<sub><i>n</i></sub></i> <i>QX<sub><i>n</i></sub></i> <i>QY<sub><i>n</i></sub></i><br>
+<i>TX</i> <i>TY</i><br>
+<i>LX</i> <i>LY</i><br>
+</blockquote>
+
+<p></p>
+
+<!-- begin en only -->
+<p>
+The first line of a dataset contains an integer <i>n</i> (1 &le; <i>n</i> &le; 5),
+representing the number of mirrors.
+The following <i>n</i> lines list the arrangement of mirrors on the plane.
+The coordinates
+(<i>PX<sub>i</sub></i>, <i>PY<sub>i</sub></i>) and 
+(<i>QX<sub>i</sub></i>, <i>QY<sub>i</sub></i>) represent
+the positions of both ends of the mirror.
+Mirrors are apart from each other.
+The last two lines represent the target position (<i>TX</i>, <i>TY</i>)
+and the position of the beam generator (<i>LX</i>, <i>LY</i>).
+The positions of the target and the generator are apart from each other,
+and these positions are also apart from mirrors.
+</p>
+<!-- end en only -->
+
+
+<!-- begin en only -->
+<p>
+The sizes of the target object and the beam generator are small enough to be ignored.
+You can also ignore the thicknesses of mirrors.
+</p>
+<!-- end en only -->
+
+<!-- begin en only -->
+<p>
+In addition, you can assume the following conditions on the given datasets.
+<ul>
+<li>There is at least one possible path from the beam generator to the target.
+</li>
+<li>The number of reflections along the shortest path is less than 6.
+</li>
+<li>
+The shortest path does not cross or touch a plane containing a mirror
+surface at any points within 0.001 unit distance from either end of the mirror.
+</li>
+<li>
+Even if the beam could arbitrarily select reflection or passage 
+when it reaches each plane containing a mirror surface
+at a point within 0.001 unit distance from one of the mirror ends,
+any paths from the generator to the target would not be 
+shorter than the shortest path.
+</li>
+<li>
+When the beam is shot from the generator in an arbitrary direction and 
+it reflects on a mirror or passes the mirror within 0.001 unit distance from the mirror,
+the angle <i>&theta;</i> formed by the beam and the mirror 
+satisfies sin(<i>&theta;</i>) > 0.1, 
+until the beam reaches the 6th reflection point (exclusive).
+</li>
+</ul>
+</p>
+<!-- end en only -->
+
+ <!-- begin en only -->
+<p>
+Figure G-1 corresponds to the first dataset of the Sample Input below.
+Figure G-2 shows the shortest paths for the subsequent datasets of the Sample Input.
+</p>
+<!-- end en only -->
+
+<center>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_D2010_G-2" align="center"><br><br>
+<!-- begin en only -->
+Figure G-2: Examples of the shortest paths 
+<!-- end en only -->
+</center>
+
+
+<h3>Output</h3>
+
+<!-- begin en only -->
+<p>
+For each dataset, output a single line containing the length of the shortest path from
+the beam generator to the target.
+The value should not have an error greater than 0.001.
+No extra characters should appear in the output.
+</p>
+<!-- end en only -->
+
+
+<h3>Sample Input</h3>
+
+
+<pre>
+2
+30 10 30 75
+60 30 60 95
+90 0
+0 100
+1
+20 81 90 90
+10 90
+90 10
+2
+10 0 10 58
+20 20 20 58
+0 70
+30 0
+4
+8 0 8 60
+16 16 16 48
+16 10 28 30
+16 52 28 34
+24 0
+24 64
+5
+8 0 8 60
+16 16 16 48
+16 10 28 30
+16 52 28 34
+100 0 100 50
+24 0
+24 64
+0
+</pre>
+
+
+<h3>Output for the Sample Input</h3>
+
+<pre>
+180.27756377319946
+113.13708498984761
+98.99494936611666
+90.50966799187809
+90.50966799187809
+</pre>
+
+
+
+
+
+
+
+
+
+
+

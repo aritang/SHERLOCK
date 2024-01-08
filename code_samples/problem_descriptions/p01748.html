@@ -1,0 +1,109 @@
+
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({ tex2jax: { inlineMath: [["$","$"], ["\\(","\\)"]], processEscapes: true }});
+</script>
+<script language="JavaScript" type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+
+
+<p>
+<var>n</var> 個の都市と <var>n &minus; 1</var> 本の道路があり，木になっている．都市には 1 から <var>n</var> までの番号がつけられている．都市 1 を根とみたとき，都市 <var>i</var> の親は <var>p<sub>i</sub></var> であり，<var>i</var> と <var>p<sub>i</sub></var> の距離は <var>d<sub>i</sub></var> である．すぬけ君は，1 以上 <var>n</var> 以下の各 <var>k</var> に対し，次の問題を解きたい．
+</p>
+<p>
+ある都市から都市 1, . . . . , <var>k</var> への距離の和の最小値
+
+\begin{eqnarray}
+min_{1 \leq v \leq n} \{ \sum^k_{i=1} dist(i, v)\}  \;\;\;\;\;\;\;\;\;\;\;\;\;\;(2)
+\end{eqnarray}
+
+<p>
+を求めよ．ただし <var>dist(u, v)</var> は <var>u</var> と <var>v</var> の距離をあらわす．
+</p>
+
+<h2>Constraints</h2>
+<ul>
+<li> 1 &le; <var>n</var> &le; 200000 </li>
+<li> 1 &le; <var>p<sub>i</sub></var> &le; <var>n</var> </li>
+<li> 1 &le; <var>d<sub>i</sub></var> &le; 200000 </li>
+<li> <var>p<sub>i</sub></var> によって表されるグラフは木になっている </li>
+<li> 入力は全て整数である </li>
+</ul>
+
+<h2>Input</h2>
+<pre>
+<var>n</var>
+<var>p<sub>2</sub></var> <var>d<sub>2</sub></var>
+. . .
+<var>p<sub>n</sub></var> <var>d<sub>n</sub></var>
+</pre>
+
+<h2>Output</h2>
+<p>
+<var>n</var> 行出力せよ．<var>i</var> 行目には，<var>k = i</var> のときの答えを出力せよ．
+</p>
+
+<h2>Sample Input 1</h2>
+<pre>
+10
+4 1
+1 1
+3 1
+3 1
+5 1
+6 1
+6 1
+8 1
+4 1
+</pre>
+
+<h2>Sample Output 1</h2>
+<pre>
+0
+3
+3
+4
+5
+7
+10
+13
+16
+19
+</pre>
+
+<h2>Sample Input 2</h2>
+<pre>
+15
+1 3
+12 5
+5 2
+12 1
+7 5
+5 1
+6 1
+12 1
+11 1
+12 4
+1 1
+5 5
+10 4
+1 2
+</pre>
+
+<h2>Sample Output 2</h2>
+<pre>
+0
+3
+9
+13
+14
+21
+22
+29
+31
+37
+41
+41
+47
+56
+59
+</pre>

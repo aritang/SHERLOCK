@@ -1,0 +1,124 @@
+
+
+
+<h1>壁</h1>
+
+<p>
+２XXX年、突然出現した天敵の侵入を防ぐために、人類は壁を作りその中に逃げ込んだ。その結果、人類の活動領域はその壁で囲まれた範囲に限定されてしまった。この領域は、上空から見ると <var>W</var> &times <var>H</var> の長方形である。領域内部には <var>x</var> 軸あるいは <var>y</var> 軸に対して平行な壁がいくつか設置されている。活動領域の例を下図に示す。
+</p>
+
+<center>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_PCK2013_wall1" width="360">
+</center>
+<br>
+
+<p>
+人類は活動領域内を自由に移動することができるが、壁を越えるためには一定量の資源を消費しなければならない。ただし、壁を越えることはできるが（図中の (1)）、壁の交点を越えること (2)、壁や活動領域の境界の上を移動すること (3)、活動領域外に出ること (4) はできない。
+</p>
+
+<center>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_PCK2013_wall2" width="640">
+</center>
+<br>
+
+<p>
+領域内部の壁の情報といくつかの始点と終点の組を入力し、始点から終点へ移動するために越えなければならない壁の数の最小値を計算するプログラムを作成しなさい。ただし、壁は幅のない線分とします。
+</p>
+
+<h2>入力</h2>
+<p>
+入力は１つのデータセットからなる。入力データは以下の形式で与えられる。
+</p>
+
+<pre>
+<var>W</var> <var>H</var> <var>M</var>
+<var>px</var><sub>1</sub> <var>py</var><sub>1</sub> <var>qx</var><sub>1</sub> <var>qy</var><sub>1</sub>
+<var>px</var><sub>2</sub> <var>py</var><sub>2</sub> <var>qx</var><sub>2</sub> <var>qy</var><sub>2</sub>
+:
+<var>px<sub>M</sub></var> <var>py<sub>M</sub></var> <var>qx<sub>M</sub></var> <var>qy<sub>M</sub></var>
+<var>Q</var>
+<var>sx</var><sub>1</sub> <var>sy</var><sub>1</sub> <var>gx</var><sub>1</sub> <var>gy</var><sub>1</sub>
+<var>sx</var><sub>2</sub> <var>sy</var><sub>2</sub> <var>gx</var><sub>2</sub> <var>gy</var><sub>2</sub>
+:
+<var>sx<sub>Q</sub></var> <var>sy<sub>Q</sub></var> <var>gx<sub>Q</sub></var> <var>gy<sub>Q</sub></var>
+</pre>
+
+<p>
+1行目に領域の横の長さと縦の長さを表す整数 <var>W</var>, <var>H</var> (2 &le; <var>W,H</var> &le; 1,000,000,000) と壁の数 <var>M</var> (0 &le; <var>M</var> &le; 100) が与えられる。
+</p>
+
+<p>
+続く <var>M</var> 行に壁を表す線分の情報が与えられる。各行に与えられる４つの整数 <var>px<sub>i</sub></var>, <var>py<sub>i</sub></var>, <var>qx<sub>i</sub></var>, <var>qy<sub>i</sub></var> (0 &le; <var>px<sub>i</sub></var>, <var>qx<sub>i</sub></var> &le; <var>W</var>, 0 &le; <var>py<sub>i</sub></var>, <var>qy<sub>i</sub></var> &le; <var>H</var>) はそれぞれ <var>i</var> 番目の線分の端点の <var>x</var> 座標、<var>y</var> 座標、もうひとつの端点の <var>x</var> 座標、<var>y</var> 座標を表す。
+</p>
+
+<p>
+続く1行に質問の数 <var>Q</var> (1 &le; <var>Q</var> &le; 100) が与えられる。続く <var>Q</var> 行に各質問が与えられる。各質問に含まれる４つの整数 <var>sx<sub>i</sub></var>, <var>sy<sub>i</sub></var>, <var>gx<sub>i</sub></var>, <var>gy<sub>i</sub></var> (0 &lt; <var>sx<sub>i</sub></var>, <var>gx<sub>i</sub></var> &lt; <var>W</var>, 0 &lt; <var>sy<sub>i</sub></var>, <var>gy<sub>i</sub></var> &lt; <var>H</var>) はそれぞれ始点の <var>x</var> 座標、<var>y</var> 座標、終点の <var>x</var> 座標、<var>y</var> 座標を表す。
+</p>
+
+<p>入力は以下の条件を満たす。</p>
+<ul>
+<li> 各線分は <var>x</var> 軸あるいは <var>y</var> 軸に対して平行であり、長さは1以上である。</li>
+<li> ２つの互いに平行な線分が同じ点あるいは線分を共有することはない。</li>
+<li> スタート地点、ゴール地点は壁上にあることはない。</li>
+<li> どの線分も活動領域の境界と線分を共有することはない。</li>
+</ul>
+
+<h2>出力</h2>
+<p>
+質問ごとに、壁を越える回数の最小値を出力する。
+</p>
+
+<h2>入出力例</h2>
+<br>
+<h2>入力例 1</h2>
+<pre>
+5 6 5
+0 2 5 2
+0 3 5 3
+0 4 3 4
+1 4 1 6
+3 0 3 6
+2
+2 5 4 1
+2 5 4 5
+</pre>
+
+<h2>出力例 1</h2>
+<pre>
+3
+1
+</pre>
+
+<h2>入力例 2</h2>
+<pre>
+4 4 0
+1
+1 1 2 2
+</pre>
+
+<h2>出力例 2</h2>
+<pre>
+0
+</pre>
+
+<h2>入力例 3</h2>
+<pre>
+4 7 3
+0 2 2 2
+3 3 4 3
+0 5 4 5
+3
+1 1 1 3
+1 1 1 4
+1 1 1 6
+</pre>
+
+<h2>出力例 3</h2>
+<pre>
+0
+0
+1
+</pre>
+
+
+

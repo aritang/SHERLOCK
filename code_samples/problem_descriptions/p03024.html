@@ -1,0 +1,63 @@
+<span class="lang-en">
+<p>Score : <var>200</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>Takahashi is competing in a sumo tournament.
+The tournament lasts for <var>15</var> days, during which he performs in one match per day.
+If he wins <var>8</var> or more matches, he can also participate in the next tournament.</p>
+<p>The matches for the first <var>k</var> days have finished.
+You are given the results of Takahashi's matches as a string <var>S</var> consisting of <code>o</code> and <code>x</code>.
+If the <var>i</var>-th character in <var>S</var> is <code>o</code>, it means that Takahashi won the match on the <var>i</var>-th day; if that character is <code>x</code>, it means that Takahashi lost the match on the <var>i</var>-th day.</p>
+<p>Print <code>YES</code> if there is a possibility that Takahashi can participate in the next tournament, and print <code>NO</code> if there is no such possibility.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 \leq k \leq 15</var></li>
+<li><var>S</var> is a string of length <var>k</var> consisting of <code>o</code> and <code>x</code>.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>S</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print <code>YES</code> if there is a possibility that Takahashi can participate in the next tournament, and print <code>NO</code> otherwise.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>oxoxoxoxoxoxox
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>YES
+</pre>
+<p>Takahashi has <var>7</var> wins and <var>7</var> losses before the last match. If he wins that match, he will have <var>8</var> wins.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>xxxxxxxx
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>NO
+</pre></section>
+</div>
+</span>

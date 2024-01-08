@@ -1,0 +1,73 @@
+
+
+
+<h2>I - ツインリバース</h2>
+
+<p>要素数 <var>N</var> の配列 <var>A</var> が与えられる。ただし、<var>A</var> は <var>(1, 2,</var> ... <var>, N)</var> の順列である。</p>
+<p>次の操作を <var>0</var> 回以上 <var>10,000</var> 回以下の任意の回数行い、<var>A</var> を <var>(1, 2,</var> ...<var>, N)</var> へソートしたい。</p>
+<ul>
+<li>整数 <var>i</var> (<var>1 &le; i &le; N</var>) を <var>1</var> つ選び、区間 <var>A[1,\ i-1]</var> の要素を逆順にし、区間 <var>A[i+1,\ N]</var> の要素を逆順にする。</li>
+</ul>
+<p>ただし、区間 <var>A[l,\ r]</var> とは <var>A</var> の <var>l, l+1,</var> ...<var>, r </var> 番目の位置のことである。</p>
+<p><var>A</var> を <var>(1, 2,</var> ...<var>, N)</var> へソートできるか判定せよ。ソートできるならば、操作の例を一つ出力せよ。</p>
+
+<h3>Constraints</h3>
+<ul>
+<li><var>1 &le; N &le; 3,000</var></li>
+<li><var>A</var> は <var>(1, 2,</var> ... <var>, N)</var> の順列である。</li>
+</ul>
+
+<h3>Input Format</h3>
+<p>入力は以下の形式で標準入力から与えられる。</p>
+<pre>
+<var>N</var>
+<var>A_1</var> <var>A_2</var> ... <var>A_N</var>
+</pre>
+
+<h3>Output Format</h3>
+<p><var>A</var> を <var>(1, 2,</var> ...<var>, N)</var> へソートできないならば、<code>-1</code> とだけ一行に出力せよ。</p>
+<p>ソートできるならば、操作の例を一つ次のように出力せよ。</p>
+<ul>
+<li><var>1</var> 行目には、操作の回数を表す整数 <var>M</var> (<var>0 &le; M &le; 10,000</var>) を出力せよ。</li>
+<li><var>2</var> 行目からの <var>M</var> 行のうち <var>k</var> 行目には、<var>k</var> 回目の操作で選ぶ整数 <var>i</var> (<var>1 &le; i &le;  N</var>) を出力せよ。</li>
+</ul>
+
+<h3>Sample Input 1</h3>
+<pre>
+5
+5 1 4 2 3
+</pre>
+
+<h3>Sample Output 1</h3>
+<pre>
+2
+3
+1
+</pre>
+<p>例えば、次のように <var>2</var> 回の操作を行えばよい。</p>
+<ul>
+<li><var>i=3</var> を選ぶと <var>(5,\ 1,\ 4,\ 2,\ 3)</var> → <var>(1,\ 5,\ 4,\ 3,\ 2)</var></li>
+<li><var>i=1</var> を選ぶと <var>(1,\ 5,\ 4,\ 3,\ 2)</var> → <var>(1,\ 2,\ 3,\ 4,\ 5)</var></li>
+</ul>
+
+<h3>Sample Input 2</h3>
+<pre>
+2
+2 1
+</pre>
+
+<h3>Sample Output 2</h3>
+<pre>
+-1
+</pre>
+
+<h3>Sample Input 3</h3>
+<pre>
+3
+1 2 3
+</pre>
+
+<h3>Sample Output 3</h3>
+<pre>
+0
+</pre>

@@ -1,0 +1,81 @@
+<span class="lang-en">
+<p>Score : <var>400</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3>
+<p>One day, Niwango-kun, an employee of Dwango Co., Ltd., found an integer sequence <var>(a_1, ..., a_N)</var> of length <var>N</var>.
+He is interested in properties of the sequence <var>a</var>.</p>
+<p>For a nonempty contiguous subsequence <var>a_l, ..., a_r</var> <var>(1 \leq l \leq r \leq N)</var> of the sequence <var>a</var>, its <em>beauty</em> is defined as <var>a_l + ... + a_r</var>. Niwango-kun wants to know the maximum possible value of the bitwise AND of the beauties of <var>K</var> nonempty contiguous subsequences among all <var>N(N+1)/2</var> nonempty contiguous subsequences. (Subsequences may share elements.)</p>
+<p>Find the maximum possible value for him.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3>
+<ul>
+<li><var>2 \leq N \leq 1000</var></li>
+<li><var>1 \leq a_i \leq 10^9</var></li>
+<li><var>1 \leq K \leq N(N+1)/2</var></li>
+<li>All numbers given in input are integers</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3>
+<p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var> <var>K</var>
+<var>a_1</var> <var>a_2</var> <var>...</var> <var>a_N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the answer.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3>
+<pre>4 2
+2 5 2 5
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3>
+<pre>12
+</pre>
+<p>There are <var>10</var> nonempty contiguous subsequences of <var>a</var>. Let us enumerate them:</p>
+<ul>
+<li>contiguous subsequences starting from the first element: <var>\{2\}, \{2, 5\}, \{2, 5, 2\}, \{2, 5, 2, 5\}</var></li>
+<li>contiguous subsequences starting from the second element: <var>\{5\}, \{5, 2\}, \{5, 2, 5\}</var></li>
+<li>contiguous subsequences starting from the third element: <var>\{2\}, \{2, 5\}</var></li>
+<li>contiguous subsequences starting from the fourth element: <var>\{5\}</var></li>
+</ul>
+<p>(Note that even if the elements of subsequences are equal, subsequences that have different starting indices are considered to be different.)</p>
+<p>The maximum possible bitwise AND of the beauties of two different contiguous subsequences is <var>12</var>.
+This can be achieved by choosing <var>\{5, 2, 5\}</var> (with beauty <var>12</var>) and <var>\{2, 5, 2, 5\}</var> (with beauty <var>14</var>).</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3>
+<pre>8 4
+9 1 8 2 7 5 6 4
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3>
+<pre>32
+</pre></section>
+</div>
+</span>

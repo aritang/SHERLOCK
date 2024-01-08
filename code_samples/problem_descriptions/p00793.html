@@ -1,0 +1,60 @@
+
+<H1><font color="#000">Problem F:</font> Heavenly Jewels</H1>
+
+<p>
+There is a flat island whose shape is a perfect square. On this island, there are three habitants whose names are IC, PC, and ACM Every day, one jewel is dropped from the heaven. Just as the jewel touches the ground, IC, PC, and ACM leave their houses simultaneously, run with the same speed, and then a person who first touched the jewel can get the jewel. Hence, the person whose house is nearest to the location of the jewel is the winner of that day.
+</p>
+
+<p>
+They always have a quarrel with each other, and therefore their houses are located at distinct places. The locations of their houses are fixed. This jewel falls at a random point on the island, that is, all points on the island have even chance.
+</p>
+
+<p>
+When three are two or more persons whose houses are simultaneously nearest, the last person in the order of
+</p>
+
+<p>
+IC, PC, ACM
+</p>
+
+<p>
+obtains the jewel.
+</p>
+
+<p>
+Our interest is to know the probability for IC to get the jewel under this situation.
+</p>
+
+<H2>Input</H2>
+
+<p>
+The input describes one problem instance per line. Each line contains the <i>x</i>- and <i>y</i>-coordinates of IC's home, those of PC's, and those of ACM's in this order. Note that the houses of IC, PC and ACM are located at distinct places. The end of the input is indicated by a line with six zeros.
+</p>
+
+<p>
+The coordinates of the whole island are given by (0, 10000) &times; (0, 10000) and coordinates of houses are given in integer numbers between 1 and 9999, inclusive. It should be noted that the locations of the jewels are arbitrary places on the island and their coordinate values are not necessarily integers.
+</p>
+
+<H2>Output</H2>
+
+<p>
+For each input line, your program should output its sequence number starting from 1, and the probability for the instance. The computed probability values should have errors less than 10<sup>-5</sub>.
+</p>
+
+<p>
+The sequence number and the probability should be printed on the same line. The two numbers should be separated by a space.
+</p>
+
+<H2>Sample Input</H2>
+<pre>
+2000 2000 8000 8000 9000 9500
+2500 2500 7500 2500 2500 7500
+0 0 0 0 0 0
+</pre>
+
+<H2>Output for the Sample Input</H2>
+<pre>
+1 0.50000
+2 0.25000
+</pre>
+

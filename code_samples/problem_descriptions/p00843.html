@@ -1,0 +1,127 @@
+
+<H1><font color="#000">Problem H:</font> Bingo</H1>
+
+<p>
+A Bingo game is played by one gamemaster and several players. At the beginning of a game,
+each player is given a card with <i>M</i> &times; <i>M</i> numbers in a matrix (See Figure 10).
+</p>
+
+<center>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE1_bingo1">
+</center>
+
+<p>
+As the game proceeds, the gamemaster announces a series of numbers one by one. Each player
+punches a hole in his card on the announced number, if any.
+</p>
+<p>
+When at least one 'Bingo' is made on the card, the player wins and leaves the game. The 'Bingo'
+means that all the <i>M</i> numbers in a line are punched vertically, horizontally or diagonally (See
+Figure 11).
+</p>
+
+<center>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE1_bingo2">
+</center>
+
+<p>
+The gamemaster continues announcing numbers until all the players make a Bingo.
+</p>
+<p>
+In the ordinary Bingo games, the gamemaster chooses numbers by a random process and has no
+control on them. But in this problem the gamemaster knows all the cards at the beginning of
+the game and controls the game by choosing the number sequence to be announced at his will.
+</p>
+<p>
+Specifically, he controls the game to satisfy the following condition.
+</p>
+
+<p>
+Card<sub><i>i</i></sub> makes a Bingo no later than Card<sub><i>j</i></sub>, for <i>i</i> &lt; <i>j</i>. (*)
+</p>
+<p>
+Figure 12 shows an example of how a game proceeds. The gamemaster cannot announce '5'
+before '16', because Card<sub>4</sub> makes a Bingo before Card<sub>2</sub> and Card<sub>3</sub>, violating the condition (*).
+</p>
+<p>
+Your job is to write a program which finds the minimum length of such sequence of numbers for
+the given cards.
+</p>
+
+
+<H2>Input</H2>
+
+<p>
+The input consists of multiple datasets. The format of each dataset is as follows.
+</p>
+
+<center>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE1_bingo3">
+</center>
+
+<p>
+All data items are integers. <i>P</i> is the number of the cards, namely the number of the players. <i>M</i> is the number of rows and the number of columns of the matrix on each card. <i>N<sup>k</sup><sub>ij</sub></i> means the number written at the position (<i>i</i>, <i>j</i>) on the <i>k</i>-th card. If (<i>i</i>, <i>j</i>) &ne; (<i>p</i>, <i>q</i>), then <i>N<sup>k</sup><sub>ij</sub></i> &ne; <i>N<sup>k</sup><sub>pq</sub></i>. The parameters <i>P</i>, <i>M</i>, and <i>N</i> satisfy the conditions 2 &le; <i>P</i> &le; 4, 3 &le; <i>M</i> &le; 4, and 0 &le; <i>N<sup>k</sup><sub>ij</sub></i> &le; 99.
+
+</p>
+<p>
+The end of the input is indicated by a line containing two zeros separated by a space. It is not
+a dataset.
+</p>
+
+
+<H2>Output</H2>
+
+<p>
+For each dataset, output the minimum length of the sequence of numbers which satisfy the
+condition (*). Output a zero if there are no such sequences. Output for each dataset must be
+printed on a separate line.
+
+</p>
+
+<H2>Sample Input</H2>
+<pre>
+4 3
+10 25 11 20 6 2 1 15 23
+5 21 3 12 23 17 7 26 2
+8 18 4 22 13 27 16 5 11
+19 9 24 2 11 5 14 28 16
+4 3
+12 13 20 24 28 32 15 16 17
+12 13 21 25 29 33 16 17 18
+12 13 22 26 30 34 17 18 15
+12 13 23 27 31 35 18 15 16
+4 3
+11 12 13 14 15 16 17 18 19
+21 22 23 24 25 26 27 28 29
+31 32 33 34 35 36 37 38 39
+41 42 43 44 45 46 47 48 49
+4 4
+2 6 9 21 15 23 17 31 33 12 25 4 8 24 13 36
+22 18 27 26 35 28 3 7 11 20 38 16 5 32 14 29
+26 7 16 29 27 3 38 14 18 28 20 32 22 35 11 5
+36 13 24 8 4 25 12 33 31 17 23 15 21 9 6 2
+0 0
+</pre>
+
+<H2>Output for the Sample Input</H2>
+<pre>
+5
+4
+12
+0
+</pre>
+
+<p>
+For your convenience, sequences satisfying the condition (*) for the first three datasets are shown
+below. There may be other sequences of the same length satisfying the condition, but no shorter.
+</p>
+
+<pre>
+11, 2, 23, 16, 5
+15, 16, 17, 18
+11, 12, 13, 21, 22, 23, 31, 32, 33, 41, 42, 43
+</pre>
+
+
+
+

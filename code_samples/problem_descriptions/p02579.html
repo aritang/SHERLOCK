@@ -1,0 +1,127 @@
+<span class="lang-en">
+<p>Score : <var>400</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>A maze is composed of a grid of <var>H \times W</var> squares - <var>H</var> vertical, <var>W</var> horizontal.</p>
+<p>The square at the <var>i</var>-th row from the top and the <var>j</var>-th column from the left - <var>(i,j)</var> - is a wall if <var>S_{ij}</var> is <code>#</code> and a road if <var>S_{ij}</var> is <code>.</code>.</p>
+<p>There is a magician in <var>(C_h,C_w)</var>. He can do the following two kinds of moves:</p>
+<ul>
+<li>Move A: Walk to a road square that is vertically or horizontally adjacent to the square he is currently in.</li>
+<li>Move B: Use magic to warp himself to a road square in the <var>5\times 5</var> area centered at the square he is currently in.</li>
+</ul>
+<p>In either case, he cannot go out of the maze.</p>
+<p>At least how many times does he need to use the magic to reach <var>(D_h, D_w)</var>?</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 \leq H,W \leq 10^3</var></li>
+<li><var>1 \leq C_h,D_h \leq H</var></li>
+<li><var>1 \leq C_w,D_w \leq W</var></li>
+<li><var>S_{ij}</var> is <code>#</code> or <code>.</code>.</li>
+<li><var>S_{C_h C_w}</var> and <var>S_{D_h D_w}</var> are <code>.</code>.</li>
+<li><var>(C_h,C_w) \neq (D_h,D_w)</var></li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>H</var> <var>W</var>
+<var>C_h</var> <var>C_w</var>
+<var>D_h</var> <var>D_w</var>
+<var>S_{11}\ldots S_{1W}</var>
+<var>\vdots</var>
+<var>S_{H1}\ldots S_{HW}</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the minimum number of times the magician needs to use the magic. If he cannot reach <var>(D_h,D_w)</var>, print <code>-1</code> instead.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>4 4
+1 1
+4 4
+..#.
+..#.
+.#..
+.#..
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>1
+</pre>
+<p>For example, by walking to <var>(2,2)</var> and then using the magic to travel to <var>(4,4)</var>, just one use of magic is enough.</p>
+<p>Note that he cannot walk diagonally.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>4 4
+1 4
+4 1
+.##.
+####
+####
+.##.
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>-1
+</pre>
+<p>He cannot move from there.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>4 4
+2 2
+3 3
+....
+....
+....
+....
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>0
+</pre>
+<p>No use of magic is needed.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 4</h3><pre>4 5
+1 2
+2 5
+#.###
+####.
+#..##
+#..##
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 4</h3><pre>2
+</pre></section>
+</div>
+</span>

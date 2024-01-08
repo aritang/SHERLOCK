@@ -1,0 +1,93 @@
+<span class="lang-en">
+<p>Score : <var>300</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>Takahashi participated in a contest on AtCoder.</p>
+<p>The contest had <var>N</var> problems.</p>
+<p>Takahashi made <var>M</var> submissions during the contest.</p>
+<p>The <var>i</var>-th submission was made for the <var>p_i</var>-th problem and received the verdict <var>S_i</var> (<code>AC</code> or <code>WA</code>).</p>
+<p>The number of Takahashi's correct answers is the number of problems on which he received an <code>AC</code> once or more.</p>
+<p>The number of Takahashi's penalties is the sum of the following count for the problems on which he received an <code>AC</code> once or more: the number of <code>WA</code>s received before receiving an <code>AC</code> for the first time on that problem.</p>
+<p>Find the numbers of Takahashi's correct answers and penalties.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>N</var>, <var>M</var>, and <var>p_i</var> are integers.</li>
+<li><var>1 \leq N \leq 10^5</var></li>
+<li><var>0 \leq M \leq 10^5</var></li>
+<li><var>1 \leq p_i \leq N</var></li>
+<li><var>S_i</var> is <code>AC</code> or <code>WA</code>.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var> <var>M</var>
+<var>p_1</var> <var>S_1</var>
+<var>:</var>
+<var>p_M</var> <var>S_M</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the number of Takahashi's correct answers and the number of Takahashi's penalties.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>2 5
+1 WA
+1 AC
+2 WA
+2 AC
+2 WA
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>2 2
+</pre>
+<p>In his second submission, he received an <code>AC</code> on the first problem for the first time. Before this, he received one <code>WA</code> on this problem.</p>
+<p>In his fourth submission, he received an <code>AC</code> on the second problem for the first time. Before this, he received one <code>WA</code> on this problem.</p>
+<p>Thus, he has two correct answers and two penalties.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>100000 3
+7777 AC
+7777 AC
+7777 AC
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>1 0
+</pre>
+<p>Note that it is pointless to get an <code>AC</code> more than once on the same problem.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>6 0
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>0 0
+</pre></section>
+</div>
+</span>

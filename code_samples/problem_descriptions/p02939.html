@@ -1,0 +1,61 @@
+<span class="lang-en">
+<p>Score : <var>300</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>Given is a string <var>S</var> consisting of lowercase English letters. Find the maximum positive integer <var>K</var> that satisfies the following condition:</p>
+<ul>
+<li>There exists a partition of <var>S</var> into <var>K</var> non-empty strings <var>S=S_1S_2...S_K</var> such that <var>S_i \neq S_{i+1}</var> (<var>1 \leq i \leq K-1</var>).</li>
+</ul>
+<p>Here <var>S_1S_2...S_K</var> represents the concatenation of <var>S_1,S_2,...,S_K</var> in this order.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 \leq |S| \leq 2 \times 10^5</var></li>
+<li><var>S</var> consists of lowercase English letters.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>S</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the maximum positive integer <var>K</var> that satisfies the condition.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>aabbaa
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>4
+</pre>
+<p>We can, for example, divide <var>S</var> into four strings <code>aa</code>, <code>b</code>, <code>ba</code>, and <code>a</code>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>aaaccacabaababc
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>12
+</pre></section>
+</div>
+</span>

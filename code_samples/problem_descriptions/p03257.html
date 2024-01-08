@@ -1,0 +1,56 @@
+<span class="lang-en">
+<p>Score : <var>1100</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>You are given an integer <var>N</var>.</p>
+<p>Construct any one <var>N</var>-by-<var>N</var> matrix <var>a</var> that satisfies the conditions below. It can be proved that a solution always exists under the constraints of this problem.</p>
+<ul>
+<li><var>1 \leq a_{i,j} \leq 10^{15}</var></li>
+<li><var>a_{i,j}</var> are pairwise distinct integers.</li>
+<li>There exists a positive integer <var>m</var> such that the following holds: Let <var>x</var> and <var>y</var> be two elements of the matrix that are vertically or horizontally adjacent. Then, <var>{\rm max}(x,y)</var> <var>{\rm mod}</var> <var>{\rm min}(x,y)</var> is always <var>m</var>.</li>
+</ul>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>2 \leq N \leq 500</var></li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print your solution in the following format:</p>
+<pre><var>a_{1,1}</var> <var>...</var> <var>a_{1,N}</var>
+<var>:</var>
+<var>a_{N,1}</var> <var>...</var> <var>a_{N,N}</var>
+</pre>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>2
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>4 7
+23 10
+</pre>
+<ul>
+<li>For any two elements <var>x</var> and <var>y</var> that are vertically or horizontally adjacent, <var>{\rm max}(x,y)</var> <var>{\rm mod}</var> <var>{\rm min}(x,y)</var> is always <var>3</var>.</li>
+</ul></section>
+</div>
+</span>

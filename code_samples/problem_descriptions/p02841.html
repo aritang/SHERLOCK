@@ -1,0 +1,68 @@
+<span class="lang-en">
+<p>Score: <var>100</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3>
+<p>In this problem, a date is written as Y-M-D. For example, <var>2019</var>-<var>11</var>-<var>30</var> means November <var>30</var>, <var>2019</var>.</p>
+<p>Integers <var>M_1, D_1, M_2</var>, and <var>D_2</var> will be given as input.<br/>
+It is known that the date <var>2019</var>-<var>M_2</var>-<var>D_2</var> follows <var>2019</var>-<var>M_1</var>-<var>D_1</var>.<br/>
+Determine whether the date <var>2019</var>-<var>M_1</var>-<var>D_1</var> is the last day of a month.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3>
+<ul>
+<li>Both <var>2019</var>-<var>M_1</var>-<var>D_1</var> and <var>2019</var>-<var>M_2</var>-<var>D_2</var> are valid dates in the Gregorian calendar.</li>
+<li>The date <var>2019</var>-<var>M_2</var>-<var>D_2</var> follows <var>2019</var>-<var>M_1</var>-<var>D_1</var>.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3>
+<p>Input is given from Standard Input in the following format:</p>
+<pre><var>M_1</var> <var>D_1</var>
+<var>M_2</var> <var>D_2</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3>
+<p>If the date <var>2019</var>-<var>M_1</var>-<var>D_1</var> is the last day of a month, print <code>1</code>; otherwise, print <code>0</code>.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>11 16
+11 17
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>0
+</pre>
+<p>November <var>16</var> is not the last day of a month.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>11 30
+12 1
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>1
+</pre>
+<p>November <var>30</var> is the last day of November.</p></section>
+</div>
+</span>

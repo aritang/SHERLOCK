@@ -1,0 +1,114 @@
+<span class="lang-en">
+<p>Score : <var>700</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>Today, Snuke will eat <var>B</var> pieces of black chocolate and <var>W</var> pieces of white chocolate for an afternoon snack.</p>
+<p>He will repeat the following procedure until there is no piece left:</p>
+<ul>
+<li>Choose black or white with equal probability, and eat a piece of that color if it exists.</li>
+</ul>
+<p>For each integer <var>i</var> from <var>1</var> to <var>B+W</var> (inclusive), find the probability that the color of the <var>i</var>-th piece to be eaten is black.
+It can be shown that these probabilities are rational, and we ask you to print them modulo <var>10^9 + 7</var>, as described in Notes.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Notes</h3><p>When you print a rational number, first write it as a fraction <var>\frac{y}{x}</var>, where <var>x, y</var> are integers and <var>x</var> is not divisible by <var>10^9 + 7</var>
+(under the constraints of the problem, such representation is always possible).
+Then, you need to print the only integer <var>z</var> between <var>0</var> and <var>10^9 + 6</var>, inclusive, that satisfies <var>xz \equiv y \pmod{10^9 + 7}</var>.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li>All values in input are integers.</li>
+<li><var>1 \leq B,W \leq 10^{5}</var></li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>B</var> <var>W</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the answers in <var>B+W</var> lines. In the <var>i</var>-th line, print the probability that the color of the <var>i</var>-th piece to be eaten is black, modulo <var>10^{9}+7</var>.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>2 1
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>500000004
+750000006
+750000006
+</pre>
+<ul>
+<li>There are three possible orders in which Snuke eats the pieces:<ul>
+<li>white, black, black</li>
+<li>black, white, black</li>
+<li>black, black, white</li>
+</ul>
+</li>
+<li>with probabilities <var>\frac{1}{2}, \frac{1}{4}, \frac{1}{4}</var>, respectively. Thus, the probabilities of eating a black piece first, second and third are <var>\frac{1}{2},\frac{3}{4}</var> and <var>\frac{3}{4}</var>, respectively.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>3 2
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>500000004
+500000004
+625000005
+187500002
+187500002
+</pre>
+<ul>
+<li>They are <var>\frac{1}{2},\frac{1}{2},\frac{5}{8},\frac{11}{16}</var> and <var>\frac{11}{16}</var>, respectively.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>6 9
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>500000004
+500000004
+500000004
+500000004
+500000004
+500000004
+929687507
+218750002
+224609377
+303710940
+633300786
+694091802
+172485353
+411682132
+411682132
+</pre></section>
+</div>
+</span>

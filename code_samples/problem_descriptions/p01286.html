@@ -1,0 +1,80 @@
+
+<H1><font color="#000">Problem D:</font> Luigi's Tavern</H1>
+
+<p>
+Luigi's Tavern is a thriving tavern in the Kingdom of Nahaila. The owner of the tavern Luigi supports to
+organize a party, because the main customers of the tavern are adventurers. Each adventurer has a job:
+hero, warrior, cleric or mage.
+</p>
+<p>
+Any party should meet the following conditions:
+</p>
+<ul>
+    <li> A party should have a hero.</li>
+    <li> The warrior and the hero in a party should get along with each other.</li>
+    <li> The cleric and the warrior in a party should get along with each other.</li>
+    <li> The mage and the cleric in a party should get along with each other.</li>
+    <li> It is recommended that a party has a warrior, a cleric, and a mage, but it is allowed that at most
+      <i>N<sub>W</sub></i>, <i>N<sub>C</sub></i> and <i>N<sub>m</sub></i> parties does not have a warrior, a cleric, and a mage respectively.</li>
+    <li> A party without a cleric should have a warrior and a mage.</li>
+</ul>
+
+<p>
+Now, the tavern has <i>H</i> heroes, <i>W</i> warriors, <i>C</i> clerics and <i>M</i> mages. Your job is to write a program to find the maximum number of parties they can form.
+</p>
+
+<H2>Input</H2>
+
+<p>
+The input consists of multiple datasets. Each dataset has the following format:
+</p>
+
+<p>
+The first line of the input contains 7 non-negative integers <i>H</i>, <i>W</i>, <i>C</i>, <i>M</i>, <i>N<sub>W</sub></i>, <i>N<sub>C</sub></i>, and <i>N<sub>M</sub></i>, each of which is less than or equals to 50. The <i>i</i>-th of the following <i>W</i> lines contains the list of heroes who will be getting along with the warrior <i>i</i>. The list begins with a non-negative integer <i>n<sub>i</sub></i> , less than or equals to <i>H</i>. Then the rest of the line should contain ni positive integers, each of which indicates the ID of a hero getting along with the warrior <i>i</i>.
+</p>
+
+<p>
+After these lists, the following <i>C</i> lines contain the lists of warriors getting along with the clerics in the same manner. The <i>j</i>-th line contains a list of warriors who will be getting along with the cleric <i>j</i>. Then the last <i>M</i> lines of the input contain the lists of clerics getting along with the mages, of course in the same
+manner. The <i>k</i>-th line contains a list of clerics who will be getting along with the mage <i>k</i>.
+</p>
+
+<p>
+The last dataset is followed by a line containing seven negative integers. This line is not a part of any dataset and should not be processed.
+</p>
+
+
+<H2>Output</H2>
+
+<p>
+For each dataset, you should output the maximum number of parties possible.
+</p>
+
+<H2>Sample Input</H2>
+<pre>
+2 1 1 1 1 1 1
+1 1
+1 1
+1 1
+1 1 1 1 0 0 0
+1 1
+1 1
+1 1
+1 0 1 0 1 0 1
+0
+1 1 0 1 0 1 0
+0
+0
+1 1 0 1 0 1 0
+1 1
+0
+-1 -1 -1 -1 -1 -1 -1
+</pre>
+
+<H2>Output for the Sample Input</H2>
+<pre>
+2
+1
+1
+0
+1
+</pre>

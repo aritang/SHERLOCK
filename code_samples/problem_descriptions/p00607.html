@@ -1,0 +1,152 @@
+
+<H1><font color="#000000">Problem C:</font> Emacs-like Editor</H1>
+
+<p>
+Emacs is a text editor which is widely used by many programmers.
+</p>
+<p>
+The advantage of Emacs is that we can move a cursor without arrow keys and the mice. For example, the cursor can be moved right, left, down, and up by pushing <span>f</span>, <span>b</span>, <span>n</span>, <span>p</span> with the Control Key respectively. In addition, cut-and-paste can be performed without the mouse.
+</p>
+
+<p>
+Your task is to write a program which simulates key operations in the Emacs-like editor. The program should read a text and print the corresponding edited text.
+</p>
+
+<p>
+The text consists of several lines and each line consists of zero or more alphabets and space characters. A line, which does not have any character, is a blank line.
+</p>
+
+<p>
+The editor has a cursor which can point out a character or the end-of-line in the corresponding line. The cursor can also point out the end-of-line in a blank line.
+</p>
+<p>
+In addition, the editor has a buffer which can hold either a string (a sequence of characters) or a linefeed.
+</p>
+
+<p>
+The editor accepts the following set of commands (If the corresponding line is a blank line, the word "the first character" should be "the end-of-line"):
+</p>
+
+<ul>
+<li>
+<span>a</span><br>
+Move the cursor to the first character of the current line.
+</li>
+
+<li>
+<span>e</span><br>
+Move the cursor to the end-of-line of the current line.
+</li>
+
+<li>
+<span>p</span><br>
+Move the cursor to the first character of the next upper line, if it exists.<br>
+If there is no line above the current line, move the cursor to the first character of the current line.
+</li>
+
+<li>
+<span>n</span><br>
+Move the cursor to the first character of the next lower line, if it exists.<br>
+If there is no line below the current line, move the cursor to the first character of the current line.
+</li>
+
+<li>
+<span>f</span><br>
+Move the cursor by one character to the right, unless the cursor points out the end-of-line.<br>
+If the cursor points out the end-of-line and there is a line below the current line, move the cursor to the first character of the next lower line. Otherwise, do nothing.
+</li>
+
+<li>
+<span>b</span><br>
+Move the cursor by one character to the left, unless the cursor points out the first character.<br>
+If the cursor points out the first character and there is a line above the current line, move the cursor to the end-of-line of the next upper line. Otherwise, do nothing.
+</li>
+
+<li>
+<span>d</span><br>
+If the cursor points out a character, delete the character (Characters and end-of-line next to the deleted character are shifted to the left).<br>
+If the cursor points out the end-of-line and there is a line below, the next lower line is appended to the end-of-line of the current line (Lines below the current line are shifted to the upper). <br>Otherwise, do nothing.
+</li>
+
+<li>
+<span>k</span><br>
+If the cursor points out the end-of-line and there is a line below the current line, perform the command <span>d</span> mentioned above, and record a linefeed on the buffer.<br>
+If the cursor does not point out the end-of-line, cut characters between the cursor (inclusive) and the end-of-line, and record them on the buffer. <!--Move the cursor to the end-of-line of the original line.--> After this operation, the cursor indicates the end-of-line of the current line.
+</li>
+
+<li>
+<span>y</span><br>
+If the buffer is empty, do nothing.<br>
+If the buffer is holding a linefeed, insert the linefeed at the cursor. The cursor moves to the first character of the new line.<br>
+If the buffer is holding characters, insert the characters at the cursor. The cursor moves to the character or end-of-line which is originally pointed by the cursor.
+</li>
+
+</ul>
+
+<p>
+The cursor position just after reading the text is the beginning of the first line, and the initial buffer is empty.
+</p>
+
+<H2>Input</H2>
+
+<p>
+The input consists of only one data-set which includes two parts. The first part gives a text consisting of several lines. The end of the text is indicated by a line (without quotes):
+
+<pre>
+"END_OF_TEXT"
+</pre>
+
+<p>
+This line should not be included in the text.
+</p>
+
+<p>
+Next part gives a series of commands. Each command is given in a line. The end of the commands is indicated by a character '<span>-</span>'.
+</p>
+
+
+<H2>Output</H2>
+
+<p>
+For the input text, print the text edited by the commands.
+</p>
+
+<H2>Constraints</H2>
+
+<ul>
+<li>The number of lines in the text given as input &le; 10</li>
+<li>The number of characters in a line given as input &le; 20 </li>
+<li>The number of commands &le; 300 </li>
+<li>The maximum possible number of lines in the text during operations &le; 100 </li>
+<li>The maximum possible number of characters in a line during operations &le; 1000 </li>
+</ul>
+
+<H2>Sample Input</H2>
+<pre>
+hyo
+ni
+END_OF_TEXT
+f
+d
+f
+f
+k
+p
+p
+e
+y
+a
+k
+y
+y
+n
+y
+-
+</pre>
+
+<H2>Output for the Sample Input</H2>
+<pre>
+honihoni
+honi
+</pre>
+

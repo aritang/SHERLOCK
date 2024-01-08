@@ -1,0 +1,98 @@
+
+<script src="./IMAGE/varmath.js" charset="UTF-8"></script>
+
+<H1>Reverse Roads</H1>
+
+<p>
+ICP city has an express company whose trucks run from the crossing <var>S</var> to the crossing <var>T</var>.
+The president of the company is feeling upset because all the roads in the city are one-way, and are severely congested.
+So, he planned to improve the maximum flow (edge disjoint paths) from the crossing <var>S</var> to the crossing <var>T</var> by reversing the traffic direction on some of the roads.
+</p>
+
+<p>
+Your task is writing a program to calculate the maximized flow from <var>S</var> to <var>T</var> by reversing some roads, and the list of the reversed roads.
+</p>
+
+<H2>Input</H2>
+
+<p>
+The first line of a data set contains two integers <var>N</var> (<var>2 \leq N \leq 300</var>) and <var>M</var> (<var>0 \leq M \leq {\rm min} (1\,000,\ N(N-1)/2)</var>).
+<var>N</var> is the number of crossings in the city and <var>M</var> is the number of roads.
+</p>
+
+<p>
+The following <var>M</var> lines describe one-way roads in the city.
+The <var>i</var>-th line (<var>1</var>-based) contains two integers <var>X_i</var> and <var>Y_i</var> (<var>1 \leq X_i, Y_i \leq N</var>, <var>X_i \neq Y_i</var>).
+<var>X_i</var> is the ID number (<var>1</var>-based) of the starting point of the <var>i</var>-th road and <var>Y_i</var> is that of the terminal point.
+The last line contains two integers <var>S</var> and <var>T</var> (<var>1 \leq S, T \leq N</var>, <var>S \neq T</var>, <var>1</var>-based).
+</p>
+
+<p>
+The capacity of each road is <var>1</var>.
+
+You can assume that <var>i \neq j</var> implies either <var>X_i \neq X_j</var> or <var>Y_i \neq Y_j</var>,
+and either <var>X_i \neq Y_j</var> or <var>X_j \neq Y_i</var>.
+</p>
+
+<H2>Output</H2>
+
+<p>
+In the first line, print the maximized flow by reversing some roads.
+In the second line, print the number <var>R</var> of the reversed roads.
+In each of the following <var>R</var> lines, print the ID number (<var>1</var>-based) of a reversed road.
+You may not print the same ID number more than once.
+</p>
+
+<p>
+If there are multiple answers which would give us the same flow capacity, you can print any of them.
+</p>
+
+<H2>Sample Input 1</H2>
+
+<pre>
+2 1
+2 1
+2 1
+</pre>
+
+<H2>Output for the Sample Input 1</H2>
+
+<pre>
+1
+0
+</pre>
+
+<H2>Sample Input 2</H2>
+
+<pre>
+2 1
+1 2
+2 1
+</pre>
+
+<H2>Output for the Sample Input 2</H2>
+
+<pre>
+1
+1
+1
+</pre>
+
+<H2>Sample Input 3</H2>
+
+<pre>
+3 3
+3 2
+1 2
+3 1
+1 3
+</pre>
+
+<H2>Output for the Sample Input 3</H2>
+
+<pre>
+2
+2
+1
+3
+</pre>

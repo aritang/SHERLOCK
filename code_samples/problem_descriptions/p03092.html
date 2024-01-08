@@ -1,0 +1,116 @@
+<span class="lang-en">
+<p>Score : <var>1000</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>You are given a permutation <var>p = (p_1, \ldots, p_N)</var> of <var>\{ 1, \ldots, N \}</var>.
+You can perform the following two kinds of operations repeatedly in any order:</p>
+<ul>
+<li>Pay a cost <var>A</var>. Choose integers <var>l</var> and <var>r</var> (<var>1 \leq l &lt; r \leq N</var>), and shift <var>(p_l, \ldots, p_r)</var> to the left by one. That is, replace <var>p_l, p_{l + 1}, \ldots, p_{r - 1}, p_r</var> with <var>p_{l + 1}, p_{l + 2}, \ldots, p_r, p_l</var>, respectively.</li>
+<li>Pay a cost <var>B</var>. Choose integers <var>l</var> and <var>r</var> (<var>1 \leq l &lt; r \leq N</var>), and shift <var>(p_l, \ldots, p_r)</var> to the right by one.  That is, replace <var>p_l, p_{l + 1}, \ldots, p_{r - 1}, p_r</var> with <var>p_r, p_l, \ldots, p_{r - 2}, p_{r - 1}</var>, respectively.</li>
+</ul>
+<p>Find the minimum total cost required to sort <var>p</var> in ascending order.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li>All values in input are integers.</li>
+<li><var>1 \leq N \leq 5000</var></li>
+<li><var>1 \leq A, B \leq 10^9</var></li>
+<li><var>(p_1 \ldots, p_N)</var> is a permutation of <var>\{ 1, \ldots, N \}</var>.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var> <var>A</var> <var>B</var>
+<var>p_1</var> <var>\cdots</var> <var>p_N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the minimum total cost required to sort <var>p</var> in ascending order.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>3 20 30
+3 1 2
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>20
+</pre>
+<p>Shifting <var>(p_1, p_2, p_3)</var> to the left by one results in <var>p = (1, 2, 3)</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>4 20 30
+4 2 3 1
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>50
+</pre>
+<p>One possible sequence of operations is as follows:</p>
+<ul>
+<li>Shift <var>(p_1, p_2, p_3, p_4)</var> to the left by one. Now we have <var>p = (2, 3, 1, 4)</var>.</li>
+<li>Shift <var>(p_1, p_2, p_3)</var> to the right by one. Now we have <var>p = (1, 2, 3, 4)</var>.</li>
+</ul>
+<p>Here, the total cost is <var>20 + 30 = 50</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>1 10 10
+1
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>0
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 4</h3><pre>4 1000000000 1000000000
+4 3 2 1
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 4</h3><pre>3000000000
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 5</h3><pre>9 40 50
+5 3 4 7 6 1 2 9 8
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 5</h3><pre>220
+</pre></section>
+</div>
+</span>

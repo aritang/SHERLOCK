@@ -1,0 +1,158 @@
+<span class="lang-en">
+<p>Score : <var>600</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3>
+<p>We have a tree with <var>N</var> vertices numbered <var>1</var> to <var>N</var>. The <var>i</var>-th edge in this tree connects Vertex <var>a_i</var> and <var>b_i</var>.
+Additionally, each vertex is painted in a color, and the color of Vertex <var>i</var> is <var>c_i</var>. Here, the color of each vertex is represented by an integer between <var>1</var> and <var>N</var> (inclusive). The same integer corresponds to the same color; different integers correspond to different colors.</p>
+<p>For each <var>k=1, 2, ..., N</var>, solve the following problem:</p>
+<ul>
+<li>Find the number of simple paths that visit a vertex painted in the color <var>k</var> one or more times.</li>
+</ul>
+<p><strong>Note:</strong> The simple paths from Vertex <var>u</var> to <var>v</var> and from <var>v</var> to <var>u</var> are not distinguished.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3>
+<ul>
+<li><var>1 \leq N \leq 2 \times 10^5</var></li>
+<li><var>1 \leq c_i \leq N</var></li>
+<li><var>1 \leq a_i,b_i \leq N</var></li>
+<li>The given graph is a tree.</li>
+<li>All values in input are integers.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3>
+<p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+<var>c_1</var> <var>c_2</var> <var>...</var> <var>c_N</var>
+<var>a_1</var> <var>b_1</var>
+<var>:</var>
+<var>a_{N-1}</var> <var>b_{N-1}</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3>
+<p>Print the answers for <var>k = 1, 2, ..., N</var> in order, each in its own line.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>3
+1 2 1
+1 2
+2 3
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>5
+4
+0
+</pre>
+<p>Let <var>P_{i,j}</var> denote the simple path connecting Vertex <var>i</var> and <var>j</var>.</p>
+<p>There are <var>5</var> simple paths that visit a vertex painted in the color <var>1</var> one or more times:<br/>
+<var>P_{1,1}\,,\,</var>
+<var>P_{1,2}\,,\,</var>
+<var>P_{1,3}\,,\,</var>
+<var>P_{2,3}\,,\,</var>
+<var>P_{3,3}</var> </p>
+<p>There are <var>4</var> simple paths that visit a vertex painted in the color <var>2</var> one or more times:<br/>
+<var>P_{1,2}\,,\,</var>
+<var>P_{1,3}\,,\,</var>
+<var>P_{2,2}\,,\,</var>
+<var>P_{2,3}</var> </p>
+<p>There are no simple paths that visit a vertex painted in the color <var>3</var> one or more times.  </p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>1
+1
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>1
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>2
+1 2
+1 2
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>2
+2
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 4</h3><pre>5
+1 2 3 4 5
+1 2
+2 3
+3 4
+3 5
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 4</h3><pre>5
+8
+10
+5
+5
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 5</h3><pre>8
+2 7 2 5 4 1 7 5
+3 1
+1 2
+2 7
+4 5
+5 6
+6 8
+7 8
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 5</h3><pre>18
+15
+0
+14
+23
+0
+23
+0
+</pre></section>
+</div>
+</span>

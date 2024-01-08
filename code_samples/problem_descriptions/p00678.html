@@ -1,0 +1,63 @@
+
+
+
+<h1>KND Runs for Sweets</h1>
+<h2>Problem</h2>
+<p>KND君は会津大学に在籍する学生プログラマである。彼は甘党であることで知られている。彼はとある市に1年間滞在することになり、その期間中に市内にある<var> N </var>箇所の甘味処をすべて回りたいと思っている。なのでこの1年間の住む場所は甘味処を回るのに一番適した場所がいいと考えている。彼の隣人であるあなたは、各甘味処への最悪の移動時間が最小になる場所を探す事になった。この甘味処がある市は簡単のため二次元平面で表すことにする。彼は目的の甘味処へのモチベーションの違いにより、単位時間あたりの移動距離が変化する。また、彼はどんな場所にでも（たとえ甘味処と同じ場所であろうと）住むつもりでいる。KND君は甘味に関しては妥協を許さないのである。</p>
+
+<h2>Input</h2>
+<p>
+入力は複数のテストケースからなる。
+ひとつのテストケースは以下のな形式で与えられる。
+入力の終了を<var> N </var> = 0 のとき示す。
+</p>
+<pre>
+<var>N</var>
+<var>x<sub>1</sub></var> <var>y<sub>1</sub></var> <var>v<sub>1</sub></var>
+<var>x<sub>2</sub></var> <var>y<sub>2</sub></var> <var>v<sub>2</sub></var>
+...
+<var>x<sub>N</sub></var> <var>y<sub>N</sub></var> <var>v<sub>N</sub></var>
+</pre>
+<p>ここで、
+</p>
+
+<ul>
+<li><var>N</var>:甘味処の数</li>
+<li><var>x<sub>i</sub></var>:i番目の甘味処のx座標</li>
+<li><var>y<sub>i</sub></var>:i番目の甘味処のy座標</li>
+<li><var>v<sub>i</sub></var>:i番目の甘味処へ移動するときの単位時間あたりの移動距離</li>
+</ul>
+<p>
+である。</p>
+
+<h2>Constraints</h2>
+<p>入力は以下の条件を満たす。</p>
+<ul>
+<li>入力はすべて整数。</li>
+<li>2 &le; <var>N</var> &le; 100</li>
+<li>0 &le; <var>x<sub>i</sub></var>, <var>y<sub>i</sub></var> &le; 100</li>
+<li>1 &le; <var>v<sub>i</sub></var> &le; 100 ( 1 &le; <var>i</var> &le; <var>N</var> )</li>
+<li><var>x<sub>i</sub></var> &ne; <var>x<sub>j</sub></var> or <var>y<sub>i</sub></var> &ne; <var>y<sub>j</sub></var> ( ただし1 &le; <var>i</var> &lt; <var>j</var> &le; <var>N</var> )</li>
+</ul>
+
+<h2>Output</h2>
+<p>各テストケースにつき最悪の移動時間の最小値を一行に出力せよ。この値はジャッジ出力の値と10<sup>-5</sup>より大きい差を持ってはならない。</p>
+
+<h2>Sample Input</h2>
+<pre>
+2
+1 1 1
+2 2 1
+4
+1 1 3
+3 1 3
+4 2 1
+1 5 3
+0
+</pre>
+
+<h2>Sample Output</h2>
+<pre>
+0.70710678
+1.06066017
+</pre>

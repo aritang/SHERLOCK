@@ -1,0 +1,72 @@
+
+
+
+<h1>Problem B : Grid</h1>
+<p>
+<i>r</i> × <i>c</i> の2次元グリッド上の２つの座標 (<i>a<sub>1</sub></i>,<i>a<sub>2</sub></i>) と (<i>b<sub>1</sub></i>,<i>b<sub>2</sub></i>) が与えられる。
+あるマス (e,f) から (e+1,f)、(e-1,f)、(e,f+1)、(e,f-1) のどれかのマスに移動するコストを１とする。
+また、(e,c-1) と (e,0)、(r-1,f) と (0,f) の間もコスト１で移動することができる。
+この時に１つ目の座標から２つ目の座標へ最短コストで移動できる経路の数を求めよ。
+</p>
+
+
+<h2>Input</h2>
+<p>
+入力は以下のフォーマットで与えられる。
+</p>
+
+<pre>
+<i>r</i> <i>c</i> <i>a<sub>1</sub></i> <i>a<sub>2</sub></i> <i>b<sub>1</sub></i> <i>b<sub>2</sub></i>
+</pre>
+
+<p>
+入力は以下の制約を満たす<br>
+1 &le; <i>r</i> , <i>c</i> &le; 1,000<br>
+0 &le; <i>a<sub>1</sub></i> , <i>b<sub>1</sub></i> &lt; r<br>
+0 &le; <i>a<sub>2</sub></i> , <i>b<sub>2</sub></i> &lt; c<br>
+</p>
+
+<h2>Output</h2>
+<p>
+答えの値を100,000,007で割った余りを出力せよ。
+</p>
+
+<h2>Sample Input 1</h2>
+<pre>
+4 4 0 0 3 3
+</pre>
+
+<h2>Sample Output 1</h2>
+<pre>
+2
+</pre>
+
+<h2>Sample Input 2</h2>
+<pre>
+4 4 0 0 1 1
+</pre>
+
+<h2>Sample Output 2</h2>
+<pre>
+2
+</pre>
+
+<h2>Sample Input 3</h2>
+<pre>
+2 3 0 0 1 2
+</pre>
+
+<h2>Sample Output 3</h2>
+<pre>
+4
+</pre>
+
+<h2>Sample Input 4</h2>
+<pre>
+500 500 0 0 200 200
+</pre>
+
+<h2>Sample Output 4</h2>
+<pre>
+34807775
+</pre>

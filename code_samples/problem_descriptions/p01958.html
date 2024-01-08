@@ -1,0 +1,109 @@
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({ tex2jax: { inlineMath: [["$","$"], ["\\(","\\)"]], skipTags: ["script","noscript","style","textarea","code"], processEscapes: true }});
+</script>
+<script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML"></script>
+
+<H1>
+Prime-Factor Prime
+</H1>
+
+<p>
+  A positive integer is called a "prime-factor prime" when the number of its prime factors is prime. For example, $12$ is a prime-factor prime because the number of prime factors of $12 = 2 \times 2 \times 3$ is $3$, which is prime. On the other hand, $210$ is not a prime-factor prime because the number of prime factors of $210 = 2 \times 3 \times 5 \times 7$ is $4$, which is a composite number.
+</p>
+
+<p>
+In this problem, you are given an integer interval $[l, r]$. Your task is to write a program which counts the number of prime-factor prime numbers in the interval, i.e. the number of prime-factor prime numbers between $l$ and $r$, inclusive.
+</p>
+
+<H2>Input</H2>
+
+<p>
+  The input consists of a single test case formatted as follows.
+</p>
+
+<pre>
+$l$ $r$
+</pre>
+
+<p>
+A line contains two integers $l$ and $r$ ($1 \leq l \leq r \leq 10^9$), which presents an integer interval $[l, r]$. You can assume that $0 \leq r-l < 1,000,000$.
+</p>
+
+<H2>Output</H2>
+
+<p>
+Print the number of prime-factor prime numbers in $[l,r]$.
+</p>
+
+<H2>Sample Input 1</H2>
+<pre>
+1 9
+</pre>
+
+<H2>Output for Sample Input 1</H2>
+<pre>
+4
+</pre>
+
+<H2>Sample Input 2</H2>
+<pre>
+10 20
+</pre>
+
+<H2>Output for Sample Input 2</H2>
+<pre>
+6
+</pre>
+
+<H2>Sample Input 3</H2>
+<pre>
+575 57577
+</pre>
+
+<H2>Output for Sample Input 3</H2>
+<pre>
+36172
+</pre>
+
+
+<H2>Sample Input 4</H2>
+<pre>
+180 180
+</pre>
+
+<H2>Output for Sample Input 4</H2>
+<pre>
+1
+</pre>
+
+
+
+<H2>Sample Input 5</H2>
+<pre>
+9900001 10000000
+</pre>
+
+<H2>Output for Sample Input 5</H2>
+<pre>
+60997
+</pre>
+
+
+
+<H2>Sample Input 6</H2>
+<pre>
+999000001 1000000000
+</pre>
+
+<H2>Output for Sample Input 6</H2>
+<pre>
+592955
+</pre>
+
+
+<p>
+In the first example, there are 4 prime-factor primes in $[l,r]$: $4,6,8,$ and $9$.
+</p>
+
+

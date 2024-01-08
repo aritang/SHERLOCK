@@ -1,0 +1,83 @@
+<H1><font color="#000">Problem G:</font> True Liars</H1>
+
+<p>
+After having drifted about in a small boat for a couple of days, Akira Crusoe Maeda was finally cast ashore on a foggy island. Though he was exhausted and despaired, he was still fortunate to remember a legend of the foggy island, which he had heard from patriarchs in his childhood. This must be the island in the legend.
+</p>
+<p>
+In the legend, two tribes have inhabited the island, one is divine and the other is devilish; once members of the divine tribe bless you, your future is bright and promising, and your soul will eventually go to Heaven; in contrast, once members of the devilish tribe curse you, your future is bleak and hopeless, and your soul will eventually fall down to Hell.
+</p>
+<p>
+In order to prevent the worst-case scenario, Akira should distinguish the devilish from the divine. But how? They looked exactly alike and he could not distinguish one from the other solely by their appearances. He still had his last hope, however. The members of the divine tribe are truth-tellers, that is, they always tell the truth and those of the devilish tribe are liars, that is, they always tell a lie.
+</p>
+<p>
+He asked some of the whether or not some are divine. They knew one another very much and always responded to him "faithfully" according to their individual natures (i.e., they always tell the truth or always a lie). He did not dare to ask any other forms of questions, since the legend says that a devilish member would curse a person forever when he did not like the question. He had another piece of useful information: the legend tells the populations of both tribes. These numbers in the legend are trustworthy since everyone living on this island is immortal and none have ever been born at least these millennia.
+</p>
+<p>
+You are a good computer programmer and so requested to help Akira by writing a program that classifies the inhabitants according to their answers to his inquiries. 
+</p>
+
+<H2>Input</H2>
+
+<p>
+The input consists of multiple data sets, each in the following format:
+</p>
+
+<pre>
+<i>n</i> <i>p</i><sub>1</sub> <i>p</i><sub>2</sub>
+<i>x</i><sub>1</sub> <i>y</i><sub>1</sub> <i>a</i><sub>1</sub>
+<i>x</i><sub>2</sub> <i>y</i><sub>2</sub> <i>a</i><sub>2</sub>
+...
+<i>x</i><sub><i>i</i></sub> <i>y</i><sub><i>i</i></sub> <i>a</i><sub><i>i</i></sub>
+...
+<i>x</i><sub><i>n</i></sub> <i>y</i><sub><i>n</i></sub> <i>a</i><sub><i>n</i></sub>
+</pre>
+
+<p>
+The first line has three non-negative integers <i>n</i>, <i>p</i><sub>1</sub>, and <i>p</i><sub>2</sub>. <i>n</i> is the number of questions Akira asked. <i>p</i><sub>1</sub> and <i>p</i><sub>2</sub> are the populations of the divine and devilish tribes, respectively, in the legend. Each of the following <i>n</i> lines has two integers <i>x<sub>i</sub></i>, <i>y<sub>i</sub></i> and one word <i>a<sub>i</sub></i>. <i>x<sub>i</sub></i> and <i>y<sub>i</sub></i> are the identification numbers of inhabitants, each of which is between 1 and <i>p</i><sub>1</sub> + <i>p</i><sub>2</sub>, inclusive. <i>a<sub>i</sub></i> is either "yes", if the inhabitant <i>x<sub>i</sub></i> said that the inhabitant <i>y<sub>i</sub></i> was a member of the divine tribe, or "no", otherwise. Note that <i>x<sub>i</sub></i> and <i>y<sub>i</sub></i> can be the same number since "are you a member of the divine tribe?" is a valid question. Note also that two lines may have the same <i>x</i>'s and <i>y</i>'s since Akira was very upset and might have asked the same question to the same one more than once.
+</p>
+<p>
+You may assume that <i>n</i> is less than 1000 and that <i>p</i><sub>1</sub> and <i>p</i><sub>2</sub> are less than 300. A line with three zeros, i.e., "0 0 0", represents the end of the input. You can assume that each data set is consistent and no contradictory answers are included. 
+</p>
+
+<H2>Output</H2>
+
+<p>
+For each data set, if it includes sufficient information to classify all the inhabitants, print the identification numbers of all the divine ones in ascending order, one in a line. In addition, following the output numbers, print "end" in a line. Otherwise, i.e., if a given data set does not include sufficient information to identify all the divine members, print "no" in a line.
+</p>
+
+<H2>Sample Input</H2>
+<pre>
+2 1 1
+1 2 no
+2 1 no
+3 2 1
+1 1 yes
+2 2 yes
+3 3 yes
+2 2 1
+1 2 yes
+2 3 no
+5 4 3
+1 2 yes
+1 3 no
+4 5 yes
+5 6 yes
+6 7 no
+0 0 0
+</pre>
+
+<H2>Output for the Sample Input</H2>
+<pre>
+no
+no
+1
+2
+end
+3
+4
+5
+6
+end
+</pre>
+
+

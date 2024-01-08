@@ -1,0 +1,162 @@
+<span class="lang-en">
+<p>Score : <var>1600</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>In some place in the Arctic Ocean, there are <var>H</var> rows and <var>W</var> columns of ice pieces floating on the sea.
+We regard this area as a grid, and denote the square at the <var>i</var>-th row and <var>j</var>-th column as Square <var>(i,j)</var>.
+The ice piece floating in each square is either thin ice or an iceberg, and a penguin lives in one of the squares that contain thin ice.
+There are no ice pieces floating outside the grid.</p>
+<p>The ice piece at Square <var>(i,j)</var> is represented by the character <var>S_{i,j}</var>.
+<var>S_{i,j}</var> is <code>+</code>, <code>#</code> or <code>P</code>, each of which means the following:</p>
+<ul>
+<li><code>+</code>: Occupied by thin ice.</li>
+<li><code>#</code>: Occupied by an iceberg.</li>
+<li><code>P</code>: Occupied by thin ice. The penguin lives here.</li>
+</ul>
+<p>When summer comes, unstable thin ice that is not held between some pieces of ice collapses one after another.
+Formally, thin ice at Square <var>(i,j)</var> will collapse when it does NOT satisfy either of the following conditions:</p>
+<ul>
+<li>Both Square <var>(i-1,j)</var> and Square <var>(i+1,j)</var> are occupied by an iceberg or uncollapsed thin ice.</li>
+<li>Both Square <var>(i,j-1)</var> and Square <var>(i,j+1)</var> are occupied by an iceberg or uncollapsed thin ice.</li>
+</ul>
+<p>When a collapse happens, it may cause another. Note that icebergs do not collapse.</p>
+<p>Now, a mischievous tourist comes here. He will do a little work so that, when summer comes, the thin ice inhabited by the penguin will collapse.
+He can smash an iceberg with a hammer to turn it to thin ice.
+At least how many icebergs does he need to smash?</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 \leq H,W \leq 40</var></li>
+<li><var>S_{i,j}</var> is <code>+</code>, <code>#</code> or <code>P</code>.</li>
+<li><var>S</var> contains exactly one <code>P</code>.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>H</var> <var>W</var>
+<var>S_{1,1}</var><var>S_{1,2}</var><var>...</var><var>S_{1,W}</var>
+<var>S_{2,1}</var><var>S_{2,2}</var><var>...</var><var>S_{2,W}</var>
+<var>:</var>
+<var>S_{H,1}</var><var>S_{H,2}</var><var>...</var><var>S_{H,W}</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the minimum number of icebergs that needs to be changed to thin ice in order to cause the collapse of the thin ice inhabited by the penguin when summer comes.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>3 3
++#+
+#P#
++#+
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>2
+</pre>
+<p>For example, when the right and bottom icebergs are changed to thin ice, collapses happen as follows:</p>
+<pre>+#+    .#.    .#.    .#.
+#P+ -&gt; #P+ -&gt; #P. -&gt; #..
++++    .+.    ...    ...
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>6 6
+#+++++
++++#++
+#+++++
++++P+#
++##+++
+++++#+
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>1
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>40 40
+#++#+++++#+#+#+##+++++++##+#+++#++##++##
++##++++++++++#+###+##++++#+++++++++#++##
++++#+++++#++#++####+++#+#+###+++##+++#++
++++#+######++##+#+##+#+++#+++++++++#++#+
++++##+#+#++#+++#++++##+++++++++#++#+#+#+
+#++#+++#+#++++##+#+#+++##+#+##+#++++##++
+++#+##+++#++####+#++##++#+++#+#+#++++#++
++#+###++++++##++++++#++##+#####++#++##++
+##+##+#+++#+#+##++#+###+######++++#+###+
++++#+++##+#####+#+#++++#+#+++++#+##++##+
+#+++#+##+++++++#++#++++++++++###+#++#+#+
+##+++##++#+++++#++++#++#+##++#+#+#++##+#
+##+++#+###+++++##++#+#+++####+#+++++#+++
++++#++#++#+++++++++#++###++++++++###+##+
+++#+++#++++++#####++##++#+++#+++++#++++#
+++#++#+##++++#####+###+++####+#+#+######
+++++++##+++++##+++++#++###++#++##+++++++
++#++++##++++++#++++#+#++++#++++##+++##+#
++++++++#+#++##+##+#+++++++###+###++##+++
+++++++#++###+#+#+++##+#++++++#++#+#++#+#
+##+##++++++#+++++#++#+#++##+++#+#+++##+#
+#+++#+#+##+#+##++#P#++#++++++##++#+#++##
+#+++#++##+##+#++++#++#++##++++++#+#+#+++
+++++####+#++#####+++#+###+#++###++++#++#
+#+#++####++##++#+#+#+##+#+#+##++++##++#+
++###+###+#+##+++#++++++#+#++++###+#+++++
++++#+++++#+++#+++++##++++++++###++#+#+++
++#+#++#+#++++++###+#++##+#+##+##+#+#####
+#++++++++#+#+###+######++#++#+++++++++++
+##+++##+#+#++#++#++#++++++#++##+#+#++###
++#+#+#+++++++#+++++++######+##++#++##+##
+++#+++#+###+#++###+++#+++#+#++++#+###+++
+#+#+###++#+#####+++++#+####++#++#+###+++
++#+##+#++#++##+++++++######++#++++++++++
++####+#+#+++++##+#+#++#+#++#+++##++++#+#
+#++##++#+#+++++##+#++++####+++++###+#+#+
+##+#++#++#+##+#+#++##++###+###+#+++++##+
+##++###+###+#+#++#++#########+++###+#+##
++++#+++#++++++++++#+#+++#++#++###+####+#
+++##+###+++++++##+++++#++#++++++++++++++
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>151
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 4</h3><pre>1 1
+P
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 4</h3><pre>0
+</pre></section>
+</div>
+</span>

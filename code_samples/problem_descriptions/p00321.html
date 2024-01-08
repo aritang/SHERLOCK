@@ -1,0 +1,106 @@
+
+
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({ tex2jax: { inlineMath: [["$","$"], ["\\(","\\)"]], processEscapes: true }});
+</script>
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+
+<H1>関連商品</H1>
+
+<p>
+インターネット通販サイトでは、ユーザが現在見ている商品と同じページに、過去に他のユーザによって、現在見ている商品と一緒に買われた別の商品をいくつか表示してくれます。関連性の高いと思われる商品を提示することで、売り上げを伸ばすことができると考えられているからです。
+</p>
+
+<p>
+似たようなことは、一緒に買われることが多い商品を近くに配置する、という工夫として、近所のスーパーマーケットでも目にすることができます（例えば、パンとジャムのような）。あなたの仕事は、商品配置の工夫を助けるプログラムを書くことです。今回は、ある基準となる回数を設定し、一緒に買われた回数が基準回数以上である、２つの商品の組み合わせを求めたいと思います。
+</p>
+
+<p>
+一緒に買われた商品の情報と基準回数が与えられたとき、基準回数以上一緒に買われた商品２つの組み合わせを出力するプログラムを作成せよ。
+</p>
+
+
+<h2>Input</h2>
+
+<p>
+入力は以下の形式で与えられる。
+</p>
+
+<pre>
+<var>N</var> <var>F</var>
+<var>info<sub>1</sub></var>
+<var>info<sub>2</sub></var>
+:
+<var>info<sub>N</sub></var>
+</pre>
+
+<p>
+１行目に、一緒に買われた商品の情報の数 <var>N</var> (1 &le; <var>N</var> &le; 100) と、基準回数 <var>F</var> (1 &le; <var>F</var> &le; 100) が与えられる。続く <var>N</var>行に、一緒に買われた商品の情報が与えられる。一緒に買われた商品の情報 <var>info<sub>i</sub></var> は、以下の形式で与えられる。
+</p>
+
+<pre>
+<var>M</var> <var>item<sub>1</sub></var> <var>item<sub>2</sub></var> ...  <var>item<sub>M</sub></var>
+</pre>
+
+<p>
+<var>M</var> (1 &le; <var>M</var> &le; 10) は、この情報がいくつの商品を含むかを表す。<var>item<sub>j</sub></var> は、この買い物で買われた商品の名前であり、英小文字だけから成る長さ 1 以上 30 以下の文字列である。<var>info<sub>i</sub></var> の中に同じ商品が与えられることはない。
+</p>
+
+
+<h2>Output</h2>
+
+<p>
+１行目に基準回数以上一緒に買われた商品２つの組み合わせの数を出力し、２行目以降に組み合わせをすべて出力する。ただし、組み合わせが一つもない場合は２行目以降には何も出力しない。
+</p>
+
+<p>
+出力の順番は、組み合わせ内の商品名どうしを、辞書式順序（英和辞書で単語が並んでいる順番）で並べたあと、組み合わせどうしについては以下のようにする。
+</p>
+
+<ul>
+<li> 一つ目の商品名どうしを比較して、辞書式順序で早いほうが先。</li>
+<li> 同じ場合は、二つ目の商品名どうしを比較して、辞書式順序で早いほうが先。</li>
+</ul>
+
+<p>
+商品名はスペース一つで区切り、商品の組み合わせは改行一つで区切る。
+</p>
+
+<h2>Sample Input 1</h2>
+
+<pre>
+5 2
+3 bread milk banana
+2 milk cornflakes
+3 potato bread milk
+4 cornflakes bread milk butter
+2 potato bread
+</pre>
+
+<h2>Sample Output 1</h2>
+<pre>
+3
+bread milk
+bread potato
+cornflakes milk
+</pre>
+<br/>
+
+
+<h2>Sample Input 2</h2>
+<pre>
+5 5
+3 bread milk banana
+2 milk cornflakes
+3 potato bread milk
+4 cornflakes bread milk butter
+2 potato bread
+</pre>
+
+<h2>Sample Output 2</h2>
+<pre>
+0
+</pre>

@@ -1,0 +1,109 @@
+<span class="lang-en">
+<p>Score : <var>400</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>You have <var>N</var> cards. On the <var>i</var>-th card, an integer <var>A_i</var> is written.</p>
+<p>For each <var>j = 1, 2, ..., M</var> in this order, you will perform the following operation once:</p>
+<p>Operation: Choose at most <var>B_j</var> cards (possibly zero). Replace the integer written on each chosen card with <var>C_j</var>.</p>
+<p>Find the maximum possible sum of the integers written on the <var>N</var> cards after the <var>M</var> operations.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li>All values in input are integers.</li>
+<li><var>1 \leq N \leq 10^5</var></li>
+<li><var>1 \leq M \leq 10^5</var></li>
+<li><var>1 \leq A_i, C_i \leq 10^9</var></li>
+<li><var>1 \leq B_i \leq N</var></li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var> <var>M</var>
+<var>A_1</var> <var>A_2</var> <var>...</var> <var>A_N</var>
+<var>B_1</var> <var>C_1</var>
+<var>B_2</var> <var>C_2</var>
+<var>\vdots</var>
+<var>B_M</var> <var>C_M</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the maximum possible sum of the integers written on the <var>N</var> cards after the <var>M</var> operations.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>3 2
+5 1 4
+2 3
+1 5
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>14
+</pre>
+<p>By replacing the integer on the second card with <var>5</var>, the sum of the integers written on the three cards becomes <var>5 + 5 + 4 = 14</var>, which is the maximum result.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>10 3
+1 8 5 7 100 4 52 33 13 5
+3 10
+4 30
+1 4
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>338
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>3 2
+100 100 100
+3 99
+3 99
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>300
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 4</h3><pre>11 3
+1 1 1 1 1 1 1 1 1 1 1
+3 1000000000
+4 1000000000
+3 1000000000
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 4</h3><pre>10000000001
+</pre>
+<p>The output may not fit into a <var>32</var>-bit integer type.</p></section>
+</div>
+</span>

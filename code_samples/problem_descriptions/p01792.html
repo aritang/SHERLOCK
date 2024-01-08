@@ -1,0 +1,55 @@
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({ tex2jax: { inlineMath: [["$","$"], ["\\(","\\)"]], processEscapes: true }});
+</script>
+<script type='text/javascript' src='http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
+</script>
+
+
+<h2>Problem C
+Casino</h2>
+
+<p>
+Taro, who owes a debt of $n$ dollars, decides to make money in a casino, where he can double his wager with probability $p$ percent in a single play of a game. Taro is going to play the game repetitively. He can choose the amount of the bet in each play, as long as it is a positive integer in dollars and at most the money in his hand.
+</p>
+
+<p>
+Taro possesses $m$ dollars now. Find out the maximum probability and the optimum first bet that he can repay all his debt, that is, to make his possession greater than or equal to his debt.
+</p>
+
+
+<h3>Input</h3>
+
+<p>
+The input consists of a single test case, which consists of three integers $p$, $m$, and $n$ separated by single
+spaces $(0 \leq p \leq 100, 0 < m < n \leq 10^9)$.
+</p>
+
+
+<h3>Output</h3>
+
+<p>
+Display three lines: The first line should contain the maximum probability that Taro can repay all his debt. This value must have an absolute error at most $10^{-6}$. The second line should contain an integer representing how many optimum first bets are there. Here, a first bet is optimum if the bet is necessary to achieve the maximum probability. If the number of the optimum first bets does not exceed 200, the third line should contain all of them in ascending order and separated by single spaces. Otherwise the third line should contain the 100 smallest bets and the 100 largest bets in ascending order and separated by single spaces.
+</p>
+
+
+
+<h3>Sample Input 1</h3>
+
+<pre>60 2 3</pre>
+
+<h3>Output for the Sample Input 1</h3>
+
+<pre>0.789473
+1
+1</pre>
+
+<h3>Sample Input 2</h3>
+
+<pre>25 3 8</pre>
+
+<h3>Output for the Sample Input 2</h3>
+
+<pre>0.109375
+2
+1 3</pre>

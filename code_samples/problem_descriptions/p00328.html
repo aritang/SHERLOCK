@@ -1,0 +1,84 @@
+
+
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({ tex2jax: { inlineMath: [["$","$"], ["\\(","\\)"]], processEscapes: true }});
+</script>
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+
+<H1>線分配置</H1>
+
+<p>
+Ａ大学は今年もプログラミングコンテストを開催する。作題チームの一員であるあなたは、計算幾何学の問題の入力データの作成を担当することになった。あなたが作りたい入力データは、<var>x</var> 軸または <var>y</var> 軸に平行で、互いに触れ合うことのない線分の集合である。あなたは、次のアルゴリズムに基づいたデータ生成プログラムを開発して、入力データを生成する。
+</p>
+
+<ol>
+<li> <var>xy</var> 平面上の線分の集合 <var>T</var> を空にする。</li>
+<li> 次の処理を <var>N</var> 回繰り返す。
+  <ul>
+    <li><var>x</var> 軸または <var>y</var> 軸に平行な適当な線分 <var>s</var> を作る。</li>
+    <li><var>s</var> が <var>T</var> 内のどの線分にも触れない場合は <var>s</var> を <var>T</var> に追加し、触れる場合は <var>s</var> を追加しない。</li>
+  </ul>
+</li>
+</ol>
+  
+<p>
+<var>x</var> 軸または <var>y</var> 軸に平行な <var>N</var> 本の線分を順番に入力し、各線分が平面上に追加されるかどうかを判定するプログラムを作成せよ。
+</p>
+
+
+<h2>Input</h2>
+
+<p>
+入力は以下の形式で与えられる。
+</p>
+
+<pre>
+<var>N</var>
+<var>px<sub>1</sub></var> <var>py<sub>1</sub></var> <var>qx<sub>1</sub></var> <var>qy<sub>1</sub></var>
+<var>px<sub>2</sub></var> <var>py<sub>2</sub></var> <var>qx<sub>2</sub></var> <var>qy<sub>2</sub></var>
+:
+<var>px<sub>N</sub></var> <var>py<sub>N</sub></var> <var>qx<sub>N</sub></var> <var>qy<sub>N</sub></var>
+</pre>
+
+<p>
+１行目に線分の数 <var>N</var> (1 &le; <var>N</var> &le; 100000) が与えられる。続く <var>N</var> 行に、<var>i</var> 番目に追加したい線分の情報が与えられる。各行に与えられる４つの整数 <var>px<sub>i</sub></var>, <var>py<sub>i</sub></var>, <var>qx<sub>i</sub></var>, <var>qy<sub>i</sub></var> (0 &le; <var>px<sub>i</sub></var>, <var>py<sub>i</sub></var>, <var>qx<sub>i</sub></var>, <var>qy<sub>i</sub></var> &le; 10<sup>9</sup>) は、それぞれ <var>i</var> 番目の線分の端点の <var>x</var> 座標、<var>y</var> 座標、もう一つの端点の <var>x</var> 座標、<var>y</var> 座標を表す。ただし、線分の長さは１以上である。
+</p>
+
+
+
+<h2>Output</h2>
+
+<p>
+各線分について、追加される場合「1」を、追加されない場合「0」を１行に出力する。
+</p>
+
+<h2>Sample Input 1</h2>
+
+<pre>
+9
+0 2 5 2
+1 3 1 7
+0 6 3 6
+2 4 8 4
+4 0 4 5
+6 3 6 0
+5 6 7 6
+8 3 8 7
+6 5 11 5
+</pre>
+
+<h2>Sample Output 1</h2>
+<pre>
+1
+1
+0
+1
+0
+1
+1
+0
+1
+</pre>

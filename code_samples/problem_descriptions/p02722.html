@@ -1,0 +1,81 @@
+<span class="lang-en">
+<p>Score : <var>600</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>Given is a positive integer <var>N</var>.</p>
+<p>We will choose an integer <var>K</var> between <var>2</var> and <var>N</var> (inclusive), then we will repeat the operation below until <var>N</var> becomes less than <var>K</var>.</p>
+<ul>
+<li>Operation: if <var>K</var> divides <var>N</var>, replace <var>N</var> with <var>N/K</var>; otherwise, replace <var>N</var> with <var>N-K</var>.</li>
+</ul>
+<p>In how many choices of <var>K</var> will <var>N</var> become <var>1</var> in the end?</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>2 \leq N \leq 10^{12}</var></li>
+<li><var>N</var> is an integer.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the number of choices of <var>K</var> in which <var>N</var> becomes <var>1</var> in the end.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>6
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>3
+</pre>
+<p>There are three choices of <var>K</var> in which <var>N</var> becomes <var>1</var> in the end: <var>2</var>, <var>5</var>, and <var>6</var>.</p>
+<p>In each of these choices, <var>N</var> will change as follows:</p>
+<ul>
+<li>When <var>K=2</var>: <var>6 \to 3 \to 1</var></li>
+<li>When <var>K=5</var>: <var>6 \to 1</var></li>
+<li>When <var>K=6</var>: <var>6 \to 1</var></li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>3141
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>13
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>314159265358
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>9
+</pre></section>
+</div>
+</span>

@@ -1,0 +1,73 @@
+<H1><font color="#000000">Problem C:</font> Accelerated Railgun</H1>
+
+<p>
+She catched the thrown coin that draws parabolic curve with her sparkling fingers. She is an ESPer. Yes, she is an electro-master who has the third strongest power among more than one million ESPers in the city. Being flicked by her thumb, the coin is accelerated by electromagnetic force and is shot as Fleming's right-hand rule. Even if she holds back the initial velocity of the coin exceeds three times of the speed of sound. The coin that is shot in such velocity is heated because of air friction and adiabatic compression. As a result coin melts and shines in orange. This is her special ability, called railgun. The strength of railgun can make a hole of two meters in diameter on a concrete wall.
+</p>
+<p>
+She had defeated criminals such as post office robberies and bank robberies in the city with her ability. And today, she decided to destroy a laboratory that is suspected to making some inhumane experiments on human body. Only her railgun can shoot it.
+</p>
+<p>
+The railgun with a coin cannot destroy the laboratory because of lack of power. Since she have found a powered-suit nearby, so she decided to use it as a projectile. However, in this case it is difficult to take sight properly because the suit is much bigger and heavier than coins. Therefore she only can shoot the suit with certain velocity vector from her current position. Depending on the position of the laboratory, her railgun may not hit it and become a firework.
+</p>
+<p>
+Therefore she asked cooperation to the strongest ESPer in the city. He can change direction of a moving object as one of uncountable application of his ESP. Let's consider a 2-dimensional plane where the laboratory is on the origin (0, 0). She shoots a projectile from <i>P</i> = (<i>px</i>, <i>py</i>) with velocity vector <i>V</i> = (<i>vx</i>, <i>vy</i>). His ESP makes a virtual wall of radius <i>R</i> (= 1.0) centered on the origin. When projectile collides with the wall, it is reflected so that incident angle will be equal to reflection angle.
+</p>
+<p>
+Range of railgun is limited to <i>D</i>, because air friction decreases velocity of projectile and heat may melts projectile completely. Under these conditions, please write a program that judges if the railgun hits the laboratory. Size of the laboratory and the suit is ignorablly small. After the railgun is shot, it is allowed to pass through <i>P</i> again.
+</p>
+
+
+<H2>Input</H2>
+
+<p>
+Input consists of several datasets.
+</p>
+
+<p>
+The first line of each dataset contains a real number <i>D</i>.
+</p>
+
+<p>
+Next line contains 4 real numbers, which means <i>px</i>, <i>py</i>, <i>vx</i>, <i>vy</i>, respectively.
+</p>
+
+<p>
+Input terminates when <i>D</i> = 0.
+</p>
+
+<H2>Output</H2>
+
+<p>
+For each dataset, if the railgun hits, output the distance it moved until hits. Otherwise output '<span>impossible</span>' (without quotes).
+</p>
+<p>
+You can print any number of digits and answer with an error less than 1.0e-6 will be accepted. 
+</p>
+
+
+<H2>Constraints</H2>
+
+<ul>
+<li>Judge data never include dataset where the answer is (<i>D</i> - 1.0e-3) or bigger. </li>
+<li>0.0001 &le; |V| &le; 0.9999</li>
+<li>0.0001 &le; |P| &le; 0.9999</li>
+<li>D &le; 50</li>
+
+</ul>
+
+<H2>Sample Input</H2>
+<pre>
+10.0
+0.5 0.0 -0.2 0.0
+1.0
+0.1 0.0 0.2 0.2
+0
+</pre>
+
+<H2>Output for the Sample Input</H2>
+<pre>
+0.50000000
+impossible
+</pre>
+
+

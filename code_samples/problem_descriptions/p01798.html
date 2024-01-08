@@ -1,0 +1,94 @@
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({ tex2jax: { inlineMath: [["$","$"], ["\\(","\\)"]], processEscapes: true }});
+</script>
+<script type='text/javascript' src='http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
+</script>
+
+
+<h2>Problem I
+Midpoint</h2>
+
+
+<p>
+One day, you found $L + M + N$ points on a 2D plane, which you named $A_1, ..., A_L, B_1, ...,B_M, C_1,...,C_N$. Note that two or more points of them can be at the same coordinate. These were named after the following properties:
+</p>
+
+<ul>
+<li> the points $A_1,...,A_L$ were located on a single straight line,</li>
+<li> the points $B_1,...,B_M$ were located on a single straight line, and</li>
+<li> the points $C_1,...,C_N$ were located on a single straight line.</li>
+</ul>
+
+<p>
+Now, you are interested in a triplet $(i, j, k)$ such that $C_k$ is the midpoint between $A_i$ and $B_j$. Your task is counting such triplets.
+</p>
+
+
+<h3>Input</h3>
+
+<p>
+The first line contains three space-separated positive integers $L$, $M$, and $N$ $(1 \leq L, M, N \leq 10^5)$. The next $L$ lines describe $A$. The $i$-th of them contains two space-separated integers representing the $x$-coordinate and the $y$-coordinate of $A_i$. The next $M$ lines describe $B$. The $j$-th of them contains two space-separated integers representing the $x$-coordinate and the $y$-coordinate of $B_j$. The next $N$ lines describe $C$. The $k$-th of them contains two space-separated integers representing the $x$-coordinate and the $y$-coordinate of $C_k$. It is guaranteed that the absolute values of all the coordinates do not exceed $10^5$.
+</p>
+
+
+<h3>Output</h3>
+
+<p>
+Print the number of the triplets which fulfill the constraint.
+</p>
+
+<h3>Sample Input 1</h3>
+
+<pre>2 2 3
+0 0
+2 0
+0 0
+0 2
+0 0
+1 1
+1 1</pre>
+
+<h3>Output for the Sample Input 1</h3>
+
+<pre>3</pre>
+
+<h3>Sample Input 2</h3>
+
+<pre>4 4 4
+3 5
+0 4
+6 6
+9 7
+8 2
+11 3
+2 0
+5 1
+4 3
+7 4
+10 5
+1 2</pre>
+
+<h3>Output for the Sample Input 2</h3>
+
+<pre>8</pre>
+
+<h3>Sample Input 3</h3>
+
+<pre>4 4 4
+0 0
+3 2
+6 4
+9 6
+7 14
+9 10
+10 8
+13 2
+4 2
+5 4
+6 6
+8 10</pre>
+
+<h3>Output for the Sample Input 3</h3>
+
+<pre>3</pre>

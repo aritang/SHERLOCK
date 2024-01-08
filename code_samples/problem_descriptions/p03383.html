@@ -1,0 +1,102 @@
+<span class="lang-en">
+<p>Score : <var>700</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>There is an <var>H \times W</var> grid (<var>H</var> vertical, <var>W</var> horizontal), where each square contains a lowercase English letter.
+Specifically, the letter in the square at the <var>i</var>-th row and <var>j</var>-th column is equal to the <var>j</var>-th character in the string <var>S_i</var>.</p>
+<p>Snuke can apply the following operation to this grid any number of times:</p>
+<ul>
+<li>Choose two different rows and swap them. Or, choose two different columns and swap them.</li>
+</ul>
+<p>Snuke wants this grid to be <em>symmetric</em>.
+That is, for any <var>1 \leq i \leq H</var> and <var>1 \leq j \leq W</var>, the letter in the square at the <var>i</var>-th row and <var>j</var>-th column and the letter in the square at the <var>(H + 1 - i)</var>-th row and <var>(W + 1 - j)</var>-th column should be equal.</p>
+<p>Determine if Snuke can achieve this objective.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 \leq H \leq 12</var></li>
+<li><var>1 \leq W \leq 12</var></li>
+<li><var>|S_i| = W</var></li>
+<li><var>S_i</var> consists of lowercase English letters.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>H</var> <var>W</var>
+<var>S_1</var>
+<var>S_2</var>
+<var>:</var>
+<var>S_H</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>If Snuke can make the grid symmetric, print <code>YES</code>; if he cannot, print <code>NO</code>.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>2 3
+arc
+rac
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>YES
+</pre>
+<p>If the second and third columns from the left are swapped, the grid becomes symmetric, as shown in the image below:</p>
+<p><img alt="" src="https://img.atcoder.jp/arc095/2b61caf45e7c5c7311e3944f3418b0bb.png"/></p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>3 7
+atcoder
+regular
+contest
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>NO
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>12 12
+bimonigaloaf
+faurwlkbleht
+dexwimqxzxbb
+lxdgyoifcxid
+ydxiliocfdgx
+nfoabgilamoi
+ibxbdqmzxxwe
+pqirylfrcrnf
+wtehfkllbura
+yfrnpflcrirq
+wvcclwgiubrk
+lkbrwgwuiccv
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>YES
+</pre></section>
+</div>
+</span>

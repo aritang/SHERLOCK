@@ -1,0 +1,80 @@
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({ tex2jax: { inlineMath: [["$","$"], ["\\(","\\)"]], processEscapes: true }});
+</script>
+<script type='text/javascript' src='http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
+</script>
+
+<h2>Problem I:
+Tampopo Machine
+</h2>
+
+<p>
+  "Today is another day of endless, tedious work to put a tampopo on sashimi..."
+</p>
+
+<p>
+  Yaruo works in a sashimi (sliced raw fish) factory. His job is to put tampopos on sashimi packages everyday. Tired of this menial job, he decided to develop a tampopo machine to do the job instead of him.
+</p>
+
+<p>
+  The tampopo machine has the following properties. Sashimi packages are put on a conveyor belt and move from left to right. The width of a package is $W$ and the interval between two adjacent packages is $D$. The machine has $N$ magic hands placed above the conveyor belt at regular intervals of $M$. These magic hands put tampopos every $T$ seconds.
+</p>
+
+<p>
+  In initial state, the right end of the first package is under the leftmost magic hand. The magic hands start putting a tampopo as soon as he turns on the power of the machine. The conveyor belt moves one unit length per one second.
+</p>
+
+<center>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_tampopoMachine" width="480"><br>
+</center>
+<br>
+
+<p>
+  Unfortunately, after building the machine, Yaruo noticed that there exist some packages with no tampopos. Calculate the ratio of packages with no tampopos for him.
+</p>
+
+<p>
+When a magic hand puts a tampopo on the left or right end of a package, you can assume that the tampopo is on the package.
+</p>
+
+<h3>Input</h3>
+
+<p>
+  The input consists of 5 integers, $W$, $D$, $N$, $M$ and $T$ which are described in the problem statement.<br>
+  
+($1 \leq W, D, N, M, T \leq 1,000,000,000$)
+</p>
+
+
+<h3>Output</h3>
+
+<p>
+Output the ratio of packages with no tampopos in a line. The absolute error should be less than or equal to $10^{-9}$.
+</p>
+
+
+
+<h3>Sample Input 1</h3>
+
+<pre>1 1 1 1 1</pre>
+
+<h3>Sample Output 1</h3>
+
+<pre>0.000000000000</pre>
+
+<h3>Sample Input 2</h3>
+
+<pre>1 2 3 4 5</pre>
+
+<h3>Sample Output 2</h3>
+
+<pre>0.200000000000</pre>
+
+<h3>Sample Input 3</h3>
+
+<pre>3 2 2 1 6</pre>
+
+<h3>Sample Output 3</h3>
+
+<pre>0.166666666667</pre>

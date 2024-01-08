@@ -1,0 +1,87 @@
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({ tex2jax: { inlineMath: [["$","$"], ["\\(","\\)"]], skipTags: ["script","noscript","style","textarea","code"], processEscapes: true }});
+</script>
+<script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML"></script>
+
+<h2>Problem C
+  Medical Checkup
+  </h2>
+
+<p>
+  Students of the university have to go for a medical checkup, consisting of lots of checkup items, numbered 1, 2, 3, and so on.
+</p>
+
+<p>
+  Students are now forming a long queue, waiting for the checkup to start. Students are also numbered 1, 2, 3, and so on, from the top of the queue. They have to undergo checkup items in the order of the item numbers, not skipping any of them nor changing the order. The order of students should not be changed either.
+</p>
+
+<p>
+  Multiple checkup items can be carried out in parallel, but each item can be carried out for only one student at a time. Students have to wait in queues of their next checkup items until all the others before them finish.
+</p>
+
+<p>
+  Each of the students is associated with an integer value called <i>health condition</i>. For a student with the health condition $h$, it takes $h$ minutes to finish each of the checkup items. You may assume that no interval is needed between two students on the same checkup item or two checkup items for a single student.
+</p>
+
+<p>
+  Your task is to find the items students are being checked up or waiting for at a specified time $t$.
+</p>
+
+
+<h3>Input</h3>
+<p>
+  The input consists of a single test case in the following format.
+</p>
+
+<pre>
+$n$ $t$
+$h_1$
+...
+$h_n$
+</pre>
+
+<p>
+  $n$ and $t$ are integers. $n$ is the number of the students ($1 \leq n \leq 10^5$). $t$ specifies the time of our concern ($0 \leq t \leq 10^9$). For each $i$, the integer $h_i$ is the health condition of student $i$ ($1 \leq h_ \leq 10^9$).
+</p>
+
+<h3>Output</h3>
+
+<p>
+  Output $n$ lines each containing a single integer. The $i$-th line should contain the checkup item number of the item which the student $i$ is being checked up or is waiting for, at ($t+0.5$) minutes after the checkup starts. You may assume that all the students are yet to finish some of the checkup items at that moment.
+  </p>
+
+
+<h3>Sample Input 1</h3>
+<pre>
+3 20
+5
+7
+3
+</pre>
+
+<h3>Sample Output 1</h3>
+<pre>
+5
+3
+2
+</pre>
+
+<h3>Sample Input 2</h3>
+<pre>
+5 1000000000
+5553
+2186
+3472
+2605
+1790
+</pre>
+
+<h3>Sample Output 2</h3>
+<pre>
+180083
+180083
+180082
+180082
+180082
+</pre>

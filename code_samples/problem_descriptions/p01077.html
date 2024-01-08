@@ -1,0 +1,117 @@
+
+
+<h1>Problem F: Curling Puzzle</h1>
+<h2>Problem</h2>
+<p>
+カーリングのストーンを移動させて、ゴールのマスにストーンをぴったり重ねるパズルゲームがある。詳しいルールは次のとおりである。
+</p>
+<p>
+フィールドは<var>H</var>&times;<var>W</var>のマスからなり、はじめにいくつかのマスにストーンが置かれている。
+ゴールのマスは1つだけ存在して、はじめからゴールのマスにストーンが置かれていることはない。
+また、フィールドは外壁で囲まれており、途中でストーンがフィールドの外へ飛び出してしまうことはない。
+</p>
+<p>
+プレイヤーは1手ごとにストーンを1つ選び、上下左右のいずれかの方向に打ち出して滑らせることができる。
+滑っているストーンは別のストーンかフィールドの外壁にぶつかるまで滑り続ける。別のストーンにぶつかった場合は、
+ぶつけられた側のストーンが反動を受け、最初に打ち出した方向と同じ方向へ連鎖的に滑り出してしまう。
+</p>
+
+<p>例えば、図1の状態でストーンAを右方向に打ち出した場合、最終的に図2のような状態になる。</p>
+
+<center>
+<div style="width: 500px;">
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE3_ACPC2016Day2AIZU_F_figure1" alt="図1" style="width: 500px;"><br>
+<div style="text-align: center; font-weight: bold;">図1</div><br><br>
+</div>
+<div style="width: 500px;">
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE3_ACPC2016Day2AIZU_F_figure2" alt="図2" style="width: 500px;"><br>
+<div style="text-align: center; font-weight: bold;">図2</div><br><br>
+</div>
+</center>
+
+
+<p>
+このパズルのクリア条件は、フィールドに存在するストーンのいずれか1つをゴールのマスにぴったり重ねることである。ゴールのマスを通り過ぎた場合にはクリアにならない。
+</p>
+
+<p>
+あなたの仕事はフィールドの初期状態を入力として受け取り、そのパズルがクリア可能かどうかを出力するプログラムを作成することである。
+</p>
+<h2>Input</h2>
+<p>入力は以下の形式で与えられる。</p>
+<pre>
+<var>H</var> <var>W</var>
+<var>F<sub>11</sub></var> <var>F<sub>12</sub></var> ... <var>F<sub>1W</sub></var>
+<var>F<sub>21</sub></var> <var>F<sub>22</sub></var> ... <var>F<sub>2W</sub></var>
+...
+<var>F<sub>H1</sub></var> <var>F<sub>H2</sub></var> ... <var>F<sub>HW</sub></var>
+</pre>
+<p>
+  <var>F<sub>ij</sub></var>は '.' か 'o' か '@' のいずれかであり、それぞれ以下の意味を持つ。
+  ( 1 &le; <var>i</var>  &le; <var>H</var>  ,  1 &le; <var>j</var>  &le; <var>W</var>  )</li>
+</p>
+
+<ul>
+<li>'.' : 空白のマス</li>
+<li>'o' : カーリングのストーンが置かれているマス</li>
+<li>'@' : ゴールのマス</li>
+</ul>
+
+
+
+<h2>Constraints</h2>
+<ul>
+
+  
+<li>1 &le; <var>H</var> &le; 16</li>
+<li>1 &le; <var>W</var> &le; 16</li>
+<li>2 &le; <var>H</var> &times; <var>W</var> &le; 256</li>
+
+<li>ゴールのマスが1つだけ存在することが保証されている</li>
+<li>カーリングのストーンが置かれているマスが1つ以上存在することが保障されている</li>
+</ul>
+
+<h2>Output</h2>
+<p>
+パズルがクリア可能かどうか "yes" または "no" (""は含まない)を1行に出力せよ。
+</p>
+
+<h2>Sample Input 1</h2>
+<pre>
+1 10
+o........@
+</pre>
+
+<h2>Sample Output 1</h2>
+<pre>
+yes
+</pre>
+
+<h2>Sample Input 2</h2>
+<pre>
+3 6
+......
+.o..@.
+......
+</pre>
+
+<h2>Sample Output 2</h2>
+<pre>
+no
+</pre>
+
+<h2>Sample Input 3</h2>
+<pre>
+6 4
+....
+.oo.
+.oo.
+....
+.@..
+....
+</pre>
+
+<h2>Sample Output 3</h2>
+<pre>
+yes
+</pre>

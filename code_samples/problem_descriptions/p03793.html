@@ -1,0 +1,115 @@
+<span class="lang-en">
+<p>Score : <var>1300</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>You are developing a robot that processes strings.
+When the robot is given a string <var>t</var> consisting of lowercase English letters, it processes the string by following the procedure below:</p>
+<ol>
+<li>Let <var>i</var> be the smallest index such that <var>t_i = t_{i + 1}</var>. If such an index does not exist, terminate the procedure.</li>
+<li>If <var>t_i</var> is <code>z</code>, remove <var>t_i</var> and <var>t_{i + 1}</var> from <var>t</var>. Otherwise, let <var>c</var> be the next letter of <var>t_i</var> in the English alphabet, and replace <var>t_i</var> and <var>t_{i + 1}</var> together with <var>c</var>, reducing the length of <var>t</var> by <var>1</var>.</li>
+<li>Go back to step 1.</li>
+</ol>
+<p>For example, when the robot is given the string <code>axxxxza</code>, it will be processed as follows: <code>axxxxza</code> → <code>ayxxza</code> → <code>ayyza</code> → <code>azza</code> → <code>aa</code> → <code>b</code>.</p>
+<p>You are given a string <var>s</var> consisting of lowercase English letters.
+Answer <var>Q</var> queries. The <var>i</var>-th query is as follows:</p>
+<ul>
+<li>Assume that the robot is given a substring of <var>s</var> that runs from the <var>l_i</var>-th character and up to the <var>r_i</var>-th character (inclusive). Will the string be empty after processing?</li>
+</ul>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 ≤ |s| ≤ 5 × 10^5</var></li>
+<li><var>s</var> consists of lowercase English letters.</li>
+<li><var>1 ≤ Q ≤ 10^5</var></li>
+<li><var>1 ≤ l_i ≤ r_i ≤ |s|</var></li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>The input is given from Standard Input in the following format:</p>
+<pre><var>s</var>
+<var>Q</var>
+<var>l_1</var> <var>r_1</var>
+<var>l_2</var> <var>r_2</var>
+<var>:</var>
+<var>l_Q</var> <var>r_Q</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print <var>Q</var> lines.
+The <var>i</var>-th line should contain the answer to the <var>i</var>-th query: <code>Yes</code> or <code>No</code>.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>axxxxza
+2
+1 7
+2 6
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>No
+Yes
+</pre>
+<ul>
+<li>Regarding the first query, the string will be processed as follows: <code>axxxxza</code> → <code>ayxxza</code> → <code>ayyza</code> → <code>azza</code> → <code>aa</code> → <code>b</code>.</li>
+<li>Regarding the second query, the string will be processed as follows: <code>xxxxz</code> → <code>yxxz</code> → <code>yyz</code> → <code>zz</code> → <code></code>.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>aabcdefghijklmnopqrstuvwxyz
+1
+1 27
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>Yes
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>yzyyyzyzyyyz
+8
+1 6
+7 12
+1 12
+6 11
+1 1
+1 3
+4 9
+3 8
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>Yes
+Yes
+Yes
+Yes
+No
+No
+No
+No
+</pre></section>
+</div>
+</span>

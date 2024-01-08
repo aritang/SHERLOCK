@@ -1,0 +1,108 @@
+
+
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({ tex2jax: { inlineMath: [["$","$"], ["\\(","\\)"]], processEscapes: true }});
+</script>
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+
+<H1>プログラミングコンテスト II</H1>
+
+<p>
+白虎大学では毎年プログラミングコンテストを開催しています。コンテストは全てのチームの得点が 0の状態から開始し、解答状況に応じて得点が加算されていきます。このコンテストでは、得点の高い順に順位付けが行われます。チームの総数を <var>N</var> としたとき、チームには 1 から <var>N</var> の番号がそれぞれ割り当てられています。得点が同じ場合は番号がより小さい方が上位になります。
+</p>
+
+<p>
+白虎大学では、コンテストを盛り上げるために観戦用のランキングシステムを開発しています。開発チームの一員であるあなたは、このシステムの一部であるプログラムの作成を任されています。
+</p>
+
+<p>
+与えられた命令に従って、得点の更新と、指定された順位のチームの番号と得点を報告するプログラムを作成せよ。
+</p>
+
+<h2>Input</h2>
+
+<p>
+入力は以下の形式で与えられる。 
+</p>
+
+<pre>
+<var>N</var> <var>C</var>
+<var>command<sub>1</sub></var>
+<var>command<sub>2</sub></var>
+:
+<var>command<sub>C</sub></var>
+</pre>
+
+<p>
+１行目にチーム数 <var>N</var> (2 &le; <var>N</var> &le; 100000) と命令の数 <var>C</var> (1 &le; <var>C</var> &le; 100000)が与えられる。続く <var>C</var> 行に、１行ずつ命令が与えられる。各命令は以下の形式で与えられる。 
+</p>
+
+<pre>
+0 <var>t</var> <var>p</var>
+</pre>
+
+<p>
+または
+</p>
+
+<pre>
+1 <var>m</var>
+</pre>
+
+<p>
+最初の数字が0のとき更新命令、1のとき報告命令を表す。更新命令では指定された番号 <var>t</var> (1 &le; <var>t</var> &le; <var>N</var>) のチームに、整数で与えられる得点 <var>p</var> (1 &le; <var>p</var> &le; 10<sup>9</sup>) を加算する。報告命令では指定された順位 <var>m</var> (1 &le; <var>m</var> &le; <var>N</var>) のチームの番号と得点を報告する。ただし、報告命令は少なくとも１回現れるものとする。 
+</p>
+
+
+<h2>Output</h2>
+
+<p>
+各報告命令に対して、指定された順位のチームの番号と得点を空白区切りで１行に出力する。 
+</p>
+
+<h2>Sample Input 1</h2>
+
+<pre>
+3 11
+0 2 5
+0 1 5
+0 3 4
+1 1
+1 2
+1 3
+0 3 2
+1 1
+0 2 1
+1 2
+1 3 
+</pre>
+
+<h2>Sample Output 1</h2>
+<pre>
+1 5
+2 5
+3 4
+3 6
+3 6
+1 5
+</pre>
+<br/>
+
+
+<h2>Sample Input 2</h2>
+
+<pre>
+5 2
+1 1
+1 2
+</pre>
+
+<h2>Sample Output 2</h2>
+
+<pre>
+1 0
+2 0
+</pre>

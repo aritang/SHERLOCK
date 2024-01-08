@@ -1,0 +1,177 @@
+<span class="lang-en">
+<p>Score : <var>1000</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>You are given a sequence <var>a = \{a_1, ..., a_N\}</var> with all zeros, and a sequence <var>b = \{b_1, ..., b_N\}</var> consisting of <var>0</var> and <var>1</var>. The length of both is <var>N</var>.</p>
+<p>You can perform <var>Q</var> kinds of operations. The <var>i</var>-th operation is as follows:</p>
+<ul>
+<li>Replace each of <var>a_{l_i}, a_{l_i + 1}, ..., a_{r_i}</var> with <var>1</var>.</li>
+</ul>
+<p>Minimize the hamming distance between <var>a</var> and <var>b</var>, that is, the number of <var>i</var> such that <var>a_i \neq b_i</var>, by performing some of the <var>Q</var> operations.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 \leq N \leq 200,000</var></li>
+<li><var>b</var> consists of <var>0</var> and <var>1</var>.</li>
+<li><var>1 \leq Q \leq 200,000</var></li>
+<li><var>1 \leq l_i \leq r_i \leq N</var></li>
+<li>If <var>i \neq j</var>, either <var>l_i \neq l_j</var> or <var>r_i \neq r_j</var>.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+<var>b_1</var> <var>b_2</var> <var>...</var> <var>b_N</var>
+<var>Q</var>
+<var>l_1</var> <var>r_1</var>
+<var>l_2</var> <var>r_2</var>
+<var>:</var>
+<var>l_Q</var> <var>r_Q</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the minimum possible hamming distance.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>3
+1 0 1
+1
+1 3
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>1
+</pre>
+<p>If you choose to perform the operation, <var>a</var> will become <var>\{1, 1, 1\}</var>, for a hamming distance of <var>1</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>3
+1 0 1
+2
+1 1
+3 3
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>0
+</pre>
+<p>If both operations are performed, <var>a</var> will become <var>\{1, 0, 1\}</var>, for a hamming distance of <var>0</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>3
+1 0 1
+2
+1 1
+2 3
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>1
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 4</h3><pre>5
+0 1 0 1 0
+1
+1 5
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 4</h3><pre>2
+</pre>
+<p>It may be optimal to perform no operation.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 5</h3><pre>9
+0 1 0 1 1 1 0 1 0
+3
+1 4
+5 8
+6 7
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 5</h3><pre>3
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 6</h3><pre>15
+1 1 0 0 0 0 0 0 1 0 1 1 1 0 0
+9
+4 10
+13 14
+1 7
+4 14
+9 11
+2 6
+7 8
+3 12
+7 13
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 6</h3><pre>5
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 7</h3><pre>10
+0 0 0 1 0 0 1 1 1 0
+7
+1 4
+2 5
+1 3
+6 7
+9 9
+1 5
+7 9
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 7</h3><pre>1
+</pre></section>
+</div>
+</span>

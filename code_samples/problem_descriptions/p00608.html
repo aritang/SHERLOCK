@@ -1,0 +1,138 @@
+
+<H1><font color="#000000">Problem D:</font> Indian Puzzle</H1>
+
+<p>
+In the Indian Puzzle, one is intended to fill out blanks with numbers and operators in a <i>n</i> by <i>n</i> grid in order to make equalities in the grid true (See Figure 1).
+</p>
+
+<br>
+<center>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE1_indianPuzzle">
+<p>Figure 1</p>
+</center>
+<br>
+
+<p>
+A blank cell should be filled out with a number (from 0 to 9 inclusive) or an operator (<span>+</span>, <span>-</span>, <span>&times;</span>, <span>&divide;</span>, <span>=</span>), and black cells split equalities. Initially, some cells are already filled with numbers or operators.
+</p>
+
+<p>
+The objective of this puzzle is to fill out all the blank cells with numbers (from 0 to 9 inclusive) and operators (<span>+</span>, <span>-</span>, <span>&times;</span>, <span>&divide;</span>) in a given list. All the numbers and operators in the list must be used to fill out the blank cells.
+</p>
+
+<p>
+A equality is organized by more than 2 consecutive left-to-right or top-to-bottom white cells. You can assume that a equality contains exactly one cell with '<span>=</span>' which connects two expressions.
+</p>
+
+<p>
+The expressions conform to the order of operations and semantics of conventional four arithmetic operations. First, do all multiplication and division, starting from the left (top). Then, do all addition and subtraction, starting from the left (top). In addition, this puzzle has the following rules:
+</p>
+
+<ul>
+<li>Division by zero and division leaving a remainder, are not allowed.</li>
+<li>Leading zeros are not allowed.</li>
+<li>Unary operators like <span>3&times;-8=-24</span> are not allowed.</li>
+</ul>
+
+<p>
+In a formal description, the equality must conform the syntax in the following BNF:
+</p>
+
+<!--
+<pre>
+&lt;Eq&gt; ::= &lt;Ex&gt; = &lt;Ex&gt;
+&lt;Ex&gt; ::= &lt;T&gt; | &lt;Ex&gt; + &lt;T&gt; | &lt;Ex&gt; - &lt;T&gt;
+&lt;T&gt;  ::= &lt;N0&gt; | &lt;T&gt; &times; &lt;N0&gt; | &lt;T&gt; &divide; &lt;N&gt;
+&lt;N0&gt; ::= &lt;N&gt; | 0
+&lt;N&gt;  ::= &lt;D&gt; | &lt;N + D0&gt;
+&lt;D0&gt; ::= &lt;D&gt; | 0
+&lt;D&gt;  ::= 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9
+</pre>
+<pre>
+&lt;Eq&gt; ::= &lt;Ex&gt; = &lt;Ex&gt;
+&lt;Ex&gt; ::= &lt;T&gt; | &lt;Ex&gt; + &lt;T&gt; | &lt;Ex&gt; - &lt;T&gt;
+&lt;T&gt;  ::= &lt;N&gt; | &lt;T&gt; &times; &lt;N&gt; | &lt;T&gt; &divide; &lt;N&gt;
+&lt;N&gt;  ::= &lt;D&gt; | &lt;N&gt &lt;D&gt;
+&lt;D&gt;  ::= 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9
+</pre>
+-->
+
+<pre>
+&lt;Eq&gt; ::= &lt;Ex&gt; = &lt;Ex&gt;
+&lt;Ex&gt; ::= &lt;N0&gt; | &lt;Ex&gt; &lt;Op&gt; &lt;N0&gt; 
+&lt;N0&gt; ::= &lt;N&gt; | 0
+&lt;N&gt;  ::= &lt;D&gt; | &lt;N&gt &lt;D&gt; | &lt;N&gt; 0
+&lt;Op&gt; ::= + | - | &times; | &divide;
+&lt;D&gt;  ::= 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9
+</pre>
+
+
+
+
+<p>
+Of course, puzzle creators must make solvable puzzle.
+Your task is to write a program which verifies whether given puzzle is solvable or not.
+</p>
+
+
+<H2>Input</H2>
+
+<p>
+Input consists of several datasets. Each dataset consists of:
+</p>
+
+<pre>
+<i>H W</i>
+<i>H</i> &times; <i>W</i> characters
+<i>n</i>
+<i>n</i> characters
+</pre>
+
+<p>
+The integers <i>H</i> and <i>W</i> are the numbers of rows and columns of the grid, respectively. <i>H</i> &times; <i>W</i> characters denote the grid which contains '<span>.</span>' representing a blank cell, '<span>#</span>' representing a black cell, numbers (from <span>0</span> to <span>9</span> inclusive), operators('<span>+</span>','<span>-</span>', '<span>*</span>', '<span>/</span>', '<span>=</span>')(<span>&times;</span> is represented by '<span>*</span>' and <span>&divide;</span> is represented by '<span>/</span>').
+</p>
+
+<p>
+The integer <i>n</i> is the number of characters in the list. The last line of a dataset contains <i>n</i> characters indicating numbers and operators for the blank cells.
+</p>
+
+<p>
+The end of input is indicated by a line containing two zeros separated by a space.
+</p>
+
+<H2>Output</H2>
+
+<p>
+For each dataset, print "<span>Yes</span>" if the given puzzle is solvable, "<span>No</span>" if not.
+</p>
+
+<H2>Constraints</H2>
+<ul>
+<li>Judge data includes at most 100 data sets.</li>
+<li><i>H</i>, <i>W</i> &le; 10</li>
+<li><i>n</i> &le; 10</li>
+</ul>
+
+<H2>Sample Input</H2>
+<pre>
+5 5
+4=..2
++#=#+
+.-2=.
+=#*#=
+.-.=3
+6
+7 3 1 4 / 8
+1 6
+8..3=2
+2
+2 +
+0 0
+</pre>
+
+<H2>Output for the Sample Input</H2>
+<pre>
+Yes
+No
+</pre>
+

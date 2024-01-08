@@ -1,0 +1,56 @@
+
+
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: { inlineMath: [['\\(','\\)']] }
+  });
+</script>
+<script type='text/javascript' src='http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
+
+<h1 class="ndoc-heading1">Problem D: Change</h1>
+<p class="ndoc-top">ICPC World Finals 2日目</p>
+<p class="ndoc-top">ティー氏らは空港のターミナルについた。 これから飛行機を乗り継ぎ敵地R国に乗り込むのである。 我々はD国を経由するため、手持ちのお金を2種類の通貨に両替せねばならない。</p>
+<p class="ndoc-top">ケー氏「ティーさんはどのように両替しますか？」</p>
+<p class="ndoc-top">ティー氏「ハフハフハフハフハフハフハフハフ」</p>
+<p class="ndoc-top">ケー氏「なるほど。私も20,000円をD国用に5,000円、R国用に15,000円割り振ろうと思います」</p>
+<p class="ndoc-top">ティー氏「ハフハフハフハフハフハフハフハフ」</p>
+<p class="ndoc-top">ケー氏「あれ？変ですね。両替結果が私と違いますね…。」</p>
+<h2 class="ndoc-heading2">問題</h2>
+<p class="ndoc-top">ある旅行者は、日本を旅立ち、D国（通貨単位D）、R国（通貨単位R）を観光し、日本に帰ってくることを考えている。 今、\( M \)円持っている。 \( c_{D} \)[D]、\( c_{R} \)[R]を各国で消費することが分かっているので、 お金が不足しないように両替したい。 \( x \)円をD国のお金に両替すると\( \lfloor \frac{r_{D}x}{100} \rfloor \)[D]に、 \( x \)円をR国のお金に両替すると\( \lfloor \frac{r_{R}x}{100} \rfloor \)[R]になる。</p>
+<p class="ndoc-top">例えば、 \( r_{D}=11, c_{D}=10 \)の時に 150円をD国のお金に両替すると\( \lfloor \frac{11 \times 150}{100} \rfloor = \)16[D]になるためお金は不足しない。 しかし、50円しか両替しないと5[D]になり10[D]に満たないためお金が不足する。</p>
+<p class="ndoc-top">また、帰国時には手持ちのお金を全て日本円に両替する。 \( x \)[D]を日本円に両替すると\( \lfloor \frac{100x}{r_{D}} \rfloor \)円に、 \( x \)[R]を日本円に両替すると\( \lfloor \frac{100x}{r_{R}} \rfloor \)円になる。</p>
+<p class="ndoc-top">先の1つ目の例では、 得られた16[D]のうち10[D]を消費するため6[D]余る。 これを日本円に両替すると\( \lfloor \frac{100 \times 6}{11} \rfloor = 54\)円になる。</p>
+<p class="ndoc-top">出国時に日本円の最適な両替を行った時、帰国時に最終的に手元に戻ってくる日本円の最大額を求めよ。 いかなる両替を行なっても、D国またはR国のいずれかでお金が不足する場合には&quot;-1&quot;と出力せよ。</p>
+<p class="ndoc-top">※\( \lfloor x \rfloor \)は、\(x\)を超えない最大の整数を表す。</p>
+<h2 class="ndoc-heading2">入力</h2>
+  <pre>M r<sub>D</sub> r<sub>R</sub> c<sub>D</sub> c<sub>R</sub>
+</pre><p>1行目に 現在手持ちの日本円の額\(M\)、 日本円とD国の通貨単位との両替レート\( r_{D} \)、 日本円とR国の通貨単位との両替レート\( r_{R} \)、 D国でのお金の消費額\( c_{D} \)、 R国でのお金の消費額\( c_{R} \)が空白区切りで与えられる。
+</p>
+<h2 class="ndoc-heading2">出力</h2>
+<p class="ndoc-top">手元に戻ってくる日本円の最大額を1行に出力せよ。 いかなる両替を行なっても、D国またはR国のいずれかでお金が不足する場合は&quot;-1&quot;を出力せよ。</p>
+<h2 class="ndoc-heading2">制約</h2>
+<ul class="ndoc-indent">
+  <li>\( 0 \leq M \leq 10^{12}(= 1000000000000) \)
+  <li>\( 1 \leq r_{D}, r_{R} \leq 100 \)
+  <li>\( 0 \leq c_{D}, c_{R} \leq 10^{12}(= 1000000000000) \)
+</ul>
+<h2 class="ndoc-heading2">入出力例</h2>
+<h3 class="ndoc-heading3">入力1</h3>
+<pre>20000 3 1 20 100
+</pre>
+<h3 class="ndoc-heading3">出力1</h3>
+<pre>9333
+</pre><p>667円をD国のお金に、10,000円をR国のお金に変換すれば、それぞれ20[D]、100[R]が得られる。</p>
+<h3 class="ndoc-heading3">入力2</h3>
+<pre>1000000000000 3 1 20 100
+</pre>
+<h3 class="ndoc-heading3">出力2</h3>
+<pre>999999989333
+</pre><p>この旅行者は大金持ちである。</p>
+<h3 class="ndoc-heading3">入力3</h3>
+<pre>0 3 1 20 100
+</pre>
+<h3 class="ndoc-heading3">出力3</h3>
+<pre>-1
+</pre><p>この旅行者は一文無しであり、どこにも行けない。</p>

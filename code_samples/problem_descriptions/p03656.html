@@ -1,0 +1,99 @@
+<span class="lang-en">
+<p>Score : <var>1700</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>There are two rooted trees, each with <var>N</var> vertices.
+The vertices of each tree are numbered <var>1</var> through <var>N</var>.
+In the first tree, the parent of Vertex <var>i</var> is Vertex <var>A_i</var>.
+Here, <var>A_i=-1</var> if Vertex <var>i</var> is the root of the first tree.
+In the second tree, the parent of Vertex <var>i</var> is Vertex <var>B_i</var>.
+Here, <var>B_i=-1</var> if Vertex <var>i</var> is the root of the second tree.</p>
+<p>Snuke would like to construct an integer sequence of length <var>N</var>, <var>X_1</var> , <var>X_2</var> , <var>...</var> , <var>X_N</var>, that satisfies the following condition:</p>
+<ul>
+<li>For each vertex on each tree, let the indices of its descendants including itself be <var>a_1</var> , <var>a_2</var> , <var>...</var>, <var>a_k</var>. Then, <var>abs(X_{a_1} + X_{a_2} + ... + X_{a_k})=1</var> holds.</li>
+</ul>
+<p>Determine whether it is possible to construct such a sequence. If the answer is possible, find one such sequence.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 \leq N \leq 10^5</var></li>
+<li><var>1 \leq A_i \leq N</var>, if Vertex <var>i</var> is not the root in the first tree.</li>
+<li><var>A_i = -1</var>, if Vertex <var>i</var> is the root in the first tree.</li>
+<li><var>1 \leq B_i \leq N</var>, if Vertex <var>i</var> is not the root in the second tree.</li>
+<li><var>B_i = -1</var>, if Vertex <var>i</var> is the root in the second tree.</li>
+<li>Input corresponds to valid rooted trees.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+<var>A_1</var> <var>A_2</var> <var>..</var> <var>A_N</var>
+<var>B_1</var> <var>B_2</var> <var>..</var> <var>B_N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>If it is not possible to construct an integer sequence that satisfies the condition, print <code>IMPOSSIBLE</code>.
+If it is possible, print <code>POSSIBLE</code> in the first line.
+Then, in the second line, print <var>X_1</var> , <var>X_2</var> , <var>...</var> , <var>X_N</var>, an integer sequence that satisfies the condition.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>5
+3 3 4 -1 4
+4 4 1 -1 1
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>POSSIBLE
+1 -1 -1 3 -1
+</pre>
+<p>For example, the indices of the descendants of Vertex <var>3</var> of the first tree including itself, is <var>3,1,2</var>.
+It can be seen that the sample output holds <var>abs(X_3+X_1+X_2)=abs((-1)+(1)+(-1))=abs(-1)=1</var>.
+Similarly, the condition is also satisfied for other vertices.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>6
+-1 5 1 5 1 3
+6 5 5 3 -1 3
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>IMPOSSIBLE
+</pre>
+<p>In this case, constructing a sequence that satisfies the condition is <code>IMPOSSIBLE</code>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>8
+2 7 1 2 2 1 -1 4
+4 -1 4 7 4 4 2 4
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>POSSIBLE
+1 2 -1 0 -1 1 0 -1
+</pre></section>
+</div>
+</span>

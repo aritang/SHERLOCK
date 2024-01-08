@@ -1,0 +1,49 @@
+
+
+
+<h1>E : Sigma / Σ</h1>
+
+<h1>Problem</h1>
+<p>小学生のづあい君は同じ足し算にも得意不得意があり、 0 以上の整数 <em>X</em>, <em>Y</em> に対して、<em>X</em> + <em>Y</em> を計算するのにかかる時間(秒)が次のように決まる。</p>
+<ul>
+<li>1 の位から順番に計算していく。</li>
+<li>10 進数表記で 10<sup><em>i</em></sup> 位の計算には <em>x<sub>i</sub></em> × <em>y<sub>i</sub></em> + <em>c<sub>i</sub></em> 秒かかる。
+<ul>
+  <li><em>x<sub>i</sub></em> は <em>X</em> の10進数表記で 10<sup><em>i</em></sup> の位の数である。</li>
+  <li><em>y<sub>i</sub></em> は <em>Y</em> の10進数表記で 10<sup><em>i</em></sup> の位の数である。</li>
+  <li>ただし <em>i</em> が <em>X</em> の桁数より大きくなる時は <em>x<sub>i</sub></em> = 0 とする。<em>Y</em> についても同様である。</li>
+  <li><em>c<sub>i</sub></em> は、 <em>i</em> = 0 または <em>x<sub>i-1</sub></em> + <em>y<sub>i-1</sub></em> + <em>c<sub>i-1</sub></em> &lt; 10 ならば 0、 そうでなければ 1 である。</li>
+</ul></li>
+<li>0 以上の整数 i についての <em>x<sub>i</sub></em> × <em>y<sub>i</sub></em> + <em>c<sub>i</sub></em> の総和が <em>X</em> + <em>Y</em> の計算にかかる時間である。</li>
+</ul>
+<p>ある日、づあい君の先生は長さ <em>N</em> の整数列 <em>a<sub>0</sub></em>, ... , <em>a<sub>N-1</sub></em> の和を計算する宿題を出した。づあい君は数列の順番を並び替えることはできないが、足し算の式に括弧を付けることにより、足し算の順番を自由に変えることができる。例えば <em>N</em> = 4 の場合、順番は次の 5 通りある。</p>
+<ul>
+  <li>((<em>a<sub>0</sub></em> + <em>a<sub>1</sub></em>) + <em>a<sub>2</sub></em>) + <em>a<sub>3</sub></em></li>
+  <li>(<em>a<sub>0</sub></em> + <em>a<sub>1</sub></em>) + (<em>a<sub>2</sub></em> + <em>a<sub>3</sub></em>)</li>
+  <li>(<em>a<sub>0</sub></em> + (<em>a<sub>1</sub></em> + <em>a<sub>2</sub></em>)) + <em>a<sub>3</sub></em></li>
+  <li><em>a<sub>0</sub></em> + ((<em>a<sub>1</sub></em> + <em>a<sub>2</sub></em>) + <em>a<sub>3</sub></em>)</li>
+  <li><em>a<sub>0</sub></em> + (<em>a<sub>1</sub></em> + (<em>a<sub>2</sub></em> + <em>a<sub>3</sub></em>))</li>
+</ul>
+<p>それぞれの括弧 (<em>x</em> + <em>y</em>) の中で上で説明した時間がかかるとすると、総和を求めるのにかかる時間は最小で何秒になるだろうか。</p>
+<h1>Input</h1>
+<p>入力は次のような形式で与えられる。</p>
+<p><em>N</em><br><em>a<sub>0</sub></em> <em>a<sub>1</sub></em> ... <em>a<sub>N-1</sub></em></p>
+<h1>Constraints</h1>
+<ul>
+<li>入力はすべて整数である。</li>
+<li>2 ≦ <em>N</em> ≦ 300</li>
+<li>0 ≦ <em>a<sub>i</sub></em> ≦ 1,000,000</li>
+</ul>
+<h1>Output</h1>
+<p>答えの秒数を1行で出力せよ。</p>
+<h1>Samples</h1>
+<h2>Sample Input 1</h2>
+<pre>3
+1 2 3</pre>
+<h2>Sample Output 1</h2>
+<pre>11</pre>
+<p>次のように計算すると最も速い。</p>
+<ul>
+<li>2 + 3 = 5 ( 2 × 3 = 6 秒かかる)</li>
+<li>1 + 5 = 6 ( 1 × 5 = 5 秒かかる)</li>
+</ul>

@@ -1,0 +1,72 @@
+
+<h1>Connect</h1>
+<p>You are playing a solitaire puzzle called &quot;Connect&quot;, which uses several letter tiles.
+</p>
+<p>There are <var>R &times; C</var> empty cells.
+For each <var>i</var> <var>(1 &le; i &le; R)</var>, you must put a string <var>s<sub>i</sub></var> <var>(1 &le; |s<sub>i</sub>| &le; C)</var> in the <var>i</var>-th row of the table, without changing  the letter order.
+In other words, you choose an integer sequence <var>{a<sub>j</sub>}</var> such that
+<var>1 &le; a<sub>1</sub> &lt; a<sub>2</sub> &lt; ... &lt; a<sub>|s<sub>i</sub>|</sub> &le; C</var>
+, and put the <var>j</var>-th character of the string <var>s<sub>i</sub></var> in the <var>a<sub>j</sub></var>-th column <var>(1 &le; j &le; |s<sub>i</sub>|)</var>.
+</p>
+<p>For example, when <var>C = 8</var> and <var>s<sub>i</sub> =</var> &quot;ICPC&quot;, you can put <var>s<sub>i</sub></var> like followings.
+</p><pre>I_C_P_C_
+ICPC____
+_IC___PC
+</pre><p>'_' represents an empty cell.
+</p>
+<p>For each non-empty cell <var>x</var>, you get a point equal to the number of adjacent cells which have the same character as <var>x</var>.
+Two cells are adjacent if they share an edge.
+</p>
+<p>Calculate the maximum total point you can get.
+</p>
+
+<h2>Input</h2>
+<p>The first line contains two integers <var>R</var> and <var>C</var> <var>(1 &le; R &le; 128, 1 &le; C &le; 16)</var>.
+</p>
+<p> Then <var>R</var> lines follow, each of which contains <var>s<sub>i</sub></var>
+ <var>(1 &le; |s<sub>i</sub>| &le; C)</var>.
+All characters of <var>s<sub>i</sub></var> are uppercase letters.
+</p>
+
+<h2>Output</h2>
+<p>Output the maximum total point in a line.
+</p>
+
+<h2>Sample Input 1</h2>
+
+<pre>2 4
+ACM
+ICPC
+</pre>
+
+<h2>Output for the Sample Input 1</h2>
+
+<pre>2
+</pre>
+
+<h2>Sample Input 2</h2>
+
+<pre>2 9
+PROBLEMF
+CONNECT
+</pre>
+
+<h2>Output for the Sample Input 2</h2>
+
+<pre>6
+</pre>
+
+<h2>Sample Input 3</h2>
+
+<pre>4 16
+INTERNATIONAL
+COLLEGIATE
+PROGRAMMING
+CONTEST
+</pre>
+
+
+<h2>Output for the Sample Input 3</h2>
+
+<pre>18
+</pre>

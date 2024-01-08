@@ -1,0 +1,84 @@
+<h1>Problem I: Sum of Last Digits</h1>
+<h2>Problem</h2>
+
+<p>
+3つの整数 <var>n</var>, <var>m</var>, <var>k</var> が与えられるので<br>
+<br>
+<b>
+<var>n</var><sup>1</sup>%10 &nbsp;+ &nbsp;<var>n</var><sup>1+<var>m</var></sup>%10 &nbsp;+ &nbsp;<var>n</var><sup>1+2<var>m</var></sup>%10 &nbsp;+ ... + &nbsp;<var>n</var><sup>1+(<var>k</var>-1)<var>m</var></sup>%10
+</b>
+<br>
+<br>
+を計算せよ。 <var>a % b</var> は <var>a</var> を <var>b</var> で割ったときの余りを表す。
+</p>
+
+<h2>Input</h2>
+
+<pre>
+<var>n</var> <var>m</var> <var>k</var>
+</pre>
+
+<p>
+1行に <var>n</var>, <var>m</var>, <var>k</var> が与えられる。
+</p>
+
+<h2>Constraints</h2>
+入力は以下の条件を満たす
+<ul>
+<li>0 &le; <var>n</var> &le; 10<sup>18</sup></li>
+<li>0 &le; <var>m</var> &le; 10<sup>9</sup></li>
+<li>1 &le; <var>k</var> &le; 10<sup>9</sup></li>
+</ul>
+
+<h2>Output</h2>
+<p>答えを1行に出力せよ。</p>
+
+<h2>Sample Input 1</h2>
+<pre>
+1 1 9
+</pre>
+
+<h2>Sample Output 1</h2>
+<pre>
+9
+</pre>
+
+<h2>Sample Input 2</h2>
+<pre>
+2 1 3
+</pre>
+
+<h2>Sample Output 2</h2>
+<pre>
+14
+</pre>
+
+<h2>Sample Input 3</h2>
+<pre>
+6 11 11
+</pre>
+
+<h2>Sample Output 3</h2>
+<pre>
+66
+</pre>
+
+<h2>Sample Input 4</h2>
+<pre>
+100 7 12
+</pre>
+
+<h2>Sample Output 4</h2>
+<pre>
+0
+</pre>
+
+<h2>Sample Input 5</h2>
+<pre>
+123 123 3
+</pre>
+
+<h2>Sample Output 5</h2>
+<pre>
+11
+</pre>

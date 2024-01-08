@@ -1,0 +1,75 @@
+<H1><font color="#000">Problem I:</font> Wind Passages</H1>
+
+<p>
+Wind Corridor is a covered passageway where strong wind is always blowing. It is a long corridor of
+width W, and there are several pillars in it. Each pillar is a right prism and its face is a polygon (not
+necessarily convex).
+</p>
+<p>
+In this problem, we consider two-dimensional space where the positive <i>x</i>-axis points the east and the
+positive <i>y</i>-axis points the north. The passageway spans from the south to the north, and its length is
+infinity. Specifically, it covers the area 0 &le; <i>x</i> &le; <i>W</i>. The outside of the passageway is filled with walls.
+Each pillar is expressed as a polygon, and all the pillars are located within the corridor without conflicting
+or touching each other.
+</p>
+<p>
+Wind blows from the south side of the corridor to the north. For each second, <i>w</i> unit volume of air can
+be flowed at most if the minimum width of the path of the wind is <i>w</i>. Note that the path may fork and
+merge, but never overlaps with pillars and walls.
+</p>
+<p>
+Your task in this problem is to write a program that calculates the maximum amount of air that can be
+flowed through the corridor per second.
+</p>
+
+<H2>Input</H2>
+
+<p>
+The input consists of multiple datasets. Each dataset has the following format:
+</p>
+
+<p>
+The first line of the input contains two integers <i>W</i> and <i>N</i>. <i>W</i> is the width of the corridor, and <i>N</i> is the
+number of pillars. <i>W</i> and <i>N</i> satisfy the following condition: 1 &le; <i>W</i> &le; 10<sup>4</sup> and 0 &le; <i>N</i> &le; 200.
+</p>
+<p>
+Then, <i>N</i> specifications of each pillar follow. Each specification starts with a line that contains a single
+integer <i>M</i>, which is the number of the vertices of a polygon (3 &le; <i>M</i> &le; 40). The following <i>M</i> lines describe the shape of the polygon. The <i>i</i>-th line (1 &le; <i>i</i> &le; <i>M</i>) contains two integers <i>x<sub>i</sub></i> and <i>y<sub>i</sub></i> that denote the coordinate of the <i>i</i>-th vertex (0 &lt; <i>x<sub>i</sub></i> &lt; <i>W</i>, 0 &lt; <i>y<sub>i</sub></i> &lt; 10<sup>4</sup>).
+</p>
+
+<p>
+The last dataset is followed by a line containing two zeros. This line is not a part of any dataset and should not be processed.
+</p>
+
+
+<H2>Output</H2>
+
+<p>
+For each dataset, your program should print a line that contains the maximum amount of air flow per second, in unit
+volume. The output may contain arbitrary number of digits after the decimal point, but the absolute error
+must not exceed 10<sup>-6</sup>.
+</p>
+
+<H2>Sample Input</H2>
+<pre>
+5 2
+4
+1 1
+1 2
+2 2
+2 1
+4
+3 3
+3 4
+4 4
+4 3
+0 0
+</pre>
+
+<H2>Output for the Sample Input</H2>
+<pre>
+3.41421356
+</pre>
+
+
+

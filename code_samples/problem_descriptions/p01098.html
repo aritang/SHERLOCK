@@ -1,0 +1,252 @@
+
+<h3>Deciphering Characters</h3>
+
+
+<p>
+Image data which are left by a mysterious syndicate were discovered. 
+You are requested to analyze the data.
+The syndicate members used characters invented independently. 
+A binary image corresponds to one character written in black ink on white paper.
+</p>
+
+<p>
+Although you found many variant images that represent the same character, 
+you discovered that you can judge whether or not two images represent the same character with the surrounding relation of connected components. We present some definitions as follows.  Here, we assume that white pixels fill outside of the given image.
+<ul>
+<li> <b>White connected component</b> : A set of white pixels connected to each other horizontally or vertically (see below).</li>
+<li> <b>Black connected component</b> : A set of black pixels connected to each other horizontally, vertically, or diagonally (see below).</li>
+<li> <b>Connected component</b> : A white or a black connected component.</li>
+<li> <b>Background component</b> : The connected component including pixels outside of the image. Any white pixels on the periphery of the image are thus included in the background component.</li>
+</ul>
+</p>
+
+<p align="center">
+<table>
+<tr>
+<td><img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_ICPCDomestic2016_F1_3"></td>
+<td><img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_ICPCDomestic2016_F1_4"></td>
+<td><img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_ICPCDomestic2016_F1_1"></td>
+<td><img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_ICPCDomestic2016_F1_2"></td>
+</tr>
+
+<tr>
+<td align="center">connected</td>
+<td align="center">disconnected</td>
+<td align="center">connected</td>
+<td align="center">connected</td>
+</tr>
+<tr>
+<td align="center" colspan="2">Connectedness of white pixels &nbsp;&nbsp;&nbsp;&nbsp;</td>
+<td align="center" colspan="2">Connectedness of black pixels</td>
+</tr>
+
+
+</table>
+</p>
+
+
+<p>
+Let <i>C<sub>1</sub></i> be a connected component in an image and <i>C<sub>2</sub></i> be another connected component in the same image with the opposite color.
+Let's think of a modified image in which colors of all pixels not included in <i>C<sub>1</sub></i> nor <i>C<sub>2</sub></i> are changed to that of <i>C<sub>2</sub></i>. If neither <i>C<sub>1</sub></i> nor <i>C<sub>2</sub></i> is the background component, the color of the background component is changed to that of <i>C<sub>2</sub></i>. We say that <b><i>C<sub>1</sub></i> surrounds <i>C<sub>2</sub></i></b> in the original image when pixels in <i>C<sub>2</sub></i> are not included in the background component in the modified image. (see below)
+</p>
+
+
+<p align="center">
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_ICPCDomestic2016_F5">
+</p>
+
+<p>
+Two images represent the same character if both of the following conditions are satisfied.
+<ul>
+<li> The two images have the same number of connected components.</li>
+<li> Let  <i>S</i> and <i>S'</i> be the sets of connected components of the two images.   A bijective function <i>f</i>  :  <i>S &rarr; S'</i> satisfying the following conditions exists.</li>
+<ul>
+ <li> For each connected component <i>C</i> that belongs to <i>S</i>, <i>f</i> (<i>C</i>) has the same color as <i>C</i>. </li>
+ <li> For each of <i>C<sub>1</sub></i> and <i>C<sub>2</sub></i> belonging to <i>S</i>, <i>f</i> (<i>C<sub>1</sub></i>) surrounds <i>f</i> (<i>C<sub>2</sub></i>) if and only if <i>C<sub>1</sub></i> surrounds <i>C<sub>2</sub></i>.</li>
+</ul>
+</ul>
+</p>
+
+<p>
+Let's see an example. Connected components in the images of the figure below has the following surrounding relations.
+<ul>
+<li> <i>C<sub>1</sub></i> surrounds <i>C<sub>2</sub></i>.</li>
+<li> <i>C<sub>2</sub></i> surrounds <i>C<sub>3</sub></i>.</li>
+<li> <i>C<sub>2</sub></i> surrounds <i>C<sub>4</sub></i>.</li>
+<li> <i>C'<sub>1</sub></i> surrounds <i>C'<sub>2</sub></i>.</li>
+<li> <i>C'<sub>2</sub></i> surrounds <i>C'<sub>3</sub></i>.</li>
+<li> <i>C'<sub>2</sub></i> surrounds <i>C'<sub>4</sub></i>.</li>
+</ul>
+A bijective function defined as <i>f</i> (<i>C<sub>i</sub></i>) = <i>C'<sub>i</sub></i> for each connected component satisfies the conditions stated above.  Therefore, we can conclude that the two images represent the same character.
+</p>
+
+
+<p align="center">
+<table>
+<tr>
+<td><img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_ICPCDomestic2016_F2_2"></td>
+<td><img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_ICPCDomestic2016_F2_1"></td>
+</tr>
+</table>
+</p>
+
+
+<p>
+Make a program judging whether given two images represent the same character.
+</p>
+
+
+<h3>Input</h3>
+
+
+<p>
+The input consists of at most 200 datasets. The end of the input is represented by a line containing two zeros. Each dataset is formatted as follows.
+</p>
+
+<p>
+image 1<br>
+image 2
+</p>
+<p>
+Each image has the following format.
+</p>
+
+<p>
+
+<i>h</i> <i>w</i><br>
+<i>p</i><sub>(1,1)</sub> ... <i>p</i><sub>(1,<i>w</i>)</sub><br>
+...<br>
+<i>p</i><sub>(<i>h</i>,1)</sub> ... <i>p</i><sub>(<i>h</i>,<i>w</i>)</sub><br>
+
+</p>
+
+<p>
+<i>h</i> and <i>w</i> are the height and the width of the image in numbers of pixels.
+You may assume that  1 &le; <i>h</i> &le; 100 and 1 &le; <i>w</i> &le; 100.
+
+Each of the following <i>h</i> lines consists of <i>w</i> characters. 
+<i>p</i><sub>(<i>y,x</i>)</sub> is a character representing the color
+of the pixel in the <i>y</i>-th row from the top and the <i>x</i>-th column from the left.
+Characters are either a period ("<tt>.</tt>") meaning white or a sharp sign ("<tt>#</tt>") meaning black.
+</p>
+
+
+<h3>Output</h3>
+
+
+<p>
+For each dataset, output "<tt>yes</tt>" if the two images represent the same character, or output "<tt>no</tt>", otherwise, in a line. The output should not contain extra characters.
+</p>
+
+
+<h3>Sample Input</h3>
+
+
+<pre>
+3 6
+.#..#.
+#.##.#
+.#..#.
+8 7
+.#####.
+#.....#
+#..#..#
+#.#.#.#
+#..#..#
+#..#..#
+.#####.
+...#...
+3 3
+#..
+...
+#..
+3 3
+#..
+.#.
+#..
+3 3
+...
+...
+...
+3 3
+...
+.#.
+...
+3 3
+.#.
+#.#
+.#.
+3 3
+.#.
+###
+.#.
+7 7
+.#####.
+#.....#
+#..#..#
+#.#.#.#
+#..#..#
+#.....#
+.#####.
+7 7
+.#####.
+#.....#
+#..#..#
+#.#.#.#
+#..#..#
+#..#..#
+.#####.
+7 7
+.#####.
+#.....#
+#..#..#
+#.#.#.#
+#..#..#
+#.....#
+.#####.
+7 11
+.#####.....
+#.....#....
+#..#..#..#.
+#.#.#.#.#.#
+#..#..#..#.
+#.....#....
+.#####.....
+7 3
+.#.
+#.#
+.#.
+#.#
+.#.
+#.#
+.#.
+7 7
+.#####.
+#..#..#
+#..#..#
+#.#.#.#
+#..#..#
+#..#..#
+.#####.
+3 1
+#
+#
+.
+1 2
+#.
+0 0
+</pre>
+
+<h3>Output for the Sample Input</h3>
+
+
+<pre>
+yes
+no
+no
+no
+no
+no
+yes
+yes
+</pre>

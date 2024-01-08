@@ -1,0 +1,112 @@
+<span class="lang-en">
+<p>Score : <var>300</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>A railroad running from west to east in Atcoder Kingdom is now complete.</p>
+<p>There are <var>N</var> stations on the railroad, numbered <var>1</var> through <var>N</var> from west to east.</p>
+<p>Tomorrow, the opening ceremony of the railroad will take place.</p>
+<p>On this railroad, for each integer <var>i</var> such that <var>1≤i≤N-1</var>, there will be trains that run from Station <var>i</var> to Station <var>i+1</var> in <var>C_i</var> seconds. No other trains will be operated.</p>
+<p>The first train from Station <var>i</var> to Station <var>i+1</var> will depart Station <var>i</var> <var>S_i</var> seconds after the ceremony begins. Thereafter, there will be a train that departs Station <var>i</var> every <var>F_i</var> seconds.</p>
+<p>Here, it is guaranteed that <var>F_i</var> divides <var>S_i</var>.</p>
+<p>That is, for each Time <var>t</var> satisfying <var>S_i≤t</var> and <var>t％F_i=0</var>, there will be a train that departs Station <var>i</var> <var>t</var> seconds after the ceremony begins and arrives at Station <var>i+1</var> <var>t+C_i</var> seconds after the ceremony begins, where <var>A％B</var> denotes <var>A</var> modulo <var>B</var>, and there will be no other trains.</p>
+<p>For each <var>i</var>, find the earliest possible time we can reach Station <var>N</var> if we are at Station <var>i</var> when the ceremony begins, ignoring the time needed to change trains.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1≤N≤500</var></li>
+<li><var>1≤C_i≤100</var></li>
+<li><var>1≤S_i≤10^5</var></li>
+<li><var>1≤F_i≤10</var></li>
+<li><var>S_i％F_i=0</var></li>
+<li>All input values are integers.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+<var>C_1</var> <var>S_1</var> <var>F_1</var>
+<var>:</var>
+<var>C_{N-1}</var> <var>S_{N-1}</var> <var>F_{N-1}</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print <var>N</var> lines. Assuming that we are at Station <var>i</var> <var>(1≤i≤N)</var> when the ceremony begins, if the earliest possible time we can reach Station <var>N</var> is <var>x</var> seconds after the ceremony begins, the <var>i</var>-th line should contain <var>x</var>.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>3
+6 5 1
+1 10 1
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>12
+11
+0
+</pre>
+<p>We will travel from Station <var>1</var> as follows:</p>
+<ul>
+<li><var>5</var> seconds after the beginning: take the train to Station <var>2</var>.</li>
+<li><var>11</var> seconds: arrive at Station <var>2</var>.</li>
+<li><var>11</var> seconds: take the train to Station <var>3</var>.</li>
+<li><var>12</var> seconds: arrive at Station <var>3</var>.</li>
+</ul>
+<p>We will travel from Station <var>2</var> as follows:</p>
+<ul>
+<li><var>10</var> seconds: take the train to Station <var>3</var>.</li>
+<li><var>11</var> seconds: arrive at Station <var>3</var>.</li>
+</ul>
+<p>Note that we should print <var>0</var> for Station <var>3</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>4
+12 24 6
+52 16 4
+99 2 2
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>187
+167
+101
+0
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>4
+12 13 1
+44 17 17
+66 4096 64
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>4162
+4162
+4162
+0
+</pre></section>
+</div>
+</span>

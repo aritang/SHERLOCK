@@ -1,0 +1,56 @@
+
+
+
+<h1>D : Chopsticks / 箸</h1>
+
+<h1>Problem</h1>
+<p>お箸は 2 本 1 セット(1 膳)で用いるものである。しかしあるとき一人暮らしの大学生であるいあづ君は箸立てに入っているお箸が奇数本であることに気がついた。これは明らかにおかしい。いつの間にか何本か無くしてしまったのである。
+困ったいあづ君は、今後このようなことが無いように箸の本数を毎日記録することにした。</p>
+<p>ところが、いあづ君が決めた記録の方法は少し変わっている。 それは、まず<em>M</em> 個の自然数 <em>A<sub>1</sub></em>, ... , <em>A<SUB>M</SUB></em> を決めた後、 箸の本数をそれらで割った余りを毎日記録するというものである。 例えばある日に残っている箸の本数が <em>T</em> のとき、 その日の記録として <em>T</em> % <em>A<sub>1</sub></em> , ... , <em>T</em> % <em>A<SUB>M</SUB></em> を付ける。 ただ、たまにいくつか記録し忘れたり、間違った記録を付けたりすることもあるようだ。 (<em>x</em> % <em>y</em> は <em>x</em> を <em>y</em> で割った余りである。)</p>
+<p>ここでいあづ君は大事なことに気づいた。 これだと最終日に何本残っているか 1 つに決まらない！</p>
+<p>ポジティブないあづ君は、 <em>D</em> 日分の記録をもとに、 <em>D</em> 日目の記録をつけた直後に残っている箸の本数の最大値を求めるプログラムを書くことにした。</p>
+<h1>Input</h1>
+<p>入力は次のような形式で与えられる．</p>
+<p><em>N</em> <em>M</em> <em>D</em><br><em>A<sub>1</sub></em> <em>A<sub>2</sub></em> ... <em>A<SUB>M</SUB></em><br><em>R<sub>11</sub></em> <em>R<sub>12</sub></em> ... <em>R<sub>1M</sub></em><br><em>R<sub>21</sub></em> <em>R<sub>22</sub></em> ... <em>R<sub>2M</sub></em><br>...<br><em>R<SUB>D1</SUB></em> <em>R<sub>12</sub></em> ... <em>R<SUB>DM</SUB></em></p>
+<ul>
+  <li><em>N</em>, <em>M</em>, <em>D</em> は、それぞれ記録を開始する直前にあったお箸の本数、余りを求めるのに使う整数の個数、記録をつけた日数である。<em>A<sub>1</sub></em> <em>A<sub>2</sub></em> ... <em>A<SUB>M</SUB></em> は余りを求めるのに使う整数である。</li>
+  <li>2 + <em>d</em> 行目の <em>R<sub>d1</sub></em>, <em>R<sub>d2</sub></em>, ... ,<em>R<sub>dM</sub></em> は、<em>d</em> 日目に残っているお箸の本数を <em>A<sub>1</sub></em>, <em>A<sub>2</sub></em>, ... ,<em>A<SUB>M</SUB></em> のそれぞれで割った余りである。<em>R<sub>di</sub></em> = -1 のときは、その記録を付け忘れたことを意味する。</li>
+</ul>
+<h1>Constraints</h1>
+<ul>
+<li>入力は全て整数である。</li>
+<li>1 ≦ <em>N</em> ≦ 1,000,000,000</li>
+<li>1 ≦ <em>M</em> ≦ 10</li>
+<li>1 ≦ <em>D</em> ≦ 100</li>
+<li>2 ≦ <em>A<sub>i</sub></em> ≦ 100</li>
+<li><em>i</em> ≠ <em>j</em> のとき <em>A<sub>i</sub></em> ≠ <em>A<sub>j</sub></em></li>
+<li>0 ≦ <em>R<sub>ij</sub></em> &lt; <em>A<sub>i</sub></em></li>
+<li><em>i</em> 日目に存在する箸の数は、<em>i</em> - 1 日目に存在していた箸の数と同等か、それより少なくなる。</li>
+</ul>
+<h1>Output</h1>
+<p><em>D</em> 日目に残っていると考えられる箸の数の最大値を 1 行で出力せよ。 記録に明らかに間違いがある場合は -1 を出力せよ。</p>
+<h1>Samples</h1>
+<h2>Sample Input 1</h2>
+<pre>3 3 2
+2 3 4
+1 0 3
+0 2 2</pre>
+<h2>Sample Output 1</h2>
+<pre>2</pre>
+<p>0 日目に 3 本あった箸は、 1 日目に 3 本、 2 日目に 2 本になったと考えられる。</p>
+<h2>Sample Input 2</h2>
+<pre>3 3 2
+2 3 4
+0 0 0
+0 0 1</pre>
+<h2>Sample Output 2</h2>
+<pre>-1</pre>
+<p>0 日目に 3 本あった箸は、 1 日目に 0 本になったと考えられる。ところが 2 日目の 4 で割った余りが1になっている。</p>
+<h2>Sample Input 3</h2>
+<pre>3 3 2
+2 3 4
+1 0 3
+-1 -1 -1</pre>
+<h2>Sample Output 3</h2>
+<pre>3</pre>
+<p>0 日目に 3 本あった箸は、 1 日目も 3 本あったと考えられる。2 日目は記録し忘れてしまった。</p>

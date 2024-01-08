@@ -1,0 +1,70 @@
+
+
+
+<H1>Carry a Cheese</H1>
+
+<p>
+Jerry is a little mouse. He is trying to survive from the cat Tom. Jerry is carrying a parallelepiped-like piece of cheese of size <i>A</i> &times; <i>B</i> &times; <i>C</i>. It is necessary to trail this cheese to the Jerry's house. There are several entrances in the Jerry's house. Each entrance is a rounded hole having its own radius <i>R</i>. Could you help Jerry to find suitable holes to be survive?
+
+</p>
+
+<p>
+Your task is to create a program which estimates whether Jerry can trail the cheese via each hole.
+The program should print "<span>OK</span>" if Jerry can trail the cheese via the corresponding hole (without touching it). Otherwise the program should print "<span>NA</span>".
+</p>
+<p>
+You may assume that the number of holes is less than 10000.
+</p>
+
+
+<H2>Input</H2>
+
+<p>
+The input is a sequence of datasets. The end of input is indicated by a line containing three zeros. Each dataset is formatted as follows:
+</p>
+<pre>
+<i>A B C</i>
+<i>n</i>
+<i>R</i><sub>1</sub>
+<i>R</i><sub>2</sub>
+
+ .
+ .
+<i>R</i><sub><i>n</i></sub>
+</pre>
+
+<p>
+<i>n</i> indicates the number of holes (entrances) and <i>R<sub>i</sub></i> indicates the radius of <i>i</i>-th hole.
+</p>
+
+
+<H2>Output</H2>
+
+<p>
+For each datasets, the output should have <i>n</i> lines. Each line points the result of estimation of the corresponding hole. 
+</p>
+
+<H2>Sample Input</H2>
+
+<pre>
+10 6 8
+5
+4
+8
+6
+2
+5
+0 0 0
+</pre>
+
+<H2>Output for the Sample Input</H2>
+
+<pre>
+NA
+OK
+OK
+NA
+NA
+</pre>
+
+

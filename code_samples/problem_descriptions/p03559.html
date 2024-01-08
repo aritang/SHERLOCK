@@ -1,0 +1,93 @@
+<span class="lang-en">
+<p>Score : <var>300</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>The season for Snuke Festival has come again this year. First of all, Ringo will perform a ritual to summon Snuke. For the ritual, he needs an altar, which consists of three parts, one in each of the three categories: upper, middle and lower.</p>
+<p>He has <var>N</var> parts for each of the three categories. The size of the <var>i</var>-th upper part is <var>A_i</var>, the size of the <var>i</var>-th middle part is <var>B_i</var>, and the size of the <var>i</var>-th lower part is <var>C_i</var>.</p>
+<p>To build an altar, the size of the middle part must be strictly greater than that of the upper part, and the size of the lower part must be strictly greater than that of the middle part. On the other hand, any three parts that satisfy these conditions can be combined to form an altar.</p>
+<p>How many different altars can Ringo build? Here, two altars are considered different when at least one of the three parts used is different.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 \leq N \leq 10^5</var></li>
+<li><var>1 \leq A_i \leq 10^9(1\leq i\leq N)</var></li>
+<li><var>1 \leq B_i \leq 10^9(1\leq i\leq N)</var></li>
+<li><var>1 \leq C_i \leq 10^9(1\leq i\leq N)</var></li>
+<li>All input values are integers.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+<var>A_1</var> <var>...</var> <var>A_N</var>
+<var>B_1</var> <var>...</var> <var>B_N</var>
+<var>C_1</var> <var>...</var> <var>C_N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the number of different altars that Ringo can build.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>2
+1 5
+2 4
+3 6
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>3
+</pre>
+<p>The following three altars can be built:</p>
+<ul>
+<li>Upper: <var>1</var>-st part, Middle: <var>1</var>-st part, Lower: <var>1</var>-st part</li>
+<li>Upper: <var>1</var>-st part, Middle: <var>1</var>-st part, Lower: <var>2</var>-nd part</li>
+<li>Upper: <var>1</var>-st part, Middle: <var>2</var>-nd part, Lower: <var>2</var>-nd part</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>3
+1 1 1
+2 2 2
+3 3 3
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>27
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>6
+3 14 159 2 6 53
+58 9 79 323 84 6
+2643 383 2 79 50 288
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>87
+</pre></section>
+</div>
+</span>

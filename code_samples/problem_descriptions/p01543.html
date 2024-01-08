@@ -1,0 +1,158 @@
+
+ 
+<h1>まるかいて</h1>
+<p>
+太郎君は小学生で、チラシの裏に落書きをしています。
+
+ある時、太郎君は次のゲームを思いつきました。
+</p>
+
+<ul>
+<li><var>n&times;n</var>の格子状のマス目を書いておきます。
+</li><li>それぞれのマス目の初期状態は、丸印が書かれているか、書かれていないかのどちらか一方です。
+</li><li>これらの丸印を消したり書いたりして最終的にどの一列を見ても必ずちょうど1つのみの丸印が、どの一行を見ても必ず1つのみの丸印が存在するようにすることが目標であり、この状態にすればゲームをクリアしたことになります。
+</li></ul>
+
+<p>
+太郎君はこのゲームを思いつきましたが、太郎君はこのゲームをクリアするのに大変時間がかかってしまいます。そこで、大学生であるあなたに助けを求めました。
+
+太郎君の兄であり大学生であるあなたの仕事は以下の通りです。<br>
+厳密な状況を考えるために、あるマス目に丸印を書き込むコスト、あるマス目にある丸印を消すコストをあなたは導き出しました。このコストを用いてこのゲームをクリアするためにかかる操作のコストを最小化するような手順を考える。
+このとき、最小のコストおよびそのコストを達成するような手順を出力するプログラムを書いてください。
+出力については、最小コストを達成する手順なら、どのような操作、順番でも出力してもよいものとする。
+</p>
+
+<h2>Input</h2>
+<blockquote>
+<var>n</var><br><var>W<sub>11</sub></var> <var>W<sub>12</sub></var> .. <var>W<sub>1n</sub></var><br><var>W<sub>21</sub></var> <var>W<sub>22</sub></var> .. <var>W<sub>2n</sub></var><br>..<br><var>W<sub>n1</sub></var> <var>W<sub>n2</sub></var> .. <var>W<sub>nn</sub></var><br><var>E<sub>11</sub></var> <var>E<sub>12</sub></var> .. <var>E<sub>1n</sub></var><br><var>E<sub>21</sub></var> <var>E<sub>22</sub></var> .. <var>E<sub>2n</sub></var><br>..<br><var>E<sub>n1</sub></var> <var>E<sub>n2</sub></var> .. <var>E<sub>nn</sub></var><br><var>F<sub>1</sub></var>(<var>n</var>文字)<br><var>F<sub>2</sub></var>(<var>n</var>文字)<br>..<br><var>F<sub>n</sub></var>(<var>n</var>文字)<br></blockquote>
+<ul>
+<li><var>n</var>は太郎君の作ったマス目が一辺にいくつあるかを表す
+</li><li><var>W<sub>ij</sub></var>は上から<var>i</var>番目、左から<var>j</var>番目のマス目に丸印を書き込むコストを表す
+</li><li><var>E<sub>ij</sub></var>は上から<var>i</var>番目、左から<var>j</var>番目のマス目に書かれてある丸印を消すコストを表す
+</li><li><var>F<sub>i</sub></var>は上から<var>i</var>番目の行のマス目の初期状態を表す
+</li><li><var>F<sub>i</sub></var>の左から<var>j</var>文字目について
+<ul>
+<li>'o'のとき、上から<var>i</var>番目、左から<var>j</var>番目のマス目に丸印が書かれてあることを表す。
+</li><li>'.'のとき、上から<var>i</var>番目、左から<var>j</var>番目のマス目が空白であることを表す。
+</li></ul>
+</li></ul>
+
+
+<h2>Constraints</h2>
+<blockquote>
+<var>1&le; n &le; 100</var><br><var>1&le; W<sub>ij</sub> &le; 1000</var><br><var>1&le; E<sub>ij</sub> &le; 1000 </var><br></blockquote>
+<ul>
+<li><var>F<sub>i</sub></var>は文字列であり、その長さは<var>n</var>である
+</li><li><var>F<sub>i</sub></var>は'o'と'.'のみで構成されている
+</li></ul>
+
+
+
+<h2>Output</h2>
+<blockquote>
+<var>mincost</var><br><var>cnt</var><br><var>R<sub>1</sub></var> <var>C<sub>1</sub></var> <var>operate<sub>1</sub></var><br><var>R<sub>2</sub></var> <var>C<sub>2</sub></var> <var>operate<sub>2</sub></var><br>..<br><var>R<sub>cnt</sub></var> <var>C<sub>cnt</sub></var> <var>operate<sub>cnt</sub></var><br></blockquote>
+
+<ul>
+<li><var>mincost</var>は、太郎君のゲームをクリアするために必要な最小コストを表す。
+</li><li><var>mincost</var>は書き込み操作、消去操作で発生するコストの総和で計算される。
+</li><li><var>cnt</var> : <var>mincost</var>のコストを達成する操作を行った回数を表す
+</li><li><var>k</var>回目<var>(1&le;k&le;cnt)</var>に実行する操作は<var>k+2</var>行目に記述する
+</li><li><var>k</var>回目<var>(1&le;k&le;cnt)</var>の操作に対して
+<ul>
+<li>上から<var>i</var>番目のマス目、左から<var>j</var>番目のマス目に対して行ったものとすると
+</li><li><var>R<sub>k</sub&ge;i , C<sub>k</sub&ge;j</var>である。
+</li><li>この操作が丸印を消す操作であるならば<var>operate<sub>k</sub></var> = &quot;erase&quot;とせよ
+</li><li>この操作が丸印を書き込む操作であるならば<var>operate<sub>k</sub></var> = &quot;write&quot;とせよ
+</li><li><var>R<sub>k</sub>,C<sub>k</sub>,operate<sub>k</sub></var>は一行に空白区切りで出力しなければならない
+</li></ul>
+</li><li>丸印の書かれてあるマス目に対して丸印を記述する操作、および丸印が書かれていないマス目に対して丸印を消去する操作をした場合はWrongAnswerである
+</li><li><var>cnt</var>個の操作にかかるコストの総和が<var>mincost</var>に一致しないときはWrongAnswerである
+</li></ul>
+
+
+<H2>Sample Input 1</H2>
+
+<pre>3
+1 1 1
+1 1 1
+1 1 1
+1 1 1 
+1 1 1
+1 1 1
+o.o
+...
+.o.
+</pre>
+
+<H2>Output for the Sample Input 1</H2>
+
+
+<pre>2
+2
+1 3 erase
+2 3 write
+</pre>
+<p>
+上から1番目、左から3番目のマス目の丸印を消去し、
+上から2番目、左から3番目のマス目に丸印を書き加えれば目標は達成できる。
+このときコストは2のみしかかからず、これが最小のコストである。
+</p>
+
+<H2>Sample Input 2</H2>
+
+<pre>4
+1 2 3 4 
+1 2 3 4 
+1 2 3 4 
+1 2 3 4
+1 2 3 4 
+1 2 3 4 
+1 2 3 4 
+1 2 3 4
+oooo
+oooo
+oooo
+oooo
+</pre>
+<H2>Output for the Sample Input 2</H2>
+
+<pre>30
+12
+1 1 erase
+1 2 erase
+1 3 erase
+2 1 erase
+2 2 erase
+2 4 erase
+3 1 erase
+3 3 erase
+3 4 erase
+4 2 erase
+4 3 erase
+4 4 erase
+</pre>
+<p>
+コスト(1+2+3+4)*3だけ消去処理をすればクリアとなります。
+</p>
+
+<H2>Sample Input 3</H2>
+
+<pre>3
+1 1 1
+1 1 1
+1 1 1
+1 1 1
+1 1 1
+1 1 1
+o..
+.o.
+..o
+</pre>
+<H2>Output for the Sample Input 3</H2>
+
+<pre>0
+0
+</pre>
+<p>
+すでに目標は達成されているため、コスト及び操作回数はともに0となる。
+</p>

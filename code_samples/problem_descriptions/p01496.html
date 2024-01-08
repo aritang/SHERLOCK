@@ -1,0 +1,83 @@
+
+<H1><font color="#000">Problem A: </font>Bicube</H1>
+
+<p>
+Mary Thomas has a number of sheets of squared paper. Some of squares are painted either in black or some <i>colorful</i> color (such as red and blue) on the front side. Cutting off the unpainted part, she will have eight opened-up unit cubes. A unit cube here refers to a cube of which each face consists of one square.
+</p>
+
+<p>
+She is going to build those eight unit cubes with the front side exposed and then a bicube with them. A bicube is a cube of the size 2 &times; 2 &times; 2, consisting of eight unit cubes, that satisfies the following conditions:
+</p>
+
+<ul>
+<li> faces of the unit cubes that comes to the inside of the bicube are all black;</li>
+<li> each face of the bicube has a uniform <i>colorful</i> color; and</li>
+<li> the faces of the bicube have colors all different.</li>
+</ul>
+
+<p>
+Your task is to write a program that reads the specification of a sheet of squared paper and decides whether a
+bicube can be built with the eight unit cubes resulting from it.
+</p>
+
+
+
+<H2>Input</H2>
+
+<p>
+The input contains the specification of a sheet. The first line contains two integers <i>H</i> and <i>W</i>, which denote the height and width of the sheet (3 &le; <i>H</i>, <i>W</i> &le; 50). Then H lines follow, each consisting of <i>W</i> characters. These lines show the squares on the front side of the sheet. A character represents the color of a grid: alphabets and digits ('A' to 'Z', 'a' to 'z', '0' to '9') for colorful squares, a hash ('#') for a black square, and a dot ('.') for an unpainted square. Each alphabet or digit denotes a unique color: squares have the same color if and only if they are represented by the same character.
+</p>
+
+<p>
+Each component of connected squares forms one opened-up cube. Squares are regarded as connected when they have a common edge; those just with a common vertex are not.
+</p>
+
+<H2>Output</H2>
+
+<p>
+Print "<span>Yes</span>" if a bicube can be built with the given sheet; "<span>No</span>" otherwise.
+</p>
+
+<H2>Sample Input 1</H2>
+<pre>
+3 40
+.a....a....a....a....f....f....f....f...
+#bc#.#cd#.#de#.#eb#.#cb#.#dc#.#ed#.#be#.
+.#....#....#....#....#....#....#....#...
+</pre>
+
+<H2>Output for the Sample Input 1</H2>
+<pre>
+Yes
+</pre>
+<br/>
+
+<H2>Sample Input 2</H2>
+<pre>
+5 35
+.a....a....a....a....f....f....f...
+#bc#.#cd#.#de#.#eb#.#cb#.#dc#.#ed#.
+.#..f.#....#....#....#....#....#...
+..e##..............................
+.b#................................
+</pre>
+
+<H2>Output for the Sample Input 2</H2>
+<pre>
+Yes
+</pre>
+<br/>
+
+<H2>Sample Input 3</H2>
+<pre>
+3 40
+.a....a....a....a....f....f....f....f...
+#bc#.#cd#.#de#.#eb#.#cb#.#dc#.#ed#.#eb#.
+.#....#....#....#....#....#....#....#...
+</pre>
+
+<H2>Output for the Sample Input 3</H2>
+<pre>
+No
+</pre>
+<br/>

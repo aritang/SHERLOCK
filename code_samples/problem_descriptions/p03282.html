@@ -1,0 +1,92 @@
+<span class="lang-en">
+<p>﻿Score: <var>300</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3>
+<p>Mr. Infinity has a string <var>S</var> consisting of digits from <code>1</code> to <code>9</code>. Each time the date changes, this string changes as follows:</p>
+<ul>
+<li>Each occurrence of <code>2</code> in <var>S</var> is replaced with <code>22</code>. Similarly, each <code>3</code> becomes <code>333</code>, <code>4</code> becomes <code>4444</code>, <code>5</code> becomes <code>55555</code>, <code>6</code> becomes <code>666666</code>, <code>7</code> becomes <code>7777777</code>, <code>8</code> becomes <code>88888888</code> and <code>9</code> becomes <code>999999999</code>. <code>1</code> remains as <code>1</code>.</li>
+</ul>
+<p>For example, if <var>S</var> is <code>1324</code>, it becomes <code>1333224444</code> the next day, and it becomes <code>133333333322224444444444444444</code> the day after next.
+You are interested in what the string looks like after <var>5 \times 10^{15}</var> days. What is the <var>K</var>-th character from the left in the string after <var>5 \times 10^{15}</var> days?</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3>
+<ul>
+<li><var>S</var> is a string of length between <var>1</var> and <var>100</var> (inclusive).</li>
+<li><var>K</var> is an integer between <var>1</var> and <var>10^{18}</var> (inclusive).</li>
+<li>The length of the string after <var>5 \times 10^{15}</var> days is at least <var>K</var>.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3>
+<p>Input is given from Standard Input in the following format:</p>
+<pre><var>S</var>
+<var>K</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3>
+<p>Print the <var>K</var>-th character from the left in Mr. Infinity's string after <var>5 \times 10^{15}</var> days.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>1214
+4
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>2
+</pre>
+<p>The string <var>S</var> changes as follows:  </p>
+<ul>
+<li>Now: <code>1214</code></li>
+<li>After one day: <code>12214444</code></li>
+<li>After two days: <code>1222214444444444444444</code></li>
+<li>After three days: <code>12222222214444444444444444444444444444444444444444444444444444444444444444</code></li>
+</ul>
+<p>The first five characters in the string after <var>5 \times 10^{15}</var> days is <code>12222</code>. As <var>K=4</var>, we should print the fourth character, <code>2</code>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>3
+157
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>3
+</pre>
+<p>The initial string is <code>3</code>. The string after <var>5 \times 10^{15}</var> days consists only of <code>3</code>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>299792458
+9460730472580800
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>2
+</pre></section>
+</div>
+</span>

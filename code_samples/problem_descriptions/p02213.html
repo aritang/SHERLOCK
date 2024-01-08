@@ -1,0 +1,122 @@
+<span class="lang">
+<span class="lang-ja">
+<h1>B: サイコロを転がさないで</h1>
+
+<div class="part">
+<section>
+<h3>問題文</h3><p>$H$ 行 $W$ 列からなるグリッドがあります。以降、グリッド上の $i$ 行目 $j$ 列目のマスを $(i, j)$ のマスと書きます。</p>
+<p>グリッドの各マスには、$1$ 以上 $6$ 以下の数字か、あるいは <code>#</code> の文字が $1$ つずつ書かれています。<span style="font-weight: bold;">ただし、$i$ と $j$ がともに偶数であるような $(i, j)$ のマスには必ず <code>#</code> が書かれています。</span></p>
+<p>あなたは以下の図で表されるようなサイコロを $1$ つ持っています。</p>
+<p><img alt="dice_picture" src="https://judgeapi.u-aizu.ac.jp/resources/images/kupc_2020_spring_rotating_dice.png" /></p>
+<p>最初、あなたはこのサイコロを底面が $6$, 前面が $2$, 右面が $3$ となるように $(1, 1)$ のマスに置きます。
+ここで、前面は $(i, j)$ の $i$ が増える方向の面を、右面は $j$ が増える方向の面を指します。</p>
+<p>その後、サイコロが置かれているマスに辺で隣接する $4$ マスのいずれかにサイコロを転がす操作を好きな回数繰り返すことができます。
+サイコロを転がす際、サイコロは転がす方向に90度回転します。</p>
+<p>ただし、サイコロを転がす際には以下の条件を満たしている必要があります。</p>
+<ul>
+<li>グリッドの外にサイコロを転がしてはならない</li>
+<li><code>#</code> が書かれているマスに転がしてはならない</li>
+<li>転がした後の状態を考えたときに、サイコロの底面に書かれた数字とそのマスに書かれた数字が一致する</li>
+</ul>
+<p>$(1, 1)$ のマスには必ず $6$ が書かれていることが保証されます。</p>
+<p>サイコロを転がす操作を繰り返すことで、サイコロを $(1, 1)$ のマスから $(H, W)$ のマスに移動させることができるか判定してください。</p>
+</section>
+</div>
+
+<div class="part">
+<section>
+<h3>制約</h3><ul>
+<li>$1 \leq H, W \leq 100$</li>
+<li>グリッドの各マスには $1$ 以上 $6$ 以下の数字、または <code>#</code> が書かれている</li>
+<li><span style="font-weight: bold;">$i, j$ がともに偶数となるような $(i, j)$ のマスには必ず <code>#</code> が書かれている</span></li>
+<li>$(1, 1)$ には $6$ が書かれていることが保証される</li>
+</ul>
+</section>
+</div>
+
+<hr />
+<div class="io-style">
+<div class="part">
+<section>
+<h3>入力</h3><p>入力は以下の形式で標準入力から与えられる。</p>
+<pre>$H$ $W$
+$s_{11}s_{12} \ldots s_{1W}$
+$s_{21}s_{22} \ldots s_{2W}$
+$\vdots$
+$s_{H1}s_{H2} \ldots s_{HW}$
+</pre>
+
+<p>ここで、$s_{ij}$ は $(i, j)$ のマスにかかれている数字または文字を表す。
+すなわち、$s_{ij}$ は $1$ 以上 $6$ 以下の数字であるか、あるいは <code>#</code> である。</p>
+</section>
+</div>
+
+<div class="part">
+<section>
+<h3>出力</h3><p>$(1, 1)$ のマスから $(H, W)$ のマスへサイコロを転がして移動させることができるならば <code>YES</code> を、そうでないならば <code>NO</code> を 1 行で出力せよ。</p>
+</section>
+</div>
+</div>
+
+<hr />
+<div class="part">
+<section>
+<h3>入力例 1</h3><pre>3 3
+631
+4#2
+516
+</pre>
+
+</section>
+</div>
+
+<div class="part">
+<section>
+<h3>出力例 1</h3><pre>YES
+</pre>
+
+<p>$(1, 1), (1, 2), (1, 3), (2, 3), (3, 3)$ の順に転がすことで、到達可能です。</p>
+</section>
+</div>
+
+<hr />
+<div class="part">
+<section>
+<h3>入力例 2</h3><pre>3 3
+6#1
+##2
+516
+</pre>
+
+</section>
+</div>
+
+<div class="part">
+<section>
+<h3>出力例 2</h3><pre>NO
+</pre>
+
+</section>
+</div>
+
+<hr />
+<div class="part">
+<section>
+<h3>入力例 3</h3><pre>5 5
+61244
+2#5#3
+14641
+5#5#5
+63126
+</pre>
+
+</section>
+</div>
+
+<div class="part">
+<section>
+<h3>出力例 3</h3><pre>YES
+</pre></section>
+</div>
+</span>
+</span>

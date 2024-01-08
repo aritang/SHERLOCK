@@ -1,0 +1,60 @@
+
+<H1>Sale Result</H1>
+
+<p>
+There is data on sales of your company. Your task is to write a program which identifies good workers.
+</p>
+
+<p>
+The program should read a list of data where each item includes the employee ID <i>i</i>, the amount of sales <i>q</i> and the corresponding unit price <i>p</i>. Then, the program should print IDs of employees whose total sales proceeds (i.e. sum of p &times; q) is greater than or equal to 1,000,000 in the order of inputting. If there is no such employees, the program should print "NA". You can suppose that <i>n</i> &lt; 4000, and each employee has an unique ID. The unit price <i>p</i> is less than or equal to 1,000,000 and the amount of sales <i>q</i> is less than or equal to 100,000.
+</p>
+
+
+<H2>Input</H2>
+
+<p>
+The input consists of several datasets. The input ends with a line including a single 0. Each dataset consists of:
+</p>
+<pre class="exp">
+<i>n</i> (the number of data in the list)
+<i>i</i> <i>p</i> <i>q</i>
+<i>i</i> <i>p</i> <i>q</i>
+ :
+ :
+<i>i</i> <i>p</i> <i>q</i>
+</pre>
+
+
+<H2>Output</H2>
+
+<p>
+For each dataset, print a list of employee IDs or a text "NA"
+</p>
+
+<H2>Sample Input</H2>
+
+<pre>
+4
+1001 2000 520
+1002 1800 450
+1003 1600 625
+1001 200 1220
+2
+1001 100 3
+1005 1000 100
+2
+2013 5000 100
+2013 5000 100
+0
+</pre>
+
+<H2>Output for the Sample Input</H2>
+
+<pre>
+1001
+1003
+NA
+2013
+</pre>
+
+

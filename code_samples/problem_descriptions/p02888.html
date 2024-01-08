@@ -1,0 +1,83 @@
+<span class="lang-en">
+<p>Score : <var>400</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>Takahashi has <var>N</var> sticks that are distinguishable from each other. The length of the <var>i</var>-th stick is <var>L_i</var>.</p>
+<p>He is going to form a triangle using three of these sticks. Let <var>a</var>, <var>b</var>, and <var>c</var> be the lengths of the three sticks used. Here, all of the following conditions must be satisfied:</p>
+<ul>
+<li><var>a &lt; b + c</var></li>
+<li><var>b &lt; c + a</var></li>
+<li><var>c &lt; a + b</var></li>
+</ul>
+<p>How many different triangles can be formed? Two triangles are considered different when there is a stick used in only one of them.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li>All values in input are integers.</li>
+<li><var>3 \leq N \leq 2 \times 10^3</var></li>
+<li><var>1 \leq L_i \leq 10^3</var></li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+<var>L_1</var> <var>L_2</var> <var>...</var> <var>L_N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><p>Print the number of different triangles that can be formed.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>4
+3 4 2 1
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>1
+</pre>
+<p>Only one triangle can be formed: the triangle formed by the first, second, and third sticks.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>3
+1 1000 1
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>0
+</pre>
+<p>No triangles can be formed.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>7
+218 786 704 233 645 728 389
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>23
+</pre></section>
+</div>
+</span>

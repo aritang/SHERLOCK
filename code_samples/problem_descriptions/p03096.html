@@ -1,0 +1,102 @@
+<span class="lang-en">
+<p>Score : <var>700</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>There are <var>N</var> stones arranged in a row. The <var>i</var>-th stone from the left is painted in the color <var>C_i</var>.</p>
+<p>Snuke will perform the following operation zero or more times:</p>
+<ul>
+<li>Choose two stones painted in the same color. Repaint all the stones between them, with the color of the chosen stones.</li>
+</ul>
+<p>Find the number of possible final sequences of colors of the stones, modulo <var>10^9+7</var>.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 \leq N \leq 2\times 10^5</var></li>
+<li><var>1 \leq C_i \leq 2\times 10^5(1\leq i\leq N)</var></li>
+<li>All values in input are integers.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+<var>C_1</var>
+<var>:</var>
+<var>C_N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the number of possible final sequences of colors of the stones, modulo <var>10^9+7</var>.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>5
+1
+2
+1
+2
+2
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>3
+</pre>
+<p>We can make three sequences of colors of stones, as follows:</p>
+<ul>
+<li><var>(1,2,1,2,2)</var>, by doing nothing.</li>
+<li><var>(1,1,1,2,2)</var>, by choosing the first and third stones to perform the operation.</li>
+<li><var>(1,2,2,2,2)</var>, by choosing the second and fourth stones to perform the operation.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>6
+4
+2
+5
+4
+2
+4
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>5
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>7
+1
+3
+1
+2
+3
+3
+2
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>5
+</pre></section>
+</div>
+</span>

@@ -1,0 +1,132 @@
+<span class="lang-en">
+<p>Score : <var>1000</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>AtCoDeer the deer found <var>N</var> rectangle lying on the table, each with height <var>1</var>.
+If we consider the surface of the desk as a two-dimensional plane, the <var>i</var>-th rectangle <var>i(1≤i≤N)</var> covers the vertical range of <var>[i-1,i]</var> and the horizontal range of <var>[l_i,r_i]</var>, as shown in the following figure:</p>
+<p><img alt="" src="https://atcoder.jp/img/arc070/46b7dc61fc2016c9b45f10db46c6fce9.png"/></p>
+<p>AtCoDeer will move these rectangles horizontally so that all the rectangles are connected.
+For each rectangle, the cost to move it horizontally by a distance of <var>x</var>, is <var>x</var>.
+Find the minimum cost to achieve connectivity.
+It can be proved that this value is always an integer under the constraints of the problem.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li>All input values are integers.</li>
+<li><var>1≤N≤10^5</var></li>
+<li><var>1≤l_i&lt;r_i≤10^9</var></li>
+</ul>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Partial Score</h3><ul>
+<li><var>300</var> points will be awarded for passing the test set satisfying <var>1≤N≤400</var> and <var>1≤l_i&lt;r_i≤400</var>.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>The input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+<var>l_1</var> <var>r_1</var>
+<var>l_2</var> <var>r_2</var>
+:
+<var>l_N</var> <var>r_N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the minimum cost to achieve connectivity.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>3
+1 3
+5 7
+1 3
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>2
+</pre>
+<p>The second rectangle should be moved to the left by a distance of <var>2</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>3
+2 5
+4 6
+1 4
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>0
+</pre>
+<p>The rectangles are already connected, and thus no move is needed.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>5
+999999999 1000000000
+1 2
+314 315
+500000 500001
+999999999 1000000000
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>1999999680
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 4</h3><pre>5
+123456 789012
+123 456
+12 345678901
+123456 789012
+1 23
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 4</h3><pre>246433
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 5</h3><pre>1
+1 400
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 5</h3><pre>0
+</pre></section>
+</div>
+</span>

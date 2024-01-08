@@ -1,0 +1,93 @@
+
+<h2>Problem Statement</h2>
+
+<p>
+A magician lives in a country which consists of <var>N</var> islands and <var>M</var> bridges. 
+Some of the bridges are magical bridges, which are created by the magician.
+Her magic can change all the lengths of the magical bridges to the same non-negative integer simultaneously.
+</p>
+
+<p>
+This country has a famous 2-player race game.
+Player 1 starts from island <var>S_1</var> and Player 2 starts from island <var>S_2</var>. 
+A player who reached the island <var>T</var> first is a winner.
+</p>
+
+<p>
+Since the magician loves to watch this game, she decided to make the game most exiting by changing the length of the magical bridges
+so that the difference between the shortest-path distance from <var>S_1</var> to <var>T</var> and the shortest-path distance from <var>S_2</var> to <var>T</var> is as small as possible. We ignore the movement inside the islands.
+</p>
+
+<p>
+Your job is to calculate how small the gap can be.
+</p>
+
+<p>
+Note that she assigns a length of the magical bridges before the race starts <i>once</i>, 
+and does not change the length <i>during the race</i>.
+</p>
+
+
+<h2>Input</h2>
+
+<p>
+The input consists of several datasets. The end of the input is denoted by five zeros separated by a single-space. Each dataset obeys <i>the</i> following format. Every number in the inputs is integer. 
+</p>
+
+<pre>
+<var>N</var> <var>M</var> <var>S_1</var> <var>S_2</var> <var>T</var>
+<var>a_1</var> <var>b_1</var> <var>w_1</var>
+<var>a_2</var> <var>b_2</var> <var>w_2</var>
+...
+<var>a_M</var> <var>b_M</var> <var>w_M</var>
+</pre>
+
+<p>
+(<var>a_i, b_i</var>) indicates the bridge <var>i</var> connects the two islands <var>a_i</var> and <var>b_i</var>.
+</p>
+
+<p>
+<var>w_i</var> is either a non-negative integer or a letter <code>x</code>  (quotes for clarity). If <var>w_i</var> is an integer, it indicates the bridge <var>i</var> is normal and its length is <var>w_i</var>. Otherwise, it indicates the bridge <var>i</var> is magical.
+</p>
+
+<p>
+You can assume the following:
+</p>
+
+<ul>
+<li> <var>1\leq N \leq 1,000</var></li>
+<li> <var>1\leq M \leq 2,000</var></li>
+<li> <var>1\leq S_1, S_2, T \leq N</var></li>
+<li> <var>S_1, S_2, T</var> are all different.</li>
+<li> <var>1\leq a_i, b_i \leq N</var></li>
+<li> <var>a_i \neq b_i</var></li>
+<li> For all normal bridge <var>i</var>, <var>0 \leq w_i \leq 1,000,000,000</var></li>
+<li> The number of magical bridges <var>\leq 100</var></li>
+</ul>
+
+<h2>Output</h2>
+
+<p>
+For each dataset, print the answer in a line.
+</p>
+
+
+<h2>Sample Input</h2>
+
+<pre>
+3 2 2 3 1
+1 2 1
+1 3 2
+4 3 1 4 2
+2 1 3
+2 3 x
+4 3 x
+0 0 0 0 0
+</pre>
+
+<h2>Output for the Sample Input</h2>
+
+<pre>
+1
+1
+</pre>

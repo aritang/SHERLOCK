@@ -1,0 +1,74 @@
+
+
+
+<H1>理想の体型</H1>
+
+<p>
+肥満度を表す指数としてBMI（Body Mass Index）があります。BMIの値は以下の式で計算します。
+</p>
+
+<center>
+<p>
+BMI = 体重(kg) / (身長(m))<sup>2</sup>
+</p>
+</center>
+
+<p>
+BMIの値が標準値に近いほど「理想の体型」と考えられます。そこで、BMIの標準値を 22 とした場合、対象者の情報を入力とし、最も「理想の体型」に近い人の情報を出力するプログラムを作成してください。
+</p>
+
+<p>
+対象者の数を <var>n</var> とすると、各対象者には重複のないように1 以上 <var>n</var> 以下の整数値の受付番号 <var>p</var> が振られています。
+</p>
+
+<H2>Input</H2>
+
+<p>
+複数のデータセットの並びが入力として与えられます。入力の終わりはゼロひとつの行で示されます。各データセットは以下の形式で与えられます。
+</p>
+
+<pre>
+<var>n</var>
+<var>p<sub>1</sub></var> <var>h<sub>1</sub></var> <var>w<sub>1</sub></var>
+<var>p<sub>2</sub></var> <var>h<sub>2</sub></var> <var>w<sub>2</sub></var>
+:
+<var>p<sub>n</sub></var> <var>h<sub>n</sub></var> <var>w<sub>n</sub></var>
+</pre>
+
+<p>
+１行目に対象者の人数 <var>n</var> (<var>n</var> &le; 1000)、続く <var>n</var> 行に <var>i</var> 人目の対象者の受付番号 <var>p<sub>i</sub></var> (1 &le; <var>p<sub>i</sub></var> &le; <var>n</var>)、センチメートル単位の身長 <var>h<sub>i</sub></var> (1 &le; <var>h<sub>i</sub></var> &le; 200)、キログラム単位の体重 <var>w<sub>i</sub></var> (1 &le; <var>w<sub>i</sub></var> &le; 200) が与えられます。入力は全て整数で与えられます。
+</p>
+
+<H2>Output</H2>
+
+<p>
+データセットごとに「理想の体型」に最も近い人の受付番号（整数）を１行に出力します。最も「理想の体型」に近い人が二人以上いる場合は、受付番号の小さい方を出力することとします。
+</p>
+
+
+<H2>Sample Input</H2>
+
+<pre>
+6
+1 165 66
+2 178 60
+3 180 72
+4 160 65
+5 185 62
+6 182 62
+3
+3 160 65
+2 180 70
+1 170 75
+0
+</pre>
+
+<H2>Output for the Sample Input</H2>
+
+<pre>
+3
+2
+</pre>
+
+
+

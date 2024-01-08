@@ -1,0 +1,133 @@
+
+
+
+<h1>錬金マスター</h1>
+<p>
+  あなたはついに魔法の釜、錬金釜を手に入れました。錬金釜に複数のアイテムを入れると、新しいア イテムを作ることができます。新しく作ったアイテムは、他のアイテムを作るために錬金釜へ入れることもできます。アイテムを作るために必要なアイテムのリストを記したものを錬金レシピと呼ぶことにします。以下の 3 つは錬金レシピの例です。
+</p>
+
+<ol>
+     <li> 木片と糸でラケットができる。</li>
+     <li> お米と水でおにぎりができる。</li>
+     <li> ラケットとマイクとおにぎりでギターができる。</li>
+</ol>
+
+<p>
+  アイテムはお金を使って手にいれることもできますが、錬金釜で作った方が安くすむ場合もあります。例えば、各アイテムの購入価格が以下のように与えられているとします。
+</p>
+
+<center>
+<table border=1 cellpadding=8 cellspacing=2>
+<tr><td width=140>アイテム名</td><td width=140> 購入価格(円)</td></tr>
+<tr><td>   木片 </td><td>           3,000</td></tr>
+<tr><td>   糸          </td><td>      800</td></tr>
+<tr><td>   お米     </td><td>           36</td></tr>
+<tr><td>   水    </td><td>              0</td></tr>
+<tr><td>   ラケット </td><td>          5,000</td></tr>
+<tr><td>   マイク  </td><td>          9,800</td></tr>
+<tr><td>   おにぎり </td><td>            140</td></tr>
+<tr><td>   ギター </td><td>          98,000</td></tr>
+</tr>
+</table>
+<br/>
+</center>
+
+<p>
+ ラケットは 5,000 円で購入できますが、木片と糸を購入して錬金すれば 3,800 円で手に入れられます。更に、錬金を重ねることによりとてもお得にアイテムを手に入れられます。図 1 は上記 3 つの錬金レシピ例を組み合わせたものです。ギターは 98,000 円で購入できますが、木片、糸、お米、水、マイクを購入して錬金すれば、たったの 13,636 円で手に入れられます。
+</p>
+<br><br>
+<center>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_recipe">
+<p>図 1</p>
+</center>
+<br><br>
+
+<p>
+ あなたは冒険を楽に進めるため、なるべく安く目的のアイテムを手に入れようと考えました。 アイテムのリスト、錬金レシピのリスト、指定されたアイテムを入力とし、指定されたアイテムを作るために必要な金額の最小値を出力するプログラムを作成して下さい。
+</p>
+
+<!--
+<p>
+ アイテムリストに含まれるアイテムの種類 <var>n</var> は 1 以上 100 以下の整数とし、各アイテムを購入する場合の値段 <var>p</var> は 0 以上 1000000 以下とします。アイテムの名前 <var>i</var> は 1 文字以上 100 文字以下のアルファベットからなる半角文字列です。錬金レシピの種類 <var>m</var> は 0 以上 100 以下の整数です。 1つの錬金レシピはアイテムの名前 <var>o</var>、それを作るために必要なアイテムの個数 <var>k</var> 、 <var>k</var> 個のアイテム名 <var>q</var> のリストによって与えられます。<var>k</var> は 100 以下とします。
+</p>
+-->
+
+<p>
+ 各アイテムの数量に限りはないものとします。アイテムは複数のレシピに使われることがありますが、1 つのアイテムを作るためのレシピはたかだか 1 つです。また、あるアイテムを起点としてレシピをたどっていったとき、そのアイテムが再びレシピに現れることはありません。
+</p>
+
+<H2>Input</H2>
+
+<p>
+複数のデータセットの並びが入力として与えられます。入力の終わりはゼロひとつの行で示されます。各データセットは以下の形式で与えられます。
+</p>
+
+<pre>
+<var>n</var>
+<var>s<sub>1</sub></var> <var>p<sub>1</sub></var>
+<var>s<sub>2</sub></var> <var>p<sub>2</sub></var>
+:
+<var>s<sub>n</sub></var> <var>p<sub>n</sub></var>
+<var>m</var>
+<var>o<sub>1</sub></var> <var>k<sub>1</sub></var> <var>q<sub>1</sub></var> <var>q<sub>2</sub></var> ... <var>q<sub>k<sub>1</sub></sub></var>
+<var>o<sub>2</sub></var> <var>k<sub>2</sub></var> <var>q<sub>1</sub></var> <var>q<sub>2</sub></var> ... <var>q<sub>k<sub>2</sub></sub></var>
+:
+<var>o<sub>m</sub></var> <var>k<sub>m</sub></var> <var>q<sub>1</sub></var> <var>q<sub>2</sub></var> ... <var>q<sub>k<sub>m</sub></sub></var>
+<var>t</var>
+</pre>
+
+<p>
+1 行目にリストに含まれるアイテムの種類数 <var>n</var> (1 &le; <var>n</var> &le; 100) が与えられます。続く <var>n</var> 行に <var>i</var> 番目のアイテムの名前 <var>s<sub>i</sub></var> (1 文字以上 100 文字以下のアルファベットからなる半角文字列) とそれを購入する場合の値段 <var>p<sub>i</sub></var> (0 &le; <var>p<sub>i</sub></var> &le; 1000000)が与えられます。
+</p>
+
+<p>
+続く行に錬金レシピの数 <var>m</var> (0 &le; <var>m</var> &le; 100) が与えられます。続く <var>m</var> 行に <var>i</var> 番目のレシピの情報が与えられます。各レシピとして、アイテムの名前 <var>o<sub>i</sub></var>、それを作るために必要なアイテムの個数 <var>k<sub>i</sub></var> (1 &le; <var>k<sub>i</sub></var> &le; 100) 、 <var>k<sub>i</sub></var> 個のアイテム名 <var>q<sub>1</sub></var>, <var>q<sub>2</sub></var> ... <var>q<sub>k<sub>i</sub></var> が与えられます。
+</p>
+
+<p>
+最後の行に指定されたアイテム名 <var>t</var> が与えられます。
+</p>
+
+<p>
+データセットの数は 30 を超えません。
+</p>
+
+<H2>Output</H2>
+
+<p>
+入力データセットごとに、最小の値段を１行に出力します。
+</p>
+
+<H2>Sample Input</H2>
+
+<pre>
+8
+wood 3000
+string 800
+rice 36
+water 0
+racket 5000
+microphone 9800
+onigiri 140
+guitar 98000
+3
+racket 2 wood string
+onigiri 2 rice water
+guitar 3 racket microphone onigiri
+guitar
+1
+computer 300000
+0
+computer
+0
+</pre>
+
+<H2>Output for the Sample Input</H2>
+
+<pre>
+13636
+300000
+</pre>
+
+
+

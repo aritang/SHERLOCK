@@ -1,0 +1,87 @@
+<span class="lang-en">
+<p>Score : <var>300</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>Every day, <var>N</var> passengers arrive at Takahashi Airport.
+The <var>i</var>-th passenger arrives at time <var>T_i</var>.</p>
+<p>Every passenger arrived at Takahashi airport travels to the city by bus. Each bus can accommodate up to <var>C</var> passengers.
+Naturally, a passenger cannot take a bus that departs earlier than the airplane arrives at the airport.
+Also, a passenger will get angry if he/she is still unable to take a bus <var>K</var> units of time after the arrival of the airplane.
+For that reason, it is necessary to arrange buses so that the <var>i</var>-th passenger can take a bus departing at time between <var>T_i</var> and <var>T_i + K</var> (inclusive).</p>
+<p>When setting the departure times for buses under this condition, find the minimum required number of buses.
+Here, the departure time for each bus does not need to be an integer, and there may be multiple buses that depart at the same time.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>2 \leq N \leq 100000</var></li>
+<li><var>1 \leq C \leq 10^9</var></li>
+<li><var>1 \leq K \leq 10^9</var></li>
+<li><var>1 \leq T_i \leq 10^9</var></li>
+<li><var>C</var>, <var>K</var> and <var>T_i</var> are integers.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>The input is given from Standard Input in the following format:</p>
+<pre><var>N</var> <var>C</var> <var>K</var>
+<var>T_1</var>
+<var>T_2</var>
+<var>:</var>
+<var>T_N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the minimum required number of buses.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>5 3 5
+1
+2
+3
+6
+12
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>3
+</pre>
+<p>For example, the following three buses are enough:</p>
+<ul>
+<li>A bus departing at time <var>4.5</var>, that carries the passengers arriving at time <var>2</var> and <var>3</var>.</li>
+<li>A bus departing at time <var>6</var>, that carries the passengers arriving at time <var>1</var> and <var>6</var>.</li>
+<li>A bus departing at time <var>12</var>, that carries the passenger arriving at time <var>12</var>.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>6 3 3
+7
+6
+2
+8
+10
+6
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>3
+</pre></section>
+</div>
+</span>

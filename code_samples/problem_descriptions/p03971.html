@@ -1,0 +1,108 @@
+<span class="lang-en">
+<p>Score : <var>200</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>There are <var>N</var> participants in the CODE FESTIVAL 2016 Qualification contests. The participants are either students in Japan, students from overseas, or neither of these.</p>
+<p>Only Japanese students or overseas students can pass the Qualification contests. The students pass when they satisfy the conditions listed below, from the top rank down. Participants who are not students cannot pass the Qualification contests.</p>
+<ul>
+<li>A Japanese student passes the Qualification contests if the number of the participants who have already definitively passed is currently fewer than <var>A+B</var>.</li>
+<li>An overseas student passes the Qualification contests if the number of the participants who have already definitively passed is currently fewer than <var>A+B</var> and the student ranks <var>B</var>-th or above among all overseas students.</li>
+</ul>
+<p>A string <var>S</var> is assigned indicating attributes of all participants. If the <var>i</var>-th character of string <var>S</var> is <code>a</code>, this means the participant ranked <var>i</var>-th in the Qualification contests is a Japanese student; <code>b</code> means the participant ranked <var>i</var>-th is an overseas student; and <code>c</code> means the participant ranked <var>i</var>-th is neither of these.</p>
+<p>Write a program that outputs for all the participants in descending rank either <code>Yes</code> if they passed the Qualification contests or <code>No</code> if they did not pass.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1≦N,A,B≦100000</var></li>
+<li><var>A+B≦N</var></li>
+<li><var>S</var> is <var>N</var> characters long.</li>
+<li><var>S</var> consists only of the letters <code>a</code>, <code>b</code> and <code>c</code>.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Inputs are provided from Standard Input in the following form.</p>
+<pre><var>N</var> <var>A</var> <var>B</var>
+<var>S</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Output <var>N</var> lines. On the <var>i</var>-th line, output <code>Yes</code> if the <var>i</var>-th participant passed the Qualification contests or <code>No</code> if that participant did not pass.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>10 2 3
+abccabaabb
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>Yes
+Yes
+No
+No
+Yes
+Yes
+Yes
+No
+No
+No
+</pre>
+<p>The first, second, fifth, sixth, and seventh participants pass the Qualification contests.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>12 5 2
+cabbabaacaba
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>No
+Yes
+Yes
+Yes
+Yes
+No
+Yes
+Yes
+No
+Yes
+No
+No
+</pre>
+<p>The sixth participant is third among overseas students and thus does not pass the Qualification contests.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>5 2 2
+ccccc
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>No
+No
+No
+No
+No
+</pre></section>
+</div>
+</span>

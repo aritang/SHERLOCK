@@ -1,0 +1,83 @@
+
+
+
+<h2>goto busters</h2>
+
+
+<h2>Problem Statement</h2>
+
+<p>あなたは謎のプログラムのソースコードを見つけた．<br />
+さっそくコンパイルして実行してみたが，いつまで待っても処理が終わらない．<br />
+どうやら，プログラムが無限ループしてしまっているようである．</p>
+<p>ソースコードを詳しく見てみたところ，以下のようなことがわかった．<br /></p>
+<p>ソースコードは <var>N</var> 行からなり，各行はラベル文か goto 文のいずれかである．<br />
+ラベル文と goto 文はそれぞれ次のようなフォーマットに従っている．<br /></p>
+<pre>LABEL:</pre>
+<pre>goto LABEL;</pre>
+<p>ここで，LABEL はラベルを表す文字列である．</p>
+<p>プログラムは先頭の行から順番に 1 行ずつ処理される．<br />
+ラベル文と goto 文を処理したときの挙動は次のとおり：<br /></p>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>ラベル文を処理しても何も起こらない</li>
+<li>goto 文を処理したとき，次の処理は同じ名前のラベルを持ったラベル文から始める</li></ul>
+<p>最後の行を処理し終えて次に処理する行がなくなったとき，プログラムは終了する．</p>
+<p>あなたは，いくつかの goto 文を削除することでプログラムを正しく終了させたいと思っている．<br />
+一方で，手を加える箇所はできるだけ少なくしたい．<br />
+プログラムを終了させるためには最小でいくつの goto 文を消せばいいだろうか．</p>
+
+<h2>Input</h2>
+
+<pre><var>N</var>
+<var>s_1</var>
+<var>. . .</var>
+<var>s_N</var></pre>
+<p><var>s_i</var> は次の二つのうちのいずれかである．</p>
+<pre>LABEL_i:
+goto LABEL_i;</pre>
+
+<h2>Constraints</h2>
+
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li><var>1 ≦ N ≦ 100</var></li>
+<li>ラベルはアルファベットの大文字または小文字のみからなる，1 文字以上 10 文字以下の文字列</li>
+<li>すべての <var>s_i =</var> &quot;goto LABEL_i;&quot; に対して，<var>s_j =</var> &quot;LABEL_i:&quot; となる <var>j</var> が存在する．</li>
+<li>同じ名前のラベルを持ったラベル文は二回以上現れない．</li>
+<li>&quot;goto&quot; という名前のラベルは存在しない．</li></ul>
+
+<h2>Output</h2>
+
+<p>削除すべき goto 文の最小個数を 1 行に出力せよ．</p>
+
+<h2>Sample Input 1</h2>
+
+<pre>2
+LOOP:
+goto LOOP;</pre>
+
+<h2>Output for the Sample Input 1</h2>
+
+<pre>1</pre>
+
+<h2>Sample Input 2</h2>
+
+<pre>8
+goto there;
+loop:
+goto loop;
+here:
+goto goal;
+there:
+goto here;
+goal:</pre>
+
+<h2>Output for the Sample Input 2</h2>
+
+<pre>0</pre>
+
+<h2>Sample Input 3</h2>
+
+<pre>1
+GOTO:</pre>
+
+
+<h2>Output for the Sample Input 3</h2>
+
+<pre>0</pre>

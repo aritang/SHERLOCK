@@ -1,0 +1,157 @@
+
+<h3>Warp Drive</h3>
+
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_ICPCDomestic2016_G_airplane" width="30%" align="right">
+
+
+<p>
+The <b>warp drive</b> technology is reforming air travel, making the travel times drastically shorter.
+Aircraft reaching above the <b>warp fields</b> built on the ground surface can be transferred to any desired destination in a twinkling.
+</p>
+
+<p>
+With the current immature technology, however, building warp fields is quite expensive.
+Our budget allows building only two of them.
+Fortunately, the cost does not depend on the locations of the warp fields,
+and we can build them anywhere on the ground surface, even at an airport.
+</p>
+
+<p>
+Your task is, given locations of airports and a list of one way flights among them, find the best locations to build the two warp fields that give the minimal <b>average cost</b>.
+The average cost is the root mean square of travel times of all the flights, defined as follows.
+</p>
+
+<center>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_ICPCDomestic2016_G1">
+</center>
+
+<p>
+Here, <i>m</i> is the number of flights and <i>t</i><sub><i>j</i></sub> is the shortest possible travel time of the <i>j</i>-th flight.
+Note that the value of <i>t</i><sub><i>j</i></sub> depends on the locations of the warp fields.
+</p>
+
+<p>
+For simplicity, we approximate the surface of the ground by a flat two dimensional plane, and approximate airports, aircraft, and warp fields by points on the plane.
+Different flights use different aircraft with possibly different cruising speeds.
+Times required for climb, acceleration, deceleration and descent are negligible.
+Further, when an aircraft reaches above a warp field, time required after that to its destination is zero.
+As is explained below, the airports have integral coordinates. Note, however, that the warp fields can have non-integer coordinates.
+</p>
+
+<h3>Input</h3>
+
+
+<p>
+The input consists of at most 35 datasets, each in the following format.
+</p>
+
+<p>
+
+<i>n</i> <i>m</i> <br>
+<i>x</i><sub>1</sub> <i>y</i><sub>1</sub> <br>
+... <br>
+<i>x</i><sub><i>n</i></sub> <i>y</i><sub><i>n</i></sub> <br>
+<i>a</i><sub>1</sub> <i>b</i><sub>1</sub> <i>v</i><sub>1</sub> <br>
+... <br>
+<i>a</i><sub><i>m</i></sub> <i>b</i><sub><i>m</i></sub> <i>v</i><sub><i>m</i></sub> <br>
+
+</p>
+
+<p>
+<i>n</i> is the number of airports, and <i>m</i> is the number of flights (2 &le; <i>n</i> &le; 20, 2 &le; <i>m</i> &le; 40).
+For each <i>i</i>, <i>x</i><sub><i>i</i></sub> and <i>y</i><sub><i>i</i></sub> are the coordinates of the <i>i</i>-th airport.
+<i>x</i><sub><i>i</i></sub> and <i>y</i><sub><i>i</i></sub> are integers with absolute values at most 1000.
+For each <i>j</i>, <i>a</i><sub><i>j</i></sub> and <i>b</i><sub><i>j</i></sub> are integers between 1 and <i>n</i> inclusive, and are the indices of the departure and arrival airports for the <i>j</i>-th flight, respectively.
+<i>v</i><sub><i>j</i></sub> is the cruising speed for the <i>j</i>-th flight, that is, the distance that the aircraft of the flight moves in one time unit.
+<i>v</i><sub><i>j</i></sub> is a decimal fraction with two digits after the decimal point (1 &le; <i>v</i><sub><i>j</i></sub> &le; 10).
+</p>
+
+<p>
+The following are guaranteed.
+<ul>
+<li>Two different airports have different coordinates.</li>
+<li>The departure and arrival airports of any of the flights are different.</li>
+<li>Two different flights have different departure airport and/or arrival airport.</li>
+</ul>
+</p>
+
+<p>
+The end of the input is indicated by a line containing two zeros.
+</p>
+
+<h3>Output</h3>
+
+<p>
+For each dataset, output the average cost when you place the two warp fields optimally.
+The output should not contain an absolute error greater than 10<sup>-6</sup>.
+</p>
+
+
+<h3>Sample Input</h3>
+
+
+<pre>
+3 4
+100 4
+100 0
+0 0
+1 2 1.00
+2 1 1.00
+3 1 9.99
+3 2 9.99
+7 6
+0 0
+1 0
+2 0
+0 10
+1 10
+2 10
+20 5
+1 7 1.00
+2 7 1.00
+3 7 1.00
+4 7 1.00
+5 7 1.00
+6 7 1.00
+4 4
+-1 -1
+1 -1
+-1 1
+1 1
+1 4 1.10
+4 2 2.10
+2 3 3.10
+3 1 4.10
+8 12
+-91 0
+-62 0
+-18 0
+2 0
+23 0
+55 0
+63 0
+80 0
+2 7 3.96
+3 2 2.25
+2 4 5.48
+8 7 9.74
+5 6 6.70
+7 6 1.51
+4 1 7.41
+5 8 1.11
+6 3 2.98
+3 4 2.75
+1 8 5.89
+4 5 5.37
+0 0
+</pre>
+
+<h3>Output for the Sample Input</h3>
+
+
+<pre>
+1.414214
+0.816497
+0.356001
+5.854704
+</pre>

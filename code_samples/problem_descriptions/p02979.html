@@ -1,0 +1,104 @@
+<span class="lang-en">
+<p>Score : <var>1600</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>There is a blackboard on which all integers from <var>-10^{18}</var> through <var>10^{18}</var> are written, each of them appearing once. Takahashi will repeat the following sequence of operations any number of times he likes, possibly zero:</p>
+<ul>
+<li>Choose an integer between <var>1</var> and <var>N</var> (inclusive) that is written on the blackboard. Let <var>x</var> be the chosen integer, and erase <var>x</var>.</li>
+<li>If <var>x-2</var> is not written on the blackboard, write <var>x-2</var> on the blackboard.</li>
+<li>If <var>x+K</var> is not written on the blackboard, write <var>x+K</var> on the blackboard.</li>
+</ul>
+<p>Find the number of possible sets of integers written on the blackboard after some number of operations, modulo <var>M</var>.
+We consider two sets different when there exists an integer contained in only one of the sets.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 \leq K\leq N \leq 150</var></li>
+<li><var>10^8\leq M\leq 10^9</var></li>
+<li><var>N</var>, <var>K</var>, and <var>M</var> are integers.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var> <var>K</var> <var>M</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the number of possible sets of integers written on the blackboard after some number of operations, modulo <var>M</var>.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>3 1 998244353
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>7
+</pre>
+<p>Every set containing all integers less than <var>1</var>, all integers greater than <var>3</var>, and at least one of the three integers <var>1</var>, <var>2</var>, and <var>3</var> satisfies the condition. There are seven such sets.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>6 3 998244353
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>61
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>9 4 702443618
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>312
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 4</h3><pre>17 7 208992811
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 4</h3><pre>128832
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 5</h3><pre>123 45 678901234
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 5</h3><pre>256109226
+</pre></section>
+</div>
+</span>

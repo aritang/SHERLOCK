@@ -1,0 +1,78 @@
+<span class="lang-en">
+<p>Score : <var>400</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>There are two persons, numbered <var>0</var> and <var>1</var>, and a variable <var>x</var> whose initial value is <var>0</var>.
+The two persons now play a game.
+The game is played in <var>N</var> rounds. The following should be done in the <var>i</var>-th round (<var>1 \leq i \leq N</var>):</p>
+<ul>
+<li>Person <var>S_i</var> does one of the following:<ul>
+<li>Replace <var>x</var> with <var>x \oplus A_i</var>, where <var>\oplus</var> represents bitwise XOR.</li>
+<li>Do nothing.</li>
+</ul>
+</li>
+</ul>
+<p>Person <var>0</var> aims to have <var>x=0</var> at the end of the game, while Person <var>1</var> aims to have <var>x \neq 0</var> at the end of the game.</p>
+<p>Determine whether <var>x</var> becomes <var>0</var> at the end of the game when the two persons play optimally.</p>
+<p>Solve <var>T</var> test cases for each input file.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 \leq T \leq 100</var></li>
+<li><var>1 \leq N \leq 200</var></li>
+<li><var>1 \leq A_i \leq 10^{18}</var></li>
+<li><var>S</var> is a string of length <var>N</var> consisting of <code>0</code> and <code>1</code>.</li>
+<li>All numbers in input are integers.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format.
+The first line is as follows:</p>
+<pre><var>T</var>
+</pre>
+<p>Then, <var>T</var> test cases follow.
+Each test case is given in the following format:</p>
+<pre><var>N</var>
+<var>A_1</var> <var>A_2</var> <var>\cdots</var> <var>A_N</var>
+<var>S</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>For each test case, print a line containing <code>0</code> if <var>x</var> becomes <var>0</var> at the end of the game, and <code>1</code> otherwise.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>3
+2
+1 2
+10
+2
+1 1
+10
+6
+2 3 4 5 6 7
+111000
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>1
+0
+0
+</pre>
+<p>In the first test case, if Person <var>1</var> replaces <var>x</var> with <var>0 \oplus 1=1</var>, we surely have <var>x \neq 0</var> at the end of the game, regardless of the choice of Person <var>0</var>.</p>
+<p>In the second test case, regardless of the choice of Person <var>1</var>, Person <var>0</var> can make <var>x=0</var> with a suitable choice.</p></section>
+</div>
+</span>

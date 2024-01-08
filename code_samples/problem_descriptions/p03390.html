@@ -1,0 +1,70 @@
+<span class="lang-en">
+<p>Score : <var>700</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p><var>10^{10^{10}}</var> participants, including Takahashi, competed in two programming contests.
+In each contest, all participants had distinct ranks from first through <var>10^{10^{10}}</var>-th.</p>
+<p>The <em>score</em> of a participant is the product of his/her ranks in the two contests.</p>
+<p>Process the following <var>Q</var> queries:</p>
+<ul>
+<li>In the <var>i</var>-th query, you are given two positive integers <var>A_i</var> and <var>B_i</var>. Assuming that Takahashi was ranked <var>A_i</var>-th in the first contest and <var>B_i</var>-th in the second contest, find the maximum possible number of participants whose scores are smaller than Takahashi's.</li>
+</ul>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 \leq Q \leq 100</var></li>
+<li><var>1\leq A_i,B_i\leq 10^9(1\leq i\leq Q)</var></li>
+<li>All values in input are integers.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>Q</var>
+<var>A_1</var> <var>B_1</var>
+<var>:</var>
+<var>A_Q</var> <var>B_Q</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>For each query, print the maximum possible number of participants whose scores are smaller than Takahashi's.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>8
+1 4
+10 5
+3 3
+4 11
+8 9
+22 40
+8 36
+314159265 358979323
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>1
+12
+4
+11
+14
+57
+31
+671644785
+</pre>
+<p>Let us denote a participant who was ranked <var>x</var>-th in the first contest and <var>y</var>-th in the second contest as <var>(x,y)</var>.</p>
+<p>In the first query, <var>(2,1)</var> is a possible candidate of a participant whose score is smaller than Takahashi's. There are never two or more participants whose scores are smaller than Takahashi's, so we should print <var>1</var>.</p></section>
+</div>
+</span>

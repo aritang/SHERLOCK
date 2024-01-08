@@ -1,0 +1,64 @@
+
+<H1><font color="#000000">Problem C:</font> Finding the Largest Carbon Compound Given Its Longest Chain</H1>
+
+<p>
+An bydrocarbon is an organic compound which contains only carbons and hydrogens. An isomer is a compound that has the same number of carbons but different structures. Heptane, for example, is a hydrocarbon with 7 carbons. It has nine isomers. The structural formula of three are shown in Figure 1. Carbons are represented by the letter C, and bonds between carbons are represented by a straight line. In all figures, hydrogens are not represented for simplicity. Each carbon can be connected to a maximum of 4 carbons.
+</p>
+
+<center>
+<table>
+<tr><td><img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE1_longestchain1"></td></tr>
+</table>
+<table>
+<tr><td>Figure 1: These three examples of isomers of heptane have the same number of carbons but different structures.</td></tr>
+</table>
+</center>
+<br/>
+
+<p>
+Let define a chain in an isomer as a sequence of connected carbons without branches. An isomer can have many chains of the same length. Figure 2 shows the longest chain of carbons for each of the represented isomer. Note that there can be many instances of longest chain in an isomer.
+</p>
+
+<center>
+<table>
+<tr><td><img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE1_longestchain2"></td></tr>
+</table>
+<table>
+<tr><td>Figure 2: The figures shows one instance of longest chain of carbons in each isomer. The first and the second isomers show longest chains of 5 carbons. The longest chain in the third isomer has 4 carbons.</td></tr>
+</table>
+</center>
+<br/>
+
+<p>
+Your task is to identify the number of carbons of the largest possible carbon compound whose longest carbon chain has <i>n</i> (1 &le; <i>n</i> &le; 30) carbons.
+</p>
+
+
+<H2>Input</H2>
+
+<p>
+Each input contains a list of number of carbons, i.e. the length of a carbon chain.
+</p>
+
+<p>
+The number of input lines is less than or equal to 30.
+</p>
+
+
+<H2>Output</H2>
+
+<p>
+For each number n in input, identify the number of carbons of the largest possible carbon compound whose longest carbon chain has n carbons.
+</p>
+
+<H2>Sample Input</H2>
+<pre>
+1
+4
+</pre>
+
+<H2>Output for the Sample Input</H2>
+<pre>
+1
+8
+</pre>

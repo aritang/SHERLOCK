@@ -1,0 +1,214 @@
+
+
+
+<H1>サッカー (Soccer)  </H1>
+
+
+
+
+<h2>  問題</h2>
+  
+<p>
+JOI 国ではサッカーが人気であり，JOI リーグというリーグ戦が毎週行われている．
+</p>
+
+<p>
+JOI リーグには N 個のチームが所属していて，1 から N までの番号がつけられている．すべての組み合わせの試合がちょうど一度ずつ行われる．つまり， <nobr>N × (N - 1) / 2</nobr> 試合が行われる．各試合の勝敗はそれぞれのチームの得点で決まる．勝ったチームの勝ち点は 3 点であり，負けたチームの勝ち点は 0 点である．引き分けの場合，両チームの勝ち点は 1 点である．順位は各チームの獲得した勝ち点の合計で決定し，得失点差は考えない．勝ち点の合計が等しいチームの順位は上位に揃える．
+</p>
+
+<p>
+例として， 4 チームでのリーグ戦を考える．<nobr>4 × (4 - 1) / 2 = 6</nobr> 試合が行われる．それらの結果が以下の表のようになったとする．ハイフンの左側はその横のチームの得点であり，右側はその縦のチームの得点である．
+</p>
+<table style="margin-left: 50px; margin-right: 50px; border-style:solid; border-color:#000000;" border="1" cellspacing="1">
+	<tr>
+		<th></th>
+		<th align="center">&nbsp;&nbsp;チーム 1&nbsp;&nbsp;</th>
+		<th align="center">&nbsp;&nbsp;チーム 2&nbsp;&nbsp;</th>
+		<th align="center">&nbsp;&nbsp;チーム 3&nbsp;&nbsp;</th>
+		<th align="center">&nbsp;&nbsp;チーム 4&nbsp;&nbsp;</th>
+		<th align="center">&nbsp;&nbsp;勝ち数&nbsp;&nbsp;</th>
+		<th align="center">&nbsp;&nbsp;負け数&nbsp;&nbsp;</th>
+		<th align="center">&nbsp;&nbsp;引き分け数&nbsp;&nbsp;</th>
+		<th align="center">&nbsp;&nbsp;勝ち点&nbsp;&nbsp;</th>
+	</tr>
+	<tr>
+		<th align="center">&nbsp;&nbsp;チーム 1&nbsp;&nbsp;</th>
+		<td align="center">---</td>
+		<td align="center">0 - 1</td>
+		<td align="center">2 - 1</td>
+		<td align="center">2 - 2</td>
+		<td align="center">1</td>
+		<td align="center">1</td>
+		<td align="center">1</td>
+		<td align="center">4</td>
+	</tr>
+	<tr>
+		<th align="center">&nbsp;&nbsp;チーム 2&nbsp;&nbsp;</th>
+		<td align="center">1 - 0</td>
+		<td align="center">---</td>
+		<td align="center">1 - 1</td>
+		<td align="center">3 - 0</td>
+		<td align="center">2</td>
+		<td align="center">0</td>
+		<td align="center">1</td>
+		<td align="center">7</td>
+	</tr>
+	<tr>
+		<th align="center">&nbsp;&nbsp;チーム 3&nbsp;&nbsp;</th>
+		<td align="center">1 - 2</td>
+		<td align="center">1 - 1</td>
+		<td align="center">---</td>
+		<td align="center">1 - 3</td>
+		<td align="center">0</td>
+		<td align="center">2</td>
+		<td align="center">1</td>
+		<td align="center">1</td>
+	</tr>
+	<tr>
+		<th align="center">&nbsp;&nbsp;チーム 4&nbsp;&nbsp;</th>
+		<td align="center">2 - 2</td>
+		<td align="center">0 - 3</td>
+		<td align="center">3 - 1</td>
+		<td align="center">---</td>
+		<td align="center">1</td>
+		<td align="center">1</td>
+		<td align="center">1</td>
+		<td align="center">4</td>
+	</tr>
+</table>
+
+<br>
+
+<p>
+このとき，勝ち点の最も多いチーム 2 が 1 位である．</br>
+その次に勝ち点が多いチームはチーム 1 とチーム 4 であり，これらのチームの順位は共に 2 位である．</br>
+そして勝ち点が最も少ないチーム 3 が 4 位である．
+</p>
+
+<p>
+全ての試合の結果が与えられたとき，各チームの順位を求めるプログラムを作成せよ．
+</p>
+
+<h2>  入力</h2>
+<p>
+入力ファイルの 1 行目にはチームの個数 N (2 ≦ N ≦ 100) が書かれている．続く <nobr>N × (N - 1) / 2</nobr> 行には各試合の結果が書かれている．i + 1 行目 (1 ≦ i ≦ <nobr>N × (N - 1) / 2</nobr>) には整数 A<sub>i</sub>，B<sub>i</sub>，C<sub>i</sub>，D<sub>i</sub> (1 ≦ A<sub>i</sub> ≦ N，1 ≦ B<sub>i</sub> ≦ N，0 ≦ C<sub>i</sub> ≦ 100，0 ≦ D<sub>i</sub> ≦ 100) が空白を区切りとして書かれており，チーム A<sub>i</sub> とチーム B<sub>i</sub> が対戦し，チーム A<sub>i</sub> の得点が C<sub>i</sub> 点，チーム B<sub>i</sub> の得点が D<sub>i</sub> 点であったことを表す．全ての i について A<sub>i</sub> ≠ B<sub>i</sub> であり，同じ組み合わせの対戦が書かれていることはない．
+</p>
+
+
+
+<h2>  出力</h2>
+<p>
+出力は N 行からなる．各行は 1 つの整数からなり， i 行目 (1 ≦ i ≦ N) の整数はチーム i の順位を表す．
+</p>
+
+<h2>  入出力例</h2>
+
+
+<h3>入力例 1</h3>
+
+
+  <pre>
+4
+1 2 0 1
+1 3 2 1
+1 4 2 2
+2 3 1 1
+2 4 3 0
+3 4 1 3
+</pre>
+
+<h3>出力例 1</h3>
+<pre>
+2
+1
+4
+2
+</pre>
+
+
+<p>
+入出力例 1 は問題文中の例に対応している．
+</p>
+
+
+<h3>入力例 2</h3> 
+
+<pre>
+5
+1 2 1 1
+3 4 3 1
+5 1 1 2
+2 3 0 0
+4 5 2 3
+1 3 0 2
+5 2 2 2
+4 1 4 5
+3 5 4 0
+2 4 0 1
+</pre>
+
+<h3>出力例 2</h3>
+
+<pre>
+2
+4
+1
+4
+3
+</pre>
+
+<p>
+入出力例 2 における結果は以下の通りである．
+</p>
+
+<table style="margin-left: 50px; margin-right: 50px;" border="1" cellspacing="1">
+	<tr>
+		<th></th>
+		<th align="center">&nbsp;&nbsp;勝ち数&nbsp;&nbsp;</th>
+		<th align="center">&nbsp;&nbsp;負け数&nbsp;&nbsp;</th>
+		<th align="center">&nbsp;&nbsp;引き分け数&nbsp;&nbsp;</th>
+		<th align="center">&nbsp;&nbsp;勝ち点&nbsp;&nbsp;</th>
+	</tr>
+	<tr>
+		<th align="center">&nbsp;&nbsp;チーム 1&nbsp;&nbsp;</th>
+		<td align="center">2</td>
+		<td align="center">1</td>
+		<td align="center">1</td>
+		<td align="center">7</td>
+	</tr>
+	<tr>
+		<th align="center">&nbsp;&nbsp;チーム 2&nbsp;&nbsp;</th>
+		<td align="center">0</td>
+		<td align="center">1</td>
+		<td align="center">3</td>
+		<td align="center">3</td>
+	</tr>
+	<tr>
+		<th align="center">&nbsp;&nbsp;チーム 3&nbsp;&nbsp;</th>
+		<td align="center">3</td>
+		<td align="center">0</td>
+		<td align="center">1</td>
+		<td align="center">10</td>
+	</tr>
+	<tr>
+		<th align="center">&nbsp;&nbsp;チーム 4&nbsp;&nbsp;</th>
+		<td align="center">1</td>
+		<td align="center">3</td>
+		<td align="center">0</td>
+		<td align="center">3</td>
+	</tr>
+	<tr>
+		<th align="center">&nbsp;&nbsp;チーム 5&nbsp;&nbsp;</th>
+		<td align="center">1</td>
+		<td align="center">2</td>
+		<td align="center">1</td>
+		<td align="center">4</td>
+	</tr>
+</table>
+<br>
+
+<div class="source">
+<p class="source">
+問題文と自動審判に使われるデータは、<a href="http://www.ioi-jp.org">情報オリンピック日本委員会</a>が作成し公開している問題文と採点用テストデータです。
+</p>
+</div>

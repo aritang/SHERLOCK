@@ -1,0 +1,101 @@
+<span class="lang-en">
+<p>Score : <var>700</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>You are given sequences <var>A</var> and <var>B</var> consisting of non-negative integers.
+The lengths of both <var>A</var> and <var>B</var> are <var>N</var>, and the sums of the elements in <var>A</var> and <var>B</var> are equal.
+The <var>i</var>-th element in <var>A</var> is <var>A_i</var>, and the <var>i</var>-th element in <var>B</var> is <var>B_i</var>.</p>
+<p>Tozan and Gezan repeats the following sequence of operations:</p>
+<ul>
+<li>If <var>A</var> and <var>B</var> are equal sequences, terminate the process.</li>
+<li>Otherwise, first Tozan chooses a positive element in <var>A</var> and decrease it by <var>1</var>.</li>
+<li>Then, Gezan chooses a positive element in <var>B</var> and decrease it by <var>1</var>.</li>
+<li>Then, give one candy to Takahashi, their pet.</li>
+</ul>
+<p>Tozan wants the number of candies given to Takahashi until the process is terminated to be as large as possible, while Gezan wants it to be as small as possible.
+Find the number of candies given to Takahashi when both of them perform the operations optimally.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 \leq N \leq 2 × 10^5</var></li>
+<li><var>0 \leq A_i,B_i \leq 10^9(1\leq i\leq N)</var></li>
+<li>The sums of the elements in <var>A</var> and <var>B</var> are equal.</li>
+<li>All values in input are integers.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+<var>A_1</var> <var>B_1</var>
+<var>:</var>
+<var>A_N</var> <var>B_N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the number of candies given to Takahashi when both Tozan and Gezan perform the operations optimally.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>2
+1 2
+3 2
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>2
+</pre>
+<p>When both Tozan and Gezan perform the operations optimally, the process will proceed as follows:</p>
+<ul>
+<li>Tozan decreases <var>A_1</var> by <var>1</var>.</li>
+<li>Gezan decreases <var>B_1</var> by <var>1</var>.</li>
+<li>One candy is given to Takahashi.</li>
+<li>Tozan decreases <var>A_2</var> by <var>1</var>.</li>
+<li>Gezan decreases <var>B_1</var> by <var>1</var>.</li>
+<li>One candy is given to Takahashi.</li>
+<li>As <var>A</var> and <var>B</var> are equal, the process is terminated.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>3
+8 3
+0 1
+4 8
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>9
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>1
+1 1
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>0
+</pre></section>
+</div>
+</span>

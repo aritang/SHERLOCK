@@ -1,0 +1,104 @@
+
+
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({ tex2jax: { inlineMath: [["$","$"], ["\\(","\\)"]], processEscapes: true }});
+</script>
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+<H1>ゲームの攻略</H1>
+
+<p>
+あなたは所属するプログラミング部の部室から古びたボードゲームを発見しました。面白そうなので遊んでみることにしました。
+</p>
+
+<p>
+このゲームは <var>M</var> 個のイベントから成り、時刻 <var>t<sub>i</sub></var> にイベント <var>i</var>  を攻略しなければいけません。ただし、そのときにあなたの強さは <var>s<sub>i</sub></var> 以上である必要があり、<var>s<sub>i</sub></var> 以上にできない場合はゲームオーバーになります。ゲーム開始時（時刻０）のあなたの強さは０ですが、アイテムを買うことで強さを増加させることができます。ゲーム開始時のあなたの所持金は０ですが、１単位時間あたり１増加します。
+</p>
+
+<p>
+ボードにはそれぞれ１から <var>N</var> の番号が付けられた <var>N</var> 個のアイテムが順番に並べられており、アイテム <var>i</var> の値段は <var>v<sub>i</sub></var> で、それを購入するとあなたの強さが <var>h<sub>i</sub></var> 増加します。アイテムは所持金が十分であれば好きな時刻に好きな数だけ購入することができますが、残っているアイテムの中で番号が小さいものから順に選ばなければなりません。各アイテムは１度購入すると消滅します。
+</p>
+
+<p>
+また、同じ時刻に複数のアイテムを連続で買うことができ、このとき隣り合うアイテムの <var>h<sub>i</sub></var> の差分の和をボーナスとして得ることができます。例えば、ある時刻にアイテム１,２,３を同時に買った場合、<var>h<sub>1</sub></var> + <var>h<sub>2</sub></var> + <var>h<sub>3</sub></var> に加えて|<var>h<sub>1</sub></var> - <var>h<sub>2</sub></var>| + |<var>h<sub>2</sub></var> - <var>h<sub>3</sub></var>| だけあなたの強さが増加します。
+</p>
+
+<p>
+あなたは、全てのイベントを攻略した後の所持金を最大化したいと考えています。
+</p>
+
+<p>
+アイテムの情報とイベントの情報を入力とし、すべてのイベントを攻略した後の所持金の最大値を出力するプログラムを作成せよ。
+</p>
+
+<h2>Input</h2>
+
+<p>
+入力は以下の形式で与えられる。 
+</p>
+
+<pre>
+<var>N</var> <var>M</var>
+<var>v<sub>1</sub></var> <var>h<sub>1</sub></var>
+<var>v<sub>2</sub></var> <var>h<sub>2</sub></var>
+:
+<var>v<sub>N</sub></var> <var>h<sub>N</sub></var>
+<var>t<sub>1</sub></var> <var>s<sub>1</sub></var>
+<var>t<sub>2</sub></var> <var>s<sub>2</sub></var>
+:
+<var>t<sub>M</sub></var> <var>s<sub>M</sub></var>
+</pre>
+
+<p>
+１行目にアイテムの数 <var>N</var> (1 &le; <var>N</var> &le; 3000) とイベントの数 <var>M</var> (1 &le; <var>M</var> &le; 1000) が与えられる。続く <var>N</var> 行にアイテム <var>i</var> の値段 <va>v<sub>i</sub></var> と強さの増加量 <var>h<sub>i</sub></var> (1 &le; <var>v<sub>i</sub></var>, <var>h<sub>i</sub></var> &le; 100000) が与えられる。続く <var>M</var> 行にイベント <var>i</var> の時刻 <var>t<sub>i</sub></var> と条件 <var>s<sub>i</sub></var> (1 &le; <var>t<sub>i</sub></var>, <var>s<sub>i</sub></var> &le; 100000) が与えられる。ただし、<var>i</var> &lt; <var>j</var> のとき、<var>t<sub>i</sub></var> &lt; <var>t<sub>j</sub></var> とする。入力はすべて整数で与えられる。 
+</p>
+
+
+<h2>Output</h2>
+
+<p>
+所持金の最大値を１行に出力する。ただし、攻略することができない場合には「-1」を出力する。 
+</p>
+
+<h2>Sample Input 1</h2>
+
+<pre>
+5 4
+3 3
+2 1
+1 5
+4 2
+2 6
+4 1
+8 2
+10 4
+12 17
+</pre>
+
+<h2>Sample Output 1</h2>
+<pre>
+2
+</pre>
+<br/>
+
+
+<h2>Sample Input 2</h2>
+<pre>
+5 4
+3 3
+2 1
+1 5
+4 2
+2 6
+4 1
+8 2
+10 4
+12 30 
+</pre>
+
+<h2>Sample Output 2</h2>
+<pre>
+-1
+</pre>

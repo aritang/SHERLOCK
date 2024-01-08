@@ -1,0 +1,127 @@
+
+
+
+<H1>サイコロパズル</H1>
+
+<p>
+各面にアルファベット一文字(a 〜 z、A 〜 Z)が描かれたサイコロがあります。
+</p>
+
+<br><center><img src="https://judgeapi.u-aizu.ac.jp/resources/images/dice22Puzzle1"></center><br>
+
+<p>
+このようなサイコロを8つ組み合わせて 2 × 2 × 2 の立方体を作ることを考えます。
+</p>
+
+<br><center><img src="https://judgeapi.u-aizu.ac.jp/resources/images/dice22Puzzle2"></center><br>
+
+<p>
+組み合わせ方には条件があり、各サイコロの向き合う面は同じアルファベットでかつ一方が小文字、も
+う一方が大文字でなければなりません。例えば、a と描かれた面に接することができるのは A と描か
+れた面です。ただし、接するときの文字の向きは問いません。
+</p>
+
+<br><center><img src="https://judgeapi.u-aizu.ac.jp/resources/images/dice22Puzzle3"></center><br>
+
+<p>
+このルールに従い、８つのサイコロの情報を入力とし、立方体を作れるか否かを判定するプログラムを作成してください。立方体を作れる場合は YES（半角英大文字）、作れない場合は NO（半角英大文字）と出力してください。
+</p>
+
+<p>
+  なお、サイコロの各面の文字を次の図にあるように <var>c1</var> 〜 <var>c6</var> と表すことにします。
+
+
+  また、1つのサイコロに同じ文字が複数回描かれていることは無いものとします（同じアルファベットの大文字と小文字はその限りではありません）。
+
+</p>
+
+<br><center><img src="https://judgeapi.u-aizu.ac.jp/resources/images/dice22Puzzle4"></center><br>
+
+<H2>Input</H2>
+<p>
+複数のデータセットの並びが入力として与えられます。入力の終わりはゼロひとつの行で示されます。
+各データセットは以下の形式で与えられます。
+</p>
+
+
+<pre>
+<var>s<sub>1</sub></var>
+<var>s<sub>2</sub></var>
+:
+<var>s<sub>8</sub></var>
+</pre>
+
+<p>
+<var>i</var> 行目に <var>i</var> 個目のサイコロの情報 <var>s<sub>i</sub></var> が与えられます。<var>s<sub>i</sub></var> は長さ 6 の文字列であり <var>j</var> 文字目がサイコロの各面 <var>cj</var> に対応します。
+</p>
+
+<p>
+データセットの数は 50 を超えません。
+ </p>
+ 
+<H2>Output</H2>
+
+<p>
+データセットごとに判定結果（半角英大文字）を１行に出力します。
+</p>
+
+
+<H2>Sample Input</H2>
+
+<pre>
+zabZNq
+BCxmAi
+ZcbBCj
+aizXCm
+QgmABC
+JHzMop
+ImoXGz
+MZTOhp
+zabZnQ
+BCxmAi
+ZcbBCj
+aizXCm
+QgmABC
+JHzMop
+ImoXGz
+MZTOhp
+abcdef
+ABDCFE
+FBDCAE
+abcdef
+BEACDF
+bfcaed
+fabcde
+DEABCF
+UnivOf
+AizuaH
+zTXZYW
+piglIt
+GRULNP
+higGtH
+uAzIXZ
+FizmKZ
+UnivOf
+AizuaH
+piglIt
+higGtH
+GRULNP
+uAzIXZ
+FizmKZ
+ZTXzYW
+0
+</pre>
+
+<H2>Output for the Sample Input</H2>
+
+<pre>
+YES
+NO
+YES
+YES
+NO
+</pre>
+
+
+
+

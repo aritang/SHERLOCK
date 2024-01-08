@@ -1,0 +1,83 @@
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({ tex2jax: { inlineMath: [["$","$"], ["\\(","\\)"]], processEscapes: true }});
+</script>
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+<H1>Cross Points of a Circe and a Line</H1>
+
+<p>
+  For given a circle $c$ and a line $l$, print the coordinates of the cross points of them.
+</p>
+
+<H2>Input</H2>
+
+<p>
+  The input is given in the following format.
+</p>
+
+<p>
+$cx\; cy\; r$<br>
+$q$<br>
+$Line_1$<br>
+$Line_2$<br>
+:<br>
+$Line_q$<br>
+</p>
+
+<p>
+  In the first line, the center coordinate of the circle and its radius are given by $cx$, $cy$ and $r$. In the second line, the number of queries $q$ is given.
+</p>
+
+<p>
+  In the following $q$ lines, as queries, $Line_i$ are given ($1 \leq i \leq q$) in the following format.
+</p>
+<p>
+$x_1\; y_1\; x_2\; y_2$
+</p>
+
+<p>
+  Each line is represented by two points $p1$ and $p2$ which the line crosses. The coordinate of $p1$ and $p2$ are given by ($x1$, $y1$) and ($x2$, $y2$) respectively. All input values are given in integers.
+</p>
+
+<H2>Output</H2>
+
+<p>
+  For each query, print the coordinates of the cross points in the following rules.
+</p>
+
+<ul>
+<li>If there is one cross point, print two coordinates with the same values.</li>
+<li>Print the coordinate with smaller $x$ first. In case of a tie, print the coordinate with smaller $y$ first.</li>
+</ul>
+<p>
+  The output values should be in a decimal fraction with an error less than 0.000001.
+</p>
+
+
+
+<H2>Constraints</H2>
+<ul>
+<li>$p1$ and $p2$ are different</li>
+<li>The circle and line have at least one cross point</li>
+<li>$1 \leq q \leq 1,000$</li>
+<li>$-10,000 \leq cx, cy, x1, y1, x2, y2 \leq 10,000$</li>
+<li>$1 \leq r \leq 10,000$</li>
+</ul>
+
+<H2>Sample Input and Output</H2>
+<br>
+
+<H2>Sample Input</H2>
+<pre>
+2 1 1
+2
+0 1 4 1
+3 0 3 3
+</pre>
+<H2>Sample Output</H2>
+<pre>
+1.00000000 1.00000000 3.00000000 1.00000000
+3.00000000 1.00000000 3.00000000 1.00000000
+</pre>

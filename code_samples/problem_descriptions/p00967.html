@@ -1,0 +1,103 @@
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({ tex2jax: { inlineMath: [["$","$"], ["\\(","\\)"]], skipTags: ["script","noscript","style","textarea","code"], processEscapes: true }});
+</script>
+<script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML"></script>
+
+<h2>Problem K
+  Counting Cycles
+</h2>
+
+<p>
+  Given an undirected graph, count the number of simple cycles in the graph. Here, a simple cycle is a connected subgraph all of whose vertices have degree exactly two.
+</p>
+
+<h3>Input</h3>
+<p>
+  The input consists of a single test case of the following format.
+</p>
+
+<pre>
+$n$ $m$
+$u_1$ $v_1$
+...
+$u_m$ $v_m$
+</pre>
+
+<p>
+  A test case represents an undirected graph $G$.
+</p>
+
+<p>
+  The first line shows the number of vertices $n$ ($3 \leq n \leq 100 000$) and the number of edges $m$ ($n - 1 \leq m \leq n + 15$). The vertices of the graph are numbered from $1$ to $n$.
+</p>
+
+<p>
+The edges of the graph are specified in the following $m$ lines. Two integers $u_i$ and $v_i$ in the
+$i$-th line of these m lines mean that there is an edge between vertices $u_i$ and $v_i$. Here, you can assume that $u_i < v_i$ and thus there are no self loops.
+															   </p>
+
+<p>
+  For all pairs of $i$ and $j$ ($i \ne j$), either $u_i \ne u_j$ or $v_i \ne v_j$ holds. In other words, there are no parallel edges.
+</p>
+
+<p>
+  You can assume that $G$ is connected.
+</p>
+
+
+<h3>Output</h3>
+<p>
+  The output should be a line containing a single number that is the number of simple cycles in the graph.
+</p>
+
+
+<h3>Sample Input 1</h3>
+<pre>
+4 5
+1 2
+1 3
+1 4
+2 3
+3 4
+</pre>
+
+<h3>Sample Output 1</h3>
+<pre>
+3
+</pre>
+
+<h3>Sample Input 2</h3>
+<pre>
+7 9
+1 2
+1 3
+2 4
+2 5
+3 6
+3 7
+2 3
+4 5
+6 7
+</pre>
+
+<h3>Sample Output 2</h3>
+<pre>
+3
+</pre>
+
+<h3>Sample Input 3</h3>
+<pre>
+4 6
+1 2
+1 3
+1 4
+2 3
+2 4
+3 4
+</pre>
+
+<h3>Sample Output 3</h3>
+<pre>
+7
+</pre>

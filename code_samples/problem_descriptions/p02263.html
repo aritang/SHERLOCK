@@ -1,0 +1,64 @@
+
+
+<p>
+Reverse Polish notation is a notation where every operator follows all of its operands. For example, an expression (1+2)*(5+4) in the conventional Polish notation can be represented as 1 2 + 5 4 + * in the Reverse Polish notation. One of advantages of the Reverse Polish notation is that it is parenthesis-free.
+</p>
+
+<p>
+Write a program which reads an expression in the Reverse Polish notation and prints the computational result.
+</p>
+
+<p>
+An expression in the Reverse Polish notation is calculated using a stack. To evaluate the expression, the program should read symbols in order. If the symbol is an operand, the corresponding value should be pushed into the stack. On the other hand, if the symbols is an operator, the program should pop two elements from the stack, perform the corresponding operations, then push the result in to the stack. The program should repeat this operations.
+</p>
+
+
+<H2>Input</H2>
+
+<p>
+An expression is given in a line. Two consequtive symbols (operand or operator) are separated by a space character.
+</p>
+
+<p>
+You can assume that +, - and * are given as the operator and an operand is a positive integer less than 10<sup>6</sup>
+</p>
+
+<H2>Output</H2>
+
+<p>
+Print the computational result in a line.
+</p>
+
+<H2>Constraints</H2>
+
+<p>
+2 &le; the number of operands in the expression &le; 100<br>
+1 &le; the number of operators in the expression &le; 99<br>
+-1 &times; 10<sup>9</sup> &le; values in the stack &le; 10<sup>9</sup><br>
+</p>
+
+<H2>Sample Input 1</H2>
+<pre>
+1 2 +
+</pre>
+<H2>Sample Output 1</H2>
+<pre>
+3
+</pre>
+
+<H2>Sample Input 2</H2>
+<pre>
+1 2 + 3 4 - *
+</pre>
+<H2>Sample Output 2</H2>
+<pre>
+-3
+</pre>
+
+
+
+<h2>Notes</h2>
+
+<a href="template/ALDS1_3_A_template.c" target="_blank">Template in C</a>
+
+

@@ -1,0 +1,101 @@
+<span class="lang-en">
+<p>Score: <var>300</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3>
+<p>In the Ancient Kingdom of Snuke, there was a pyramid to strengthen the authority of Takahashi, the president of AtCoder Inc.<br/>
+The pyramid had <em>center coordinates</em> <var>(C_X, C_Y)</var> and <em>height</em> <var>H</var>. The altitude of coordinates <var>(X, Y)</var> is <var>max(H - |X - C_X| - |Y - C_Y|, 0)</var>.  </p>
+<p>Aoki, an explorer, conducted a survey to identify the center coordinates and height of this pyramid. As a result, he obtained the following information:  </p>
+<ul>
+<li><var>C_X, C_Y</var> was integers between <var>0</var> and <var>100</var> (inclusive), and <var>H</var> was an integer not less than <var>1</var>.  </li>
+<li>Additionally, he obtained <var>N</var> pieces of information. The <var>i</var>-th of them is: "the altitude of point <var>(x_i, y_i)</var> is <var>h_i</var>."  </li>
+</ul>
+<p>This was enough to identify the center coordinates and the height of the pyramid. Find these values with the clues above.  </p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3>
+<ul>
+<li><var>N</var> is an integer between <var>1</var> and <var>100</var> (inclusive).</li>
+<li><var>x_i</var> and <var>y_i</var> are integers between <var>0</var> and <var>100</var> (inclusive).</li>
+<li><var>h_i</var> is an integer between <var>0</var> and <var>10^9</var> (inclusive).</li>
+<li>The <var>N</var> coordinates <var>(x_1, y_1), (x_2, y_2), (x_3, y_3), ..., (x_N, y_N)</var> are all different.</li>
+<li>The center coordinates and the height of the pyramid can be uniquely identified.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3>
+<p>Input is given from Standard Input in the following format:  </p>
+<pre><var>N</var>
+<var>x_1</var> <var>y_1</var> <var>h_1</var>
+<var>x_2</var> <var>y_2</var> <var>h_2</var>
+<var>x_3</var> <var>y_3</var> <var>h_3</var>
+<var>:</var>
+<var>x_N</var> <var>y_N</var> <var>h_N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3>
+<p>Print values <var>C_X, C_Y</var> and <var>H</var> representing the center coordinates and the height of the pyramid in one line, with spaces in between.  </p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>4
+2 3 5
+2 1 5
+1 2 5
+3 2 5
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>2 2 6
+</pre>
+<p>In this case, the center coordinates and the height can be identified as <var>(2, 2)</var> and <var>6</var>.  </p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>2
+0 0 100
+1 1 98
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>0 0 100
+</pre>
+<p>In this case, the center coordinates and the height can be identified as <var>(0, 0)</var> and <var>100</var>.<br/>
+Note that <var>C_X</var> and <var>C_Y</var> are known to be integers between <var>0</var> and <var>100</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>3
+99 1 191
+100 1 192
+99 0 192
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>100 0 193
+</pre>
+<p>In this case, the center coordinates and the height can be identified as <var>(100, 0)</var> and <var>193</var>.  </p></section>
+</div>
+</span>

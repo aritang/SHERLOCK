@@ -1,0 +1,74 @@
+<span class="lang-en">
+<p>Score : <var>300</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>You are given an integer <var>N</var>.<br/>
+For two positive integers <var>A</var> and <var>B</var>, we will define <var>F(A,B)</var> as the larger of the following: the number of digits in the decimal notation of <var>A</var>, and the number of digits in the decimal notation of <var>B</var>.<br/>
+For example, <var>F(3,11) = 2</var> since <var>3</var> has one digit and <var>11</var> has two digits.<br/>
+Find the minimum value of <var>F(A,B)</var> as <var>(A,B)</var> ranges over all pairs of positive integers such that <var>N = A \times B</var>.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 \leq N \leq 10^{10}</var></li>
+<li><var>N</var> is an integer.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>The input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the minimum value of <var>F(A,B)</var> as <var>(A,B)</var> ranges over all pairs of positive integers such that <var>N = A \times B</var>.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>10000
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>3
+</pre>
+<p><var>F(A,B)</var> has a minimum value of <var>3</var> at <var>(A,B)=(100,100)</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>1000003
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>7
+</pre>
+<p>There are two pairs <var>(A,B)</var> that satisfy the condition: <var>(1,1000003)</var> and <var>(1000003,1)</var>. For these pairs, <var>F(1,1000003)=F(1000003,1)=7</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>9876543210
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>6
+</pre></section>
+</div>
+</span>

@@ -1,0 +1,135 @@
+
+<H1><font color="#000">Problem H:</font> Bug Hunt</H1>
+
+<p>
+In this problem, we consider a simple programming language that has only declarations of one-
+dimensional integer arrays and assignment statements. The problem is to find a bug in the given
+program.
+</p>
+<p>
+The syntax of this language is given in BNF as follows:
+</p>
+
+<center>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE1_bugHunt">
+</center>
+
+<p>
+where <span>&lt;</span><i>new line</i><span>&gt;</span> denotes a new line character (LF).
+</p>
+<p>
+Characters used in a program are alphabetical letters, decimal digits, <span>=</span>, <span>[</span>, <span>]</span> and new line characters. No other characters appear in a program.
+</p>
+<p>
+A declaration declares an array and specifies its length. Valid indices of an array of length <i>n</i> are integers between 0 and <i>n</i> - 1, inclusive. Note that the array names are case sensitive, i.e.
+array <span>a</span> and array <span>A</span> are different arrays. The initial value of each element in the declared array is undefined.
+</p>
+<p>
+For example, array <span>a</span> of length 10 and array <span>b</span> of length 5 are declared respectively as follows.
+</p>
+
+<pre>
+a[10]
+b[5]
+</pre>
+
+<p>
+An expression evaluates to a non-negative integer. A <span>&lt;</span><i>number</i><span>&gt;</span> is interpreted as a decimal
+integer. An <span>&lt;</span><i>array_name</i><span>&gt;</span> <span>[&lt;</span><i>expression</i><span>&gt;]</span> evaluates to the value of the <span>&lt;</span><i>expression</i><span>&gt;</span> -th element of
+the array. An assignment assigns the value denoted by the right hand side to the array element
+specified by the left hand side.
+</p>
+
+<p>
+Examples of assignments are as follows.
+</p>
+
+<pre>
+a[0]=3
+a[1]=0
+a[2]=a[a[1]]
+a[a[0]]=a[1]
+</pre>
+
+<p>
+A program is executed from the first line, line by line. You can assume that an array is declared once and only once before any of its element is assigned or referred to.
+</p>
+
+<p>
+Given a program, you are requested to find the following bugs.
+</p>
+
+<ul>
+   <li> An index of an array is invalid.</li>
+   <li> An array element that has not been assigned before is referred to in an assignment as an index of array or as the value to be assigned.</li>
+</ul>
+
+<p>
+You can assume that other bugs, such as syntax errors, do not appear. You can also assume
+that integers represented by <span>&lt;</span><i>number</i><span>&gt;</span>s are between 0 and 2<sup>31</sup> - 1 (= 2147483647), inclusive.
+</p>
+
+<H2>Input</H2>
+
+<p>
+The input consists of multiple datasets followed by a line which contains only a single '<span>.</span>' (period).
+Each dataset consists of a program also followed by a line which contains only a single '<span>.</span>' (period).
+A program does not exceed 1000 lines. Any line does not exceed 80 characters excluding a new
+line character.
+
+</p>
+
+<H2>Output</H2>
+
+<p>
+For each program in the input, you should answer the line number of the assignment in which
+the first bug appears. The line numbers start with 1 for each program. If the program does not
+have a bug, you should answer zero. The output should not contain extra characters such as
+spaces.
+
+</p>
+
+<H2>Sample Input</H2>
+<pre>
+a[3]
+a[0]=a[1]
+.
+x[1]
+x[0]=x[0]
+.
+a[0]
+a[0]=1
+.
+b[2]
+b[0]=2
+b[1]=b[b[0]]
+b[0]=b[1]
+.
+g[2]
+G[10]
+g[0]=0
+g[1]=G[0]
+.
+a[2147483647]
+a[0]=1
+B[2]
+B[a[0]]=2
+a[B[a[0]]]=3
+a[2147483646]=a[2]
+.
+.
+</pre>
+
+<H2>Output for the Sample Input</H2>
+<pre>
+2
+2
+2
+3
+4
+0
+</pre>
+
+
+
+

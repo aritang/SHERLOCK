@@ -1,0 +1,90 @@
+
+
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: { inlineMath: [['\\(','\\)']] }
+  });
+</script>
+<script type='text/javascript' src='http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
+
+<h1 class="ndoc-heading1">Problem L: The Return of FizzBuzz</h1>
+<p class="ndoc-top">ICPC World Finals 7日目</p>
+<p class="ndoc-top">いよいよ明日はICPC World Finalsの本番である。
+ティー氏はあるオンラインジャッジ(Aru Online Judge)で練習をすることにした。
+問題一覧を眺めているとFizzBuzzという問題が目についた。
+この問題は、FizzBuzzゲームで得られる発言のn文字目から20文字を出力するというものだ。</p>
+<p class="ndoc-top">…ふぅ。あっという間に解けてしまった。 これでは簡単すぎた。
+入力と出力を逆にした問題を作ってみることにしよう。</p>
+<h2 class="ndoc-heading2">問題</h2>
+<p class="ndoc-top">
+FizzBuzzとは、1以上の整数を順に、以下のルールに従って発言していくゲームである。</p>
+<ul class="ndoc-indent">
+<li>3で割り切れる時には「Fizz」</li>
+<li>5で割り切れる時には「Buzz」</li>
+<li>3と5の両方で割り切れる時には「FizzBuzz」</li>
+<li>それ以外の時はその数字</li>
+</ul>
+ゲームの進行状況を以下に示す。
+<p class="ndoc-top">1, 2, Fizz, 4, Buzz, Fizz, 7, 8, Fizz, Buzz,
+11, Fizz, 13, 14, FizzBuzz, 16, …</p>
+<p class="ndoc-top">得られた発言を結合することで得られる（無限長の）文字列をFizzBuzz Stringと呼ぶ。
+ある文字列\(s\)が与えられる。 \(s\)がFizzBuzz Stringの部分文字列として出現するかを判定し、
+出現する場合には最初に出現するインデックスを求めよ。</p>
+<h2 class="ndoc-heading2">入力</h2>
+
+<pre>
+n
+s<sub>1</sub>
+s<sub>2</sub>
+…
+s<sub>n</sub>
+</pre>
+<p>入力は複数のテストケースからなる。 1行目にテストケース数\(n\)が与えられる。 2行目から\( n+1
+\)行目は各テストケースに対応し、 文字列\( s_{i} \)が1行で与えられる。</p>
+<h2 class="ndoc-heading2">出力</h2>
+<p class="ndoc-top">\(i\)番目の文字列\( s_{i} \)について、 \( s_{i}
+\)がFizzBuzz Stringの部分文字列として出現する場合には最初に出現するインデックスを(1-indexで)、
+出現しない場合には"-1"を\(i\)行目に出力せよ。</p>
+<h2 class="ndoc-heading2">制約</h2>
+
+<ul class="ndoc-indent">
+<li>\( 1 \leq n \leq 20 \)</li>
+<li>文字列は文字\( \{ 0,1,\cdots,8,9
+,\mbox{F},\mbox{B},\mbox{i},\mbox{u},\mbox{z} \} (1 \leq i \leq n)
+\)からなる。</li>
+<li>文字列の長さは1以上15以下である。</li>
+</ul>
+<h2 class="ndoc-heading2">入出力例</h2>
+<h3 class="ndoc-heading3">入力1</h3>
+
+<pre>
+6
+78Fizz
+98FizzBuzz101
+FizzBu
+izzFiz
+111111111111111
+123456789
+</pre>
+<h3 class="ndoc-heading3">出力1</h3>
+<pre>
+16
+304
+18
+-1
+7703703700
+7795884765
+</pre>
+<p>入力例は6つのテストケースからなる。 それぞれ以下の発言に対応する。</p>
+<ul>
+<li>…, Buzz, Fizz, 7, 8, Fizz, Buzz, …</li>
+<li>…, Fizz, 97, 98, Fizz, Buzz, 101, Fizz, …</li>
+<li>…, 7, 8, Fizz, Buzz, 11, 12, …</li>
+<li>存在しない</li>
+<li>…, 1111111109, FizzBuzz, 1111111111,
+1111111112, Fizz, 1111111114, …</li>
+<li>…, 1123456787, Fizz, 1123456789, Buzz, Fizz, …</li>
+</ul>
+</body>
+</html>

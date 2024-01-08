@@ -1,0 +1,75 @@
+<span class="lang-en">
+<p>Score : <var>100</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>A programming competition site <em>AtCode</em> regularly holds programming contests.</p>
+<p>The next contest on AtCode is called ABC, which is rated for contestants with ratings less than <var>1200</var>.</p>
+<p>The contest after the ABC is called ARC, which is rated for contestants with ratings less than <var>2800</var>.</p>
+<p>The contest after the ARC is called AGC, which is rated for all contestants.</p>
+<p>Takahashi's rating on AtCode is <var>R</var>. What is the next contest rated for him?</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>0 ≤ R ≤ 4208</var></li>
+<li><var>R</var> is an integer.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>R</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the name of the next contest rated for Takahashi (<code>ABC</code>, <code>ARC</code> or <code>AGC</code>).</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>1199
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>ABC
+</pre>
+<p><var>1199</var> is less than <var>1200</var>, so ABC will be rated.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>1200
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>ARC
+</pre>
+<p><var>1200</var> is not less than <var>1200</var> and ABC will be unrated, but it is less than <var>2800</var> and ARC will be rated.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>4208
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>AGC
+</pre></section>
+</div>
+</span>

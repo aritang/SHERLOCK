@@ -1,0 +1,80 @@
+<span class="lang-en">
+<p>Score : <var>600</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>There is a function <var>f(x)</var>, which is initially a constant function <var>f(x) = 0</var>.</p>
+<p>We will ask you to process <var>Q</var> queries in order. There are two kinds of queries, update queries and evaluation queries, as follows:</p>
+<ul>
+<li>An update query <code>1 a b</code>: Given two integers <var>a</var> and <var>b</var>, let <var>g(x) = f(x) + |x - a| + b</var> and replace <var>f(x)</var> with <var>g(x)</var>.</li>
+<li>An evaluation query <code>2</code>: Print <var>x</var> that minimizes <var>f(x)</var>, and the minimum value of <var>f(x)</var>. If there are multiple such values of <var>x</var>, choose the minimum such value.</li>
+</ul>
+<p>We can show that the values to be output in an evaluation query are always integers, so we ask you to print those values as integers without decimal points.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li>All values in input are integers.</li>
+<li><var>1 \leq Q \leq 2 \times 10^5</var></li>
+<li><var>-10^9 \leq a, b \leq 10^9</var></li>
+<li>The first query is an update query.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>Q</var>
+<var>Query_1</var>
+<var>:</var>
+<var>Query_Q</var>
+</pre>
+<p>See Sample Input 1 for an example.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>For each evaluation query, print a line containing the response, in the order in which the queries are given.</p>
+<p>The response to each evaluation query should be the minimum value of <var>x</var> that minimizes <var>f(x)</var>, and the minimum value of <var>f(x)</var>, in this order, with space in between.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>4
+1 4 2
+2
+1 1 -8
+2
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>4 2
+1 -3
+</pre>
+<p>In the first evaluation query, <var>f(x) = |x - 4| + 2</var>, which attains the minimum value of <var>2</var> at <var>x = 4</var>.</p>
+<p>In the second evaluation query, <var>f(x) = |x - 1| + |x - 4| - 6</var>, which attains the minimum value of <var>-3</var> when <var>1 \leq x \leq 4</var>. Among the multiple values of <var>x</var> that minimize <var>f(x)</var>, we ask you to print the minimum, that is, <var>1</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>4
+1 -1000000000 1000000000
+1 -1000000000 1000000000
+1 -1000000000 1000000000
+2
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>-1000000000 3000000000
+</pre></section>
+</div>
+</span>

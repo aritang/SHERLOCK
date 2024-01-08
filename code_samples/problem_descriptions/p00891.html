@@ -1,0 +1,103 @@
+
+<H1><font color="#000">Problem H:</font> Where's Wally</H1>
+
+<p>
+Do you know the famous series of children's books named "Where's Wally"? Each of the books contains a variety of pictures of hundreds of people. Readers are challenged to find a person called Wally in the crowd.
+</p>
+
+<p>
+We can consider "Where's Wally" as a kind of pattern matching of two-dimensional graphical images. Wally's figure is to be looked for in the picture. It would be interesting to write a computer program to solve "Where's Wally", but this is not an easy task since Wally in the pictures may be slightly different in his appearances. We give up the idea, and make the problem much easier to solve. You are requested to solve an easier version of the graphical pattern matching problem.
+</p>
+
+<p>
+An image and a pattern are given. Both are rectangular matrices of bits (in fact, the pattern is always square-shaped). 0 means white, and 1 black. The problem here is to count the number of occurrences of the pattern in the image, i.e. the number of squares in the image exactly matching the pattern. Patterns appearing rotated by any multiples of 90 degrees and/or turned over forming a mirror image should also be taken into account.
+</p>
+
+
+<H2>Input</H2>
+
+<p>
+The input is a sequence of datasets each in the following format.
+</p>
+
+<p>
+<i>w h p</i><br>
+image data<br>
+pattern data<br>
+</p>
+
+<p>
+The first line of a dataset consists of three positive integers <i>w</i>, <i>h</i> and <i>p</i>. <i>w</i> is the width of the image and <i>h</i> is the height of the image. Both are counted in numbers of bits. <i>p</i> is the width and height of the pattern. The pattern is always square-shaped. You may assume 1 &le; <i>w</i> &le; 1000, 1 &le; <i>h</i> &le; 1000, and 1 &le; <i>p</i> &le; 100.
+</p>
+
+<p>
+The following <i>h</i> lines give the image. Each line consists of &lceil;<i>w</i>/6&rceil; (which is equal to &&lfloor;(<i>w</i>+5)/6&rfloor;) characters, and corresponds to a horizontal line of the image. Each of these characters represents six bits on the image line, from left to right, in a variant of the BASE64 encoding format. The encoding rule is given in the following table. The most significant bit of the value in the table corresponds to the leftmost bit in the image. The last character may also represent a few bits beyond the width of the image; these bits should be ignored.
+</p>
+
+<table>
+<tr>
+<td>character</td><td>value (six bits)</td>
+</tr>
+<tr><td>A-Z</td><td>0-25</td></tr>
+<tr><td>a-z</td><td>26-51</td></tr>
+<tr><td>0-9</td><td>52-61</td></tr>
+<tr><td>+</td><td>62</td></tr>
+<tr><td>/</td><td>63</td></tr>
+</table>
+
+<p>
+The last p lines give the pattern. Each line consists of &lceil;<i>p</i>/6&rceil; characters, and is encoded in the same way as the image.
+</p>
+
+<p>
+A line containing three zeros indicates the end of the input. The total size of the input does not
+exceed two megabytes.
+</p>
+
+<H2>Output</H2>
+
+<p>
+For each dataset in the input, one line containing the number of matched squares in the image should be output. An output line should not contain extra characters.
+</p>
+
+<p>
+Two or more matching squares may be mutually overlapping. In such a case, they are counted separately. On the other hand, a single square is never counted twice or more, even if it matches both the original pattern and its rotation, for example.
+</p>
+
+<H2>Sample Input</H2>
+<pre>
+48 3 3
+gAY4I4wA
+gIIgIIgg
+w4IAYAg4
+g
+g
+w
+153 3 3
+kkkkkkkkkkkkkkkkkkkkkkkkkg
+SSSSSSSSSSSSSSSSSSSSSSSSSQ
+JJJJJJJJJJJJJJJJJJJJJJJJJI
+g
+Q
+I
+1 1 2
+A
+A
+A
+384 3 2
+ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/
+BCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/A
+CDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/AB
+A
+A
+0 0 0
+</pre>
+
+<H2>Output for the Sample Input</H2>
+<pre>
+8
+51
+0
+98
+</pre>
+

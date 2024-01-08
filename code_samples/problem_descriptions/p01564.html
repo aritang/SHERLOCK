@@ -1,0 +1,146 @@
+
+<h1>Do use segment tree</h1>
+<p>Given a tree with <var>n</var> <var>(1 &le; n &le; 200,000)</var> nodes and a list of <var>q</var> <var>(1 &le; q &le; 100,000)</var> queries,
+process the queries in order and output a value for each output query.
+The given tree is connected and each node on the tree has a weight <var>w<sub>i</sub></var> <var>(-10,000 &le; w<sub>i</sub> &le; 10,000)</var>.
+</p>
+<p>Each query consists of a number <var>t<sub>i</sub></var> <var>(t<sub>i</sub> = 1, 2)</var>, which indicates the type of the query , and  three numbers <var>a<sub>i</sub></var>, <var>b<sub>i</sub></var> and <var>c<sub>i</sub></var> <var>(1 &le; a<sub>i</sub>, b<sub>i</sub> &le; n, -10,000 &le; c<sub>i</sub> &le; 10,000)</var>.
+Depending on the query type, process one of the followings:
+</p><ul><li><p> (<var>t<sub>i</sub> = 1</var>: modification query)
+Change the weights of all nodes on the shortest path between <var>a<sub>i</sub></var> and <var>b<sub>i</sub></var> (both inclusive) to <var>c<sub>i</sub></var>.
+</p></li><li><p> (<var>t<sub>i</sub> = 2</var>: output query) 
+First, create a list of weights on the shortest path between <var>a<sub>i</sub></var> and <var>b<sub>i</sub></var> (both inclusive) in order. After that, output the maximum sum of a non-empty continuous subsequence of the weights on the list. <var>c<sub>i</sub></var> is ignored for output queries.
+</p></li></ul>
+
+
+<h2>Input</h2>
+<p>The first line contains two integers <var>n</var> and <var>q</var>.
+ On the second line, there are <var>n</var> integers which indicate <var>w<sub>1</sub></var>, <var>w<sub>2</sub></var>, ... , <var>w<sub>n</sub></var>.
+</p>
+<p>Each of the following <var>n - 1</var> lines consists of two integers <var>s<sub>i</sub></var> and <var>e<sub>i</sub></var> <var>(1 &le; s<sub>i</sub>, e<sub>i</sub> &le; n)</var>,
+which means that there is an edge between <var>s<sub>i</sub></var> and <var>e<sub>i</sub></var>.
+</p>
+<p> Finally the following <var>q</var> lines give the list of queries, each of which contains four integers  in the format described above.
+Queries  must be processed one by one from top to bottom.
+</p>
+
+<h2>Output</h2>
+<p>For each output query, output  the maximum sum in one line.
+</p>
+
+<h2>Sample Input 1</h2>
+
+<pre>3 4
+1 2 3
+1 2
+2 3
+2 1 3 0
+1 2 2 -4
+2 1 3 0
+2 2 2 0
+</pre>
+
+
+<h2>Output for the Sample Input 1</h2>
+
+<pre>6
+3
+-4
+</pre>
+
+<h2>Sample Input 2</h2>
+
+<pre>7 5
+-8 5 5 5 5 5 5
+1 2
+2 3
+1 4
+4 5
+1 6
+6 7
+2 3 7 0
+2 5 2 0
+2 4 3 0
+1 1 1 -1
+2 3 7 0
+</pre>
+
+
+<h2>Output for the Sample Input 2</h2>
+
+<pre>12
+10
+10
+19
+</pre>
+
+<h2>Sample Input 3</h2>
+
+<pre>21 30
+10 0 -10 -8 5 -5 -4 -3 1 -2 8 -1 -7 2 7 6 -9 -6 3 4 9
+10 3
+3 2
+3 12
+12 4
+4 13
+4 9
+10 21
+21 1
+1 11
+11 14
+1 15
+10 6
+6 17
+6 16
+6 5
+5 18
+5 19
+10 7
+10 8
+8 20
+1 1 21 -10
+1 3 19 10
+2 1 13 0
+1 4 18 8
+1 5 17 -5
+2 16 7 0
+1 6 16 5
+1 7 15 4
+2 4 20 0
+1 8 14 3
+1 9 13 -1
+2 9 18 0
+1 10 12 2
+1 11 11 -8
+2 21 15 0
+1 12 10 1
+1 13 9 7
+2 6 14 0
+1 14 8 -2
+1 15 7 -7
+2 10 2 0
+1 16 6 -6
+1 17 5 9
+2 12 17 0
+1 18 4 6
+1 19 3 -3
+2 11 8 0
+1 20 2 -4
+1 21 1 -9
+2 5 19 0
+</pre>
+
+
+<h2>Output for the Sample Input 3</h2>
+
+<pre>20
+9
+29
+27
+10
+12
+1
+18
+-2
+-3
+</pre>

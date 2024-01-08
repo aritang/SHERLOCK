@@ -1,0 +1,114 @@
+
+<H1><font color="#000">Problem B:</font> Butterfly</H1>
+
+<p>
+Claire is a man-eater. She's a real man-eater. She's going around with dozens of guys. She's dating all the time. And one day she found some conflicts in her date schedule. D'oh!
+</p>
+
+<p>
+So she needs to pick some dates and give the others up. The dates are set by hours like 13:00 to 15:00. She may have more than one date with a guy. For example, she can have dates with Adam from 10:00 to 12:00 and from 14:00 to 16:00 and with Bob from 12:00 to 13:00 and from 18:00 to 20:00. She can have these dates as long as there is no overlap of time. Time of traveling, time of make-up, trouble from love triangles, and the likes are not of her concern. Thus she can keep all the dates with Adam and Bob in the previous example. All dates are set between 6:00 and 22:00 on the same day.
+</p>
+
+<p>
+She wants to get the maximum amount of satisfaction in total. Each guy gives her some satisfaction if he has all scheduled dates. Let's say, for example, Adam's satisfaction is 100 and Bob's satisfaction is 200. Then, since she can make it with both guys, she can get 300 in total. Your task is to write a program to satisfy her demand. Then she could spend a few hours with
+you... if you really want.
+</p>
+
+<H2>Input</H2>
+
+<p>
+The input consists of a sequence of datasets. Each dataset has the following format:
+</p>
+
+<p>
+<i>N</i><br>
+<i>Guy</i><sub>1</sub><br>
+...<br>
+<i>Guy</i><sub><i>N</i></sub><br>
+</p>
+
+<p>
+The first line of the input contains an integer N (1 &le; <i>N</i> &le; 100), the number of guys. Then there come the descriptions of guys. Each description is given in this format:
+</p>
+
+<p>
+<i>M L</i><br>
+<i>S</i><sub>1</sub> <i>E</i><sub>1</sub><br>
+...<br>
+<i>S</i><sub><i>M</i></sub> <i>E</i><sub><i>M</i></sub><br>
+</p>
+
+<p>
+The first line contains two integers <i>M<sub>i</sub></i> (1 &le; <i>M<sub>i</sub></i> &le; 16) and <i>L<sub>i</sub></i> (1 &le; <i>L<sub>i</sub></i> &le; 100,000,000), the number of dates set for the guy and the satisfaction she would get from him respectively. Then <i>M</i> lines follow. The <i>i</i>-th line contains two integers <i>S<sub>i</sub></i> and <i>E<sub>i</sub></i> (6 &le; <i>S<sub>i</sub></i> &lt; <i>E<sub>i</sub></i> &le; 22), the starting and ending time of the <i>i</i>-th date.
+</p>
+
+<p>
+The end of input is indicated by <i>N</i> = 0.
+</p>
+
+<H2>Output</H2>
+
+<p>
+For each dataset, output in a line the maximum amount of satisfaction she can get.
+</p>
+
+<H2>Sample Input</H2>
+<pre>
+2
+2 100
+10 12
+14 16
+2 200
+12 13
+18 20
+4
+1 100
+6 22
+1 1000
+6 22
+1 10000
+6 22
+1 100000
+6 22
+16
+1 100000000
+6 7
+1 100000000
+7 8
+1 100000000
+8 9
+1 100000000
+9 10
+1 100000000
+10 11
+1 100000000
+11 12
+1 100000000
+12 13
+1 100000000
+13 14
+1 100000000
+14 15
+1 100000000
+15 16
+1 100000000
+16 17
+1 100000000
+17 18
+1 100000000
+18 19
+1 100000000
+19 20
+1 100000000
+20 21
+1 100000000
+21 22
+0
+</pre>
+
+<H2>Output for the Sample Input</H2>
+<pre>
+300
+100000
+1600000000
+</pre>

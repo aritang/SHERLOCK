@@ -1,0 +1,65 @@
+
+
+<H1>Reservation System</H1>
+
+<p>
+The supercomputer system L in the PCK Research Institute performs a variety of calculations upon request from external institutes, companies, universities and other entities. To use the L system, you have to reserve operation time by specifying the start and end time. No two reservation periods are allowed to overlap each other.
+</p>
+
+<p>
+  Write a program to report if a new reservation overlaps with any of the existing reservations. Note that the coincidence of start and end times is not considered to constitute an overlap. All the temporal data is given as the elapsed time from the moment at which the L system starts operation.
+</p>
+
+<h2>Input</h2>
+
+<p>
+  The input is given in the following format.
+</p>
+
+<pre>
+<var>a</var> <var>b</var>
+<var>N</var>
+<var>s_1</var> <var>f_1</var>
+<var>s_2</var> <var>f_2</var>
+:
+<var>s_N</var> <var>f_N</var>
+</pre>
+
+<p>
+The first line provides new reservation information, i.e., the start time <var>a</var> and end time <var>b</var> (0 &le; <var>a</var> &lt; <var>b</var> &le; 1000) in integers. The second line specifies the number of existing reservations <var>N</var> (0 &le; <var>N</var> &le; 100). Subsequent <var>N</var> lines provide temporal information for the <var>i</var>-th reservation: start time <var>s_i</var> and end time <var>f_i</var> (0 &le; <var>s_i</var> &lt; <var>f_i</var> &le; 1000) in integers. No two existing reservations overlap.
+</p>
+
+<h2>Output</h2>
+
+<p>
+  Output "1" if the new reservation temporally overlaps with any of the existing ones, or "0" otherwise.
+</p>
+
+<h2>Sample Input 1</h2>
+
+<pre>
+5 7
+3
+1 4
+4 5
+7 10
+</pre>
+
+<h2>Sample Output 1</h2>
+<pre>
+0
+</pre>
+
+<h2>Sample Input 2</h2>
+<pre>
+3 7
+3
+7 10
+1 4
+4 5
+</pre>
+
+<h2>Sample Output 2</h2>
+<pre>
+1
+</pre>

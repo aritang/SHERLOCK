@@ -1,0 +1,131 @@
+
+
+
+<h1>難儀な人たちが座る椅子</h1>
+
+<p>
+ 4つの国の中心にある中立都市アイズシティには、大陸横断列車バンダイ号のホームがあります。 ホームには、バンダイ号を待つ乗客用の椅子が一列に用意されており、ホームに入ってきた人は自由に椅子を利用することができます。
+</p>
+
+<p>
+  このバンダイ号、安いし早いし快適ということで、周囲の4つの国からの利用者が絶えません。今日は開通記念日ということで、ホームに座っている人たちに特別なことをしてあげようと思っています。そのためには、改札を通った人たちがどこに座っているか把握しなければなりません。4つの国の人たちの難儀な性格を考慮して、椅子がどのように埋まっているかをシミュレートするプログラムを作成してください。改札を通った人たちは、次々に一列に並んだ椅子に座っていきます。4つの国の人たちは、国ごとに決まった性格と座り方があります。それぞれの座り方は以下の通りです。
+</p>
+
+
+<table border=1 cellpadding=8 cellspacing=1>
+<tr>
+<td width=120>A国人の性格</td>
+<td>   A 国人は座れればいい。左端から見ていき空いている椅子に座る。</td>
+</tr>
+</table>
+<center>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_chair1">
+</center>
+<br/>
+<br/>
+
+<table border=1 cellpadding=8 cellspacing=1>
+<tr>
+<td width=120 rowspan="2">B国人の性格</td>
+<td colspan="2"> B 国人は A 国人が苦手。 A 国人の隣以外で、右端から空いている椅子に座る。ただし、 A国人の隣しか空いていない場合、我慢して左端から空いている椅子に座る。</td>
+</tr>
+</table>
+<center>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_chair2">&nbsp;&nbsp;&nbsp;&nbsp;
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_chair3">
+<br/>
+<br/>
+</center>
+
+<table border=1 cellpadding=8 cellspacing=1>
+<tr>
+<td width=120 rowspan="2">C国人の性格</td>
+<td colspan="2"> 
+   C 国人は人の隣に座りたい。左側から順に座っている人を見ていき、一番左側に座っている人  の右隣に座ろうとするが、そこが埋まっているならその人の左隣に座ろうとする。そこも埋まっ  ているなら次の人の隣に同条件で座ろうとする。どの椅子にも人が座っていなければ真ん中(椅子の数 <var>n</var> が奇数の場合 (<var>n</var>+1)/2 、偶数の場合 <var>n</var>/2+1 )の椅子に座る。
+</td>
+</tr>
+</table>
+
+<center>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_chair4">&nbsp;&nbsp;&nbsp;&nbsp;
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_chair5">
+<br/>
+<br/>
+</center>
+
+
+<table border=1 cellpadding=8 cellspacing=1>
+<tr>
+<td width=120 rowspan="2">D国人の性格</td>
+<td colspan="2">
+   D 国人は人の隣に座りたくない。一番近い人との距離が、一番大きくなる椅子に座ろうとする。同条件の椅子が複数ある場合や、どうしても誰かの隣に座らなければならない場合、その中で一番左側にある椅子に座る。誰も座っていない場合は左端の椅子に座る。
+   </td>
+</tr>
+</table>
+<center>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_chair6">&nbsp;&nbsp;&nbsp;&nbsp;
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_chair7">
+<br/>
+<br/>
+</center>
+
+
+<p>
+バンダイ号に乗ろうとしている乗客の情報を入力とし、 椅子にどのように座っているかを出力するプログラムを作成してください。左から順番に座っている人の国籍を出力します。ただし、空席の場合は # (半角シャープ)を出力してください。
+</p>
+
+
+
+
+<H2>Input</H2>
+
+<p>
+複数のデータセットの並びが入力として与えられます。        入力の終わりはゼロふたつの行で示されます。
+各データセットは以下の形式で与えられます。
+</p>
+
+<pre>
+<var>n</var> <var>m</var>
+<var>a<sub>1</sub></var>
+<var>a<sub>2</sub></var>
+:
+<var>a<sub>m</sub></var>
+</pre>
+
+<p>
+1 行目に椅子の数 <var>n</var> (1 &le; <var>n</var> &le; 100) と乗客の数 <var>m</var> (<var>m</var> &le; <var>n</var>) が与えられます。続く <var>m</var> 行に <var>i</var> 人目の情報 <var>a<sub>i</sub></var> が与えられます。<var>a<sub>i</sub></var> は１つの文字で、'A' ならば A 国人、'B' ならば B 国人、'C' ならば C 国人、'D' ならば D 国人を表します。
+</p>
+
+<p>
+データセットの数は 100 を超えません。
+</p>
+
+<H2>Output</H2>
+
+<p>
+データセットごとに、最終的な椅子の状態を１行に出力します。
+</p>
+
+<H2>Sample Input</H2>
+
+<pre>
+5 4
+A
+B
+C
+D
+5 4
+D
+C
+B
+A
+0 0
+</pre>
+
+<H2>Output for the Sample Input</H2>
+
+<pre>
+ACD#B
+DCA#B
+</pre>
+

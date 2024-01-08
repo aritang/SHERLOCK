@@ -1,0 +1,125 @@
+
+<H1><font color="#000">Problem H:</font> Petoris</H1>
+
+<p>
+You are playing a puzzle game named <i>petoris</i>. It is played with a board divided into square
+grids and square tiles each of which fits to a single grid.
+</p>
+<p>
+In each step of the game, you have a board partially filled with tiles. You also have a block
+consisting of several tiles. You are to place this block somewhere on the board or to discard it,
+under the following restrictions on placement:
+</p>
+<ul>
+    <li> the block can be rotated, but cannot be divided nor flipped;</li>
+    <li> no tiles of the block can collide with any tiles existing on the board; and</li>
+    <li> all the tiles of the block need to be placed inside the board.</li>
+</ul>
+<p>
+Your task is to write a program to find the maximum score you can earn in this step. Here, the
+score is the number of the horizontal lines fully filled with tiles after the block is placed, or -1
+in case of discard.
+</p>
+
+<H2>Input</H2>
+
+<p>
+The first line of the input is <i>N</i>, the number of data sets. Then <i>N</i> data sets follow.
+</p>
+<p>
+Each data set consists of lines describing a block and a board. Each description (both for a block
+and a board) starts with a line containing two integer <i>H</i> and <i>W</i>, the vertical and horizontal
+dimension. Then <i>H</i> lines follow, each with <i>W</i> characters, where a ‘#’ represents a tile and ‘.’ a
+vacancy. You can assume that 0 &lt; <i>H</i> &le; 64 and 0 &lt; <i>W</i> &le; 64. Each block consists of one or more
+tiles all of which are connected. Each board contains zero or more tiles, and has no horizontal
+line fully filled with tiles at the initial state.
+</p>
+
+<H2>Output</H2>
+
+<p>
+For each data set, print in a single line the maximum possible score.
+</p>
+
+<H2>Sample Input</H2>
+<pre>
+5
+4 4
+....
+....
+####
+....
+12 8
+........
+........
+........
+........
+........
+.......#
+##.##..#
+.#######
+.#######
+.#######
+.#######
+.####.#.
+4 4
+....
+....
+.###
+...#
+12 8
+........
+........
+........
+........
+........
+........
+........
+##...###
+##.#####
+#######.
+#######.
+#######.
+4 4
+####
+#..#
+#..#
+####
+12 8
+........
+........
+........
+........
+........
+.......#
+##.##..#
+##....##
+##.##.##
+##.##.##
+##....##
+.####.#.
+2 2
+##
+#.
+3 3
+.##
+.##
+##.
+4 4
+....
+.##.
+.##.
+....
+2 2
+..
+..
+</pre>
+
+<H2>Output for the Sample Input</H2>
+<pre>
+4
+1
+4
+-1
+2
+</pre>

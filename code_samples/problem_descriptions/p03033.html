@@ -1,0 +1,75 @@
+<span class="lang-en">
+<p>Score : <var>500</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>There is an infinitely long street that runs west to east, which we consider as a number line.</p>
+<p>There are <var>N</var> roadworks scheduled on this street.
+The <var>i</var>-th roadwork blocks the point at coordinate <var>X_i</var> from time <var>S_i - 0.5</var> to time <var>T_i - 0.5</var>.</p>
+<p><var>Q</var> people are standing at coordinate <var>0</var>. The <var>i</var>-th person will start the coordinate <var>0</var> at time <var>D_i</var>, continue to walk with speed <var>1</var> in the positive direction and stop walking when reaching a blocked point.</p>
+<p>Find the distance each of the <var>Q</var> people will walk.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li>All values in input are integers.</li>
+<li><var>1 \leq N, Q \leq 2 \times 10^5</var></li>
+<li><var>0 \leq S_i &lt; T_i \leq 10^9</var></li>
+<li><var>1 \leq X_i \leq 10^9</var></li>
+<li><var>0 \leq D_1 &lt; D_2 &lt; ... &lt; D_Q \leq 10^9</var></li>
+<li>If <var>i \neq j</var> and <var>X_i = X_j</var>, the intervals <var>[S_i, T_i)</var> and <var>[S_j, T_j)</var> do not overlap.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var> <var>Q</var>
+<var>S_1</var> <var>T_1</var> <var>X_1</var>
+<var>:</var>
+<var>S_N</var> <var>T_N</var> <var>X_N</var>
+<var>D_1</var>
+<var>:</var>
+<var>D_Q</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print <var>Q</var> lines. The <var>i</var>-th line should contain the distance the <var>i</var>-th person will walk or <var>-1</var> if that person walks forever.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>4 6
+1 3 2
+7 13 10
+18 20 13
+3 4 2
+0
+1
+2
+3
+5
+8
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>2
+2
+10
+-1
+13
+-1
+</pre>
+<p>The first person starts coordinate <var>0</var> at time <var>0</var> and stops walking at coordinate <var>2</var> when reaching a point blocked by the first roadwork at time <var>2</var>.</p>
+<p>The second person starts coordinate <var>0</var> at time <var>1</var> and reaches coordinate <var>2</var> at time <var>3</var>. The first roadwork has ended, but the fourth roadwork has begun, so this person also stops walking at coordinate <var>2</var>.</p>
+<p>The fourth and sixth persons encounter no roadworks while walking, so they walk forever. The output for these cases is <var>-1</var>.</p></section>
+</div>
+</span>

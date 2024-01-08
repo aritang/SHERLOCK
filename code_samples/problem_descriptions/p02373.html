@@ -1,0 +1,82 @@
+
+<H1>LCA: Lowest Common Ancestor</H1>
+
+
+<p>
+For a rooted tree, find the lowest common ancestor of two nodes <var>u</var> and <var>v</var>.
+</p>
+
+<p>
+The given tree consists of <var>n</var> nodes and every node has a unique ID from 0 to <var>n</var>-1 where 0 is the root. 
+</p>
+
+
+<H2>Input</H2>
+
+
+<pre>
+<var>n</var>
+<var>k<sub>0</sub></var> <var>c<sub>1</sub></var> <var>c<sub>2</sub></var> ... <var>c<sub>k<sub>0</sub></sub></var>
+<var>k<sub>1</sub></var> <var>c<sub>1</sub></var> <var>c<sub>2</sub></var> ... <var>c<sub>k<sub>1</sub></sub></var>
+:
+<var>k<sub>n-1</sub></var> <var>c<sub>1</sub></var> <var>c<sub>2</sub></var> ... <var>c<sub>k<sub>n-1</sub></sub></var>
+<var>q</var>
+<var>u<sub>1</sub></var> <var>v<sub>1</sub></var>
+<var>u<sub>2</sub></var> <var>v<sub>2</sub></var>
+:
+<var>u<sub>q</sub></var> <var>v<sub>q</sub></var>
+</pre>
+
+<p>
+The first line of the input includes an integer <var>n</var>, the number of nodes of the tree.
+</p>
+<p>
+In the next <var>n</var> lines, the information of node <var>i</var> is given. <var>k<sub>i</sub></var> is the number of children of node <var>i</var>, and <var>c<sub>1</sub></var>, ... <var>c<sub>k<sub>i</sub></sub></var> are node IDs of 1st, ... <var>k</var>th child of node <var>i</var>. 
+</P>
+
+<p>
+In the next line, the number of queryies <var>q</var> is given. In the next <var>q</var> lines, pairs of <var>u</var> and <var>v</var> are given as the queries.
+</p>
+
+
+<H2>Output</H2>
+
+<p>
+For each query, print the LCA of <var>u</var> and <var>v</var> in a line.
+</p>
+
+<H2>Constraints</H2>
+
+<ul>
+<li>
+<var>1 &le; n &le; 100000</var>
+</li>
+<li>
+<var>1 &le; q &le; 100000</var>
+</li>
+</ul>
+
+<H2>Sample Input 1</H2>
+<pre>
+8
+3 1 2 3
+2 4 5
+0
+0
+0
+2 6 7
+0
+0
+4
+4 6
+4 7
+4 3
+5 2
+</pre>
+<H2>Sample Output 1</H2>
+<pre>
+1
+1
+0
+0
+</pre>

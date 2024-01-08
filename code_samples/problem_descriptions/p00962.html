@@ -1,0 +1,136 @@
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({ tex2jax: { inlineMath: [["$","$"], ["\\(","\\)"]], skipTags: ["script","noscript","style","textarea","code"], processEscapes: true }});
+</script>
+<script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML"></script>
+
+
+<h2>Problem F
+  Pizza Delivery
+  </h2>
+
+<p>
+  Alyssa is a college student, living in New Tsukuba City. All the streets in the city are one-way. A new social experiment starting tomorrow is on alternative traffic regulation reversing the one-way directions of street sections. Reversals will be on one single street section between two adjacent intersections for each day; the directions of all the other sections will not change, and the reversal will be canceled on the next day.
+</p>
+
+<p>
+Alyssa orders a piece of pizza everyday from the same pizzeria. The pizza is delivered along the shortest route from the intersection with the pizzeria to the intersection with Alyssa's house.
+</p>
+
+<p>
+  Altering the traffic regulation may change the shortest route. Please tell Alyssa how the social experiment will affect the pizza delivery route.
+</p>
+
+<h3>Input</h3>
+<p>
+  The input consists of a single test case in the following format.
+</p>
+
+<pre>
+$n$ $m$
+$a_1$ $b_1$ $c_1$
+...
+$a_m$ $b_m$ $c_m$
+</pre>
+
+<p>
+  The first line contains two integers, $n$, the number of intersections, and $m$, the number of street sections in New Tsukuba City ($2 \leq n \leq 100 000, 1 \leq m \leq 100 000$). The intersections are numbered $1$ through $n$ and the street sections are numbered $1$ through $m$.
+</p>
+
+<p>
+  The following $m$ lines contain the information about the street sections, each with three integers $a_i$, $b_i$, and $c_i$ ($1 \leq a_i  n, 1 \leq b_i \leq n, a_i \ne b_i, 1 \leq c_i \leq 100 000$). They mean that the street section numbered $i$ connects two intersections with the one-way direction from $a_i$ to $b_i$, which will be reversed on the $i$-th day. The street section has the length of $c_i$. Note that there may be more than one street section connecting the same pair of intersections.
+</p>
+
+<p>
+  The pizzeria is on the intersection 1 and Alyssa's house is on the intersection 2. It is guaranteed that at least one route exists from the pizzeria to Alyssa's before the social experiment starts.
+</p>
+
+<h3>Output</h3>
+<p>
+  The output should contain $m$ lines. The $i$-th line should be
+</p>
+<ul>
+<li> <span>HAPPY</span> if the shortest route on the $i$-th day will become shorter,</li>
+<li> <span>SOSO</span> if the length of the shortest route on the $i$-th day will not change, and</li>
+<li> <span>SAD</span> if the shortest route on the $i$-th day will be longer or if there will be no route from the pizzeria to Alyssa's house.</li>
+</ul>
+
+<p>
+  Alyssa doesn't mind whether the delivery bike can go back to the pizzeria or not.
+</p>
+
+
+<h3>Sample Input 1</h3>
+<pre>
+4 5
+1 3 5
+3 4 6
+4 2 7
+2 1 18
+2 3 12
+</pre>
+
+<h3>Sample Output 1</h3>
+<pre>
+SAD
+SAD
+SAD
+SOSO
+HAPPY
+</pre>
+
+<h3>Sample Input 2</h3>
+<pre>
+7 5
+1 3 2
+1 6 3
+4 2 4
+6 2 5
+7 5 6
+</pre>
+
+<h3>Sample Output 2</h3>
+<pre>
+SOSO
+SAD
+SOSO
+SAD
+SOSO
+</pre>
+
+<h3>Sample Input 3</h3>
+<pre>
+10 14
+1 7 9
+1 8 3
+2 8 4
+2 6 11
+3 7 8
+3 4 4
+3 2 1
+3 2 7
+4 8 4
+5 6 11
+5 8 12
+6 10 6
+7 10 8
+8 3 6
+</pre>
+
+<h3>Sample Output 3</h3>
+<pre>
+SOSO
+SAD
+HAPPY
+SOSO
+SOSO
+SOSO
+SAD
+SOSO
+SOSO
+SOSO
+SOSO
+SOSO
+SOSO
+SAD
+</pre>

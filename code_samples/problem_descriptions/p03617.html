@@ -1,0 +1,96 @@
+<span class="lang-en">
+<p>Score : <var>300</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>You've come to your favorite store Infinitesco to buy some ice tea.</p>
+<p>The store sells ice tea in bottles of different volumes at different costs.
+Specifically, a <var>0.25</var>-liter bottle costs <var>Q</var> yen, a <var>0.5</var>-liter bottle costs <var>H</var> yen, a <var>1</var>-liter bottle costs <var>S</var> yen, and a <var>2</var>-liter bottle costs <var>D</var> yen.
+The store has an infinite supply of bottles of each type.</p>
+<p>You want to buy exactly <var>N</var> liters of ice tea. How many yen do you have to spend?</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 \leq Q, H, S, D \leq 10^8</var></li>
+<li><var>1 \leq N \leq 10^9</var></li>
+<li>All input values are integers.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>Q</var> <var>H</var> <var>S</var> <var>D</var>
+<var>N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the smallest number of yen you have to spend to buy exactly <var>N</var> liters of ice tea.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>20 30 70 90
+3
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>150
+</pre>
+<p>Buy one <var>2</var>-liter bottle and two <var>0.5</var>-liter bottles. You'll get <var>3</var> liters for <var>90 + 30 + 30 = 150</var> yen.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>10000 1000 100 10
+1
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>100
+</pre>
+<p>Even though a <var>2</var>-liter bottle costs just <var>10</var> yen, you need only <var>1</var> liter.
+Thus, you have to buy a <var>1</var>-liter bottle for <var>100</var> yen.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>10 100 1000 10000
+1
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>40
+</pre>
+<p>Now it's better to buy four <var>0.25</var>-liter bottles for <var>10 + 10 + 10 + 10 = 40</var> yen.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 4</h3><pre>12345678 87654321 12345678 87654321
+123456789
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 4</h3><pre>1524157763907942
+</pre></section>
+</div>
+</span>

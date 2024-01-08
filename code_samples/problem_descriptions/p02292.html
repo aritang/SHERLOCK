@@ -1,0 +1,116 @@
+
+<H1>Counter-Clockwise</H1>
+<br/>
+
+<center>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_CGL_CGL_1_C">
+</center>
+
+
+<p>
+For given three points <var>p0, p1, p2</var>, print
+</p>
+
+<pre>
+COUNTER_CLOCKWISE
+</pre>
+<p>
+if <var>p0, p1, p2</var> make a counterclockwise turn (1),
+</p>
+<pre>
+CLOCKWISE
+</pre>
+<p>
+if <var>p0, p1, p2</var> make a clockwise turn (2),
+</p>
+<pre>
+ONLINE_BACK
+</pre>
+<p>
+if <var>p2</var> is on a line <var>p2, p0, p1</var> in this order (3),
+</p>
+<pre>
+ONLINE_FRONT
+</pre>
+<p>
+if <var>p2</var> is on a line <var>p0, p1, p2</var> in this order (4),
+</p>
+<pre>
+ON_SEGMENT
+</pre>
+<p>
+if <var>p2</var> is on a segment <var>p0p1</var> (5).
+</p>
+
+
+
+<H2>Input</H2>
+
+
+<pre>
+<var>x<sub>p0</sub></var> <var>y<sub>p0</sub></var> <var>x<sub>p1</sub></var> <var>y<sub>p1</sub></var>
+<var>q</var>
+<var>x<sub>p2<sub>0</sub></sub></var> <var>y<sub>p2<sub>0</sub></sub></var>
+<var>x<sub>p2<sub>1</sub></sub></var> <var>y<sub>p2<sub>1</sub></sub></var>
+...
+<var>x<sub>p2<sub>q-1</sub></sub></var> <var>y<sub>p2<sub>q-1</sub></sub></var>
+</pre>
+
+<p>
+In the first line, integer coordinates of <var>p0</var> and <var>p1</var> are given. Then, <var>q</var> queries are given for integer coordinates of <var>p2</var>.
+</p>
+
+
+<H2>Output</H2>
+
+<p>
+For each query, print the above mentioned status.
+</p>
+
+
+<H2>Constraints</H2>
+
+<ul>
+<li>
+<var>1 &le; q &le; 1000</var>
+</li>
+<li>
+<var>-10000 &le; x<sub>i</sub>, y<sub>i</sub> &le; 10000</var>
+</li>
+<li>
+<var>p0</var> and <var>p1</var> are not identical.
+</li>
+</ul>
+
+
+<H2>Sample Input 1</H2>
+<pre>
+0 0 2 0
+2
+-1 1
+-1 -1
+</pre>
+<H2>Sample Output 1</H2>
+<pre>
+COUNTER_CLOCKWISE
+CLOCKWISE
+</pre>
+<br/>
+
+<H2>Sample Input 2</H2>
+<pre>
+0 0 2 0
+3
+-1 0
+0 0
+3 0
+</pre>
+<H2>Sample Output 2</H2>
+<pre>
+ONLINE_BACK
+ON_SEGMENT
+ONLINE_FRONT
+</pre>
+<br/>
+
+

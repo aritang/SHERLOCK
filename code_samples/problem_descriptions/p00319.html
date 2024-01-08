@@ -1,0 +1,108 @@
+
+
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({ tex2jax: { inlineMath: [["$","$"], ["\\(","\\)"]], processEscapes: true }});
+</script>
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+
+<H1>滑降競技</H1>
+
+<p>
+あなたは磐梯山で開催されるスキー競技に参加します。この競技では、ゲレンデを各選手が２回滑降し、その合計時間の短さを競います。ゲレンデにはいくつもの旗が立っていて、それらの間には選手が通るラインが設定されています。選手はスタート地点からゴール地点まで、ラインをたどりながら滑降します。ラインは以下のように設定されています。
+</p>
+
+<ul>
+<li> ゴール地点以外の旗からは一本以上のラインが延びている。</li>
+<li> ある旗とある旗を直接結ぶラインは多くても一つしかない。</li>
+<li> ラインは決まった方向にしか滑降できない。</li>
+<li> どの旗にも必ずスタートからたどり着くことができ、どの旗からもゴールにたどり着ける。</li>
+<li> どのようにラインをたどっていっても、同じ旗に戻ることはない。</li>
+</ul>
+
+<p>
+選手は現在いる旗から延びているラインを選んで次に行く旗を決めることができます。ラインの選び方は自由なので、選手は滑降ごとに異なるラインを通ってゴールに向かうことができます。
+</p>
+
+<p>
+競技前夜、スポーツドクターのソルト君が、あなたが滑るときのゲレンデの状態を予想してくれました。それによると、１回目の滑降で通ったラインは通過の影響で雪質が変わってしまうため、２回目の滑降で同じラインを通ると、かかる時間が変わることがあるそうです。ソルト君は、それぞれのラインを１回目に通るときの時間と、２回目に通るときの時間を教えてくれました。あなたはこの情報をたよりに、２回の滑降の合計時間を最短にする滑り方を朝までに見つけなければなりません。
+</p>
+
+<p>
+ゲレンデの状態が与えられたとき、２回の滑降の合計時間でもっとも短い値を計算するプログラムを作成せよ。
+</p>
+
+
+<h2>Input</h2>
+
+<p>
+入力は以下の形式で与えられる。
+</p>
+
+<pre>
+<var>N</var> <var>P</var>
+<var>s<sub>1</sub></var> <var>e<sub>1</sub></var> <var>t<sub>1,1</sub></var> <var>t<sub>1,2</sub></var>
+<var>s<sub>2</sub></var> <var>e<sub>2</sub></var> <var>t<sub>2,1</sub></var> <var>t<sub>2,2</sub></var>
+:
+<var>s<sub>P</sub></var> <var>e<sub>P</sub></var> <var>t<sub>P,1</sub></var> <var>t<sub>P,2</sub></var>
+</pre>
+
+
+<p>
+１行目に、旗の数 <var>N</var> (2 &le; <var>N</var> &le; 1000) と２つの旗を結ぶラインの数 <var>P</var> (1 &le; <var>P</var> &le; 2000) が与えられる。旗には 1 から <var>N</var> までの番号が振られていて、スタート地点の旗の番号が1、ゴール地点の旗の番号が <var>N</var> である。続く <var>P</var> 行に、２つの旗を結ぶラインの情報が与えられる。各行には、ラインの始点である旗の番号 <var>s<sub>i</sub></var> (1 &le; <var>s<sub>i</sub></var> &lt; <var>N</var>)、終点である旗の番号 <var>e<sub>i</sub></var> (1 &lt; <var>e<sub>i</sub></var> &le; <var>N</var>)、１回目に通るときの所要時間 <var>t<sub>i,1</sub></var> (1 &le; <var>t<sub>i,1</sub></var> &le; 100000)、同じラインを２回目に通ったときの所要時間(1 &le; <var>t<sub>i,2</sub></var> &le; 100000) が与えられる。
+</p>
+
+
+<h2>Output</h2>
+
+<p>
+２回の滑降の合計時間でもっとも短い値を１行に出力する。
+</p>
+
+<h2>Sample Input 1</h2>
+
+<pre>
+3 3
+1 2 1 2
+2 3 1 2
+1 3 1 3
+</pre>
+
+<h2>Sample Output 1</h2>
+<pre>
+3
+</pre>
+<br/>
+
+
+<h2>Sample Input 2</h2>
+<pre>
+3 3
+1 2 1 2
+2 3 1 2
+1 3 1 1
+</pre>
+
+<h2>Sample Output 2</h2>
+<pre>
+2
+</pre>
+
+<br/>
+
+<h2>Sample Input 3</h2>
+<pre>
+4 5
+1 2 3 5
+1 3 1 3
+3 2 2 5
+2 4 6 1
+3 4 5 5
+</pre>
+
+<h2>Sample Output 3</h2>
+<pre>
+13
+</pre>

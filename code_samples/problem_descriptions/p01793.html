@@ -1,0 +1,53 @@
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({ tex2jax: { inlineMath: [["$","$"], ["\\(","\\)"]], processEscapes: true }});
+</script>
+<script type='text/javascript' src='http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
+</script>
+
+
+<h2>Problem D
+Content Delivery</h2>
+
+<p>
+You are given a computer network with n nodes. This network forms an undirected tree graph. The $i$-th edge connects the $a_i$-th node with the $b_i$-th node and its distance is $c_i$. Every node has different data and the size of the data on the $i$-th node is $s_i$. The network users can deliver any data from any node to any node. Delivery cost is defined as the product of the data size the user deliver and the distance from the source to the destination. Data goes through the shortest path in the delivery. Every node makes cache to reduce the load of this network. In every delivery, delivered data is cached to all nodes which relay the data including the destination node. From the next time of delivery, the data can be delivered from any node with a cache of the data. Thus, delivery cost reduces to the product of the original data size and the distance between the nearest node with a cache and the destination.
+</p>
+
+<p>
+Calculate the maximum cost of the $m$ subsequent deliveries on the given network. All the nodes have no cached data at the beginning. Users can choose the source and destination of each delivery arbitrarily.
+</p>
+
+
+<h3>Input</h3>
+
+<p>
+The input consists of a single test case. The first line contains two integers $n$ $(2 \leq n \leq 2,000)$ and $m$ $(1 \leq m \leq 10^9)$. $n$ and $m$ denote the number of the nodes in the network and the number of the deliveries, respectively. The following $n - 1$ lines describe the network structure. The $i$-th line of them contains three integers $a_i$, $b_i$ $(1 \leq a_i, b_i \leq n)$ and $c_i$ $(1 \leq c_i \leq 10,000)$ in this order, which means the $a_i$-th node and the $b_i$-th node are connected by an edge with the distance $c_i$. The next line contains $n$ integers. The $j$-th integer denotes $s_j$ $(1 \leq s_j \leq 10,000)$, which means the data size of the $j$-th node. The given network is guaranteed to be a tree graph.
+</p>
+
+
+<h3>Output</h3>
+
+<p>
+Display a line containing the maximum cost of the $m$ subsequent deliveries in the given network.
+</p>
+
+<h3>Sample Input 1</h3>
+
+<pre>3 2
+1 2 1
+2 3 2
+1 10 100</pre>
+
+<h3>Output for the Sample Input 1</h3>
+
+<pre>320</pre>
+
+<h3>Sample Input 2</h3>
+
+<pre>2 100
+1 2 1
+1 1</pre>
+
+<h3>Output for the Sample Input 2</h3>
+
+<pre>2</pre>

@@ -1,0 +1,59 @@
+
+
+<p>
+すぬけ君は，初期状態では動くことはできない．<var>i</var> 番目のチケットの値段は <var>p<sub>i</sub></var> であり，これを買うと任意の <var>(x, y)</var> と任意の非負実数 <var>t</var> に対し<var>(x, y)</var> から<var>(x + ta<sub>i</sub>, y + tb<sub>i</sub>)</var> に移動することができるようになる．すぬけ君が平面上の任意の二点間を(いくつかのチケットを組み合わせて) 移動できるようになるために買わなければならないチケットの合計金額の最小値を求めよ．
+</p>
+
+<h2>Constraints</h2>
+<ul>
+<li> 1 &le; <var>n</var> &le; 200000</li>
+<li> −10<sup>9</sup> &le; <var>a<sub>i</sub>, b<sub>i</sub></var> &le; 10<sup>9</sup></li>
+<li> 1 &le; <var>p<sub>i</sub> &le; 10<sup>9</sup></li>
+<li> 入力は全て整数である</li>
+</ul>
+
+
+<h2>Input</h2>
+<pre>
+<var>n</var>
+<var>a<sub>1</sub></var> <var>b<sub>1</sub></var> <var>p<sub>1</sub></var>
+. . .
+<var>a<sub>n</sub></var> <var>b<sub>n</sub></var> <var>p<sub>n</sub></var>
+</pre>
+
+<h2>Output</h2>
+<p>
+平面上の任意の二点間を移動できるようになるために買わなければならないチケットの合計金額の最小値を出力せよ．できない場合は-1 を出力せよ．
+</p>
+
+<h2>Sample Input 1</h2>
+<pre>
+7
+0 3 1
+0 3 2
+1 -1 2
+0 0 1
+-2 4 1
+-4 0 1
+2 1 2
+</pre>
+<p>
+たとえばチケット1, 3, 6 を買うとよい．
+</p>
+
+<h2>Sample Output 1</h2>
+<pre>
+4
+</pre>
+
+<h2>Sample Input 2</h2>
+<pre>
+2
+1 2 3
+4 5 6
+</pre>
+
+<h2>Sample Output 2</h2>
+<pre>
+-1
+</pre>

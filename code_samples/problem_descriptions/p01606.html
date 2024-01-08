@@ -1,0 +1,43 @@
+
+
+
+<h2>Sliding GCD</h2>
+
+
+<h2>Problem Statement</h2>
+
+<p>自然数の集合 <var>S</var> に対して，集合 <var>\{ GCD(T) | T ⊆ S, T は空でない \}</var> の要素数を <var>f(S)</var> とおく．</p>
+<p>ここで，<var>GCD(T)</var> は <var>T</var> に含まれるすべての数を割り切るような最大の整数である．<br />
+特に，<var>T</var> が一つの整数 <var>a</var> のみからなるときは <var>GCD(\{a\}) = a</var> であることに注意せよ．</p>
+<p><var>i = 1, 2, . . ., N - W+1</var> に対して <var>f(\{i, i+1, . . ., i+W - 1\})</var> を求めよ．</p>
+
+<h2>Input</h2>
+
+<p>入力は以下の形式に従う．与えられる数は全て整数である．</p>
+<pre><var>N</var> <var>W</var></pre>
+
+<h2>Constraints</h2>
+
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li><var>1 ≦ W ≦ N ≦ 10^5</var></li></ul>
+
+<h2>Output</h2>
+
+<p><var>i = 1, 2, . . ., N-W+1</var> のときの <var>f(\{i, i+1, . . ., i+W-1\})</var> の値を半角スペース区切りで 1 行に出力せよ．</p>
+
+<h2>Sample Input 1</h2>
+
+<pre>10 2</pre>
+
+<h2>Output for the Sample Input 1</h2>
+
+<pre>2 3 3 3 3 3 3 3 3</pre>
+<p><var>GCD(\{1\}) = 1, GCD(\{2\}) = 2, GCD(\{1,2\}) = 1</var> となるから <var>f(\{1,2\}) = 2</var> である．</p>
+
+<h2>Sample Input 2</h2>
+
+<pre>30 7</pre>
+
+
+<h2>Output for the Sample Input 2</h2>
+
+<pre>7 8 9 10 10 11 11 11 11 12 11 12 10 12 12 11 10 12 12 12 10 11 11 13</pre>

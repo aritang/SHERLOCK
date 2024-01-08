@@ -1,0 +1,128 @@
+
+<H1><font color="#000">Problem A: </font> Gift from the Goddess of Programming  </H1>
+
+<p>
+The goddess of programming is reviewing a thick logbook, which is a yearly record of visitors
+to her holy altar of programming. The logbook also records her visits at the altar.
+</p>
+
+<p>
+The altar attracts programmers from all over the world because one visitor is chosen every
+year and endowed with a gift of miracle programming power by the goddess. The endowed
+programmer is chosen from those programmers who spent the longest time at the altar during
+the goddess's presence. There have been enthusiastic visitors who spent very long time at the
+altar but failed to receive the gift because the goddess was absent during their visits.
+</p>
+
+<p>
+Now, your mission is to write a program that finds how long the programmer to be endowed
+stayed at the altar during the goddess's presence.
+</p>
+
+
+<H2>Input</H2>
+
+<p>
+The input is a sequence of datasets. The number of datasets is less than 100. Each dataset is
+formatted as follows.
+</p>
+
+<p>
+<i>n<br>
+M</i><sub>1</sub><i>/D</i><sub>1</sub><i> h</i><sub>1</sub>:<i>m</i><sub>1</sub><i>e</i><sub>1</sub><i> p</i><sub>1</sub><br>
+<i>M</i><sub>2</sub>/D</i><sub>2</sub><i> h</i><sub>2</sub>:<i>m</i><sub>2</sub><i>e</i><sub>2</sub><i> p</i><sub>2</sub><br>
+.<br>
+.<br>
+.<br>
+<i>M</i><sub>n</sub>/D</i><sub>n</sub><i> h</i><sub>n</sub>:<i>m</i><sub>n</sub><i>e</i><sub>n</sub><i> p</i><sub>n</sub><br>
+</p>
+
+<p>
+The first line of a dataset contains a positive even integer, n &le; 1000, which denotes the number
+of lines of the logbook. This line is followed by <i>n</i> lines of space-separated data, where <i>M</i><sub>i</sub><i>/D</i><sub>i</sub>
+identifies the month and the day of the visit, <i>h</i><sub>i</sub>:<i>m</i><sub>i</sub> represents the time of either the entrance
+to or exit from the altar, <i>e</i><sub>i</sub> is either I for entrance, or O for exit, and <i>p</i><sub>i</sub> identifies the visitor.
+</p>
+
+<p>
+All the lines in the logbook are formatted in a fixed-column format. Both the month and the
+day in the month are represented by two digits. Therefore April 1 is represented by 04/01 and
+not by 4/1. The time is described in the 24-hour system, taking two digits for the hour, followed
+by a colon and two digits for minutes, 09:13 for instance and not like 9:13. A programmer is
+identified by an ID, a unique number using three digits. The same format is used to indicate
+entrance and exit of the goddess, whose ID is 000.
+</p>
+
+<p>
+All the lines in the logbook are sorted in ascending order with respect to date and time. Because
+the altar is closed at midnight, the altar is emptied at 00:00. You may assume that each time
+in the input is between 00:01 and 23:59, inclusive.
+</p>
+
+<p>
+A programmer may leave the altar just after entering it. In this case, the entrance and exit
+time are the same and the length of such a visit is considered 0 minute. You may assume for
+such entrance and exit records, the line that corresponds to the entrance appears earlier in the
+input than the line that corresponds to the exit. You may assume that at least one programmer
+appears in the logbook.
+</p>
+
+<p>
+The end of the input is indicated by a line containing a single zero.
+</p>
+
+<H2>Output</H2>
+<p>
+For each dataset, output the total sum of the blessed time of the endowed programmer. The
+blessed time of a programmer is the length of his/her stay at the altar during the presence of
+the goddess. The endowed programmer is the one whose total blessed time is the longest among
+all the programmers. The output should be represented in minutes. Note that the goddess of
+programming is not a programmer.
+</p>
+
+
+<H2>Sample Input</H2>
+<pre>
+14
+04/21 09:00 I 000
+04/21 09:00 I 001
+04/21 09:15 I 002
+04/21 09:30 O 001
+04/21 09:45 O 000
+04/21 10:00 O 002
+04/28 09:00 I 003
+04/28 09:15 I 000
+04/28 09:30 I 004
+04/28 09:45 O 004
+04/28 10:00 O 000
+04/28 10:15 O 003
+04/29 20:00 I 002
+04/29 21:30 O 002
+20
+06/01 09:00 I 001
+06/01 09:15 I 002
+06/01 09:15 I 003
+06/01 09:30 O 002
+06/01 10:00 I 000
+06/01 10:15 O 001
+06/01 10:30 I 002
+06/01 10:45 O 002
+06/01 11:00 I 001
+06/01 11:15 O 000
+06/01 11:30 I 002
+06/01 11:45 O 001
+06/01 12:00 O 002
+06/01 12:15 I 000
+06/01 12:30 I 002
+06/01 12:45 O 000
+06/01 13:00 I 000
+06/01 13:15 O 000
+06/01 13:30 O 002
+06/01 13:45 O 003
+0
+</pre>
+<H2>Output for the Sample Input</H2>
+<pre>
+45
+120
+</pre>

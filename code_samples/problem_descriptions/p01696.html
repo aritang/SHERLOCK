@@ -1,0 +1,85 @@
+
+
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({ tex2jax: { inlineMath: [["$","$"], ["\\(","\\)"]], processEscapes: true }});
+</script>
+<script language="JavaScript" type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+
+<!-- begin en only -->
+<!--<h3><u>Broken Cipher Generator</u></h3>-->
+<!-- end en only -->
+<!-- begin ja only -->
+<h3><u>壊れた暗号生成器</u></h3>
+<!-- end ja only -->
+
+<!-- begin en only -->
+<!-- end en only -->
+<!-- begin ja only -->
+
+<p>JAG (Japanese Alumni Group) は多くのプログラマで構成される謎の組織であり，この組織の本部がある建物に入るためには毎回ある機械によって生成される暗号文を解かなくてはならない．
+この暗号文は，'<samp>+</samp>'，'<samp>-</samp>'，'<samp>[</samp>'，'<samp>]</samp>' の記号と大文字のアルファベットからなっており，以下の BNF で定義される &lt;Cipher&gt; によって表される．
+</p>
+<pre>&lt;Cipher&gt; ::= &lt;String&gt; | &lt;Cipher&gt;&lt;String&gt;
+&lt;String&gt; ::= &lt;Letter&gt; | '['&lt;Cipher&gt;']'
+&lt;Letter&gt; ::= '+'&lt;Letter&gt; | '-'&lt;Letter&gt; |
+             'A' | 'B' | 'C' | 'D' | 'E' | 'F' | 'G' | 'H' | 'I' | 'J' | 'K' | 'L' | 'M' |
+             'N' | 'O' | 'P' | 'Q' | 'R' | 'S' | 'T' | 'U' | 'V' | 'W' | 'X' | 'Y' | 'Z'</pre>
+<p>ここでそれぞれの記号は以下のような意味を表す．
+</p><ul><li> +(文字) : その文字の次のアルファベットを表す (ただし '<samp>Z</samp>' の次のアルファベットは '<samp>A</samp>' であるとする)
+</li><li> -(文字) : その文字の前のアルファベットを表す (ただし '<samp>A</samp>' の前のアルファベットは '<samp>Z</samp>' であるとする)
+</li><li> [(文字列)] : その文字列を左右反転した文字列を表す
+</li></ul>
+
+<p>しかしこの暗号文を生成する機械には現在故障が発生しており，暗号文のうちアルファベットの箇所が数文字壊れて読めなくなっている場合がある．読めない文字は仮に '<samp>?</samp>' と表されている．
+調査の結果，壊れた文字の埋め方は，復号後の文字列が，復号後の文字列としてありえる文字列の中で辞書順最小になるようなものであることがわかった．
+あなたの仕事はこの暗号文を正しく復号することである．
+</p>
+
+
+<!-- end ja only -->
+
+<h3>Input</h3>
+
+<!-- begin ja only -->
+
+<p>入力は複数のデータセットから構成される．
+各データセットは，上記の BNF で定義された暗号文において，一部の大文字のアルファベットが ‘?’ に置き換えられた文字列を含む 1 行からなる．
+各文字列の長さは $80$ 以下であると仮定してよい．
+また各データセットに含まれる '<samp>?</samp>' の数は $0$ 以上 $3$ 以下であると仮定してよい．
+</p>
+<p>入力の終了は '<samp>.</samp>' の1文字だけを含む行で表される．
+</p>
+
+
+<!-- end ja only -->
+
+<h3>Output</h3>
+
+<!-- begin ja only -->
+
+<p>各データセットに対して，復号後の文字列が辞書順最小になるように暗号文を復号したときの，復号後の文字列を出力せよ．
+</p>
+
+
+<!-- end ja only -->
+
+<h3>Sample Input</h3>
+
+<pre>A+A++A
+Z-Z--Z+-Z
+[ESREVER]
+J---?---J
+++++++++A+++Z-----------A+++Z
+[[++-+--?[--++-?++-+++L]][-+-----+-O]]++++---+L
+.</pre>
+
+<h3>Output for Sample Input</h3>
+
+<pre>ABC
+ZYXZ
+REVERSE
+JAG
+ICPC
+JAPAN</pre>
+

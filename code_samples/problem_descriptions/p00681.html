@@ -1,0 +1,93 @@
+
+
+
+
+<h1>Wall Breaker KND</h1>
+<h2>Problem</h2>
+<p>KND君は会津大学に在籍する学生プログラマである。彼はプログラマーであるとともに格闘家でもある。そんな彼は甘党であることで知られてるが、特に生クリームが大好物である。生クリームを食べればコンクリートの壁を数回壊すことができるようになるほどである。そのパワーに興味をもった彼の隣人は、生クリームたっぷりの新商品、「マトクリーム」を用いて実験をすることにした。
+</p>
+<p>その実験は、まず迷路を用意しKND君をそこに閉じ込める。その迷路には鍵がかかった扉、扉を開けるための鍵、マトクリームがそれぞれ1つずつ別のマスに存在する。彼は落ちている鍵を拾い、扉の鍵を開けることで外に脱出することが可能である。鍵を持っていなくても扉があるマスに移動することは可能である。また、マトクリームを食べることで迷路の壁を<var> N </var>回だけ壊すことができるようになる。ただし外壁を壊して迷路の外に出ることはできない。さて、彼は最小何回のマス移動で迷路を脱出できるだろうか。</p>
+
+
+<p>サンプル2つの迷路と最短の脱出経路は次の図で示される。SはKND君の初期位置、Mはマトクリーム、Kは鍵、Dは扉を表す。<br>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_ACPC2012Day3_F_1"><br>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_ACPC2012Day3_F_2">
+
+</p>
+
+<h2>Input</h2>
+<p>
+入力は複数のテストケースからなる。
+ひとつのテストケースは以下の形式で与えられる。
+入力の終了を2つのゼロを含む行で示す。
+</p>
+<pre>
+<var>(迷路の入力)</var>
+<var>x<sub>s</sub></var> <var>y<sub>s</sub></var>
+<var>x<sub>m</sub></var> <var>y<sub>m</sub></var>
+<var>x<sub>k</sub></var> <var>y<sub>k</sub></var>
+<var>x<sub>d</sub></var> <var>y<sub>d</sub></var>
+<var>N</var>
+</pre>
+<p>ここで、</p>
+<ul>
+<li>迷路の入力:<br />まず迷路の幅と高さを表す2つの整数<var> W </var>,<var> H </var>が来る。次に 2 *<var> H </var>- 1 行の入力がある。このうちの奇数行目は横に隣合うマスの間の壁の有無を表す。最初に空白が1つあり、<var> W </var>- 1 個の1か0が来る。1は壁があること、0は壁がないことを表す。偶数行目は縦に隣合うマスの間の壁の有無を表す。こちらは<var> W </var>個の1か0が来る。同様に1は壁があること、0は壁がないことを表す。</li>
+<li><var>x<sub>s</sub></var> <var>y<sub>s</sub></var>:主人公の初期位置のマスの座標</li>
+<li><var>x<sub>m</sub></var> <var>y<sub>m</sub></var>:マトクリームのマスの座標</li>
+<li><var>x<sub>k</sub></var> <var>y<sub>k</sub></var>:鍵のマスの座標</li>
+<li><var>x<sub>d</sub></var> <var>y<sub>d</sub></var>:扉のマスの座標</li>
+<li><var>N</var>:マトクリームをとった場合に迷路の壁を壊せる回数</li>
+</ul>
+
+
+<h2>Constraints</h2>
+<p>入力は以下の条件を満たす。</p>
+<ul>
+<li>入力はすべて整数。</li>
+<li>2 &le; <var>W</var>, <var>H</var> &le; 20</li>
+<li>0 &le; <var>x<sub>s</sub></var>, <var>x<sub>m</sub></var>, <var>x<sub>k</sub></var>, <var>x<sub>d</sub></var> &lt; <var>W</var></li>
+<li>0 &le; <var>y<sub>s</sub></var>, <var>y<sub>m</sub></var>, <var>y<sub>k</sub></var>, <var>y<sub>d</sub></var> &lt; <var>H</var></li>
+<li>0 &le; <var>N</var> &le; 100</li>
+<li>主人公の初期位置のマスの座標、マトクリームのマスの座標、鍵のマスの座標、扉のマスの座標は互いに別の座標である。</li>
+<li>扉に入ることが不可能なデータセットはない。</li>
+</ul>
+
+<h2>Output</h2>
+<p>各テストケースにつきKND君が迷路から脱出する最小のマス移動回数を一行に出力せよ。</p>
+
+<h2>Sample Input</h2>
+<pre>
+3 3
+ 0 0
+0 0 0
+ 0 0
+0 0 1
+ 0 1
+0 0
+0 1
+1 1
+2 2
+1
+5 5
+ 0 1 0 0
+1 0 0 1 0
+ 1 0 1 0
+0 1 0 0 1
+ 0 1 1 0
+0 1 0 1 0
+ 1 1 1 0
+0 0 0 0 0
+ 0 0 1 1
+0 0
+1 0
+4 4
+0 1
+2
+0 0
+</pre>
+
+<h2>Sample Output</h2>
+<pre>
+4
+15
+</pre>

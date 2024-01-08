@@ -1,0 +1,179 @@
+
+
+
+
+
+
+<h2>
+Problem I: カスタムペイント職人
+</h2>
+<p>
+slipはとあるレーシングゲームの動画が好きである。
+といっても、車が走っている動画が好きであるわけではなく、このゲームに搭載されたカスタムペイントカー作成という機能によって、車体をカスタマイズする動画が好きなのである。
+これは、円や多角形などといった基本的な幾何学図形を重ねあわせることで、車体にカスタムペイントができる機能である。
+</p>
+
+<p>
+このカスタムペイントによって様々なアートを創りだす、いわゆる職人と呼ばれる人々がいる。
+職人達の手にかかれば、車体にガリガリしたアイスキャンディーのキャラクターや、アイドルをプロデュースして楽しむゲームのキャラクターを創りだすことなど造作もない事である。
+職人の車は、オークションで高値で取引をされるほどである。
+</p>
+
+<p>
+その中でも、slipがお気に入りの職人がいる。
+その職人は、扇形の図形のみで様々なアートを創り出している。
+その職人は扇形を何枚も重ねあわせることで、自由自在に形を創り出している。
+</p>
+
+<p>
+ある日slipは、職人が作るアートにおいて、扇形が一番多く重なっている部分で何枚あるのか気になりだした。
+そこで、手作業で数えようと思ったのだが、枚数が多かったために諦めてしまった。
+</p>
+
+<p>
+そこで、勝手に友人と思っているあなたに、プログラムを作ってもらうことにした。
+あなたの仕事は、与えられた扇形の位置情報から、最大何枚の重なりがあるのか調べることである。
+ここでは、扇形同士が接している場合も重なっているものとする。
+</p>
+
+<h2>
+Input
+</h2>
+<p>
+データセットの入力は以下の形式である。
+</p>
+
+<pre>
+<i>n</i>
+<i>m<sub>1</sub></i>
+<i>x<sub>1</sub></i> <i>y<sub>1</sub></i> <i>r<sub>1</sub></i> <i>s<sub>1</sub></i> <i>t<sub>1</sub></i>
+<i>x<sub>2</sub></i> <i>y<sub>2</sub></i> <i>r<sub>2</sub></i> <i>s<sub>2</sub></i> <i>t<sub>2</sub></i>
+...
+<i>x<sub>i</sub></i> <i>y<sub>i</sub></i> <i>r<sub>i</sub></i> <i>s<sub>i</sub></i> <i>t<sub>i</sub></i>
+...
+<i>x<sub>m<sub>1</sub></sub></i> <i>y<sub>m<sub>1</sub></sub></i> <i>r<sub>m<sub>1</sub></sub></i> <i>s<sub>m<sub>1</sub></sub></i> <i>t<sub>m<sub>1</sub></sub></i>
+...
+<i>m<sub>i</sub></i>
+<i>x<sub>1</sub></i> <i>y<sub>1</sub></i> <i>r<sub>1</sub></i> <i>s<sub>1</sub></i> <i>t<sub>1</sub></i>
+<i>x<sub>2</sub></i> <i>y<sub>2</sub></i> <i>r<sub>2</sub></i> <i>s<sub>2</sub></i> <i>t<sub>2</sub></i>
+...
+<i>x<sub>m<sub>i</sub></sub></i> <i>y<sub>m<sub>i</sub></sub></i> <i>r<sub>m<sub>i</sub></sub></i> <i>s<sub>m<sub>i</sub></sub></i> <i>t<sub>m<sub>i</sub></sub></i>
+<i>m<sub>t</sub></i>
+...
+<i>x<sub>m<sub>t</sub></sub></i> <i>y<sub>m<sub>t</sub></sub></i> <i>r<sub>m<sub>t</sub></sub></i> <i>s<sub>m<sub>t</sub></sub></i> <i>t<sub>m<sub>t</sub></sub></i>
+</pre>
+
+<p>
+<i>n</i>(<i>0 &lt; n &le; 50</i>)はテストケースの個数、
+<i>m<sub>i</sub></i>(<i>0 &lt; m<sub>i</sub> &le; 16</i>)は貼られている扇形の枚数、
+<i>x<sub>i</sub></i>(<i>0 &le; x<sub>i</sub> &le; 500</i>)は扇形の頂点のx座標、
+<i>y<sub>i</sub></i>(<i>0 &le; y<sub>i</sub> &le; 500</i>)は扇形の頂点のy座標、
+<i>r<sub>i</sub></i>(<i>0 &lt; r<sub>i</sub> &le; 100</i>)は扇形の半径、
+<i>s<sub>i</sub></i>(<i>0 &le; s<sub>i</sub> &lt; 360</i>)は扇形の中心角の開始角度(degree)、
+<i>t<sub>i</sub></i>(<i>0 &le; t<sub>i</sub> &lt; 360</i>)は扇形の中心角の終了角度(degree)
+を表す。
+</p>
+
+<p>
+またすべて整数である。
+ここで与えられる扇形は必ずしも<i>s &lt; t</i>とは限らない。
+<i>s &lt; t</i>と<i>s &gt; t</i>の場合の図をそれぞれ図1,2に表す。
+</p>
+
+<center>
+<table>
+<tr>
+<td>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE_I1">
+</td>
+<td>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE_I2">
+</td>
+</tr>
+<tr>
+<td>
+<center>図1</center>
+</td>
+<td>
+<center>図2</center>
+</td>
+</tr>
+</table>
+</center>
+
+<p>
+ただし入力には図3のように、線と線がぴったりに重なる入力は無いものとする。
+</p>
+
+<center>
+<table>
+<tr>
+<td>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE_I3">
+</td>
+</tr>
+<tr>
+<td>
+<center>図3</center>
+</td>
+</tr>
+</table>
+</center>
+
+<h2>
+Output
+</h2>
+<p>
+各データセットに対し、扇形が重なっている部分の最大枚数を表示せよ。
+</p>
+
+<h2>
+Sample Input
+</h2>
+<pre>
+3
+3
+17 12 7 340 180
+26 22 10 150 270
+27 13 5 100 230
+3
+0 0 8 0 90
+10 10 8 180 0
+50 50 5 180 270
+2
+10 10 5 0 270
+0 0 30 0 90
+
+</pre>
+
+<h2>
+Output for Sample Input
+</h2>
+<pre>
+3
+2
+2
+
+</pre>
+
+<h2>
+Hint
+</h2>
+<p>
+ここでサンプルの1つ目は図4のように配置されている
+</p>
+
+<center>
+<table>
+<tr>
+<td>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE_I4">
+</td>
+</tr>
+<tr>
+<td>
+<center>図4</center>
+</td>
+</tr>
+</table>
+</center>

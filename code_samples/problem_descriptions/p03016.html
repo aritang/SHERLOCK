@@ -1,0 +1,77 @@
+<span class="lang-en">
+<p>Score : <var>600</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><!-- You are given <var>Q</var> tuples of integers <var>(L_i, A_i, B_i, M_i)</var>. For each tuple, answer the following question. -->
+<p>There is an arithmetic progression with <var>L</var> terms: <var>s_0, s_1, s_2, ... , s_{L-1}</var>.</p>
+<p>The initial term is <var>A</var>, and the common difference is <var>B</var>. That is, <var>s_i = A + B \times i</var> holds.</p>
+<p>Consider the integer obtained by concatenating the terms written in base ten without leading zeros. For example, the sequence <var>3, 7, 11, 15, 19</var> would be concatenated into <var>37111519</var>. What is the remainder when that integer is divided by <var>M</var>?</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3>
+<ul>
+<li>All values in input are integers.</li>
+<li><var>1 \leq L, A, B &lt; 10^{18}</var></li>
+<li><var>2 \leq M \leq 10^9</var></li>
+<li>All terms in the arithmetic progression are less than <var>10^{18}</var>.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>L</var> <var>A</var> <var>B</var> <var>M</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3>
+<p>Print the remainder when the integer obtained by concatenating the terms is divided by <var>M</var>.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>5 3 4 10007
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>5563
+</pre>
+<p>Our arithmetic progression is <var>3, 7, 11, 15, 19</var>, so the answer is <var>37111519</var> mod <var>10007</var>, that is, <var>5563</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>4 8 1 1000000
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>891011
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>107 10000000000007 1000000000000007 998244353
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>39122908
+</pre></section>
+</div>
+</span>

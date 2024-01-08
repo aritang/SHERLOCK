@@ -1,0 +1,103 @@
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({ tex2jax: { inlineMath: [["$","$"], ["\\(","\\)"]], processEscapes: true }});
+</script>
+<script language="JavaScript" type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+
+
+<h3>Problem Statement</h3>
+
+<p>You have a rectangular board with square cells arranged in $H$ rows and $W$ columns.
+The rows are numbered $1$ through $H$ from top to bottom, and the columns are numbered $1$ through $W$ from left to right. 
+The cell at the row $i$ and the column $j$ is denoted by $(i, j)$. 
+Each cell on the board is colored in either Black or White.
+</p>
+<p>You will paint the board as follows:
+</p><ol><li><p> Choose a cell $(i, j)$ and a color $c$, each uniformly at random, where $1 \le i \le H$, $1 \le j \le W$, and $c \in \{{\rm Black}, {\rm White}\}$.
+</p></li><li><p> Paint the cells $(i', j')$ with the color $c$ for any $1 \le i' \le i$ and $1 \le j' \le j$.
+</p></li></ol>
+
+<p>Here's an example of the painting operation.
+You have a $3 \times 4$ board with the coloring depicted in the left side of the figure below.
+If your random choice is the cell $(2, 3)$ and the color Black, the board will become as shown in the right side of the figure.
+$6$ cells will be painted with Black as the result of this operation.
+Note that we count the cells "painted" even if the color is not actually changed by the operation, like the cell $(1, 2)$ in this example.
+</p>
+
+<center>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_JAG2013_fig_overwrite" height="175" width="640" /><br/>
+Fig: An example of the painting operation
+</center>
+<br/>
+
+<p>Given the initial coloring of the board and the desired coloring, you are supposed to perform the painting operations repeatedly until the board turns into the desired coloring.
+Write a program to calculate the expected total number of painted cells in the sequence of operations.
+</p>
+
+<h3>Input</h3>
+<p>The input consists of several datasets. The number of datasets is at most $100$.
+</p>
+<p>The first line of each dataset contains two integers $H$ and $W$ ($1 \le H, W \le 5$), the numbers of rows and columns of the board respectively.
+Then given are two coloring configurations of the board, where the former is the initial coloring and the latter is the desired coloring.
+A coloring configuration is described in $H$ lines, each of which consists of $W$ characters. Each character is either B or W, denoting a Black cell or a White cell, respectively.
+There is one blank line between two configurations, and also after each dataset.
+You can assume that the resulting expected value for each dataset will not exceed $10^9$.
+</p>
+<p>The input is terminated by a line with two zeros, and your program should not process this as a dataset.
+</p>
+
+<h3>Output</h3>
+<p>For each dataset, your program should output the expected value in a line. The absolute error or the relative error in your answer must be less than $10^{-6}$.
+</p>
+
+<h3>Sample Input</h3>
+
+<pre>1 2
+BB
+
+WW
+
+2 1
+B
+W
+
+B
+W
+
+2 2
+BW
+BW
+
+WW
+WW
+
+3 4
+BBBB
+BBBB
+BBBB
+
+WWWW
+WWWW
+WWWW
+
+5 5
+BBBBB
+BBBBB
+BBBBB
+BBBBB
+BBBBB
+
+BBBBB
+BBBWB
+BBBBB
+BWBBB
+BBBBB
+
+0 0</pre>
+<h3>Output for the Sample Input</h3>
+
+<pre>6.0000000000
+0.0000000000
+12.8571428571
+120.0000000000
+23795493.8449918639</pre>

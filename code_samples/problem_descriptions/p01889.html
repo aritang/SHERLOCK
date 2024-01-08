@@ -1,0 +1,104 @@
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({ tex2jax: { inlineMath: [["$","$"], ["\\(","\\)"]], processEscapes: true }});
+</script>
+<script type='text/javascript' src='http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
+</script>
+
+
+<h2>Compressed Formula</h2>
+
+<p>
+You are given a simple, but long formula in a compressed format. A compressed formula is a sequence of $N$ pairs of an integer $r_i$ and a string $s_i$, which consists only of digits ('0'-'9'), '+', '-', and '*'. To restore the original formula from a compressed formula, first we generate strings obtained by repeating $s_i$ $r_i$ times for all $i$, then we concatenate them in order of the sequence.
+</p>
+
+<p>
+You can assume that a restored original formula is well-formed. More precisely, a restored formula satisfies the following BNF:
+</p>
+
+<pre>
+&lt;expression&gt; := &lt;term&gt; | &lt;expression&gt; '+' &lt;term&gt; | &lt;expression&gt; '-' &lt;term&gt;
+&lt;term&gt; := &lt;number&gt; | &lt;term&gt; * &lt;number&gt;
+&lt;number&gt; := &lt;digit&gt; | &lt;non-zero-digit&gt; &lt;number&gt;
+&lt;digit&gt; := '0' | &lt;non-zero-digit&gt;
+&lt;non-zero-digit&gt; := '1' | '2' | '3' | '4' | '5' | '6' | '7' | '8' | '9'
+</pre>
+
+<p>
+Here, '+' means addition, '-' means subtraction, and '*' means multiplication of integers.
+</p>
+
+<p>
+Your task is to write a program computing the answer of a given formula modulo 1,000,000,007, where $x$ modulo $m$ is a non-negative integer $r$ such that there exists an integer $k$ satisfying $x = km + r$ and $0 \leq r < m$; it is guaranteed that such $r$ is uniquely determined for integers $x$ and $m$.
+</p>
+
+<h3>Input</h3>
+<p>
+The input consists of a single test case.<br/>
+<br/>
+$N$<br/>
+$r_1$ $s_1$<br/>
+$r_2$ $s_2$<br/>
+...<br/>
+$r_N$ $s_N$
+</p>
+
+<p>
+The first line contains a single integer $N$ ($1 \leq N \leq 10^4$), which is the length of a sequence of a compressed formula. The following $N$ lines represents pieces of a compressed formula. The $i$-th line consists of an integer $r_i$ ($1 \leq r_i \leq 10^9$) and a string $s_i$ ($1 \leq |s_i| \leq 10$), where $t_i$ is the number of repetition of $s_i$, and $s_i$ is a piece of an original formula. You can assume that an original formula, restored from a given compressed formula by concatenation of repetition of pieces, satisfies the BNF in the problem statement.
+</p>
+
+
+<h3>Output</h3>
+<p>
+Print the answer of a given compressed formula modulo 1,000,000,007.
+</p>
+
+
+<h3>Sample Input 1</h3>
+<pre>
+1
+5 1
+</pre>
+
+<h3>Output for the Sample Input 1</h3>
+<pre>
+11111
+</pre>
+
+<h3>Sample Input 2</h3>
+<pre>
+2
+19 2*
+1 2
+</pre>
+
+<h3>Output for the Sample Input 2</h3>
+<pre>
+1048576
+</pre>
+
+<h3>Sample Input 3</h3>
+<pre>
+2
+1 1-10
+10 01*2+1
+</pre>
+
+<h3>Output for the Sample Input 3</h3>
+<pre>
+999999825
+</pre>
+
+<h3>Sample Input 4</h3>
+<pre>
+4
+3 12+45-12
+4 12-3*2*1
+5 12345678
+3 11*23*45
+</pre>
+
+<h3>Output for the Sample Input 4</h3>
+<pre>
+20008570
+</pre>

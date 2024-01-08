@@ -1,0 +1,109 @@
+<h2>Fast Forwarding</h2>
+
+<p>
+  Mr. Anderson frequently rents video tapes of his favorite classic films. Watching the films so many times, he has learned the precise start times of his favorite scenes in all such films. He now wants to find how to wind the tape to watch his favorite scene as quickly as possible on his video player.
+</p>
+
+<p>
+  When the <b><span>[play]</span></b> button is pressed, the film starts at the normal playback speed. The video player has two buttons to control the playback speed: The <b><span>[3x]</span></b> button triples the speed, while the <b><span>[1/3x]</span></b> button reduces the speed to one third. These speed control buttons, however, do not take effect on the instance they are pressed. Exactly one second after playback starts and every second thereafter, the states of these speed control buttons are checked. If the <b><span>[3x]</span></b> button is pressed on the timing of the check, the playback speed becomes three times the current speed. If the <b><span>[1/3x]</span></b> button is pressed, the playback speed becomes one third of the current speed, unless it is already the normal speed.
+</p>
+
+<p>
+  For instance, assume that his favorite scene starts at 19 seconds from the start of the film. When the <b><span>[3x]</span></b> button is on at one second and at two seconds after the playback starts, and the <b><span>[1/3x]</span></b> button is on at three seconds and at five seconds after the start, the desired scene can be watched in the normal speed five seconds after starting the playback, as depicted in the following chart.
+</p>
+
+<center>
+  <img src="https://judgeapi.u-aizu.ac.jp/resources/images/ICPCAsia2019_fast_forwarding" width="600"/>
+  </center>
+
+<p>
+  Your task is to compute the shortest possible time period after the playback starts until the desired scene starts. The playback of the scene, of course, should be in the normal speed.
+</p>
+
+<h3>Input</h3>
+<p>
+  The input consists of a single test case of the following format.
+</p>
+<pre>
+$t$
+</pre>
+
+<p>
+  The given single integer $t$ ($0 \leq t < 2^{50}$) is the start time of the target scene.
+					    </p>
+
+<h3>Output</h3>
+<p>
+  Print an integer that is the minimum possible time in seconds before he can start watching the target scene in the normal speed.
+</p>
+
+
+<h3>Sample Input 1</h3>
+<pre>
+19
+</pre>
+
+<h3>Sample Output 1</h3>
+<pre>
+5
+</pre>
+
+<h3>Sample Input 2</h3>
+<pre>
+13
+</pre>
+
+<h3>Sample Output 2</h3>
+<pre>
+5
+</pre>
+
+<h3>Sample Input 3</h3>
+<pre>
+123456789098765
+</pre>
+
+<h3>Sample Output 3</h3>
+<pre>
+85
+</pre>
+
+<h3>Sample Input 4</h3>
+<pre>
+51
+</pre>
+
+<h3>Sample Output 4</h3>
+<pre>
+11
+</pre>
+
+<h3>Sample Input 5</h3>
+<pre>
+0
+</pre>
+
+<h3>Sample Output 5</h3>
+<pre>
+0
+</pre>
+
+<h3>Sample Input 6</h3>
+<pre>
+3
+</pre>
+
+<h3>Sample Output 6</h3>
+<pre>
+3
+</pre>
+
+<h3>Sample Input 7</h3>
+<pre>
+4
+</pre>
+
+<h3>Sample Output 7</h3>
+<pre>
+2
+</pre>

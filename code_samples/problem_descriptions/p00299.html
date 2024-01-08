@@ -1,0 +1,120 @@
+
+
+
+<h1>学食</h1>
+
+<p>
+今日はＺ大学のオープンキャンパスです。毎年この日の昼休みには、大勢の高校生たちが学食に列をつくります。そこでＺ大学の事務局は、行列の長さが最大でどのくらいの距離になるかを予測することにしました。事前調査の結果で、以下のことが分かっています。
+</p>
+
+<ul>
+<li> 行列にはそれぞれ 1 から <var>N</var> までの番号が振られた <var>N</var> 人が並びます。</li>
+<li> <var>C</var> 個の高校生のペア (<var>a<sub>i</sub></var>, <var>b<sub>i</sub></var>) それぞれについて、以下の２種類の制約があります：
+     <ul>
+     <li>１つ目の制約は順序に関するもので以下のいずれかです：<br>
+         <var>a<sub>i</sub></var> は <var>b<sub>i</sub></var> よりも先、または同じ位置に並ばなくてはならない<br>
+	 <var>a<sub>i</sub></var> は <var>b<sub>i</sub></var> よりも後、または同じ位置に並ばなくてはならない<br>
+	 <var>a<sub>i</sub></var> は <var>b<sub>i</sub></var> より先でも、同じ位置でも、後でもよい<br>
+	 </li>
+     <li>２つ目の制約は距離に関するもので以下のいずれかです：<br>
+	<var>a<sub>i</sub></var> と <var>b<sub>i</sub></var> は <var>d<sub>i</sub></var> メートル以上離れなければならない<br>
+	<var>a<sub>i</sub></var> と <var>b<sub>i</sub></var> は <var>d<sub>i</sub></var> メートル以内に並ばなければならない<br>
+	</li>
+</li>
+</ul>
+</ul>
+
+<p>
+また、先頭から同じ距離の場所に複数の人が並ぶことができ、行列の先頭には常に番号 1 の人が並ぶことが分かっています。
+</p>
+
+<p>
+与えられた <var>C</var> 個の制約をすべて満たす行列について、先頭から最後尾までの距離が最大となるような並び方をした場合の距離を求めるプログラムを作成してください。ただし、どこまでも離れることができる場合は <span>inf</span> と、制約を満たす並び方が不可能な場合は <span>-1</span> と出力してください。
+</p>
+
+<h2>入力</h2>
+<p>
+入力は以下の形式で与えられる。 
+</p>
+
+<pre>
+<var>N</var> <var>C</var>
+<var>constraint<sub>1</sub></var>
+<var>constraint<sub>2</sub></var>
+:
+<var>constraint<sub>C</sub></var>
+</pre>
+
+<p>
+1 行目に行列に並ぶ高校生の人数 <var>N</var> (2 &le; <var>N</var> &le; 100) と制約の数 <var>C</var> (0 &le; <var>C</var> &le; 200) が与えられる。続く <var>C</var> 行に各制約 <var>constraint<sub>i</sub></var> が次の形式で与えられる。 
+</p>
+
+<pre>
+<var>a<sub>i</sub>o<sub>i</sub>b<sub>i</sub>s<sub>i</sub>d<sub>i</sub></var>
+</pre>
+
+<p>
+制約には空白は含まれない。<var>a<sub>i</sub></var>, <var>o<sub>i</sub></var>, <var>b<sub>i</sub></var>, <var>s<sub>i</sub></var>, <var>d<sub>i</sub></var> の意味を以下に示す。
+</p>
+
+<ul>
+<li> <var>a<sub>i</sub></var> と <var>b<sub>i</sub></var> (1 &le; <var>a<sub>i</sub></var>, <var>b<sub>i</sub></var> &le; <var>N</var> かつ <var>a<sub>i</sub></var> &ne; <var>b<sub>i</sub></var> ) は高校生の番号、<var>d<sub>i</sub></var> は距離 (0 &le; <var>d</var> &le; 10000) を表す整数である。</li>
+<li> <var>o<sub>i</sub></var> は順序の制約を指定する <span><=</span>、<span>>=</span>、<span>*</span> のいずれかの文字列であり、<span><=</span> の場合「<var>a<sub>i</sub></var> は <var>b<sub>i</sub></var> よりも先、または同じ位置に並ばなくてはならない」、<span>>=</span> の場合「<var>a<sub>i</sub></var> は <var>b<sub>i</sub></var> よりも後、または同じ位置に並ばなくてはならない」、<span>*</span> の場合「<var>a<sub>i</sub></var> は <var>b<sub>i</sub></var> より先でも、同じ位置でも、後でもよい」ことを意味する。ただし <var>o<sub>i</sub></var> が <span>*</span> となる制約は７個以上与えられることはない。</li>
+<li> <var>s<sub>i</sub></var> は距離の制約を指定する <span>+</span> または <span>-</span> の文字であり、<span>+</span> の場合「<var>a<sub>i</sub></var> と <var>b<sub>i</sub></var> は <var>d<sub>i</sub></var> メートル以上離れなければならない」、<span>-</span> の場合「<var>a<sub>i</sub></var> と <var>b<sub>i</sub></var> は <var>d<sub>i</sub></var> メートル以内に並ばなければならない」ことを意味する。
+</li>
+</ul>
+
+<p>
+ただし、あるペアに対して複数の制約が与えられることはないものとする。
+</p>
+
+<h2>出力</h2>
+
+<p>
+先頭から最後尾までの距離を１行に出力する。 
+</p>
+
+<h2>入出力例 </h2>
+<br>
+
+
+<h2>入力例１</h2>
+<pre>
+3 2
+1<=2-1
+2<=3-2
+</pre>
+
+<h2> 出力例１</h2>
+<pre>
+3
+</pre>
+<br>
+
+<h2>入力例２ </h2>
+<pre>
+3 3
+1<=2-1
+2<=3-2
+1<=3+4
+</pre>
+
+<h2>出力例２</h2>
+<pre>
+-1
+</pre>
+<br>
+
+
+<h2>入力例３ </h2>
+<pre>
+3 2
+1<=2-2
+2*3+1
+</pre>
+<h2>出力例３</h2>
+<pre>
+inf 
+</pre>
+
+

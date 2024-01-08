@@ -1,0 +1,169 @@
+
+<H1><font color="#000">Problem E: </font>Driving an Icosahedral Rover</H1>
+
+<p>
+After decades of fruitless efforts, one of the expedition teams of ITO (Intersolar Tourism Organization) finally found a planet that would surely provide one of the best tourist attractions
+within a ten light-year radius from our solar system. The most attractive feature of the planet,
+besides its comfortable gravity and calm weather, is the area called <i>Mare Triangularis</i>. Despite
+the name, the area is not covered with water but is a great plane. Its unique feature is that it is
+divided into equilateral triangular sections of the same size, called <i>trigons</i>. The <i>trigons</i> provide
+a unique impressive landscape, a must for tourism. It is no wonder the board of ITO decided
+to invest a vast amount on the planet.
+</p>
+
+<p>
+Despite the expected secrecy of the staff, the Society of Astrogeology caught this information
+in no time, as always. They immediately sent their president's letter to the Institute of Science
+and Education of the Commonwealth Galactica claiming that authoritative academic inspections
+were to be completed before any commercial exploitation might damage the nature.
+</p>
+
+<p>
+Fortunately, astrogeologists do not plan to practice all the possible inspections on all of the
+<i>trigons</i>; there are far too many of them. Inspections are planned only on some characteristic
+<i>trigons</i> and, for each of them, in one of twenty different scientific aspects.
+</p>
+
+<p>
+To accelerate building this new tourist resort, ITO's construction machinery team has already succeeded in putting their brand-new
+invention in practical use. It is a rover vehicle of the shape of an <i>icosahedron</i>, a regular polyhedron with twenty faces of equilateral triangles. 
+The machine is customized
+so that each of the twenty faces exactly fits each of the <i>trigons</i>. 
+Controlling the high-tech <i>gyromotor</i> installed inside its body, the rover can roll onto one of the three <i>trigons</i> neighboring the one its bottom is
+on.
+</p>
+
+<center>
+<table width="480">
+<tr>
+<td>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_1319_1">
+</td>
+<tr>
+<td>
+<b>Figure E.1: The Rover on Mare Triangularis</b>
+</td>
+</tr>
+</table>
+</center>
+
+
+<p>
+Each of the twenty faces has its own function. The set of equipments installed on the bottom
+face touching the ground can be applied to the <i>trigon</i> it is on. Of course, the rover was meant to accelerate construction of the luxury hotels to host rich interstellar travelers, but, changing
+the installed equipment sets, it can also be used to accelerate academic inspections.
+</p>
+
+<p>
+You are the driver of this rover and are asked to move the vehicle onto the <i>trigon</i> specified by
+the leader of the scientific commission with the smallest possible steps. What makes your task
+more difficult is that the designated face installed with the appropriate set of equipments has to
+be the bottom. The direction of the rover does not matter.
+</p>
+
+<center>
+<table width="480">
+<tr>
+<td align="justify">
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_1319_2">
+</td>
+<td>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_1319_3">
+</td>
+<tr>
+<td>
+<b>Figure E.2:The Coordinate System </b>
+</td>
+<td align="center">
+<b>
+Figure E.3: Face Numbering</b>
+</td>
+</tr>
+</table>
+</center>
+	
+
+<p>
+The <i>trigons</i> of <i>Mare Triangularis</i> are given two-dimensional coordinates as shown in Figure E.2.
+Like maps used for the Earth, the <i>x</i> axis is from the west to the east, and the <i>y</i> axis is from the
+south to the north. Note that all the trigons with its coordinates (<i>x , y</i>) has neighboring trigons
+with coordinates (<i>x</i> - 1 , <i>y</i>) and (<i>x</i> + 1 , <i>y</i>). In addition to these, when <i>x</i> + <i>y</i> is even, it has a
+neighbor (<i>x</i> , <i>y</i> + 1); otherwise, that is, when <i>x</i> + <i>y</i> is odd, it has a neighbor (<i>x , y</i> - 1).
+</p>
+
+<p>
+Figure E.3 shows a development of the skin of the rover. The top face of the development
+makes the exterior. That is, if the numbers on faces of the development were actually marked
+on the faces of the rover, they should been readable from its outside. These numbers are used
+to identify the faces.
+</p>
+
+<p>
+When you start the rover, it is on the <i>trigon</i> (0,0) and the face 0 is touching the ground. The
+rover is placed so that rolling towards north onto the <i>trigon</i> (0,1) makes the face numbered 5
+to be at the bottom.
+</p>
+
+<p>
+As your first step, you can choose one of the three adjacent <i>trigons</i>, namely those with coordinates (-1,0), (1,0), 
+and (0,1), to visit. The bottom will be the face numbered 4, 1, and 5,
+respectively. If you choose to go to (1,0) in the first rolling step, the second step can bring
+the rover to either of (0,0), (2,0), or (1,-1). The bottom face will be either of 0, 6, or 2,
+correspondingly. The rover may visit any of the <i>trigons</i> twice or more, including the start and the goal <i>trigons</i>, when appropriate.
+</p>
+
+<p>
+The theoretical design section of ITO showed that the rover can reach any goal <i>trigon</i> on the
+specified bottom face within a finite number of steps.
+</p>
+
+<H2>Input</H2>
+
+<p>
+The input consists of a number of datasets. The number of datasets does not exceed 50.
+</p>
+
+<p>
+Each of the datasets has three integers <i>x</i>, <i>y</i>, and <i>n</i> in one line, separated by a space. Here, (x,y)
+specifies the coordinates of the <i>trigon</i> to which you have to move the rover, and <i>n</i> specifies the
+face that should be at the bottom.
+</p>
+
+<p>
+The end of the input is indicated by a line containing three zeros.
+</p>
+
+<H2>Output</H2>
+
+<p>
+The output for each dataset should be a line containing a single integer that gives the minimum
+number of steps required to set the rover on the specified <i>trigon</i> with the specified face touching
+the ground. No other characters should appear in the output.
+</p>
+
+<p>
+You can assume that the maximum number of required steps does not exceed 100. <i>Mare Triangularis</i>
+ is broad enough so that any of its edges cannot be reached within that number of
+steps.
+</p>
+
+<H2>Sample Input</H2>
+<pre>
+0 0 1
+3 5 2
+-4 1 3
+13 -13 2
+-32 15 9
+-50 50 0
+0 0 0
+</pre>
+
+<H2>Output for the Sample Input</H2>
+<pre>
+6
+10
+9
+30
+47
+100
+</pre>

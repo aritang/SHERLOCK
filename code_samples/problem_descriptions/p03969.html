@@ -1,0 +1,102 @@
+<span class="lang-en">
+<p>Score : <var>1300</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>One day, AtCoDeer the deer found a simple graph (that is, a graph without self-loops and multiple edges) with <var>N</var> vertices and <var>M</var> edges, and brought it home.
+The vertices are numbered <var>1</var> through <var>N</var> and mutually distinguishable, and the edges are represented by <var>(a_i,b_i) (1≦i≦M)</var>.</p>
+<p>He is painting each edge in the graph in one of the <var>K</var> colors of his paint cans. As he has enough supply of paint, the same color can be used to paint more than one edge.</p>
+<p>The graph is made of a special material, and has a strange property. He can choose a simple cycle (that is, a cycle with no repeated vertex), and perform a circular shift of the colors along the chosen cycle. More formally, let <var>e_1</var>, <var>e_2</var>, <var>...</var>, <var>e_a</var> be the edges along a cycle in order, then he can perform the following simultaneously: paint <var>e_2</var> in the current color of <var>e_1</var>, paint <var>e_3</var> in the current color of <var>e_2</var>, <var>...</var>, paint <var>e_a</var> in the current color of <var>e_{a-1}</var>, and paint <var>e_1</var> in the current color of <var>e_{a}</var>.</p>
+<div style="text-align: center;">
+<img src="https://atcoder.jp/img/arc062/5fd1cd3003603ab14774f9342ccf2290.png">
+<p>Figure <var>1</var>: An example of a circular shift</p>
+</img></div>
+<p>Two ways to paint the edges, <var>A</var> and <var>B</var>, are considered the same if <var>A</var> can be transformed into <var>B</var> by performing a finite number of circular shifts. Find the number of ways to paint the edges. Since this number can be extremely large, print the answer modulo <var>10^9+7</var>.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1≦N≦50</var></li>
+<li><var>1≦M≦100</var></li>
+<li><var>1≦K≦100</var></li>
+<li><var>1≦a_i,b_i≦N (1≦i≦M)</var></li>
+<li>The graph has neither self-loops nor multiple edges.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>The input is given from Standard Input in the following format:</p>
+<pre><var>N</var> <var>M</var> <var>K</var>
+<var>a_1</var> <var>b_1</var>
+<var>a_2</var> <var>b_2</var>
+<var>:</var>
+<var>a_M</var> <var>b_M</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the number of ways to paint the edges, modulo <var>10^9+7</var>.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>4 4 2
+1 2
+2 3
+3 1
+3 4
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>8
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>5 2 3
+1 2
+4 5
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>9
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>11 12 48
+3 1
+8 2
+4 9
+5 4
+1 6
+2 9
+8 3
+10 8
+4 10
+8 6
+11 7
+1 8
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>569519295
+</pre></section>
+</div>
+</span>

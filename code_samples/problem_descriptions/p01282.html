@@ -1,0 +1,82 @@
+
+<H1><font color="#000">Problem J:</font> Revenge of the Round Table</H1>
+
+<p>
+Two contries A and B have decided to make a meeting to get acquainted with each other. <i>n</i> ambassadors
+from A and B will attend the meeting in total.
+</p>
+
+<p>
+A round table is prepared for in the meeting. The ambassadors are getting seated at the round table, but
+they have agreed that more than k ambassadors from the same country does not sit down at the round
+table in a row for deeper exchange.
+</p>
+
+<p>
+Your task is to write a program that reports the number of possible arrangements when rotations are not
+counted. Your program should report the number modulo <i>M</i> = 1000003.
+</p>
+<p>
+Let us provide an example. Suppose <i>n</i> = 4 and <i>k</i> = 2. When rotations are counted as different arrangements, the following six arrangements are possible.
+</p>
+<pre>
+       AABB
+       ABBA
+       BBAA
+       BAAB
+       ABAB
+       BABA
+</pre>
+<p>
+However, when rotations are regarded as same, the following two arrangements are possible.
+</p>
+<pre>
+       AABB
+       ABAB
+</pre>
+
+<p>
+Therefore the program should report 2.
+</p>
+
+<H2>Input</H2>
+
+<p>
+The input consists of multiple datasets. Each dataset consists of two integers <i>n</i> (1 &le; <i>n</i> &le; 1000) and <i>k</i> (1 &le; k &le; 1000) in one line.
+</p>
+<p>
+It does not always hold <i>k</i> &lt; <i>n</i>. This means the program should consider cases in which the ambassadors
+from only one country attend the meeting.
+</p>
+
+<p>
+The last dataset is followed by a line containing two zeros. This line is not a part of any dataset and should not be processed.
+</p>
+
+
+<H2>Output</H2>
+
+<p>
+For each dataset, print the number of possible arrangements modulo <i>M</i> = 1000003 in one line.
+</p>
+
+<H2>Sample Input</H2>
+<pre>
+3 1
+3 2
+3 3
+4 2
+10 5
+1000 500
+0 0
+</pre>
+
+<H2>Output for the Sample Input</H2>
+<pre>
+0
+2
+4
+2
+90
+570682
+</pre>

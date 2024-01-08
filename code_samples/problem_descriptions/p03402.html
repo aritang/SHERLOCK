@@ -1,0 +1,131 @@
+<span class="lang-en">
+<p>Score : <var>500</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>You are given two integers <var>A</var> and <var>B</var>.</p>
+<p>Print a grid where each square is painted white or black that satisfies the following conditions, in the format specified in Output section:</p>
+<ul>
+<li>Let the size of the grid be <var>h \times w</var> (<var>h</var> vertical, <var>w</var> horizontal). Both <var>h</var> and <var>w</var> are at most <var>100</var>.</li>
+<li>The set of the squares painted white is divided into exactly <var>A</var> connected components.</li>
+<li>The set of the squares painted black is divided into exactly <var>B</var> connected components.</li>
+</ul>
+<p>It can be proved that there always exist one or more solutions under the conditions specified in Constraints section.
+If there are multiple solutions, any of them may be printed.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Notes</h3><p>Two squares painted white, <var>c_1</var> and <var>c_2</var>, are called connected when the square <var>c_2</var> can be reached from the square <var>c_1</var> passing only white squares by repeatedly moving up, down, left or right to an adjacent square.</p>
+<p>A set of squares painted white, <var>S</var>, forms a connected component when the following conditions are met:</p>
+<ul>
+<li>Any two squares in <var>S</var> are connected.</li>
+<li>No pair of a square painted white that is not included in <var>S</var> and a square included in <var>S</var> is connected.</li>
+</ul>
+<p>A connected component of squares painted black is defined similarly.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 \leq A \leq 500</var></li>
+<li><var>1 \leq B \leq 500</var></li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>A</var> <var>B</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Output should be in the following format:</p>
+<ul>
+<li>In the first line, print integers <var>h</var> and <var>w</var> representing the size of the grid you constructed, with a space in between.</li>
+<li>Then, print <var>h</var> more lines. The <var>i</var>-th (<var>1 \leq i \leq h</var>) of these lines should contain a string <var>s_i</var> as follows:<ul>
+<li>If the square at the <var>i</var>-th row and <var>j</var>-th column (<var>1 \leq j \leq w</var>) in the grid is painted white, the <var>j</var>-th character in <var>s_i</var> should be <code>.</code>.</li>
+<li>If the square at the <var>i</var>-th row and <var>j</var>-th column (<var>1 \leq j \leq w</var>) in the grid is painted black, the <var>j</var>-th character in <var>s_i</var> should be <code>#</code>.</li>
+</ul>
+</li>
+</ul>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>2 3
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>3 3
+##.
+..#
+#.#
+</pre>
+<p>This output corresponds to the grid below:</p>
+<div style="text-align: center;">
+<img alt="2701558bf42f7c088abad927b419472a.png" src="https://img.atcoder.jp/arc093/2701558bf42f7c088abad927b419472a.png">
+</img></div>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>7 8
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>3 5
+#.#.#
+.#.#.
+#.#.#
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>1 1
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>4 2
+..
+#.
+##
+##
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 4</h3><pre>3 14
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 4</h3><pre>8 18
+..................
+..................
+....##.......####.
+....#.#.....#.....
+...#...#....#.....
+..#.###.#...#.....
+.#.......#..#.....
+#.........#..####.
+</pre></section>
+</div>
+</span>

@@ -1,0 +1,89 @@
+
+<h1>Problem K: Manhattan Warp Machine 2</h1>
+<h2>Problem</h2>
+
+<p>
+とある宇宙では、3次元の格子点上に星が存在し、宇宙人達はマンハッタンワープ装置という装置を使い、星間を移動している。<br>
+このワープ装置には、<var>N</var>個のボタンが付いており、ボタン<var>i</var>を押すと、現在いる星からのマンハッタン距離が<var>d<sub>i</sub></var>である任意の星にワープすることができる。<br>
+ワープ装置は改良され、コストがかからずに移動出来る。<br>
+今、(0, 0, 0)の星にいるある宇宙人がある<var>M</var>個の星を訪れたいと考えている。<br>
+<var>M</var>個の星を全て訪れるのに最短で何回ワープをする必要があるか答えよ。<br>
+もし、1つでも訪れることが不可能な星がある場合は-1を出力せよ。<br>
+<var>M</var>個の星は好きな順番に訪れることが出来、全て訪れた後に(0, 0, 0)に戻って来る必要は無い。<br>
+3次元上の全ての格子点には必ず星が存在する。<br>
+点(<var>x<sub>1</sub></var>, <var>y<sub>1</sub></var>, <var>z<sub>1</sub></var>)と点(<var>x<sub>2</sub></var>, <var>y<sub>2</sub></var>, <var>z<sub>2</sub></var>)間のマンハッタン距離は| <var>x<sub>1</sub></var> - <var>x<sub>2</sub></var> | + | <var>y<sub>1</sub></var> - <var>y<sub>2</sub></var> | + | <var>z<sub>1</sub></var> - <var>z<sub>2</sub></var> |で表される。
+</p>
+
+<h2>Input</h2>
+
+<pre>
+<var>N</var> <var>M</var>
+<var>d<sub>1</sub></var> ... <var>d<sub>N</sub></var>
+<var>x<sub>1</sub></var> <var>y<sub>1</sub></var> <var>z<sub>1</sub></var>
+...
+<var>x<sub>M</sub></var> <var>y<sub>M</sub></var> <var>z<sub>M</sub></var>
+</pre>
+
+<p>
+入力は全て整数で与えられる。<br>
+1行目に<var>N</var>, <var>M</var>が与えられる。<br>
+2行目に移動可能なマンハッタン距離<var>d<sub>i</sub></var>が空白区切りで与えられる。<br>
+3行目以降の<var>M</var>行に、<var>M</var>個の訪れたい星の格子点の座標(<var>x<sub>i</sub></var>, <var>y<sub>i</sub></var>, <var>z<sub>i</sub></var>)が1行ずつ空白区切りで与えられる。<br>
+</p>
+
+<h2>Constraints</h2>
+<p>
+  入力は以下の条件を満たす。
+</p>
+
+<ul>
+<li>1 &le; <var>N</var> &le; 15</li>
+<li>1 &le; <var>M</var> &le; 15</li>
+<li>1 &le; <var>d<sub>i</sub></var> &le; 3×10<sup>5</sup></li>
+<li>-10<sup>5</sup> &le; <var>x<sub>i</sub></var>, <var>y<sub>i</sub></var>, <var>z<sub>i</sub></var> &le; 10<sup>5</sup></li>
+<li>与えられるマンハッタン距離<var>d<sub>i</sub></var>は全て異なる。</li>
+<li>与えられる格子点の座標は全て異なる。</li>
+</ul>
+
+<h2>Output</h2>
+<p>
+<var>M</var>個の星全てを訪れるのにかかる最短ワープ回数を1行に出力せよ。
+訪れることが不可能な星がある場合は-1を出力せよ。
+</p>
+
+<h2>Sample Input 1</h2>
+<pre>
+2 1
+1 2
+5 0 0
+</pre>
+
+<h2>Sample Output 1</h2>
+<pre>
+3
+</pre>
+
+<h2>Sample Input 2</h2>
+<pre>
+2 2
+9 3
+3 0 0
+3 9 0
+</pre>
+
+<h2>Sample Output 2</h2>
+<pre>
+2
+</pre>
+
+<h2>Sample Input 3</h2>
+<pre>
+1 1
+4
+3 0 0
+</pre>
+
+<h2>Sample Output 3</h2>
+<pre>
+-1
+</pre>

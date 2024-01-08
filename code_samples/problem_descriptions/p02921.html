@@ -1,0 +1,83 @@
+<span class="lang-en">
+<p>Score : <var>100</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>You will be given a string <var>S</var> of length <var>3</var> representing the weather forecast for three days in the past.</p>
+<p>The <var>i</var>-th character <var>(1 \leq i \leq 3)</var> of <var>S</var> represents the forecast for the <var>i</var>-th day. <code>S</code>, <code>C</code>, and <code>R</code> stand for sunny, cloudy, and rainy, respectively.</p>
+<p>You will also be given a string <var>T</var> of length <var>3</var> representing the actual weather on those three days.</p>
+<p>The <var>i</var>-th character <var>(1 \leq i \leq 3)</var> of <var>S</var> represents the actual weather on the <var>i</var>-th day. <code>S</code>, <code>C</code>, and <code>R</code> stand for sunny, cloudy, and rainy, respectively.</p>
+<p>Print the number of days for which the forecast was correct.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>S</var> and <var>T</var> are strings of length <var>3</var> each.</li>
+<li><var>S</var> and <var>T</var> consist of <code>S</code>, <code>C</code>, and <code>R</code>.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>S</var>
+<var>T</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the number of days for which the forecast was correct.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>CSS
+CSR
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>2
+</pre>
+<ul>
+<li>For the first day, it was forecast to be cloudy, and it was indeed cloudy.</li>
+<li>For the second day, it was forecast to be sunny, and it was indeed sunny.</li>
+<li>For the third day, it was forecast to be sunny, but it was rainy.</li>
+</ul>
+<p>Thus, the forecast was correct for two days in this case.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>SSR
+SSR
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>3
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>RRR
+SSS
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>0
+</pre></section>
+</div>
+</span>

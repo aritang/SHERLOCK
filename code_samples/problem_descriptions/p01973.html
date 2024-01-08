@@ -1,0 +1,92 @@
+<h2>G： 検閲により置換 (Censored String)</h2>
+
+<h3>Problem Statement</h3>
+
+<p>You are given the string <var>S</var>, and the set of strings <var>\mathcal P</var> whose size is <var>N</var>. Now we consider applying the following operation to <var>S</var>:</p>
+
+<ul>
+<li> Choose exactly one character in <var>S</var>, and replace it with '*'.</li>
+</ul>
+
+<p>Let <var>s_i</var>  be a  <var>i</var>-th character of <var>S</var>, <var>S_{ij}</var> be a consecutive substring in <var>S</var> such that <var> S = s_i s_{i+1}</var> $\cdots$ <var> s_j</var>, and <var>p_k</var> as the <var>k</var>-th string of <var>P</var>. Your task is to calculate the minimum number of operations for satisfying the following condition.</p>
+
+<ul>
+<li> For all pairs (<var>S_{ij}</var>, <var>p_k</var>), it is satisfied that <var>S_{ij} \neq p_k</var>.</li>
+</ul>
+
+<h3>Input</h3>
+
+<p>An input is given in the following format.</p>
+
+<pre>
+<var>S</var>
+<var>N</var>
+<var>p_1</var>
+<var>p_2</var>
+$\vdots$
+<var>p_N</var>
+</pre>
+
+<ul>
+<li> In line <var>1</var>, you are given the string <var>S</var>.</li>
+<li> In line <var>2</var>, given an integer <var>N</var>. <var>N</var> means the size of <var>P</var>. </li>
+<li> From line <var>3</var> to the end, given <var>p_i</var>, the <var>i</var>-th string of <var>P</var>.</li>
+</ul>
+
+<h3>Constraints</h3>
+
+<ul>
+<li> <var>1 \leq |S| \leq 10^5</var></li>
+<li> <var>1 \leq N \leq 10^5</var></li>
+<li> <var>1 \leq |p_1| + |p_2| + </var> $\cdots$ <var> + |p_N| \leq 10^5</var></li>
+<li> If <var>i \neq j</var>, it is guaranteed that <var>p_i \neq p_j</var></li>
+<li> <var>S</var>, and <var>p_i</var> include lowercase letters only</li>
+</ul>
+
+<h3>Output</h3>
+
+<p>Print the minimum number of operations in one line.</p>
+
+<h3>Sample Input 1</h3>
+
+<pre>
+brainfuck
+1
+fuck
+</pre>
+
+<h3>Sample Output 1</h3>
+
+<pre>1</pre>
+
+<p>For example, if you change "brainfuck" into "brainf*ck", you can satisfy the condition. You have to perform operation at least once, and it is the minimum value.</p>
+
+<h3>Sample Input 2</h3>
+
+<pre>
+aaa
+1
+a
+</pre>
+
+<h3>Sample Output 2</h3>
+
+<pre>3</pre>
+
+<p>You have to operate for all characters.</p>
+
+<h3>Sample Input 3</h3>
+
+<pre>
+hellshakeyano
+3
+hell
+shake
+key
+</pre>
+
+<h3>Sample Output 3</h3>
+
+<pre>2</pre>
+
+<p>In this case, for example, if you change "hellshakeyano" into "h*llsha*eyano", you can satisfy the condition. Notice if you replace one character, it might happen that several strings in the set <var>P</var>, which appear as the consecutive substring of <var>S</var>, simultaneously disappear.</p>

@@ -1,0 +1,65 @@
+
+<H1>Problem H: Squid Multiplication</H2>
+<p>
+Squid Eiko loves mathematics.
+Especially she loves to think about integer.
+One day, Eiko found a math problem from a website.
+</p>
+
+<p>
+"A sequence <i>b</i> ={<i>a<sub>i</sub></i> + <i>a<sub>j</sub></i> | <i>i</i> &lt <i>j</i> }  is generated from a sequence <i>a</i> ={<i>a<sub>0</sub></i> , ... , <i>a<sub>n</sub></i> | <i>a<sub>i</sub></i> is even if <i>i</i> is 0, otherwise <i>a<sub>i</sub></i> is odd}. Given the sequence <i>b</i> , find the sequence <i>a</i> ."
+</p>
+
+<p>
+This problem is easy for Eiko and she feels boring. So, she made a new problem by modifying this problem .
+</p>
+
+<p>
+"A sequence <i>b</i> ={<i>a<sub>i</sub></i> *<i>a<sub>j</sub></i> | <i>i</i> &lt; <i>j</i> }  is generated from a sequence <i>a</i> ={ <i>a<sub>0</sub></i>, ... , <i>a<sub>n</sub></i> | <i>a<sub>i</sub></i> is even if <i> i </i> is 0, otherwise <i>a<sub>i</sub></i> is odd}. Given the sequence <i>b</i> , find the sequence <i>a</i> ."
+</p>
+
+<p>
+Your task is to solve the problem made by Eiko.
+</p>
+
+<h2>Input</h2>
+<p>
+Input consists of multiple datasets.<br>
+Each dataset is given by following formats.
+</p>
+<pre>
+<i>n</i>
+<i>b<sub>0</sub></i> <i>b<sub>1</sub></i> ... <i>b<sub>n*(n+1)/2-1</sub></i>
+</pre>
+
+<p>
+<i>n</i> is the number of odd integers in the sequence <i>a</i>. The range of <i>n</i> is 2 &le; <i>n</i> &le; 250.
+<i>b<sub>i</sub></i> is separated by a space.
+Each <i>b<sub>i</sub></i> is 1 &le; <i>b<sub>i</sub></i> &le; 2<sup>63</sup>-1.
+The end of the input consists of a single 0.
+</pre>
+
+<h2>Output</h2>
+<p>
+For each dataset, you should output two lines.
+First line contains <i>a<sub>0</sub></i>, an even number in the sequence <i>a</i>.
+The second line contains <i>n</i> odd elements separated by a space. The odd elements are sorted by increasing order.
+You can assume that the result is greater than or equal to 1 and less than or equal to 2<sup>31</sup>-1.
+</p>
+
+<h2>Sample input</h2>
+<pre>
+3
+6 10 14 15 21 35
+2
+30 42 35
+0
+</pre>
+
+<h2>Sample output</h2>
+<pre>
+2
+3 5 7
+6
+5 7
+</pre>

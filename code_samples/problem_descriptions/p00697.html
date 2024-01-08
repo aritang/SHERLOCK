@@ -1,0 +1,159 @@
+
+
+<H1>
+Jigsaw Puzzles for Computers
+</H1>
+
+<P>
+ Ordinary Jigsaw puzzles are solved with visual hints;
+players solve a puzzle with the picture which the puzzle shows on finish,
+and the diverse patterns of pieces. 
+Such Jigsaw puzzles may be suitable for human players,
+because they require abilities of pattern recognition and imagination.
+</P>
+
+<P>
+ On the other hand,
+"Jigsaw puzzles" described below may be just the things for
+simple-minded computers.
+</P>
+
+<P>
+ As shown in <B>Figure 1</B>,
+ a puzzle is composed of nine square pieces, and each of the four edges
+of a piece is labeled with one of the following eight symbols: <BR>
+<BR>
+	<B>"R", "G", "B", "W", "r", "g", "b"</B>, and <B>"w".</B><BR>
+</P>
+<TABLE>
+<TR><TD ALIGN=center><img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE1_jigsaw1"></TD></TR>
+<TR><TD ALIGN=center><B>Figure 1</B>: The nine pieces of a puzzle</TD></TR>
+</TABLE>
+
+<P>
+ In a completed puzzle, the nine pieces are arranged in a 3 x 3 grid,
+and each of the 12 pairs of edges facing each other 
+must be labeled with one of the
+following four combinations of symbols: <BR>
+<BR>
+	<B>"R"</B> with <B>"r"</B>, <B>"G"</B> with <B>"g"</B>,
+	<B>"B"</B> with <B>"b"</B>, and  <B>"W"</B> with <B>"w"</B>.<BR>
+<BR>
+For example, an edge labeled <B>"R"</B> can only face an edge with <B>"r"</B>.
+<B>Figure 2</B> is an example of a completed state of a puzzle.
+In the figure, edges under this restriction are indicated by shadowing their labels.
+The player can freely move and rotate the pieces, but cannot turn them over.
+There are no symbols on the reverse side of a piece !
+</P>
+<TABLE>
+<TR><TD ALIGN=center><img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE1_jigsaw2"></TD></TR>
+<TR><TD ALIGN=center><B>Figure 2</B>: A completed puzzle example</TD></TR>
+</TABLE>
+
+<P>
+ Each piece is represented by a sequence of the four symbols
+on the piece, starting with the symbol of the top edge,
+followed by the symbols of the right edge, the bottom edge,
+and the left edge.
+For example, <B>gwgW</B> represents the leftmost piece in <B>Figure 1</B>.
+Note that the same piece can be represented as 
+<B>wgWg</B>,
+<B>gWgw</B> 
+or <B>Wgwg</B>
+since you can rotate it in 90, 180 or 270 degrees.
+</P>
+
+<P>
+ <B>The mission for you</B> is to create a program which counts the number
+of solutions.
+It is needless to say that these numbers must be multiples of four,
+because, as shown in <B>Figure 3</B>,
+a configuration created by rotating a solution in 90, 180 or 270 degrees
+is also a solution.
+</P>
+
+<TABLE>
+<TR><TD ALIGN=center><img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE1_jigsaw3"></TD></TR>
+<TR><TD ALIGN=center><B>Figure 3</B>: Four obvious variations for a completed puzzle</TD></TR>
+</TABLE>
+
+<P>
+ A term <U>"rotationally equal"</U> is defined; if two different pieces are
+identical when one piece is rotated (in 90, 180 or 270 degrees),
+they are rotationally equal. For example,
+<B>WgWr</B> and <B>WrWg</B> are rotationally equal.
+</P>
+<P>
+ Another term <U>"rotationally symmetric"</U> is defined; if a piece is
+rotationally equal to itself, it is rotationally symmetric. 
+For example, a piece <B>gWgW</B> is rotationally symmetric.<BR>
+</P>
+
+<P>
+ Given puzzles satisfy the following three conditions:
+<OL>
+<LI>There is no identical pair of pieces in a puzzle.
+<LI>There is no <U>rotationally equal</U> pair of pieces in a puzzle.
+<LI>There is no <U>rotationally symmetric</U> piece in a puzzle.
+</OL>
+
+</P>
+
+
+<H2>Input</H2>
+
+<P>
+ The input consists of multiple puzzles.
+</P>
+
+<PRE>
+	<I>N</I><br>
+	<I>Puzzle</I><SUB>1</SUB><br>
+	<I>Puzzle</I><SUB>2</SUB><br>
+	<I>. . .</I><br>
+	<I>Puzzle<SUB>N</SUB></I><br>
+</PRE>
+
+<P>
+ <I>N</I> is the number of puzzles. Each <I>Puzzle<SUB>i</SUB></I>
+gives a puzzle with a single line
+of 44 characters, consisting of four-character representations of the nine
+pieces of the puzzle, separated by a space character. 
+For example, the following line represents the puzzle
+in <B>Figure 1</B>.<BR>
+</P>
+
+<PRE>
+	<TT>gwgW RBbW GWrb GRRb BWGr Rbgw rGbR gBrg GRwb</TT>
+</PRE>
+
+
+<H2>Output</H2>
+<P>
+ For each <I>Puzzle<SUB>i</SUB></I> , the number of its solutions
+should be the output, each in a separate line.
+</P>
+
+<H2>Sample Input</H2>
+
+<PRE>
+6
+WwRR wwrg RRGb rGBG RGrb RrRg RGrg rgBB Wrgr
+RrGb WWGR rGgb Wbrg wgBb GgBg WbBG Wwwg WWGG
+RBbr Wrbr wGGG wggR WgGR WBWb WRgB wBgG WBgG
+wBrg rGgb WRrB WWbw wRRB RbbB WRrb wrbb WgrG
+WrwB WWww wRRB WGGb Wbbg WBgG WrbG Wrww RBgg
+WWgg RBrr Rggr RGBg Wbgr WGbg WBbr WGWB GGGg
+</PRE>
+
+<H2>Output for the Sample Input:</H2>
+
+<PRE>
+40
+8
+32
+4
+12
+0
+</PRE>
+

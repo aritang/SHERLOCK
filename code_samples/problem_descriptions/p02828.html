@@ -1,0 +1,107 @@
+<span class="lang-en">
+<p>Score : <var>2000</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>Let us consider a grid of squares with <var>N</var> rows and <var>N</var> columns.
+Arbok has cut out some part of the grid so that, for each <var>i = 1, 2, \ldots, N</var>, the bottommost <var>h_i</var> squares are remaining in the <var>i</var>-th column from the left.
+Now, he wants to place rooks into some of the remaining squares.</p>
+<p>A rook is a chess piece that occupies one square and can move horizontally or vertically, through any number of unoccupied squares.
+A rook can not move through squares that have been cut out by Arbok.</p>
+<p>Let's say that a square is covered if it either contains a rook, or a rook can be moved to this square in one move.</p>
+<p>Find the number of ways to place rooks into some of the remaining squares so that every remaining square is covered, modulo <var>998244353</var>.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 \leq N \leq 400</var></li>
+<li><var>1 \leq h_i \leq N</var></li>
+<li>All input values are integers.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+<var>h_1</var> <var>h_2</var> <var>...</var> <var>h_N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the number of ways to place rooks into some of the remaining squares so that every remaining square is covered, modulo <var>998244353</var>.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>2
+2 2
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>11
+</pre>
+<p>Any placement with at least two rooks is fine. There are <var>11</var> such placements.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>3
+2 1 2
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>17
+</pre>
+<p>The following <var>17</var> rook placements satisfy the conditions (<code>R</code> denotes a rook, <code>*</code> denotes an empty square):</p>
+<pre>R *     * R     * *     R R     R R     R R     
+**R     R**     R*R     R**     *R*     **R     
+
+
+R *     R *     * R     * R     * *     R R     
+R*R     *RR     RR*     R*R     RRR     RR*     
+
+
+R R     R R     R *     * R     R R     
+R*R     *RR     RRR     RRR     RRR     
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>4
+1 2 4 1
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>201
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 4</h3><pre>10
+4 7 4 8 4 6 8 2 3 6
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 4</h3><pre>263244071
+</pre></section>
+</div>
+</span>

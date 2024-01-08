@@ -1,0 +1,143 @@
+
+<H1><font color="#000">Problem E:</font> Mobile Computing</H1>
+
+<p>
+There is a mysterious planet called Yaen, whose space is 2-dimensional. There are many beautiful
+stones on the planet, and the Yaen people love to collect them. They bring the stones back home
+and make nice mobile arts of them to decorate their 2-dimensional living rooms.
+</p>
+<p>
+In their 2-dimensional world, a mobile is defined recursively as follows:
+</p>
+
+<ul>
+<li>  a stone hung by a string, or</li>
+<li> a rod of length 1 with two sub-mobiles at both ends; the rod
+  is hung by a string at the center of gravity of sub-mobiles.
+  When the weights of the sub-mobiles are <i>n</i> and <i>m</i>, and their
+  distances from the center of gravity are a and b respectively,
+  the equation <i>n</i> &times; <i>a</i> = <i>m</i> &times; <i>b</i> holds.</li>
+</ul>
+<br/>
+<center>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE1_mobileComputing1"><br/>
+</center>
+
+<p>
+For example, if you got three stones with weights 1, 1, and 2, here are some possible mobiles
+and their widths:
+</p>
+
+<center>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE1_mobileComputing2">
+</center>
+
+<p>
+Given the weights of stones and the width of the room, your task is to design the widest possible
+mobile satisfying both of the following conditions.
+</p>
+<ul>
+   <li> It uses all the stones.</li>
+   <li> Its width is less than the width of the room.</li>
+</ul>
+<p>
+You should ignore the widths of stones.
+
+</p>
+
+
+<p>
+In some cases two sub-mobiles hung from both ends of a rod might
+overlap (see the figure on the below). Such mobiles are acceptable.
+The width of the example is (1/3) + 1 + (1/4).
+</p>
+<br/>
+<center>
+  <img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE1_mobileComputing3"><br/>
+  </center>
+
+<H2>Input</H2>
+
+<p>
+The first line of the input gives the number of datasets. Then the specified number of datasets
+follow. A dataset has the following format.
+</p>
+<pre>
+      <i>r</i>
+      <i>s</i>
+      <i>w</i><sub>1</sub>
+       .
+       .
+       .
+      <i>w<sub>s</sub></i>
+</pre>
+
+<p>
+<i>r</i> is a decimal fraction representing the width of the room, which satisfies 0 &lt; <i>r</i> &lt; 10. <i>s</i> is the
+number of the stones. You may assume 1 &le; <i>s</i> &le; 6. <i>w<sub>i</sub></i> is the weight of the <i>i</i>-th stone, which is
+an integer. You may assume 1 &le; <i>w<sub>i</sub></i> &le; 1000.
+</p>
+<p>
+You can assume that no mobiles whose widths are between <i>r</i> - 0.00001 and <i>r</i> + 0.00001 can be made of given stones.
+</p>
+
+<H2>Output</H2>
+
+<p>
+For each dataset in the input, one line containing a decimal fraction should be output. The
+decimal fraction should give the width of the widest possible mobile as defined above. An
+output line should not contain extra characters such as spaces.
+</p>
+<p>
+In case there is no mobile which satisfies the requirement, answer -1 instead.
+</p>
+<p>
+The answer should not have an error greater than 0.00000001. You may output any number of
+digits after the decimal point, provided that the above accuracy condition is satisfied.
+
+</p>
+
+<H2>Sample Input</H2>
+<pre>
+5
+1.3
+3
+1
+2
+1
+1.4
+3
+1
+2
+1
+2.0
+3
+1
+2
+1
+1.59
+4
+2
+1
+1
+3
+1.7143
+4
+1
+2
+3
+5
+</pre>
+
+<H2>Output for the Sample Input</H2>
+<pre>
+-1
+1.3333333333333335
+1.6666666666666667
+1.5833333333333335
+1.7142857142857142
+</pre>
+
+
+
+

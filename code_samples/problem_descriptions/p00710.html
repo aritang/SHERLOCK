@@ -1,0 +1,103 @@
+
+<h1>
+<font color="#000">Problem A:</font> Hanafuda Shuffle
+</h1>
+
+<p>
+There are a number of ways to shuffle a deck of cards.   Hanafuda 
+shuffling for Japanese card game 'Hanafuda' is one such example.
+The following is how to perform Hanafuda shuffling.
+
+</p>
+
+<p>
+There is a deck of <I>n</I> cards. Starting from the <I>p</I>-th card 
+from the top of the deck, <I>c</I> cards are pulled out
+and put on the top of the deck, as shown in Figure 1.
+This operation, called a cutting operation, is repeated.
+</p>
+
+<p>
+Write a program that simulates Hanafuda shuffling and answers which 
+card will be finally placed on the top of the deck.
+</p>
+
+
+<center>
+<table>
+<tr>
+  <td ALIGN="center"><img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE1_hanafuda"></td>
+</tr>
+<tr>
+  <td ALIGN="center">Figure 1: Cutting operation</td>
+
+</tr>
+</table>
+</center>
+
+<h2>Input</h2>
+
+<p>
+The input consists of multiple data sets.
+Each data set starts with a line containing two positive integers <I>n</I> 
+(1 &lt;= <I>n</I> &lt;= 50) and <I>r</I> (1 &lt;= <I>r</I> &lt;= 50); <I>n</I> and 
+ <I>r</I> are the number of cards in the deck and the number of cutting 
+operations, respectively.
+</p>
+
+
+<p>
+ There are <I>r</I> more lines in the data set, each of which
+ represents a cutting operation. These cutting operations 
+are performed in the listed order.
+Each line contains two positive integers <I>p</I> and <I>c</I> 
+(<I>p</I> + <I>c</I> &lt;= <I>n</I> + 1).
+Starting from the <I>p</I>-th card from the top of the deck, <I>c</I>
+cards should be pulled out and put on the top.
+</p>
+
+
+
+<p>
+The end of the input is indicated by a line which contains two zeros.
+</p>
+
+
+<p>
+Each input line contains exactly two integers separated by a space 
+character.
+There are no other characters in the line.
+</p>
+
+
+<h2>Output</h2>
+
+<p> 
+For each data set in the input, your program 
+should write the number of the top card after the shuffle.
+Assume that at the beginning the cards 
+are numbered from 1 to <I>n</I>, from the bottom to the top.
+Each number should be written in a separate line 
+without any superfluous characters such as leading or following spaces.
+</p>
+
+
+<h2>Sample Input</h2>
+<pre>
+5 2
+3 1
+3 1
+10 3
+1 10
+10 1
+8 3
+0 0
+</pre>
+
+<h2>Output for the Sample Input</h2>
+<pre>
+4
+4
+</pre>
+
+

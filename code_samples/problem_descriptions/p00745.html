@@ -1,0 +1,293 @@
+
+<h1><font color="#000000">Problem F:</font> Tighten Up!</h1>
+
+<p>
+We have a flat panel with two holes.  Pins are nailed on its
+surface.  From the back of the panel, a string comes out through one
+of the holes to the surface.  The string is then laid on the surface
+in a form of a polygonal chain, and goes out to the panel's back through
+the other hole.  Initially, the string does not touch any pins.
+</p>
+
+<p>
+Figures F-1, F-2, and F-3 show three example layouts of holes, pins and
+strings.  In each layout, white squares and circles denote holes and
+pins, respectively.  A polygonal chain of solid segments denotes the
+string.
+</p>
+
+<p>
+<center>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE1_2009F7" width="400"><br/>
+
+Figure F-1: An example layout of holes, pins and a string
+
+</center>
+</p>
+
+<p>
+<center>
+
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE1_2009F0" width="400"><br/>
+
+Figure F-2: An example layout of holes, pins and a string
+
+</center>
+</p>
+
+<p>
+<center>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE1_2009F3" width="400"><br/>
+
+Figure F-3: An example layout of holes, pins and a string
+
+</center>
+</p>
+
+
+<p>
+When we tie a pair of equal weight stones to the both ends of the
+string, the stones slowly straighten the string until there is no
+loose part.  The string eventually forms a different polygonal chain as it is
+obstructed by some of the pins.  (There are also cases when the
+string is obstructed by no pins, though.)
+</p>
+
+<p>
+The string does not hook itself while being straightened. A fully
+tightened string thus draws a polygonal chain on the surface of the
+panel, whose vertices are the positions of some pins with the end
+vertices at the two holes. The layouts in Figures F-1, F-2, and F-3 result in the
+respective polygonal chains in Figures F-4, F-5, and F-6. Write a program that
+calculates the length of the tightened polygonal chain.
+</p>
+
+
+<p>
+<center>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE1_2009F8" width="400"><br/>
+
+Figure F-4: Tightened polygonal chains from the example in Figure F-1.
+
+</center>
+</p>
+
+<p>
+<center>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE1_2009F1" width="400"><br/>
+
+Figure F-5: Tightened polygonal chains from the example in Figure F-2.
+
+</center>
+</p>
+
+<p>
+<center>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE1_2009F6" width="400"><br/>
+
+Figure F-6: Tightened polygonal chains from the example in Figure F-3.
+
+</center>
+</p>
+
+<p>
+Note that the strings, pins and holes are thin enough so that you
+can ignore their diameters.
+</p>
+<!-- end en only -->
+
+
+<h3>Input</h3>
+
+
+<p>
+The input consists of multiple datasets, followed by a line containing
+two zeros separated by a space.  Each dataset gives the initial shape of the string (i.e., the positions of holes and vertices) and the positions of
+pins in the
+following format.
+</p>
+
+<blockquote>
+<i>m n</i>			   <br>
+<i>x</i><sub>1</sub> <i>y</i><sub>1</sub> <br>
+...                                <br>
+
+<i>x<sub>l</sub> y<sub>l</sub></i> <br>
+</blockquote>
+
+<!-- begin en only -->
+<p>
+The first line has two integers <i>m</i> and <i>n</i> (2 &le; <i>m</i> 
+
+&le; 100, 0 &le; <i>n</i> &le; 100), representing the number of
+vertices including two holes that give the initial string shape (<i>m</i>) and the number
+of pins (<i>n</i>).  Each of the following <i>l</i> = <i>m</i>
++ <i>n</i> lines has two integers <i>x<sub>i</sub></i>
+
+and <i>y<sub>i</sub></i> (0 &le; <i>x<sub>i</sub></i> &le; 1000, 0 &le; <i>y<sub>i</sub></i> &le; 1000), representing a position <i>P<sub>i</sub></i> =
+(<i>x<sub>i</sub></i> ,<i>y<sub>i</sub></i> ) on the surface of the
+panel.
+
+<ul>
+
+  <li>Positions <i>P</i><sub>1</sub>, ..., <i>P<sub>m</sub></i> give the initial shape of
+   the string; i.e., the two holes are at <i>P</i><sub>1</sub>
+   and <i>P<sub>m</sub></i> , and the string's shape is a polygonal
+   chain whose vertices are <i>P<sub>i</sub></i> (<i>i</i> =
+   1, ..., <i>m</i>), in this order.
+
+  <li>Positions <i>P</i><sub><i>m</i>+1</sub>, ..., <i>P</i><sub><i>m</i>+<i>n</i></sub> are the positions of
+  the pins.
+  </ul>
+
+</p>
+<!-- end en only -->
+</p>
+
+
+<!-- begin en only -->
+<p>
+Note that no two points are at the same position.  No three points are
+exactly on
+a straight line.
+</p>
+<!-- end en only -->
+
+
+
+<h3>Output</h3>
+
+
+<!-- begin en only -->
+<p>
+For each dataset, the length of the part of the tightened string that
+remains on the surface of the panel should be output in a line.
+No extra characters
+should appear in the output.
+</p>
+<!-- end en only -->
+
+<!-- begin en only -->
+<p>
+No lengths in the output should have an error greater than 0.001.
+</p>
+<!-- end en only -->
+
+
+<h3>Sample Input</h3>
+
+<pre>
+6 16
+5 4
+11 988
+474 975
+459 16
+985 12
+984 982
+242 227
+140 266
+45 410
+92 570
+237 644
+370 567
+406 424
+336 290
+756 220
+634 251
+511 404
+575 554
+726 643
+868 571
+907 403
+845 283
+10 4
+261 196
+943 289
+859 925
+56 822
+112 383
+514 0
+1000 457
+514 1000
+0 485
+233 224
+710 242
+850 654
+485 915
+140 663
+26 5
+0 953
+180 0
+299 501
+37 301
+325 124
+162 507
+84 140
+913 409
+635 157
+645 555
+894 229
+598 223
+783 514
+765 137
+599 445
+695 126
+859 462
+599 312
+838 167
+708 563
+565 258
+945 283
+251 454
+125 111
+28 469
+1000 1000
+185 319
+717 296
+9 315
+372 249
+203 528
+15 15
+200 247
+859 597
+340 134
+967 247
+421 623
+1000 427
+751 1000
+102 737
+448 0
+978 510
+556 907
+0 582
+627 201
+697 963
+616 608
+345 819
+810 809
+437 706
+702 695
+448 474
+605 474
+329 355
+691 350
+816 231
+313 216
+864 360
+772 278
+756 747
+529 639
+513 525
+0 0
+</pre>
+
+
+<h3>Output for the Sample Input</h3>
+
+<pre>
+2257.0518296609
+3609.92159564177
+2195.83727086364
+3619.77160684813
+</pre>
+

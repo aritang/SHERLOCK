@@ -1,0 +1,96 @@
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({ tex2jax: { inlineMath: [["$","$"], ["\\(","\\)"]], processEscapes: true }});
+</script>
+<script language="JavaScript" type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+
+<meta http-equiv="X-UA-Compatible" CONTENT="IE=EmulateIE7" /><style type="text/css">blockquote {
+  font-family: Menlo, Monaco, "Courier New", monospace;
+  color: #333333;
+  display: block;
+  padding: 8.5px;
+  margin: 0 0 9px;
+  font-size: 12px;
+  line-height: 18px;
+  background-color: #f5f5f5;
+  border: 1px solid #ccc;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  white-space: pre;
+  white-space: pre-wrap;
+  word-break: break-all;
+  word-wrap: break-word;
+}</style><div class="part"><h3>Problem Statement</h3><p>One day, you found an old scroll with strange texts on it.
+</p>
+<p>You revealed that the text was actually an expression denoting the position of
+treasure.  The expression consists of following three operations:
+</p><ul><li> From two points, yield a line on which the points lie.
+</li><li> From a point and a line, yield a point that is symmetric to the given point with respect to the line.
+</li><li> From two lines, yield a point that is the intersection of the lines.
+</li></ul>
+
+<p>The syntax of the expression is denoted by following BNF:
+</p><pre>
+&lt;expression&gt;      ::= &lt;point&gt;
+&lt;point&gt;       	  ::= &lt;point-factor&gt; | &lt;line&gt; &quot;@&quot; &lt;line-factor&gt; | &lt;line&gt; &quot;@&quot; &lt;point-factor&gt; | &lt;point&gt; &quot;@&quot; &lt;line-factor&gt;
+&lt;point-factor&gt;    ::= &quot;(&quot; &lt;number&gt; &quot;,&quot; &lt;number&gt; &quot;)&quot; | &quot;(&quot; &lt;point&gt; &quot;)&quot;
+&lt;line&gt;            ::= &lt;line-factor&gt; | &lt;point&gt; &quot;@&quot; &lt;point-factor&gt;
+&lt;line-factor&gt;     ::= &quot;(&quot; &lt;line&gt; &quot;)&quot;
+&lt;number&gt;          ::= &lt;zero-digit&gt; | &lt;positive-number&gt; | &lt;negative-number&gt;
+&lt;positive-number&gt; ::= &lt;nonzero-digit&gt; | &lt;positive-number&gt; &lt;digit&gt;
+&lt;negative-number&gt; ::= &quot;-&quot; &lt;positive-number&gt;
+&lt;digit&gt;           ::= &lt;zero-digit&gt; | &lt;nonzero-digit&gt;
+&lt;zero-digit&gt;      ::= &quot;0&quot;
+&lt;nonzero-digit&gt;   ::= &quot;1&quot; | &quot;2&quot; | &quot;3&quot; | &quot;4&quot; | &quot;5&quot; | &quot;6&quot; | &quot;7&quot; | &quot;8&quot; | &quot;9&quot;</pre>
+<p>Each &lt;point&gt; or &lt;point-factor&gt; denotes a point, whereas each &lt;line&gt; or &lt;line-factor&gt; denotes a line.  The former notion of &lt;point-factor&gt; $(X,Y)$ represents a point which has $X$ for $x$-coordinate and $Y$ for $y$-coordinate on the $2$-dimensional plane.
+"<samp>@</samp>" indicates the operations on two operands.  Since each operation is distinguishable from others by its operands' types (i.e. a point or a line),
+all of these operations are denoted by the same character "<samp>@</samp>". 
+Note that "<samp>@</samp>" is left-associative, as can be seen from the BNF.
+</p>
+<p>Your task is to determine where the treasure is placed.
+</p>
+
+</div><div class="part"><h3>Input</h3>
+<p>The input consists of multiple datasets.  Each dataset is a single line which
+contains an expression denoting the position of treasure.
+</p>
+<p>It is guaranteed that each dataset satisfies the following conditions:
+</p><ul><li> The length of the string never exceeds $10^2$.
+</li><li> If both operands of "<samp>@</samp>" are points, their distance is greater than $1$.
+</li><li> If both operands of "<samp>@</samp>" are lines, they are never parallel.
+</li><li> The absolute values of points' coordinates never exceed $10^2$ at any point of evaluation.
+</li></ul>
+
+<p>You can also assume that there are at most $100$ datasets.
+</p>
+<p>The input ends with a line that contains only a single "<samp>#</samp>".
+</p>
+
+</div><div class="part"><h3>Output</h3>
+<p>For each dataset, print the $X$ and $Y$ coordinates of the point, denoted by
+the expression, in this order.
+</p>
+<p>The output will be considered correct if its absolute or relative error is at most $10^{-2}$.
+</p>
+
+</div><div class="part"><h3>Sample Input</h3>
+
+<pre>((0,0)@(1,1))@((4,1)@(2,5))
+((0,0)@(3,1))@((1,-3)@(2,-1))
+(0,0)@(1,1)@(4,1)
+(0,0)@((1,1)@(4,1))
+(((0,0)@((10,20)@(((30,40))))))
+((0,0)@(3,1))@((1,-3)@(2,-1))@(100,-100)@(100,100)
+#</pre>
+
+</div><div class="part"><h3>Output for the Sample Input</h3>
+
+<pre>3.00000000 3.00000000
+3.00000000 1.00000000
+1.00000000 4.00000000
+0.00000000 2.00000000
+-10.00000000 10.00000000
+-99.83681795 -91.92248853</pre>
+</div>

@@ -1,0 +1,86 @@
+<span class="lang-en">
+<p>Score : <var>600</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>Given are a prime number <var>p</var> and a sequence of <var>p</var> integers <var>a_0, \ldots, a_{p-1}</var> consisting of zeros and ones.</p>
+<p>Find a polynomial of degree at most <var>p-1</var>, <var>f(x) = b_{p-1} x^{p-1} + b_{p-2} x^{p-2} + \ldots + b_0</var>, satisfying the following conditions:</p>
+<ul>
+<li>For each <var>i</var> <var>(0 \leq i \leq p-1)</var>, <var>b_i</var> is an integer such that <var>0 \leq b_i \leq p-1</var>.</li>
+<li>For each <var>i</var> <var>(0 \leq i \leq p-1)</var>, <var>f(i) \equiv a_i \pmod p</var>.</li>
+</ul>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>2 \leq p \leq 2999</var></li>
+<li><var>p</var> is a prime number.</li>
+<li><var>0 \leq a_i \leq 1</var></li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>p</var>
+<var>a_0</var> <var>a_1</var> <var>\ldots</var> <var>a_{p-1}</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print <var>b_0, b_1, \ldots, b_{p-1}</var> of a polynomial <var>f(x)</var> satisfying the conditions, in this order, with spaces in between.</p>
+<p>It can be proved that a solution always exists. If multiple solutions exist, any of them will be accepted.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>2
+1 0
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>1 1
+</pre>
+<p><var>f(x) = x + 1</var> satisfies the conditions, as follows:</p>
+<ul>
+<li><var>f(0) = 0 + 1 = 1 \equiv 1 \pmod 2</var></li>
+<li><var>f(1) = 1 + 1 = 2 \equiv 0 \pmod 2</var></li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>3
+0 0 0
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>0 0 0
+</pre>
+<p><var>f(x) = 0</var> is also valid.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>5
+0 1 0 1 0
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>0 2 0 1 3
+</pre></section>
+</div>
+</span>

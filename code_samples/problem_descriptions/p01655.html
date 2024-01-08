@@ -1,0 +1,88 @@
+
+<h2>Problem Statement</h2>
+
+<p>
+You bought 3 ancient scrolls from a magician. These scrolls have a long string, and the lengths of the strings are the same. He said that these scrolls are copies of the key string to enter a dungeon with a secret treasure.
+However, he also said, they were copied so many times by hand, so the string will contain some errors, though the length seems correct. 
+</p>
+
+<p>
+Your job is to recover the original string from these strings. When finding the original string, you decided to use the following assumption. 
+</p>
+
+<ul>
+<li>  The copied string will contain at most <var>d</var> errors. In other words, the Hamming distance of the original string and the copied string is at most <var>d</var>. </li>
+<li>  If there exist many candidates, the lexicographically minimum string is the original string.</li>
+</ul>
+
+<p>
+Can you find the orignal string?
+</p>
+
+
+<h2>Input</h2>
+
+<p>
+The input contains a series of datasets.
+</p>
+
+<p>
+Each dataset has the following format:
+</p>
+
+<pre>
+<var>l</var> <var>d</var>
+<var>str_1</var>
+<var>str_2</var>
+<var>str_3</var>
+</pre>
+
+<p>
+The first line contains two integers <var>l</var> (<var>1 \leq l \leq 100,000</var>) and <var>d</var> (<var>0 \leq d \leq 5,000</var>.)
+<var>l</var> describes the length of 3 given strings and <var>d</var> describes acceptable maximal Hamming distance.
+The following 3 lines have given strings, whose lengths are <var>l</var>.
+These 3 strings consist of only lower and upper case alphabets.
+</p>
+
+<p>
+The input ends with a line containing two zeros, which should not be processed. 
+</p>
+
+<h2>Output</h2>
+
+<p>
+Print the lexicographically minimum satisfying the condition in a line.
+If there do not exist such strings, print <code>-1</code>.
+</p>
+
+
+<h2>Sample Input</h2>
+
+<pre>
+3 1
+ACM
+IBM
+ICM
+5 2
+iwzwz
+iziwi
+zwizi
+1 0
+A
+B
+C
+10 5
+jLRNlNyGWx
+yyLnlyyGDA
+yLRnvyyGDA
+0 0
+</pre>
+
+<h2>Output for the Sample Input</h2>
+
+<pre>
+ICM
+iwiwi
+-1
+AARAlNyGDA
+</pre>

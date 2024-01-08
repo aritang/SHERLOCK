@@ -1,0 +1,118 @@
+<span class="lang-en">
+<p>Score : <var>500</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>For integers <var>b (b \geq 2)</var> and <var>n (n \geq 1)</var>, let the function <var>f(b,n)</var> be defined as follows:</p>
+<ul>
+<li><var>f(b,n) = n</var>, when <var>n &lt; b</var></li>
+<li><var>f(b,n) = f(b,\,{\rm floor}(n / b)) + (n \ {\rm mod} \ b)</var>, when <var>n \geq b</var></li>
+</ul>
+<p>Here, <var>{\rm floor}(n / b)</var> denotes the largest integer not exceeding <var>n / b</var>,
+and <var>n \ {\rm mod} \ b</var> denotes the remainder of <var>n</var> divided by <var>b</var>.</p>
+<p>Less formally, <var>f(b,n)</var> is equal to the sum of the digits of <var>n</var> written in base <var>b</var>.
+For example, the following hold:</p>
+<ul>
+<li><var>f(10,\,87654)=8+7+6+5+4=30</var></li>
+<li><var>f(100,\,87654)=8+76+54=138</var></li>
+</ul>
+<p>You are given integers <var>n</var> and <var>s</var>.
+Determine if there exists an integer <var>b (b \geq 2)</var> such that <var>f(b,n)=s</var>.
+If the answer is positive, also find the smallest such <var>b</var>.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 \leq n \leq 10^{11}</var></li>
+<li><var>1 \leq s \leq 10^{11}</var></li>
+<li><var>n,\,s</var> are integers.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>The input is given from Standard Input in the following format:</p>
+<pre><var>n</var>
+<var>s</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>If there exists an integer <var>b (b \geq 2)</var> such that <var>f(b,n)=s</var>, print the smallest such <var>b</var>.
+If such <var>b</var> does not exist, print <code>-1</code> instead.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>87654
+30
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>10
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>87654
+138
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>100
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>87654
+45678
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>-1
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 4</h3><pre>31415926535
+1
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 4</h3><pre>31415926535
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 5</h3><pre>1
+31415926535
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 5</h3><pre>-1
+</pre></section>
+</div>
+</span>

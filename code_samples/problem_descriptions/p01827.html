@@ -1,0 +1,149 @@
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({ tex2jax: { inlineMath: [["$","$"], ["\\(","\\)"]], processEscapes: true }});
+</script>
+<script type='text/javascript' src='http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
+</script>
+
+
+<h2>Problem J:
+Black Company
+</h2>
+
+<p>
+JAG Company is a sweatshop (sweatshop is called "burakku kigyo" in Japanese), and you are
+the CEO for the company.
+</p>
+
+<p>
+You are planning to determine $N$ employees' salary as low as possible (employees are numbered
+from 1 to $N$). Each employee's salary amount must be a positive integer greater than zero. At
+that time, you should pay attention to the employees' contribution degree. If the employee $i$'s
+contribution degree $c_i$ is greater than the employee $j$'s contribution degree $c_j$ , the employee i
+must get higher salary than the employee $j$'s salary. If the condition is not satisfied, employees
+may complain about their salary amount.
+</p>
+
+<p>
+However, it is not necessarily satisfied in all pairs of the employees, because each employee can
+only know his/her close employees' contribution degree and salary amount. Therefore, as long as
+the following two conditions are satisfied, employees do not complain to you about their salary
+amount.
+</p>
+
+<ul>
+<li> If the employees $i$ and $j$ are close to each other, $c_i < c_j \Leftrightarrow  p_i < p_j$ must be satisfied, where
+$p_i$ is the employee $i$'s salary amount.</li>
+<li> If the employee $i$ is close to the employees $j$ and $k$, $c_j < c_k \Leftrightarrow  p_j < p_k$ must be satisfied.
+Write a program that computes the minimum sum of all employees' salary amount such that no
+employee complains about their salary.</li>
+</ul>
+
+<h3>Input</h3>
+<p>
+Each input is formatted as follows:<br>
+<br>
+$N$<br>
+$c_1$ ... $c_N$<br>
+$M$<br>
+$a_1$ $b_1$<br>
+...<br>
+$a_M$ $b_M$<br>
+<br>
+</p>
+
+<p>
+The first line contains an integer $N$ ($1 \leq N \leq 100,000$), which indicates the number of employees.
+The second line contains $N$ integers $c_i$ ($1 \leq c_i \leq 100,000$) representing the contribution degree
+of employee $i$.
+</p>
+
+<p>
+The third line contains an integer $M$ ($0 \leq M \leq 200,000$), which specifies the number of relationships. Each of the following $M$ lines contains two integers $a_i$ and $b_i$ ($a_i \ne b_i, 1 \leq a_i, b_i \leq N$).
+It represents that the employees $a_i$ and $b_i$ are close to each other. There is no more than one
+relationship between each pair of the employees.
+</p>
+
+<h3>Output</h3>
+<p>
+Print the minimum sum of all employees' salary amounts in a line.
+</p>
+
+<h3>Sample Input</h3>
+<pre>
+3
+1 3 3
+2
+1 2
+1 3
+</pre>
+
+<h3>Output for the Sample Input</h3>
+<pre>
+5
+</pre>
+
+<h3>Sample Input</h3>
+<pre>
+3
+1 2 3
+2
+1 2
+1 3
+</pre>
+
+<h3>Output for the Sample Input</h3>
+<pre>
+6
+</pre>
+
+<h3>Sample Input</h3>
+<pre>
+4
+1 1 2 2
+2
+1 2
+3 4
+</pre>
+
+<h3>Output for the Sample Input</h3>
+<pre>
+4
+</pre>
+
+<h3>Sample Input</h3>
+<pre>
+5
+1 2 5 5 1
+6
+1 2
+4 1
+2 3
+5 2
+4 3
+4 5
+</pre>
+
+<h3>Output for the Sample Input</h3>
+<pre>
+10
+</pre>
+
+<h3>Sample Input</h3>
+<pre>
+6
+4 3 2 1 5 3
+7
+4 2
+1 5
+2 6
+6 5
+4 1
+1 6
+6 3
+</pre>
+
+<h3>Output for the Sample Input</h3>
+<pre>
+13
+</pre>

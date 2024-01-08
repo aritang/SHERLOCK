@@ -1,0 +1,75 @@
+<span class="lang-en">
+<p>Score : <var>100</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>Takahashi has a strong stomach. He never gets a stomachache from eating something whose "best-by" date is at most <var>X</var> days earlier.
+He gets a stomachache if the "best-by" date of the food is <var>X+1</var> or more days earlier, though.</p>
+<p>Other than that, he finds the food delicious if he eats it not later than the "best-by" date. Otherwise, he does not find it delicious.</p>
+<p>Takahashi bought some food <var>A</var> days before the "best-by" date, and ate it <var>B</var> days after he bought it.</p>
+<p>Write a program that outputs <code>delicious</code> if he found it delicious, <code>safe</code> if he did not found it delicious but did not get a stomachache either, and <code>dangerous</code> if he got a stomachache.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 ≤ X,A,B ≤ 10^9</var></li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>X</var> <var>A</var> <var>B</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print <code>delicious</code> if Takahashi found the food delicious; print <code>safe</code> if he neither found it delicious nor got a stomachache; print <code>dangerous</code> if he got a stomachache.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>4 3 6
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>safe
+</pre>
+<p>He ate the food three days after the "best-by" date. It was not delicious or harmful for him.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>6 5 1
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>delicious
+</pre>
+<p>He ate the food by the "best-by" date. It was delicious for him.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>3 7 12
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>dangerous
+</pre>
+<p>He ate the food five days after the "best-by" date. It was harmful for him.</p></section>
+</div>
+</span>

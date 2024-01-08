@@ -1,0 +1,132 @@
+<span class="lang-en">
+<p>Score: <var>400</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3>
+<p>In Takahashi Kingdom, there is a east-west railroad and <var>N</var> cities along it, numbered <var>1</var>, <var>2</var>, <var>3</var>, ..., <var>N</var> from west to east.
+A company called <em>AtCoder Express</em> possesses <var>M</var> trains, and the train <var>i</var> runs from City <var>L_i</var> to City <var>R_i</var> (it is possible that <var>L_i = R_i</var>).
+Takahashi the king is interested in the following <var>Q</var> matters:</p>
+<ul>
+<li>The number of the trains that runs <strong>strictly within</strong> the section from City <var>p_i</var> to City <var>q_i</var>, that is, the number of trains <var>j</var> such that <var>p_i \leq L_j</var> and <var>R_j \leq q_i</var>.</li>
+</ul>
+<p>Although he is genius, this is too much data to process by himself. Find the answer for each of these <var>Q</var> queries to help him.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3>
+<ul>
+<li><var>N</var> is an integer between <var>1</var> and <var>500</var> (inclusive).</li>
+<li><var>M</var> is an integer between <var>1</var> and <var>200 \ 000</var> (inclusive).</li>
+<li><var>Q</var> is an integer between <var>1</var> and <var>100 \ 000</var> (inclusive).</li>
+<li><var>1 \leq L_i \leq R_i \leq N</var> <var>(1 \leq i \leq M)</var></li>
+<li><var>1 \leq p_i \leq q_i \leq N</var> <var>(1 \leq i \leq Q)</var></li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3>
+<p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var> <var>M</var> <var>Q</var>
+<var>L_1</var> <var>R_1</var>
+<var>L_2</var> <var>R_2</var>
+<var>:</var>
+<var>L_M</var> <var>R_M</var>
+<var>p_1</var> <var>q_1</var>
+<var>p_2</var> <var>q_2</var>
+<var>:</var>
+<var>p_Q</var> <var>q_Q</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3>
+<p>Print <var>Q</var> lines. The <var>i</var>-th line should contain the number of the trains that runs <strong>strictly within</strong> the section from City <var>p_i</var> to City <var>q_i</var>.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>2 3 1
+1 1
+1 2
+2 2
+1 2
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>3
+</pre>
+<p>As all the trains runs within the section from City <var>1</var> to City <var>2</var>, the answer to the only query is <var>3</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>10 3 2
+1 5
+2 8
+7 10
+1 7
+3 10
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>1
+1
+</pre>
+<p>The first query is on the section from City <var>1</var> to <var>7</var>. There is only one train that runs strictly within that section: Train <var>1</var>.
+The second query is on the section from City <var>3</var> to <var>10</var>. There is only one train that runs strictly within that section: Train <var>3</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>10 10 10
+1 6
+2 9
+4 5
+4 7
+4 7
+5 8
+6 6
+6 7
+7 9
+10 10
+1 8
+1 9
+1 10
+2 8
+2 9
+2 10
+3 8
+3 9
+3 10
+1 10
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>7
+9
+10
+6
+8
+9
+6
+7
+8
+10
+</pre></section>
+</div>
+</span>

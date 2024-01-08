@@ -1,0 +1,123 @@
+<span class="lang-en">
+<p>Score: <var>200</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3>
+<p>The restaurant AtCoder serves the following five dishes:</p>
+<ul>
+<li>ABC Don (rice bowl): takes <var>A</var> minutes to serve.</li>
+<li>ARC Curry: takes <var>B</var> minutes to serve.</li>
+<li>AGC Pasta: takes <var>C</var> minutes to serve.</li>
+<li>APC Ramen: takes <var>D</var> minutes to serve.</li>
+<li>ATC Hanbagu (hamburger patty): takes <var>E</var> minutes to serve.</li>
+</ul>
+<p>Here, the time to serve a dish is the time between when an order is placed and when the dish is delivered.</p>
+<p>This restaurant has the following rules on orders:</p>
+<ul>
+<li>An order can only be placed at a time that is a multiple of <var>10</var> (time <var>0</var>, <var>10</var>, <var>20</var>, <var>...</var>).</li>
+<li>Only one dish can be ordered at a time.</li>
+<li>No new order can be placed when an order is already placed and the dish is still not delivered, but a new order can be placed at the exact time when the dish is delivered.</li>
+</ul>
+<p>E869120 arrives at this restaurant at time <var>0</var>. He will order all five dishes. Find the earliest possible time for the last dish to be delivered.<br/>
+Here, he can order the dishes in any order he likes, and he can place an order already at time <var>0</var>.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3>
+<ul>
+<li><var>A, B, C, D</var> and <var>E</var> are integers between <var>1</var> and <var>123</var> (inclusive).</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3>
+<p>Input is given from Standard Input in the following format:</p>
+<pre><var>A</var>
+<var>B</var>
+<var>C</var>
+<var>D</var>
+<var>E</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3>
+<p>Print the earliest possible time for the last dish to be delivered, as an integer.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>29
+20
+7
+35
+120
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>215
+</pre>
+<p>If we decide to order the dishes in the order ABC Don, ARC Curry, AGC Pasta, ATC Hanbagu, APC Ramen, the earliest possible time for each order is as follows:</p>
+<ul>
+<li>Order ABC Don at time <var>0</var>, which will be delivered at time <var>29</var>.</li>
+<li>Order ARC Curry at time <var>30</var>, which will be delivered at time <var>50</var>.</li>
+<li>Order AGC Pasta at time <var>50</var>, which will be delivered at time <var>57</var>.</li>
+<li>Order ATC Hanbagu at time <var>60</var>, which will be delivered at time <var>180</var>.</li>
+<li>Order APC Ramen at time <var>180</var>, which will be delivered at time <var>215</var>.</li>
+</ul>
+<p>There is no way to order the dishes in which the last dish will be delivered earlier than this.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>101
+86
+119
+108
+57
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>481
+</pre>
+<p>If we decide to order the dishes in the order AGC Pasta, ARC Curry, ATC Hanbagu, APC Ramen, ABC Don, the earliest possible time for each order is as follows:</p>
+<ul>
+<li>Order AGC Pasta at time <var>0</var>, which will be delivered at time <var>119</var>.</li>
+<li>Order ARC Curry at time <var>120</var>, which will be delivered at time <var>206</var>.</li>
+<li>Order ATC Hanbagu at time <var>210</var>, which will be delivered at time <var>267</var>.</li>
+<li>Order APC Ramen at time <var>270</var>, which will be delivered at time <var>378</var>.</li>
+<li>Order ABC Don at time <var>380</var>, which will be delivered at time <var>481</var>.</li>
+</ul>
+<p>There is no way to order the dishes in which the last dish will be delivered earlier than this.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>123
+123
+123
+123
+123
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>643
+</pre>
+<p>This is the largest valid case.</p></section>
+</div>
+</span>

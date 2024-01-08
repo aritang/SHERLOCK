@@ -1,0 +1,109 @@
+<span class="lang-en">
+<p>Score : <var>200</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3>
+<p>
+          You are going to take the entrance examination of Kyoto University tomorrow 
+          and have decided to memorize a set of strings <var>S</var> that is expected to appear in the examination. 
+          Since it is really tough to memorize <var>S</var> as it is, 
+          you have decided to memorize a single string <var>T</var> that efficiently contains all the strings in <var>S</var>.
+        </p>
+        You have already confirmed the following conditions for <var>S</var> and <var>T</var> are satisfied.
+        <ul>
+<li>Every string in <var>S</var> is a <strong>consecutive</strong> subsequence<sup>(1)</sup> in <var>T</var> . </li>
+<li>For every pair of strings <var>x</var>, <var>y</var> <var>(x \neq y)</var> in <var>S</var> , 
+            <var>x</var> is not a subsequence<sup>(2)</sup> of <var>y</var>. </li>
+</ul>
+<p> Note that (1) is ''consecutive subsequence'', while (2) is ''subsequence''. </p>
+<p>
+          The next day, you opened the problem booklet at the examination 
+          and found that you can get a full score only if you remember <var>S</var>. 
+          However, You have forgot how to reconstruct <var>S</var> from <var>T</var> .
+          Since all you remember is that <var>T</var> satisfies the above conditions, 
+          first you have decided to find the maximum possible number of elements in <var>S</var> . 
+        </p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3>
+<ul>
+<li><var>1 \leq |T| \leq 10^5</var></li>
+<li><var>T</var> consists of only lowercase letters. </li>
+</ul>
+<h3>Partial points</h3>
+<ul>
+<li><var>30</var> points will be awarded for passing the test set satisfying the condition: <var>1 \leq |T| \leq 50</var> .</li>
+<li>Another <var>30</var> points will be awarded for passing the test set satisfying the condition: <var>1 \leq |T| \leq 10^3</var>. </li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3>
+<p>The input is given from Standard Input in the following format:</p>
+<pre><var>T</var></pre>
+<p>The input only consists of <var>T</var> on one line. </p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3>
+<p>Print the maximum number of elements in<var>S</var> .</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3>
+<pre>abcabc</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3>
+<pre>3</pre>
+        In this case, <code>ab</code>，<code>ca</code> and <code>bc</code> are an example of the optimum answers. 
+      </section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3>
+<pre>abracadabra</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3>
+<pre>7</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3>
+<pre>abcbabbcabbc</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3>
+<pre>8</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Input 4</h3>
+<pre>bbcacbcbcabbabacccbbcacbaaababbacabaaccbccabcaabba</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 4</h3>
+<pre>44</pre>
+</section>
+</div>
+</span>

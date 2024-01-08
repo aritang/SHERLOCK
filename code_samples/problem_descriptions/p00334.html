@@ -1,0 +1,93 @@
+
+
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({ tex2jax: { inlineMath: [["$","$"], ["\\(","\\)"]], processEscapes: true }});
+</script>
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+
+<H1>形状データ処理 </H1>
+
+<p>
+コンピュータグラフィクスでは、三次元の形状を表現する方法として、ポリゴンモデルが使われます。ポリゴンモデルとは、頂点座標と、それらの頂点のつなぎ方を与えて面を作るモデルです。
+</p>
+
+<p>
+一般のポリゴンモデルでは、任意の多角形を扱えますが、今回は三角形からなるポリゴンモデルを考えることにします。任意のポリゴンモデルは三角形を表す面情報の集まりとして表すことができます。
+</p>
+
+<p>
+一つの面情報は、３つの頂点を並べて表します。ただし、並び方が異なるだけで同じ３点からなる場合は、同じ面情報を表すことにします。例えば、下図の四面体で、頂点１,２,３を繋いでできる面は、頂点２,３,１や、頂点３,２,１などのように表すこともできます。このように、同じ面情報が複数あると無駄になるので、１つにまとめてしまった方が良いでしょう。 
+</p>
+<center>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_PCK2016_shape_data" width="280">
+</center>
+<br/>
+
+<p>
+面情報が与えられたとき、重複した面を無くすために消さなければならない面情報の個数を求めるプログラムを作成せよ。 
+</p>
+
+
+<h2>Input</h2>
+
+<p>
+入力は以下の形式で与えられる。
+</p>
+
+<pre>
+<var>N</var>
+<var>p<sub>11</sub></var> <var>p<sub>12</sub></var> <var>p<sub>13</sub></var>
+<var>p<sub>21</sub></var> <var>p<sub>22</sub></var> <var>p<sub>23</sub></var>
+:
+<var>p<sub>N1</sub></var> <var>p<sub>N2</sub></var> <var>p<sub>N3</sub></var>
+</pre>
+
+<p>
+１行目に、ポリゴンモデルの面情報の数 <var>N</var> (1 &le; <var>N</var> &le; 1000) が与えられる。続く <var>N</var> 行に、<var>i</var> 番目の面を作るために使う頂点の番号 <var>p<sub>ij</sub></var> (1 &le; <var>p<sub>ij</sub></var> &le; 1000) が与えられる。ただし、一つの面について、同じ頂点を２度以上使うことはない（<var>p<sub>i1</sub></var> &ne; <var>p<sub>i2</sub></var> かつ <var>p<sub>i2</sub></var> &ne; <var>p<sub>i3</sub></var> かつ <var>p<sub>i1</sub></var> &ne; <var>p<sub>i3</sub></var> である）。
+</p>
+
+
+<h2>Output</h2>
+
+<p>
+重複した面を無くすために消さなければならない面情報の個数を１行に出力する。 
+</p>
+
+<h2>Sample Input 1</h2>
+
+<pre>
+4
+1 3 2
+1 2 4
+1 4 3
+2 3 4 
+</pre>
+
+<h2>Sample Output 1</h2>
+<pre>
+0
+</pre>
+<br/>
+
+
+<h2>Sample Input 2</h2>
+<pre>
+6
+1 3 2
+1 2 4
+1 4 3
+2 3 4
+3 2 1
+2 3 1 
+</pre>
+
+<h2>Sample Output 2</h2>
+<pre>
+2
+</pre>
+<p>
+入出力例２では、１つ目と５つ目と６つ目の面は頂点1, 3, 2を使って三角形を作っていて、点の順番が異なるだけなので重複している。つまり、重複した面のうち２つの面を消せば重複した面は無くなる。
+</p>

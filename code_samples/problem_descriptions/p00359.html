@@ -1,0 +1,91 @@
+<H1>Dungeon</H1>
+
+<p>
+Bob is playing a popular game called "Dungeon". The game is played on a rectangular board consisting of <var>W &times;  H</var> squares. Each square is identified with its column and row number, thus the square located in the <var>x</var>-th column and the <var>y</var>-th row is represented as (<var>x</var>, <var>y</var>). The left-most square in the top row is (0, 0) and the right-most square in the bottom row is (<var>W</var>-1, <var>H</var>-1).
+</p>
+
+<p>
+  Bob moves a character "BomBom" to clear the game. BomBom is initially located at (0, 0). The game is won if Bob successfully destroys all the enemy characters on the board by manipulating BomBom cleverly. The enemy characters are fixed on specific squares, and Bob can manipulate BomBom using the following two operations any number of times.
+</p>
+
+<ul>
+<li> One-square movement in the up, down, left, or right direction within the board</li>
+<li> Using a bomb, eliminate all the enemy characters that are located in the same column and row as that of BomBom</li>
+</ul>
+
+<p>
+BomBom consumes a Cost when it moves from one square to another. BomBom can use a bomb any number of times without consuming a Cost. Use of a bomb has no effect on BomBom’s behavior and it can move even to a square where an enemy character is located.
+</p>
+
+<p>
+Given the board size and enemy information, make a program to evaluate the minimum Cost BomBom consumes before it destroys all enemy characters.
+</p>
+
+<h2>Input</h2>
+
+<p>
+  The input is given in the following format.
+</p>
+
+<pre>
+<var>W</var> <var>H</var> <var>N</var>
+<var>x_1</var> <var>y_1</var>
+<var>x_2</var> <var>y_2</var>
+:
+<var>x_N</var> <var>y_N</var>
+</pre>
+
+<p>
+The first line provides the number of squares in the horizontal direction <var>W</var> (1 &le; <var>W</var> &le; 10<sup>5</sup>), in the vertical direction <var>H</var> (1 &le; <var>H</var> &le; 10<sup>5</sup>), and the number of enemy characters <var>N</var> (1 &le; <var>N</var> &le; 10<sup>5</sup>). Each of the subsequent <var>N</var> lines provides location information of the <var>i</var>-th enemy, column <var>x_i</var> (0 &le; <var>x_i</var> &le; <var>W</var>-1) and row <var>y_i</var> (0 &le; <var>y_i</var> &le; <var>H</var>-1). The number of enemy characters in a specific square can be either one or zero.
+</p>
+
+<h2>Output</h2>
+
+<p>
+  Output the minimum Cost in a line.
+</p>
+
+<h2>Sample Input 1</h2>
+
+<pre>
+5 4 4
+0 3
+1 1
+2 2
+2 3
+</pre>
+
+<h2>Sample Output 1</h2>
+<pre>
+2
+</pre>
+
+<h2>Sample Input 2</h2>
+<pre>
+6 6 5
+2 1
+5 2
+3 3
+1 4
+1 5
+</pre>
+
+<h2>Sample Output 2</h2>
+<pre>
+4
+</pre>
+
+
+<h2>Sample Input 3</h2>
+<pre>
+8 8 4
+6 0
+7 0
+0 6
+0 7
+</pre>
+
+<h2>Sample Output 3</h2>
+<pre>
+0
+</pre>

@@ -1,0 +1,34 @@
+
+
+
+<h2>A - D's Ambition / Dのやぼう</h2>
+
+<h3>Story</h3>
+<p>あいずにゃんは若ヶ松高校のプログラミングコンテスト部、通称ぷろこん部に所属する2年生である。かわいい。Dのひとは天使のごとくかわいいあいずにゃんにぞっこんであり、隙あらばぺろぺろしようと画策する変態である。その愛は猟奇的であり、あいずにゃんを自分色に染めようと、&quot;AIZUNYAN&quot;という文字列を見る度&quot;AIDUNYAN&quot;に書き換えてしまう。さらにあいずにゃんを自分だけのものにするため、他の人に気づかれないようにその文字列をバラバラに並べ替えてしまう。プロコンの名門・律命館大学中等部卒のエリート競技プログラマであり、ぷろこん部の部長であるりっつちゃんは、あいずにゃんをDのひとの魔の手から救うため、Dのひとが改変した文字列をすべて復元することにした。</p>
+<h3>Problem</h3>
+<p>英大文字のみからなる文字列<var>Z</var>がある。文字列<var>Z</var>中に現れるすべての部分文字列&quot;AIZUNYAN&quot;に対し、個別に&quot;AIDUNYAN&quot;の任意のアナグラムを生成し、置き換えることで得られた文字列を<var>D</var>とする。ここで、文字列<var>S</var>のアナグラムとは、<var>S</var>に現れる文字を並び替えて得られる文字列のことをいう。文字列<var>D</var>が入力として与えられるので、文字列<var>Z</var>を復元せよ。 ただし、文字列<var>D</var>に含まれる&quot;AIDUNYAN&quot;のアナグラムはすべて、&quot;AIZUNYAN&quot;から置き換えられたもののみであると仮定してよい。また、<var>D</var>中の任意の文字<var>D_i</var>について、<var>D_i</var>を含み、かつ&quot;AIDUNYAN&quot;のアナグラムである部分文字列は高々1つしかないと仮定してよい。</p>
+<h3>Input</h3>
+<pre><var>D</var></pre>
+<p>入力は<var>1</var>行で与えられ、英大文字のみからなる文字列<var>D</var>を含む。文字列<var>D</var>の長さ|<var>D</var>|は<var>1 \leq |D| \leq 10^3</var>を満たす。</p>
+<h3>Output</h3>
+<p><var>D</var>を復元した文字列<var>Z</var>を<var>1</var>行に出力せよ。行の最後では必ず改行を行うこと。</p>
+<h3>Sample Input 1</h3>
+<pre>AIDUNYAN</pre>
+<h3>Sample Output 1</h3>
+<pre>AIZUNYAN</pre>
+<p>Dの魔の手から救うことができた。</p>
+<h3>Sample Input 2</h3>
+<pre>ZDD</pre>
+<h3>Sample Output 2</h3>
+<pre>ZDD</pre>
+<p>文字列長が<var>8</var>文字未満であったり、&quot;AIDUNYAN&quot;のアナグラムを含まないこともある。</p>
+<h3>Sample Input 3</h3>
+<pre>AADINNUYHAMAJIDETENSHIDAKARANYANAIDUPEROPEROSHITAI</pre>
+<h3>Sample Output 3</h3>
+<pre>AIZUNYANHAMAJIDETENSHIDAKARAAIZUNYANPEROPEROSHITAI</pre>
+<p><var>2</var>箇所以上含まれている場合はすべて復元する。ぺろぺろ。</p>
+<h3>Sample Input 4</h3>
+<pre>NYANAIDUAIDU</pre>
+<h3>Sample Output 4</h3>
+<pre>AIZUNYANAIDU</pre>
+<p>復元後の文字列<var>Z</var>に&quot;AIDUNYAN&quot;のアナグラムが現れる場合もあるが、復元前の文字列<var>D</var>においてアナグラムでない部分ならば変更しないことに注意せよ。</p>

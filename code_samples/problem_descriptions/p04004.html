@@ -1,0 +1,91 @@
+<span class="lang-en">
+<p>Score : <var>1100</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>Alice, Bob and Charlie are playing <em>Card Game for Three</em>, as below:</p>
+<ul>
+<li>At first, each of the three players has a deck consisting of some number of cards. Alice's deck has <var>N</var> cards, Bob's deck has <var>M</var> cards, and Charlie's deck has <var>K</var> cards. Each card has a letter <code>a</code>, <code>b</code> or <code>c</code> written on it. The orders of the cards in the decks cannot be rearranged.</li>
+<li>The players take turns. Alice goes first.</li>
+<li>If the current player's deck contains at least one card, discard the top card in the deck. Then, the player whose name begins with the letter on the discarded card, takes the next turn. (For example, if the card says <code>a</code>, Alice takes the next turn.)</li>
+<li>If the current player's deck is empty, the game ends and the current player wins the game.</li>
+</ul>
+<p>There are <var>3^{N+M+K}</var> possible patters of the three player's initial decks. Among these patterns, how many will lead to Alice's victory?</p>
+<p>Since the answer can be large, print the count modulo <var>1\,000\,000\,007 (=10^9+7)</var>.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 \leq N \leq 3×10^5</var></li>
+<li><var>1 \leq M \leq 3×10^5</var></li>
+<li><var>1 \leq K \leq 3×10^5</var></li>
+</ul>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Partial Scores</h3><ul>
+<li><var>500</var> points will be awarded for passing the test set satisfying the following: <var>1 \leq N \leq 1000</var>, <var>1 \leq M \leq 1000</var>, <var>1 \leq K \leq 1000</var>.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>The input is given from Standard Input in the following format:</p>
+<pre><var>N</var> <var>M</var> <var>K</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the answer modulo <var>1\,000\,000\,007 (=10^9+7)</var>.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>1 1 1
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>17
+</pre>
+<ul>
+<li>If Alice's card is <code>a</code>, then Alice will win regardless of Bob's and Charlie's card. There are <var>3×3=9</var> such patterns.</li>
+<li>If Alice's card is <code>b</code>, Alice will only win when Bob's card is <code>a</code>, or when Bob's card is <code>c</code> and Charlie's card is <code>a</code>. There are <var>3+1=4</var> such patterns.</li>
+<li>If Alice's card is <code>c</code>, Alice will only win when Charlie's card is <code>a</code>, or when Charlie's card is <code>b</code> and Bob's card is <code>a</code>. There are <var>3+1=4</var> such patterns.</li>
+</ul>
+<p>Thus, there are total of <var>9+4+4=17</var> patterns that will lead to Alice's victory.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>4 2 2
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>1227
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>1000 1000 1000
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>261790852
+</pre></section>
+</div>
+</span>

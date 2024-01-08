@@ -1,0 +1,75 @@
+<span class="lang-en">
+<p>Score : <var>500</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>You are given a sequence with <var>N</var> integers: <var>A = \{ A_1, A_2, \cdots, A_N \}</var>.
+For each of these <var>N</var> integers, we will choose a color and paint the integer with that color. Here the following condition must be satisfied:</p>
+<ul>
+<li>If <var>A_i</var> and <var>A_j</var> <var>(i &lt; j)</var> are painted with the same color, <var>A_i &lt; A_j</var>.</li>
+</ul>
+<p>Find the minimum number of colors required to satisfy the condition.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 \leq N \leq 10^5</var></li>
+<li><var>0 \leq A_i \leq 10^9</var></li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+<var>A_1</var>
+<var>:</var>
+<var>A_N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the minimum number of colors required to satisfy the condition.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>5
+2
+1
+4
+5
+3
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>2
+</pre>
+<p>We can satisfy the condition with two colors by, for example, painting <var>2</var> and <var>3</var> red and painting <var>1</var>, <var>4</var>, and <var>5</var> blue.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>4
+0
+0
+0
+0
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>4
+</pre>
+<p>We have to paint all the integers with distinct colors.</p></section>
+</div>
+</span>

@@ -1,0 +1,80 @@
+
+
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({ tex2jax: { inlineMath: [["$","$"], ["\\(","\\)"]], processEscapes: true }});
+</script>
+<script type='text/javascript' src='http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
+</script>
+
+<h2>Problem G:
+CarrotBreeding
+</h2>
+
+<p>
+  にんじんは繁殖の好きな植物である.
+</p>
+
+<p>
+  うさぎが畑でにんじんを飼うことにした. 畑は (0, 0) と (1000000000, 1000000000) を対角線とする正方形 (boundary を含む) である. うさぎは, 2 個以上のにんじんを通るすべての直線に沿って毎日1 回ずつ水をまくことにした.
+</p>
+
+<p>
+  このにんじんたちは, 毎日 $N$ 回ずつ水をまかれるのが繁殖に最適だと考えているので, そのような条件を満たすようにうさぎの畑に並ぶことにした. にんじんは畑内部の格子点にしか並ぶことができない. また, そのような条件を満たす並び方が複数ある場合は, 最もにんじんの個数が少ないものを選ぶことにした.
+</p>
+
+<p>
+  条件を満たすにんじんの配置を1 つ出力せよ. そのような配置が存在しない場合には -1 と出力せよ.
+</p>
+
+<h3>Constraints</h3>
+<ul>
+  <li>$N$ will be between 1 and 1,000,000, inclusive.</li>
+</ul>
+
+<h3>Input</h3>
+
+<p>
+  入力は以下の形式で与えられる:<br>
+  <br>
+$N$
+  <br>
+</p>
+
+
+<h3>Output</h3>
+
+<p>
+条件を満たす配置が存在しない場合, -1 と一行に出力せよ.<br>
+存在する場合, にんじんの本数を $K$ とすると, 以下の形式で出力せよ:<br>
+<br>
+$K$<br>
+$x_1$ $y_1$<br>
+...<br>
+$x_K$ $y_K$<br>
+</p>
+
+
+<h3>Sample Input 1</h3>
+
+<pre>4</pre>
+
+<h3>Sample Output 1</h3>
+
+<pre>4
+0 0
+1 0
+2 0
+1 1</pre>
+
+<h3>Sample Input 2</h3>
+
+<pre>6</pre>
+
+<h3>Sample Output 2</h3>
+
+<pre>4
+0 0
+0 1
+1 0
+1 1</pre>

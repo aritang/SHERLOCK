@@ -1,0 +1,129 @@
+
+
+
+<h3>Hierarchical Democracy</h3>
+
+
+<p>
+The presidential election in Republic of Democratia is carried out through multiple stages as follows.
+</p>
+
+<ol>
+<li>There are exactly two presidential candidates.</li>
+<li>At the first stage, eligible voters go to the polls of his/her electoral district.
+The winner of the district is the candidate who takes a majority of the votes.
+Voters cast their ballots only at this first stage.</li>
+<li>A district of the <i>k</i>-th stage (<i>k</i> &gt; 1) consists of multiple districts of the (<i>k</i> &minus; 1)-th stage. In contrast, a district of the (<i>k</i> &minus; 1)-th stage is a sub-district of one and only one district of the <i>k</i>-th stage. The winner of a district of the <i>k</i>-th stage is the candidate who wins in a majority of its sub-districts of the (<i>k</i> &minus; 1)-th stage.</li>
+<li>The final stage has just one nation-wide district. The winner of the final stage is chosen as the president.</li>
+</ol>
+
+
+
+<p>
+You can assume the following about the presidential election of this country.
+</p>
+<ul>
+<li>Every eligible voter casts a vote.</li>
+<li>The number of the eligible voters of each electoral district of the first stage is odd.</li>
+<li>The number of the sub-districts of the (<i>k</i> &minus; 1)-th stage that constitute a district of the <i>k</i>-th stage (<i>k</i> &gt; 1) is also odd.</li>
+</ul>
+<p>
+This means that each district of every stage has its winner (there is no tie). 
+</p>
+
+
+<p>
+Your mission is to write a program that finds a way to win the presidential election with the minimum number of votes.
+Suppose, for instance, that the district of the final stage has three sub-districts of the first stage and that the numbers of the eligible voters of the sub-districts are 123, 4567, and 89, respectively.
+The minimum number of votes required to be the winner is 107, that is, 62 from the first district and 45 from the third.
+In this case, even if the other candidate were given all the 4567 votes in the second district, s/he would inevitably be the loser. 
+Although you might consider this election system unfair, you should accept it as a reality.
+</p>
+
+
+<h3>Input</h3>
+
+
+<p>The entire input looks like:</p>
+<blockquote>
+
+<i>the number of datasets (=n)</i> <br>
+<i>1st dataset</i>                 <br>
+<i>2nd dataset</i>                 <br>
+&hellip;                                <br>
+<i>n-th dataset</i>                <br>
+</blockquote>
+
+
+
+<p>
+The number of datasets, <i>n</i>, is no more than 100.
+</p>
+
+
+
+<p>
+The number of the eligible voters of each district and the part-whole relations among districts are denoted as follows.
+</p>
+<ul>
+  <li>An electoral district of the first stage is denoted as [<i>c</i>], where <i>c</i> is the number of the eligible voters of the district.</li>
+  <li>A district of the <i>k</i>-th stage (<i>k</i> &gt; 1) is denoted as [<i>d</i><sub>1</sub><i>d</i><sub>2</sub>&hellip;<i>d<sub>m</sub></i>], where <i>d</i><sub>1</sub>, <i>d</i><sub>2</sub>, &hellip;, <i>d<sub>m</sub></i> denote its sub-districts of the (<i>k</i> &minus; 1)-th stage in this notation.</li>
+</ul>
+
+
+
+<p>
+For instance, an electoral district of the first stage that has 123 eligible voters is denoted as [123].
+A district of the second stage consisting of three sub-districts of the first stage that have 123, 4567, and 89 eligible voters, respectively, is denoted as [[123][4567][89]].
+</p>
+
+
+
+<p>
+Each dataset is a line that contains the character string denoting the district of the final stage in the aforementioned notation.
+You can assume the following.
+</p>
+<ul>
+  <li>The character string in each dataset does not include any characters except digits ('0', '1', &hellip;, '9') and square brackets ('[', ']'), and its length is between 11 and 10000, inclusive.</li>
+  <li>The number of the eligible voters of each electoral district of the first stage is between 3 and 9999, inclusive.</li>
+</ul>
+
+
+
+<p>
+The number of stages is a nation-wide constant.
+So, for instance, [[[9][9][9]][9][9]] never appears in the input.
+[[[[9]]]] may not appear either since each district of the second or later stage must have multiple sub-districts of the previous stage.
+</p>
+
+
+<h3>Output</h3>
+
+<p>
+For each dataset, print the minimum number of votes required to be the winner of the presidential election in a line.
+No output line may include any characters except the digits with which the number is written.
+</p>
+
+
+<h3>Sample Input</h3>
+<pre>
+6
+[[123][4567][89]]
+[[5][3][7][3][9]]
+[[[99][59][63][85][51]][[1539][7995][467]][[51][57][79][99][3][91][59]]]
+[[[37][95][31][77][15]][[43][5][5][5][85]][[71][3][51][89][29]][[57][95][5][69][31]][[99][59][65][73][31]]]
+[[[[9][7][3]][[3][5][7]][[7][9][5]]][[[9][9][3]][[5][9][9]][[7][7][3]]][[[5][9][7]][[3][9][3]][[9][5][5]]]]
+[[8231][3721][203][3271][8843]]
+</pre>
+
+<h3>Output for the Sample Input</h3>
+
+<pre>
+107
+7
+175
+95
+21
+3599
+</pre>
+

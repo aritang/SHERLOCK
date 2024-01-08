@@ -1,0 +1,127 @@
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({ tex2jax: { inlineMath: [["$","$"], ["\\(","\\)"]], skipTags: ["script","noscript","style","textarea","code"], processEscapes: true }});
+</script>
+<script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML"></script>
+
+<H1>
+Revenge of the Endless BFS
+</H1>
+
+<p>
+Mr. Endo wanted to write the code that performs breadth-first search (BFS), which is a search algorithm to explore all vertices on a <i>directed</i> graph. An example of pseudo code of BFS is as follows:
+</p>
+
+<pre>
+1: $current \leftarrow \{start\_vertex\}$
+2: $visited \leftarrow current$
+3: while $visited \ne$ the set of all the vertices
+4:   $found \leftarrow \{\}$
+5:   for $u$ in $current$
+6:     for each $v$ such that there is an edge from $u$ to $v$
+7:       $found \leftarrow found \cup \{v\}$
+8:   $current \leftarrow found \setminus visited$
+9:   $visited \leftarrow visited \cup found$
+</pre>
+
+<p>
+  However, Mr. Endo apparently forgot to manage visited vertices in his code. More precisely, he wrote the following code:
+</p>
+
+<pre>
+1: $current \leftarrow \{start\_vertex\}$
+2: while $current \ne$ the set of all the vertices
+3:   $found \leftarrow \{\}$
+4:   for $u$ in $current$
+5:     for each $v$ such that there is an edge from $u$ to $v$
+6:       $found \leftarrow found \cup \{v\}$
+7:   $current \leftarrow found$
+</pre>
+
+<p>
+  You may notice that for some graphs, Mr. Endo's program will not stop because it keeps running infinitely. Notice that it does not necessarily mean the program cannot explore all the vertices within finite steps. Your task here is to make a program that determines whether Mr. Endo's program will stop within finite steps for a given directed graph in order to point out the bug to him. Also, calculate the minimum number of loop iterations required for the program to stop if it is finite. Since the answer might be huge, thus print the answer modulo $10^9 +7$, which is a prime number.
+  </p>
+
+<H2>Input</H2>
+
+<p>
+  The input consists of a single test case formatted as follows.
+</p>
+
+<pre>
+$N$ $M$
+$u_1$ $v_1$
+:
+$u_M$ $v_M$
+</pre>
+
+<p>
+  The first line consists of two integers $N$ ($2 \leq N \leq 500$) and $M$ ($1 \leq M \leq 200,000$), where $N$ is the number of vertices and $M$ is the number of edges in a given directed graph, respectively. The $i$-th line of the following $M$ lines consists of two integers $u_i$ and $v_i$ ($1 \leq u_i, v_i \leq N$), which means there is an edge from $u_i$ to $v_i$ in the given graph. The vertex $1$ is the start vertex, i.e. $start\_vertex$ in the pseudo codes. You can assume that the given graph also meets the following conditions.
+</p>
+
+<ul>
+<li>The graph has no self-loop, i.e., $u_i \ne v_i$ for all $1 \leq i \leq M$.</li>
+<li>The graph has no multi-edge, i.e., $(u_i, v_i) \le (u_j, v_j)$ for all $1 \leq i < j \leq M$.</li>
+<li>For each vertex $v$, there is at least one path from the start vertex $1$ to $v$.</li>
+</ul>
+
+
+<H2>Output</H2>
+
+<p>
+If Mr. Endo's wrong BFS code cannot stop within finite steps for the given input directed graph, print '-1' in a line. Otherwise, print the minimum number of loop iterations required to stop modulo $10^9+7$.
+</p>
+
+<H2>Sample Input 1</H2>
+<pre>
+4 4
+1 2
+2 3
+3 4
+4 1
+</pre>
+
+<H2>Output for Sample Input 1</H2>
+<pre>
+-1
+</pre>
+
+
+
+<H2>Sample Input 2</H2>
+<pre>
+4 5
+1 2
+2 3
+3 4
+4 1
+1 3
+</pre>
+
+<H2>Output for Sample Input 2</H2>
+<pre>
+7
+</pre>
+
+<H2>Sample Input 3</H2>
+<pre>
+5 13
+4 2
+2 4
+1 2
+5 4
+5 1
+2 1
+5 3
+4 3
+1 5
+4 5
+2 3
+5 2
+1 3
+</pre>
+
+<H2>Output for Sample Input 3</H2>
+<pre>
+3
+</pre>

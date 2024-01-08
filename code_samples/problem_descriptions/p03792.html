@@ -1,0 +1,139 @@
+<span class="lang-en">
+<p>Score : <var>1300</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>There is a square-shaped grid with <var>N</var> vertical rows and <var>N</var> horizontal columns.
+We will denote the square at the <var>i</var>-th row from the top and the <var>j</var>-th column from the left as <var>(i,\ j)</var>.</p>
+<p>Initially, each square is either white or black.
+The initial color of the grid is given to you as characters <var>a_{ij}</var>, arranged in a square shape.
+If the square <var>(i,\ j)</var> is white, <var>a_{ij}</var> is <code>.</code>. If it is black, <var>a_{ij}</var> is <code>#</code>.</p>
+<p>You are developing a robot that repaints the grid.
+It can repeatedly perform the following operation:</p>
+<ul>
+<li>Select two integers <var>i</var>, <var>j</var> (<var>1 ≤ i,\ j ≤ N</var>). Memorize the colors of the squares <var>(i,\ 1)</var>, <var>(i,\ 2)</var>, <var>...</var>, <var>(i,\ N)</var> as <var>c_1</var>, <var>c_2</var>, <var>...</var>, <var>c_N</var>, respectively. Then, repaint the squares <var>(1,\ j)</var>, <var>(2,\ j)</var>, <var>...</var>, <var>(N,\ j)</var> with the colors <var>c_1</var>, <var>c_2</var>, <var>...</var>, <var>c_N</var>, respectively.</li>
+</ul>
+<p>Your objective is to turn all the squares black.
+Determine whether it is possible, and find the minimum necessary number of operations to achieve it if the answer is positive.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>2 ≤ N ≤ 500</var></li>
+<li><var>a_{ij}</var> is either <code>.</code> or <code>#</code>.</li>
+</ul>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Partial Score</h3><ul>
+<li>In a test set worth <var>300</var> points, <var>N ≤ 3</var>.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>The input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+<var>a_{11}</var><var>...</var><var>a_{1N}</var>
+<var>:</var>
+<var>a_{N1}</var><var>...</var><var>a_{NN}</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>If it is possible to turn all the squares black, print the minimum necessary number of operations to achieve the objective.
+If it is impossible, print <code>-1</code> instead.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>2
+#.
+.#
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>3
+</pre>
+<p>For example, perform the operation as follows:</p>
+<ul>
+<li>Select <var>i = 1</var>, <var>j = 2</var>.</li>
+<li>Select <var>i = 1</var>, <var>j = 1</var>.</li>
+<li>Select <var>i = 1</var>, <var>j = 2</var>.</li>
+</ul>
+<p>The transition of the colors of the squares is shown in the figure below:</p>
+<div style="text-align: center;">
+<img alt="6a0314bb2b1073694a7ef5a062e77b13.png" src="https://atcoder.jp/img/mujin/6a0314bb2b1073694a7ef5a062e77b13.png">
+</img></div>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>2
+..
+..
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>-1
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>2
+##
+##
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>0
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 4</h3><pre>3
+.#.
+###
+.#.
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 4</h3><pre>2
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 5</h3><pre>3
+...
+.#.
+...
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 5</h3><pre>5
+</pre></section>
+</div>
+</span>

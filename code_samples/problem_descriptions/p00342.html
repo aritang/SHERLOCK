@@ -1,0 +1,117 @@
+
+
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({ tex2jax: { inlineMath: [["$","$"], ["\\(","\\)"]], processEscapes: true }});
+</script>
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+
+<H1>有理式最大化</H1>
+
+<p>
+  <var>N</var> 個の異なる自然数が与えられる。その中から異なる４つを選んで、それらを $A$, $B$, $C$, $D$ としたとき、次の数式 </p>
+
+  <center>
+    $\frac{A + B}{C - D}$ <br/>
+  </center>
+<br/>
+<p>
+  の最大値を求めたい。
+</p>
+
+<br/>
+
+<p>
+<var>N</var> 個の異なる自然数が与えられたとき、その中から異なる４つを選んで、上の数式の最大値を求めるプログラムを作成せよ。
+  </p>
+
+
+<h2>Input</h2>
+
+<p>
+  入力は以下の形式で与えられる。
+  </p>
+
+<pre>
+<var>N</var>
+<var>a<sub>1</sub></var> <var>a<sub>2</sub></var> ... <var>a<sub>N</sub></var>
+</pre>
+
+<p>
+１行目に自然数の個数 <var>N</var> (4 &le; <var>N</var> &le; 1000) が与えられる。２行目に各自然数の値 <var>a<sub>i</sub></var> (1 &le; <var>a<sub>i</sub></var> &le; 10<sup>8</sup>) が与えられる。ただし、同じ自然数が重複して現れることはない（<var>i</var>  &ne; <var>j</var> について <var>a<sub>i</sub></var> &ne; <var>a<sub>j</sub></var>)。
+</p>
+
+<h2>Output</h2>
+
+<p>
+与えられた <var>N</var> 個の自然数に対して、上の数式の最大値を実数で出力する。ただし、誤差がプラスマイナス 10<sup>-5</sup> を超えてはならない。
+</p>
+
+<h2>Sample Input 1</h2>
+
+<pre>
+10
+1 2 3 4 5 6 7 8 9 10
+</pre>
+
+<h2>Sample Output 1</h2>
+<pre>
+19.00000
+</pre>
+
+<p>
+  入力例１では、$A=9$, $B=10$, $C=2$, $D=1$ などの組み合わせで最大になる。
+  </p>
+<br/>
+
+<h2>Sample Input 2</h2>
+<pre>
+5
+22 100 42 3 86
+</pre>
+
+<h2>Sample Output 2</h2>
+<pre>
+9.78947
+</pre>
+
+<p>
+  入力例２では、$A=100$, $B=86$, $C=22$, $D=3$ などの組み合わせで最大になる。
+  </p>
+<br/>
+
+
+<h2>Sample Input 3</h2>
+
+<pre>
+6
+15 21 36 10 34 5
+</pre>
+
+<h2>Sample Output 3</h2>
+<pre>
+18.00000
+</pre>
+
+<p>
+  入力例３では、$A=21$, $B=15$, $C=36$, $D=34$ などの組み合わせで最大になる。
+</p>
+
+<br/>
+
+<h2>Sample Input 4</h2>
+
+<pre>
+4
+100000 99999 8 1
+</pre>
+
+<h2>Sample Output 4</h2>
+
+<pre>
+28571.285714
+</pre>
+
+<br/>

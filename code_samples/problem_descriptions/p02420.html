@@ -1,0 +1,97 @@
+<H1>Shuffle</H1><br>
+
+<p>
+  Your task is to shuffle a deck of <var>n</var> cards, each of which is marked by a alphabetical letter.
+</p>
+
+<p>
+  A single shuffle action takes out <var>h</var> cards from the bottom of the deck and moves them to the top of the deck.
+</p>
+
+<p>
+  The deck of cards is represented by a string as follows.
+</p>
+
+<pre>
+abcdeefab
+</pre>
+
+<p>
+  The first character and the last character correspond to the card located at the bottom of the deck and the card on the top of the deck respectively.
+</p>
+
+<p>
+  For example, a shuffle with <var>h</var> = 4 to the above deck, moves the first 4 characters "abcd" to the end of the remaining characters "eefab", and generates the following deck:
+</p>
+
+<pre>
+eefababcd
+</pre>
+
+<p>
+  You can repeat such shuffle operations.
+</p>
+
+<p>
+  Write a program which reads a deck (a string) and a sequence of <var>h</var>, and prints the final state (a string). 
+</p>
+
+
+<H2>Input</H2>
+
+<p>
+  The input consists of multiple datasets. Each dataset is given in the following format:
+</p>
+
+<pre>
+A string which represents a deck
+The number of shuffle <var>m</var>
+<var>h</var><sub>1</sub>
+<var>h</var><sub>2</sub>
+  .
+  .
+<var>h</var><sub><var>m</var></sub>
+</pre>
+
+<p>
+  The input ends with a single character '-' for the string.
+</p>
+
+<H2>Constraints</H2>
+
+<ul>
+<li>The length of the string &le; 200</li>
+<li>1 &le; <var>m</var> &le; 100</li>
+<li>1 &le; <var>h<sub>i</sub></var> &lt; The length of the string</li>
+<li> The number of datasets &le; 10</li>
+</ul>
+
+
+
+<H2>Output</H2>
+
+<p>
+  For each dataset, print a string which represents the final state in a line.
+</p>
+
+<H2>Sample Input</H2>
+
+<pre>
+aabc
+3
+1
+2
+1
+vwxyz
+2
+3
+4
+-
+</pre>
+
+<H2>Sample Output</H2>
+
+<pre>
+aabc
+xyzvw
+</pre>

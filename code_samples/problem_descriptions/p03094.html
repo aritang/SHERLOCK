@@ -1,0 +1,94 @@
+<span class="lang-en">
+<p>Score : <var>1800</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>We have a round pizza. Snuke wants to eat one third of it, or something as close as possible to that.</p>
+<p>He decides to cut this pizza as follows.</p>
+<p>First, he divides the pizza into <var>N</var> pieces by making <var>N</var> cuts with a knife. The knife can make a cut along the segment connecting the center of the pizza and some point on the circumference of the pizza. However, he is very poor at handling knives, so the cuts are made at uniformly random angles, independent from each other.</p>
+<p>Then, he chooses one or more <strong>consecutive</strong> pieces so that the total is as close as possible to one third of the pizza, and eat them. (Let the total be x of the pizza. He chooses consecutive pieces so that <var>|x - 1/3|</var> is minimized.)</p>
+<p>Find the expected value of <var>|x - 1/3|</var>. It can be shown that this value is rational, and we ask you to print it modulo <var>10^9 + 7</var>, as described in Notes.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Notes</h3><p>When you print a rational number, first write it as a fraction <var>\frac{y}{x}</var>, where <var>x, y</var> are integers and <var>x</var> is not divisible by <var>10^9 + 7</var>
+(under the constraints of the problem, such representation is always possible).
+Then, you need to print the only integer <var>z</var> between <var>0</var> and <var>10^9 + 6</var>, inclusive, that satisfies <var>xz \equiv y \pmod{10^9 + 7}</var>.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>2 \leq N \leq 10^6</var></li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the expected value of <var>|x - 1/3|</var> modulo <var>10^9 + 7</var>, as described in Notes.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>2
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>138888890
+</pre>
+<p>The expected value is <var>\frac{5}{36}</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>3
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>179012347
+</pre>
+<p>The expected value is <var>\frac{11}{162}</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>10
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>954859137
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 4</h3><pre>1000000
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 4</h3><pre>44679646
+</pre></section>
+</div>
+</span>

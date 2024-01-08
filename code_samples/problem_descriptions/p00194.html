@@ -1,0 +1,177 @@
+
+
+
+<H1>運送会社</H1>
+
+<table>
+<tr>
+<td style="vertical-align:top">
+<p>
+ 白虎運送は会津若松市を代表する運送会社です。昨今の原油価格の高騰は運送会社にも多大なダメージを与え、運送会社各社では、できるだけ少ないガソリンで荷物を運ぶことが課題となっています。
+</p>
+</td>
+<td>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE1_byakkoDelivery1">
+</td>
+</tr>
+</table>
+
+<p>
+ 白虎運送では、重い荷物を積んだトラックは、その走りだしに多くのエネルギーを必要とすることに着目しました。トラックが倉庫を出発してから一度も停止することなく目的地まで到達する経路の中で最短時間の経路を通ることで、ガソリンの節約ができると考えました。
+</p>
+
+<p>
+あなたの仕事は、このような最短経路を計算できるカーナビを開発することです。作成するカーナビ用プログラムの仕様は以下のとおりです。
+</p>
+
+<ul>
+<li>市内は、下図のように、東西方向の道路 <var>M</var> 本、南北方向の道路 <var>N</var> 本 からなる格子で表し、格子の各交点は交差点を表します。</li>
+<li>交差点のいくつかには東西 - 南北の方向に信号機が設置されており、一定の周期で青、赤のシグナルが点灯しています。</li>
+<li>市内の交差点間を結ぶ道路には工事中で通過できない個所がいくつかあります。</li>
+<li>トラックが交差点から交差点へ移動するのに必要な時間は一定ですが、渋滞している道路ではさらに長い時間がかかります。</li>
+</ul>
+
+
+<center>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE1_byakkoDelivery2">
+</center>
+<br/>
+
+<p>
+市内の道路情報、トラックが交差点間を移動するのに必要な時間、信号機がある交差点と各信号機の周期、工事中の道路、渋滞している道路と渋滞度、白虎運送の倉庫(始点)と目的地(終点)の位置を入力とし、始点から終点までの最短の時間を出力するプログラムを作成して下さい。
+</p>
+
+<p>
+図のように、東西の方向の道路はa、b、c、... と英小文字で名前が付けられ 、南北の方向の道路は 1、2、3、... と整数で名前が付けられています。市内の交差点は、これらの英小文字と整数の組み合わせ <var>H</var>-<var>V</var> で指定されます。
+</p>
+
+<p>
+例えば、市内の最北西の交差点は a-1 で指定されます。各信号は周期 <var>k</var> をもち、<var>k</var> 分ごとに切り替わります。東西が青ならば南北が赤で、南北が青ならば東西が赤です。黄色のシグナルは存在しません。トラックは二つの交差点を結ぶ道路を移動するのに <var>D</var> 分要しますが、その道路が渋滞している場合はさらに <var>d</var> 分の時間を要します。トラックは道路が工事中の場合は移動できません。
+</p>
+
+<p>
+また、交差点に到達した時刻に、信号が赤の場合には進入できません。トラックは交差点でのみ、東、西、南、北に方向を変えることができますが、来た方向へは移動(Uターン)できません。道路は2方通行であり、トラックが行き来する時間、工事状況、渋滞度は2方向共通です。
+</p>
+
+<p>
+ 初期状態として、トラックは東を向いていて、トラックが倉庫を出発する瞬間すべての信号機が南北の方向に青に切り替わるものとします。また、トラックは 100分以内で目的地に到達できるものとします。
+</p>
+
+
+<H2>Input</H2>
+
+<p>
+ 複数のデータセットの並びが入力として与えられます。入力の終わりはゼロふたつの行で示されます。各データセットは以下の形式で与えられます。
+</p>
+
+<pre>
+<var>M</var> <var>N</var>
+<var>D</var>
+<var>ns</var>
+<var>H<sub>1</sub></var>-<var>V<sub>1</sub></var> <var>k<sub>1</sub></var>
+<var>H<sub>2</sub></var>-<var>V<sub>2</sub></var> <var>k<sub>2</sub></var>
+:
+<var>H<sub>ns</sub></var>-<var>V<sub>ns</sub></var> <var>k<sub>ns</sub></var>
+<var>nc</var>
+<var>H<sub>11</sub></var>-<var>V<sub>11</sub></var> <var>H<sub>12</sub></var>-<var>V<sub>12</sub></var>
+<var>H<sub>21</sub></var>-<var>V<sub>21</sub></var> <var>H<sub>22</sub></var>-<var>V<sub>22</sub></var>
+:
+<var>H<sub>nc1</sub></var>-<var>V<sub>nc1</sub></var> <var>H<sub>nc2</sub></var>-<var>V<sub>nc2</sub></var>
+<var>nj</var>
+<var>H<sub>11</sub></var>-<var>V<sub>11</sub></var> <var>H<sub>12</sub></var>-<var>V<sub>12</sub></var> <var>d<sub>1</sub></var>
+<var>H<sub>21</sub></var>-<var>V<sub>21</sub></var> <var>H<sub>22</sub></var>-<var>V<sub>22</sub></var> <var>d<sub>2</sub></var>
+:
+<var>H<sub>nj1</sub></var>-<var>V<sub>nj1</sub></var> <var>H<sub>nj2</sub></var>-<var>V<sub>nj2</sub></var> <var>d<sub>nj</sub></var>
+<var>H<sub>s</sub></var>-<var>V<sub>s</sub></var> <var>H<sub>d</sub></var>-<var>V<sub>d</sub></var>
+</pre>
+
+<p>
+１行目に道路の本数 <var>M</var>, <var>N</var> (2 &le; <var>M, N</var> &le; 20) が与えられます。２行目に、二つの交差点を結ぶ道路を移動するのに要する時間 <var>D</var> (1 &le; <var>D</var> &le; D, 整数) が与えられます。
+</p>
+
+<p>
+３行目に信号機の数 <var>ns</var> が与えられます。続く <var>ns</var> 行に、<var>i</var> 個目の信号機の位置を表す英小文字と整数の組 <var>H<sub>i</sub></var>-<var>V<sub>i</sub></var> と周期 <var>k</var> (1 &le; <var>k</var> &le; 100) が与えられます。
+</p>
+
+<p>
+続く行に、工事中の道路の数 <var>nc</var> が与えられます。続く <var>nc</var> 行に、<var>i</var> 個目の工事中の道路の２つの端点（交差点）を表す英小文字と整数の組 <var>H<sub>i1</sub></var>-<var>V<sub>i1</sub></var> <var>H<sub>i2</sub></var>-<var>V<sub>i2</sub></var> が与えられます。
+</p>
+
+<p>
+続く行に、渋滞道路の数 <var>nj</var> が与えられます。続く <var>nj</var> 行に、<var>i</var> 個目の渋滞道路の２つの端点（交差点）を表す英小文字と整数の組 <var>H<sub>i1</sub></var>-<var>V<sub>i1</sub></var> <var>H<sub>i2</sub></var>-<var>V<sub>i2</sub></var> と時間 <var>d<sub>i</sub></var> (1 &le; <var>d<sub>i</sub></var> &le; 100) が与えられます。
+</p>
+
+<p>
+最後の行に、始点の交差点 <var>H<sub>s</sub></var>-<var>V<sub>d</sub></var> と終点の交差点 <var>H<sub>d</sub></var>-<var>V<sub>d</sub></var> が与えられます。
+</p>
+
+<p>
+データセットの数は 20 を超えません。
+</p>
+
+
+
+<H2>Output</H2>
+
+<p>
+データセット毎に最短時間を１行に出力します。
+</p>
+
+<H2>Sample Input</H2>
+
+<pre>
+4 5
+1
+3
+b-2 3
+c-3 2
+c-4 1
+3
+a-2 b-2
+b-3 c-3
+d-3 d-4
+2
+b-3 b-4 1
+c-1 d-1 1
+d-1 b-4
+4 5
+1
+3
+b-2 3
+c-3 2
+c-4 1
+3
+a-2 b-2
+b-3 c-3
+d-3 d-4
+2
+b-3 b-4 1
+c-1 d-1 1
+d-2 b-4
+4 5
+1
+3
+b-2 3
+c-3 2
+c-4 1
+3
+a-2 b-2
+b-3 c-3
+d-3 d-4
+2
+b-3 b-4 1
+c-1 d-1 1
+d-3 b-4
+0 0
+</pre>
+
+<H2>Output for the Sample Input</H2>
+
+<pre>
+7
+4
+8
+</pre>
+
+
+

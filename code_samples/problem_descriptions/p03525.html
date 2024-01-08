@@ -1,0 +1,82 @@
+<span class="lang-en">
+<p>Score : <var>500</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>In CODE FESTIVAL XXXX, there are <var>N+1</var> participants from all over the world, including Takahashi.</p>
+<p>Takahashi checked and found that the <em>time gap</em> (defined below) between the local times in his city and the <var>i</var>-th person's city was <var>D_i</var> hours.
+The time gap between two cities is defined as follows. For two cities A and B, if the local time in city B is <var>d</var> o'clock at the moment when the local time in city A is <var>0</var> o'clock, then the time gap between these two cities is defined to be <var>min(d,24-d)</var> hours.
+Here, we are using <var>24</var>-hour notation.
+That is, the local time in the <var>i</var>-th person's city is either <var>d</var> o'clock or <var>24-d</var> o'clock at the moment when the local time in Takahashi's city is <var>0</var> o'clock, for example.</p>
+<p>Then, for each pair of two people chosen from the <var>N+1</var> people, he wrote out the time gap between their cities. Let the smallest time gap among them be <var>s</var> hours.</p>
+<p>Find the maximum possible value of <var>s</var>.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 \leq N \leq 50</var></li>
+<li><var>0 \leq D_i \leq 12</var></li>
+<li>All input values are integers.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+<var>D_1</var> <var>D_2</var> <var>...</var> <var>D_N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the maximum possible value of <var>s</var>.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>3
+7 12 8
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>4
+</pre>
+<p>For example, consider the situation where it is <var>7</var>, <var>12</var> and <var>16</var> o'clock in each person's city at the moment when it is <var>0</var> o'clock in Takahashi's city. In this case, the time gap between the second and third persons' cities is <var>4</var> hours.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>2
+11 11
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>2
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>1
+0
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>0
+</pre>
+<p>Note that Takahashi himself is also a participant.</p></section>
+</div>
+</span>

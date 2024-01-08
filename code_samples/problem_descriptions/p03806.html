@@ -1,0 +1,79 @@
+<span class="lang-en">
+<p>Score : <var>400</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>Dolphin is planning to generate a small amount of a certain chemical substance C.<br/>
+In order to generate the substance C, he must prepare a solution which is a mixture of two substances A and B in the ratio of <var>M_a:M_b</var>.<br/>
+He does not have any stock of chemicals, however, so he will purchase some chemicals at a local pharmacy.<br/>
+The pharmacy sells <var>N</var> kinds of chemicals. For each kind of chemical, there is exactly one package of that chemical in stock.<br/>
+The package of chemical <var>i</var> contains <var>a_i</var> grams of the substance A and <var>b_i</var> grams of the substance B, and is sold for <var>c_i</var> yen (the currency of Japan).<br/>
+Dolphin will purchase some of these packages. For some reason, he must use all contents of the purchased packages to generate the substance C.<br/>
+Find the minimum amount of money required to generate the substance C.<br/>
+If it is not possible to generate the substance C by purchasing any combination of packages at the pharmacy, report that fact.  </p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1≦N≦40</var> </li>
+<li><var>1≦a_i,b_i≦10</var> </li>
+<li><var>1≦c_i≦100</var> </li>
+<li><var>1≦M_a,M_b≦10</var> </li>
+<li><var>gcd(M_a,M_b)=1</var></li>
+<li><var>a_i</var>, <var>b_i</var>, <var>c_i</var>, <var>M_a</var> and <var>M_b</var> are integers.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>The input is given from Standard Input in the following format:</p>
+<pre><var>N</var> <var>M_a</var> <var>M_b</var>  
+<var>a_1</var> <var>b_1</var> <var>c_1</var>  
+<var>a_2</var> <var>b_2</var> <var>c_2</var>
+<var>:</var>  
+<var>a_N</var> <var>b_N</var> <var>c_N</var>  
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the minimum amount of money required to generate the substance C. If it is not possible to generate the substance C, print <code>-1</code> instead.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>3 1 1
+1 2 1
+2 1 2
+3 3 10
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>3
+</pre>
+<p>The amount of money spent will be minimized by purchasing the packages of chemicals <var>1</var> and <var>2</var>.<br/>
+In this case, the mixture of the purchased chemicals will contain <var>3</var> grams of the substance A and <var>3</var> grams of the substance B, which are in the desired ratio: <var>3:3=1:1</var>.<br/>
+The total price of these packages is <var>3</var> yen.  </p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>1 1 10
+10 10 10
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>-1
+</pre>
+<p>The ratio <var>1:10</var> of the two substances A and B cannot be satisfied by purchasing any combination of the packages. Thus, the output should be <code>-1</code>.</p></section>
+</div>
+</span>

@@ -1,0 +1,135 @@
+<span class="lang-en">
+<p>Score : <var>2200</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>You are given positions <var>(X_i, Y_i)</var> of <var>N</var> enemy rooks on an infinite chessboard.
+No two rooks attack each other (at most one rook per row or column).</p>
+<p>You're going to replace one rook with a king and then move the king repeatedly to beat as many rooks as possible.</p>
+<p>You can't enter a cell that is being attacked by a rook.
+Additionally, you <strong>can't move diagonally to an empty cell</strong> (but you can beat a rook diagonally).</p>
+<p>(So this king moves like a superpawn that beats diagonally in 4 directions and moves horizontally/vertically in 4 directions.)</p>
+<p>For each rook, consider replacing it with a king, and find the minimum possible number of moves
+    needed to beat the maximum possible number of rooks.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>2 \leq N \leq 200\,000</var></li>
+<li><var>1 \leq X_i, Y_i \leq 10^6</var></li>
+<li><var>X_i \neq X_j</var></li>
+<li><var>Y_i \neq Y_j</var></li>
+<li>All values in input are integers.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format.</p>
+<pre><var>N</var>
+<var>X_1</var> <var>Y_1</var>
+<var>X_2</var> <var>Y_2</var>
+<var>\vdots</var>
+<var>X_N</var> <var>Y_N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print <var>N</var> lines.
+The <var>i</var>-th line is for scenario of replacing the rook at <var>(X_i, Y_i)</var> with your king.
+This line should contain one integer: the minimum number of moves to beat <var>M_i</var> rooks
+    where <var>M_i</var> denotes the maximum possible number of beaten rooks in this scenario (in infinite time).</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>6
+1 8
+6 10
+2 7
+4 4
+9 3
+5 1
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>5
+0
+7
+5
+0
+0
+</pre>
+<p>See the drawing below.
+If we replace rook 3 with a king, we can beat at most two other rooks.
+The red path is one of optimal sequences of moves: beat rook 1,
+    then keep going down and right until you can beat rook 4.
+There are 7 steps and that's the third number in the output.</p>
+<p align="center"><img alt="path" src="https://img.atcoder.jp/agc047/rooks_path_small3.png"/></p>
+<p align="center"><em>x-coordinate increases from left to right,
+    while y increases bottom to top.</em></p>
+<p>Starting from rook 2, 5 or 6, we can't beat any other rook.
+The optimal number of moves is 0.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>5
+5 5
+100 100
+70 20
+81 70
+800 1
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>985
+985
+1065
+1034
+0
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>10
+2 5
+4 4
+13 12
+12 13
+14 17
+17 19
+22 22
+16 18
+19 27
+25 26
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>2
+2
+9
+9
+3
+3
+24
+5
+0
+25
+</pre></section>
+</div>
+</span>

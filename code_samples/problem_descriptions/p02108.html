@@ -1,0 +1,98 @@
+
+
+
+<h1>Problem K: Donuts Purchase</h1>
+<h2>Problem</h2>
+
+<p>
+ラフイは休暇の間することがなく暇で、なんとなくドーナツが食べたくなったので、店を巡りドーナツを購入していくことにした。<br>
+各街には1軒のドーナツ店があり、すべてのドーナツ店は奇数日が定休日となっている。<br>
+ラフイにはドーナツの好みがあるので、店によって得られる満足度が違う。<br>
+そこでラフイは最適に行動することで、できるだけ多くの満足度を得ることにした。<br>
+</p>
+<p>
+ラフイが住んでいる世界には、それぞれ0から<var>n</var>-1の番号が割り当てられた<var>n</var>個の街があり、それらは<var>m</var>本の道で繋がれている。<br>
+それぞれの道は一方通行になっており、ラフイは街<var>a<sub>i</sub></var>から街<var>b<sub>i</sub></var>へ移動することができる。<br>
+最初ラフイは偶数日に街0にいる。<br>
+ラフイは街には留まらずに、1日に道を1本渡り別の街に移動する。<br>
+ラフイは街<var>i</var>に到着した日に、店が営業していれば1つドーナツを購入し、満足度<var>c<sub>i</sub></var>を得る。<br>
+同じ街は何度でも訪れることができるが、1つの店では1度しか購入しない。<br>
+ラフイがこれ以上満足度を得られない状態になるまで最適に行動した時の満足度の合計の最大を求めよ。
+</p>
+
+<h2>Input</h2>
+
+<pre>
+<var>n</var> <var>m</var>
+<var>c<sub>0</sub></var> ... <var>c<sub>n&minus;1</sub></var>
+<var>a<sub>0</sub></var> <var>b<sub>0</sub></var>
+...
+<var>a<sub>m&minus;1</sub></var> <var>b<sub>m&minus;1</sub></var>
+</pre>
+
+<p>
+入力はすべて整数で与えられる。<br>
+1行目に街の数<var>n</var>と道の数<var>m</var>が空白区切りで与えられる。<br>
+2行目に街<var>i</var>の店でドーナツを購入した際に得られる満足度<var>c<sub>i</sub></var>が空白区切りで与えられる。<br>
+続く<var>m</var>行に道の情報を表す<var>a<sub>i</sub></var>と<var>b<sub>i</sub></var>が空白区切りで与えられる。
+</p>
+
+<h2>Constraints</h2>
+<p>
+入力は以下の条件を満たす。
+</p>
+<ul>
+  <li>1 &le; <var>n</var> &le; 10<sup>5</sup></li>
+  <li>0 &le; <var>m</var> &le; min(<var>n</var>&times;(<var>n</var>&minus;1),10<sup>5</sup>)</li>
+  <li>0 &le; <var>c<sub>i</sub></var> &le; 1000</li>
+  <li>0 &le; <var>a<sub>i</sub></var>,<var>b<sub>i</sub></var> &le; <var>n</var> &minus; 1</li>
+  <li>自己ループ、多重辺は存在しない</li>
+</ul>
+
+<h2>Output</h2>
+<p>
+満足度の合計の最大値を1行に出力せよ。<br>
+</p>
+
+<h2>Sample Input 1</h2>
+<pre>
+2 1
+1 2
+0 1
+</pre>
+
+<h2>Sample Output 1</h2>
+<pre>
+1
+</pre>
+
+<h2>Sample Input 2</h2>
+<pre>
+5 5
+1 1 1 1 1
+0 1
+1 2
+2 3
+3 0
+3 4
+</pre>
+
+<h2>Sample Output 2</h2>
+<pre>
+3
+</pre>
+
+<h2>Sample Input 3</h2>
+<pre>
+4 4
+1 1 1 1
+0 1
+1 2
+2 0
+2 3
+</pre>
+
+<h2>Sample Output 3</h2>
+<pre>
+4
+</pre>

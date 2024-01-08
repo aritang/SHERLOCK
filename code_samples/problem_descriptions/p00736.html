@@ -1,0 +1,129 @@
+
+<h1><font color="#000000">Problem C:</font> How can I satisfy thee? Let me count the ways...</h1>
+<!-- end en only -->
+
+<!-- begin en only -->
+<p>
+Three-valued logic is a logic system that has, in addition to "true" and 
+"false", "unknown" as a valid value.  
+
+In the following, logical values "false", "unknown" and "true" are 
+represented by 0, 1 and 2 respectively. 
+</p><p>
+Let "-" be a unary operator (i.e. a symbol representing one argument function) 
+and let both "*" and "+" be binary operators (i.e. symbols representing 
+two argument functions). 
+These operators represent negation (NOT), conjunction (AND) and 
+disjunction (OR) respectively. 
+These operators in three-valued logic can be defined in Table C-1.
+</p>
+<!-- end en only -->
+
+<CENTER>
+<!-- begin en only -->
+Table C-1: Truth tables of three-valued logic operators
+<!-- end en only -->
+<br>
+<TABLE>
+<TR align=center><TD>-X</TD><TD></TD><TD>(X*Y)</TD><TD></TD><TD>(X+Y)</TD><TR>
+<TR><TD><img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE1_2008C1"></TD><TD></TD>
+    <TD><img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE1_2008C2"></TD><TD></TD>
+    <TD><img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE1_2008C3"></TD> <TD></TD></TR>
+</TABLE>
+</CENTER>
+
+
+<!-- begin en only -->
+<p>
+Let P, Q and R be variables ranging over three-valued logic values. 
+For a given formula, you are asked to answer the number of triples (P,Q,R) 
+that satisfy the formula, that is, those which make the value of the 
+given formula 2. 
+A formula is one of the following form (X and Y represent formulas). 
+</p>
+<ul>
+<li> Constants: 0, 1 or 2
+<li> Variables: P, Q or R
+<li> Negations: -X
+<li> Conjunctions: (X*Y)
+<li> Disjunctions: (X+Y)
+</ul>
+<p>
+Note that conjunctions and disjunctions of two formulas are always 
+parenthesized. 
+</p>
+<!-- end en only -->
+<p>
+<!-- begin en only -->
+For example, when formula (P*Q) is given as an input, the value of 
+this formula is 2 when and only when (P,Q,R) is (2,2,0), (2,2,1) or (2,2,2). 
+Therefore, you should output 3. 
+<!-- end en only -->
+</p>
+
+
+<h3>Input</h3>
+<!-- begin en only -->
+<p>
+The input consists of one or more lines. Each line contains a formula. 
+A formula is a string which consists of 0, 1, 2, P, Q, R, -, *, +, (, ). 
+Other characters such as spaces are not contained. 
+The grammar of formulas is given by the following BNF. 
+</p>
+<!-- end en only -->
+
+<pre>
+&lt;formula&gt; ::= 0 | 1 | 2 | P | Q | R |
+              -&lt;formula&gt; | (&lt;formula&gt;*&lt;formula&gt;) | (&lt;formula&gt;+&lt;formula&gt;)
+</pre>
+
+<!-- begin en only -->
+<p>
+All the formulas obey this syntax and thus you do not have to care about 
+grammatical errors.
+Input lines never exceed 80 characters.  
+</p><p>
+Finally, a line which
+contains only a "." (period) comes, indicating the end of the input.
+</p>
+<!-- end en only -->
+
+
+
+
+<h3>Output</h3>
+<!-- begin en only -->
+<p>
+You should answer the number (in decimal) of triples (P,Q,R) that make the 
+value of the given formula 2.  One line containing the number should be 
+output for each of the formulas, and no other characters should be output.
+</p>
+<!-- end en only -->
+
+
+
+<h3>Sample Input</h3>
+<PRE>
+(P*Q)
+(--R+(P*Q))
+(P*-P)
+2
+1
+(-1+(((---P+Q)*(--Q+---R))*(-R+-P)))
+.
+</PRE>
+
+<h3>Output for the Sample Input</h3>
+<PRE>
+3
+11
+0
+27
+0
+7
+</PRE>
+
+
+
+
+

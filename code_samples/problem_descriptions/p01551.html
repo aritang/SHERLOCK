@@ -1,0 +1,95 @@
+
+
+<h1>問題名 DNA</h1>
+<p>遺伝子は、<code>A</code>, <code>T</code>, <code>G</code>, <code>C</code> からなる文字列です。
+この世界の遺伝子は奇妙なことに、ある構文規則に従うことが知られています。
+</p>
+<p>構文規則は、次のような形で与えられます。
+</p><pre>非終端記号1: 記号1_1 記号1_2 ... 記号1_n1
+非終端記号2: 記号2_1 記号2_2 ... 記号2_n2
+...
+非終端記号m: 記号m_1 記号m_2 ... 記号m_nm
+</pre>
+<p>記号は非終端記号または終端記号のどちらかです。
+非終端記号は小文字文字列で表され、終端記号は<code>A</code>, <code>T</code>, <code>G</code>, <code>C</code>のうちのいくつかの文字が、&quot;<code>[</code>&quot;と&quot;<code>]</code>&quot;に囲まれた文字列で表されます。
+</p>
+<p>構文規則の例は次のようになります。
+</p><pre>dna: a a b b
+a: [AT]
+b: [GC]
+</pre>
+<p>&quot;<code>非終端記号i: 記号i_1 記号i_2 ... 記号i_ni</code>&quot; を非終端記号 <var>i</var> のルールと呼び、ルールは、構文規則に現れる各非終端記号に対して、ちょうど 1 つづつ存在します。
+</p>
+<p>文字列 <var>s</var> が非終端記号 <var>i</var> に「<code>マッチする</code>」とは、 <var>s = s<sub>1</sub> + s<sub>2</sub> + ... + s<sub>ni</sub></var> となるような <var>s</var> の部分文字列 <var>{s<sub>j</sub>}</var> が存在し、<var>s<sub>j</sub></var> (<var>1 &le; j &le; n<sub>i</sub></var>)がルール内の記号 <var>j</var> にマッチすることをいいます。
+</p>
+<p>文字列 <var>s</var> が終端記号に「<code>マッチする</code>」とは、文字列が 1 文字からなり、その文字が終端記号を表す文字列に含まれることをいいます。
+</p>
+<p>文字列が構文規則に従うとは、非終端記号 <var>1</var> にその文字列がマッチすることをいいます。
+</p>
+<p>ルール <var>i</var> は、記号のうちに、非終端記号 <var>j</var> (<var>j &le; i</var>) を含みません。
+</p>
+<p>構文規則と、4つの整数 <var>Na</var> , <var>Nt</var>, <var>Ng</var>, <var>Nc</var> が与えられます。
+構文規則に従い、A をちょうど <var>Na</var> 個、T をちょうど <var>Nt</var> 個、G をちょうど <var>Ng</var> 個、C をちょうど <var>Nc</var> 個含むような遺伝子の総数を 1,000,000,007 で割った余りを求めなさい。
+</p>
+
+
+<h2>Input</h2>
+<blockquote>
+<var>Na</var> <var>Nt</var> <var>Ng</var> <var>Nc</var><br><var>m</var><br>非終端記号1: 記号 <var>1<sub>1</sub></var> 記号 <var>1<sub>2</sub></var> ... 記号 <var>1<sub>n1</sub></var><br>非終端記号2: 記号 <var>2<sub>1</sub></var> 記号 <var>2<sub>2</sub></var> ... 記号 <var>2<sub>n2</sub></var><br>...<br>非終端記号 <var>m</var>: 記号 <var>m<sub>1</sub></var> 記号 <var>m<sub>2</sub></var> ... 記号 <var>m<sub>nm</sub></var><br></blockquote>
+
+<p><var>0 &le; Na, Nt, Ng, Nc &le; 50</var>
+</p>
+<p><var>1 &le; m &le; 50</var>
+</p>
+<p><var>1 &le; ni &le; 10</var>
+</p>
+<p><var>1 &le; </var> 記号を表す文字列の長さ <var> &le; 20</var> (※記号にマッチする文字列の長さではないことに注意)
+</p>
+
+<h2>Output</h2>
+<p>総数を 1,000,000,007 で割った余り
+</p>
+
+<h2>Sample Input 1</h2>
+
+<pre>1 0 1 0
+3
+dna: a b
+a: [AT]
+b: [GC]
+</pre>
+
+<h2>Output for the Sample Input 1</h2>
+
+<pre>1
+</pre>
+<p>"AG"の一つです。
+</p>
+
+<h2>Sample Input 2</h2>
+
+<pre>1 1 1 2
+1
+k: [ATG] [ATG] [ATG] [C] [C]
+</pre>
+
+<h2>Output for the Sample Input 2</h2>
+
+<pre>6
+</pre>
+<p>"ATGCC", "AGTCC", "TAGCC", "TGACC", "GATCC", "GTACC"の6つです。
+</p>
+
+<h2>Sample Input 3</h2>
+
+<pre>3 1 1 1
+3
+inv: at b b b
+at: [ATG] b
+b: [C]
+</pre>
+
+<h2>Output for the Sample Input 3</h2>
+
+<pre>0
+</pre>

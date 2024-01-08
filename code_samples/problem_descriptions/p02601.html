@@ -1,0 +1,86 @@
+<span class="lang-en">
+<p>Score: <var>200</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3>
+<p>M-kun has the following three cards:</p>
+<ul>
+<li>A red card with the integer <var>A</var>.</li>
+<li>A green card with the integer <var>B</var>.</li>
+<li>A blue card with the integer <var>C</var>.</li>
+</ul>
+<p>He is a genius magician who can do the following operation at most <var>K</var> times:</p>
+<ul>
+<li>Choose one of the three cards and multiply the written integer by <var>2</var>.</li>
+</ul>
+<p>His magic is successful if both of the following conditions are satisfied after the operations:</p>
+<ul>
+<li>The integer on the green card is <strong>strictly</strong> greater than the integer on the red card.</li>
+<li>The integer on the blue card is <strong>strictly</strong> greater than the integer on the green card.</li>
+</ul>
+<p>Determine whether the magic can be successful.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3>
+<ul>
+<li><var>1 \leq A, B, C \leq 7</var></li>
+<li><var>1 \leq K \leq 7</var></li>
+<li>All values in input are integers.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3>
+<p>Input is given from Standard Input in the following format:</p>
+<pre><var>A</var> <var>B</var> <var>C</var>
+<var>K</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3>
+<p>If the magic can be successful, print <code>Yes</code>; otherwise, print <code>No</code>.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>7 2 5
+3
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>Yes
+</pre>
+<p>The magic will be successful if, for example, he does the following operations:</p>
+<ul>
+<li>First, choose the blue card. The integers on the red, green, and blue cards are now <var>7</var>, <var>2</var>, and <var>10</var>, respectively.</li>
+<li>Second, choose the green card. The integers on the red, green, and blue cards are now <var>7</var>, <var>4</var>, and <var>10</var>, respectively.</li>
+<li>Third, choose the green card. The integers on the red, green, and blue cards are now <var>7</var>, <var>8</var>, and <var>10</var>, respectively.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>7 4 2
+3
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>No
+</pre>
+<p>He has no way to succeed in the magic with at most three operations.</p></section>
+</div>
+</span>

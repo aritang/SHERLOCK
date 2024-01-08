@@ -1,0 +1,122 @@
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({ tex2jax: { inlineMath: [["$","$"], ["\\(","\\)"]], processEscapes: true }});
+</script>
+<script language="JavaScript" type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML">
+</script>
+
+<H1>Binary Search Tree I</H1>
+
+<p>
+ Search trees are data structures that support dynamic set operations including insert, search, delete and so on. Thus a search tree can be used both as a dictionary and as a priority queue. 
+</p>
+
+<p>
+  Binary search tree is one of fundamental search trees. The keys in a binary search tree are always stored in such a way as to satisfy the following binary search tree property:
+</p>
+
+<ul>
+<li> Let $x$ be a node in a binary search tree. If $y$ is a node in the left subtree of $x$, then $y.key \leq x.key$. If $y$ is a node in the right subtree of $x$, then $x.key \leq y.key$.
+</li>
+</ul>
+
+<p>
+  The following figure shows an example of the binary search tree.
+</p>
+
+<center>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_ALDS1_8_A.png">
+</center>
+<br>
+
+<p>
+  For example, keys of nodes which belong to the left sub-tree of the node containing 80 are less than or equal to 80, and keys of nodes which belong to the right sub-tree are more than or equal to 80. The binary search tree property allows us to print out all the keys in the tree in sorted order by an inorder tree walk.
+</p>
+
+<p>
+  A binary search tree should be implemented in such a way that the binary search tree property continues to hold after modifications by insertions and deletions. A binary search tree can be represented by a linked data structure in which each node is an object. In addition to a key field and satellite data, each node contains fields <i>left</i>, <i>right</i>, and <i>p</i> that point to the nodes corresponding to its left child, its right child, and its parent, respectively.
+</p>
+
+<p>
+  To insert a new value $v$ into a binary search tree $T$, we can use the procedure insert as shown in the following pseudo code. The insert procedure is passed a node $z$ for which $z.key = v$, $z.left = NIL$, and $z.right = NIL$. The procedure modifies $T$ and some of the fields of $z$ in such a way that $z$ is inserted into an appropriate position in the tree.
+</p>
+
+<pre>
+1 insert(T, z)
+2     y = NIL // parent of x
+3     x = 'the root of T'
+4     while x &ne; NIL
+5         y = x // set the parent
+6         if z.key &lt; x.key
+7             x = x.left // move to the left child
+8         else 
+9             x = x.right // move to the right child
+10    z.p = y
+11
+12    if y == NIL // T is empty
+13        'the root of T' = z
+14    else if z.key &lt; y.key
+15        y.left = z // z is the left child of y
+16    else 
+17        y.right = z // z is the right child of y
+</pre>
+
+<p>
+  Write a program which performs the following operations to a binary search tree $T$.
+</p>
+
+<ul>
+<li><span>insert </span> $k$: Insert a node containing $k$ as key into $T$.</li>
+<li><span>print</span>: Print the keys of the binary search tree by inorder tree walk and  preorder tree walk respectively.</li>
+</ul>
+
+<p>
+  You should use the above pseudo code to implement the insert operation. $T$ is empty at the initial state.
+</p>
+
+<H2>Input</H2>
+
+<p>
+  In the first line, the number of operations $m$ is given. In the following $m$ lines, operations represented by <span>insert </span>$k$ or <span>print</span> are given.
+</p>
+
+
+<H2>Output</H2>
+
+<p>
+  For each <span>print</span> operation, print a list of keys obtained by inorder tree walk and preorder tree walk in a line respectively. Put a space character <u>before each key</u>.
+</p>
+
+<H2>Constraints</H2>
+
+<ul>
+<li>The number of operations $\leq 500,000$</li>
+<li>The number of print operations $\leq 10$.</li>
+<li>$-2,000,000,000 \leq key \leq 2,000,000,000$</li>
+<li>The height of the binary tree does not exceed 100 if you employ the above pseudo code.</li>
+<li>The keys in the binary search tree are all different.</li>
+</ul>
+
+<H2>Sample Input 1</H2>
+<pre>
+8
+insert 30
+insert 88
+insert 12
+insert 1
+insert 20
+insert 17
+insert 25
+print
+</pre>
+
+<H2>Sample Output 1</H2>
+<pre>
+ 1 12 17 20 25 30 88
+ 30 12 1 20 17 25 88
+</pre>
+
+<H2>Reference</H2>
+
+<p>
+Introduction to Algorithms, Thomas H. Cormen, Charles E. Leiserson, Ronald L. Rivest, and Clifford Stein. The MIT Press.
+</p>

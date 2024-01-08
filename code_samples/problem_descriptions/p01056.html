@@ -1,0 +1,87 @@
+
+
+
+<h1>Lights of Apartment</h1>
+<h2>Problem</h2>
+
+<p>
+エーちゃんとリカちゃんとハルトくんはマンションに遊びに来た。<br>
+3人は全ての部屋の電気を管理できる部屋に忍び込みいたずらをすることにした。<br><br>
+このマンションは<var>n</var>個の立方体が1列に並んでいる形をしている。<br>
+各立方体は西から順に1辺の長さが1ずつ増えていて(1,2,3,...,<var>n</var>)、<var>i</var>番目の立方体は<var>i</var>階あり、各階に縦<var>i</var>×横<var>i</var>個の部屋がある。<br>
+2番目以降の立方体の西側は1つ西の立方体の東側と接していて、全ての立方体の南側は真っ直ぐな道路に面している。<br>
+</p>
+<br>
+<left>
+	<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_ACPC2015UOA_I" width="360" ><br>
+</left>
+<br>
+<p>
+初め全ての部屋に電気がついている。<br>
+3人はそれぞれ次の行動をした。<br>
+</p>
+<ul>
+<li>エーちゃんは西から<var>k</var>番目の全ての部屋の電気を消した。</li>
+<li>リカちゃんは南から<var>k</var>番目の全ての部屋の電気を消した。</li>
+<li>ハルトくんは<var>k</var>階の全ての部屋の電気を消した。</li>
+</ul>
+
+<p>
+このようないたずらが <var>m</var> 回行われた後に電気がついている部屋の数を求めよ。
+</p>
+
+<h2>Input</h2>
+
+<pre>
+<var>n</var> <var>m</var>
+<var>q<sub>1</sub></var> <var>k<sub>1</sub></var>
+...
+<var>q<sub>m</sub></var> <var>k<sub>m</sub></var>
+</pre>
+
+<p>
+入力は全て整数で与えられる。<br>
+1行目に立方体の数<var>n</var>、行動の数<var>m</var>が与えられる。<br>
+2行目以降<var>m</var>行に行動した人の番号<var>q</var>と<var>k</var>が与えられる。<br><br>
+<var>q<sub>i</sub></var>が0の場合エーちゃん、 1の場合リカちゃん、2の場合ハルトくんが行動したことを表す。
+</p>
+<p>
+3人は部屋がない場所の電気を消そうとすることもある。 
+</p>
+
+<h2>Constraints</h2>
+
+<ul>
+<li>1 &le; <var>n</var>,<var>m</var> &le; 50000</li>
+<li>0 &le; <var>q<sub>i</sub></var> &le; 2</li>
+<li>1 &le; <var>k<sub>i</sub></var> &le; 2×10<sup>9</sup></li>
+<li>同じ行動は一度しか与えられない</li>
+</ul>
+
+<h2>Output</h2>
+<p>
+電気がついている部屋の数を1行に出力せよ。
+</p>
+
+<h2>Sample Input 1</h2>
+<pre>
+3 1
+0 4
+</pre>
+
+<h2>Sample Output 1</h2>
+<pre>
+27
+</pre>
+
+<h2>Sample Input 2</h2>
+<pre>
+3 2
+2 2
+2 3
+</pre>
+
+<h2>Sample Output 2</h2>
+<pre>
+14
+</pre>

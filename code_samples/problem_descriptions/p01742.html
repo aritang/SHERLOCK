@@ -1,0 +1,52 @@
+
+
+<p>
+すぬけ君の辞書には，<var>n</var> 個の英小文字からなる単語 <var>s<sub>1</sub>, . . .,  s<sub>n</sub></var> がのっている．これは辞書順で比較したとき <var>s<sub>1</sub> &lt; . . . &lt; s<sub>n</sub></var> をみたす．残念ながらいくつかの文字はかすれて読めなくなってしまっている．読めなくなった文字は <span>?</span> で表される．<span>?</span> を英小文字で置き換えて辞書を復元する方法は何通りあるか，mod 1,000,000,007 でもとめよ．
+</p>
+
+
+<h2>Constraints</h2>
+<ul>
+<li> 1 &le; <var>n</var> &le; 50</li>
+<li> 1 &le; <var>|s<sub>i</sub>|</var> &le; 20</li>
+<li> <var>s<sub>i</sub></var> に現れる文字は英小文字または <span>?</span> である</li>
+</ul>
+
+<h2>Input</h2>
+<pre>
+<var>n</var>
+<var>s<sub>1</sub></var>
+. . .
+<var>s<sub>n</sub></var>
+</pre>
+
+<h2>Output</h2>
+<p>
+答えを一行に出力せよ．
+</p>
+
+<h2>Sample Input 1</h2>
+<pre>
+2
+?sum??mer
+c??a??mp
+</pre>
+
+
+<h2>Sample Output 1</h2>
+<pre>
+703286064
+</pre>
+
+<h2>Sample Input 2</h2>
+<pre>
+3
+snuje
+????e
+snule
+</pre>
+
+<h2>Sample Output 2</h2>
+<pre>
+1
+</pre>

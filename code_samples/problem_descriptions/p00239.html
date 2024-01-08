@@ -1,0 +1,107 @@
+
+
+
+<H1>カロリー計算</H1>
+<!--
+<p>
+天高く馬肥ゆる秋。そろそろ食べ物が美味しくなる季節です。高校生のよしお君
+も、テレビや読書のお供についついお菓子に手が伸びてしまいます。そのせいか最近体重は増える一方で、健康的にもよろしくありません。しかしどうしても直ぐに間食がやめられないよしお君は、お菓子の栄養素やカロリーが制限された場合に、食べたいお菓子を、食べてもよいお菓子と食べてはいけないお菓子に分類することにしました。
+</p>
+-->
+
+<p>
+食べ物には3大栄養素と呼ばれる「たんぱく質」「脂質」「炭水化物」の３つの栄養素が含まれています。１g（グラム）あたりたんぱく質と炭水化物は 4 kcal（キロカロリー）、脂質は 9 kcal と計算されます。たとえば、下の表によると番号１のケーキにはタンパク質 7 g、脂質 14 g、炭水化物 47 g が含まれています。これをもとに含まれるカロリーを計算すると、4 &times; 7 + 9 &times; 14 + 4 &times; 47 = 342 kcal となります。その他も同様に計算されています。
+</p>
+
+<center>
+<table  style="border: 1px #000 solid" border="1" cellpadding="3" cellspacing="0">
+<tr>
+<td  width="50" style="border: 1px #000 solid">番号</td><td width="160" style="border: 1px #000 solid">名前</td><td style="border: 1px #000 solid">たんぱく質(g)</td><td style="border: 1px #000 solid">脂質(g)</td><td style="border: 1px #000 solid">炭水化物(g)</td><td style="border: 1px #000 solid">カロリー(kcal)</td>
+</tr>
+<tr>
+<td style="border: 1px #000 solid">1</td><td style="border: 1px #000 solid">ケーキ</td><td style="border: 1px #000 solid">7</td><td style="border: 1px #000 solid">14</td><td style="border: 1px #000 solid">47</td><td style="border: 1px #000 solid">342</td>
+</tr>
+<tr>
+<td style="border: 1px #000 solid">2</td><td style="border: 1px #000 solid">ポテトチップス</td><td style="border: 1px #000 solid">5</td><td style="border: 1px #000 solid">35</td><td style="border: 1px #000 solid">55</td><td style="border: 1px #000 solid">555</td>
+</tr>
+<tr>
+<td style="border: 1px #000 solid">3</td><td style="border: 1px #000 solid">どら焼き</td><td style="border: 1px #000 solid">6</td><td style="border: 1px #000 solid">3</td><td style="border: 1px #000 solid">59</td><td style="border: 1px #000 solid">287</td>
+</tr>
+<tr>
+<td style="border: 1px #000 solid">4</td><td style="border: 1px #000 solid">プリン</td><td style="border: 1px #000 solid">6</td><td style="border: 1px #000 solid">5</td><td style="border: 1px #000 solid">15</td><td style="border: 1px #000 solid">129</td>
+</tr>
+</table>
+</center>
+<br>
+
+<p>
+分類の対象となるお菓子の個数 <var>n</var> と各お菓子の情報、制限の情報を入力とし、そのお菓子一つだけなら制限を超えることがない（食べてもよい）お菓子の一覧を出力するプログラムを作成してください。
+</p>
+
+<p>
+お菓子の情報は、お菓子の番号 <var>s</var>、そのお菓子に含まれるたんぱく質の重量 <var>p</var>、脂質の重量 <var>q</var>、炭水化物の重量 <var>r</var> から構成されています。制限の情報には、含むことができる最大のたんぱく質の重量 <var>P</var>、脂質の重量 <var>Q</var>、炭水化物の重量 <var>R</var>、および摂取することができる最大のカロリー <var>C</var> からなっており、タンパク質、脂質、炭水化物、カロリーのいずれかの一つでも超えると制限違反となり、「食べてはいけないお菓子」と判断されます。
+</p>
+
+<p>
+食べてもよいお菓子の一覧は、食べてもよいお菓子の番号を入力順に出力してください。なお、食べてもよいお菓子がなければ”NA”と出力してください。
+上の表にある4個のお菓子について、<var>P</var> = 10, <var>Q</var> = 15, <var>R</var> = 50, <var>C</var> = 400 という制限の場合、ケーキとプリンはそれぞれの栄養素及びカロリーが制限値以下なので食べてもよいお菓子に分類されますが、ポテトチップスは炭水化物とカロリー、どら焼きは炭水化物の量が制限値を超えているため食べてはいけないお菓子に分類されます。
+</p>
+
+<h2>入力</h2>
+
+<p>
+複数のデータセットの並びが与えられます。入力の終わりはゼロひとつの行で示されます。各データセットは以下の形式で与えられます。
+</p>
+
+<pre>
+<var>n</var>
+<var>s<sub>1</sub></var> <var>p<sub>1</sub></var> <var>q<sub>1</sub></var> <var>r<sub>1</sub></var>
+<var>s<sub>2</sub></var> <var>p<sub>2</sub></var> <var>q<sub>2</sub></var> <var>r<sub>2</sub></var>
+:
+<var>s<sub>n</sub></var> <var>p<sub>n</sub></var> <var>q<sub>n</sub></var> <var>r<sub>n</sub></var>
+<var>P</var> <var>Q</var> <var>R</var> <var>C</var>
+</pre>
+
+<p>
+1行目にお菓子の数 <var>n</var> (1 &le; <var>n</var> &le; 1000)が与えられます。続く <var>n</var> 行に第 <var>i</var> のお菓子の番号 <var>s<sub>i</sub></var> (1 &le; <var>s<sub>i</sub></var> &le; 1000)、各栄養素の重量を表す整数 <var>p<sub>i</sub></var>, <var>q<sub>i</sub></var>, <var>r<sub>i</sub></var> (0 &le; <var>p<sub>i</sub></var>, <var>q<sub>i</sub></var>, <var>r<sub>i</sub></var> &le; 100) が与えられます。
+</p>
+
+<p>
+続く行に各栄養素及びカロリーの制限値を表す整数 <var>P</var>, <var>Q</var>, <var>R</var> (0 &le; <var>P</var>, <var>Q</var>, <var>R</var> &le; 100), <var>C</var> (0 &le; <var>C</var> &le; 1700) が与えられます。
+</p>
+
+<p>
+データセットの数は 100 を超えません。
+</p>
+
+<h2>出力</h2>
+
+<p>
+データセットごとに、食べてもよいお菓子の番号または ”NA” を出力します。
+</p>
+
+
+<h2>入力例</h2>
+
+<pre>
+4
+1 7 14 47
+2 5 35 55
+3 6 3 59
+4 6 5 15
+10 15 50 400
+2
+1 8 10 78
+2 4 18 33
+10 10 50 300
+0
+</pre>
+
+
+<h2>出力例</h2>
+
+<pre>
+1
+4
+NA
+</pre>

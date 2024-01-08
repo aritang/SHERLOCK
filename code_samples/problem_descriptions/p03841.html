@@ -1,0 +1,69 @@
+<span class="lang-en">
+<p>Score : <var>800</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>You are given an integer sequence <var>x</var> of length <var>N</var>.
+Determine if there exists an integer sequence <var>a</var> that satisfies all of the following conditions, and if it exists, construct an instance of <var>a</var>.</p>
+<ul>
+<li><var>a</var> is <var>N^2</var> in length, containing <var>N</var> copies of each of the integers <var>1</var>, <var>2</var>, <var>...</var>, <var>N</var>.</li>
+<li>For each <var>1 ≤ i ≤ N</var>, the <var>i</var>-th occurrence of the integer <var>i</var> from the left in <var>a</var> is the <var>x_i</var>-th element of <var>a</var> from the left.</li>
+</ul>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 ≤ N ≤ 500</var></li>
+<li><var>1 ≤ x_i ≤ N^2</var></li>
+<li>All <var>x_i</var> are distinct.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>The input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+<var>x_1</var> <var>x_2</var> <var>...</var> <var>x_N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>If there does not exist an integer sequence <var>a</var> that satisfies all the conditions, print <code>No</code>.
+If there does exist such an sequence <var>a</var>, print <code>Yes</code> in the first line, then print an instance of <var>a</var> in the second line, with spaces inbetween.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>3
+1 5 9
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>Yes
+1 1 1 2 2 2 3 3 3
+</pre>
+<p>For example, the second occurrence of the integer <var>2</var> from the left in <var>a</var> in the output is the fifth element of <var>a</var> from the left.
+Similarly, the condition is satisfied for the integers <var>1</var> and <var>3</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>2
+4 1
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>No
+</pre></section>
+</div>
+</span>

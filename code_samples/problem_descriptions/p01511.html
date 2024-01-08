@@ -1,0 +1,51 @@
+
+<script src="./IMAGE/varmath.js" charset="UTF-8"></script>
+
+<H1>Three-way Branch</H1>
+
+<p>
+There is a grid that consists of <var>W \times H</var> cells. The  upper-left-most cell is <var>(1, 1)</var>.
+You are standing on the cell of <var>(1,1)</var> and you  are going to move to cell of <var>(W, H)</var>.
+You can only move to adjacent lower-left, lower or lower-right cells.
+</p>
+
+<p>
+There are obstructions on several cells. You can not move to it. You cannot move out the grid, either.
+Write a program  that outputs the number of ways to reach  <var>(W,H)</var>  modulo 1,000,000,009.
+You can assume that there is no obstruction at  <var>(1,1)</var>.
+</p>
+
+<H2>Input</H2>
+
+<p>
+The first line contains three integers, the width <var>W</var>, the height <var>H</var>, and the number of obstructions <var>N</var>. 
+(<var>1 \leq W \leq 75</var>, <var>2 \leq H \leq 10^{18}</var>, <var>0 \leq N \leq 30</var>)
+Each of following <var>N</var> lines contains 2 integers, denoting the  position of an obstruction <var>(x_i, y_i)</var>.
+</p>
+
+<p>
+The last test case is followed by a line containing three zeros.
+</p>
+
+<H2>Output</H2>
+
+<p>
+For each test case, print its case number and the number of ways to reach  <var>(W,H)</var>  modulo 1,000,000,009.
+</p>
+
+<H2>Sample Input</H2>
+
+<pre>
+2 4 1
+2 1
+2 2 1
+2 2
+0 0 0
+</pre>
+
+<H2>Output for the Sample Input</H2>
+
+<pre>
+Case 1: 4
+Case 2: 0
+</pre>

@@ -1,0 +1,104 @@
+<span class="lang-en">
+<p>Score : <var>700</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>Snuke's mother gave Snuke an undirected graph consisting of <var>N</var> vertices numbered <var>0</var> to <var>N-1</var> and <var>M</var> edges.
+This graph was connected and contained no parallel edges or self-loops.</p>
+<p>One day, Snuke broke this graph.
+Fortunately, he remembered <var>Q</var> clues about the graph.
+The <var>i</var>-th clue (<var>0 \leq i \leq Q-1</var>) is represented as integers <var>A_i,B_i,C_i</var> and means the following:</p>
+<ul>
+<li>If <var>C_i=0</var>: there was exactly one simple path (a path that never visits the same vertex twice) from Vertex <var>A_i</var> to <var>B_i</var>.</li>
+<li>If <var>C_i=1</var>: there were two or more simple paths from Vertex <var>A_i</var> to <var>B_i</var>.</li>
+</ul>
+<p>Snuke is not sure if his memory is correct, and worried whether there is a graph that matches these <var>Q</var> clues.
+Determine if there exists a graph that matches Snuke's memory.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>2 \leq N \leq 10^5</var></li>
+<li><var>N-1 \leq M \leq N \times (N-1)/2</var></li>
+<li><var>1 \leq Q \leq 10^5</var></li>
+<li><var>0 \leq A_i,B_i \leq N-1</var></li>
+<li><var>A_i \neq B_i</var></li>
+<li><var>0 \leq C_i \leq 1</var></li>
+<li>All values in input are integers.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var> <var>M</var> <var>Q</var>
+<var>A_0</var> <var>B_0</var> <var>C_0</var>
+<var>A_1</var> <var>B_1</var> <var>C_1</var>
+<var>\vdots</var>
+<var>A_{Q-1}</var> <var>B_{Q-1}</var> <var>C_{Q-1}</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>If there exists a graph that matches Snuke's memory, print <code>Yes</code>; otherwise, print <code>No</code>.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>5 5 3
+0 1 0
+1 2 1
+2 3 0
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>Yes
+</pre>
+<p>For example, consider a graph with edges <var>(0,1),(1,2),(1,4),(2,3),(2,4)</var>. This graph matches the clues.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>4 4 3
+0 1 0
+1 2 1
+2 3 0
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>No
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>10 9 9
+7 6 0
+4 5 1
+9 7 0
+2 9 0
+2 3 0
+4 1 0
+8 0 0
+9 1 0
+3 0 0
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>No
+</pre></section>
+</div>
+</span>

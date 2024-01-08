@@ -1,0 +1,70 @@
+<span class="lang-en">
+<p>Score : <var>300</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>You are given a string <var>S</var> of length <var>N</var> consisting of <code>A</code>, <code>C</code>, <code>G</code> and <code>T</code>. Answer the following <var>Q</var> queries:</p>
+<ul>
+<li>Query <var>i</var> (<var>1 \leq i \leq Q</var>): You will be given integers <var>l_i</var> and <var>r_i</var> (<var>1 \leq l_i &lt; r_i \leq N</var>). Consider the substring of <var>S</var> starting at index <var>l_i</var> and ending at index <var>r_i</var> (both inclusive). In this string, how many times does <code>AC</code> occurs as a substring?</li>
+</ul>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Notes</h3><p>A substring of a string <var>T</var> is a string obtained by removing zero or more characters from the beginning and the end of <var>T</var>.</p>
+<p>For example, the substrings of <code>ATCODER</code> include <code>TCO</code>, <code>AT</code>, <code>CODER</code>, <code>ATCODER</code> and <code></code> (the empty string), but not <code>AC</code>.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>2 \leq N \leq 10^5</var></li>
+<li><var>1 \leq Q \leq 10^5</var></li>
+<li><var>S</var> is a string of length <var>N</var>.</li>
+<li>Each character in <var>S</var> is <code>A</code>, <code>C</code>, <code>G</code> or <code>T</code>.</li>
+<li><var>1 \leq l_i &lt; r_i \leq N</var></li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var> <var>Q</var>
+<var>S</var>
+<var>l_1</var> <var>r_1</var>
+<var>:</var>
+<var>l_Q</var> <var>r_Q</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print <var>Q</var> lines. The <var>i</var>-th line should contain the answer to the <var>i</var>-th query.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>8 3
+ACACTACG
+3 7
+2 3
+1 8
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>2
+0
+3
+</pre>
+<ul>
+<li>Query <var>1</var>: the substring of <var>S</var> starting at index <var>3</var> and ending at index <var>7</var> is <code>ACTAC</code>. In this string, <code>AC</code> occurs twice as a substring.</li>
+<li>Query <var>2</var>: the substring of <var>S</var> starting at index <var>2</var> and ending at index <var>3</var> is <code>CA</code>. In this string, <code>AC</code> occurs zero times as a substring.</li>
+<li>Query <var>3</var>: the substring of <var>S</var> starting at index <var>1</var> and ending at index <var>8</var> is <code>ACACTACG</code>. In this string, <code>AC</code> occurs three times as a substring.</li>
+</ul></section>
+</div>
+</span>

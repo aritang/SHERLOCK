@@ -1,0 +1,70 @@
+<span class="lang-en">
+<p>Score : <var>700</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>There are <var>N</var> strings arranged in a row.
+It is known that, for any two adjacent strings, the string to the left is lexicographically smaller than the string to the right.
+That is, <var>S_1&lt;S_2&lt;...&lt;S_N</var> holds lexicographically, where <var>S_i</var> is the <var>i</var>-th string from the left.</p>
+<p>At least how many different characters are contained in <var>S_1,S_2,...,S_N</var>, if the length of <var>S_i</var> is known to be <var>A_i</var>?</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 \leq N \leq 2\times 10^5</var></li>
+<li><var>1 \leq A_i \leq 10^9</var></li>
+<li><var>A_i</var> is an integer.</li>
+</ul>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Note</h3><p>The strings do not necessarily consist of English alphabet; there can be arbitrarily many different characters (and the lexicographic order is defined for those characters).</p>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+<var>A_1</var> <var>A_2</var> <var>...</var> <var>A_N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the minimum possible number of different characters contained in the strings.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>3
+3 2 1
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>2
+</pre>
+<p>The number of different characters contained in <var>S_1,S_2,...,S_N</var> would be <var>3</var> when, for example, <var>S_1=</var><code>abc</code>, <var>S_2=</var><code>bb</code> and <var>S_3=</var><code>c</code>.</p>
+<p>However, if we choose the strings properly, the number of different characters can be <var>2</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>5
+2 3 2 1 2
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>2
+</pre></section>
+</div>
+</span>

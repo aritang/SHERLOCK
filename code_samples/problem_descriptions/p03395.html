@@ -1,0 +1,126 @@
+<span class="lang-en">
+<p>Score : <var>700</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>Aoki is playing with a sequence of numbers <var>a_{1}, a_{2}, ..., a_{N}</var>. Every second, he performs the following operation :</p>
+<ul>
+<li>Choose a positive integer <var>k</var>. For each element of the sequence <var>v</var>, Aoki may choose to replace <var>v</var> with its remainder when divided by <var>k</var>, or do nothing with <var>v</var>. The cost of this operation is <var>2^{k}</var> (regardless of how many elements he changes).</li>
+</ul>
+<p>Aoki wants to turn the sequence into <var>b_{1}, b_{2}, ..., b_{N}</var> (the order of the elements is important). Determine if it is possible for Aoki to perform this task and if yes, find the minimum cost required.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 \leq N \leq 50</var></li>
+<li><var>0 \leq a_{i}, b_{i} \leq 50</var></li>
+<li>All values in the input are integers.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+<var>a_{1}</var> <var>a_{2}</var> <var>...</var> <var>a_{N}</var>
+<var>b_{1}</var> <var>b_{2}</var> <var>...</var> <var>b_{N}</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the minimum cost required to turn the original sequence into <var>b_{1}, b_{2}, ..., b_{N}</var>. If the task is impossible, output <var>-1</var> instead.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>3
+19 10 14
+0 3 4
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>160
+</pre>
+<p>Here's a possible sequence of operations :</p>
+<ul>
+<li>
+<p>Choose <var>k = 7</var>. Replace <var>19</var> with <var>5</var>, <var>10</var> with <var>3</var> and do nothing to <var>14</var>. The sequence is now <var>5, 3, 14</var>.</p>
+</li>
+<li>
+<p>Choose <var>k = 5</var>. Replace <var>5</var> with <var>0</var>, do nothing to <var>3</var> and replace <var>14</var> with <var>4</var>. The sequence is now <var>0, 3, 4</var>.</p>
+</li>
+</ul>
+<p>The total cost is <var>2^{7} + 2^{5} = 160</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>3
+19 15 14
+0 0 0
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>2
+</pre>
+<p>Aoki can just choose <var>k = 1</var> and turn everything into <var>0</var>. The cost is <var>2^{1} = 2</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>2
+8 13
+5 13
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>-1
+</pre>
+<p>The task is impossible because we can never turn <var>8</var> into <var>5</var> using the given operation.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 4</h3><pre>4
+2 0 1 8
+2 0 1 8
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 4</h3><pre>0
+</pre>
+<p>Aoki doesn't need to do anything here. The cost is <var>0</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 5</h3><pre>1
+50
+13
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 5</h3><pre>137438953472
+</pre>
+<p>Beware of overflow issues.</p></section>
+</div>
+</span>

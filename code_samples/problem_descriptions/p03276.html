@@ -1,0 +1,110 @@
+<span class="lang-en">
+<p>Score : <var>300</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>There are <var>N</var> candles placed on a number line.
+The <var>i</var>-th candle from the left is placed on coordinate <var>x_i</var>.
+Here, <var>x_1 &lt; x_2 &lt; ... &lt; x_N</var> holds.</p>
+<p>Initially, no candles are burning.
+Snuke decides to light <var>K</var> of the <var>N</var> candles.</p>
+<p>Now, he is at coordinate <var>0</var>.
+He can move left and right along the line with speed <var>1</var>.
+He can also light a candle when he is at the same position as the candle, in negligible time.</p>
+<p>Find the minimum time required to light <var>K</var> candles.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 \leq N \leq 10^5</var></li>
+<li><var>1 \leq K \leq N</var></li>
+<li><var>x_i</var> is an integer.</li>
+<li><var>|x_i| \leq 10^8</var></li>
+<li><var>x_1 &lt; x_2 &lt; ... &lt; x_N</var></li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var> <var>K</var>
+<var>x_1</var> <var>x_2</var> <var>...</var> <var>x_N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the minimum time required to light <var>K</var> candles.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>5 3
+-30 -10 10 20 50
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>40
+</pre>
+<p>He should move and light candles as follows:</p>
+<ul>
+<li>Move from coordinate <var>0</var> to <var>-10</var>.</li>
+<li>Light the second candle from the left.</li>
+<li>Move from coordinate <var>-10</var> to <var>10</var>.</li>
+<li>Light the third candle from the left.</li>
+<li>Move from coordinate <var>10</var> to <var>20</var>.</li>
+<li>Light the fourth candle from the left.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>3 2
+10 20 30
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>20
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>1 1
+0
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>0
+</pre>
+<ul>
+<li>There may be a candle placed at coordinate <var>0</var>.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 4</h3><pre>8 5
+-9 -7 -4 -3 1 2 3 4
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 4</h3><pre>10
+</pre></section>
+</div>
+</span>

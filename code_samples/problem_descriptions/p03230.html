@@ -1,0 +1,74 @@
+<span class="lang-en">
+<p>Score : <var>500</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>You are given an integer <var>N</var>. Determine if there exists a tuple of subsets of <var>\{1,2,...N\}</var>, <var>(S_1,S_2,...,S_k)</var>, that satisfies the following conditions:</p>
+<ul>
+<li>Each of the integers <var>1,2,...,N</var> is contained in exactly two of the sets <var>S_1,S_2,...,S_k</var>.</li>
+<li>Any two of the sets <var>S_1,S_2,...,S_k</var> have exactly one element in common.</li>
+</ul>
+<p>If such a tuple exists, construct one such tuple.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 \leq N \leq 10^5</var></li>
+<li><var>N</var> is an integer.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>If a tuple of subsets of <var>\{1,2,...N\}</var> that satisfies the conditions does not exist, print <code>No</code>.
+If such a tuple exists, print <code>Yes</code> first, then print such subsets in the following format:</p>
+<pre><var>k</var>
+<var>|S_1|</var> <var>S_{1,1}</var> <var>S_{1,2}</var> <var>...</var> <var>S_{1,|S_1|}</var>
+<var>:</var>
+<var>|S_k|</var> <var>S_{k,1}</var> <var>S_{k,2}</var> <var>...</var> <var>S_{k,|S_k|}</var>
+</pre>
+<p>where <var>S_i={S_{i,1},S_{i,2},...,S_{i,|S_i|}}</var>.</p>
+<p>If there are multiple such tuples, any of them will be accepted.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>3
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>Yes
+3
+2 1 2
+2 3 1
+2 2 3
+</pre>
+<p>It can be seen that <var>(S_1,S_2,S_3)=(\{1,2\},\{3,1\},\{2,3\})</var> satisfies the conditions.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>4
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>No
+</pre></section>
+</div>
+</span>

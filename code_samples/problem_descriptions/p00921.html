@@ -1,0 +1,103 @@
+
+<H1><font color="#000">Problem H: </font>Don't Burst the Balloon</H1>
+
+<p>
+An open-top box having a square bottom is placed on the floor. You see a number of needles vertically planted on its bottom.
+</p>
+
+<p>
+You want to place a largest possible spheric balloon touching the box bottom, interfering with none of the side walls nor the needles.
+</p>
+
+<p>
+<b>Java Specific:</b> Submitted Java programs may not use "java.awt.geom.Area". You may use it for your debugging purposes.
+</p>
+
+<p>
+Figure H.1 shows an example of a box with needles and the corresponding largest spheric balloon. It corresponds to the first dataset of the sample input below.
+</p>
+
+
+<center>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_dontBurstTheBalloon" style="aling:center"><br/>
+<span>
+Figure H.1. The upper shows an example layout and the lower shows the largest spheric balloon that can be placed.
+</span>
+</center>
+<br/>
+
+
+<H2>Input</H2>
+
+<p>
+The input is a sequence of datasets. Each dataset is formatted as follows.
+</p>
+
+<pre>
+<var>n</var> <var>w</var>
+<var>x<sub>1</sub></var> <var>y<sub>1</sub></var> <var>h<sub>1</sub></var>
+:
+<var>x<sub>n</sub></var> <var>y<sub>n</sub></var> <var>h<sub>n</sub></var>
+</pre>
+
+<p>
+The first line of a dataset contains two positive integers, <var>n</var> and <var>w</var>, separated by a space. <var>n</var> represents the number of needles, and <var>w</var> represents the height of the side walls.
+</p>
+
+<p>
+The bottom of the box is a 100 &times; 100 square. The corners of the bottom face are placed at positions (0, 0, 0), (0, 100, 0), (100, 100, 0), and (100, 0, 0).
+</p>
+
+<p>
+Each of the <var>n</var> lines following the first line contains three integers, <var>x<sub>i</sub></var>, <var>y<sub>i</sub></var>, and <var>h<sub>i</sub></var>. (<var>x<sub>i</sub></var>, <var>y<sub>i</sub></var>, 0) and <var>h<sub>i</sub></var> represent the base position and the height of the <var>i</var>-th needle. No two needles stand at the same position.
+</p>
+
+<p>
+You can assume that 1 &le; <var>n</var> &le; 10, 10 &le; <var>w</var> &le; 200, 0 &lt; <var>x<sub>i</sub></var> &lt; 100, 0 &lt; <var>y<sub>i</sub></var> &lt; 100 and 1 &le; <var>h<sub>i</sub></var> &le; 200. You can ignore the thicknesses of the needles and the walls.
+</p>
+
+<p>
+The end of the input is indicated by a line of two zeros. The number of datasets does not exceed 1000.
+</p>
+
+<H2>Output</H2>
+
+<p>
+For each dataset, output a single line containing the maximum radius of a balloon that can touch the bottom of the box without interfering with the side walls or the needles. The output should not contain an error greater than 0.0001.
+</p>
+
+<H2>Sample Input</H2>
+<pre>
+5 16
+70 66 40
+38 52 20
+40 35 10
+70 30 10
+20 60 10
+1 100
+54 75 200
+1 10
+90 10 1
+1 11
+54 75 200
+3 10
+53 60 1
+61 38 1
+45 48 1
+4 10
+20 20 10
+20 80 10
+80 20 10
+80 80 10
+0 0
+</pre>
+
+<H2>Output for the Sample Input</H2>
+<pre>
+26.00000
+39.00000
+130.00000
+49.49777
+85.00000
+95.00000
+</pre>

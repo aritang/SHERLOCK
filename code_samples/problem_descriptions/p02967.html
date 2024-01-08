@@ -1,0 +1,92 @@
+<span class="lang-en">
+<p>Score : <var>1500</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>Given is a string <var>S</var> consisting of <code>A</code>,<code>B</code>, and <code>C</code>.</p>
+<p>Consider the (not necessarily contiguous) subsequences <var>x</var> of <var>S</var> that satisfy all of the following conditions:</p>
+<ul>
+<li><code>A</code>, <code>B</code>, and <code>C</code> all occur the same number of times in <var>x</var>.</li>
+<li>No two adjacent characters in <var>x</var> are the same.</li>
+</ul>
+<p>Among these subsequences, find one of the longest. Here a subsequence of <var>S</var> is a string obtained by deleting zero or more characters from <var>S</var>.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 \leq |S| \leq 10^6</var></li>
+<li><var>S</var> consists of <code>A</code>,<code>B</code>, and <code>C</code>.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>S</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print one longest subsequence that satisfies the conditions.
+If multiple solutions exist, any of them will be accepted.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>ABBCBCAB
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>ACBCAB
+</pre>
+<p>Consider the subsequence <code>ACBCAB</code> of <var>S</var>. It satisfies the conditions and is one of the longest with these properties, along with <code>ABCBCA</code>.
+On the other hand, the subsequences <code>ABCBCAB</code> and <code>ABBCCA</code> do not satisfy the conditions.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>ABABABABACACACAC
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>BABCAC
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>ABCABACBCBABABACBCBCBCBCBCAB
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>ACABACABABACBCBCBCBCA
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 4</h3><pre>AAA
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 4</h3><pre>
+</pre>
+<p>It is possible that only the empty string satisfies the condition.</p></section>
+</div>
+</span>

@@ -1,0 +1,91 @@
+<span class="lang-en">
+<p>Score : <var>1400</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>Snuke has a sequence of <var>N</var> integers <var>x_1,x_2,\cdots,x_N</var>.
+Initially, all the elements are <var>0</var>.</p>
+<p>He can do the following two kinds of operations any number of times in any order:</p>
+<ul>
+<li>Operation <var>1</var>: choose an integer <var>k</var> (<var>1 \leq k \leq N</var>) and a <strong>non-decreasing</strong> sequence of <var>k</var> non-negative integers <var>c_1,c_2,\cdots,c_k</var>.
+Then, for each <var>i</var> (<var>1 \leq i \leq k</var>), replace <var>x_i</var> with <var>x_i+c_i</var>.</li>
+<li>Operation <var>2</var>: choose an integer <var>k</var> (<var>1 \leq k \leq N</var>) and a <strong>non-increasing</strong> sequence of <var>k</var> non-negative integers <var>c_1,c_2,\cdots,c_k</var>.
+Then, for each <var>i</var> (<var>1 \leq i \leq k</var>), replace <var>x_{N-k+i}</var> with <var>x_{N-k+i}+c_i</var>.</li>
+</ul>
+<p>His objective is to have <var>x_i=A_i</var> for all <var>i</var>.
+Find the minimum number of operations required to achieve it.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 \leq N \leq 2 \times 10^5</var></li>
+<li><var>1 \leq A_i \leq 10^9</var></li>
+<li>All values in input are integers.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+<var>A_1</var> <var>A_2</var> <var>\cdots</var> <var>A_N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the minimum number of operations required to achieve Snuke's objective.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>5
+1 2 1 2 1
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>3
+</pre>
+<p>One way to achieve the objective in three operations is shown below.
+The objective cannot be achieved in less than three operations.</p>
+<ul>
+<li>Do Operation <var>1</var> and choose <var>k=2,c=(1,2)</var>. Now we have <var>x=(1,2,0,0,0)</var>.</li>
+<li>Do Operation <var>1</var> and choose <var>k=3,c=(0,0,1)</var>. Now we have <var>x=(1,2,1,0,0)</var>.</li>
+<li>Do Operation <var>2</var> and choose <var>k=2,c=(2,1)</var>. Now we have <var>x=(1,2,1,2,1)</var>.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>5
+2 1 2 1 2
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>2
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>15
+541962451 761940280 182215520 378290929 211514670 802103642 28942109 641621418 380343684 526398645 81993818 14709769 139483158 444795625 40343083
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>7
+</pre></section>
+</div>
+</span>

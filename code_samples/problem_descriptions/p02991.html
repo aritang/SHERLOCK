@@ -1,0 +1,117 @@
+<span class="lang-en">
+<p>Score : <var>500</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>Ken loves <em>ken-ken-pa</em> (Japanese version of hopscotch). Today, he will play it on a directed graph <var>G</var>.
+<var>G</var> consists of <var>N</var> vertices numbered <var>1</var> to <var>N</var>, and <var>M</var> edges. The <var>i</var>-th edge points from Vertex <var>u_i</var> to Vertex <var>v_i</var>.</p>
+<p>First, Ken stands on Vertex <var>S</var>. He wants to reach Vertex <var>T</var> by repeating ken-ken-pa. In one ken-ken-pa, he does the following exactly three times: follow an edge pointing from the vertex on which he is standing.</p>
+<p>Determine if he can reach Vertex <var>T</var> by repeating ken-ken-pa. If the answer is yes, find the minimum number of ken-ken-pa needed to reach Vertex <var>T</var>. Note that visiting Vertex <var>T</var> in the middle of a ken-ken-pa does not count as reaching Vertex <var>T</var> by repeating ken-ken-pa.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>2 \leq N \leq 10^5</var></li>
+<li><var>0 \leq M \leq \min(10^5, N (N-1))</var></li>
+<li><var>1 \leq u_i, v_i \leq N(1 \leq i \leq M)</var></li>
+<li><var>u_i \neq v_i (1 \leq i \leq M)</var></li>
+<li>If <var>i \neq j</var>, <var>(u_i, v_i) \neq (u_j, v_j)</var>.</li>
+<li><var>1 \leq S, T \leq N</var></li>
+<li><var>S \neq T</var></li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var> <var>M</var>
+<var>u_1</var> <var>v_1</var>
+<var>:</var>
+<var>u_M</var> <var>v_M</var>
+<var>S</var> <var>T</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>If Ken cannot reach Vertex <var>T</var> from Vertex <var>S</var> by repeating ken-ken-pa, print <var>-1</var>.
+If he can, print the minimum number of ken-ken-pa needed to reach vertex <var>T</var>.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>4 4
+1 2
+2 3
+3 4
+4 1
+1 3
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>2
+</pre>
+<p>Ken can reach Vertex <var>3</var> from Vertex <var>1</var> in two ken-ken-pa, as follows: <var>1 \rightarrow 2 \rightarrow 3 \rightarrow 4</var> in the first ken-ken-pa, then <var>4 \rightarrow 1 \rightarrow 2 \rightarrow 3</var> in the second ken-ken-pa. This is the minimum number of ken-ken-pa needed.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>3 3
+1 2
+2 3
+3 1
+1 2
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>-1
+</pre>
+<p>Any number of ken-ken-pa will bring Ken back to Vertex <var>1</var>, so he cannot reach Vertex <var>2</var>, though he can pass through it in the middle of a ken-ken-pa.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>2 0
+1 2
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>-1
+</pre>
+<p>Vertex <var>S</var> and Vertex <var>T</var> may be disconnected.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 4</h3><pre>6 8
+1 2
+2 3
+3 4
+4 5
+5 1
+1 4
+1 5
+4 6
+1 6
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 4</h3><pre>2
+</pre></section>
+</div>
+</span>

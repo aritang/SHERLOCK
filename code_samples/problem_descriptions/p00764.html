@@ -1,0 +1,164 @@
+
+<h1>Chain-Confined Path</h1>
+<!-- end en only -->
+
+
+<!-- begin en only -->
+<p>
+There is a chain consisting of multiple circles on a plane.
+The first (last) circle of the chain only intersects with the next (previous) circle,
+and each intermediate circle intersects only with the two neighboring circles.
+</p>
+<!-- end en only -->
+
+<!-- begin en only -->
+<p>
+Your task is to find the shortest path that satisfies the following conditions.
+<ul>
+<li>The path connects the centers of the first circle and the last circle.</li>
+<li>The path is confined in the chain, that is, all the points on the path are located within or on at least one of the circles.</li>
+</ul>
+Figure E-1 shows an example of such a chain and the corresponding shortest path.
+</p>
+<!-- end en only -->
+
+<center>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_1183_1"><br><br>
+<!-- begin en only -->
+Figure E-1: An  example chain and the corresponding shortest path<br>
+<!-- end en only -->
+</center>
+
+
+
+<h3>Input</h3>
+
+
+<!-- begin en only -->
+<p>
+The input consists of multiple datasets.
+Each dataset represents the shape of a chain in the following format.
+</p>
+<!-- end en only -->
+
+<blockquote>
+<i>n</i><br>
+<i>x</i><sub>1</sub> <i>y</i><sub>1</sub> <i>r</i><sub>1</sub> <br>
+<i>x</i><sub>2</sub> <i>y</i><sub>2</sub> <i>r</i><sub>2</sub> <br>
+...<br>
+<i>x</i><sub><i>n</i></sub> <i>y</i><sub><i>n</i></sub> <i>r</i><sub><i>n</i></sub> <br>
+</blockquote>
+
+<!-- begin en only -->
+<p>
+The first line of a dataset contains an integer <i>n</i> (3 &le; <i>n</i> &le; 100) 
+representing the number of the circles.
+Each of the following <i>n</i> lines contains three integers separated by a single space.
+(<i>x</i><sub><i>i</i></sub>, <i>y</i><sub><i>i</i></sub>) 
+and <i>r</i><sub><i>i</i></sub> represent 
+the center position and the radius of the <i>i</i>-th circle <i>C</i><sub><i>i</i></sub>.
+You can assume that 0 &le; <i>x</i><sub><i>i</i></sub> &le; 1000, 
+0 &le; <i>y</i><sub><i>i</i></sub> &le; 1000, and
+1 &le; <i>r</i><sub><i>i</i></sub> &le; 25.
+</p>
+<!-- end en only -->
+
+<!-- begin en only -->
+<p>
+You can assume that <i>C</i><sub><i>i</i></sub>  and 
+<i>C</i><sub><i>i</i>+1</sub>  (1 &le; <i>i</i> &le; <i>n</i>&minus;1) intersect at two separate points.
+When <i>j</i> &ge; <i>i</i>+2, <i>C</i><sub><i>i</i></sub>  and <i>C</i><sub><i>j</i></sub>  are apart and either of them does not contain the other.
+In addition, you can assume that any circle does not contain the center of any other circle.
+</p>
+<p>
+The end of the input is indicated by a line containing a zero. 
+</p>
+<!-- end en only -->
+
+<!-- begin en only -->
+<p>
+Figure E-1 corresponds to the first dataset of Sample Input below.
+Figure E-2 shows the shortest paths for the subsequent datasets of Sample Input. 
+
+</p>
+<!-- end en only -->
+
+<center>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_1183_2"><br><br>
+<!-- begin en only -->
+Figure E-2: Example chains and the corresponding shortest paths<br>
+<!-- end en only -->
+</center>
+
+
+
+<h3>Output</h3>
+
+<!-- begin en only -->
+<p>
+For each dataset, output a single line containing the length of the shortest chain-confined path between the centers of the first circle and the last circle.
+The value should not have an error greater than 0.001.
+No extra characters should appear in the output. 
+</p>
+<!-- end en only -->
+
+
+
+<h3>Sample Input</h3>
+
+<pre>
+10
+802 0 10
+814 0 4
+820 1 4
+826 1 4
+832 3 5
+838 5 5
+845 7 3
+849 10 3
+853 14 4
+857 18 3
+3
+0 0 5
+8 0 5
+8 8 5
+3
+0 0 5
+7 3 6
+16 0 5
+9
+0 3 5
+8 0 8
+19 2 8
+23 14 6
+23 21 6
+23 28 6
+19 40 8
+8 42 8
+0 39 5
+11
+0 0 5
+8 0 5
+18 8 10
+8 16 5
+0 16 5
+0 24 5
+3 32 5
+10 32 5
+17 28 8
+27 25 3
+30 18 5
+0
+</pre>
+
+
+<h3>Output for the Sample Input</h3>
+
+<pre>
+58.953437
+11.414214
+16.0
+61.874812
+63.195179
+</pre>
+

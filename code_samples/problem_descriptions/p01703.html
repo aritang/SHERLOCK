@@ -1,0 +1,70 @@
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({ tex2jax: { inlineMath: [["$","$"], ["\\(","\\)"]], processEscapes: true }});
+</script>
+<script language="JavaScript" type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+
+<meta http-equiv="X-UA-Compatible" CONTENT="IE=EmulateIE7" /><style type="text/css">blockquote {
+  font-family: Menlo, Monaco, "Courier New", monospace;
+  color: #333333;
+  display: block;
+  padding: 8.5px;
+  margin: 0 0 9px;
+  font-size: 12px;
+  line-height: 18px;
+  background-color: #f5f5f5;
+  border: 1px solid #ccc;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  white-space: pre;
+  white-space: pre-wrap;
+  word-break: break-all;
+  word-wrap: break-word;
+}</style><div class="part"><h3>Problem Statement</h3><p><i>Infinite Chronicle -Princess Castle-</i> is a simple role-playing game. 
+There are $n + 1$ checkpoints, numbered $0$ through $n$, 
+and for each $i = 1, 2, \ldots, n$, there is a unique one-way road running from checkpoint $i - 1$ to $i$. 
+The game starts at checkpoint $0$ and ends at checkpoint $n$. 
+Evil monsters will appear on the roads and the hero will have battles against them. 
+You can save your game progress at any checkpoint; if you lose a battle, you can restart the game from the checkpoint where you have saved for the last time. 
+At the beginning of the game, the progress is automatically saved at checkpoint $0$ with no time. 
+</p>
+<p>Rabbit Hanako is fond of this game and now interested in speedrunning. 
+Although Hanako is an expert of the game, she cannot always win the battles because of random factors. 
+For each $i$, she estimated the probability $p_i$ to win all the battles along the road from checkpoint $i - 1$ to $i$. 
+Everytime she starts at checkpoint $i - 1$, after exactly one miniutes, 
+she will be at checkpoint $i$ with probability $p_i$ and where she saved for the last time with probability $1 - p_i$. 
+</p>
+<p>What puzzles Hanako is that it also takes one minute (!) to save your progress at a checkpoint, 
+so it might be a good idea to pass some checkpoints without saving in order to proceed quickly. 
+The task is to compute the minimum possible expected time needed to complete the game. 
+</p>
+
+</div><div class="part"><h3>Input</h3>
+<p>The input consists of multiple datasets. The number of datasets is no more than $50$. 
+Each dataset has two lines: the first line contains an integer $n$ ($1 \le n \le 10^5$), representing the number of roads, 
+and the second line contains $n$ numbers $p_1, p_2, \ldots, p_n$ ($0 \lt p_i \le 1$), representing the winning probabilities.
+Each $p_i$ has exactly two digits after the decimal point.
+The end of input is denoted as a line containing only a single zero. 
+</p>
+
+</div><div class="part"><h3>Output</h3>
+<p>For each dataset, display the minimum expected time in minutes with a relative error of at most $10^{-8}$ in a line. 
+</p>
+
+</div><div class="part"><h3>Sample Input</h3>
+
+<pre>2
+0.50 0.40
+2
+0.70 0.60
+4
+0.99 1.00 1.00 0.01
+0</pre>
+</div><div class="part"><h3>Output for the Sample Input</h3>
+
+<pre>5.5000000000
+4.0476190476
+104.0101010101</pre>
+</div>

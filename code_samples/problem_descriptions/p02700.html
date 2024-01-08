@@ -1,0 +1,64 @@
+<span class="lang-en">
+<p>Score : <var>200</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>Takahashi and Aoki will have a battle using their monsters.</p>
+<p>The health and strength of Takahashi's monster are <var>A</var> and <var>B</var>, respectively, and those of Aoki's monster are <var>C</var> and <var>D</var>, respectively.</p>
+<p>The two monsters will take turns attacking, in the order Takahashi's, Aoki's, Takahashi's, Aoki's, ...
+Here, an attack decreases the opponent's health by the value equal to the attacker's strength.
+The monsters keep attacking until the health of one monster becomes <var>0</var> or below. The person with the monster whose health becomes <var>0</var> or below loses, and the other person wins.</p>
+<p>If Takahashi will win, print <code>Yes</code>; if he will lose, print <code>No</code>.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 \leq A,B,C,D \leq 100</var></li>
+<li>All values in input are integers.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>A</var> <var>B</var> <var>C</var> <var>D</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>If Takahashi will win, print <code>Yes</code>; if he will lose, print <code>No</code>.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>10 9 10 10
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>No
+</pre>
+<p>First, Takahashi's monster attacks Aoki's monster, whose health is now <var>10-9=1</var>.</p>
+<p>Next, Aoki's monster attacks Takahashi's monster, whose health is now <var>10-10=0</var>.</p>
+<p>Takahashi's monster is the first to have <var>0</var> or less health, so Takahashi loses.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>46 4 40 5
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>Yes
+</pre></section>
+</div>
+</span>

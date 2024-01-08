@@ -1,0 +1,69 @@
+<h1>Dudeney Number</h1>
+　
+<p>
+  A Dudeney number is a positive integer for which the sum of its decimal digits is equal to the cube root of the number. For example, $512$ is a Dudeney number because it is the cube of $8$, which is the sum of its decimal digits ($5 + 1 + 2$).
+</p>
+<p>
+  In this problem, we think of a type similar to Dudeney numbers and try to enumerate them.
+</p>
+<p>
+  Given a non-negative integer $a$, an integer $n$ greater than or equal to 2 and an upper limit $m$, make a program to enumerate all $x$’s such that the sum of its decimal digits $y$ satisfies the relation $x = (y + a)^n$, and $x \leq m$.
+</p>
+
+<h2>Input</h2>
+<p>
+The input is given in the following format.
+</p>
+<pre>
+$a$ $n$ $m$
+</pre>
+
+<p>
+  The input line provides three integers: $a$ ($0 \leq a \leq 50$), $n$ ($2 \leq n \leq 10$) and the upper limit $m$ ($1000 \leq m \leq 10^8$).
+</p>
+
+<h2>Output</h2>
+<p>
+  Output the number of integers that meet the above criteria.
+</p>
+
+<h2>Sample Input 1</h2>
+<pre>
+16 2 1000
+</pre>
+
+<h2>Sample Output 1<h2>
+<pre>
+2
+</pre>
+<p>
+  Two:  $400 = (4 + 0 + 0 + 16)^2$ and $841 = (8 + 4 + 1 + 16)^2$
+</p>
+
+
+<h2>Sample Input 2</h2>
+<pre>
+0 3 5000
+</pre>
+
+<h2>Sample Output 2</h2>
+<pre>
+3
+</pre>
+<p>
+  Three: $1=1^3$, $512 = (5 + 1 + 2)^3$ and $4913 = (4 + 9 + 1 + 3)^3$.
+</p>
+
+<h2>Sample Input 3</h2>
+<pre>
+2 3 100000
+</pre>
+
+<h2>Sample Output 3</h2>
+<pre>
+0
+</pre>
+<p>
+  There is no such number $x$ in the range below $100,000$ such that its sum of decimal digits $y$ satisfies the relation $(y+2)^3 = x$.
+</p>
+

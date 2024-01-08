@@ -1,0 +1,62 @@
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({ tex2jax: { inlineMath: [["$","$"], ["\\(","\\)"]], processEscapes: true }});
+</script>
+<script type='text/javascript' src='http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
+</script>
+
+
+<h2>Problem K
+Min-Max Distance Game</h2>
+
+<p>
+Alice and Bob are playing the following game. Initially, $n$ stones are placed in a straight line on a table. Alice and Bob take turns alternately. In each turn, the player picks one of the stones and removes it. The game continues until the number of stones on the straight line becomes two. The two stones are called <i>result stones</i>. Alice's objective is to make the result stones as distant as possible, while Bob's is to make them closer.
+</p>
+
+<p>
+You are given the coordinates of the stones and the player's name who takes the first turn. Assuming that both Alice and Bob do their best, compute and output the distance between the result stones at the end of the game.
+</p>
+
+
+
+
+<h3>Input</h3>
+
+<p>
+The input consists of a single test case with the following format.<br>
+<br>
+
+$n$ $f$<br>
+$x_1$ $x_2$ ... $x_n$<br>
+<br>
+
+$n$ is the number of stones $(3 \leq n \leq 10^5)$. $f$ is the name of the first player, either Alice or Bob. For each $i$, $x_i$ is an integer that represents the distance of the $i$-th stone from the edge of the table. It is guaranteed that $0 \leq x_1 < x_2 < ... < x_n \leq 10^9$ holds.
+</p>
+
+
+<h3>Output</h3>
+
+<p>
+Output the distance between the result stones in one line.
+</p>
+
+
+<h3>Sample Input 1</h3>
+
+<pre>5 Alice
+10 20 30 40 50</pre>
+
+<h3>Sample Output 1</h3>
+
+<pre>30</pre>
+
+
+
+<h3>Sample Input 2</h3>
+
+<pre>5 Bob
+2 3 5 7 11</pre>
+
+<h3>Sample Output 2</h3>
+
+<pre>2</pre>

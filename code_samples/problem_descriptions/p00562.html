@@ -1,0 +1,185 @@
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({ tex2jax: { inlineMath: [["$","$"], ["\\(","\\)"]], processEscapes: true }});
+</script>
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+<h1>Soccer</h1>
+
+<p>
+  You are a manager of a prestigious soccer team in the JOI league.
+</p>
+
+<p>
+  The team has $N$ players numbered from 1 to $N$. The players are practicing hard in order to win the tournament game. The field is a rectangle whose height is $H$ meters and width is $W$ meters. The vertical line of the field is in the north-south direction, and the horizontal line of the field is in the east-west direction. A point in the field is denoted by ($i, j$) if it is $i$-meters to the south and $j$ meters to the east from the northwest corner of the field.
+</p>
+
+<p>
+  After the practice finishes, players must clear the ball. In the beginning of the clearance, the player $i$ ($1 \leq i \leq N$) stands at ($S_i, T_i$). There is only one ball in the field, and the player 1 has it. You stand at ($S_N, T_N$) with the player $N$. The clearance is finished if the ball is passed to ($S_N, T_N$), and you catch it. You cannot move during the clearance process.
+</p>
+
+<p>
+  You can ask players to act. But, if a player acts, his <b>fatigue degree</b> will be increased according to the action. Here is a list of possible actions of the players. If a player has the ball, he can act (i),(ii), or (iii). Otherwise, he can act (ii) or (iv).
+</p>
+
+<ul>
+  <li> (i) Choose one of the 4 directions (east/west/south/north), and choose a positive integer $p$. Kick the ball to that direction. Then, the ball moves exactly p meters. The kicker does not move by this action, and he loses the ball. His fatigue degree is increased by $A \times p + B$.</li>
+<li>(ii) Choose one of the 4 directions (east/west/south/north), and move 1 meter to that direction. If he has the ball, he moves with it. His fatigue degree is increased by $C$ regardless of whether he has the ball or not.</li>
+<li>(iii) Place the ball where he stands. He loses the ball. His fatigue degree does not change.</li>
+  <li>(iv) Take the ball. His fatigue degree does not change. A player can take this action only if he stands at the same place as the ball, and nobody has the ball.</li>
+</ul>
+
+<p>
+  Note that it is possible for a player or a ball to leave the field. More than one players can stand at the same place.
+</p>
+
+<p>
+Since the players just finished the practice, their fatigue degrees must not be increased too much. You want to calculate the minimum possible value of the sum of fatigue degrees of the players for the clearance process.
+</p>
+
+<h2>Task</h2>
+<p>
+Given the size of the field and the positions of the players, write a program which calculates the minimum possible value of the sum of fatigue degrees of the players for the clearance process.
+</p>
+
+
+<h3>Input</h3>
+<p>
+  Read the following data from the standard input.
+</p>
+
+<ul>
+  <li> The first line of input contains two space separated integers $H$, $W$. This means the field is a rectangle whose height is $H$ meters and width is $W$ meters.</li>
+<li> The second line contains three space separated integers $A$, $B$, $C$ describing the increment of the fatigue degree by actions.</li>
+<li> The third line contains an integer N, the number of players.</li>
+<li> The $i$-th line ($1 \leq i \leq N$) of the following $N$ lines contains two space separated integers $S_i$, $T_i$. This means, in the beginning of the clearance, the player $i$ ($1 \leq i \leq N$) stands at ($S_i, T_i$).</li>
+</ul>
+
+<h3>Output</h3>
+<p>
+Write one line to the standard output. The output contains the minimum possible value of the sum of fatigue degrees of the players for the clearance process.
+  </p>
+
+<h3>Constraints</h3>
+<p>
+All input data satisfy the following conditions.
+</p>
+<ul>
+<li>$1 \leq H \leq 500．$</li>
+<li>$1 \leq W \leq 500．$</li>
+<li>$0 \leq A \leq 1 000 000 000．$</li>
+<li>$0 \leq B \leq 1 000 000 000．$</li>
+<li>$0 \leq C \leq 1 000 000 000．$</li>
+<li>$2 \leq N \leq 100 000．$</li>
+<li>$0 \leq S_i \leq H (1 \leq i \leq N)．$</li>
+<li>$0 \leq T_i \leq W (1 \leq i \leq N)．$</li>
+<li>$(S_1, T_1) \ne (S_N, T_N)．$</li>
+</ul>
+
+
+<h3>Sample Input and Output</h3>
+<h3>Sample Input 1</h3>
+<pre>
+6 5
+1 3 6
+3
+1 1
+0 4
+6 5
+</pre>
+
+<h3>Sample Output 1</h3>
+<pre>
+26
+</pre>
+<p>
+  In this sample input, the initial status of the field is as in the following figure. The white circles are the players. The black circle is the ball. You stand at (6, 5).
+  </p>
+<center>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_JOI2016_4_1" width="280"><br>
+The initial status of the field</br>
+</center>
+
+<p>
+  The players act as follows:
+</p>
+
+<ol>
+<li>. The player 1 kicks the ball to the east for $3$ meters. His fatigue degree is increased by $1 \times 3 + 3 = 6$. The ball moves to ($1, 4$).</li>
+<li> The player 2 moves $1$ meter to the south, and he has the ball. His fatigue degree is increased by $6$.</li>
+<li> The player 2 moves $1$ meter to the east. His fatigue degree is increased by $6$.</li>
+<li> The player 2 kicks the ball to the south for $5$ meters. His fatigue degree is increased by $1 \times 5 + 3 = 8$. The ball moves to ($6, 5$).</li>
+</ol>
+<p>
+In these actions, the sum of fatigue degrees is $6 + 6 + 6 + 8 = 26$, which is the minimum possible value.
+</p>
+
+<center>
+  <img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_JOI2016_4_2" width="600"><br>
+The actions in an optimal solution
+  </center>
+
+
+<h3>Sample Input 2</h3>
+<pre>
+3 3
+0 50 10
+2
+0 0
+3 3
+</pre>
+
+<h3>Sample Output 2</h3>
+<pre>
+60
+</pre>
+
+<p>In Sample Input 2, it not not necessary to</p>
+
+<h3>Sample Input 3</h3>
+<pre>
+4 3
+0 15 10
+2
+0 0
+4 3
+</pre>
+
+
+<h3>Sample Output 3</h3>
+<pre>
+45
+</pre>
+
+<h3>Sample Input 4</h3>
+<pre>
+4 6
+0 5 1000
+6
+3 1
+4 6
+3 0
+3 0
+4 0
+0 4
+</pre>
+
+<h3>Sample Output 4</h3>
+<pre>
+2020
+</pre>
+<p>
+that more than one players can stand at the same place.
+</p>
+
+<br/>
+<div class="source">
+  <p class="source">
+    <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commonse License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png"/></a>
+  </p>
+  <p class="source">
+    <a href="https://www.ioi-jp.org/joi/2016/2017-ho/index.html">The 16th Japanese Olympiad in Informatics (JOI 2016/2017)
+Final Round</p>
+  </p>
+</div>

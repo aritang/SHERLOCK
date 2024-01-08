@@ -1,0 +1,90 @@
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({ tex2jax: { inlineMath: [["$","$"], ["\\(","\\)"]], processEscapes: true }});
+</script>
+<script type='text/javascript' src='http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
+</script>
+
+
+<h2>Donut Decoration</h2>
+<p>
+Donut maker's morning is early. Mr. D, who is also called Mr. Donuts, is an awesome donut maker. Also today, he goes to his kitchen and prepares to make donuts before sunrise.
+</p>
+
+<p>
+In a twinkling, Mr. D finishes frying $N$ donuts with a practiced hand. But these donuts as they are must not be displayed in a showcase. Filling cream, dipping in chocolate, topping somehow cute, colorful things, etc., several decoration tasks are needed. There are $K$ tasks numbered 1 through $K$, and each of them must be done exactly once in the order $1, 2, ..., K$ to finish the donuts as items on sale.
+</p>
+
+<p>
+Instantly, Mr. D arranges the $N$ donuts in a row. He seems to intend to accomplish each decoration tasks sequentially at once. However, what in the world is he doing? Mr. D, who stayed up late at yesterday night, decorates only a part of the donuts in a consecutive interval for each task. It's clearly a mistake! Not only that, he does some tasks zero or several times, and the order of tasks is also disordered. The donuts which are not decorated by correct process cannot be provided as items on sale, so he should trash them.
+</p>
+
+<p>
+Fortunately, there are data recording a sequence of tasks he did. The data contain the following information: for each task, the consecutive interval $[l, r]$ of the decorated donuts and the ID $x$ of the task. Please write a program enumerating the number of the donuts which can be displayed in a showcase as items on sale for given recorded data.
+</p>
+
+<h3>Input</h3>
+<p>
+The input consists of a single test case. The test case is formatted as follows.<br/>
+<br/>
+$N$ $K$<br/>
+$T$<br/>
+$l_1$ $r_1$ $x_1$<br/>
+...<br/>
+$l_T$ $r_T$ $x_T$<br/>
+</p>
+
+<p>
+The first line contains two integers $N$ and $K$, where $N$ ($1 \leq N \leq 200,000$) is the number of the donuts fried by Mr. D, and $K$ ($1 \leq K \leq 200,000$) is the number of decoration tasks should be applied to the donuts. The second line contains a single integer $T$ ($1 \leq T \leq 200,000$), which means the number of information about tasks Mr. D did. Each of next $T$ lines contains three
+integers $l_i$, $r_i$, and $x_i$ representing the $i$-th task Mr. D did: the $i$-th task was applied to the interval $[l_i, r_i]$ ($1 \leq l_i \leq r_i \leq N$) of the donuts inclusive, and has ID $x_i$ ($1 \leq x_i \leq K$).
+</p>
+
+<h3>Output</h3>
+<p>
+Output the number of the donuts that can be provided as items on sale.
+</p>
+
+
+<h3>Sample Input 1</h3>
+<pre>
+3 2
+3
+1 2 1
+2 3 2
+3 3 1
+</pre>
+
+<h3>Output for the Sample Input 1</h3>
+<pre>
+1
+</pre>
+
+<h3>Sample Input 2</h3>
+<pre>
+5 3
+6
+2 3 1
+1 3 2
+4 5 1
+2 4 3
+3 5 2
+5 5 3
+</pre>
+
+<h3>Output for the Sample Input 2</h3>
+<pre>
+2
+</pre>
+
+<h3>Sample Input 3</h3>
+<pre>
+10 1
+2
+2 9 1
+5 7 1
+</pre>
+
+<h3>Output for the Sample Input 3</h3>
+<pre>
+5
+</pre>

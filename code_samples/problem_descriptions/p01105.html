@@ -1,0 +1,98 @@
+
+<h3><u>Boolean Expression Compressor</u></h3>
+
+<p>
+You are asked to build a compressor for Boolean expressions
+that transforms expressions to the shortest form keeping their meaning. 
+</p>
+
+
+<p>
+The grammar of the Boolean expressions has terminals 
+<tt>0</tt>&nbsp;<tt>1</tt>&nbsp;<tt>a</tt>&nbsp;<tt>b</tt>&nbsp;<tt>c</tt>&nbsp;<tt>d</tt>&nbsp;<tt>-</tt>&nbsp;<tt>^</tt>&nbsp;<tt>*</tt>&nbsp;<tt>(</tt>&nbsp;<tt>)</tt>, start symbol &lt;E&gt; and the following production rule: 
+</p>
+
+
+<blockquote>
+&lt;E&gt; &nbsp;::=&nbsp; <tt>0</tt> &nbsp;|&nbsp; <tt>1</tt> &nbsp;|&nbsp; <tt>a</tt> &nbsp;|&nbsp; <tt>b</tt> &nbsp;|&nbsp; <tt>c</tt> &nbsp;|&nbsp; <tt>d</tt> &nbsp;|&nbsp; <tt>-</tt>&lt;E&gt; &nbsp;|&nbsp; <tt>(</tt>&lt;E&gt;<tt>^</tt>&lt;E&gt;<tt>)</tt> &nbsp;|&nbsp; <tt>(</tt>&lt;E&gt;<tt>*</tt>&lt;E&gt;<tt>)</tt>
+</blockquote>
+
+
+<p>
+Letters <tt>a</tt>, <tt>b</tt>, <tt>c</tt> and <tt>d</tt> represent Boolean
+variables that have values of either  <tt>0</tt> or <tt>1</tt>.
+Operators are evaluated as shown in the Table below.
+In other words, <tt>-</tt> means negation (NOT),
+<tt>^</tt> means exclusive disjunction (XOR), and 
+<tt>*</tt> means logical conjunction (AND). 
+</p>
+<center>
+Table: Evaluations of operators<br>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_ICPCDomestic2017_E01">
+</center>
+
+
+<p>
+Write a program that calculates the length of the shortest expression that
+evaluates equal to the given expression with whatever values of the four variables.
+</p>
+
+<p>
+For example, <tt>0</tt>, that is the first expression in the sample input,
+cannot be shortened further.
+Therefore the shortest length for this expression is 1.
+</p><p>
+For another example, <tt>(a*(1*b))</tt>, the second in the sample input,
+always evaluates equal to <tt>(a*b)</tt> and <tt>(b*a)</tt>,
+which are the shortest.   The output for this expression, thus, should be <tt>5</tt>. 
+</p>
+
+
+<h3>Input</h3>
+
+
+<p>
+The input consists of multiple datasets.
+A dataset consists of one line, containing an expression
+conforming to the grammar described above.
+The length of the expression is less than or equal to 16 characters.
+</p>
+
+<p>
+The end of the input is indicated by a line containing one
+<tt>.</tt> (period).
+The number of datasets in the input is at most 200. 
+</p>
+
+
+<h3>Output</h3>
+
+<p>
+For each dataset, 
+output a single line containing an integer which is the length of the
+shortest expression that has the same value as the given expression for 
+all combinations of values in the variables. 
+</p>
+
+
+<h3>Sample Input</h3>
+
+
+<pre>0
+(a*(1*b))
+(1^a)
+(-(-a*-b)*a)
+(a^(b^(c^d)))
+.
+</pre>
+
+
+<h3>Output for the Sample Input</h3>
+
+
+<pre>1
+5
+2
+1
+13
+</pre>

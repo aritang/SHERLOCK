@@ -1,0 +1,71 @@
+
+
+
+<H1>Extraordinary Girl (I)</H1>
+
+<p>
+    She is an extraordinary girl. She works for a library. Since she is young
+and cute, she is forced to do a lot of laborious jobs. The most annoying job
+for her is to put returned books into shelves, carrying them by a cart. The
+cart is large enough to carry many books, but too heavy for her. Since she
+is delicate, she wants to walk as short as possible when doing this job.
+    The library has 4N shelves (1 <= N <= 10000), three main passages, and
+N + 1 sub passages. Each shelf is numbered between 1 to 4N as shown in
+Figure 1. Horizontal dashed lines correspond to main passages, while vertical
+dashed lines correspond to sub passages. She starts to return books from the
+position with white circle in the figure and ends at the position with black
+circle. For simplicity, assume she can only stop at either the middle of shelves
+or the intersection of passages. At the middle of shelves, she put books with
+the same ID as the shelves. For example, when she stops at the middle of
+shelf 2 and 3, she can put books with ID 2 and 3.
+</p>
+
+<center>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE1_1002">
+</center>
+
+<p>
+    Since she is so lazy that she doesn’t want to memorize a complicated
+route, she only walks main passages in forward direction (see an arrow in
+Figure 1). The walk from an intersection to its adjacent intersections takes 1
+cost. It means the walk from the middle of shelves to its adjacent intersection,
+and vice versa, takes 0.5 cost. You, as only a programmer amoung her friends,
+are to help her compute the minimum possible cost she takes to put all books
+in the shelves.
+
+</p>
+
+
+<H2>Input</H2>
+
+<p>
+The first line of input contains the number of test cases, T . Then T test
+cases follow. Each test case consists of two lines. The first line contains the
+number N , and the second line contains 4N characters, either Y or N . Y in
+n-th position means there are some books with ID n, and N means no book
+with ID n.
+
+</p>
+
+<H2>Output</H2>
+
+<p>
+The output should consists of T lines, each of which contains one integer,
+the minimum possible cost, for each test case.
+
+</p>
+
+<H2>Sample Input</H2>
+<pre>
+2
+2
+YNNNNYYY
+4
+NYNNYYNNNYNYYNNN
+</pre>
+
+<H2>Output for the Sample Input</H2>
+<pre>
+6
+9
+</pre>

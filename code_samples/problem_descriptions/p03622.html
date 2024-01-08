@@ -1,0 +1,118 @@
+<span class="lang-en">
+<p>Score : <var>2000</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>You are participating in a quiz with <var>N + M</var> questions and Yes/No answers.</p>
+<p>It's known in advance that there are <var>N</var> questions with answer Yes and <var>M</var> questions with answer No, but the questions are given to you in random order.</p>
+<p>You have no idea about correct answers to any of the questions.
+You answer questions one by one, and for each question you answer, you get to know the correct answer immediately after answering.</p>
+<p>Suppose you follow a strategy maximizing the expected number of correct answers you give.</p>
+<p>Let this expected number be <var>P/Q</var>, an irreducible fraction. Let <var>M = 998244353</var>.
+It can be proven that a unique integer <var>R</var> between <var>0</var> and <var>M - 1</var> exists such that <var>P = Q \times R</var> modulo <var>M</var>,
+and it is equal to <var>P \times Q^{-1}</var> modulo <var>M</var>, where <var>Q^{-1}</var> is the modular inverse of <var>Q</var>.
+Find <var>R</var>.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 \leq N, M \leq 500,000</var></li>
+<li>Both <var>N</var> and <var>M</var> are integers.</li>
+</ul>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Partial Score</h3><ul>
+<li><var>1500</var> points will be awarded for passing the testset satisfying <var>N = M</var> and <var>1 \leq N, M \leq 10^5</var>.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var> <var>M</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Let <var>P/Q</var> be the expected number of correct answers you give if you follow an optimal strategy, represented as an irreducible fraction.
+Print <var>P \times Q^{-1}</var> modulo <var>998244353</var>.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>1 1
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>499122178
+</pre>
+<p>There are two questions.
+You may answer randomly to the first question, and you'll succeed with 50% probability.
+Then, since you know the second answer is different from the first one, you'll succeed with 100% probability.</p>
+<p>The expected number of your correct answers is <var>3</var> / <var>2</var>.
+Thus, <var>P = 3</var>, <var>Q = 2</var>, <var>Q^{-1} = 499122177</var> (modulo <var>998244353</var>), and <var>P \times Q^{-1} = 499122178</var> (again, modulo <var>998244353</var>).</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>2 2
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>831870297
+</pre>
+<p>The expected number of your correct answers is <var>17</var> / <var>6</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>3 4
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>770074220
+</pre>
+<p>The expected number of your correct answers is <var>169</var> / <var>35</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 4</h3><pre>10 10
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 4</h3><pre>208827570
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 5</h3><pre>42 23
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 5</h3><pre>362936761
+</pre></section>
+</div>
+</span>

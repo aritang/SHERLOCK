@@ -1,0 +1,120 @@
+<span class="lang-en">
+<p>Score : <var>100</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3>
+<blockquote>
+<p>
+		                Kyoto University Programming Contest is a programming contest voluntarily held by some Kyoto University students.
+		                This contest is abbreviated as <b>K</b>yoto <b>U</b>niversity <b>P</b>rogramming <b>C</b>ontest and called KUPC.
+                    </p>
+<p>
+		                source: <a href="http://www.kupc.jp/index.html"><i>Kyoto University Programming Contest Information</i></a>
+</p>
+</blockquote>
+<p>
+		            The problem-preparing committee met to hold this year's KUPC and <var>N</var> problems were proposed there.
+		            The problems are numbered from <var>1</var> to <var>N</var> and the name of <var>i</var>-th problem is <var>P_i</var>.
+		            However, since they proposed too many problems, they decided to divide them into some sets for several contests.
+                </p>
+<p>
+		            They decided to divide this year's KUPC into several KUPCs by dividing problems under the following conditions.
+                    <ul>
+<li> One KUPC provides <var>K</var> problems. </li>
+<li> Each problem appears at most once among all the KUPCs. </li>
+<li> All the first letters of the problem names in one KUPC must be different. </li>
+</ul>
+</p>
+<p>
+		            You, one of the committee members, want to hold as many KUPCs as possible.
+		            Write a program to find the maximum number of KUPCs that can be held this year.
+                </p>
+<h3>Constraints</h3>
+<ul>
+<li> <var>1 \leq N \leq 10^4</var></li>
+<li> <var>1 \leq K \leq 26</var></li>
+<li> <var>1 \leq |P_i| \leq 10</var></li>
+<li> All characters in <var>P_i</var> are capital letters.</li>
+</ul>
+<p>
+		            Note that, for each <var>i</var> and <var>j</var> <var>(1 \leq i &lt; j \leq N)</var>,
+                    <var>P_i \neq P_j</var> are not necessarily satisfied.
+                </p>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3>
+<p>The input is given from Standard Input in the following format:</p>
+<pre>
+<var>N</var> <var>K</var>
+<var>P_1</var>
+:
+<var>P_N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3>
+<p>
+		                Print the maximum number of KUPCs that can be held on one line.
+                    </p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3>
+<pre>
+9 3
+APPLE
+ANT
+ATCODER
+BLOCK
+BULL
+BOSS
+CAT
+DOG
+EGG
+</pre>
+<p>For example, three KUPCs can be held by dividing the problems as follows. </p>
+<ul>
+<li> First: <code>APPLE</code>, <code>BLOCK</code>, <code>CAT</code></li>
+<li> Second: <code>ANT</code>, <code>BULL</code>, <code>DOG</code></li>
+<li> Third: <code>ATCODER</code>, <code>BOSS</code>, <code>EGG</code></li>
+</ul>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3>
+<pre>
+3
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3>
+<pre>
+3 2
+KU
+KYOUDAI
+KYOTOUNIV
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3>
+<pre>
+0
+</pre>
+<p>No KUPC can be held.</p>
+</section>
+</div>
+</span>

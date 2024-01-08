@@ -1,0 +1,83 @@
+<span class="lang-en">
+<p>Score : <var>700</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>Determine if there exists a sequence obtained by permuting <var>1,2,...,N</var> that satisfies the following conditions:</p>
+<ul>
+<li>The length of its longest increasing subsequence is <var>A</var>.</li>
+<li>The length of its longest decreasing subsequence is <var>B</var>.</li>
+</ul>
+<p>If it exists, construct one such sequence.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Notes</h3><p>A subsequence of a sequence <var>P</var> is a sequence that can be obtained by extracting some of the elements in <var>P</var> without changing the order.</p>
+<p>A longest increasing subsequence of a sequence <var>P</var> is a sequence with the maximum length among the subsequences of <var>P</var> that are monotonically increasing.</p>
+<p>Similarly, a longest decreasing subsequence of a sequence <var>P</var> is a sequence with the maximum length among the subsequences of <var>P</var> that are monotonically decreasing.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 \leq N,A,B \leq 3\times 10^5</var></li>
+<li>All input values are integers.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var> <var>A</var> <var>B</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>If there are no sequences that satisfy the conditions, print <code>-1</code>.</p>
+<p>Otherwise, print <var>N</var> integers. The <var>i</var>-th integer should be the <var>i</var>-th element of the sequence that you constructed.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>5 3 2
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>2 4 1 5 3
+</pre>
+<p>One longest increasing subsequence of this sequence is <var>{2,4,5}</var>, and one longest decreasing subsequence of it is <var>{4,3}</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>7 7 1
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>1 2 3 4 5 6 7
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>300000 300000 300000
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>-1
+</pre></section>
+</div>
+</span>

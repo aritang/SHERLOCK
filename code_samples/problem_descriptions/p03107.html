@@ -1,0 +1,78 @@
+<span class="lang-en">
+<p>Score : <var>300</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>There are <var>N</var> cubes stacked vertically on a desk.</p>
+<p>You are given a string <var>S</var> of length <var>N</var>. The color of the <var>i</var>-th cube from the bottom is red if the <var>i</var>-th character in <var>S</var> is <code>0</code>, and blue if that character is <code>1</code>.</p>
+<p>You can perform the following operation any number of times: choose a red cube and a blue cube that are adjacent, and remove them. Here, the cubes that were stacked on the removed cubes will fall down onto the object below them.</p>
+<p>At most how many cubes can be removed?</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 \leq N \leq 10^5</var></li>
+<li><var>|S| = N</var></li>
+<li>Each character in <var>S</var> is <code>0</code> or <code>1</code>.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>S</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the maximum number of cubes that can be removed.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>0011
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>4
+</pre>
+<p>All four cubes can be removed, by performing the operation as follows:</p>
+<ul>
+<li>Remove the second and third cubes from the bottom. Then, the fourth cube drops onto the first cube.</li>
+<li>Remove the first and second cubes from the bottom.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>11011010001011
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>12
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>0
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>0
+</pre></section>
+</div>
+</span>

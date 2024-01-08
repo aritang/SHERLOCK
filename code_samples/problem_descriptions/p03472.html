@@ -1,0 +1,106 @@
+<span class="lang-en">
+<p>Score : <var>400</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>You are going out for a walk, when you suddenly encounter a monster. Fortunately, you have <var>N</var> katana (swords), Katana <var>1</var>, Katana <var>2</var>, <var>…</var>, Katana <var>N</var>, and can perform the following two kinds of attacks in any order:</p>
+<ul>
+<li>Wield one of the katana you have. When you wield Katana <var>i</var> <var>(1 ≤ i ≤ N)</var>, the monster receives <var>a_i</var> points of damage. The same katana can be wielded any number of times.</li>
+<li>Throw one of the katana you have. When you throw Katana <var>i</var> <var>(1 ≤ i ≤ N)</var> at the monster, it receives <var>b_i</var> points of damage, and you lose the katana. That is, you can no longer wield or throw that katana.</li>
+</ul>
+<p>The monster will vanish when the total damage it has received is <var>H</var> points or more. At least how many attacks do you need in order to vanish it in total?</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 ≤ N ≤ 10^5</var></li>
+<li><var>1 ≤ H ≤ 10^9</var></li>
+<li><var>1 ≤ a_i ≤ b_i ≤ 10^9</var></li>
+<li>All input values are integers.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var> <var>H</var>
+<var>a_1</var> <var>b_1</var>
+<var>:</var>
+<var>a_N</var> <var>b_N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the minimum total number of attacks required to vanish the monster.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>1 10
+3 5
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>3
+</pre>
+<p>You have one katana. Wielding it deals <var>3</var> points of damage, and throwing it deals <var>5</var> points of damage. By wielding it twice and then throwing it, you will deal <var>3 + 3 + 5 = 11</var> points of damage in a total of three attacks, vanishing the monster.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>2 10
+3 5
+2 6
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>2
+</pre>
+<p>In addition to the katana above, you also have another katana. Wielding it deals <var>2</var> points of damage, and throwing it deals <var>6</var> points of damage. By throwing both katana, you will deal <var>5 + 6 = 11</var> points of damage in two attacks, vanishing the monster.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>4 1000000000
+1 1
+1 10000000
+1 30000000
+1 99999999
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>860000004
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 4</h3><pre>5 500
+35 44
+28 83
+46 62
+31 79
+40 43
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 4</h3><pre>9
+</pre></section>
+</div>
+</span>

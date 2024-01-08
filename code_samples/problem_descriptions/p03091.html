@@ -1,0 +1,130 @@
+<span class="lang-en">
+<p>Score : <var>800</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>You are given a simple connected undirected graph consisting of <var>N</var> vertices and <var>M</var> edges.
+The vertices are numbered <var>1</var> to <var>N</var>, and the edges are numbered <var>1</var> to <var>M</var>.</p>
+<p>Edge <var>i</var> connects Vertex <var>a_i</var> and <var>b_i</var> bidirectionally.</p>
+<p>Determine if three circuits (see Notes) can be formed using each of the edges exactly once.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Notes</h3><p>A circuit is a cycle allowing repetitions of vertices but not edges.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li>All values in input are integers.</li>
+<li><var>1 \leq N,M \leq 10^{5}</var></li>
+<li><var>1 \leq a_i, b_i \leq N</var></li>
+<li>The given graph is simple and connected.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var> <var>M</var>
+<var>a_1</var> <var>b_1</var>
+<var>:</var>
+<var>a_M</var> <var>b_M</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>If three circuits can be formed using each of the edges exactly once, print <code>Yes</code>; if they cannot, print <code>No</code>.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>7 9
+1 2
+1 3
+2 3
+1 4
+1 5
+4 5
+1 6
+1 7
+6 7
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>Yes
+</pre>
+<ul>
+<li>Three circuits can be formed using each of the edges exactly once, as follows:
+<div style="text-align: center;">
+<img alt="b8c8e2245d45a31cf39749b0a49fc2bd.png" src="https://img.atcoder.jp/agc031/b8c8e2245d45a31cf39749b0a49fc2bd.png">
+</img></div></li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>3 3
+1 2
+2 3
+3 1
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>No
+</pre>
+<ul>
+<li>Three circuits are needed.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>18 27
+17 7
+12 15
+18 17
+13 18
+13 6
+5 7
+7 1
+14 5
+15 11
+7 6
+1 9
+5 4
+18 16
+4 6
+7 2
+7 11
+6 3
+12 14
+5 2
+10 5
+7 8
+10 15
+3 15
+9 8
+7 15
+5 16
+18 15
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>Yes
+</pre></section>
+</div>
+</span>

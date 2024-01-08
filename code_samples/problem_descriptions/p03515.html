@@ -1,0 +1,171 @@
+<span class="lang-en">
+<p>Score : <var>800</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>Snuke Festival 2017 will be held in a tree with <var>N</var> vertices numbered <var>1,2, ...,N</var>.
+The <var>i</var>-th edge connects Vertex <var>a_i</var> and <var>b_i</var>, and has <em>joyfulness</em> <var>c_i</var>.</p>
+<p>The staff is Snuke and <var>N-1</var> black cats.
+Snuke will set up the headquarters in some vertex, and from there he will deploy a cat to each of the other <var>N-1</var> vertices.</p>
+<p>For each vertex, calculate the <em>niceness</em> when the headquarters are set up in that vertex.
+The niceness when the headquarters are set up in Vertex <var>i</var> is calculated as follows:</p>
+<ul>
+<li>Let <var>X=0</var>.</li>
+<li>For each integer <var>j</var> between <var>1</var> and <var>N</var> (inclusive) except <var>i</var>, do the following:<ul>
+<li>Add <var>c</var> to <var>X</var>, where <var>c</var> is the smallest joyfulness of an edge on the path from Vertex <var>i</var> to Vertex <var>j</var>.</li>
+</ul>
+</li>
+<li>The niceness is the final value of <var>X</var>.</li>
+</ul>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 \leq N \leq 10^{5}</var></li>
+<li><var>1 \leq a_i,b_i \leq N</var></li>
+<li><var>1 \leq c_i \leq 10^{9}</var></li>
+<li>The given graph is a tree.</li>
+<li>All input values are integers.</li>
+</ul>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Partial Scores</h3><ul>
+<li>In the test set worth <var>200</var> points, <var>N \leq 1000</var>.</li>
+<li>In the test set worth <var>200</var> points, <var>c_i \leq 2</var>.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+<var>a_1</var> <var>b_1</var> <var>c_1</var>
+<var>:</var>
+<var>a_{N-1}</var> <var>b_{N-1}</var> <var>c_{N-1}</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print <var>N</var> lines. The <var>i</var>-th line must contain the niceness when the headquarters are set up in Vertex <var>i</var>.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>3
+1 2 10
+2 3 20
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>20
+30
+30
+</pre>
+<ul>
+<li>The figure below shows the case when headquarters are set up in each of the vertices <var>1</var>, <var>2</var> and <var>3</var>.</li>
+<li>The number on top of an edge denotes the joyfulness of the edge, and the number below an vertex denotes the smallest joyfulness of an edge on the path from the headquarters to that vertex.</li>
+</ul>
+<div style="text-align: center;">
+<img alt="1ee10aa2a1bf5e43e05161f37d88bdc1.png" src="https://atcoder.jp/img/asaporo2/1ee10aa2a1bf5e43e05161f37d88bdc1.png">
+</img></div>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>15
+6 3 2
+13 3 1
+1 13 2
+7 1 2
+8 1 1
+2 8 2
+2 12 2
+5 2 2
+2 11 2
+10 2 2
+10 9 1
+9 14 2
+4 14 1
+11 15 2
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>16
+20
+15
+14
+20
+15
+16
+20
+15
+20
+20
+20
+16
+15
+20
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>19
+19 14 48
+11 19 23
+17 14 30
+7 11 15
+2 19 15
+2 18 21
+19 10 43
+12 11 25
+3 11 4
+5 19 50
+4 11 19
+9 12 29
+14 13 3
+14 6 12
+14 15 14
+5 1 6
+8 18 13
+7 16 14
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>103
+237
+71
+263
+370
+193
+231
+207
+299
+358
+295
+299
+54
+368
+220
+220
+319
+237
+370
+</pre></section>
+</div>
+</span>

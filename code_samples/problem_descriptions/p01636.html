@@ -1,0 +1,97 @@
+
+
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: { inlineMath: [['\\(','\\)']] }
+  });
+</script>
+<script type='text/javascript' src='http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
+
+<h1 class="ndoc-heading1">Problem C: Mysterious Operator</h1>
+<p class="ndoc-top">ケー氏がいつものように某SNSを閲覧していると、
+「解ける人はIQ150以上ある」という問題がタイムラインに流れてきた。
+ケー氏はIQが150以上あるので、見るまでもなくその問題を一瞬で解いてしまった。
+彼にしてみれば、このような問題なぞに頭を働かせる必要は無い。 コンピュータに任せれば充分なのである。</p>
+<h2 class="ndoc-heading2">問題</h2>
+<p class="ndoc-top">問題には以下のような謎の数式が書かれていた。</p>
+<ul class="ndoc-indent">
+<li>\( 5 + 3 = 28 \)</li>
+<li>\( 9 + 1 = 810 \)</li>
+<li>\(8 + 6 = 214 \)</li>
+<li>\( 5 + 4 = 19 \)</li>
+<li>\( 2 + 2 = 4 \)</li>
+<li>\( 15 + 8 = 723 \)</li>
+<li>\( 7 + 9 = -216 \)</li>
+<li>\( 3 + 0 = 33 \)</li>
+</ul>
+<p>上記の演算子\( + \)について考えた時、ある正整数\( a \)について\( x \geq 0, y \geq 0 \)かつ\( x + y = a \)になるような整数のペア\( x,y \)の個数を求めよ。</p>
+<h2 class="ndoc-heading2">入力</h2>
+
+<p class="ndoc-indent">
+正整数\(a\)が一行で与えられる。
+</p>
+<h2 class="ndoc-heading2">出力</h2>
+
+<p>
+\( a = x + y, x \geq 0, y \geq 0\)を満たすペア\((x,y)\)の個数を一行に出力せよ。
+</p>
+<h2 class="ndoc-heading2">制約</h2>
+
+<ul class="ndoc-indent">
+<li>\( 1 \leq a \leq 10^9(= 1000000000) \)</li>
+</ul>
+<h2 class="ndoc-heading2">入出力例</h2>
+<h3 class="ndoc-heading3">入力1</h3>
+
+<pre>
+19
+</pre>
+<h3 class="ndoc-heading3">出力1</h3>
+
+<pre>
+1
+</pre>
+<p>\( 5 + 4 \)の1通りである。</p>
+<h3 class="ndoc-heading3">入力2</h3>
+
+<pre>
+22
+</pre>
+<h3 class="ndoc-heading3">出力2</h3>
+
+<pre>
+2
+</pre>
+<p>\( 11 + 11 \)と、\( 2 + 0 \)の2通りが存在する。</p>
+<h3 class="ndoc-heading3">入力3</h3>
+
+<pre>
+1
+</pre>
+<h3 class="ndoc-heading3">出力3</h3>
+
+<pre>
+0
+</pre>
+<p>\( 1 + 0 = 11 , 0 + 1 = -11 \)である。\( 1 \)は生成することができない。</p>
+<h3 class="ndoc-heading3">入力4</h3>
+
+<pre>
+101
+</pre>
+<h3 class="ndoc-heading3">出力4</h3>
+
+<pre>
+0
+</pre>
+<p>\( 1 - 0 \)は\( 101 \)ではないことに注意すること。</p>
+<h3 class="ndoc-heading3">入力5</h3>
+
+<pre>
+660233276
+</pre>
+<h3 class="ndoc-heading3">出力5</h3>
+<pre>
+4
+</pre>

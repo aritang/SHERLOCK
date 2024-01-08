@@ -1,0 +1,70 @@
+<span class="lang-en">
+<p>Score : <var>700</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>Takahashi is playing with <var>N</var> cards.</p>
+<p>The <var>i</var>-th card has an integer <var>X_i</var> on it.</p>
+<p>Takahashi is trying to create as many pairs of cards as possible satisfying one of the following conditions:</p>
+<ul>
+<li>The integers on the two cards are the same.</li>
+<li>The sum of the integers on the two cards is a multiple of <var>M</var>.</li>
+</ul>
+<p>Find the maximum number of pairs that can be created.</p>
+<p>Note that a card cannot be used in more than one pair.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>2≦N≦10^5</var></li>
+<li><var>1≦M≦10^5</var></li>
+<li><var>1≦X_i≦10^5</var></li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>The input is given from Standard Input in the following format:</p>
+<pre><var>N</var> <var>M</var>
+<var>X_1</var> <var>X_2</var> <var>...</var> <var>X_N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the maximum number of pairs that can be created.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>7 5
+3 1 4 1 5 9 2
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>3
+</pre>
+<p>Three pairs <var>(3,2), (1,4)</var> and <var>(1,9)</var> can be created.</p>
+<p>It is possible to create pairs <var>(3,2)</var> and <var>(1,1)</var>, but the number of pairs is not maximized with this.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>15 10
+1 5 6 10 11 11 11 20 21 25 25 26 99 99 99
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>6
+</pre></section>
+</div>
+</span>

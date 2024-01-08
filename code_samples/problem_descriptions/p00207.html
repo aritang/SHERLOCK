@@ -1,0 +1,106 @@
+
+
+
+<H1>ブロック</H1>
+
+<p>
+ A さんの家に親戚の B 君がやってきました。彼は 3 歳でブロックが大好きです。彼が持っているブロックは図 1 のような形をしています。
+</p>
+
+<center>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE1_blockMaze1">
+<p>
+図1
+</p>
+</center>
+
+<p>
+ B 君はボードの上にブロックを敷き詰めています。彼に「何を作っているの?」と聞くと、彼は「迷路!!」と元気よく答えました。彼の言う迷路とは、スタートからゴールまで側面が接している、同じ色のブロックだけでたどることができるブロックの配置のことだそうです。図 2 は黄色のブロックにより、左上(スタート)から右下(ゴール)へ迷路ができていることを表しています。
+
+</p>
+<center>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE1_blockMaze2">
+<p>
+図2
+</p>
+</center>
+
+
+
+<p>
+ 無邪気に遊んでいる B 君を横目に、プログラマーであるあなたは、ブロックの並びが迷路となっているかを確かめてみることにしました。
+</p>
+
+<p>
+ ブロックの情報とスタート、ゴールの座標を入力とし、ブロックが迷路となっていれば OK 、なっていなければ NG を出力するプログラムを作成してください。 ボードは横方向に <var>w</var> 、縦方向に <var>h</var> の大きさをもち、 左上の座標は(1 , 1)、右下の座標は(<var>w, h</var>)とします。ブロックは <var>2 &times; 4</var> の長方形ですべて同じ大きさです。ブロックの色 <var>c</var> は 1 (白)、2 (黄)、3 (緑)、4 (青)、5 (赤) のいずれかです。ブロックのボード上での向き <var>d</var> は 横方向に長い場合 0 、 縦方向に長い場合 1 とします。 ブロックの位置はブロックの左上の座標 (<var>x, y</var>) によって表されます。なお、ブロックの位置は他のブロックと重なることは無く、ボードからはみ出すこともありません。
+</p>
+
+
+<H2>Input</H2>
+<p>
+複数のデータセットの並びが入力として与えられます。        入力の終わりはゼロふたつの行で示されます。
+各データセットは以下の形式で与えられます。
+</p>
+
+<pre>
+<var>w</var> <var>h</var>
+<var>xs</var> <var>ys</var>
+<var>xg</var> <var>yg</var>
+<var>n</var>
+<var>c<sub>1</sub></var> <var>d<sub>1</sub></var> <var>x<sub>1</sub></var> <var>y<sub>1</sub></var>
+<var>c<sub>2</sub></var> <var>d<sub>2</sub></var> <var>x<sub>2</sub></var> <var>y<sub>2</sub></var>
+:
+<var>c<sub>n</sub></var> <var>d<sub>n</sub></var> <var>x<sub>n</sub></var> <var>y<sub>n</sub></var>
+</pre>
+
+<p>
+1 行目にボードの大きさ<var>w, h</var> (4 &le; <var>w, h</var> &le; 100) が与えられます。2 行目にスタートの座標 <var>xs, ys</var>、3 行目にゴールの座標 <var>xg, yg</var> が与えられます。
+</p>
+
+<p>
+4 行目にブロックの個数 <var>n</var> が与えられます。続く <var>n</var> 行に <var>i</var> 番目のブロックの色 <var>c<sub>i</sub></var>、向き <var>d<sub>i</sub></var>、位置 <var>x<sub>i</sub>, y<sub>i</sub></var> が与えられます。
+</p>
+
+<p>
+データセットの数は 30 を超えません。
+</p>
+
+
+<H2>Output</H2>
+<p>
+入力データセットごとに、判別結果を１行に出力します。
+</p>
+
+<H2>Sample Input</H2>
+<pre>
+20 20 
+1 1
+9 9
+7
+2 0 1 1
+5 1 1 3
+2 1 3 3
+1 1 5 2
+5 1 7 3
+2 0 2 7
+2 0 6 8
+20 20
+9 9
+1 1
+6
+2 0 1 1
+1 0 5 1
+2 1 1 3
+5 0 1 7
+3 1 5 5
+4 1 8 5
+0 0
+</pre>
+
+
+<H2>Output for the Sample Input</H2>
+<pre>
+OK
+NG
+</pre>
+

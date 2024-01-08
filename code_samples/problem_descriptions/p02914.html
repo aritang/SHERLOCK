@@ -1,0 +1,94 @@
+<span class="lang-en">
+<p>Score: <var>600</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3>
+<p>We have <var>N</var> non-negative integers: <var>A_1, A_2, ..., A_N</var>.</p>
+<p>Consider painting at least one and at most <var>N-1</var> integers among them in red, and painting the rest in blue.</p>
+<p>Let the <em>beauty</em> of the painting be the <var>\mbox{XOR}</var> of the integers painted in red, plus the <var>\mbox{XOR}</var> of the integers painted in blue.</p>
+<p>Find the maximum possible beauty of the painting.</p>
+<details>
+<summary style="display: list-item; outline: none;">What is <var>\mbox{XOR}</var>?</summary>
+<p>
+The bitwise <var>\mbox{XOR}</var> <var>x_1 \oplus x_2 \oplus \ldots \oplus x_n</var> of <var>n</var> non-negative integers <var>x_1, x_2, \ldots, x_n</var> is defined as follows:
+<ul>
+<li> When <var>x_1 \oplus x_2 \oplus \ldots \oplus x_n</var> is written in base two, the digit in the <var>2^k</var>'s place (<var>k \geq 0</var>) is <var>1</var> if the number of integers among <var>x_1, x_2, \ldots, x_n</var> whose binary representations have <var>1</var> in the <var>2^k</var>'s place is odd, and <var>0</var> if that count is even. </li>
+</ul>
+For example, <var>3 \oplus 5 = 6</var>.
+</p>
+</details>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3>
+<ul>
+<li>All values in input are integers.</li>
+<li><var>2 \leq N \leq 10^5</var></li>
+<li><var>0 \leq A_i &lt; 2^{60}\ (1 \leq i \leq N)</var></li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3>
+<p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+<var>A_1</var> <var>A_2</var> <var>...</var> <var>A_N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3>
+<p>Print the maximum possible beauty of the painting.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>3
+3 6 5
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>12
+</pre>
+<p>If we paint <var>3</var>, <var>6</var>, <var>5</var> in blue, red, blue, respectively, the beauty will be <var>(6) + (3 \oplus 5) = 12</var>.</p>
+<p>There is no way to paint the integers resulting in greater beauty than <var>12</var>, so the answer is <var>12</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>4
+23 36 66 65
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>188
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>20
+1008288677408720767 539403903321871999 1044301017184589821 215886900497862655 504277496111605629 972104334925272829 792625803473366909 972333547668684797 467386965442856573 755861732751878143 1151846447448561405 467257771752201853 683930041385277311 432010719984459389 319104378117934975 611451291444233983 647509226592964607 251832107792119421 827811265410084479 864032478037725181
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>2012721721873704572
+</pre>
+<p><var>A_i</var> and the answer may not fit into a <var>32</var>-bit integer type.</p></section>
+</div>
+</span>

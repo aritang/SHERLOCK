@@ -1,0 +1,88 @@
+<span class="lang-en">
+<p>Score : <var>700</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>There are <var>N</var> towns numbered <var>1, 2, \cdots, N</var>.</p>
+<p>Some roads are planned to be built so that each of them connects two distinct towns bidirectionally. Currently, there are no roads connecting towns.</p>
+<p>In the planning of construction, each town chooses one town different from itself and requests the following: roads are built so that the chosen town is reachable from itself using one or more roads.</p>
+<p>These requests from the towns are represented by an array <var>P_1, P_2, \cdots, P_N</var>. If <var>P_i = -1</var>, it means that Town <var>i</var> has not chosen the request; if <var>1 \leq P_i \leq N</var>, it means that Town <var>i</var> has chosen Town <var>P_i</var>.</p>
+<p>Let <var>K</var> be the number of towns <var>i</var> such that <var>P_i = -1</var>. There are <var>(N-1)^K</var> ways in which the towns can make the requests. For each way to make requests, find the minimum number of roads needed to meet all the requests, and print the sum of those <var>(N-1)^K</var> numbers, modulo (<var>10^9+7</var>).</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>2 \leq N \leq 5000</var></li>
+<li><var>P_i = -1</var> or <var>1 \leq P_i \leq N</var>.</li>
+<li><var>P_i \neq i</var></li>
+<li>All values in input are integers.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+<var>P_1</var> <var>P_2</var> <var>\cdots</var> <var>P_N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>For each way to make requests, find the minimum number of roads needed to meet all the requests, and print the sum of those <var>(N-1)^K</var> numbers, modulo (<var>10^9+7</var>).</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>4
+2 1 -1 3
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>8
+</pre>
+<p>There are three ways to make requests, as follows:</p>
+<ul>
+<li>Choose <var>P_1 = 2, P_2 = 1, P_3 = 1, P_4 = 3</var>. In this case, at least three roads - for example, <var>(1,2),(1,3),(3,4)</var> - are needed to meet the requests.</li>
+<li>Choose <var>P_1 = 2, P_2 = 1, P_3 = 2, P_4 = 3</var>. In this case, at least three roads - for example, <var>(1,2),(1,3),(3,4)</var> - are needed to meet the requests.</li>
+<li>Choose <var>P_1 = 2, P_2 = 1, P_3 = 4, P_4 = 3</var>. In this case, at least two roads - for example, <var>(1,2),(3,4)</var> - are needed to meet the requests.</li>
+</ul>
+<p>Note that it is not mandatory to connect Town <var>i</var> and Town <var>P_i</var> directly.</p>
+<p>The sum of the above numbers is <var>8</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>2
+2 1
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>1
+</pre>
+<p>There may be just one fixed way to make requests.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>10
+2 6 9 -1 6 9 -1 -1 -1 -1
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>527841
+</pre></section>
+</div>
+</span>

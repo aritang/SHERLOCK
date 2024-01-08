@@ -1,0 +1,86 @@
+
+
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({ tex2jax: { inlineMath: [["$","$"], ["\\(","\\)"]], processEscapes: true }});
+</script>
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+
+<H1>日の出と日の入り </H1>
+
+<p>
+太陽が現れることを「日の出」、隠れることを「日の入り」と呼びますが、その厳密な時刻は太陽が地平線に対してどのような位置にある時でしょうか。
+</p>
+
+<p>
+下の図のように、太陽を円、地平線を直線で表すことにします。このとき、太陽の「日の出」「日の入り」の時刻は、太陽を表す円の上端が地平線を表す直線と一致する瞬間とされています。日の出の時刻を過ぎ、円の上端が直線より上にある時間帯が昼間、円が直線の下へ完全に隠れている時間帯が夜間となります。
+</p>
+
+<center>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_PCK2016_sunset_1" width="640">
+</center><br/>
+
+<p>
+ある時刻の地平線から太陽の中心までの高さと、太陽の半径を入力とし、その時刻が「昼間」か、「日の出または日の入り」か、「夜間」かを出力するプログラムを作成せよ。
+</p>
+
+
+<h2>Input</h2>
+
+<p>
+入力は以下の形式で与えられる。 
+</p>
+
+<pre>
+<var>H</var> <var>R</var>
+</pre>
+
+<p>
+入力は１行からなり、ある時刻の地平線から太陽の中心までの高さを表す整数 <var>H</var> (-1000 &le; <var>H</var> &le; 1000) と半径を表す整数 <var>R</var> (1 &le; <var>R</var> &le; 1000) が与えられる。ただし、<var>H</var> は太陽の中心が地平線上にあるときを 0 として、それより上にあるときは正、下にあるときは負とする。
+</p>
+
+
+<h2>Output</h2>
+
+<p>
+昼間のとき「1」、日の出または日の入りのとき「0」、夜間のとき「-1」を１行に出力する。 
+</p>
+
+<h2>Sample Input 1</h2>
+
+<pre>
+-3 3
+</pre>
+
+<h2>Sample Output 1</h2>
+<pre>
+0
+</pre>
+<center><img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_PCK2016_sunset_2" width="240"></center>
+<br/>
+
+
+<h2>Sample Input 2</h2>
+<pre>
+3 3
+</pre>
+
+<h2>Sample Output 2</h2>
+<pre>
+1
+</pre>
+<center><img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_PCK2016_sunset_3"  width="240"></center>
+<br/>
+
+<h2>Sample Input 3</h2>
+<pre>
+-4 3
+</pre>
+
+<h2>Sample Output 3</h2>
+<pre>
+-1
+</pre>
+<center><img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_PCK2016_sunset_4"  width="240"></center>

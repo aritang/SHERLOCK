@@ -1,0 +1,75 @@
+
+
+
+ <p>不運なイクタ君は持っていた大事な文字列<var>T</var>をウィルスによって異なる文字列<var>T'</var>に書き換えられてしまった。そのウィルスが<var>T</var>の１文字を異なる文字に書き換えてしまったことがわかっている。すなわち<var>T</var>と<var>T'</var>はちょうど１文字のみ異なっている。イクタ君は<var>T</var>を復元するために、<var>T</var>が出現していると思われる文書<var>S</var>を用意した。<var>T</var>を復元するための下準備として<var>S</var>の部分文字列で<var>T</var>と一致している可能性があるものの個数を調べたい。
+</p>
+
+<p>文字列<var>T'</var>と文書<var>S</var>が与えられる。
+<var>S = a<sub>1</sub> a<sub>2</sub> a<sub>3</sub> . . . a<sub>|S|</sub></var>の長さ<var>|T'|</var>の部分文字列<var>a<sub>k</sub> a<sub>k+1</sub> . . . a<sub>k+|T'|&minus;1</sub>(1 &le; k &le; |S| &minus; |T'| + 1)</var>
+で<var>T'</var>と比較して1文字だけ異なるものの数を求めよ。
+</p>
+
+<h2>Input</h2>
+<p>入力は以下の形式で与えられる。
+</p>
+<pre>
+<var>S</var><br><var>T'</var>
+</pre>
+
+
+<ul>
+<li>１行目で<var>S</var>が与えられる。
+</li><li>２行目で<var>T'</var>が与えられる。
+</li><li><var>S</var>, <var>T'</var>はそれぞれ大文字、小文字のアルファベットのみからなる。
+</li></ul>
+
+
+<h3>Constraints</h3>
+<p>入力中の各変数は以下の制約を満たす。
+</p>
+
+<ul>
+<li><var>1 &le; |S| &le; 300,000</var>
+</li>
+<li><var>1 &le; |T'| &le; |S|</var>
+</li></ul>
+
+
+<h2>Output</h2>
+<p>条件を満たす部分文字列の数を1行に出力せよ。
+</p>
+
+<h2>Sample Input 1</h2>
+
+<pre>abcbcdbc
+abc
+</pre>
+<h2>Output for the Sample Input 1</h2>
+
+<pre>2
+</pre>
+<ul><li><var>S</var>の3番目の文字から始まるcbc, <var>S</var>の6番目の文字から始まるdbcが条件を満たす。
+</li></ul>
+
+<h2>Sample Input 2</h2>
+
+<pre>aaaaaa
+aaaaaa
+</pre>
+<h2>Output for the Sample Input 2</h2>
+
+<pre>0
+</pre>
+<ul><li>完全に一致する文字列は数えてはならない。</li></ul>
+
+
+<h2>Sample Input 3</h2>
+
+<pre>
+baaaaaaaa
+b
+</pre>
+<h2>Output for the Sample Input 3</h2>
+
+<pre>8
+</pre>

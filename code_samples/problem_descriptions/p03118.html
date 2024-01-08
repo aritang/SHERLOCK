@@ -1,0 +1,147 @@
+<span class="lang-en">
+<p>Score : <var>2718</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>There is a very long bench.
+The bench is divided into <var>M</var> sections, where <var>M</var> is a very large integer.</p>
+<p>Initially, the bench is vacant.
+Then, <var>M</var> people come to the bench one by one, and perform the following action:</p>
+<ul>
+<li>We call a section <em>comfortable</em> if the section is currently unoccupied and is not adjacent to any occupied sections.
+If there is no comfortable section, the person leaves the bench.
+Otherwise, the person chooses one of comfortable sections uniformly at random, and sits there.
+(The choices are independent from each other).</li>
+</ul>
+<p>After all <var>M</var> people perform actions, Snuke chooses an interval of <var>N</var> consecutive sections uniformly at random (from <var>M-N+1</var> possible intervals), and takes a photo.
+His photo can be described by a string of length <var>N</var> consisting of <code>X</code> and <code>-</code>: the <var>i</var>-th character of the string is <code>X</code> if the <var>i</var>-th section from the left in the interval is occupied, and <code>-</code> otherwise.
+Note that the photo is directed.
+For example, <code>-X--X</code> and <code>X--X-</code> are different photos.</p>
+<p>What is the probability that the photo matches a given string <var>s</var>?
+This probability depends on <var>M</var>.
+You need to compute the limit of this probability when <var>M</var> goes infinity.</p>
+<p>Here, we can prove that the limit can be uniquely written in the following format using three <strong>rational</strong> numbers <var>p, q, r</var> and <var>e = 2.718 \ldots</var> (the base of natural logarithm):</p>
+<p><var>p + \frac{q}{e} + \frac{r}{e^2}</var></p>
+<p>Your task is to compute these three rational numbers, and print them modulo <var>10^9 + 7</var>, as described in Notes section.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Notes</h3><p>When you print a rational number, first write it as a fraction <var>\frac{y}{x}</var>, where <var>x, y</var> are integers and <var>x</var> is not divisible by <var>10^9 + 7</var>
+(under the constraints of the problem, such representation is always possible).
+Then, you need to print the only integer <var>z</var> between <var>0</var> and <var>10^9 + 6</var>, inclusive, that satisfies <var>xz \equiv y \pmod{10^9 + 7}</var>.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 \leq N \leq 1000</var></li>
+<li><var>|s| = N</var></li>
+<li><var>s</var> consists of <code>X</code> and <code>-</code>.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+<var>s</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print three rational numbers <var>p, q, r</var>, separated by spaces.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>1
+X
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>500000004 0 500000003
+</pre>
+<p>The probability that a randomly chosen section is occupied converge to <var>\frac{1}{2} - \frac{1}{2e^2}</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>3
+---
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>0 0 0
+</pre>
+<p>After the actions, no three consecutive unoccupied sections can be left.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>5
+X--X-
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>0 0 1
+</pre>
+<p>The limit is <var>\frac{1}{e^2}</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 4</h3><pre>5
+X-X-X
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 4</h3><pre>500000004 0 833333337
+</pre>
+<p>The limit is <var>\frac{1}{2} - \frac{13}{6e^2}</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 5</h3><pre>20
+-X--X--X-X--X--X-X-X
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 5</h3><pre>0 0 183703705
+</pre>
+<p>The limit is <var>\frac{7}{675e^2}</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 6</h3><pre>100
+X-X-X-X-X-X-X-X-X-X--X-X-X-X-X-X-X-X-X-X-X-X-X-X-X--X--X-X-X-X--X--X-X-X--X-X-X--X-X--X--X-X--X-X-X-
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 6</h3><pre>0 0 435664291
+</pre></section>
+</div>
+</span>

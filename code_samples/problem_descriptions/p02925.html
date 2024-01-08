@@ -1,0 +1,107 @@
+<span class="lang-en">
+<p>Score : <var>500</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p><var>N</var> players will participate in a tennis tournament. We will call them Player <var>1</var>, Player <var>2</var>, <var>\ldots</var>, Player <var>N</var>.</p>
+<p>The tournament is round-robin format, and there will be <var>N(N-1)/2</var> matches in total.
+Is it possible to schedule these matches so that all of the following conditions are satisfied? If the answer is yes, also find the minimum number of days required.</p>
+<ul>
+<li>Each player plays at most one matches in a day.</li>
+<li>Each player <var>i</var> <var>(1 \leq i \leq N)</var> plays one match against Player <var>A_{i, 1}, A_{i, 2}, \ldots, A_{i, N-1}</var> in this order.</li>
+</ul>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>3 \leq N \leq 1000</var></li>
+<li><var>1 \leq A_{i, j} \leq N</var></li>
+<li><var>A_{i, j} \neq i</var></li>
+<li><var>A_{i, 1}, A_{i, 2}, \ldots, A_{i, N-1}</var> are all different.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+<var>A_{1, 1}</var> <var>A_{1, 2}</var> <var>\ldots</var> <var>A_{1, N-1}</var>
+<var>A_{2, 1}</var> <var>A_{2, 2}</var> <var>\ldots</var> <var>A_{2, N-1}</var>
+<var>:</var>
+<var>A_{N, 1}</var> <var>A_{N, 2}</var> <var>\ldots</var> <var>A_{N, N-1}</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>If it is possible to schedule all the matches so that all of the conditions are satisfied, print the minimum number of days required; if it is impossible, print <code>-1</code>.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>3
+2 3
+1 3
+1 2
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>3
+</pre>
+<p>All the conditions can be satisfied if the matches are scheduled for three days as follows:</p>
+<ul>
+<li>Day <var>1</var>: Player <var>1</var> vs Player <var>2</var></li>
+<li>Day <var>2</var>: Player <var>1</var> vs Player <var>3</var></li>
+<li>Day <var>3</var>: Player <var>2</var> vs Player <var>3</var></li>
+</ul>
+<p>This is the minimum number of days required.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>4
+2 3 4
+1 3 4
+4 1 2
+3 1 2
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>4
+</pre>
+<p>All the conditions can be satisfied if the matches are scheduled for four days as follows:</p>
+<ul>
+<li>Day <var>1</var>: Player <var>1</var> vs Player <var>2</var>, Player <var>3</var> vs Player <var>4</var></li>
+<li>Day <var>2</var>: Player <var>1</var> vs Player <var>3</var></li>
+<li>Day <var>3</var>: Player <var>1</var> vs Player <var>4</var>, Player <var>2</var> vs Player <var>3</var></li>
+<li>Day <var>4</var>: Player <var>2</var> vs Player <var>4</var></li>
+</ul>
+<p>This is the minimum number of days required.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>3
+2 3
+3 1
+1 2
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>-1
+</pre>
+<p>Any scheduling of the matches violates some condition.</p></section>
+</div>
+</span>

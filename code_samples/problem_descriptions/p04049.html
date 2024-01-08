@@ -1,0 +1,86 @@
+<span class="lang-en">
+<p>Score : <var>600</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>Given an undirected tree, let the distance between vertices <var>u</var> and <var>v</var> be the
+number of edges on the simple path from <var>u</var> to <var>v</var>.
+The diameter of a tree is the maximum among the distances between any two vertices.
+We will call a tree <em>good</em> if and only if its diameter is at most <var>K</var>.</p>
+<p>You are given an undirected tree with <var>N</var> vertices numbered <var>1</var> through <var>N</var>.
+For each <var>i (1≦i≦N-1)</var>, there is an edge connecting vertices <var>A_i</var> and <var>B_i</var>.</p>
+<p>You want to remove zero or more vertices from the tree, so that the resulting tree is good.
+When a vertex is removed, all incident edges will also be removed.
+The resulting graph must be connected.</p>
+<p>Find the minimum number of vertices that you need to remove in order to produce a good tree.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>2≦N≦2000</var></li>
+<li><var>1≦K≦N-1</var></li>
+<li><var>1≦A_i≦N, 1≦B_i≦N</var></li>
+<li>The graph defined by <var>A_i</var> and <var>B_i</var> is a tree.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>The input is given from Standard Input in the following format:</p>
+<pre><var>N</var> <var>K</var>
+<var>A_1</var> <var>B_1</var>
+<var>A_2</var> <var>B_2</var>
+:
+<var>A_{N-1}</var> <var>B_{N-1}</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the minimum number of vertices that you need to remove in order to produce a good tree.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>6 2
+1 2
+3 2
+4 2
+1 6
+5 6
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>2
+</pre>
+<p>The tree is shown below. Removing vertices <var>5</var> and <var>6</var> will result in a good tree with the diameter of <var>2</var>.</p>
+<div style="text-align: center;">
+<img alt="ctree.png" src="https://agc001.contest.atcoder.jp/img/agc/001/Gg9pvPKw/ctree.png">
+</img></div>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>6 5
+1 2
+3 2
+4 2
+1 6
+5 6
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>0
+</pre>
+<p>Since the given tree is already good, you do not need to remove any vertex.</p></section>
+</div>
+</span>

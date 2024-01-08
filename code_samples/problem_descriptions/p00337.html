@@ -1,0 +1,122 @@
+
+
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({ tex2jax: { inlineMath: [["$","$"], ["\\(","\\)"]], processEscapes: true }});
+</script>
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+
+<H1>村の道路計画 </H1>
+
+<p>
+会津国の若松平野に、集落が点在していました。いくつかの集落の間はまっすぐで互いに行き来できる道で繋がっていて、平野にあるどの集落の間も道を辿って行き来ができます。それぞれの道には長さに応じた維持費がかかりますが、すべての集落が資金を出し合って道を維持していました。
+</p>
+
+<p>
+あるとき、すべての集落が一つの村にまとまることが決まり、村を囲む境界線を引くことになりました。国の決まりでは、村を構成するどの２つの集落を結んだまっすぐな線も、村の外を通ってはいけません（境界線上を通ることは許されます）。さらに、会津国では村を囲む境界線上に道がなければなりません。境界線上に道がない場所には、国が新たに道を作ってくれます。
+</p>
+
+<p>
+しかし、道の維持費は村が支払うので、村人達は境界線をできるだけ短くしたいと考えています。さらに、村人達はすべての集落の間を行き来できる状態を維持しつつ、境界線上にない道を廃止することで、道の長さの合計を最小にすることにしました。
+</p>
+
+<p>
+集落の位置と元々あった道の情報が与えられる。境界線上に道を置き、かつ、すべての集落が行き来できるようにした場合の、道の長さの合計の最小値を計算するプログラムを作成せよ。ただし、集落は大きさのない点、道は幅のない線分とする。 
+</p>
+
+
+
+<h2>Input</h2>
+
+<p>
+入力は以下の形式で与えられる。 
+</p>
+
+<pre>
+<var>V</var> <var>R</var>
+<var>x<sub>1</sub></var> <var>y<sub>1</sub></var>
+<var>x<sub>2</sub></var> <var>y<sub>2</sub></var>
+:
+<var>x<sub>V</sub></var> <var>y<sub>V</sub></var>
+<var>s<sub>1</sub></var> <var>t<sub>1</sub></var>
+<var>s<sub>2</sub></var> <var>t<sub>2</sub></var>
+:
+<var>s<sub>R</sub></var> <var>t<sub>R</sub></var>
+</pre>
+
+<p>
+１行目に集落の数 <var>V</var> (3 &le; <var>V</var> &le; 100) と道の数 <var>R</var> (2 &le; <var>R</var> &le; 1000) が与えられる。
+</p>
+
+<p>
+続く <var>V</var> 行に集落を表す点の情報が与えられる。各行に与えられる２つの整数 <var>x<sub>i</sub></var>, <var>y<sub>i</sub></var> (-1000 &le; <var>x<sub>i</sub></var>, <var>y<sub>i</sub></var> &le; 1000)は、それぞれ <var>i</var> 番目の集落の <var>x</var> 座標、<var>y</var>座標を表す。
+</p>
+
+<p>
+続く <var>R</var> 行に元々あった道の情報が与えられる。各行に与えられる２つの整数 <var>s<sub>i</sub></var>, <var>t<sub>i</sub></var> (1 &le; <var>s<sub>i</sub></var> &lt; <var>t<sub>i</sub></var> &le; <var>V</var>)は、<var>i</var> 番目の道が <var>s<sub>i</sub></var> 番目の集落と <var>t<sub>i</sub></var> 番目の集落をつないでいることを表す。
+</p>
+<p>
+入力は以下の条件を満たす。
+</p>
+
+<ul>
+<li> <var>i</var> &ne; <var>j</var> ならば、<var>i</var> 番目の集落と <var>j</var> 番目の集落の座標は異なる。</li>
+<li> どの２つの集落についても、それらを直接結ぶ道は高々１つしか現れない。</li>
+<li>２つの異なる道が端点以外の点を共有することはない。</li>
+<li> ３つ以上の集落が同一直線上に並んでいることはない。 </li>
+</ul>
+
+
+<h2>Output</h2>
+
+<p>
+条件を満たす道の長さの合計の最小値を１行に実数で出力する。ただし、誤差がプラスマイナス 0.001 を超えてはならない。この条件を満たせば小数点以下何桁表示してもよい。 
+</p>
+
+<h2>Sample Input 1</h2>
+
+<pre>
+5 5
+0 0
+1 1
+3 0
+3 2
+0 2
+1 2
+2 3
+2 4
+3 4
+1 5 
+</pre>
+
+<h2>Sample Output 1</h2>
+<pre>
+11.4142
+</pre>
+<br/>
+
+
+<h2>Sample Input 2</h2>
+<pre>
+7 6
+0 2
+3 0
+2 2
+1 0
+4 1
+2 3
+3 5
+1 3
+2 4
+2 3
+3 5
+3 7
+6 7 
+</pre>
+
+<h2>Sample Output 2</h2>
+<pre>
+18.2521
+</pre>

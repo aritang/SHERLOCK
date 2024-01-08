@@ -1,0 +1,118 @@
+<span class="lang-en">
+<p>Score : <var>800</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>There are <var>N</var> stores called Store <var>1</var>, Store <var>2</var>, <var>\cdots</var>, Store <var>N</var>. Takahashi, who is at his house at time <var>0</var>, is planning to visit some of these stores.</p>
+<p>It takes Takahashi one unit of time to travel from his house to one of the stores, or between any two stores.</p>
+<p>If Takahashi reaches Store <var>i</var> at time <var>t</var>, he can do shopping there after standing in a queue for <var>a_i \times t + b_i</var> units of time. (We assume that it takes no time other than waiting.)</p>
+<p>All the stores close at time <var>T + 0.5</var>. If Takahashi is standing in a queue for some store then, he cannot do shopping there.</p>
+<p>Takahashi does not do shopping more than once in the same store.</p>
+<p>Find the maximum number of times he can do shopping before time <var>T + 0.5</var>.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li>All values in input are integers.</li>
+<li><var>1 \leq N \leq 2 \times 10^5</var></li>
+<li><var>0 \leq a_i \leq 10^9</var></li>
+<li><var>0 \leq b_i \leq 10^9</var></li>
+<li><var>0 \leq T \leq 10^9</var></li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var> <var>T</var>
+<var>a_1</var> <var>b_1</var>
+<var>a_2</var> <var>b_2</var>
+<var>\vdots</var>
+<var>a_N</var> <var>b_N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the answer.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>3 7
+2 0
+3 2
+0 3
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>2
+</pre>
+<p>Here is one possible way to visit stores:</p>
+<ul>
+<li>From time <var>0</var> to time <var>1</var>: in <var>1</var> unit of time, he travels from his house to Store <var>1</var>.</li>
+<li>From time <var>1</var> to time <var>3</var>: for <var>2</var> units of time, he stands in a queue for Store <var>1</var> to do shopping.</li>
+<li>From time <var>3</var> to time <var>4</var>: in <var>1</var> unit of time, he travels from Store <var>1</var> to Store <var>3</var>.</li>
+<li>From time <var>4</var> to time <var>7</var>: for <var>3</var> units of time, he stands in a queue for Store <var>3</var> to do shopping.</li>
+</ul>
+<p>In this way, he can do shopping twice before time <var>7.5</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>1 3
+0 3
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>0
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>5 21600
+2 14
+3 22
+1 3
+1 10
+1 9
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>5
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 4</h3><pre>7 57
+0 25
+3 10
+2 4
+5 15
+3 22
+2 14
+1 15
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 4</h3><pre>3
+</pre></section>
+</div>
+</span>

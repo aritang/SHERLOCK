@@ -1,0 +1,126 @@
+<span class="lang-en">
+<p>Score : <var>400</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3>
+<p>Given is a positive integer <var>N</var>. Consider repeatedly applying the operation below on <var>N</var>:</p>
+<ul>
+<li>First, choose a positive integer <var>z</var> satisfying all of the conditions below:<ul>
+<li><var>z</var> can be represented as <var>z=p^e</var>, where <var>p</var> is a prime number and <var>e</var> is a positive integer;</li>
+<li><var>z</var> divides <var>N</var>;</li>
+<li><var>z</var> is different from all integers chosen in previous operations.</li>
+</ul>
+</li>
+<li>Then, replace <var>N</var> with <var>N/z</var>.</li>
+</ul>
+<p>Find the maximum number of times the operation can be applied.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3>
+<ul>
+<li>All values in input are integers.</li>
+<li><var>1 \leq N \leq 10^{12}</var></li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3>
+<p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3>
+<p>Print the maximum number of times the operation can be applied.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>24
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>3
+</pre>
+<p>We can apply the operation three times by, for example, making the following choices:</p>
+<ul>
+<li>Choose <var>z=2 (=2^1)</var>. (Now we have <var>N=12</var>.)</li>
+<li>Choose <var>z=3 (=3^1)</var>. (Now we have <var>N=4</var>.)</li>
+<li>Choose <var>z=4 (=2^2)</var>. (Now we have <var>N=1</var>.)</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>1
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>0
+</pre>
+<p>We cannot apply the operation at all.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>64
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>3
+</pre>
+<p>We can apply the operation three times by, for example, making the following choices:</p>
+<ul>
+<li>Choose <var>z=2 (=2^1)</var>. (Now we have <var>N=32</var>.)</li>
+<li>Choose <var>z=4 (=2^2)</var>. (Now we have <var>N=8</var>.)</li>
+<li>Choose <var>z=8 (=2^3)</var>. (Now we have <var>N=1</var>.)</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 4</h3><pre>1000000007
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 4</h3><pre>1
+</pre>
+<p>We can apply the operation once by, for example, making the following choice:</p>
+<ul>
+<li><var>z=1000000007 (=1000000007^1)</var>. (Now we have <var>N=1</var>.)</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 5</h3><pre>997764507000
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 5</h3><pre>7
+</pre></section>
+</div>
+</span>

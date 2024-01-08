@@ -1,0 +1,144 @@
+
+<H1><font color="#000">Problem C:</font> Leaky Cryptography</H1>
+
+<p>
+The ACM ICPC judges are very careful about not leaking their problems, and all communications are encrypted. However, one does sometimes make mistakes, like using too weak an
+encryption scheme. Here is an example of that.
+</p>
+<p>
+The encryption chosen was very simple: encrypt each chunk of the input by flipping some bits
+according to a shared key. To provide reasonable security, the size of both chunk and key is 32
+bits.
+</p>
+<p>
+That is, suppose the input was a sequence of <i>m</i> 32-bit integers.
+</p>
+<center>
+<p>
+                   <i>N</i><sub>1</sub>      <i>N</i><sub>2</sub>    <i>N</i><sub>3</sub> ... <i>N<sub>m</sub></i>
+</p>
+</center>
+<p>
+After encoding with the key <i>K</i> it becomes the following sequence of <i>m</i> 32-bit integers.
+</p>
+<center>
+<p>
+
+(<i>N</i><sub>1</sub> &and; <i>K</i>) (<i>N</i><sub>2</sub> &and; <i>K</i>) (<i>N</i><sub>3</sub> &and; <i>K</i>) ... (<i>N</i><sub><i>m</i></sub> &and; <i>K</i>)
+</p>
+</center>
+
+<p>
+where (<i>a</i> &and; <i>b</i>) is the bitwise <i>exclusive or</i> of <i>a</i> and <i>b</i>.
+</p>
+
+<p>
+Exclusive or is the logical operator which is 1 when only one of its operands is 1, and 0 otherwise.
+Here is its definition for 1-bit integers.
+</p>
+<center>
+<pre>
+     0 &oplus; 0 = 0      0 &oplus; 1 = 1
+     1 &oplus; 0 = 1      1 &oplus; 1 =0
+</pre>
+</center>
+<p>
+As you can see, it is identical to addition modulo 2. For two 32-bit integers <i>a</i> and <i>b</i>, their bitwise
+exclusive or <i>a</i> &and; <i>b</i> is defined as follows, using their binary representations, composed of 0's and 1's.
+</p>
+<center>
+<p>
+ <i>a</i> &and; <i>b</i> = <i>a</i><sub>31</sub> ... <i>a</i><sub>1</sub><i>a</i><sub>0</sub> &and; <i>b</i><sub>31</sub> ... <i>b</i><sub>1</sub><i>b</i><sub>0</sub> = <i>c</i><sub>31</sub> ... <i>c</i><sub>1</sub><i>c</i><sub>0</sub>
+</p>
+</center>
+<p>
+where
+</p>
+<center>
+<p>
+   <i>c<sub>i</sub></i> = <i>a<sub>i</sub></i> &oplus; <i>b<sub>i</sub></i> (<i>i</i> = 0, 1, ... , 31).
+</p>
+</center>
+<p>
+For instance, using binary notation, 11010110 &and; 01010101 = 10100011, or using hexadecimal, 
+</p>
+<pre>
+d6 &and; 55 = a3.
+</pre>
+<p>
+Since this kind of encryption is notoriously weak to statistical attacks, the message has to be
+compressed in advance, so that it has no statistical regularity. We suppose that <i>N</i><sub>1</sub> <i>N</i><sub>2</sub> ... <i>N<sub>m</sub></i>
+is already in compressed form.
+</p>
+<p>
+However, the trouble is that the compression algorithm itself introduces some form of regularity:
+after every 8 integers of compressed data, it inserts a checksum, the sum of these integers. That
+is, in the above input, <i>N</i><sub>9</sub> = &sum;<sup>8</sup><sub><i>i</i>=1</sub> <i>N<sub>i</sub></i> = <i>N</i><sub>1</sub> + ... + <i>N</i><sub>8</sub>, where additions are modulo 2<sup>32</sup>.
+
+</p>
+
+<p>
+Luckily, you could intercept a communication between the judges. Maybe it contains a problem for the finals!
+</p>
+<p>
+As you are very clever, you have certainly seen that you can easily find the lowest bit of the key,
+denoted by <i>K</i><sub>0</sub>. On the one hand, if <i>K</i><sub>0</sub> = 1, then after encoding, the lowest bit of &sum;<sup>8</sup><sub><i>i</i>=1</sub> <i>N<sub>i</sub></i> &and; <i>K</i> is unchanged, as <i>K</i><sub>0</sub> is added an even number of times, but the lowest bit of <i>N</i><sub>9</sub> &and; <i>K</i> is changed,
+so they shall differ. On the other hand, if <i>K</i><sub>0</sub> = 0, then after encoding, the lowest bit of &sum;<sup>8</sup><sub><i>i</i>=1</sub> <i>N<sub>i</sub></i> &and; <i>K</i> shall still be identical to the lowest bit of <i>N</i><sub>9</sub> &and; <i>K</i>, as they do not change. For instance, if the lowest bits after encoding are 1 1 1 1 1 1 1 1 1 then <i>K</i><sub>0</sub> must be 1, but if
+they are 1 1 1 1 1 1 1 0 1 then <i>K</i><sub>0</sub> must be 0.
+</p>
+<p>
+So far, so good. Can you do better?
+</p>
+<p>
+You should find the key used for encoding.
+</p>
+
+<H2>Input</H2>
+
+<p>
+The input starts with a line containing only a positive integer <i>S</i>, indicating the number of
+datasets in the input. <i>S</i> is no more than 1000.
+</p>
+<p>
+It is followed by <i>S</i> datasets. Each dataset is composed of nine 32-bit integers corresponding
+to the first nine chunks of a communication. They are written in hexadecimal notation, using
+digits ‘0’ to ‘9’ and lowercase letters ‘a’ to ‘f’, and with no leading zeros. They are separated
+by a space or a newline. Each dataset is ended by a newline.
+</p>
+
+<H2>Output</H2>
+
+<p>
+For each dataset you should output the key used for encoding. Each key shall appear alone on
+its line, and be written in hexadecimal notation, using digits ‘0’ to ‘9’ and lowercase letters ‘a’
+to ‘f’, and with no leading zeros.
+
+</p>
+
+<H2>Sample Input</H2>
+<pre>
+8
+1 1 1 1 1 1 1 1 8
+3 2 3 2 3 2 3 2 6
+3 4 4 7 7 b a 2 2e
+e1 13 ce 28 ca 6 ab 46 a6d
+b08 49e2 6128 f27 8cf2 bc50 7380 7fe1 723b
+4eba eb4 a352 fd14 6ac1 eed1 dd06 bb83 392bc
+ef593c08 847e522f 74c02b9c 26f3a4e1 e2720a01 6fe66007
+7a4e96ad 6ee5cef6 3853cd88
+60202fb8 757d6d66 9c3a9525 fbcd7983 82b9571c ddc54bab 853e52da
+22047c88 e5524401
+</pre>
+
+<H2>Output for the Sample Input</H2>
+<pre>
+0
+2
+6
+1c6
+4924afc7
+ffff95c5
+546991d
+901c4a16
+</pre>
+

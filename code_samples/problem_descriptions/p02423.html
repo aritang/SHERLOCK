@@ -1,0 +1,64 @@
+<h1>Bit Operation I</h1>
+
+<p>
+  Given a non-negative decimal integer $x$, convert it to binary representation $b$ of 32 bits. Then, print the result of the following operations to $b$ respecitvely.
+</p>
+<ul>
+<li>Inversion: change the state of each bit to the opposite state</li>
+<li>Logical left shift: shift left by 1</li>
+<li>Logical right shift: shift right by 1</li>
+</ul>
+
+
+<h2>Input</h2>
+
+<p>
+  The input is given in the following format.
+</p>
+
+<pre>
+$x$
+</pre>
+
+
+<h2>Output</h2>
+<p>
+  Print the given bits, results of inversion, left shift and right shift in a line respectively.
+</p>
+
+<h2>Constraints</h2>
+<ul>
+  <li>$0 \leq x \leq 2^{32} - 1$</li>
+</ul>
+
+<h2>Sample Input 1</h2>
+
+<pre>
+8
+</pre>
+
+<h2>Sample Output 1</h2>
+
+<pre>
+00000000000000000000000000001000
+11111111111111111111111111110111
+00000000000000000000000000010000
+00000000000000000000000000000100
+</pre>
+
+
+<h2>Sample Input 2</h2>
+
+<pre>
+13
+</pre>
+
+<h2>Sample Output 2</h2>
+
+<pre>
+00000000000000000000000000001101
+11111111111111111111111111110010
+00000000000000000000000000011010
+00000000000000000000000000000110
+</pre>
+

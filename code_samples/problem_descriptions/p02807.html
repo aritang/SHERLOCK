@@ -1,0 +1,89 @@
+<span class="lang-en">
+<p>Score : <var>600</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3>
+<p>There are <var>N</var> slimes standing on a number line.
+The <var>i</var>-th slime from the left is at position <var>x_i</var>.</p>
+<p>It is guaruanteed that <var>1 \leq x_1 &lt; x_2 &lt; \ldots &lt; x_N \leq 10^{9}</var>.</p>
+<p>Niwango will perform <var>N-1</var> operations. The <var>i</var>-th operation consists of the following procedures:</p>
+<ul>
+<li>Choose an integer <var>k</var> between <var>1</var> and <var>N-i</var> (inclusive) with equal probability.</li>
+<li>Move the <var>k</var>-th slime from the left, to the position of the neighboring slime to the right.</li>
+<li>Fuse the two slimes at the same position into one slime.</li>
+</ul>
+<p>Find the total distance traveled by the slimes multiplied by <var>(N-1)!</var> (we can show that this value is an integer), modulo <var>(10^{9}+7)</var>. If a slime is born by a fuse and that slime moves, we count it as just one slime.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3>
+<ul>
+<li><var>2 \leq N \leq 10^{5}</var></li>
+<li><var>1 \leq x_1 &lt; x_2 &lt; \ldots &lt; x_N \leq 10^{9}</var></li>
+<li><var>x_i</var> is an integer.</li>
+</ul>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Subtasks</h3>
+<ul>
+<li><var>400</var> points will be awarded for passing the test cases satisfying <var>N \leq 2000</var>.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3>
+<p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+<var>x_1</var> <var>x_2</var> <var>\ldots</var> <var>x_N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3>
+<p>Print the answer.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>3
+1 2 3
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>5
+</pre>
+<ul>
+<li>With probability <var>\frac{1}{2}</var>, the leftmost slime is chosen in the first operation, in which case the total distance traveled is <var>2</var>.</li>
+<li>With probability <var>\frac{1}{2}</var>, the middle slime is chosen in the first operation, in which case the total distance traveled is <var>3</var>.</li>
+<li>The answer is the expected total distance traveled, <var>2.5</var>, multiplied by <var>2!</var>, which is <var>5</var>.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>12
+161735902 211047202 430302156 450968417 628894325 707723857 731963982 822804784 880895728 923078537 971407775 982631932
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>750927044
+</pre>
+<ul>
+<li>Find the expected value multiplied by <var>(N-1)!</var>, modulo <var>(10^9+7)</var>.</li>
+</ul></section>
+</div>
+</span>

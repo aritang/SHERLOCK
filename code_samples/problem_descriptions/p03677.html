@@ -1,0 +1,75 @@
+<span class="lang-en">
+<p>Score : <var>700</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>Snuke is buying a lamp.
+The light of the lamp can be adjusted to <var>m</var> levels of brightness, represented by integers from <var>1</var> through <var>m</var>, by the two buttons on the remote control.</p>
+<p>The first button is a "forward" button. When this button is pressed, the brightness level is increased by <var>1</var>, except when the brightness level is <var>m</var>, in which case the brightness level becomes <var>1</var>.</p>
+<p>The second button is a "favorite" button. When this button is pressed, the brightness level becomes the favorite brightness level <var>x</var>, which is set when the lamp is purchased.</p>
+<p>Snuke is thinking of setting the favorite brightness level <var>x</var> so that he can efficiently adjust the brightness.
+He is planning to change the brightness <var>n-1</var> times. In the <var>i</var>-th change, the brightness level is changed from <var>a_i</var> to <var>a_{i+1}</var>. The initial brightness level is <var>a_1</var>.
+Find the number of times Snuke needs to press the buttons when <var>x</var> is set to minimize this number.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>2 \leq n,m \leq 10^5</var></li>
+<li><var>1 \leq a_i\leq m</var></li>
+<li><var>a_i \neq a_{i+1}</var></li>
+<li><var>n</var>, <var>m</var> and <var>a_i</var> are integers.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>n</var> <var>m</var>
+<var>a_1</var> <var>a_2</var> … <var>a_n</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the minimum number of times Snuke needs to press the buttons.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>4 6
+1 5 1 4
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>5
+</pre>
+<p>When the favorite brightness level is set to <var>1</var>, <var>2</var>, <var>3</var>, <var>4</var>, <var>5</var> and <var>6</var>, Snuke needs to press the buttons <var>8</var>, <var>9</var>, <var>7</var>, <var>5</var>, <var>6</var> and <var>9</var> times, respectively.
+Thus, Snuke should set the favorite brightness level to <var>4</var>.
+In this case, the brightness is adjusted as follows:</p>
+<ul>
+<li>In the first change, press the favorite button once, then press the forward button once.</li>
+<li>In the second change, press the forward button twice.</li>
+<li>In the third change, press the favorite button once.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>10 10
+10 9 8 7 6 5 4 3 2 1
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>45
+</pre></section>
+</div>
+</span>

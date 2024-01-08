@@ -1,0 +1,135 @@
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+});
+</script>
+<script type="text/javascript" async
+src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+<h1>F: 紙の折りたたみ / Folding Paper</h1>
+
+
+<h2>問題文</h2>
+
+<p>
+高さ $H$ マス、幅 $W$ マスの格子状に区切られた長方形の紙がある。
+$0$ から数えて上から $i$ 行目、左から $j$ 列目のマスには整数 $i \times W+j$ が書かれている。 $H=2, W=3$ の例を下の図に示す。
+</p>
+
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE3_ACPC2016Day1RUPC_image02" width="180" height="120">
+
+<p>
+AOR イカちゃんは、この紙に対して次のような操作を順に行った。
+</p>
+
+<ol>
+<li>
+$1$ マス分の面積になるまでマスの区切り線に沿って繰り返し折る。この時の折る線や山谷、順番などは任意である。紙を破らない任意の折り方ができる。
+</li>
+<li>
+$4$ 辺を切り落として $H \times W$ 枚の紙に分割する。
+</li>
+<li>
+上から順にめくっていき、書かれていた整数を並べた数列 $S$ を作る。
+</li>
+</ol>
+
+<p>
+例えば、下の図のように折った後切った場合、$S$ として $4, 3, 0, 5, 2, 1$ が得られる。このように、間に差し込むような折り方も可能である。
+</p>
+
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE3_ACPC2016Day1RUPC_image00" width="600" height="150">
+<br>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE3_ACPC2016Day1RUPC_image01" width="200" height="200">
+
+<p>
+あなたは AOR イカちゃんから数列 $S$ を受け取った。
+しかし、AOR イカちゃんのことを信用していないので、これが本物か確かめたい。
+$S$ と一致するような紙の折り方が存在するなら "YES" を、しないなら "NO" を出力するプログラムを書け。
+</p>
+
+<h2>入力</h2>
+
+<p>
+$H \ W$<br>
+$S_0 \cdots S_{HW-1}$<br>
+</p>
+
+<h2>入力の制約</h2>
+
+<p>
+$1 \le H, W \le 500$<br>
+$S$ は $0$ から $H \times W - 1$ までの整数を $1$ つずつ含む<br>
+</p>
+
+<h2>出力</h2>
+
+"YES" または "NO" を $1$ 行で出力せよ。
+
+<h2>サンプル</h2>
+
+<h3>サンプル入力1</h3>
+
+<pre>
+1 4
+0 1 2 3
+</pre>
+
+<h3>サンプル出力1</h3>
+
+<pre>
+YES
+</pre>
+
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE3_ACPC2016Day1RUPC_image03" width="600" height="150">
+
+<h3>サンプル入力2</h3>
+
+<pre>
+2 3
+4 3 0 5 2 1
+</pre>
+
+<h3>サンプル出力2</h3>
+
+<pre>
+YES
+</pre>
+
+<p>
+問題文中の例である。
+</p>
+
+<h3>サンプル入力3</h3>
+
+<pre>
+1 4
+0 2 1 3
+</pre>
+
+<h3>サンプル出力3</h3>
+
+<pre>
+NO
+</pre>
+
+<h3>サンプル入力4</h3>
+
+<pre>
+2 2
+0 1 3 2
+</pre>
+
+<h3>サンプル出力4</h3>
+
+<pre>
+YES
+</pre>
+
+<p>
+$2$ 回半分に折る。
+</p>

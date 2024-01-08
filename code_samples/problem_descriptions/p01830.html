@@ -1,0 +1,98 @@
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({ tex2jax: { inlineMath: [["$","$"], ["\\(","\\)"]], processEscapes: true }});
+</script>
+<script type='text/javascript' src='http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
+</script>
+
+
+<h2>Delete Files</h2>
+
+<p>
+You are using an operating system named "Jaguntu". Jaguntu provides "Filer", a file manager with a graphical user interface.
+</p>
+
+<p>
+When you open a folder with Filer, the name list of files in the folder is displayed on a Filer window. Each filename is displayed within a rectangular region, and this region is called a filename region. Each filename region is aligned to the left side of the Filer window. The height of each filename region is 1, and the width of each filename region is the filename length. For example, when three files "acm.in1", "acm.c~", and "acm.c" are stored in this order in a folder, it looks like Fig. C-1 on the Filer window.
+</p>
+
+<center>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_JAGAsia2015_C_1"><br/>
+</center>
+
+<p>
+You can delete files by taking the following steps. First, you select a rectangular region with dragging a mouse. This region is called selection region. Next, you press the delete key on your keyboard. A file is deleted if and only if its filename region intersects with the selection region. After the deletion, Filer shifts each filename region to the upside on the Filer window not to leave any top margin on any remaining filename region. For example, if you select a region like Fig. C-2, then the two files "acm.in1" and "acm.c~" are deleted, and the remaining file "acm.c" is displayed on the top of the Filer window as Fig. C-3.
+</p>
+
+<p>
+You are opening a folder storing $N$ files with Filer. Since you have almost run out of disk space, you want to delete unnecessary files in the folder. Your task is to write a program that calculates the minimum number of times to perform deletion operation described above.
+</p>
+
+<center>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_JAGAsia2015_C_2"><br/>
+<br/>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_JAGAsia2015_C_3"><br/>
+</center>
+
+<h3>Input</h3>
+<p>
+The input consists of a single test case. The test case is formatted as follows.<br/>
+<br/>
+
+$N$<br/>
+$D_1$ $L_1$<br/>
+$D_2$ $L_2$<br/>
+...<br/>
+$D_N$ $L_N$<br/>
+</p>
+
+<p>
+The first line contains one integer $N$ ($1 \leq N \leq 1,000$), which is the number of files in a folder. Each of the next $N$ lines contains a character $D_i$ and an integer $L_i$: $D_i$ indicates whether the $i$-th file should be deleted or not, and $L_i$ ($1 \leq L_i \leq 1,000$) is the filename length of the $i$-th file. If $D_i$ is 'y', the $i$-th file should be deleted. Otherwise, $D_i$ is always 'n', and you should not delete the $i$-th file.
+</p>
+
+<h3>Output</h3>
+<p>
+Output the minimum number of deletion operations to delete only all the unnecessary files.
+</p>
+
+<h3>Sample Input 1</h3>
+<pre>
+3
+y 7
+y 6
+n 5
+</pre>
+
+<h3>Output for the Sample Input 1</h3>
+<pre>
+1
+</pre>
+
+<h3>Sample Input 2</h3>
+<pre>
+3
+y 7
+n 6
+y 5
+</pre>
+
+<h3>Output for the Sample Input 2</h3>
+<pre>
+2
+</pre>
+
+<h3>Sample Input 3</h3>
+<pre>
+6
+y 4
+n 5
+y 4
+y 6
+n 3
+y 6
+</pre>
+
+<h3>Output for the Sample Input 3</h3>
+<pre>
+2
+</pre>

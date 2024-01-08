@@ -1,0 +1,82 @@
+<span class="lang-en">
+<p>Score : <var>1800</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>Given is an integer <var>N</var>.
+How many permutations <var>(P_0,P_1,\cdots,P_{2N-1})</var> of <var>(0,1,\cdots,2N-1)</var> satisfy the following condition?</p>
+<ul>
+<li>For each <var>i</var> <var>(0 \leq i \leq 2N-1)</var>, <var>N^2 \leq i^2+P_i^2 \leq (2N)^2</var> holds.</li>
+</ul>
+<p>Since the number can be enormous, compute it modulo <var>M</var>.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 \leq N \leq 250</var></li>
+<li><var>2 \leq M \leq 10^9</var></li>
+<li>All values in input are integers.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var> <var>M</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the number of permutations that satisfy the condition, modulo <var>M</var>.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>2 998244353
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>4
+</pre>
+<p>Four permutations satisfy the condition:</p>
+<ul>
+<li><var>(2,3,0,1)</var></li>
+<li><var>(2,3,1,0)</var></li>
+<li><var>(3,2,0,1)</var></li>
+<li><var>(3,2,1,0)</var></li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>10 998244353
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>53999264
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>200 998244353
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>112633322
+</pre></section>
+</div>
+</span>

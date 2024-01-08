@@ -1,0 +1,110 @@
+<span class="lang-en">
+<p>Score : <var>1100</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>Let us consider a grid of squares with <var>10^9</var> rows and <var>N</var> columns. Let <var>(i, j)</var> be the square at the <var>i</var>-th column <var>(1 \leq i \leq N)</var> from the left and <var>j</var>-th row <var>(1 \leq j \leq 10^9)</var> from the bottom.</p>
+<p>Snuke has cut out some part of the grid so that, for each <var>i = 1, 2, ..., N</var>, the bottom-most <var>h_i</var> squares are remaining in the <var>i</var>-th column from the left.
+Now, he will paint the remaining squares in red and blue.
+Find the number of the ways to paint the squares so that the following condition is satisfied:</p>
+<ul>
+<li>Every remaining square is painted either red or blue.</li>
+<li>For all <var>1 \leq i \leq N-1</var> and <var>1 \leq j \leq min(h_i, h_{i+1})-1</var>, there are exactly two squares painted red and two squares painted blue among the following four squares: <var>(i, j), (i, j+1), (i+1, j)</var> and <var>(i+1, j+1)</var>.</li>
+</ul>
+<p>Since the number of ways can be extremely large, print the count modulo <var>10^9+7</var>.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 \leq N \leq 100</var></li>
+<li><var>1 \leq h_i \leq 10^9</var></li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+<var>h_1</var> <var>h_2</var> <var>...</var> <var>h_N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the number of the ways to paint the squares, modulo <var>10^9+7</var>.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>9
+2 3 5 4 1 2 4 2 1
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>12800
+</pre>
+<p>One of the ways to paint the squares is shown below:</p>
+<pre>
+  <span style="color:blue">#</span>
+  <span style="color:blue">#</span><span style="color:red">#</span>  <span style="color:blue">#</span>
+ <span style="color:red">#</span><span style="color:blue">#</span><span style="color:red">#</span>  <span style="color:blue">#</span>
+<span style="color:blue">#</span><span style="color:red">#</span><span style="color:blue">#</span><span style="color:red">#</span> <span style="color:blue">#</span><span style="color:blue">#</span><span style="color:red">#</span>
+<span style="color:red">#</span><span style="color:blue">#</span><span style="color:red">#</span><span style="color:blue">#</span><span style="color:red">#</span><span style="color:red">#</span><span style="color:red">#</span><span style="color:blue">#</span><span style="color:blue">#</span>
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>2
+2 2
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>6
+</pre>
+<p>There are six ways to paint the squares, as follows:</p>
+<pre>
+<span style="color:blue">#</span><span style="color:blue">#</span> <span style="color:blue">#</span><span style="color:red">#</span> <span style="color:red">#</span><span style="color:red">#</span> <span style="color:red">#</span><span style="color:blue">#</span> <span style="color:blue">#</span><span style="color:red">#</span> <span style="color:red">#</span><span style="color:blue">#</span>
+<span style="color:red">#</span><span style="color:red">#</span> <span style="color:blue">#</span><span style="color:red">#</span> <span style="color:blue">#</span><span style="color:blue">#</span> <span style="color:red">#</span><span style="color:blue">#</span> <span style="color:red">#</span><span style="color:blue">#</span> <span style="color:blue">#</span><span style="color:red">#</span>
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>5
+2 1 2 1 2
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>256
+</pre>
+<p>Every way to paint the squares satisfies the condition.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 4</h3><pre>9
+27 18 28 18 28 45 90 45 23
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 4</h3><pre>844733013
+</pre>
+<p>Remember to print the number of ways modulo <var>10^9 + 7</var>.</p></section>
+</div>
+</span>

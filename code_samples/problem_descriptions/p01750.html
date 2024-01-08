@@ -1,0 +1,71 @@
+
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({ tex2jax: { inlineMath: [["$","$"], ["\\(","\\)"]], processEscapes: true }});
+</script>
+<script language="JavaScript" type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+
+
+<p>
+すぬけ君は，誕生日プレゼントとして辺の長さが <var>l<sub>1</sub> &times; . . . &times; l<sub>d</sub></var> の <var>d</var> 次元超直方体をもらった．すぬけ君は，この直方体を <var>i</var> 番目の座標の範囲が 0 以上 <var>l<sub>i</sub></var> 以下となるようにおき，<var>x<sub>1</sub> + . . .  + x<sub>d</sub> &le; s</var> をみたす部分を食べてしまった．ただし <var>x<sub>i</sub></var> は <var>i</var> 番目の座標を表す．すぬけ君の食べた部分の体積を <var>V</var> とすると，<var>d!V</var> (<var>V</var> に <var>d</var> の階乗をかけた値) は整数となることが証明できる．<var>d!V</var> を1,000,000,007 で割ったあまりを求めよ．
+</p>
+
+
+<h2>Constraints</h2>
+
+<ul>
+<li> 2 &le; <var>d</var> &le; 300 </li>
+<li> 1 &le; <var>l<sub>i</sub></var> &le; 300</li>
+<li> 0 &le; <var>s</var> &le; $\sum l_{i}$</li>
+<li> 入力は全て整数である</li>
+</ul>
+
+
+
+
+
+<h2>Input</h2>
+<pre>
+<var>d</var>
+<var>l<sub>1</sub></var>
+. . .
+<var>l<sub>d</sub></var>
+<var>s</var>
+</pre>
+
+<h2>Output</h2>
+<p>
+<var>d!V</var> を 1,000,000,007 で割ったあまりを出力せよ．
+</p>
+
+<h2>Sample Input 1</h2>
+<pre>
+2
+6
+3
+4
+</pre>
+
+<h2>Sample Output 1</h2>
+<pre>
+15
+</pre>
+
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_JAGSummer2014_hyperrectangle" title="Hyperrectangle" alt="Hyperrectangle" width="200">
+
+
+<h2>Sample Input 2</h2>
+<pre>
+5
+12
+34
+56
+78
+90
+123
+</pre>
+
+<h2>Sample Output 2</h2>
+<pre>
+433127538
+</pre>

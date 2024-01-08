@@ -1,0 +1,70 @@
+<span class="lang-en">
+<p>Score : <var>800</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>There is a square grid with <var>N</var> rows and <var>M</var> columns.
+Each square contains an integer: <var>0</var> or <var>1</var>. The square at the <var>i</var>-th row from the top and the <var>j</var>-th column from the left contains <var>a_{ij}</var>.</p>
+<p>Among the <var>2^{N+M}</var> possible pairs of a subset <var>A</var> of the rows and a subset <var>B</var> of the columns, find the number of the pairs that satisfy the following condition, modulo <var>998244353</var>:</p>
+<ul>
+<li>The sum of the <var>|A||B|</var> numbers contained in the intersection of the rows belonging to <var>A</var> and the columns belonging to <var>B</var>, is odd.</li>
+</ul>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 \leq N,M \leq 300</var></li>
+<li><var>0 \leq a_{i,j} \leq 1(1\leq i\leq N,1\leq j\leq M)</var></li>
+<li>All values in input are integers.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var> <var>M</var>
+<var>a_{11}</var> <var>...</var> <var>a_{1M}</var>
+<var>:</var>
+<var>a_{N1}</var> <var>...</var> <var>a_{NM}</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the number of the pairs of a subset of the rows and a subset of the columns that satisfy the condition, modulo <var>998244353</var>.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>2 2
+0 1
+1 0
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>6
+</pre>
+<p>For example, if <var>A</var> consists of the first row and <var>B</var> consists of both columns, the sum of the numbers contained in the intersection is <var>0+1=1</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>2 3
+0 0 0
+0 1 0
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>8
+</pre></section>
+</div>
+</span>

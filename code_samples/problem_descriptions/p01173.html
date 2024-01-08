@@ -1,0 +1,103 @@
+
+<H1><font color="#000">Problem C:</font> Dig or Climb</H1>
+
+<p>
+Benjamin Forest VIII is a king of a country. One of his best friends Nod lives in a village far from
+his castle. Nod gets seriously sick and is on the verge of death. Benjamin orders his subordinate
+Red to bring good medicine for him as soon as possible. However, there is no road from the
+castle to the village. Therefore, Red needs to climb over mountains and across canyons to reach
+the village. He has decided to get to the village on the shortest path on a map, that is, he will
+move on the straight line between the castle and the village. Then his way can be considered as
+polyline with <i>n</i> points (<i>x</i><sub>1</sub>, <i>y</i><sub>1</sub>) . . . (<i>x<sub>n</sub></i> , <i>y<sub>n</sub></i> ) as illustlated in the following figure.
+</p>
+
+<center>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE1_digOrClimb">
+<p>Figure 1: An example route from the castle to the village</p>
+</center>
+
+<p>
+Here, <i>x<sub>i</sub></i> indicates the distance between the castle and the point <i>i</i>, as the crow flies, and <i>y<sub>i</sub></i>
+indicates the height of the point <i>i</i>. The castle is located on the point (<i>x</i><sub>1</sub> , <i>y</i><sub>1</sub> ), and the village is
+located on the point (<i>x<sub>n</sub></i> , <i>y<sub>n</sub></i>).
+</p>
+<p>
+Red can walk in speed <i>v<sub>w</sub></i> . Also, since he has a skill to cut a tunnel through a mountain
+horizontally, he can move inside the mountain in speed <i>v<sub>c</sub></i>.
+</p>
+<p>
+Your job is to write a program to the minimum time to get to the village.
+</p>
+
+<H2>Input</H2>
+
+<p>
+The input is a sequence of datasets. Each dataset is given in the following format:
+</p>
+
+<pre>
+<i>n</i>
+<i>v<sub>w</sub> v<sub>c</sub></i>
+<i>x</i><sub>1</sub> <i>y</i><sub>1</sub>
+...
+<i>x<sub>n</sub> y<sub>n</sub></i>
+</pre>
+
+<p>
+You may assume all the following: <i>n</i> &le; 1,000, 1 &le; <i>v<sub>w</sub></i>, <i>v<sub>c</sub></i> &le; 10, -10,000 &le; <i>x<sub>i</sub></i>, <i>y<sub>i</sub></i> &le; 10,000, and
+<i>x<sub>i</sub></i> &lt; <i>x<sub>j</sub></i> for all <i>i</i> &lt; <i>j</i>.
+</p>
+<p>
+The input is terminated in case of <i>n</i> = 0. This is not part of any datasets and thus should not
+be processed.
+</p>
+
+<H2>Output</H2>
+
+<p>
+For each dataset, you should print the minimum time required to get to the village in a line.
+Each minimum time should be given as a decimal with an arbitrary number of fractional digits
+and with an absolute error of at most 10<sup>-6</sup> . No extra space or character is allowed.
+</p>
+
+<H2>Sample Input</H2>
+<pre>
+3
+2 1
+0 0
+50 50
+100 0
+3
+1 1
+0 0
+50 50
+100 0
+3
+1 2
+0 0
+50 50
+100 0
+3
+2 1
+0 0
+100 100
+150 50
+6
+1 2
+0 0
+50 50
+100 0
+150 0
+200 50
+250 0
+0
+</pre>
+
+<H2>Output for the Sample Input</H2>
+<pre>
+70.710678
+100.000000
+50.000000
+106.066017
+150.000000
+</pre>

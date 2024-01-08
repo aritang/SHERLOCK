@@ -1,0 +1,140 @@
+
+<h1>A Two Floors Dungeon</h1>
+<p>It was the last day of the summer camp you strayed into the labyrinth on the way to Komaba Campus, the University of Tokyo. 
+The contest has just begun.
+Your teammates  must impatiently wait for you.
+So you have to escape from this labyrinth as soon as possible.<br>
+
+The labyrinth is represented by a grid map.
+Initially, each grid  except for walls  and stairs is either on the first floor or on the second floor.
+Some grids have a switch which can move up or down some of the grids (the grids on the first floor move to the second floor, and the grids on the second floor  to the first floor).<br>
+
+ In each step, you can take one of the following actions:<br>
+
+</p><ul><li><p> Move to an adjacent grid (includes stairs) on the same floor you  are now in.
+</p></li><li><p> Move to another floor (if you  are in the stairs grid).
+</p></li><li><p> Operate the switch (if you  are in a grid  with a switch).
+</p></li></ul>
+
+<p>Luckily, you have just found a map of the labyrinth for some unknown reason.
+Let's calculate the minimum step to escape from the labyrinth, and go to the place your teammates are waiting!<br>
+
+</p>
+<h2>Input</h2>
+<p>The format of the input is as follows.<br>
+
+</p><blockquote>
+<var>W</var> <var>H</var><br><var>M<sub>11</sub>M<sub>12</sub>M<sub>13</sub>...M<sub>1W</sub></var><br><var>M<sub>21</sub>M<sub>22</sub>M<sub>23</sub>...M<sub>2W</sub></var><br>........<br><var>M<sub>H1</sub>M<sub>H2</sub>M<sub>H3</sub>...M<sub>HW</sub></var><br><var>S</var><br><var>MS<sub>111</sub>MS<sub>112</sub>MS<sub>113</sub>...MS<sub>11W</sub></var><br><var>MS<sub>121</sub>MS<sub>122</sub>MS<sub>123</sub>...MS<sub>12W</sub></var><br>........<br><var>MS<sub>1H1</sub>MS<sub>1H2</sub>MS<sub>1H3</sub>...MS<sub>1HW</sub></var><br><var>MS<sub>211</sub>MS<sub>212</sub>MS<sub>213</sub>...MS<sub>21W</sub></var><br><var>MS<sub>221</sub>MS<sub>222</sub>MS<sub>223</sub>...MS<sub>22W</sub></var><br>........<br><var>MS<sub>2H1</sub>MS<sub>2H2</sub>MS<sub>2H3</sub>...MS<sub>2HW</sub></var><br><var>MS<sub>S11</sub>MS<sub>S12</sub>MS<sub>S13</sub>...MS<sub>S1W</sub></var><br><var>MS<sub>S21</sub>MS<sub>S22</sub>MS<sub>S23</sub>...MS<sub>S2W</sub></var><br>........<br><var>MS<sub>SH1</sub>MS<sub>SH2</sub>MS<sub>SH3</sub>...MS<sub>SHW</sub></var><br></blockquote>
+
+<p>The first line contains two integers <var>W</var> (<var>3 &le; W &le; 50</var>) and <var>H</var> (<var>3 &le; H &le; 50</var>).  They represent the width and height of the labyrinth, respectively.<br>
+ The following <var>H</var> lines represent the initial state of the labyrinth.
+Each of <var>M<sub>ij</sub></var> is  one of the following symbols:<br>
+
+</p><ul><li>  '#' representing a wall,
+</li><li>  '|' representing stairs,
+</li><li>  '_' representing a grid which is initially on the first floor,
+</li><li>  '^' representing a grid which is initially on the second floor,
+</li><li>  a lowercase letter from 'a' to 'j' representing a switch the grid has, and the grid is initially on the first floor,
+</li><li>  an uppercase letter from 'A' to 'J' representing a switch the grid has, and the grid is initially on the second floor,
+</li><li>  '%' representing  the grid you  are initially in (which is initially on the first floor) or
+</li><li>  '&amp;' representing  the exit of the labyrinth (which is initially on the first floor).
+</li></ul>
+
+<p>The next line contains one integer <var>S</var> (<var>0 &le; S &le; 10</var>), and then the following <var>SH</var> lines represent the information of the switches.
+Each of <var>MS<sub>kij</sub></var> is  one of:<br>
+
+</p><ul><li>  '#' if <var>M<sub>ij</sub></var> is a '#',
+</li><li>  '|' if <var>M<sub>ij</sub></var> is a '|',
+</li><li>  '*' if the grid is moved by  the switch represented by the <var>k</var>-th alphabet letter, or
+</li><li>  '.' otherwise.
+</li></ul>
+
+<p>Note that the grid which contains a switch may be moved by operating the switch.
+In this case, you will move together with the grid.<br>
+You may assume each of the '%' (start) and '&amp;' (goal)  appears  exacyly once, that the map is surround by walls, and that each alphabet in the map is any of the letters from 'A' (or 'a') to <var>S</var>-th alphabet letter.<br>
+
+</p>
+<h2>Output</h2>
+<p>Print the minimum step to reach the goal in one line.
+If there is no solution, print &quot;-1&quot;.
+</p>
+
+<h2>Sample Input 1</h2>
+
+<pre>6 6
+######
+#_|A%#
+#B#_|#
+#^BBa#
+#B&amp;A##
+######
+2
+######
+#*|*.#
+#.#.|#
+#*.**#
+#...##
+######
+######
+#*|*.#
+#*#.|#
+#..**#
+#..*##
+######
+</pre>
+
+<h2>Output for the Sample Input 1</h2>
+
+<pre>21
+</pre>
+
+<h2>Sample Input 2</h2>
+
+<pre>8 3
+########
+#%||Aa&amp;#
+########
+2
+########
+#*||*..#
+########
+########
+#.||*.*#
+########
+</pre>
+
+<h2>Output for the Sample Input 2</h2>
+
+<pre>7
+</pre>
+
+<h2>Sample Input 3</h2>
+
+<pre>3 4
+###
+#%#
+#&amp;#
+###
+0
+</pre>
+
+<h2>Output for the Sample Input 3</h2>
+
+<pre>1
+</pre>
+
+<h2>Sample Input 4</h2>
+
+<pre>3 5
+###
+#%#
+#^#
+#&amp;#
+###
+0
+</pre>
+
+<h2>Output for the Sample Input 4</h2>
+
+<pre>-1
+</pre>

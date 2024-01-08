@@ -1,0 +1,100 @@
+<span class="lang-en">
+<p>Score : <var>1700</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>We have a grid with <var>N</var> rows and <var>N</var> columns.
+The cell at the <var>i</var>-th row and <var>j</var>-th column is denoted (<var>i</var>, <var>j</var>).</p>
+<p>Initially, <var>M</var> of the cells are painted black, and all other cells are white.
+Specifically, the cells (<var>a_1</var>, <var>b_1</var>), (<var>a_2</var>, <var>b_2</var>), <var>...</var>, (<var>a_M</var>, <var>b_M</var>) are painted black.</p>
+<p>Snuke will try to paint as many white cells black as possible, according to the following rule:</p>
+<ul>
+<li>If two cells (<var>x</var>, <var>y</var>) and (<var>y</var>, <var>z</var>) are both black and a cell (<var>z</var>, <var>x</var>) is white for integers <var>1≤x,y,z≤N</var>, paint the cell (<var>z</var>, <var>x</var>) black.</li>
+</ul>
+<p>Find the number of black cells when no more white cells can be painted black.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1≤N≤10^5</var></li>
+<li><var>1≤M≤10^5</var></li>
+<li><var>1≤a_i,b_i≤N</var></li>
+<li>All pairs (<var>a_i</var>, <var>b_i</var>) are distinct.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>The input is given from Standard Input in the following format:</p>
+<pre><var>N</var> <var>M</var>
+<var>a_1</var> <var>b_1</var>
+<var>a_2</var> <var>b_2</var>
+<var>:</var>
+<var>a_M</var> <var>b_M</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the number of black cells when no more white cells can be painted black.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>3 2
+1 2
+2 3
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>3
+</pre>
+<p>It is possible to paint one white cell black, as follows:</p>
+<ul>
+<li>Since cells (<var>1</var>, <var>2</var>) and (<var>2</var>, <var>3</var>) are both black and a cell (<var>3</var>, <var>1</var>) is white, paint the cell (<var>3</var>, <var>1</var>) black.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>2 2
+1 1
+1 2
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>4
+</pre>
+<p>It is possible to paint two white cells black, as follows:</p>
+<ul>
+<li>Since cells (<var>1</var>, <var>1</var>) and (<var>1</var>, <var>2</var>) are both black and a cell (<var>2</var>, <var>1</var>) is white, paint the cell (<var>2</var>, <var>1</var>) black.</li>
+<li>Since cells (<var>2</var>, <var>1</var>) and (<var>1</var>, <var>2</var>) are both black and a cell (<var>2</var>, <var>2</var>) is white, paint the cell (<var>2</var>, <var>2</var>) black.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>4 3
+1 2
+1 3
+4 4
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>3
+</pre>
+<p>No white cells can be painted black.</p></section>
+</div>
+</span>

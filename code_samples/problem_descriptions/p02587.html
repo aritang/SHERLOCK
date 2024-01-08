@@ -1,0 +1,110 @@
+<span class="lang-en">
+<p>Score : <var>600</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>We have <var>N</var> strings of lowercase English letters: <var>S_1, S_2, \cdots, S_N</var>.</p>
+<p>Takahashi wants to make a string that is a palindrome by choosing one or more of these strings - the same string can be chosen more than once - and concatenating them in some order of his choice.</p>
+<p>The cost of using the string <var>S_i</var> once is <var>C_i</var>, and the cost of using it multiple times is <var>C_i</var> multiplied by that number of times.</p>
+<p>Find the minimum total cost needed to choose strings so that Takahashi can make a palindrome.</p>
+<p>If there is no choice of strings in which he can make a palindrome, print <var>-1</var>.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 \leq N \leq 50</var></li>
+<li><var>1 \leq |S_i| \leq 20</var></li>
+<li><var>S_i</var> consists of lowercase English letters.</li>
+<li><var>1 \leq C_i \leq 10^9</var></li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+<var>S_1</var> <var>C_1</var>
+<var>S_2</var> <var>C_2</var>
+<var>:</var>
+<var>S_N</var> <var>C_N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the minimum total cost needed to choose strings so that Takahashi can make a palindrome, or <var>-1</var> if there is no such choice.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>3
+ba 3
+abc 4
+cbaa 5
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>7
+</pre>
+<p>We have <code>ba</code>, <code>abc</code>, and <code>cbaa</code>.</p>
+<p>For example, we can use <code>ba</code> once and <code>abc</code> once for a cost of <var>7</var>, then concatenate them in the order <code>abc</code>, <code>ba</code> to make a palindrome.
+Also, we can use <code>abc</code> once and <code>cbaa</code> once for a cost of <var>9</var>, then concatenate them in the order <code>cbaa</code>, <code>abc</code> to make a palindrome.</p>
+<p>We cannot make a palindrome for a cost less than <var>7</var>, so we should print <var>7</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>2
+abcab 5
+cba 3
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>11
+</pre>
+<p>We can choose <code>abcab</code> once and <code>cba</code> twice, then concatenate them in the order <code>abcab</code>, <code>cba</code>, <code>cba</code> to make a palindrome for a cost of <var>11</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>4
+ab 5
+cba 3
+a 12
+ab 10
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>8
+</pre>
+<p>We can choose <code>a</code> once, which is already a palindrome, but it is cheaper to concatenate <code>ab</code> and <code>cba</code>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 4</h3><pre>2
+abc 1
+ab 2
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 4</h3><pre>-1
+</pre>
+<p>We cannot make a palindrome, so we should print <var>-1</var>.</p></section>
+</div>
+</span>

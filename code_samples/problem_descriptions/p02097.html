@@ -1,0 +1,53 @@
+
+<h2>J: Horizontal-Vertical Permutation</h2>
+
+<h3>Problem Statement</h3>
+<p>You are given a positive integer <var>N</var>. Your task is to determine if there exists a square matrix <var>A</var> whose dimension is <var>N</var> that satisfies the following conditions and provide an example of such matrices if it exists. <var>A_{i, j}</var> denotes the element of matrix <var>A</var> at the <var>i</var>-th row and <var>j</var>-th column.</p>
+
+<ul>
+<li> For all <var>i, j</var> <var>(1 \leq i, j \leq N)</var>, <var>A_{i, j}</var> is an integer that satisfies <var>1 \leq A_{i, j} \leq 2N - 1</var>.</li>
+<li> For all <var>k = 1, 2, ..., N</var>, a set consists of  <var>2N - 1</var> elements from the <var>k</var>-th row or <var>k</var>-th column is <var>\{1, 2, ..., 2N - 1\}</var>.</li>
+</ul>
+
+<p>If there are more than one possible matrices, output any of them.</p>
+
+<h3>Input</h3>
+<pre><var>N</var></pre>
+
+<p>Input consists of one line, which contains the integer <var>N</var> that is the size of a square matrix to construct.</p>
+
+<h3>Constraint</h3>
+<ul>
+<li> <var>N</var> is an integer that satisfies <var>1 \leq N \leq 500</var>.</li>
+</ul>
+
+<h3>Output</h3>
+<p>Output <code>No</code> in a single line if such a square matrix does not exist.</p>
+
+<p>If such a square matrix <var>A</var> exists, output <code>Yes</code> on the first line and <var>A</var> after that. More specifically, follow the following format.</p>
+
+<pre>
+Yes
+<var>A_{1, 1}</var> <var>A_{1, 2}</var> <var>...</var> <var>A_{1, N}</var>
+<var>A_{2, 1}</var> <var>A_{2, 2}</var> <var>...</var> <var>A_{2, N}</var>
+<var>:</var>
+<var>A_{N, 1}</var> <var>A_{N, 2}</var> <var>...</var> <var>A_{N, N}</var>
+</pre>
+
+<h3>Sample Input 1</h3>
+<pre>4</pre>
+
+<h3>Output for Sample Input 1</h3>
+<pre>
+Yes
+2 6 3 7
+4 5 2 1
+1 7 5 6
+5 3 4 2
+</pre>
+
+<h3>Sample Input 2</h3>
+<pre>3</pre>
+
+<h3>Output for Sample Input 2</h3>
+<pre>No</pre>

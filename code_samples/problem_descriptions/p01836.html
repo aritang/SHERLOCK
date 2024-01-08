@@ -1,0 +1,147 @@
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({ tex2jax: { inlineMath: [["$","$"], ["\\(","\\)"]], processEscapes: true }});
+</script>
+<script type='text/javascript' src='http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
+</script>
+
+
+<h2>Shortest Bridge</h2>
+
+<p>
+There is a city whose shape is a 1,000 $\times$ 1,000 square. The city has a big river, which flows from the north to the south and separates the city into just two parts: the west and the east.
+</p>
+
+<p>
+Recently, the city mayor has decided to build a highway from a point $s$ on the west part to a point $t$ on the east part. A highway consists of a bridge on the river, and two roads: one of the roads connects $s$ and the west end of the bridge, and the other one connects $t$ and the east end of the bridge. Note that each road doesn't have to be a straight line, but the intersection length with the river must be zero.
+</p>
+
+<p>
+In order to cut building costs, the mayor intends to build a highway satisfying the following conditions:
+</p>
+
+<ul>
+<li> Since bridge will cost more than roads, at first the length of a bridge connecting the east part and the west part must be as short as possible.</li>
+<li> Under the above condition, the sum of the length of two roads is minimum.</li>
+</ul>
+
+<p>
+Your task is to write a program computing the total length of a highway satisfying the above conditions.
+</p>
+
+<h3>Input</h3>
+<p>
+The input consists of a single test case. The test case is formatted as follows.<br/>
+<br/>
+$sx$ $sy$ $tx$ $ty$<br/>
+$N$<br/>
+$wx_1$ $wy_1$<br/>
+...<br/>
+$wx_N$ $wy_N$<br/>
+$M$<br/>
+$ex_1$ $ey_1$<br/>
+...<br/>
+$ex_M$ $ey_M$<br/>
+</p>
+
+<p>
+At first, we refer to a point on the city by a coordinate ($x, y$): the distance from the west side is $x$ and the distance from the north side is $y$.
+</p>
+
+<p>
+The first line contains four integers $sx$, $sy$, $tx$, and $ty$ ($0 \leq sx, sy, tx, ty \leq 1,000$): points $s$ and $t$ are located at ($sx, sy$) and ($tx, ty$) respectively. The next line contains an integer $N$ ($2 \leq N \leq 20$), where $N$ is the number of points composing the west riverside. Each of the following $N$ lines contains two integers $wx_i$ and $wy_i$ ($0 \leq wx_i, wy_i \leq 1,000$): the coordinate of the $i$-th point of the west riverside is ($wx_i, wy_i$). The west riverside is a polygonal line obtained by connecting the segments between ($wx_i, wy_i$) and ($wx_{i+1}, wy_{i+1}$) for all $1 \leq i \leq N -1$. The next line contains an integer $M$ ($2 \leq M \leq 20$), where $M$ is the number of points composing the east riverside. Each of the following $M$ lines contains two integers $ex_i$ and $ey_i$ ($0 \leq ex_i, ey_i \leq 1,000$): the coordinate of the $i$-th point of the east riverside is ($ex_i, ey_i$). The east riverside is a polygonal line obtained by connecting the segments between ($ex_i, ey_i$) and ($ex_{i+1}, ey_{i+1}$) for all $1 \leq i \leq M - 1$.
+</p>
+
+<p>
+You can assume that test cases are under the following conditions.
+</p>
+<ul>
+<li> $wy_1$ and $ey_1$ must be 0, and $wy_N$ and $ey_M$ must be 1,000.</li>
+<li> Each polygonal line has no self-intersection.</li>
+<li> Two polygonal lines representing the west and the east riverside have no cross point.</li>
+<li> A point $s$ must be on the west part of the city. More precisely, $s$ must be on the region surrounded by the square side of the city and the polygonal line of the west riverside and not containing the east riverside points.</li>
+<li> A point $t$ must be on the east part of the city. More precisely, $t$ must be on the region surrounded by the square side of the city and the polygonal line of the east riverside and not containing the west riverside points.</li>
+<li> Each polygonal line intersects with the square only at the two end points. In other words, $0 < wx_i, wy_i < 1,000$ holds for $2 \leq i \leq N - 1$ and $0 < ex_i, ey_i < 1,000$ holds for $2 \leq i \leq M - 1$.</li>
+</ul>
+
+
+<h3>Output</h3>
+<p>
+Output single-space separated two numbers in a line: the length of a bridge and the total length of a highway (i.e. a bridge and two roads) satisfying the above mayor's demand. The output can contain an absolute or a relative error no more than $10^{-8}$.
+</p>
+
+
+<h3>Sample Input 1</h3>
+<pre>
+200 500 800 500
+3
+400 0
+450 500
+400 1000
+3
+600 0
+550 500
+600 1000
+</pre>
+
+<h3>Output for the Sample Input 1</h3>
+<pre>
+100 600
+</pre>
+
+<h3>Sample Input 2</h3>
+<pre>
+300 300 700 100
+5
+300 0
+400 100
+300 200
+400 300
+400 1000
+4
+700 0
+600 100
+700 200
+700 1000
+</pre>
+
+<h3>Output for the Sample Input 2</h3>
+<pre>
+200 541.421356237
+</pre>
+
+<h3>Sample Input 3</h3>
+<pre>
+300 400 700 600
+2
+400 0
+400 1000
+2
+600 0
+600 1000
+</pre>
+
+<h3>Output for the Sample Input 3</h3>
+<pre>
+200 482.842712475
+</pre>
+
+<h3>Sample Input 4</h3>
+<pre>
+200 500 800 500
+3
+400 0
+450 500
+400 1000
+5
+600 0
+550 500
+600 100
+650 500
+600 1000
+</pre>
+
+<h3>Output for the Sample Input 4</h3>
+<pre>
+100 1200.326482915
+</pre>

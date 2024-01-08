@@ -1,0 +1,94 @@
+
+<H1>Polygon-Point-Containment</H1>
+<br/>
+
+<p>
+For a given polygon <var>g</var> and target points <var>t</var>, print "2" if <var>g</var> contains <var>t</var>, "1" if <var>t</var> is on a segment of <var>g</var>, "0" otherwise.
+</p>
+
+<p>
+<var>g</var> is represented by a sequence of points <var>p<sub>1</sub></var>, <var>p<sub>2</sub></var>,..., <var>p<sub>n</sub></var> where line segments connecting <var>p<sub>i</sub></var> and <var>p<sub>i+1</sub></var> (1 &le; <var>i</var> &le; <var>n-1</var>) are sides of the polygon. The line segment connecting <var>p<sub>n</sub></var> and <var>p<sub>1</sub></var> is also a side of the polygon.
+</p>
+
+<p>
+Note that the polygon is not necessarily convex.
+</p>
+
+
+<H2>Input</H2>
+
+<p>
+The entire input looks like:
+</p>
+
+<pre>
+<var>g</var> (the sequence of the points of the polygon)
+<var>q</var> (the number of queris = the number of target points)
+1st query
+2nd query
+:
+<var>q</var>th query
+</pre>
+
+
+<p>
+<var>g</var> is given by coordinates of the points <var>p<sub>1</sub></var>,..., <var>p<sub>n</sub></var> in the following format:
+</p>
+
+<pre>
+<var>n</var>
+<var>x<sub>1</sub></var> <var>y<sub>1</sub></var> 
+<var>x<sub>2</sub></var> <var>y<sub>2</sub></var>
+:
+<var>x<sub>n</sub></var> <var>y<sub>n</sub></var>
+</pre>
+
+<p>
+The first integer <var>n</var> is the number of points. The coordinate of a point <var>p<sub>i</sub></var> is given by two integers <var>x<sub>i</sub></var> and <var>y<sub>i</sub></var>. The coordinates of points are given in the order of counter-clockwise visit of them.
+</p>
+
+<p>
+Each query consists of the coordinate of a target point <var>t</var>. The coordinate is given by two intgers <var>x</var> and <var>y</var>.
+</p>
+
+<H2>Output</H2>
+
+<p>
+For each query, print "2", "1" or "0".
+</p>
+
+<H2>Constraints</H2>
+
+<ul>
+<li>
+3 &le; <var>n</var> &le; 100
+</li>
+<li>
+1 &le; <var>q</var> &le; 1000
+</li>
+<li>
+-10000 &le; <var>x<sub>i</sub></var>, <var>y<sub>i</sub></var> &le; 10000
+</li>
+<li>No point of the polygon will occur more than once.</li>
+<li>Two sides of the polygon can intersect only at a common endpoint.</li>
+</ul>
+
+<H2>Sample Input</H2>
+<pre>
+4
+0 0
+3 1
+2 3
+0 3
+3
+2 1
+0 2
+3 2
+</pre>
+<H2>Sample Output</H2>
+<pre>
+2
+1
+0
+</pre>
+<br/>

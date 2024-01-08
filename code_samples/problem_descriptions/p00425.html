@@ -1,0 +1,133 @@
+
+
+
+<H1></H1>
+
+<p>
+サイコロが以下の図のような向きで置かれている．
+</p>
+
+<center>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE1_2006-yo-t3-fig_base">
+</center>
+<br>
+
+<p>
+ここで使用するサイコロは，この図のように，上側に 1，南側に 2 があるときは，東側に 3 があるものとする．サイコロの向かいあう面の和は必ず 7 なので，見えない面はそれぞれ北側 5，西側 4，下側 6 になっている．
+</p>
+<p>
+　この初期配置の状態から指示に従ってサイコロを動かしていく．ただし，指示は以下の 6 通りの操作を何回か行うものである． 
+</p>
+
+<center>
+<table>
+<tr>
+<td><img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE1_2006-yo-t3-fig_north"></td>
+<td><img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE1_2006-yo-t3-fig_east"></td>
+<td><img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE1_2006-yo-t3-fig_west"></td>
+<td><img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE1_2006-yo-t3-fig_south"></td>
+</tr>
+<tr>
+<td><img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE1_2006-yo-t3-fig_right"></td>
+<td><img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE1_2006-yo-t3-fig_left"></td>
+<td></td>
+<td></td>
+</tr>
+</table>
+</center>
+<br/>
+
+<p>
+North，East，South，West の各操作は指示された方向へサイコロを 90 度回転させる．
+　Right，Left の 2 つの操作は上下の面はそのままで水平方向に 90 度回転させる．（回転させる向きに要注意．）
+</p>
+<p>
+　初期配置で上の面に出ている目 1 を初期値とし， 1 回の操作が終わるたびに，上の面に出ている目の数を加算していき，指示にしたがってすべての操作を終えたときの合計値を出力するプログラムを作成しなさい.
+</p>
+<p>
+　入力ファイルの 1 行目には総指示回数 n が書かれていて，続く n 行の各行には「North，East，South，West，Right，Left」のいずれか 1 つの指示が書かれているものとする．ただし， n ≦ 10000 とする． 
+</p>
+
+<!--
+<p>
+アップロードする出力ファイルにおいては、出力（合計値）の後に改行を入れること。
+</p>
+-->
+
+<table style="margin-bottom: 28px;  margin-left: 28px;  margin-right: 0px;">
+ <tr>
+  <th width="150" align="left">入力例１</th><th width="150" align="left">入力例２</th>
+
+ </tr>
+<tr><td>5</td><td>8</td></tr>
+<tr><td>North</td><td>West</td></tr>
+<tr><td>North</td><td>North</td></tr>
+<tr><td>East</td><td>Left</td></tr>
+<tr><td>South</td><td>South</td></tr>
+
+<tr><td>West</td><td>Right</td></tr>
+<tr><td></td><td>North</td></tr>
+<tr><td></td><td>Left</td></tr>
+<tr><td></td><td>East</td></tr>
+<tr>
+  <td>　</td>
+</tr>
+<tr>
+  <th width="150" align="left">出力例１</th>  <th width="150" align="left">出力例２</th>
+
+</tr>
+<tr><td>21</td><td>34</td></tr>
+</table>
+
+
+<h3>入力</h3>
+
+<p>
+入力は複数のデータセットからなる．n が 0 のとき入力が終了する．データセットの数は 5 を超えない．
+</p>
+
+<h3>出力</h3>
+
+<p>
+データセットごとに、合計値を１行に出力する．
+</p>
+
+
+<H2>入力例</H2>
+
+<pre>
+5
+North
+North
+East
+South
+West
+8
+West
+North
+Left
+South
+Right
+North
+Left
+East
+0
+</pre>
+
+<H2>出力例</H2>
+
+<pre>
+21
+34
+</pre>
+
+<p>
+各データセットの出力（合計値）の後に改行を入れること。
+</p>
+
+<div class="source">
+<p class="source">
+上記問題文と自動審判に使われるデータは、<a href="http://www.ioi-jp.org">情報オリンピック日本委員会</a>が作成し公開している問題文と採点用テストデータです。
+</p>
+</div>
+

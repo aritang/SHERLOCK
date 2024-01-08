@@ -1,0 +1,118 @@
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({ tex2jax: { inlineMath: [["$","$"], ["\\(","\\)"]], processEscapes: true }});
+</script>
+<script type='text/javascript' src='http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
+</script>
+
+
+<h2>Problem C:
+Shopping
+</h2>
+
+<p>
+  Your friend will enjoy shopping. She will walk through a mall along a straight street, where $N$ individual shops (numbered from 1 to $N$) are aligned at regular intervals. Each shop has one door and is located at the one side of the street. The distances between the doors of the adjacent shops are the same length, i.e. a unit length. Starting shopping at the entrance of the mall, she visits shops in order to purchase goods. She has to go to the exit of the mall after shopping.
+</p>
+
+<p>
+  She requires some restrictions on visiting order of shops. Each of the restrictions indicates that she shall visit a shop before visiting another shop. For example, when she wants to buy a nice dress before choosing heels, she shall visit a boutique before visiting a shoe store. When the boutique is farther than the shoe store, she must pass the shoe store before visiting the boutique, and go back to the shoe store after visiting the boutique.
+</p>
+
+<p>
+  If only the order of the visiting shops satisfies all the restrictions, she can visit other shops in any order she likes.
+</p>
+
+<p>
+  Write a program to determine the minimum required walking length for her to move from the entrance to the exit.
+</p>
+
+<p>
+  Assume that the position of the door of the shop numbered $k$ is $k$ units far from the entrance, where the position of the exit is $N + 1$ units far from the entrance.
+</p>
+
+<h3>Input</h3>
+
+<p>
+  The input consists of a single test case.<br>
+  <br>
+$N$ $m$<br>
+$c_1$ $d_1$<br>
+.<br>
+.<br>
+.<br>
+$c_m$ $d_m$<br>
+  <br>
+  
+  The first line contains two integers $N$ and $m$, where $N$ ($1 \leq N \leq 1000$) is the number of shops, and $m$ ($0 \leq m \leq 500$) is the number of restrictions. Each of the next $m$ lines contains two integers $c_i$ and $d_i$ ($1 \leq c_i < d_i \leq N$) indicating the $i$-th restriction on the visiting order, where she must visit the shop numbered $c_i$ after she visits the shop numbered $d_i$ ($i = 1, . . . , m$).
+																														       </p>
+<p>
+  There are no pair of $j$ and $k$ that satisfy $c_j = c_k$ and $d_j = d_k$.
+</p>
+
+
+<h3>Output</h3>
+
+<p>
+Output the minimum required walking length for her to move from the entrance to the exit. You should omit the length of her walk in the insides of shops.
+</p>
+
+
+<h3>Sample Input 1</h3>
+
+<pre>10 3
+3 7
+8 9
+2 5</pre>
+
+<h3>Sample Output 1</h3>
+
+<pre>23</pre>
+
+<h3>Sample Input 2</h3>
+
+<pre>10 3
+8 9
+6 7
+2 4</pre>
+
+<h3>Sample Output 2</h3>
+
+<pre>19</pre>
+
+<h3>Sample Input 3</h3>
+
+<pre>10 0</pre>
+
+<h3>Sample Output 3</h3>
+
+<pre>11</pre>
+
+<h3>Sample Input 4</h3>
+
+<pre>10 6
+6 7
+4 5
+2 5
+6 9
+3 5
+6 8</pre>
+
+<h3>Sample Output 4</h3>
+
+<pre>23</pre>
+
+<h3>Sample Input 5</h3>
+
+<pre>1000 8
+3 4
+6 1000
+5 1000
+7 1000
+8 1000
+4 1000
+9 1000
+1 2</pre>
+
+<h3>Sample Output 5</h3>
+
+<pre>2997</pre>

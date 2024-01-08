@@ -1,0 +1,134 @@
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({ tex2jax: { inlineMath: [["$","$"], ["\\(","\\)"]], processEscapes: true }});
+</script>
+<script type='text/javascript' src='http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
+</script>
+
+
+<h2>Problem G
+  Placing Medals on a Binary Tree 
+</h2>
+
+<p>
+  You have drawn a chart of a perfect binary tree, like one shown in Figure G.1. The figure shows a finite tree, but, if needed, you can add more nodes beneath the leaves, making the tree arbitrarily deeper.
+</p>
+
+<center>
+  <img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_ICPCAsia2016_Figure_G1"><br/>
+  Figure G.1. A Perfect Binary Tree Chart<br/>
+</center><br/>
+
+<p>
+  Tree nodes are associated with their depths, defined recursively. The root has the depth of zero, and the child nodes of a node of depth d have their depths $d + 1$.
+</p>
+
+<p>You also have a pile of a certain number of medals, each engraved with some number. You want to know whether the medals can be placed on the tree chart satisfying the following conditions.
+</p>
+
+<ul>
+  <li> A medal engraved with $d$ should be on a node of depth $d$.</li>
+  <li> One tree node can accommodate at most one medal.</li>
+  <li> The path to the root from a node with a medal should not pass through another node with a medal.</li>
+</ul>
+
+<p>
+  You have to place medals satisfying the above conditions, one by one, starting from the top of the pile down to its bottom. If there exists no placement of a medal satisfying the conditions, you have to throw it away and simply proceed to the next medal.
+</p>
+
+<p>
+  You may have choices to place medals on different nodes. You want to find the best placement. When there are two or more placements satisfying the rule, one that places a medal upper in the pile is better. For example, when there are two placements of four medal, one that places only the top and the 2nd medal, and the other that places the top, the 3rd, and the 4th medal, the former is better.
+</p>
+
+
+<p>
+In Sample Input 1, you have a pile of six medals engraved with 2, 3, 1, 1, 4, and 2 again respectively, from top to bottom.
+</p>
+
+<ul>
+  <li> The first medal engraved with 2 can be placed, as shown in Figure G.2 (A).</li>
+  <li> Then the second medal engraved with 3 may be placed , as shown in Figure G.2 (B).</li>
+  <li> The third medal engraved with 1 cannot be placed if the second medal were placed as stated above, because both of the two nodes of depth 1 are along the path to the root from nodes already with a medal. Replacing the second medal satisfying the placement conditions, however, enables a placement shown in Figure G.2 (C).</li>
+  <li> The fourth medal, again engraved with 1, cannot be placed with any replacements of the three medals already placed satisfying the conditions. This medal is thus thrown away.</li>
+  <li> The fifth medal engraved with 4 can be placed as shown in of Figure G.2 (D). </li>
+  <li> The last medal engraved with 2 cannot be placed on any of the nodes with whatever replacements.</li>
+</ul>
+
+<center>
+  <img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_ICPCAsia2016_Figure_G2"><br/>
+Figure G.2. Medal Placements<br/>
+</center><br/>
+
+<h3>Input</h3>
+
+<p>
+  The input consists of a single test case in the format below.<br/>
+  <br/>
+$n$  <br/>
+$x_1$  <br/>
+.  <br/>
+.  <br/>
+.  <br/>
+$x_n$ <br/>
+</p>
+
+<p>
+The first line has $n$, an integer representing the number of medals ($1 \leq n \leq 5 \times 10^5$). The following $n$ lines represent the positive integers engraved on the medals. The $i$-th line of which has an integer $x_i$ ($1 \leq x_i \leq 10^9$) engraved on the $i$-th medal of the pile from the top.
+</p>
+
+
+<h3>Output</h3>
+<p>
+When the best placement is chosen, for each i from 1 through n, output <span>Yes</span> in a line if the i-th medal is placed; otherwise, output <span>No</span> in a line.
+</p>
+
+
+<h3>Sample Input 1</h3>
+
+<pre>6
+2
+3
+1
+1
+4
+2
+</pre>
+
+<h3>Sample Output 1</h3>
+
+<pre>Yes
+Yes
+Yes
+No
+Yes
+No</pre>
+
+<br/>
+
+<h3>Sample Input 2</h3>
+
+<pre>10
+4
+4
+4
+4
+4
+4
+4
+4
+1
+4
+</pre>
+
+<h3>Sample Output 2</h3>
+
+<pre>Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+No</pre>

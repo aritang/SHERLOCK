@@ -1,0 +1,121 @@
+
+<H1><font color="#000">Problem E:</font> Spherical Mirrors</H1>
+
+<p>
+<i>
+A long time ago in a galaxy, far, far away, there were N spheres with various radii.
+Spheres were mirrors, that is, they had reflective surfaces . . . .
+</i>
+</p>
+
+<p>
+You are standing at the origin of the galaxy (0, 0, 0), and emit a laser ray to the direction
+(<i>u</i>,<i>v</i>, <i>w</i>). The ray travels in a straight line.
+</p>
+
+<p>
+When the laser ray from <i>I</i> hits the surface of a sphere at <i>Q</i>, let <i>N</i> be a point outside of the
+sphere on the line connecting the sphere center and Q. The reflected ray goes to the direction
+towards <i>R</i> that satisfies the following conditions: (1) <i>R</i> is on the plane formed by the three
+points <i>I</i>, <i>Q</i> and <i>N</i> , (2) &ang; <i>IQN</i> = &ang; <i>NQR</i>, as shown in Figure 1.
+</p>
+
+<center>
+<table>
+<tr><td><img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE1_spherical"></td></tr>
+<tr><th>Figure 1: Laser ray reflection</th></tr>
+</table>
+</center>
+
+<p>
+After it is reflected several times, finally it goes beyond our observation. Your mission is to write
+a program that identifies the last reflection point.
+</p>
+
+<H2>Input</H2>
+
+<p>
+The input consists of multiple datasets, each in the following format.
+</p>
+<pre>
+       <i>N</i>
+       <i>u v w</i>
+       <i>x<sub>1</sub> y<sub>1</sub> z<sub>1</sub> r<sub>1</sub></i>
+         .
+         .
+         .
+       <i>x<sub>N</sub> y<sub>N</sub> z<sub>N</sub> r<sub>N</sub></i>
+</pre>
+
+<p>
+The first line of a dataset contains a positive integer <i>N</i> which is the number of spheres. The
+next line contains three integers <i>u</i>, <i>v</i> and <i>w</i> separated by single spaces, where (<i>u</i>, <i>v</i>, <i>w</i>) is the
+direction of the laser ray initially emitted from the origin.
+</p>
+<p>
+Each of the following <i>N</i> lines contains four integers separated by single spaces. The <i>i</i>-th line
+corresponds to the <i>i</i>-th sphere, and the numbers represent the center position (<i>x<sub>i</sub></i>, <i>y<sub>i</sub></i>, <i>z<sub>i</sub></i> ) and the
+radius <i>r<sub>i</sub></i> .
+</p>
+<p>
+<i>N</i>, <i>u</i>, <i>v</i>, <i>w</i>, <i>x<sub>i</sub></i>, <i>y<sub>i</sub></i>, <i>z<sub>i</sub></i> and <i>r<sub>i</sub></i> satisfy the following conditions.
+</p>
+
+<p align="center">
+    1 &le; <i>N</i> &le; 100 <br>
+−100 &le; <i>u</i>, <i>v</i>, <i>w</i> &le; 100<br>
+−100 &le; <i>x<sub>i</sub></i>, <i>y<sub>i</sub></i>, <i>z<sub>i</sub></i> &le; 100<br>
+     5 &le; <i>r<sub>i</sub></i> &le; 30<br>
+  <i>u</i><sup>2</sup> + <i>v</i><sup>2</sup> + <i>w</i><sup>2</sup> &gt; 0<br>
+</p>
+
+<p>
+You can assume that the distance between the surfaces of any two spheres is no less than 0.1.
+You can also assume that the origin (0, 0, 0) is located outside of any sphere, and is at least 0.1
+distant from the surface of any sphere.
+</p>
+<p>
+The ray is known to be reflected by the sphere surfaces at least once, and at most five times.
+You can assume that the angle between the ray and the line connecting the sphere center and
+the reflection point, which is known as the angle of reflection (i.e. &theta; in Figure 1), is less than 85
+degrees for each point of reflection.
+</p>
+<p>
+The last dataset is followed by a line containing a single zero.
+</p>
+
+
+
+<H2>Output</H2>
+
+<p>
+For each dataset in the input, you should print the x-, y- and z-coordinates of the last reflection
+point separated by single spaces in a line. No output line should contain extra characters.
+</p>
+<p>
+No coordinate values in the output should have an error greater than 0.01.
+</p>
+
+<H2>Sample Input</H2>
+<pre>
+3
+-20 -20 -24
+100 100 100 30
+10 8 3 5
+-70 -70 -84 5
+4
+0 47 84
+-23 41 42 8
+45 -10 14 19
+-5 28 47 12
+-27 68 34 14
+0
+</pre>
+
+<H2>Output for the Sample Input</H2>
+<pre>
+79.0940 79.0940 94.9128
+-21.8647 54.9770 34.1761
+</pre>
+
+

@@ -1,0 +1,91 @@
+
+
+<h1>Problem A: A White Wall</h1>
+
+<h2>Background</h2>
+<p>
+  とある都市に住むＡ氏の家の敷地は、真っ白な壁に囲まれている。壁に物足りなさを感じたＡ氏は、近所の子供たちを呼んで、壁を自由に塗ってもらうことにした。子供達にはそれぞれ壁の好きな区間を選んで色を塗ってもらう。 さて、壁はどのように塗られただろうか。
+</p>
+
+<h2>Problem</h2>
+
+<p>
+0〜<var>N</var>-1の区画で構成される以下のような円型の白い壁がある。
+</p>
+
+<br>
+<left>
+<img width="480" src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_RitsCamp15_UA_A.png" alt="図1"><br>
+</left>
+<br>
+
+<p>
+<var>M</var>人の子供たちがこの壁の開始位置<var>a</var>と開始位置からの長さ<var>L</var>を指定し、反時計回りに<var>a</var>から<var>(a+L)</var> <var>mod</var> <var>N</var>まで色を塗る(ただし、<var>a</var> <var>mod</var> <var>N</var>とは、<var>a</var>を<var>N</var>で割ったときの余りを表す)。ここで、他の人が色を塗った区間と重ねて塗ることもでき、その場合は、色が塗られた1つの区間とみなす。色が塗られた区間を大きい順に出力せよ。また、その大きさの区間がいくつあるかも同時に出力せよ。
+</p>
+
+<h2>Input</h2>
+<p>入力は以下の形式で与えられる。</p>
+<pre>
+<var>N</var> <var>M</var>
+<var>a<sub>0</sub></var> <var>L<sub>0</sub></var> 
+<var>a<sub>1</sub></var> <var>L<sub>1</sub></var> 
+...
+<var>a<sub>M&minus;1</sub></var> <var>L<sub>M&minus;1</sub></var> 
+</pre>
+<p>
+1行目にそれぞれ壁の長さと壁に色を塗る人の数を表す2つの整数<var>N</var>,<var>M</var>が空白区切りで与えられる。続く<var>M</var>行には、各人が色を塗る区間の開始位置<var>a<sub>i</sub></var>と長さ<var>L<sub>i</sub></var>が与えられる。
+
+<h2>Constrains</h2>
+<p>入力は以下の条件を満たす</p>
+<ul>
+<li>2 &le; <var>N</var> &le; 100</li>
+<li>1 &le; <var>M</var> &le; 50</li>
+<li>0 &le; <var>a<sub>i</sub></var> &lt; <var>N</var></li>
+<li>1 &le; <var>L<sub>i</sub></var> &le; <var>N</var></li>
+</ul>
+
+<h2>Output</h2>
+<p>
+色が塗られた区間の長さとその長さの総数を色が塗られた区間が大きい順に出力する。
+</p>
+
+<h2>Sample Input 1</h2>
+<pre>
+5 3
+0 1
+2 1
+3 1
+</pre>
+
+<h2>Sample Output 1</h2>
+<pre>
+2 1
+1 1
+</pre>
+
+<h2>Sample Input 2</h2>
+<pre>
+4 2
+0 2
+1 2
+</pre>
+
+<h2>Sample Output 2</h2>
+<pre>
+3 1
+</pre>
+
+<h2>Sample Input 3</h2>
+<pre>
+10 3
+2 1
+4 1
+9 2
+</pre>
+
+<h2>Sample Output 3</h2>
+<pre>
+2 1
+1 2
+</pre>
+

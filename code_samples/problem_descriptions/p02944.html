@@ -1,0 +1,85 @@
+<span class="lang-en">
+<p>Score : <var>1800</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>For a sequence <var>S</var> of positive integers and positive integers <var>k</var> and <var>l</var>, <var>S</var> is said to belong to <em>level</em> <var>(k,l)</var> when one of the following conditions is satisfied:</p>
+<ul>
+<li>The length of <var>S</var> is <var>1</var>, and its only element is <var>k</var>.</li>
+<li>There exist sequences <var>T_1,T_2,...,T_m</var> (<var>m \geq l</var>) belonging to level <var>(k-1,l)</var> such that the concatenation of <var>T_1,T_2,...,T_m</var> in this order coincides with <var>S</var>.</li>
+</ul>
+<p>Note that the second condition has no effect when <var>k=1</var>, that is, a sequence belongs to level <var>(1,l)</var> only if the first condition is satisfied.</p>
+<p>Given are a sequence of positive integers <var>A_1,A_2,...,A_N</var> and a positive integer <var>L</var>.
+Find the number of subsequences <var>A_i,A_{i+1},...,A_j</var> (<var>1 \leq i  \leq j \leq N</var>) that satisfy the following condition:</p>
+<ul>
+<li>There exists a positive integer <var>K</var> such that the sequence <var>A_i,A_{i+1},...,A_j</var> belongs to level <var>(K,L)</var>.</li>
+</ul>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 \leq N \leq 2 \times 10^5</var></li>
+<li><var>2 \leq L \leq N</var></li>
+<li><var>1 \leq A_i \leq 10^9</var></li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var> <var>L</var>
+<var>A_1</var> <var>A_2</var> <var>...</var> <var>A_N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the number of subsequences <var>A_i,A_{i+1},...,A_j</var> (<var>1 \leq i  \leq j \leq N</var>) that satisfy the condition.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>9 3
+2 1 1 1 1 1 1 2 3
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>22
+</pre>
+<p>For example, both of the sequences <var>(1,1,1)</var> and <var>(2)</var> belong to level <var>(2,3)</var>, so the sequence <var>(2,1,1,1,1,1,1)</var> belong to level <var>(3,3)</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>9 2
+2 1 1 1 1 1 1 2 3
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>41
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>15 3
+4 3 2 1 1 1 2 3 2 2 1 1 1 2 2
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>31
+</pre></section>
+</div>
+</span>

@@ -1,0 +1,137 @@
+<span class="lang-en">
+<p>Score : <var>800</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p><strong>12:17 (UTC): The sample input 1 and 2 were swapped. The error is now fixed. We are very sorry for your inconvenience.</strong></p>
+<p>There are <var>N</var> children in AtCoder Kindergarten, conveniently numbered <var>1</var> through <var>N</var>. Mr. Evi will distribute <var>C</var> indistinguishable candies to the children.</p>
+<p>If child <var>i</var> is given <var>a</var> candies, the child's <em>happiness</em> will become <var>x_i^a</var>, where <var>x_i</var> is the child's <em>excitement level</em>. The <em>activity level</em> of the kindergarten is the <strong>product</strong> of the happiness of all the <var>N</var> children.</p>
+<p>For each possible way to distribute <var>C</var> candies to the children by giving zero or more candies to each child, calculate the activity level of the kindergarten. Then, calculate the sum over all possible way to distribute <var>C</var> candies. This sum can be seen as a function of the children's excitement levels <var>x_1,..,x_N</var>, thus we call it <var>f(x_1,..,x_N)</var>.</p>
+<p>You are given integers <var>A_i,B_i (1≦i≦N)</var>. Find <img alt="" src="http://arc059.contest.atcoder.jp/img/arc/059/E_sigmaf.gif"> modulo <var>10^9+7</var>.</img></p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1≦N≦400</var></li>
+<li><var>1≦C≦400</var></li>
+<li><var>1≦A_i≦B_i≦400 (1≦i≦N)</var></li>
+</ul>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Partial Score</h3><ul>
+<li><var>400</var> points will be awarded for passing the test set satisfying <var>A_i=B_i (1≦i≦N)</var>.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>The input is given from Standard Input in the following format:</p>
+<pre><var>N</var> <var>C</var>
+<var>A_1</var> <var>A_2</var> ... <var>A_N</var>
+<var>B_1</var> <var>B_2</var> ... <var>B_N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the value of <img alt="" src="http://arc059.contest.atcoder.jp/img/arc/059/E_sigmaf.gif"> modulo <var>10^9+7</var>.</img></p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>2 3
+1 1
+1 1
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>4
+</pre>
+<p>This case is included in the test set for the partial score, since <var>A_i=B_i</var>.
+We only have to consider the sum of the activity level of the kindergarten where the excitement level of both child <var>1</var> and child <var>2</var> are <var>1</var> (<var>f(1,1)</var>).</p>
+<ul>
+<li>If child <var>1</var> is given <var>0</var> candy, and child <var>2</var> is given <var>3</var> candies, the activity level of the kindergarten is <var>1^0*1^3=1</var>.</li>
+<li>If child <var>1</var> is given <var>1</var> candy, and child <var>2</var> is given <var>2</var> candies, the activity level of the kindergarten is <var>1^1*1^2=1</var>.</li>
+<li>If child <var>1</var> is given <var>2</var> candies, and child <var>2</var> is given <var>1</var> candy, the activity level of the kindergarten is <var>1^2*1^1=1</var>.</li>
+<li>If child <var>1</var> is given <var>3</var> candies, and child <var>2</var> is given <var>0</var> candy, the activity level of the kindergarten is <var>1^3*1^0=1</var>.</li>
+</ul>
+<p>Thus, <var>f(1,1)=1+1+1+1=4</var>, and the sum over all <var>f</var> is also <var>4</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>1 2
+1
+3
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>14
+</pre>
+<p>Since there is only one child, child <var>1</var>'s happiness itself will be the activity level of the kindergarten. Since the only possible way to distribute <var>2</var> candies is to give both candies to child <var>1</var>, the activity level in this case will become the value of <var>f</var>.</p>
+<ul>
+<li>When the excitement level of child <var>1</var> is <var>1</var>, <var>f(1)=1^2=1</var>.</li>
+<li>When the excitement level of child <var>1</var> is <var>2</var>, <var>f(2)=2^2=4</var>.</li>
+<li>When the excitement level of child <var>1</var> is <var>3</var>, <var>f(3)=3^2=9</var>.</li>
+</ul>
+<p>Thus, the answer is <var>1+4+9=14</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>2 3
+1 1
+2 2
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>66
+</pre>
+<p>Since it can be seen that <var>f(1,1)=4 , f(1,2)=15 , f(2,1)=15 , f(2,2)=32</var>, the answer is <var>4+15+15+32=66</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 4</h3><pre>4 8
+3 1 4 1
+3 1 4 1
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 4</h3><pre>421749
+</pre>
+<p>This case is included in the test set for the partial score.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 5</h3><pre>3 100
+7 6 5
+9 9 9
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 5</h3><pre>139123417
+</pre></section>
+</div>
+</span>

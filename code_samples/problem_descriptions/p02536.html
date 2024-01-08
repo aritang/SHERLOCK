@@ -1,0 +1,65 @@
+<span class="lang-en">
+<p>Score : <var>300</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>There are <var>N</var> cities numbered <var>1</var> through <var>N</var>, and <var>M</var> bidirectional roads numbered <var>1</var> through <var>M</var>.
+Road <var>i</var> connects City <var>A_i</var> and City <var>B_i</var>.</p>
+<p>Snuke can perform the following operation zero or more times:</p>
+<ul>
+<li>Choose two distinct cities that are not directly connected by a road, and build a new road between the two cities.</li>
+</ul>
+<p>After he finishes the operations, it must be possible to travel from any city to any other cities by following roads (possibly multiple times).</p>
+<p>What is the minimum number of roads he must build to achieve the goal?</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>2 \leq N \leq 100,000</var></li>
+<li><var>1 \leq M \leq 100,000</var></li>
+<li><var>1 \leq A_i &lt; B_i \leq N</var></li>
+<li>No two roads connect the same pair of cities.</li>
+<li>All values in input are integers.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var> <var>M</var>
+<var>A_1</var> <var>B_1</var>
+<var>:</var>
+<var>A_M</var> <var>B_M</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the answer.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>3 1
+1 2
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>1
+</pre>
+<p>Initially, there are three cities, and there is a road between City <var>1</var> and City <var>2</var>.</p>
+<p>Snuke can achieve the goal by building one new road, for example, between City <var>1</var> and City <var>3</var>.
+After that,</p>
+<ul>
+<li>We can travel between <var>1</var> and <var>2</var> directly.</li>
+<li>We can travel between <var>1</var> and <var>3</var> directly.</li>
+<li>We can travel between <var>2</var> and <var>3</var> by following both roads (<var>2</var> - <var>1</var> - <var>3</var>).</li>
+</ul></section>
+</div>
+</span>

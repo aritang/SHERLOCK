@@ -1,0 +1,86 @@
+
+
+
+<H1>三目並べ</H1>
+
+<p>
+三目並べは，３ &times; ３のマス目の中に交互に ○ と × を入れていき、縦・横・斜めの何れかに一列 ○ か × が並んだときに、勝ちとなるゲームです（図1〜図3 を参照）
+</p>
+
+<center>
+<table>
+<tr>
+<td width="140"><img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE1_tic1"></td>
+<td width="140"><img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE1_tic2"></td>
+<td width="140"><img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE1_tic3"></td>
+</tr>
+<tr>
+<td>図１：○の勝ち</td>
+<td>図２：× の勝ち</td>
+<td>図３：引き分け</td>
+</tr>
+</table>
+</center>
+<br/>
+
+<p>
+三目並べは、○と×が交互にマス目を埋めていき、どちらかが一列揃ったときにゲーム終了となります。そのため、図 4 のように、○と×が両方とも一列そろっている場合はありえない局面です。ありえない局面が入力されることはありません。
+</p>
+
+<center>
+<table>
+<tr>
+<td width="140"><img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE1_tic4"></td>
+</tr>
+<tr>
+<td>図４：ありえない局面</td>
+</tr>
+</table>
+</center>
+<br/>
+
+
+<p>
+三目並べの盤面を読み込んで、勝敗の結果を出力するプログラムを作成して下さい。
+</p>
+
+<H2>Input</H2>
+
+<p>
+入力は複数のデータセットからなります。各データセットとして、盤面を表す１つの文字列が１行に与えられます。
+盤面の文字列は、○、×、空白をそれぞれ半角英小文字の o、x、s であらわし、下図のマス目の順に並んでいます。
+</p>
+
+<center>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE1_tic5">
+</center>
+<br/>
+
+<p>
+データセットの数は 50 を超えません。
+</p>
+
+<H2>Output</H2>
+
+<p>
+データセットごとに、○が勝ちなら半角英小文字の o を、×が勝ちなら半角英小文字の x を、引き分けならば半角英小文字の d を１行に出力してください。
+</p>
+
+<H2>Sample Input</H2>
+
+<pre>
+ooosxssxs
+xoosxsosx
+ooxxxooxo
+</pre>
+
+<H2>Output for the Sample Input</H2>
+
+<pre>
+o
+x
+d
+</pre>
+
+
+

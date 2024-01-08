@@ -1,0 +1,70 @@
+<span class="lang-en">
+<p>Score : <var>300</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>Let us define the <em>beauty</em> of a sequence <var>(a_1,... ,a_n)</var> as the number of pairs of two adjacent elements in it whose absolute differences are <var>d</var>.
+For example, when <var>d=1</var>, the beauty of the sequence <var>(3, 2, 3, 10, 9)</var> is <var>3</var>.</p>
+<p>There are a total of <var>n^m</var> sequences of length <var>m</var> where each element is an integer between <var>1</var> and <var>n</var> (inclusive).
+Find the beauty of each of these <var>n^m</var> sequences, and print the average of those values.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>0 \leq d &lt; n \leq 10^9</var></li>
+<li><var>2 \leq m \leq 10^9</var></li>
+<li>All values in input are integers.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>n</var> <var>m</var> <var>d</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the average of the beauties of the sequences of length <var>m</var> where each element is an integer between <var>1</var> and <var>n</var>.
+The output will be judged correct if the absolute or relative error is at most <var>10^{-6}</var>.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>2 3 1
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>1.0000000000
+</pre>
+<p>The beauty of <var>(1,1,1)</var> is <var>0</var>.<br/>
+The beauty of <var>(1,1,2)</var> is <var>1</var>.<br/>
+The beauty of <var>(1,2,1)</var> is <var>2</var>.<br/>
+The beauty of <var>(1,2,2)</var> is <var>1</var>.<br/>
+The beauty of <var>(2,1,1)</var> is <var>1</var>.<br/>
+The beauty of <var>(2,1,2)</var> is <var>2</var>.<br/>
+The beauty of <var>(2,2,1)</var> is <var>1</var>.<br/>
+The beauty of <var>(2,2,2)</var> is <var>0</var>.<br/>
+The answer is the average of these values: <var>(0+1+2+1+1+2+1+0)/8=1</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>1000000000 180707 0
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>0.0001807060
+</pre></section>
+</div>
+</span>

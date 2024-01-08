@@ -1,0 +1,63 @@
+
+
+
+<p>
+<var>m</var> 頂点の完全グラフがある．最初，完全グラフの辺には色は塗られていない．すぬけ君は，各 <var>i</var>(1 &le; <var>i</var> &le; <var>n</var>) について次の操作を行った: 完全グラフから <var>a<sub>i</sub></var> 個の頂点を選び，選ばれた頂点同士を結ぶ辺すべてを色 <var>i</var> でぬる．複数個の色が塗られた辺はなかった．<var>m</var> として考えられる最小値を求めよ．
+</p>
+
+
+<h2>Constraints</h2>
+<ul>
+<li> 1 &le; <var>n</var> &le; 5</li>
+<li> 2 &le; <var>a<sub>i</sub></var> &le; 10<sup>9</sup></li>
+</ul>
+
+<h2>Input</h2>
+<pre>
+<var>n</var>
+<var>a<sub>1</sub></var>
+. . .
+<var>a<sub>n</sub></var>
+</pre>
+
+<h2>Output</h2>
+
+<p>
+<var>m</var> の最小値を一行に出力せよ．
+</p>
+
+
+<h2>Sample Input 1</h2>
+<pre>
+2
+3
+3
+</pre>
+
+<h2>Sample Output 1</h2>
+<pre>
+5
+</pre>
+<p>
+たとえば，頂点1, 2, 3, 4, 5 からなるグラフがあった場合，次のように色を塗ることができる．
+</p>
+<ul>
+<li> 頂点1, 2, 3 を選びその間を結ぶ辺を色1 でぬる．</li>
+<li> 頂点1, 4, 5 を選びその間を結ぶ辺を色2 でぬる．</li>
+</ul>
+
+<h2>Sample Input 2</h2>
+<pre>
+5
+2
+3
+4
+5
+6
+</pre>
+
+
+<h2>Sample Output 2</h2>
+<pre>
+12
+</pre>

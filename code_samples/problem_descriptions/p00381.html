@@ -1,0 +1,65 @@
+<h1>Transporter</h1>
+
+<p>
+  In the year 30XX, an expedition team reached a planet and found a warp machine suggesting the existence of a mysterious supercivilization. When you go through one of its entrance gates, you can instantaneously move to the exit irrespective of how far away it is. You can move even to the end of the universe at will with this technology!
+</p>
+<p>
+  The scientist team started examining the machine and successfully identified all the planets on which the entrances to the machine were located. Each of these N planets (identified by an index from $1$ to $N$) has an entrance to, and an exit from the warp machine. Each of the entrances and exits has a letter inscribed on it.
+</p>
+<p>
+  The mechanism of spatial mobility through the warp machine is as follows:
+</p>
+<ul>
+<li>If you go into an entrance gate labeled with c, then you can exit from any gate with label c.</li>
+<li>If you go into an entrance located on the $i$-th planet, then you can exit from any gate located on the $j$-th planet where $i < j$.</li>
+</ul>
+
+<p>
+  Once you have reached an exit of the warp machine on a planet, you can continue your journey by entering into the warp machine on the same planet. In this way, you can reach a faraway planet. Our human race has decided to dispatch an expedition to the star $N$, starting from Star $1$ and using the warp machine until it reaches Star $N$. To evaluate the possibility of successfully reaching the destination. it is highly desirable for us to know how many different routes are available for the expedition team to track.
+</p>
+
+<p>
+  Given information regarding the stars, make a program to enumerate the passages from Star $1$ to Star $N$.
+</p>
+
+<h2>Input</h2>
+<p>
+  The input is given in the following format.
+</p>
+<pre>
+$N$
+$s$
+$t$
+</pre>
+<p>
+  The first line provides the number of the stars on which the warp machine is located $N$ ($2 \leq N \leq 100,000$). The second line provides a string $s$ of length $N$, each component of which represents the letter inscribed on the entrance of the machine on the star. By the same token, the third line provides a string $t$ of length $N$ consisting of the letters inscribed on the exit of the machine. Two strings $s$ and $t$ consist all of lower-case alphabetical letters, and the $i$-th letter of these strings corresponds respectively to the entrance and exit of Star $i$ machine.
+</p>
+
+<h2>Output</h2>
+<p>
+  Divide the number of possible routes from Star $1$ to Star $N$ obtained above by 1,000,000,007, and output the remainder.
+</p>
+
+<h2>Sample Input 1</h2>
+<pre>
+6
+abbaba
+baabab
+</pre>
+
+<h2>Sample Output 1</h2>
+<pre>
+5
+</pre>
+
+<h2>Sample Input 2</h2>
+<pre>
+25
+neihsokcpuziafoytisrevinu
+universityofaizupckoshien
+</pre>
+
+<h2>Sample Output 2</h2>
+<pre>
+4
+</pre>

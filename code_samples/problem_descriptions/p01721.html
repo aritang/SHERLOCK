@@ -1,0 +1,86 @@
+
+
+
+<p>勇猛果敢なイクタ君はついに悪名高きビッグブリッジ伯爵を追い詰めた！　今やビッグブリッジ伯爵は幅 <var>w</var> メートル、奥行き <var>h</var> メートルの長方形の部屋に閉じ込められており、最期を待つばかりとなっている。
+</p>
+
+<p>部屋のある角を選び、幅方向を <var>x</var> 軸、奥行き方向を <var>y</var> 軸に、それぞれ部屋の内部が正の方向になるように座標系をとると、ビッグブリッジ伯爵は点 <var>(p, q)</var> にいる。点 <var>(x, y)</var> にイクタ君の最終兵器である衝撃波発射装置があり、ここから秒速 <var>v</var> メートルの衝撃波を全方向に出す。この衝撃波は <var>t</var> 秒間有効であり、部屋の壁面で反射する。
+</p>
+
+<p>部屋の外にいるイクタ君はビッグブリッジ伯爵がどれだけ苦しむか知りたがっているので、ビッグブリッジ伯爵に衝撃波が何回当たるかを求めるプログラムを書いてあげよう。このとき、衝撃波が同時に <var>n</var> 方向から敵に当たる場合は <var>n</var> 回当たったとみなし、また衝撃波がちょうど <var>t</var> 秒後に敵に当たる場合も有効であるとする。衝撃波は発射装置自身やビッグブリッジ伯爵などの障害物により消滅せず、衝撃波同士は干渉しない。
+</p>
+
+<h2>Input</h2>
+<p>入力は以下の形式で与えられる。
+</p>
+<blockquote>
+<var>w</var> <var>h</var> <var>v</var> <var>t</var> <var>x</var> <var>y</var> <var>p</var> <var>q</var><br></blockquote>
+
+<ul><li> それぞれは問題文の説明の通りの正の整数である。
+</li></ul>
+
+<h3>Constraints</h3>
+<ul>
+<li> <var> v × t &le; 10<sup>6</sup> </var>
+</li>
+<li> <var> 2 &le; w, h &le; 10<sup>8</sup> </var>
+</li>
+<li> <var> 0 < x, p < w </var>
+</li>
+<li> <var> 0 < y, q < h </var>
+</li>
+<li> <var> (x, y) &ne; (p, q) </var>
+</li></ul>
+
+
+
+
+<h2>Output</h2>
+<p>衝撃波がビッグブリッジ伯爵に当たる回数を1行に出力せよ。
+</p>
+
+<h2>Sample Input 1</h2>
+
+<pre>10 10 1 10 3 3 7 7
+</pre>
+
+<h2>Output for the Sample Input 1</h2>
+
+<pre>1
+</pre>
+
+<center>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_JAGSummerCamp2013Day3_WaveAttack_04sec" height="540" width="720"><br>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_JAGSummerCamp2013Day3_WaveAttack_06sec" height="540" width="720"><br>
+</center>
+<br>
+
+<h2>Sample Input 2</h2>
+
+<pre>10 10 1 11 3 3 7 7
+</pre>
+<h2>Output for the Sample Input 2</h2>
+
+<pre>5
+</pre>
+<center>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_JAGSummerCamp2013Day3_WaveAttack_10sec" height="540" width="720"><br>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_JAGSummerCamp2013Day3_WaveAttack_11sec" height="540" width="720"><br>
+</center>
+<br>
+
+<ul><li> 入力例 1, 2 において部屋の大きさと発射装置とビッグブリッジ伯爵の位置が同じであることに注意しながら、それぞれに付随する図（黒い点が発射装置、白い点がビッグブリッジ伯爵を表す）を見よ。
+</li></ul>
+
+
+<h2>Sample Input 3</h2>
+
+<pre>2 3 1000 1000 1 1 1 2
+</pre>
+
+
+
+<h2>Output for the Sample Input 3</h2>
+
+<pre>523598775681
+</pre>

@@ -1,0 +1,140 @@
+
+<H1><font color="#000">Problem D:</font> Reaction</H1>
+
+<p>
+You are a hero of a role playing game, asked by the king to defeat monsters threating people’s life.
+</p>
+<p>
+You have been making a long journey with your colleagues, and you are now in the town closest to the
+final dungeon where the head of monsters dwells. You have heard from people that the head monster hits
+with his strong arms, casts powerful spells, and has many special abilities, and your party would be easily
+killed off without powerful equipments due to severe damages. Thus you need to prepare the equipments.
+</p>
+<p>
+On the other hand, you have a number of magical spheres collected during the journey. Those spheres
+are not useful themselves, but they can be turned into special items by a spell of reaction. You can obtain
+some amount of money by selling those special items to shops in the town, then buy the equipments by
+that money.
+</p>
+<p>
+The spell of reaction works as follows. Each sphere has a color, and either positive attribute or negative
+attribute. You choose one sphere with positive attribute and another with negative attribute, and you cast
+the spell to the two spheres. Then the spheres will make reaction to have a set of special items produced.
+Those spheres will disappear after the reaction. The set of items you will obtain solely depends on the
+colors of the two spheres. You can cast the spell as many as you want, but of course you cannot cast the
+spell to spheres that have disappeared. Also, not all pairs of colors of spheres make reaction.
+</p>
+<p>
+It is natural that you want to obtain money as much as possible. So you should choose carefully the pairs
+of spheres before casting the spell. On the other hand, you should be an excellent programmer, so it
+should be an easy task to write a program that finds the best way using your computer.
+</p>
+<p>
+Your task is now clear - write a program and get ready for the battle with the head monster!
+</p>
+
+<H2>Input</H2>
+
+<p>
+The input is a sequence of datasets. Each dataset is formatted as follows:
+</p>
+<pre>
+       <i>N</i><sup>-</sup> <i>N</i><sup>+</sup>
+       <i>Number of available spheres</i>
+       <i>Definition of items</i>
+       <i>Definition of reactions</i>
+</pre>
+<p>
+The first line contains two integers <i>N</i><sup>-</sup> and <i>N</i><sup>+</sup>, which are the numbers of different colors of spheres with
+negative and positive attributes, respectively. The rest of the dataset is divided into three parts.
+</p>
+<p>
+The first part describes the number of available spheres. This part has the following format:
+</p>
+<pre>
+       <i>K</i><sub>1</sub><sup>-</sup> <i>K</i><sub>2</sub><sup>-</sup> ... <i>K</i><sub><i>N</i><sup>-</sup></sub><sup>-</sup>
+       <i>K</i><sub>1</sub><sup>+</sup> <i>K</i><sub>2</sub><sup>+</sup> ... <i>K</i><sub><i>N</i><sup>+</sup></sub><sup>+</sup>
+</pre>
+<p>
+<i>K</i><sub><i>i</i></sub><sup>-</sup> is the number of spheres of the <i>i</i>-th color with negative attribute, and <i>K</i><sub><i>i</i></sub><sup>+</sup> is the number of spheres of
+the <i>i</i>-th color with positive attribute.
+</p>
+<p>
+The second part contains the definition of items. This part is formatted as follows:
+</p>
+<pre>
+       <i>M</i>
+       <i>A</i><sub>1</sub> <i>P</i><sub>1</sub>
+       ...
+       <i>A<sub>M</sub></i> <i>P<sub>M</sub></i>
+</pre>
+
+<p>
+Here, <i>M</i> is the number of items that can be produced. Each of the following <i>M</i> lines contains a string <i>A<sub>i</sub></i>
+and an integer <i>P<sub>i</sub></i>, which are the name and the selling price of the <i>i</i>-th item respectively.
+</p>
+<p>
+The last part gives the details of reactions. This part has the following format:
+</p>
+<pre>
+       <i>L</i>
+       <i>I</i><sub>1</sub><sup>-</sup> <i>I</i><sub>1</sub><sup>+</sup> <i>NJ</i><sub>1</sub> <i>J</i><sub>1,1</sub> ... <i>J</i><sub>1,<i>NJ</i><sub>1</sub></sub>
+       ...
+       <i>I</i><sub><i>L</i></sub><sup>-</sup> <i>I</i><sub><i>L</i></sub><sup>+</sup> <i>NJ</i><sub><i>L</i></sub> <i>J</i><sub><i>L</i>,1</sub> ... <i>J</i><sub><i>L</i>,<i>NJ</i><sub><i>L</i></sub></sub>
+</pre>
+
+<p>
+The first line contains an integer <i>L</i>, which is the number of pairs of colors of spheres that can make
+reaction. Each of the next <i>L</i> lines starts with two integers <i>I</i><sub><i>i</i></sub><sup>-</sup> and <i>I</i><sub.<i>i</i></sub><sup>+</sup>, which denote the colors of negative
+and positive spheres respectively. The next integer <i>NJ<sub>i</sub></i> is the number of items produced by reaction
+between spheres <i>I</i><sub><i>i</i></sub><sup>-</sup> and <i>I</i><sub><i>i</i></sub><sup>+</sup>. The line is then followed by <i>NJ<sub>i</sub></i> strings, each of which is an item name.
+</p>
+<p>
+You may assume all the following: 1 &le; <i>N</i><sup>-</sup>, <i>N</i><sup>+</sup> &le; 100; 1 &le; <i>K</i><sub><i>i</i></sub><sup>-</sup>, <i>K</i><sub><i>i</i></sub><sup>+</sup> &le; 100; 1 &le; <i>M</i> &le; 100; 1 &le; <i>P<sub>i</sub></i> &le; 100;
+1 &le; <i>L</i> &le; 100; 1 &le; <i>NJ<sub>i</sub></i> &le; 10. You may also assume that an item name consists only of alphanumeric
+characters and the length of the name does not exceed ten.
+</p>
+<p>
+The end of input is represented by a line with two zeros. This line is not part of any dataset.
+</p>
+
+<H2>Output</H2>
+
+<p>
+For each dataset, print a line that contains the maximum possible total selling price.
+</p>
+
+<H2>Sample Input</H2>
+<pre>
+2 2
+1 1
+1 1
+4
+A 10
+B 20
+C 30
+D 40
+4
+1 1 3 A A A
+1 2 2 B C
+2 1 1 D
+2 2 3 A A B
+2 2
+1 2
+2 1
+3
+Scroll 50
+Bastard 100
+Heal100 10
+3
+1 1 1 Scroll
+2 1 1 Bastard
+2 2 1 Heal100
+0 0
+</pre>
+
+<H2>Output for the Sample Input</H2>
+<pre>
+90
+200
+</pre>

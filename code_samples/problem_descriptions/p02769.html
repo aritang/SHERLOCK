@@ -1,0 +1,91 @@
+<span class="lang-en">
+<p>Score : <var>500</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>There is a building with <var>n</var> rooms, numbered <var>1</var> to <var>n</var>.</p>
+<p>We can move from any room to any other room in the building.</p>
+<p>Let us call the following event a <strong>move</strong>: a person in some room <var>i</var> goes to another room <var>j~ (i \neq j)</var>.</p>
+<p>Initially, there was one person in each room in the building.</p>
+<p>After that, we know that there were exactly <var>k</var> moves happened up to now.</p>
+<p>We are interested in the number of people in each of the <var>n</var> rooms now. How many combinations of numbers of people in the <var>n</var> rooms are possible?</p>
+<p>Find the count modulo <var>(10^9 + 7)</var>.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li>All values in input are integers.</li>
+<li><var>3 \leq n \leq 2 \times 10^5</var></li>
+<li><var>2 \leq k \leq 10^9</var></li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>n</var> <var>k</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the number of possible combinations of numbers of people in the <var>n</var> rooms now, modulo <var>(10^9 + 7)</var>.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>3 2
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>10
+</pre>
+<p>Let <var>c_1</var>, <var>c_2</var>, and <var>c_3</var> be the number of people in Room <var>1</var>, <var>2</var>, and <var>3</var> now, respectively. There are <var>10</var> possible combination of <var>(c_1, c_2, c_3)</var>:</p>
+<ul>
+<li><var>(0, 0, 3)</var></li>
+<li><var>(0, 1, 2)</var></li>
+<li><var>(0, 2, 1)</var></li>
+<li><var>(0, 3, 0)</var></li>
+<li><var>(1, 0, 2)</var></li>
+<li><var>(1, 1, 1)</var></li>
+<li><var>(1, 2, 0)</var></li>
+<li><var>(2, 0, 1)</var></li>
+<li><var>(2, 1, 0)</var></li>
+<li><var>(3, 0, 0)</var></li>
+</ul>
+<p>For example, <var>(c_1, c_2, c_3)</var> will be <var>(0, 1, 2)</var> if the person in Room <var>1</var> goes to Room <var>2</var> and then one of the persons in Room <var>2</var> goes to Room <var>3</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>200000 1000000000
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>607923868
+</pre>
+<p>Print the count modulo <var>(10^9 + 7)</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>15 6
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>22583772
+</pre></section>
+</div>
+</span>

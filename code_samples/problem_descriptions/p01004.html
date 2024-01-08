@@ -1,0 +1,95 @@
+
+
+
+<h1>Problem F: Ballon Contest</h1>
+<h2>Problem</h2>
+
+<p>空の様子がいつもと違う。色とりどりの多彩な熱気球が空を覆っていた。今日は熱気球の大会だ。<!--大会の会場に行ってみると、熱気球を使ったレクリエーションが開催されていた。-->熱気球から落とされた得点付きボールを参加者全員で取り合うらしい。<!--残念ながら申し込み期限が切れてしまっていたが、-->せっかくなので優勝者を予想してみることにした。</p>
+
+<ul>
+<li>レクリエーションにはN人参加する。</li>
+<li><var> N </var>人の参加者はそれぞれ自分の位置が与えられる。複数の参加者に同じ位置が与えられる事はない。</li>
+<li>上空の熱気球からM個のボールが１個ずつ落下する。</li>
+<li>参加者は全員同じタイミングで走り始め、ボールに向かって同じ速度で一直線に走る。</li>
+<li>ボールの落下位置に一番早く辿り着けた人がボールを取得できる。同時に複数人辿り着いた場合は、一様な確率で取得できる人が決まる。</li>
+<li>参加者がボールを取得すると参加者全員が元の位置に戻る。</li>
+<li>参加者が走り始めてから参加者の全員が元の位置に戻るまでに別のボールが落下する事はない。</li>
+<li>各ボールには得点と落下する位置が与えられ、ボールを取得すると得点を得られる。</li>
+<li>ボールは落下中に空気抵抗を受けるため、実際に落下する地点にはズレが発生する。落下予定の位置より最大でX軸方向に&plusmn;<var>dx </var>、Y軸方向に&plusmn;<var>dy </var>だけ一様な確率でズレる。</li>
+</ul>
+
+<p>得られる得点の期待値を求め、期待値の最も大きい参加者の期待値を出力せよ。</p>
+
+<h2>Input</h2>
+<p>
+入力は複数のデータセットからなる。<br>
+各データセットは以下で表される。<br>
+</p>
+
+<pre>
+<var>N</var> <var>M</var>
+<var>x<sub>1</sub></var> <var>y<sub>1</sub></var>
+.
+.
+<var>x<sub>N</sub></var> <var>y<sub>N</sub></var>
+<var>bx<sub>1</sub></var> <var>by<sub>1</sub></var> <var>dx<sub>1</sub></var> <var>dy<sub>1</sub></var> <var>score<sub>1</sub></var>
+.
+.
+<var>bx<sub>M</sub></var> <var>by<sub>M</sub></var> <var>dx<sub>M</sub></var> <var>dy<sub>M</sub></var> <var>score<sub>M</sub></var>
+</pre>
+
+<p>
+1行目には、参加者の人数<var> N </var>、ボールの数<var> M </var>が与えられる。<br>
+2行目から<var> N </var>+1行目までには、参加者の情報が与えられる。<var> x<sub>i</sub> </var>,<var> y<sub>i</sub> </var>は、それぞれ参加者の位置のX座標・Y座標である。<br>
+<var> N </var>+2行目から<var> N </var>+<var> M </var>+1行目までには、ボールの情報が与えられる。各ボールが実際に落下する地点のX座標・Y座標はそれぞれ<var> bx<sub>j</sub> </var>-<var> dx<sub>j</sub> </var>から<var> bx<sub>j</sub> </var>+<var> dx<sub>j</sub> </var>まで、<var> by<sub>j</sub> </var>-<var> dy<sub>j</sub> </var>から<var> by<sub>j</sub> </var>+<var> dy<sub>j</sub> </var>までの範囲のどこかである。<var> score<sub>j</sub> </var>はボールの得点である。<br>
+入力の終わりは2つのゼロからなる。<br>
+</p>
+
+<h2>Constraints</h2>
+<p>入力は以下の条件を満たす。</p>
+<ul>
+<li>1 &le; <var>N</var> &le; 100</li>
+<li>1 &le; <var>M</var> &le; 10</li>
+<li>0 &le; <var>x<sub>i</sub> </var>,<var> y<sub>i</sub> </var>,<var> bx<sub>j</sub> </var>,<var> by<sub>j</sub></var> &le; 10000</li>
+<li>1 &le; <var>dx<sub>j</sub> </var>,<var> dy<sub>j</sub></var>&le; 10000</li>
+<li>1 &le; <var>score<sub>j</sub></var> &le; 100</li>
+<li>テストケースの数は 10 を超えない。</li>
+<li>入力に含まれる値は全て整数である。</li>
+</ul>
+
+
+<h2>Output</h2>
+<p>
+各データセット毎に、答えを一行に出力しなさい。<br>
+出力は0.0001以下の誤差を含んでもよい。<br>
+</p>
+
+<h2>Sample Input</h2>
+<pre>
+3 4
+10 75
+50 5
+90 75
+50 50 10 10 2
+40 90 1 1 3
+10 20 10 15 1
+50 70 50 50 4
+4 2
+25 25
+25 75
+75 75
+75 25
+50 50 10 10 1
+50 50 15 15 2
+1 1
+5 5
+1 1 1 1 1
+0 0
+</pre>
+
+<h2>Sample Output</h2>
+<pre>
+5.442857
+0.750000
+1.000000
+</pre>

@@ -1,0 +1,109 @@
+<span class="lang-en lang-child hidden-lang">
+<div id="task-statement">
+				Max Score: <var>500</var> Points <br/>
+<section>
+<h3>Problem Statement</h3>
+					We have a grid with <var>n</var> rows and <var>7</var> columns. We call it a calendar. The cell at <var>i</var>-th row and <var>j</var>-th column is denoted <var>(i, j)</var>. <br/>
+<div align="left" class="img-nocaption">
+<img src="https://atcoder.jp/img/s8pc-4/1bef402eeaddb846eb2ea4d386a1ed3d.png" width="500"/>
+</div>
+					Initially, each cell at <var>(i, j)</var> contains the integer <var>7i + j - 8</var>, and each cell is white. <br/>
+<br/>
+					Snuke likes painting, so he decided integer <var>m</var>, and did <var>q</var> operations with a calendar. <br/>
+					・In <var>i</var>-th operation, he paint black on the cell in which an integer is written such remainder of dividing by <var>m</var> is <var>a_i</var>. <br/>
+<br/>
+					Please count the number of connected white parts. <br/>
+					Note that if two adjacent cells are white, the cells belong to the same connected part. <br/>
+</section>
+</div>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input Format</h3>
+						The input format is following:<br/>
+<pre>
+<var>n</var> <var>m</var> <var>q</var>
+<var>a_1</var> <var>a_2</var> ... <var>a_q</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output Format</h3>
+						Print the number of connected part in one line.<br/>
+</section>
+<section>
+<h3>Constraints</h3>
+<ul>
+<li><var>n</var> ≤ <var>10^{12}</var></li>
+<li><var>7n</var> is divisible by <var>m</var>.</li>
+<li>1 ≤ <var>q</var> ≤ <var>m</var> ≤ <var>10^5</var></li>
+<li><var>0</var> ≤ <var>a_1</var> &lt; <var>a_2</var> &lt; ... &lt; <var>a_q</var> &lt; m</li>
+</ul>
+</section>
+<section>
+<h3>Scoring</h3>
+						Subtask 1 [<var>100</var> points] <br/>
+<ul>
+<li><var>n</var> ≤ <var>100000</var>.</li>
+</ul>
+						Subtask 2 [<var>90</var> points] <br/>
+<ul>
+<li><var>m</var> is divisible by <var>7</var>.</li>
+<li><var>a_{i + 1} - a_i = 1</var>.</li>
+</ul>
+						Subtask 3 [<var>200</var> points] <br/>
+<ul>
+<li><var>m</var> is divisible by <var>7</var>.</li>
+</ul>
+						Subtask 4 [<var>110</var> points] <br/>
+<ul>
+<li>There are no additional constraints.</li>
+</ul>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3>
+<pre>
+7 7 3
+1 3 5
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3>
+<pre>
+4
+</pre>
+						The calendar looks like this: <br/>
+<!-- ここにカレンダーの画像を貼る -->
+<div align="left" class="img-nocaption">
+<img src="https://atcoder.jp/img/s8pc-4/b7ae283b5c0a566376d05aeff63b100a.png" width="500"/>
+</div>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3>
+<pre>
+10 14 8
+5 6 7 8 9 10 11 12
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3>
+<pre>
+10
+</pre>
+						The calendar looks like this: <br/>
+<div align="left" class="img-nocaption">
+<img src="https://atcoder.jp/img/s8pc-4/42a03c02d737a1c97005360832707eaa.png" width="500"/>
+</div>
+</section>
+</div>
+</div>
+</span>

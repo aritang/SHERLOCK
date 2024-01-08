@@ -1,0 +1,176 @@
+<span class="lang-en">
+<p>Score : <var>600</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>Ringo Mart, a convenience store, sells apple juice.</p>
+<p>On the opening day of Ringo Mart, there were <var>A</var> cans of juice in stock in the morning.
+Snuke buys <var>B</var> cans of juice here every day in the daytime.
+Then, the manager checks the number of cans of juice remaining in stock every night.
+If there are <var>C</var> or less cans, <var>D</var> new cans will be added to the stock by the next morning.</p>
+<p>Determine if Snuke can buy juice indefinitely, that is, there is always <var>B</var> or more cans of juice in stock when he attempts to buy them.
+Nobody besides Snuke buy juice at this store.</p>
+<p>Note that each test case in this problem consists of <var>T</var> queries.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 \leq T \leq 300</var></li>
+<li><var>1 \leq A, B, C, D \leq 10^{18}</var></li>
+<li>All values in input are integers.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>T</var>
+<var>A_1</var> <var>B_1</var> <var>C_1</var> <var>D_1</var>
+<var>A_2</var> <var>B_2</var> <var>C_2</var> <var>D_2</var>
+<var>:</var>
+<var>A_T</var> <var>B_T</var> <var>C_T</var> <var>D_T</var>
+</pre>
+<p>In the <var>i</var>-th query, <var>A = A_i, B = B_i, C = C_i, D = D_i</var>.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print <var>T</var> lines. The <var>i</var>-th line should contain <code>Yes</code> if Snuke can buy apple juice indefinitely in the <var>i</var>-th query; <code>No</code> otherwise.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>14
+9 7 5 9
+9 7 6 9
+14 10 7 12
+14 10 8 12
+14 10 9 12
+14 10 7 11
+14 10 8 11
+14 10 9 11
+9 10 5 10
+10 10 5 10
+11 10 5 10
+16 10 5 10
+1000000000000000000 17 14 999999999999999985
+1000000000000000000 17 15 999999999999999985
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>No
+Yes
+No
+Yes
+Yes
+No
+No
+Yes
+No
+Yes
+Yes
+No
+No
+Yes
+</pre>
+<p>In the first query, the number of cans of juice in stock changes as follows: (D represents daytime and N represents night.)</p>
+<p><var>9</var>
+<ruby><rb>→</rb><rt>D</rt></ruby> <var>2</var>
+<ruby><rb>→</rb><rt>N</rt></ruby> <var>11</var>
+<ruby><rb>→</rb><rt>D</rt></ruby> <var>4</var>
+<ruby><rb>→</rb><rt>N</rt></ruby> <var>13</var>
+<ruby><rb>→</rb><rt>D</rt></ruby> <var>6</var>
+<ruby><rb>→</rb><rt>N</rt></ruby> <var>6</var>
+<ruby><rb>→</rb><rt>D</rt></ruby> x</p>
+<p>In the second query, the number of cans of juice in stock changes as follows:</p>
+<p><var>9</var>
+<ruby><rb>→</rb><rt>D</rt></ruby> <var>2</var>
+<ruby><rb>→</rb><rt>N</rt></ruby> <var>11</var>
+<ruby><rb>→</rb><rt>D</rt></ruby> <var>4</var>
+<ruby><rb>→</rb><rt>N</rt></ruby> <var>13</var>
+<ruby><rb>→</rb><rt>D</rt></ruby> <var>6</var>
+<ruby><rb>→</rb><rt>N</rt></ruby> <var>15</var>
+<ruby><rb>→</rb><rt>D</rt></ruby> <var>8</var>
+<ruby><rb>→</rb><rt>N</rt></ruby> <var>8</var>
+<ruby><rb>→</rb><rt>D</rt></ruby> <var>1</var>
+<ruby><rb>→</rb><rt>N</rt></ruby> <var>10</var>
+<ruby><rb>→</rb><rt>D</rt></ruby> <var>3</var>
+<ruby><rb>→</rb><rt>N</rt></ruby> <var>12</var>
+<ruby><rb>→</rb><rt>D</rt></ruby> <var>5</var>
+<ruby><rb>→</rb><rt>N</rt></ruby> <var>14</var>
+<ruby><rb>→</rb><rt>D</rt></ruby> <var>7</var>
+<ruby><rb>→</rb><rt>N</rt></ruby> <var>7</var>
+<ruby><rb>→</rb><rt>D</rt></ruby> <var>0</var>
+<ruby><rb>→</rb><rt>N</rt></ruby> <var>9</var>
+<ruby><rb>→</rb><rt>D</rt></ruby> <var>2</var>
+<ruby><rb>→</rb><rt>N</rt></ruby> <var>11</var>
+<ruby><rb>→</rb><rt>D</rt></ruby> …</p>
+<p>and so on, thus Snuke can buy juice indefinitely.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>24
+1 2 3 4
+1 2 4 3
+1 3 2 4
+1 3 4 2
+1 4 2 3
+1 4 3 2
+2 1 3 4
+2 1 4 3
+2 3 1 4
+2 3 4 1
+2 4 1 3
+2 4 3 1
+3 1 2 4
+3 1 4 2
+3 2 1 4
+3 2 4 1
+3 4 1 2
+3 4 2 1
+4 1 2 3
+4 1 3 2
+4 2 1 3
+4 2 3 1
+4 3 1 2
+4 3 2 1
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>No
+No
+No
+No
+No
+No
+Yes
+Yes
+No
+No
+No
+No
+Yes
+Yes
+Yes
+No
+No
+No
+Yes
+Yes
+Yes
+No
+No
+No
+</pre></section>
+</div>
+</span>

@@ -1,0 +1,48 @@
+
+<h2>D: XORANDORBAN</h2>
+
+<h3>Problem Statement</h3>
+<p>You are given a positive integer <var>N</var>. Your task is to determine a set <var>S</var> of <var>2^N</var> integers satisfying the following conditions:</p>
+
+<ul>
+<li> All the integers in <var>S</var> are at least <var>0 </var> and less than <var>2^{N+1}</var>.</li>
+<li> All the integers in <var>S</var> are distinct.</li>
+<li> You are also given three integers <var>X</var>, <var>A</var>, and <var>O</var>, where <var>0 \leq X, A, O &lt; 2^{N+1}</var>. Then, any two integers (<var>a</var>, <var>b</var>) in <var>S</var> must satisfy <var>a</var> <var>{\it xor}</var> <var>b \neq X</var>, <var>a</var> <var>{\it and}</var> <var>b \neq A</var>, <var>a</var> <var>{\it or}</var> <var>b \neq O</var>, where <var>{\it xor}</var>, <var>{\it and}</var>, <var>{\it or}</var> are <i>bitwise xor</i>, <i>bitwise and</i>, <i>bitwise or</i>, respectively. Note that <var>a</var> and <var>b</var> are not necessarily different.</li>
+</ul>
+
+<h3>Input</h3>
+<pre><var>N</var> <var>X</var> <var>A</var> <var>O</var></pre>
+
+<h3>Constraints</h3>
+<ul>
+<li> <var>1 \leq N \leq 13</var></li>
+<li> <var>0 \leq X, A, O &lt; 2^{N+1}</var></li>
+<li> Inputs consist only of integers.</li>
+</ul>
+
+<h3>Output</h3>
+<p>If there is no set satisfying the conditions mentioned in the problem statement, output <code>No</code> in a line. Otherwise, output <code>Yes</code> in the first line, and then output <var>2^N</var> integers in such a set in the second line. If there are multiple sets satisfying the conditions, you can output any of them.</p>
+
+<h3>Sample Input 1</h3>
+<pre>2 6 1 5</pre>
+
+<h3>Output for Sample Input 1</h3>
+<pre>
+Yes
+0 3 4 7
+</pre>
+
+<h3>Sample Input 2</h3>
+<pre>3 0 5 1</pre>
+
+<h3>Output for Sample Input 2</h3>
+<pre>No</pre>
+
+<h3>Sample Input 3</h3>
+<pre>3 4 2 5</pre>
+
+<h3>Output for Sample Input 3</h3>
+<pre>
+Yes
+1 0 6 15 8 9 14 7
+</pre>

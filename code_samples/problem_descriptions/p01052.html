@@ -1,0 +1,94 @@
+
+
+
+<h1>Movie</h1>
+
+<h2>Problem</h2>
+<p>
+太郎君は夏休みの間、毎日１つの映画を近所の映画館で見ることにしました。
+（太郎君の夏休みは8月1日から8月31日までの31日間あります。）
+</p>
+
+<p>
+その映画館では、夏休みの間に<var>n</var> つの映画が上映されることになっています。
+それぞれの映画には 1 から <var>n</var> までの番号が割り当てられており、<var>i</var> 番目の映画は8月 <var>a<sub>i</sub></var> 日から8月 <var>b<sub>i</sub></var> 日の間だけ上映されます。
+</p>
+  
+
+<p>
+太郎君は映画を見た時、それが初めて見る映画だった場合は 100 の幸福度を得ることができます。
+しかし、過去に 1 度でも見たことのある映画だった場合は 50 の幸福度を得ます。
+</p>
+
+
+<p>
+太郎君は上映される映画の予定表をもとに、夏休みの計画を立てることにしました。
+太郎君が得られる幸福度の合計値が最大になるように映画を見たときの合計値を求めてください。
+</p>
+
+
+<p>
+どの日も必ず1つ以上の映画が上映されていることが保証されます。
+</p>
+  
+
+
+<h2>Input</h2>
+<p>
+入力は以下の形式で与えられる。
+</p>
+
+<pre>
+<var>n</var>
+<var>a<sub>1</sub></var> <var>b<sub>1</sub></var>
+<var>a<sub>2</sub></var> <var>b<sub>2</sub></var>
+...
+<var>a<sub>n</sub></var> <var>b<sub>n</sub></var>
+</pre>
+
+<p>
+1行目に、1つの整数 <var>n</var> が与えられる。
+2行目からの <var>n</var> 行のうち <var>i</var> 行目には 2 つの整数 <var>a<sub>i</sub>, b<sub>i</sub> </var> が空白区切りで与えられる。
+</p>
+
+<h2>Constraints</h2>
+
+<ul>
+<li>1 &le; <var>n</var> &le; 100</li>
+<li>1 &le; <var>a<sub>i</sub></var> &le; <var>b<sub>i</sub></var> &le; 31 (1 &le; <var>i</var> &le; <var>n</var>)</li>
+</ul>
+
+<h2>Output</h2>
+<p>
+太郎君の得られる幸福度の合計値の最大値を出力せよ。
+</p>
+
+<h2>Sample Input 1</h2>
+<pre>
+4
+1 31
+2 2
+2 3
+3 3
+</pre>
+
+<h2>Sample Output 1</h2>
+<pre>
+1700
+</pre>
+
+
+<h2>Sample Input 2</h2>
+<pre>
+5
+1 10
+10 20
+20 21
+22 31
+4 20
+</pre>
+
+<h2>Sample Output 2</h2>
+<pre>
+1800
+</pre>

@@ -1,0 +1,87 @@
+<h1>Bozosort</h1>
+    　
+<p>
+  Bozosort, as well as Bogosort, is a very inefficient sort algorithm. It is a random number-based algorithm that sorts sequence elements following the steps as below:
+</p>
+
+<ol>
+<li> Randomly select two elements and swap them.</li>
+<li> Verify if all the elements are sorted in increasing order.</li>
+<li> Finish if sorted, else return to 1.</li>
+
+</ol>
+
+<p>
+  To analyze Bozosort, you have decided to simulate the process using several predetermined pairs of elements.
+</p>
+
+<p>
+  You are given several commands to swap two elements. Make a program to evaluate how many times you have to run the command before the sequence is aligned in increasing order.
+</p>
+
+
+<h2>Input</h2>
+<p>
+The input is given in the following format.
+</p>
+<pre>
+$N$
+$a_1$ $a_2$ ... $a_N$
+$Q$
+$x_1$ $y_1$
+$x_2$ $y_2$
+$...$
+$x_Q$ $y_Q$
+</pre>
+
+<p>
+The first line provides the number of sequence elements $N$ ($2 \leq N \leq 300,000$). The second line provides an array of integers $a_i$ ($1 \leq a_i \leq 10^9$) that constitutes the sequence. Each of the subsequent $Q$ lines provides a pair of integers $x_i,y_i$ ($1 \leq x_i,y_i \leq N$) that represent the $i$-th command, which swaps the two elements indicated by $x_i$ and $y_i$ ($x_i \ne y_i$).
+</p>
+
+<h2>Output</h2>
+
+<p>
+  If neat alignment in increasing order is realized the first time after execution of multiple commands, output at what time it was. Output <span>0</span> if the initial sequence is aligned in increasing order, and <span>-1</span> if exhaustive execution still failed to attain the goal.
+</p>
+
+<h2>Sample Input 1</h2>
+<pre>
+6
+9 7 5 6 3 1
+3
+1 6
+2 5
+3 4
+</pre>
+
+<h2>Sample Output 1</h2>
+<pre>
+2
+</pre>
+
+<h2>Sample Input 2</h2>
+<pre>
+4
+4 3 2 1
+2
+1 2
+3 4
+</pre>
+
+<h2>Sample Output 2</h2>
+<pre>
+-1
+</pre>
+
+<h2>Sample Input 3</h2>
+<pre>
+5
+1 1 1 2 2
+1
+1 2
+</pre>
+
+<h2>Sample Input 3</h2>
+<pre>
+0
+</pre>

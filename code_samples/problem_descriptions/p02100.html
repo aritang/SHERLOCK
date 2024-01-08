@@ -1,0 +1,96 @@
+
+
+
+<h1>Problem C: Factorization</h1>
+
+<h2>Problem</h2>
+<p>
+ukuku1333さんはおっちょこちょいなので、
+<var>x</var> の一次式の積を展開したら、元の一次式がわからなくなってしまった。<br>
+<var>x</var> の <var>n</var> 次多項式が与えられるので、因数分解して元のxの一次式の積の形にせよ。
+</p>
+
+<p>
+<var>x</var> の <var>n</var> 次多項式は以下のBNFによって与えられる。
+</p>
+<pre>
+&lt;多項式&gt; &#058;&#061; &lt;項&gt; &#124; &lt;多項式&gt;&plus;&lt;項&gt; &#124; &lt;多項式&gt;&minus;&lt;項&gt; 
+&lt;項&gt; &#058;&#061; x&#094;&lt;指数&gt; &#124; &lt;係数&gt;x&#094;&lt;指数&gt; &#124; &lt;係数&gt;x &#124; &lt;定数&gt; 
+&lt;指数&gt; &#058;&#061; &#091;2-5&#093; 
+&lt;係数&gt; &#058;&#061; &#091;1-9&#093;&#091;0-9&#093;&#042; 
+&lt;定数&gt; &#058;&#061; &#091;1-9&#093;&#091;0-9&#093;&#042; 
+</pre>
+<p>
+指数及び係数が省略されている場合は1とみなす。
+</p>
+
+<h2>Input</h2>
+<p>入力は以下の形式で与えられる。</p>
+<pre>
+<var>S</var>
+</pre>
+<p>
+<var>x</var> の <var>n</var> 次多項式を表す文字列 <var>S</var> が一行に与えられる。
+</p>
+
+<h2>Constraints</h2>
+<p>入力は以下の条件を満たす。</p>
+<ul>
+    <li>2 &le; <var>n</var> &le; 5</li>
+    <li>与えられる式の項の数を <var>m</var> とすると、1 &le; <var>i</var> &lt; <var>j</var> &le; <var>m</var>  なる任意の <var>i</var>, <var>j</var>  の組に対して、<br>
+        <var>i</var> 番目の項の次数は <var>j</var> 番目の項の次数より大きいことが保証される
+    </li>
+    <li>与えられる<var>x</var> の <var>n</var> 次多項式は、<var>x</var> の一次式の積の形に因数分解したもので表すことができることが保証される</li>
+    <li>係数、定数の絶対値はそれぞれ2&times;10<sup>3</sup>以下である</li>
+    <li>次数が最大のものの係数は1であり、省略されていることが保証される</li>
+    <li>展開する前のそれぞれの一次式の元の定数項は0ではない整数であることが保証される</li>
+    <li>展開する前のそれぞれの一次式の元の定数項は相異なることが保証される</li>
+    </li>
+</ul>
+
+<h2>Output</h2>
+<p>
+<var>S</var> を<var>x</var> の一次式の積の形に因数分解したものを、定数項の小さいものから順に出力せよ。<br>
+出力の最後には改行を入れること。
+</p>
+
+
+<h2>Sample Input 1</h2>
+<pre>
+x^2+3x+2
+</pre>
+
+<h2>Sample Output 1</h2>
+<pre>
+(x+1)(x+2)
+</pre>
+
+<h2>Sample Input 2</h2>
+<pre>
+x^2-1
+</pre>
+
+<h2>Sample Output 2</h2>
+<pre>
+(x-1)(x+1)
+</pre>
+
+<h2>Sample Input 3</h2>
+<pre>
+x^5+15x^4+85x^3+225x^2+274x+120
+</pre>
+
+<h2>Sample Output 3</h2>
+<pre>
+(x+1)(x+2)(x+3)(x+4)(x+5)
+</pre>
+
+<h2>Sample Input 4</h2>
+<pre>
+x^3-81x^2-1882x-1800
+</pre>
+
+<h2>Sample Output 4</h2>
+<pre>
+(x-100)(x+1)(x+18)
+</pre>

@@ -1,0 +1,204 @@
+
+<H1><font color="#000">Problem H:</font> Top Spinning</H1>
+
+<p>
+Spinning tops are one of the most popular and the most traditional toys. Not only spinning
+them, but also making one’s own is a popular enjoyment.
+</p>
+<p>
+One of the easiest way to make a top is to cut out a certain shape from a cardboard and pierce
+an axis stick through its center of mass. Professionally made tops usually have three dimensional
+shapes, but in this problem we consider only two dimensional ones.
+</p>
+<p>
+Usually, tops have rotationally symmetric shapes, such as a circle, a rectangle (with 2-fold
+rotational symmetry) or a regular triangle (with 3-fold symmetry). Although such symmetries
+are useful in determining their centers of mass, they are not definitely required; an asymmetric
+top also spins quite well if its axis is properly pierced at the center of mass.
+</p>
+<p>
+When a shape of a top is given as a path to cut it out from a cardboard of uniform thickness,
+your task is to find its center of mass to make it spin well. Also, you have to determine whether
+the center of mass is on the part of the cardboard cut out. If not, you cannot pierce the axis
+stick, of course.
+</p>
+<!--
+Java Specific: Submitted Java programs may not use classes implementing the interface
+“java.awt.Shape”. You may use them for your debugging purposes.
+-->
+
+
+<H2>Input</H2>
+
+<p>
+The input consists of multiple datasets, each of which describes a counterclockwise path on a
+cardboard to cut out a top. A path is indicated by a sequence of command lines, each of which
+specifies a line segment or an arc.
+</p>
+<p>
+In the description of commands below, the <i>current</i> position is the position to start the next cut,
+if any. After executing the cut specified by a command, the <i>current position</i> is moved to the
+end position of the cut made.
+</p>
+<p>
+The commands given are one of those listed below. The command name starts from the first
+column of a line and the command and its arguments are separated by a space. All the command
+arguments are integers.
+</p>
+
+<pre>
+start <i>x</i> <i>y</i>
+</pre>
+
+<p>
+Specifies the start position of a path. This command itself does not specify any cutting;
+it only sets the <i>current position</i> to be (<i>x</i>, <i>y</i>).
+</p>
+
+<pre>
+line <i>x y</i>
+</pre>
+<p>
+     Specifies a linear cut along a straight line from the <i>current position</i> to the position (<i>x</i>, <i>y</i>),
+     which is not identical to the <i>current position</i>.
+</p>
+<pre>
+arc <i>x y r</i>
+</pre>
+<p>
+     Specifies a round cut along a circular arc. The arc starts from the <i>current position</i> and
+     ends at (<i>x</i>, <i>y</i>), which is not identical to the <i>current position</i>. The arc has a radius of |<i>r</i>|.
+     When <i>r</i> is negative, the center of the circle is to the left side of the direction of this round
+     cut; when it is positive, it is to the right side (Figure 1). The absolute value of <i>r</i> is greater
+     than the half distance of the two ends of the arc. Among two arcs connecting the start
+     and the end positions with the specified radius, the arc specified is one with its central
+     angle less than 180 degrees.
+</p>
+<pre>
+close
+</pre>
+<p>
+     Closes a path by making a linear cut to the initial start position and terminates a dataset.
+     If the <i>current position</i> is already at the start position, this command simply indicates the
+     end of a dataset.
+</p>
+
+<p>
+The figure below gives an example of a command sequence and its corresponding path. Note
+that, in this case, the given radius -<i>r</i> is negative and thus the center of the arc is to the left of
+the arc. The arc command should be interpreted as shown in this figure and, not the other way
+around on the same circle.
+</p>
+
+<center>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE1_topSpinning1">
+<p>Figure 1: A partial command sequence and the path specified so far</p>
+</center>
+
+<p>
+A dataset starts with a start command and ends with a close command.
+</p>
+<p>
+The end of the input is specified by a line with a command end.
+</p>
+<p>
+There are at most 100 commands in a dataset and at most 100 datasets are in the input.
+Absolute values of all the coordinates and radii are less than or equal to 100.
+</p>
+<p>
+You may assume that the path does not cross nor touch itself. You may also assume that paths
+will never expand beyond edges of the cardboard, or, in other words, the cardboard is virtually
+infinitely large.
+</p>
+
+<H2>Output</H2>
+
+<p>
+For each of the dataset, output a line containing <i>x</i>- and <i>y</i>-coordinates of the center of mass of
+the top cut out by the path specified, and then a character ‘+’ or ‘-’ indicating whether this
+center is on the top or not, respectively. Two coordinates should be in decimal fractions. There
+should be a space between two coordinates and between the <i>y</i>-coordinate and the character ‘+’
+or ‘-’. No other characters should be output. The coordinates may have errors less than 10<sup>-3</sup> .
+You may assume that the center of mass is at least 10<sup>-3</sup> distant from the path.
+
+</p>
+
+
+<H2>Hints</H2>
+
+<p>
+An important nature of mass centers is that, when an object <i>O</i> can be decomposed into parts
+<i>O</i><sub>1</sub> , . . . , <i>O</i><sub><i>n</i></sub> with masses <i>M</i><sub>1</sub> , . . . , <i>M</i><sub><i>n</i></sub> , the center of mass of <i>O</i> can be computed by:
+</p>
+
+<center>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE1_topSpinning2">
+</center>
+
+<p>
+where <i>G<sub>k</sub></i> is the vector pointing the center of mass of <i>O<sub>k</sub></i>.
+</p>
+<p>
+A circular segment with its radius <i>r</i> and angle <i>&theta;</i> (in radian) has its arc length <i>s</i> = <i>r&theta;</i> and its
+chord length <i>c</i> = <i>r</i>&radic;(2 - 2cos<i>&theta;</i>). Its area size is <i>A</i> = <i>r</i><sup>2</sup>(<i>&theta;</i> - sin<i>&theta;</i>)/2 and its center of mass <i>G</i> is
+<i>y</i> = 2<i>r</i><sup>3</sup>sin<sup>3</sup>(<i>&theta;</i>/2)/(3<i>A</i>) distant from the circle center.
+</p>
+
+
+<center>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE1_topSpinning3">
+<p>Figure 2: Circular segment and its center of mass</p>
+</center>
+
+<center>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE1_topSpinning4">
+<p>Figure 3: The first sample top</p>
+</center>
+
+
+<H2>Sample Input</H2>
+<pre>
+start 0 0
+arc 2 2 -2
+line 2 5
+arc 0 3 -2
+close
+start -1 1
+line 2 1
+line 2 2
+line -2 2
+arc -3 1 -1
+line -3 -2
+arc -2 -3 -1
+line 2 -3
+line 2 -2
+line -1 -2
+line -1 -1
+arc -1 0 2
+close
+start 0 0
+line 3 0
+line 5 -1
+arc 4 -2 -1
+line 6 -2
+line 6 1
+line 7 3
+arc 8 2 -1
+line 8 4
+line 5 4
+line 3 5
+arc 4 6 -1
+line 2 6
+line 2 3
+line 1 1
+arc 0 2 -1
+close
+end
+</pre>
+
+<H2>Output for the Sample Input</H2>
+<pre>
+1.00000 2.50000 +
+-1.01522 -0.50000 -
+4.00000 2.00000 +
+</pre>

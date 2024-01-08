@@ -1,0 +1,72 @@
+
+<H1>Structured Programming</H1>
+
+<p>
+In programming languages like C/C++, a goto statement provides an unconditional jump from the "goto" to a labeled statement. For example, a statement "goto CHECK_NUM;" is executed, control of the program jumps to CHECK_NUM. Using these constructs, you can implement, for example, loops.
+</p>
+
+<p>
+Note that use of goto statement is highly discouraged, because it is difficult to trace the control flow of a program which includes goto.
+</p>
+
+<p>
+Write a program which does precisely the same thing as the following program (this example is wrtten in C++). Let's try to write the program without goto statements.
+</p>
+
+<pre>
+void call(int n){
+  int i = 1;
+ CHECK_NUM:
+  int x = i;
+  if ( x % 3 == 0 ){
+    cout << " " << i;
+    goto END_CHECK_NUM;
+  }
+ INCLUDE3:
+  if ( x % 10 == 3 ){
+    cout << " " << i;
+    goto END_CHECK_NUM;
+  }
+  x /= 10;
+  if ( x ) goto INCLUDE3;
+ END_CHECK_NUM:
+  if ( ++i <= n ) goto CHECK_NUM;
+
+  cout << endl;
+}
+</pre>
+
+
+<H2>Input</H2>
+
+<p>
+An integer <var>n</var> is given in a line.
+</p>
+
+<H2>Output</H2>
+
+<p>
+Print the output result of the above program for given integer <var>n</var>.
+</p>
+
+<h2>Constraints</h2>
+<ul>
+<li>3 &le; <i>n</i> &le; 10000</li>
+</ul>
+
+
+<H2>Sample Input</H2>
+
+<pre>
+30
+</pre>
+
+<H2>Sample Output</H2>
+
+<pre>
+ 3 6 9 12 13 15 18 21 23 24 27 30
+</pre>
+
+<p>
+  Put a single space character before each element.
+</p>

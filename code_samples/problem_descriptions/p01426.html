@@ -1,0 +1,108 @@
+
+<script src="./IMAGE/varmath.js" charset="UTF-8"></script>
+
+<H1>Vector Compression</H1>
+
+<p>
+
+
+
+You are recording a result of a secret experiment, which consists of a large set of <var>N</var>-dimensional vectors.
+Since the result may become very large, you are thinking of
+compressing it. Fortunately you already have a good compression method
+for vectors with small absolute values, all you have to do is to
+preprocess the vectors and make them small.
+</p>
+
+<p>
+
+
+
+
+
+
+You can record the set of vectors in any order you like.
+Let's assume you process them in the order <var>v_1</var>, <var>v_2</var>,..., <var>v_M</var>.
+Each vector <var>v_i</var> is recorded either <i>as is</i>, or as a difference vector.
+When it is recorded as a difference,
+you can arbitrarily pick up an already chosen vector <var>v_j (j&lt;i)</var> and a real value <var>r</var>.
+Then the actual vector value recorded is <var>(v_i - r v_j)</var>.
+The values of <var>r</var> and <var>j</var> do not affect the compression ratio so much, so you don't have to care about them.
+</p>
+
+<p>
+Given  a set of vectors,
+your task is to write a program  that calculates the minimum sum of the squared length of the  recorded vectors.
+
+</p>
+
+<H2>Input</H2>
+
+<p>
+The input is like the following style.
+</p>
+
+<p>
+<var>N</var> <var>M</var><br/>
+<var>v_{1,1}</var> <var>v_{1,2}</var> <var>...</var> <var>v_{1,N}</var><br/>
+<var>...</var><br/>
+<var>v_{M,1}</var> <var>v_{M,2}</var> <var>...</var> <var>v_{M,N}</var><br/>
+</p>
+
+<p>
+The first line contains two integers <var>N</var> and <var>M</var> (<var>1 \leq N, M \leq 100</var>),
+where <var>N</var> is the dimension of each vector,
+and <var>M</var> is the number of the vectors.
+Each of the following <var>M</var> lines contains <var>N</var> floating point values <var>v_{i,j}</var> (<var>-1.0 \leq v_{i,j} \leq 1.0</var>)
+which represents the <var>j</var>-th element value of the <var>i</var>-th vector.
+</p>
+
+<H2>Output</H2>
+
+<p>
+Output the minimum sum of the squared length of the  recorded vectors. 
+The output should not contain an absolute error greater than <var>10^{-6}</var>.
+</p>
+
+<H2>Sample Input 1</H2>
+
+<pre>
+2 3
+1.0 1.0
+-1.0 0.0
+0.5 0.5
+</pre>
+
+<H2>Output for the Sample Input 1</H2>
+
+<pre>
+1.0
+</pre>
+
+<H2>Sample Input 2</H2>
+
+<pre>
+1 1
+1.0
+</pre>
+
+<H2>Output for the Sample Input 2</H2>
+
+<pre>
+1.0
+</pre>
+
+<H2>Sample Input 3</H2>
+
+<pre>
+4 3
+1.0 1.0 0.0 0.0
+-1.0 0.0 -1.0 0.0
+0.5 0.5 0.5 0.5
+</pre>
+
+<H2>Output for the Sample Input 3</H2>
+
+<pre>
+3.0
+</pre>

@@ -1,0 +1,87 @@
+<span class="lang-en">
+<p>Score : <var>300</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>You have a pot and <var>N</var> ingredients. Each ingredient has a real number parameter called <em>value</em>, and the value of the <var>i</var>-th ingredient <var>(1 \leq i \leq N)</var> is <var>v_i</var>.</p>
+<p>When you put two ingredients in the pot, they will vanish and result in the formation of a new ingredient. The value of the new ingredient will be <var>(x + y) / 2</var> where <var>x</var> and <var>y</var> are the values of the ingredients consumed, and you can put this ingredient again in the pot.</p>
+<p>After you compose ingredients in this way <var>N-1</var> times, you will end up with one ingredient. Find the maximum possible value of this ingredient.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>2 \leq N \leq 50</var></li>
+<li><var>1 \leq v_i \leq 1000</var></li>
+<li>All values in input are integers.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+<var>v_1</var> <var>v_2</var> <var>\ldots</var> <var>v_N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print a decimal number (or an integer) representing the maximum possible value of the last ingredient remaining.</p>
+<p>Your output will be judged correct when its absolute or relative error from the judge's output is at most <var>10^{-5}</var>.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>2
+3 4
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>3.5
+</pre>
+<p>If you start with two ingredients, the only choice is to put both of them in the pot. The value of the ingredient resulting from the ingredients of values <var>3</var> and <var>4</var> is <var>(3 + 4) / 2 = 3.5</var>.</p>
+<p>Printing <code>3.50001</code>, <code>3.49999</code>, and so on will also be accepted.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>3
+500 300 200
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>375
+</pre>
+<p>You start with three ingredients this time, and you can choose what to use in the first composition. There are three possible choices:</p>
+<ul>
+<li>Use the ingredients of values <var>500</var> and <var>300</var> to produce an ingredient of value <var>(500 + 300) / 2 = 400</var>. The next composition will use this ingredient and the ingredient of value <var>200</var>, resulting in an ingredient of value <var>(400 + 200) / 2 = 300</var>.</li>
+<li>Use the ingredients of values <var>500</var> and <var>200</var> to produce an ingredient of value <var>(500 + 200) / 2 = 350</var>. The next composition will use this ingredient and the ingredient of value <var>300</var>, resulting in an ingredient of value <var>(350 + 300) / 2 = 325</var>.</li>
+<li>Use the ingredients of values <var>300</var> and <var>200</var> to produce an ingredient of value <var>(300 + 200) / 2 = 250</var>. The next composition will use this ingredient and the ingredient of value <var>500</var>, resulting in an ingredient of value <var>(250 + 500) / 2 = 375</var>.</li>
+</ul>
+<p>Thus, the maximum possible value of the last ingredient remaining is <var>375</var>.</p>
+<p>Printing <code>375.0</code> and so on will also be accepted.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>5
+138 138 138 138 138
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>138
+</pre></section>
+</div>
+</span>

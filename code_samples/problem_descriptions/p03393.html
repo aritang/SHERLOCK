@@ -1,0 +1,87 @@
+<span class="lang-en">
+<p>Score : <var>300</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>Gotou just received a dictionary. However, he doesn't recognize the language used in the dictionary. He did some analysis on the dictionary and realizes that the dictionary contains all possible <strong>diverse</strong> words in lexicographical order.</p>
+<p>A word is called <strong>diverse</strong> if and only if it is a nonempty string of English lowercase letters and all letters in the word are distinct. For example, <code>atcoder</code>, <code>zscoder</code> and <code>agc</code> are diverse words while <code>gotou</code> and <code>connect</code> aren't diverse words.</p>
+<p>Given a diverse word <var>S</var>, determine the next word that appears after <var>S</var> in the dictionary, i.e. the lexicographically smallest diverse word that is lexicographically larger than <var>S</var>, or determine that it doesn't exist.</p>
+<p>Let <var>X = x_{1}x_{2}...x_{n}</var> and <var>Y = y_{1}y_{2}...y_{m}</var> be two distinct strings. <var>X</var> is lexicographically larger than <var>Y</var> if and only if <var>Y</var> is a prefix of <var>X</var> or <var>x_{j} &gt; y_{j}</var> where <var>j</var> is the smallest integer such that <var>x_{j} \neq y_{j}</var>.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 \leq |S| \leq 26</var></li>
+<li><var>S</var> is a diverse word.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>S</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the next word that appears after <var>S</var> in the dictionary, or <code>-1</code> if it doesn't exist.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>atcoder
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>atcoderb
+</pre>
+<p><code>atcoderb</code> is the lexicographically smallest diverse word that is lexicographically larger than <code>atcoder</code>. Note that <code>atcoderb</code> is lexicographically smaller than <code>b</code>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>abc
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>abcd
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>zyxwvutsrqponmlkjihgfedcba
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>-1
+</pre>
+<p>This is the lexicographically largest diverse word, so the answer is <code>-1</code>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 4</h3><pre>abcdefghijklmnopqrstuvwzyx
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 4</h3><pre>abcdefghijklmnopqrstuvx
+</pre></section>
+</div>
+</span>

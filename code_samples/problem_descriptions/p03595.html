@@ -1,0 +1,185 @@
+<span class="lang-en">
+<p>Score : <var>1600</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>Ringo got interested in modern art. He decided to draw a big picture on the board with <var>N+2</var> rows and <var>M+2</var> columns of squares constructed in the venue of CODE FESTIVAL 2017, using some people.</p>
+<p>The square at the <var>(i+1)</var>-th row and <var>(j+1)</var>-th column in the board is represented by the pair of integers <var>(i,j)</var>. That is, the top-left square is <var>(0,0)</var>, and the bottom-right square is <var>(N+1,M+1)</var>.
+Initially, the squares <var>(x,y)</var> satisfying <var>1 \leq x \leq N</var> and <var>1 \leq y \leq M</var> are painted white, and the other (outermost) squares are painted black.</p>
+<p>Ringo arranged people at some of the outermost squares, facing inward.
+More specifically, the arrangement of people is represented by four strings <var>A</var>, <var>B</var>, <var>C</var> and <var>D</var>, as follows:</p>
+<ul>
+<li>For each row except the top and bottom, if the <var>i</var>-th character <var>(1 \leq i \leq N)</var> in <var>A</var> is <code>1</code>, place a person facing right at the square <var>(i,0)</var>; otherwise, do nothing.</li>
+<li>For each row except the top and bottom, if the <var>i</var>-th character <var>(1 \leq i \leq N)</var> in <var>B</var> is <code>1</code>, place a person facing left at the square <var>(i,M+1)</var>; otherwise, do nothing.</li>
+<li>For each column except the leftmost and rightmost, if the <var>i</var>-th character <var>(1 \leq i \leq M)</var> in <var>C</var> is <code>1</code>, place a person facing down at the square <var>(0,i)</var>; otherwise, do nothing.</li>
+<li>For each column except the leftmost and rightmost, if the <var>i</var>-th character <var>(1 \leq i \leq M)</var> in <var>D</var> is <code>1</code>, place a person facing up at the square <var>(N+1,i)</var>; otherwise, do nothing.</li>
+</ul>
+<p>Each person has a sufficient amount of non-white paint. No two people have paint of the same color.</p>
+<div style="text-align: center;">
+<img src="https://atcoder.jp/img/code-festival-2017-quala/46a627606452b904221672922d269290.png">
+<p>An example of an arrangement of people (For convenience, black squares are displayed in gray)</p>
+</img></div>
+<p>Ringo repeats the following sequence of operations until all people are dismissed from the venue.</p>
+<ul>
+<li>Select a person who is still in the venue.</li>
+<li>The selected person repeats the following action while the square in front of him/her is white: move one square forward, and paint the square he/she enters with his/her paint. When the square in front of him/her is not white, he/she stops doing the action.</li>
+<li>The person is now dismissed from the venue.</li>
+</ul>
+<div style="text-align: center;">
+<img src="https://atcoder.jp/img/code-festival-2017-quala/406bcaf4d52da2ae3b09eedf63ff302e.png">
+<p>An example of a way the board is painted</p>
+</img></div>
+<p>How many different states of the board can Ringo obtain at the end of the process? Find the count modulo <var>998244353</var>.</p>
+<p>Two states of the board are considered different when there is a square painted in different colors.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 \leq N,M \leq 10^5</var></li>
+<li><var>|A|=|B|=N</var></li>
+<li><var>|C|=|D|=M</var></li>
+<li><var>A</var>, <var>B</var>, <var>C</var> and <var>D</var> consist of <code>0</code> and <code>1</code>.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var> <var>M</var>
+<var>A</var>
+<var>B</var>
+<var>C</var>
+<var>D</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the number of the different states of the board Ringo can obtain at the end of the process, modulo <var>998244353</var>.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>2 2
+10
+01
+10
+01
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>6
+</pre>
+<p>There are six possible states as shown below.</p>
+<p><img alt="" src="https://atcoder.jp/img/code-festival-2017-quala/1dd467cdff8a517c9555abfca0915e2e.png"/></p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>2 2
+11
+11
+11
+11
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>32
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>3 4
+111
+111
+1111
+1111
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>1276
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 4</h3><pre>17 21
+11001010101011101
+11001010011010111
+111010101110101111100
+011010110110101000111
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 4</h3><pre>548356548
+</pre>
+<p>Be sure to find the count modulo <var>998244353</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 5</h3><pre>3 4
+000
+101
+1111
+0010
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 5</h3><pre>21
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 6</h3><pre>9 13
+111100001
+010101011
+0000000000000
+1010111111101
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 6</h3><pre>177856
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 7</h3><pre>23 30
+01010010101010010001110
+11010100100100101010101
+000101001001010010101010101101
+101001000100101001010010101000
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 7</h3><pre>734524988
+</pre></section>
+</div>
+</span>

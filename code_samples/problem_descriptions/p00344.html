@@ -1,0 +1,91 @@
+
+
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({ tex2jax: { inlineMath: [["$","$"], ["\\(","\\)"]], processEscapes: true }});
+</script>
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+
+<H1>環状すごろく</H1>
+
+<p>
+  ユキさんは、子供会の催しでみんなで遊べるようにすごろくを作りました。このすごろくでは、環状にマスが並んでいて、それぞれのマスには１以上の整数が書いてあります。
+</p>
+
+<p>
+  プレイヤーは出発点としてどこかのマスを選んで自分の駒を置きます。そのマスに書いてある数だけ、時計回りに駒を進めます。止まったマスに書いてある数だけ、再び時計回りに駒を進めます。これを繰り返して、出発点に選んだマスの上で駒が止まったら「あがり」です。
+</p>
+
+<p>
+  実際には、マスの選び方によっては絶対に「あがり」にならない場合もあります。ユキさんは、このすごろくで「あがり」にたどり着けるマスの個数を数えようとしています。
+</p>
+
+<br/>
+
+<p>
+すごろくの情報を入力とし、「あがり」にたどり着けるマスの個数を報告するプログラムを作成せよ。
+</p>
+
+
+<h2>Input</h2>
+
+<p>
+  入力は以下の形式で与えられる。
+</p>
+
+<pre>
+<var>N</var>
+<var>a<sub>1</sub></var> <var>a<sub>2</sub></var> ... <var>a<sub>N</sub></var>
+</pre>
+
+<p>
+１行目にすごろくに含まれるすべてのマスの個数 <var>N</var> (1 &le; <var>N</var> &le; 100000) が与えられる。２行目に、それぞれのマスに書かれた数 <var>a<sub>i</sub></var> (1 &le; <var>a<sub>i</sub></var> &le; 10<sup>9</sup>) が、時計回りに順番に与えられる。
+</p>
+
+<h2>Output</h2>
+
+<p>
+「あがり」にたどり着けるマスの個数を１行に出力する。
+</p>
+
+<h2>Sample Input 1</h2>
+
+<pre>
+3
+1 1 1
+</pre>
+
+<h2>Sample Output 1</h2>
+<pre>
+3
+</pre>
+
+<br/>
+
+<h2>Sample Input 2</h2>
+<pre>
+3
+1 1 2
+</pre>
+
+<h2>Sample Output 2</h2>
+<pre>
+2
+</pre>
+
+<br/>
+
+<h2>Sample Input 3</h2>
+<pre>
+8
+2 3 7 3 3 3 4 4
+</pre>
+
+<h2>Sample Output 3</h2>
+<pre>
+6
+</pre>
+
+<br/>

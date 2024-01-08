@@ -1,0 +1,162 @@
+
+<H1><font color="#000">Problem D:</font> Pathological Paths</H1>
+
+<p>
+Professor Pathfinder is a distinguished authority on the structure of hyperlinks in the World
+Wide Web. For establishing his hypotheses, he has been developing software agents, which
+automatically traverse hyperlinks and analyze the structure of the Web. Today, he has gotten
+an intriguing idea to improve his software agents. However, he is very busy and requires help
+from good programmers. You are now being asked to be involved in his development team and
+to create a small but critical software module of his new type of software agents.
+</p>
+<p>
+Upon traversal of hyperlinks, Pathfinder’s software agents incrementally generate a map of
+visited portions of the Web. So the agents should maintain the list of traversed hyperlinks
+and visited web pages. One problem in keeping track of such information is that two or more
+different URLs can point to the same web page. For instance, by typing any one of the following
+five URLs, your favorite browsers probably bring you to the same web page, which as you may
+have visited is the home page of the ACM ICPC Ehime contest.
+</p>
+<pre>
+      http://www.ehime-u.ac.jp/ICPC/
+      http://www.ehime-u.ac.jp/ICPC
+      http://www.ehime-u.ac.jp/ICPC/../ICPC/
+      http://www.ehime-u.ac.jp/ICPC/./
+      http://www.ehime-u.ac.jp/ICPC/index.html
+</pre>
+<p>
+Your program should reveal such aliases for Pathfinder’s experiments.
+</p>
+<p>
+Well, . . . but it were a real challenge and to be perfect you might have to embed rather compli-
+cated logic into your program. We are afraid that even excellent programmers like you could
+not complete it in five hours. So, we make the problem a little simpler and subtly unrealis-
+tic. You should focus on the path parts (i.e. <span>/ICPC/, /ICPC, /ICPC/../ICPC/, /ICPC/./</span>, and
+<span>/ICPC/index.html</span> in the above example) of URLs and ignore the scheme parts (e.g. <span>http://</span>),
+the server parts (e.g. <span>www.ehime-u.ac.jp</span>), and other optional parts. You should carefully read
+the rules described in the sequel since some of them may not be based on the reality of today’s
+Web and URLs.
+</p>
+<p>
+Each path part in this problem is an absolute pathname, which specifies a path from the root
+directory to some web page in a hierarchical (tree-shaped) directory structure. A pathname
+always starts with a slash (/), representing the root directory, followed by path segments delim-
+ited by a slash. For instance, <span>/ICPC/index.html</span> is a pathname with two path segments <span>ICPC</span> and <span>index.html</span>.
+</p>
+
+<p>
+All those path segments but the last should be directory names and the last one the name of an
+ordinary file where a web page is stored. However, we have one exceptional rule: an ordinary
+file name <span>index.html</span> at the end of a pathname may be omitted. For instance, a pathname
+<span>/ICPC/index.html</span> can be shortened to <span>/ICPC/</span>, if <span>index.html</span> is an existing ordinary file name.
+More precisely, if <span>ICPC</span> is the name of an existing directory just under the root and index.html
+is the name of an existing ordinary file just under the <span>/ICPC</span> directory, <span>/ICPC/index.html</span> and
+<span>/ICPC/</span> refer to the same web page. Furthermore, the last slash following the last path segment
+can also be omitted. That is, for instance, <span>/ICPC/</span> can be further shortened to <span>/ICPC</span>. However,
+<span>/index.html</span> can only be abbreviated to / (a single slash).
+</p>
+<p>
+You should pay special attention to path segments consisting of a single period (.) or a double
+period (..), both of which are always regarded as directory names. The former represents the
+directory itself and the latter represents its parent directory. Therefore, if <span>/ICPC/</span> refers to some
+web page, both <span>/ICPC/./</span> and <span>/ICPC/../ICPC/</span> refer to the same page. Also <span>/ICPC2/../ICPC/</span>
+refers to the same page if <span>ICPC2</span> is the name of an existing directory just under the root;
+otherwise it does not refer to any web page. Note that the root directory does not have any
+parent directory and thus such pathnames as <span>/../</span> and <span>/ICPC/../../index.html</span> cannot point
+to any web page.
+</p>
+<p>
+Your job in this problem is to write a program that checks whether two given pathnames refer
+to existing web pages and, if so, examines whether they are the same.
+</p>
+
+<H2>Input</H2>
+
+<p>
+The input consists of multiple datasets. The first line of each dataset contains two positive
+integers <i>N</i> and <i>M</i>, both of which are less than or equal to 100 and are separated by a single
+space character.
+</p>
+<p>
+The rest of the dataset consists of <i>N</i> + 2<i>M</i> lines, each of which contains a syntactically correct
+pathname of at most 100 characters. You may assume that each path segment enclosed by two
+slashes is of length at least one. In other words, two consecutive slashes cannot occur in any
+pathname. Each path segment does not include anything other than alphanumerical characters
+(i.e. ‘a’-‘z’, ‘A’-‘Z’, and ‘0’-‘9’) and periods (‘.’).
+</p>
+<p>
+The first <i>N</i> pathnames enumerate all the web pages (ordinary files). Every existing directory
+name occurs at least once in these pathnames. You can assume that these pathnames do not
+include any path segments consisting solely of single or double periods and that the last path
+segments are ordinary file names. Therefore, you do not have to worry about special rules for
+<span>index.html</span> and single/double periods. You can also assume that no two of the <i>N</i> pathnames
+point to the same page.
+</p>
+<p>
+Each of the following <i>M</i> pairs of pathnames is a question: do the two pathnames point to the
+same web page? These pathnames may include single or double periods and may be terminated
+by a slash. They may include names that do not correspond to existing directories or ordinary
+files.
+</p>
+<p>
+Two zeros in a line indicate the end of the input.
+</p>
+
+<H2>Output</H2>
+
+<p>
+For each dataset, your program should output the <i>M</i> answers to the <i>M</i> questions, each in a
+separate line. Each answer should be “<span>yes</span>” if both point to the same web page, “<span>not found</span>”
+if at least one of the pathnames does not point to any one of the first <i>N</i> web pages listed in the
+input, or “<span>no</span>” otherwise.
+
+</p>
+
+<H2>Sample Input</H2>
+<pre>
+5 6
+/home/ACM/index.html
+/ICPC/index.html
+/ICPC/general.html
+/ICPC/japanese/index.html
+/ICPC/secret/confidential/2005/index.html
+/home/ACM/
+/home/ICPC/../ACM/
+/ICPC/secret/
+/ICPC/secret/index.html
+/ICPC
+/ICPC/../ICPC/index.html
+/ICPC
+/ICPC/general.html
+/ICPC/japanese/.././
+/ICPC/japanese/./../
+/home/ACM/index.html
+/home/ACM/index.html/
+1 4
+/index.html/index.html
+/
+/index.html/index.html
+/index.html
+/index.html/index.html
+/..
+/index.html/../..
+/index.html/
+/index.html/index.html/..
+0 0
+</pre>
+
+<H2>Output for the Sample Input</H2>
+<pre>
+not found
+not found
+yes
+no
+yes
+not found
+not found
+yes
+not found
+not found
+</pre>
+
+

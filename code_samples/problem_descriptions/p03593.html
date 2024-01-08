@@ -1,0 +1,138 @@
+<span class="lang-en">
+<p>Score : <var>400</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>We have an <var>H</var>-by-<var>W</var> matrix.
+Let <var>a_{ij}</var> be the element at the <var>i</var>-th row from the top and <var>j</var>-th column from the left.
+In this matrix, each <var>a_{ij}</var> is a lowercase English letter.</p>
+<p>Snuke is creating another <var>H</var>-by-<var>W</var> matrix, <var>A'</var>, by freely rearranging the elements in <var>A</var>.
+Here, he wants to satisfy the following condition:</p>
+<ul>
+<li>Every row and column in <var>A'</var> can be read as a palindrome.</li>
+</ul>
+<p>Determine whether he can create a matrix satisfying the condition.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Note</h3><p>A <em>palindrome</em> is a string that reads the same forward and backward.
+For example, <code>a</code>, <code>aa</code>, <code>abba</code> and <code>abcba</code> are all palindromes, while <code>ab</code>, <code>abab</code> and <code>abcda</code> are not.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 ≤ H, W ≤ 100</var></li>
+<li><var>a_{ij}</var> is a lowercase English letter.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>H</var> <var>W</var>
+<var>a_{11}</var><var>a_{12}</var><var>...</var><var>a_{1W}</var>
+<var>:</var>
+<var>a_{H1}</var><var>a_{H2}</var><var>...</var><var>a_{HW}</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>If Snuke can create a matrix satisfying the condition, print <code>Yes</code>; otherwise, print <code>No</code>.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>3 4
+aabb
+aabb
+aacc
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>Yes
+</pre>
+<p>For example, the following matrix satisfies the condition.</p>
+<pre>abba
+acca
+abba
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>2 2
+aa
+bb
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>No
+</pre>
+<p>It is not possible to create a matrix satisfying the condition, no matter how we rearrange the elements in <var>A</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>5 1
+t
+w
+e
+e
+t
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>Yes
+</pre>
+<p>For example, the following matrix satisfies the condition.</p>
+<pre>t
+e
+w
+e
+t
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 4</h3><pre>2 5
+abxba
+abyba
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 4</h3><pre>No
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 5</h3><pre>1 1
+z
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 5</h3><pre>Yes
+</pre></section>
+</div>
+</span>

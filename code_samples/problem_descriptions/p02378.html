@@ -1,0 +1,62 @@
+
+<H1>Bipartite Matching</H1>
+
+<p>
+A bipartite graph <var>G = (V, E)</var> is a graph in which the vertex set <var>V</var> can be divided into two disjoint subsets <var>X</var> and <var>Y</var> such that every edge <var>e &isin; E</var> has one end point in <var>X</var> and the other end point in <var>Y</var>.
+</p>
+
+<p>
+A matching <var>M</var> is a subset of edges such that each node in <var>V</var> appears in at most one edge in <var>M</var>.
+</p>
+
+<p>
+Given a bipartite graph, find the size of the matching which has the largest size.
+</p>
+
+
+<H2>Input</H2>
+
+<pre>
+<var>|X|</var> <var>|Y|</var> <var>|E|</var>
+<var>x<sub>0</sub></var> <var>y<sub>0</sub></var>
+<var>x<sub>1</sub></var> <var>y<sub>1</sub></var>
+:
+<var>x<sub>|E|-1</sub></var> <var>y<sub>|E|-1</sub></var>
+</pre>
+
+<p>
+<var>|X|</var> and <var>|Y|</var> are the number of vertices in <var>X</var> and <var>Y</var> respectively, and <var>|E|</var> is the number of edges in the graph <var>G</var>. The vertices in <var>X</var> are named with the numbers 0, 1,..., <var>|X|</var>-1, and vertices in <var>Y</var> are named with the numbers 0, 1,..., <var>|Y|</var>-1, respectively.
+</p>
+
+<p>
+<var>x<sub>i</sub></var> and <var>y<sub>i</sub></var> are the node numbers from <var>X</var> and <var>Y</var> respectevely which represent the end-points of the <var>i</var>-th edge.
+</p>
+
+
+<H2>Output</H2>
+
+<p>
+Print the largest size of the matching.
+</p>
+
+<H2>Constraints</H2>
+
+<ul>
+<li>1 &le; <var>|X|</var>, <var>|Y|</var> &le; 100</li>
+<li>0 &le; <var>|E|</var> &le; 10,000</li>
+</ul>
+
+<H2>Sample Input 1</H2>
+<pre>
+3 4 6
+0 0
+0 2
+0 3
+1 1
+2 1
+2 3
+</pre>
+<H2>Sample Output 1</H2>
+<pre>
+3
+</pre>

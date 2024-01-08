@@ -1,0 +1,91 @@
+<span class="lang-en">
+<p>Score : <var>900</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>AtCoDeer the deer wants a directed graph that satisfies the following conditions:</p>
+<ul>
+<li>The number of vertices, <var>N</var>, is at most <var>300</var>.</li>
+<li>There must not be self-loops or multiple edges.</li>
+<li>The vertices are numbered from <var>1</var> through <var>N</var>.</li>
+<li>Each edge has either an integer weight between <var>0</var> and <var>100</var> (inclusive), or a label <code>X</code> or <code>Y</code>.</li>
+<li>For every pair of two integers <var>(x,y)</var> such that <var>1 ≤ x ≤ A</var>, <var>1 ≤ y ≤ B</var>,
+    the shortest distance from Vertex <var>S</var> to Vertex <var>T</var> in the graph where the edges labeled <code>X</code> have the weight <var>x</var> and the edges labeled <code>Y</code> have the weight <var>y</var>, is <var>d_{x,y}</var>.</li>
+</ul>
+<p>Construct such a graph (and a pair of <var>S</var> and <var>T</var>) for him, or report that it does not exist.
+Refer to Output section for output format.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1</var> <var>≤</var> <var>A,B</var> <var>≤</var> <var>10</var></li>
+<li><var>1</var> <var>≤</var> <var>d_{x,y}</var> <var>≤</var> <var>100</var> (<var>1</var> <var>≤</var> <var>x</var> <var>≤</var> <var>A</var>, <var>1</var> <var>≤</var> <var>y</var> <var>≤</var> <var>B</var>)</li>
+<li>All input values are integers.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>A</var> <var>B</var>
+<var>d_{1,1}</var> <var>d_{1,2}</var> <var>..</var> <var>d_{1,B}</var>
+<var>d_{2,1}</var> <var>d_{2,2}</var> <var>..</var> <var>d_{2,B}</var>
+<var>:</var>
+<var>d_{A,1}</var> <var>d_{A,2}</var> <var>..</var> <var>d_{A,B}</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>If no graph satisfies the condition, print <code>Impossible</code>.</p>
+<p>If there exists a graph that satisfies the condition, print <code>Possible</code> in the first line.
+Then, in the subsequent lines, print the constructed graph in the following format:</p>
+<pre><var>N</var> <var>M</var>
+<var>u_1</var> <var>v_1</var> <var>c_1</var>
+<var>u_2</var> <var>v_2</var> <var>c_2</var>
+:
+<var>u_M</var> <var>v_M</var> <var>c_M</var>
+<var>S</var> <var>T</var>
+</pre>
+<p>Here, <var>M</var> is the number of the edges, and <var>u_i</var>, <var>v_i</var>, <var>c_i</var> represent edges as follows: there is an edge from Vertex <var>u_i</var> to Vertex <var>v_i</var> whose weight or label is <var>c_i</var>.</p>
+<p>Also refer to Sample Outputs.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>2 3
+1 2 2
+1 2 3
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>Possible
+3 4
+1 2 X
+2 3 1
+3 2 Y
+1 3 Y
+1 3
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>1 3
+100 50 1
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>Impossible
+</pre></section>
+</div>
+</span>

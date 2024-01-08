@@ -1,0 +1,115 @@
+
+
+
+<H1>宅配料金</H1>
+
+<p>
+ある宅配業者の宅配料金は大きさと重量で下表のように料金が設定されています。
+</p>
+
+<center>
+<table>
+<tr>
+<td width="80"></td>
+<td width="100">A サイズ</td>
+<td width="100">B サイズ</td>
+<td width="100">C サイズ</td>
+<td width="100">D サイズ</td>
+<td width="100">E サイズ</td>
+<td width="100">F サイズ</td>
+</tr>
+<tr>
+<td>大きさ</td>
+<td>60cm以内</td>
+<td>80cm以内</td>
+<td>100cm以内</td>
+<td>120cm以内</td>
+<td>140cm以内</td>
+<td>160cm以内</td>
+</tr>
+<td>重さ</td>
+<td>2kg以内</td>
+<td>5kg以内</td>
+<td>10kg以内</td>
+<td>15kg以内</td>
+<td>20kg以内</td>
+<td>25kg以内</td>
+</tr>
+<tr>
+<td>料金</td>
+<td>600円</td>
+<td>800円</td>
+<td>1000円</td>
+<td>1200円</td>
+<td>1400円</td>
+<td>1600円</td>
+</tr>
+</table>
+</center>
+<br/>
+
+<p>
+大きさは三辺（縦、横、高さ）の和です。例えば大きさが120cmで、重さが15kg以内の荷物はＤサイズ（1,200円）となります。大きさが120cm以内でも、重さが15kgを超え、20kg以内ならばＥサイズとなります。
+</p>
+
+<p>
+1日に持ち込まれた荷物の情報を入力とし、料金の総計を出力するプログラムを作成してください。なお、Ｆサイズを超えた荷物は対象外とし料金の総計には含みません。
+</p>
+
+
+
+
+
+<H2>Input</H2>
+
+<p>
+複数のデータセットの並びが入力として与えられます。入力の終わりはゼロひとつの行で示されます。
+各データセットは以下の形式で与えられます。
+</p>
+
+<pre>
+<var>n</var>
+<var>x<sub>1</sub></var> <var>y<sub>1</sub></var> <var>h<sub>1</sub></var> <var>w<sub>1</sub></var>
+<var>x<sub>2</sub></var> <var>y<sub>2</sub></var> <var>h<sub>2</sub></var> <var>w<sub>2</sub></var>
+:
+<var>x<sub>n</sub></var> <var>y<sub>n</sub></var> <var>h<sub>n</sub></var> <var>w<sub>n</sub></var>
+</pre>
+
+<p>
+１行目に荷物の個数<var>n</var> (1 &le; <var>n</var> &le; 10000)、続く<var>n</var> 行に <var>i</var> 番目の荷物の縦の長さ <var>x<sub>i</sub></var>、横の長さ <var>y<sub>i</sub></var>、高さ <var>h<sub>i</sub></var>、重さ <var>w<sub>i</sub></var> (1 &le; <var>x<sub>i</sub></var>, <var>y<sub>i</sub></var>, <var>h<sub>i</sub></var>, <var>w<sub>i</sub></var> &le; 200) が空白区切りで１行に与えられます。
+</p>
+
+<p>
+データセットの数は 20 を超えません。
+</p>
+
+
+<H2>Output</H2>
+
+<p>
+データセットごとに荷物の料金の総計を１行に出力します。
+</p>
+
+
+<H2>Sample Input</H2>
+
+<pre>
+2
+50 25 5 5
+80 60 10 30
+3
+10 15 25 24
+5 8 12 5
+30 30 30 18
+0
+</pre>
+
+<H2>Output for the Sample Input</H2>
+
+<pre>
+800
+3800
+</pre>
+
+
+

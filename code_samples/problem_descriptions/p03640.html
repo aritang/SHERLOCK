@@ -1,0 +1,101 @@
+<span class="lang-en">
+<p>Score : <var>400</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>We have a grid with <var>H</var> rows and <var>W</var> columns of squares.
+Snuke is painting these squares in colors <var>1</var>, <var>2</var>, <var>...</var>, <var>N</var>.
+Here, the following conditions should be satisfied:</p>
+<ul>
+<li>For each <var>i</var> (<var>1 ≤ i ≤ N</var>), there are exactly <var>a_i</var> squares painted in Color <var>i</var>. Here, <var>a_1 + a_2 + ... + a_N = H W</var>.</li>
+<li>For each <var>i</var> (<var>1 ≤ i ≤ N</var>), the squares painted in Color <var>i</var> are <em>4-connected</em>. That is, every square painted in Color <var>i</var> can be reached from every square painted in Color <var>i</var> by repeatedly traveling to a horizontally or vertically adjacent square painted in Color <var>i</var>.</li>
+</ul>
+<p>Find a way to paint the squares so that the conditions are satisfied.
+It can be shown that a solution always exists.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 ≤ H, W ≤ 100</var></li>
+<li><var>1 ≤ N ≤ H W</var></li>
+<li><var>a_i ≥ 1</var></li>
+<li><var>a_1 + a_2 + ... + a_N = H W</var></li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>H</var> <var>W</var>
+<var>N</var>
+<var>a_1</var> <var>a_2</var> <var>...</var> <var>a_N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print one way to paint the squares that satisfies the conditions.
+Output in the following format:</p>
+<pre><var>c_{1 1}</var> <var>...</var> <var>c_{1 W}</var>
+<var>:</var>
+<var>c_{H 1}</var> <var>...</var> <var>c_{H W}</var>
+</pre>
+<p>Here, <var>c_{i j}</var> is the color of the square at the <var>i</var>-th row from the top and <var>j</var>-th column from the left.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>2 2
+3
+2 1 1
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>1 1
+2 3
+</pre>
+<p>Below is an example of an invalid solution:</p>
+<pre>1 2
+3 1
+</pre>
+<p>This is because the squares painted in Color <var>1</var> are not 4-connected.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>3 5
+5
+1 2 3 4 5
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>1 4 4 4 3
+2 5 4 5 3
+2 5 5 5 3
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>1 1
+1
+1
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>1
+</pre></section>
+</div>
+</span>

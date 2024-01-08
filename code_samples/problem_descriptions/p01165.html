@@ -1,0 +1,168 @@
+
+<H1><font color="#000">Problem C:</font> Disarmament of the Units</H1>
+
+<p>
+This is a story in a country far away. In this country, two armed groups, ACM and ICPC, have
+fought in the civil war for many years. However, today October 21, reconciliation was approved
+between them; they have marked a turning point in their histories.
+</p>
+<p>
+In this country, there are a number of roads either horizontal or vertical, and a town is built on
+every endpoint and every intersection of those roads (although only one town is built at each
+place). Some towns have units of either ACM or ICPC. These units have become unneeded
+by the reconciliation. So, we should make them disarm in a verifiable way simultaneously. All
+disarmament must be carried out at the towns designated for each group, and only one unit can
+be disarmed at each town. Therefore, we need to move the units.
+</p>
+<p>
+The command of this mission is entrusted to you. You can have only one unit moved by a
+single order, where the unit must move to another town directly connected by a single road.
+You cannot make the next order to any unit until movement of the unit is completed. The unit
+cannot pass nor stay at any town another unit stays at. In addition, even though reconciliation
+was approved, members of those units are still irritable enough to start battles. For these
+reasons, two units belonging to different groups may not stay at towns on the same road. You
+further have to order to the two groups alternatively, because ordering only to one group may
+cause their dissatisfaction. In spite of this restriction, you can order to either group first.
+</p>
+<p>
+Your job is to write a program to find the minimum number of orders required to complete the
+mission of disarmament.
+</p>
+
+<H2>Input</H2>
+
+<p>
+The input consists of multiple datasets. Each dataset has the following format:
+</p>
+
+<pre>
+<i>n m<sub>A</sub> m<sub>I</sub></i>
+<i>rx</i><sub>1,1</sub> <i>ry</i><sub>1,1</sub> <i>rx</i><sub>1,2</sub> <i>ry</i><sub>1,2</sub>
+...
+<i>rx</i><sub><i>n</i>,1</sub> <i>ry</i><sub><i>n</i>,1</sub> <i>rx</i><sub><i>n</i>,2</sub> <i>ry</i><sub><i>n</i>,2</sub>
+<i>sx</i><sub><i>A</i>,1</sub> <i>sy</i><sub><i>A</i>,1</sub>
+...
+<i>sx</i><sub><i>A</i>,<i>m<sub>A</sub></i></sub> <i>sy</i><sub><i>A</i>,<i>m<sub>A</sub></i></sub>
+<i>sx</i><sub><i>I</i>,1</sub> <i>sy</i><sub><i>I</i>,1</sub>
+...
+<i>sx</i><sub><i>I</i>,<i>m<sub>I</sub></i></sub> <i>sy</i><sub><i>I</i>,<i>m<sub>I</sub></i></sub>
+<i>tx</i><sub><i>A</i>,1</sub> <i>ty</i><sub><i>A</i>,1</sub>
+...
+<i>tx</i><sub><i>A</i>,<i>m<sub>A</sub></i></sub> <i>ty</i><sub><i>A</i>,<i>m<sub>A</sub></i></sub>
+<i>tx</i><sub><i>I</i>,1</sub> <i>ty</i><sub><i>I</i>,1</sub>
+...
+<i>tx</i><sub><i>I</i>,<i>m<sub>I</sub></i></sub> <i>ty</i><sub><i>I</i>,<i>m<sub>I</sub></i></sub>
+</pre>
+
+<p>
+<i>n</i> is the number of roads. <i>m<sub>A</sub></i> and <i>m<sub>I</sub></i> are the number of units in ACM and ICPC respectively
+(<i>m<sub>A</sub></i> &gt; 0, <i>m<sub>I</sub></i> &gt; 0, <i>m<sub>A</sub></i> + <i>m<sub>B</sub></i> &lt; 8). (<i>rx</i><sub><i>i</i>,1</sub>, <i>ry</i><sub><i>i</i>,1</sub> ) and (<i>rx</i><sub><i>i</i>,2</sub>, <i>ry</i><sub><i>i</i>,2</sub> ) indicate the two endpoints of the
+<i>i</i>-th road, which is always parallel to either <i>x</i>-axis or <i>y</i>-axis. A series of (<i>sx</i><sub><i>A</i>,<i>i</i></sub>, <i>sy</i><sub><i>A</i>,<i>i</i></sub> ) indicates
+the coordinates of the towns where the ACM units initially stay, and a series of (<i>sx</i><sub><i>I</i>,<i>i</i></sub>, <i>sy</i><sub><i>I</i>,<i>i</i></sub> )
+indicates where the ICPC units initially stay. A series of (<i>tx</i><sub><i>A</i>,<i>i</i></sub>, <i>ty</i><sub><i>A</i>,<i>i</i></sub> ) indicates the coordinates
+of the towns where the ACM units can be disarmed, and a series of (<i>tx</i><sub><i>I</i>,<i>i</i></sub> , <i>ty</i><sub><i>I</i>,<i>i</i></sub> ) indicates where
+the ICPC units can be disarmed.
+</p>
+<p>
+You may assume the following:
+</p>
+
+<ul>
+<li> the number of towns, that is, the total number of coordinates where endpoints and/or
+  intersections of the roads exist does not exceed 18;</li>
+<li> no two horizontal roads are connected nor ovarlapped; no two vertical roads, either;</li>
+<li> all the towns are connected by roads; and</li>
+<li> no pair of ACM and ICPC units initially stay in the towns on the same road.</li>
+</ul>
+
+<p>
+The input is terminated by a line with triple zeros, which should not be processed.
+</p>
+
+<H2>Output</H2>
+
+<p>
+For each dataset, print the minimum required number of orders in a line. It is guaranteed that
+there is at least one way to complete the mission.
+</p>
+
+<H2>Sample Input</H2>
+<pre>
+5 1 1
+0 0 2 0
+1 1 2 1
+1 2 3 2
+1 0 1 2
+2 0 2 2
+0 0
+3 2
+2 1
+1 2
+2 1 1
+1 0 1 2
+0 1 2 1
+1 0
+0 1
+1 0
+2 1
+2 1 1
+1 0 1 2
+0 1 2 1
+1 0
+0 1
+1 2
+2 1
+4 1 1
+0 0 2 0
+1 1 3 1
+1 0 1 1
+2 0 2 1
+0 0
+3 1
+1 0
+2 1
+5 1 1
+0 0 2 0
+1 1 2 1
+1 2 3 2
+1 0 1 2
+2 0 2 2
+0 0
+3 2
+3 2
+0 0
+8 3 3
+1 1 3 1
+0 2 4 2
+1 3 5 3
+2 4 4 4
+1 1 1 3
+2 0 2 4
+3 1 3 5
+4 2 4 4
+0 2
+1 1
+2 0
+3 5
+4 4
+5 3
+3 5
+4 4
+5 3
+0 2
+1 1
+2 0
+0 0 0
+</pre>
+
+<H2>Output for the Sample Input</H2>
+<pre>
+3
+1
+2
+2
+7
+18
+</pre>
+
+

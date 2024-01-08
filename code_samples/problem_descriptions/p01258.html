@@ -1,0 +1,60 @@
+
+<H1><font color="#000">Problem I:</font> Memory Match</H1>
+
+<p>
+Memory match is a single-player game which employs a set of 2<i>M</i> cards. Each card is labeled with a
+number between 1 and <i>M</i> on its face. For each number <i>i</i> (1 &le; <i>i</i> &le; <i>M</i>), there are exactly two cards which
+have the number <i>i</i>. At the start of the game, all cards are shuffled and laid face down on a table. In each
+turn you choose two cards and turn them face up. If two numbers on the cards are the same, they are
+removed from the table. Otherwise, they are turned face down again (this is called a mismatch). When
+you choose cards, you do not have to turn two cards simultaneously; you can choose the second card
+after you see the number of the first card. The objective of the game is to remove all the cards with as
+few mismatches as possible.
+</p>
+<p>
+Royce A. Mitchell has extraordinary memory, so he can remember all the positions and the numbers of
+the cards that he has already turned face up. Your task is to write a program that calculates the expected
+number of mismatches, on average, when he plays the game optimally.
+</p>
+
+<H2>Input</H2>
+
+<p>
+The input consists of multiple datasets.
+</p>
+<p>
+Each dataset consists of one even number <i>N</i> (2 &le; <i>N</i> &le; 1000) which denotes the number of cards in the
+set.
+</p>
+<p>
+The end of input is indicated by a line that contains a single zero. This is not part of the input and you
+may not treat this line as a dataset.
+</p>
+
+<H2>Output</H2>
+
+<p>
+For each dataset, print the expected number of mismatches. Each output value may have an arbitrary
+number of fractional digits, provided that the error is within 10<sup>-6</sup>.
+</p>
+
+<H2>Sample Input</H2>
+<pre>
+2
+4
+6
+8
+10
+52
+0
+</pre>
+
+<H2>Output for the Sample Input</H2>
+<pre>
+0.0000000000
+0.6666666667
+1.3333333333
+1.9238095238
+2.5523809524
+15.4435236099
+</pre>

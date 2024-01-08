@@ -1,0 +1,152 @@
+<span class="lang-en">
+<p>﻿Score : <var>400</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>In the year 2168, AtCoder Inc., which is much larger than now, is starting a limited express train service called <em>AtCoder Express</em>.</p>
+<p>In the plan developed by the president Takahashi, the trains will run as follows:</p>
+<ul>
+<li>A train will run for <var>(t_1 + t_2 + t_3 + ... + t_N)</var> seconds.</li>
+<li>In the first <var>t_1</var> seconds, a train must run at a speed of at most <var>v_1</var> m/s (meters per second). Similarly, in the subsequent <var>t_2</var> seconds, a train must run at a speed of at most <var>v_2</var> m/s, and so on.</li>
+</ul>
+<p>According to the specifications of the trains, the acceleration of a train must be always within <var>±1m/s^2</var>. Additionally, a train must stop at the beginning and the end of the run.</p>
+<p>Find the maximum possible distance that a train can cover in the run.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 \leq N \leq 100</var></li>
+<li><var>1 \leq t_i \leq 200</var></li>
+<li><var>1 \leq v_i \leq 100</var></li>
+<li>All input values are integers.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+<var>t_1</var> <var>t_2</var> <var>t_3</var> … <var>t_N</var>
+<var>v_1</var> <var>v_2</var> <var>v_3</var> … <var>v_N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the maximum possible that a train can cover in the run.<br/>
+Output is considered correct if its absolute difference from the judge's output is at most <var>10^{-3}</var>.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>1
+100
+30
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>2100.000000000000000
+</pre>
+<p><img alt=" " src="https://img.atcoder.jp/abc076/69c1f4241b608bc36f1f08dd4184d3f0.png"/></p>
+<p>The maximum distance is achieved when a train runs as follows:</p>
+<ul>
+<li>In the first <var>30</var> seconds, it accelerates at a rate of <var>1m/s^2</var>, covering <var>450</var> meters.</li>
+<li>In the subsequent <var>40</var> seconds, it maintains the velocity of <var>30m/s</var>, covering <var>1200</var> meters.</li>
+<li>In the last <var>30</var> seconds, it decelerates at the acceleration of <var>-1m/s^2</var>, covering <var>450</var> meters.</li>
+</ul>
+<p>The total distance covered is <var>450</var> + <var>1200</var> + <var>450</var> = <var>2100</var> meters.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>2
+60 50
+34 38
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>2632.000000000000000
+</pre>
+<p><img alt=" " src="https://img.atcoder.jp/abc076/a3e07ea723f50df04461165bc2cc8890.png"/></p>
+<p>The maximum distance is achieved when a train runs as follows:</p>
+<ul>
+<li>In the first <var>34</var> seconds, it accelerates at a rate of <var>1m/s^2</var>, covering <var>578</var> meters.</li>
+<li>In the subsequent <var>26</var> seconds, it maintains the velocity of <var>34m/s</var>, covering <var>884</var> meters.</li>
+<li>In the subsequent <var>4</var> seconds, it accelerates at a rate of <var>1m/s^2</var>, covering <var>144</var> meters.</li>
+<li>In the subsequent <var>8</var> seconds, it maintains the velocity of <var>38m/s</var>, covering <var>304</var> meters.</li>
+<li>In the last <var>38</var> seconds, it decelerates at the acceleration of <var>-1m/s^2</var>, covering <var>722</var> meters.</li>
+</ul>
+<p>The total distance covered is <var>578</var> + <var>884</var> + <var>144</var> + <var>304</var> + <var>722</var> = <var>2632</var> meters.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>3
+12 14 2
+6 2 7
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>76.000000000000000
+</pre>
+<p><img alt=" " src="https://img.atcoder.jp/abc076/77f821f590cb19d8e449303a102422dc.png"/></p>
+<p>The maximum distance is achieved when a train runs as follows:</p>
+<ul>
+<li>In the first <var>6</var> seconds, it accelerates at a rate of <var>1m/s^2</var>, covering <var>18</var> meters.</li>
+<li>In the subsequent <var>2</var> seconds, it maintains the velocity of <var>6m/s</var>, covering <var>12</var> meters.</li>
+<li>In the subsequent <var>4</var> seconds, it decelerates at the acceleration of <var>-1m/s^2</var>, covering <var>16</var> meters.</li>
+<li>In the subsequent <var>14</var> seconds, it maintains the velocity of <var>2m/s</var>, covering <var>28</var> meters.</li>
+<li>In the last <var>2</var> seconds, it decelerates at the acceleration of <var>-1m/s^2</var>, covering <var>2</var> meters.</li>
+</ul>
+<p>The total distance covered is <var>18</var> + <var>12</var> + <var>16</var> + <var>28</var> + <var>2</var> = <var>76</var> meters.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 4</h3><pre>1
+9
+10
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 4</h3><pre>20.250000000000000000
+</pre>
+<p><img alt=" " src="https://img.atcoder.jp/abc076/ebde8cbeb649ae7fd338180c0562ae0b.png"/></p>
+<p>The maximum distance is achieved when a train runs as follows:</p>
+<ul>
+<li>In the first <var>4.5</var> seconds, it accelerates at a rate of <var>1m/s^2</var>, covering <var>10.125</var> meters.</li>
+<li>In the last <var>4.5</var> seconds, it decelerates at the acceleration of <var>-1m/s^2</var>, covering <var>10.125</var> meters.</li>
+</ul>
+<p>The total distance covered is <var>10.125</var> + <var>10.125</var> = <var>20.25</var> meters.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 5</h3><pre>10
+64 55 27 35 76 119 7 18 49 100
+29 19 31 39 27 48 41 87 55 70
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 5</h3><pre>20291.000000000000
+</pre></section>
+</div>
+</span>

@@ -1,0 +1,62 @@
+
+<H1><font color="#000">Problem E:</font> Spirograph</H1>
+
+<p>
+Some of you might have seen instruments like the figure below.
+</p>
+
+<center>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE1_spirograph1">
+<p>Figure 1: Spirograph</p>
+</center>
+
+<p>
+There are a fixed circle (indicated by <i>A</i> in the figure) and a smaller interior circle with some
+pinholes (indicated by <i>B</i>). By putting a pen point through one of the pinholes and then rolling
+the circle <i>B</i> without slipping around the inside of the circle <i>A</i>, we can draw curves as illustrated
+below. Such curves are called <i>hypotrochoids</i>.
+</p>
+
+<center>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE1_spirograph2">
+<p>Figure 2: An Example Hypotrochoid</p>
+</center>
+
+<p>
+Your task is to write a program that calculates the length of hypotrochoid, given the radius of
+the fixed circle <i>A</i>, the radius of the interior circle <i>B</i>, and the distance between the <i>B</i>’s centroid and the used pinhole.
+</p>
+
+<H2>Input</H2>
+
+<p>
+The input consists of multiple test cases. Each test case is described by a single line in which
+three integers <i>P</i>, <i>Q</i> and <i>R</i> appear in this order, where <i>P</i> is the radius of the fixed circle <i>A</i>, <i>Q</i>
+is the radius of the interior circle <i>B</i>, and <i>R</i> is the distance between the centroid of the circle <i>B</i>
+and the pinhole. You can assume that 0 &le; <i>R</i> &lt; <i>Q</i> &lt; <i>P</i> &le; 1000. <i>P</i>, <i>Q</i>, and <i>R</i> are separated by
+a single space, while no other spaces appear in the input.
+</p>
+<p>
+The end of input is indicated by a line with <i>P</i> = <i>Q</i> = <i>R</i> = 0.
+</p>
+
+<H2>Output</H2>
+
+<p>
+For each test case, output the length of the hypotrochoid curve. The error must be within
+10<sup>-2</sup> (= 0.01).
+
+</p>
+
+<H2>Sample Input</H2>
+<pre>
+3 2 1
+3 2 0
+0 0 0
+</pre>
+
+<H2>Output for the Sample Input</H2>
+<pre>
+13.36
+6.28
+</pre>

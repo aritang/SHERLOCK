@@ -1,0 +1,141 @@
+
+<H1><font color="#000">Problem H:</font> Ramen Shop</H1>
+
+<p>
+Ron is a master of a ramen shop.
+</p>
+<p>
+Recently, he has noticed some customers wait for a long time. This has been caused by lack of
+seats during lunch time. Customers loses their satisfaction if they waits for a long time, and
+even some of them will give up waiting and go away. For this reason, he has decided to increase
+seats in his shop. To determine how many seats are appropriate, he has asked you, an excellent
+programmer, to write a simulator of customer behavior.
+</p>
+<p>
+Customers come to his shop in groups, each of which is associated with the following four
+parameters:
+</p>
+
+<ul>
+<li> <i>T<sub>i</sub></i> : when the group comes to the shop</li>
+<li> <i>P<sub>i</sub></i> : number of customers</li>
+<li> <i>W<sub>i</sub></i> : how long the group can wait for their seats</li>
+<li> <i>E<sub>i</sub></i> : how long the group takes for eating</li>
+</ul>
+
+<p>
+The <i>i</i>-th group comes to the shop with <i>P<sub>i</sub></i> customers together at the time <i>T<sub>i</sub></i> . If <i>P<sub>i</sub></i> successive
+seats are available at that time, the group takes their seats immediately. Otherwise, they waits
+for such seats being available. When the group fails to take their seats within the time <i>W<sub>i</sub></i>
+(inclusive) from their coming and strictly before the closing time, they give up waiting and go
+away. In addition, if there are other groups waiting, the new group cannot take their seats until
+the earlier groups are taking seats or going away.
+</p>
+<p>
+The shop has <i>N</i> counters numbered uniquely from 1 to <i>N</i>. The <i>i</i>-th counter has <i>C<sub>i</sub></i> seats. The
+group prefers “seats with a greater distance to the nearest group.” Precisely, the group takes
+their seats according to the criteria listed below. Here, <i>S<sub>L</sub></i> denotes the number of successive
+empty seats on the left side of the group after their seating, and <i>S<sub>R</sub></i> the number on the right
+side. <i>S<sub>L</sub></i> and <i>S<sub>R</sub></i> are considered to be infinity if there are no other customers on the left side
+and on the right side respectively.
+</p>
+
+<ol>
+<li> Prefers seats maximizing min{<i>S<sub>L</sub></i>, <i>S<sub>R</sub></i>}.</li>
+<li> If there are multiple alternatives meeting the first criterion, prefers seats maximizing
+   max{<i>S<sub>L</sub></i>, <i>S<sub>R</sub></i>}.</li>
+<li> If there are still multiple alternatives, prefers the counter of the smallest number.</li>
+<li> If there are still multiple alternatives, prefers the leftmost seats.</li>
+</ol>
+
+<p>
+When multiple groups are leaving the shop at the same time and some other group is waiting
+for available seats, seat assignment for the waiting group should be made after all the finished
+groups leave the shop.
+</p>
+<p>
+Your task is to calculate the average satisfaction over customers. The satisfaction of a customer
+in the <i>i</i>-th group is given as follows:
+</p>
+
+
+<ul>
+<li>  If the group goes away without eating, -1.</li>
+<li> Otherwise, (<i>W<sub>i</sub></i> - <i>t<sub>i</sub></i> )/<i>W<sub>i</sub></i> where <i>t<sub>i</sub></i> is the actual waiting time for the <i>i</i>-th group (the value ranges between 0 to 1 inclusive).</li>
+</ul>
+
+
+<H2>Input</H2>
+
+<p>
+The input consists of multiple datasets.
+</p>
+<p>
+Each dataset has the following format:
+</p>
+
+<pre>
+    <i>N M T</i>
+    <i>C</i><sub>1</sub> <i>C</i><sub>2</sub> ... <i>C</i><sub><i>N</i></sub>
+    <i>T</i><sub>1</sub> <i>P</i><sub>1</sub> <i>W</i><sub>1</sub> <i>E</i><sub>1</sub>
+    <i>T</i><sub>2</sub> <i>P</i><sub>2</sub> <i>W</i><sub>2</sub> <i>E</i><sub>2</sub>
+    ...
+    <i>T</i><sub><i>M</i></sub> <i>P</i><sub><i>M</i></sub> <i>W</i><sub><i>M</i></sub> <i>E</i><sub><i>M</i></sub>
+</pre>
+
+<p>
+<i>N</i> indicates the number of counters, <i>M</i> indicates the number of groups and <i>T</i> indicates the
+closing time. The shop always opens at the time 0. All input values are integers.
+</p>
+<p>
+You can assume that 1 &le; <i>N</i> &le; 100, 1 &le; <i>M</i> &le; 10000, 1 &le; <i>T</i> &le; 10<sup>9</sup>, 1 &le; <i>C</i><sub><i>i</i></sub> &le; 100, 0 &le; <i>T</i><sub>1</sub> &lt; <i>T</i><sub>2</sub> &lt; ... &lt; <i>T</i><sub><i>M</i></sub> &lt; <i>T</i>, 1 &le; <i>P</i><sub><i>i</i></sub> &le; max <i>C</i><sub><i>i</i></sub>, 1 &le; <i>W</i><sub><i>i</i></sub> &le; 10<sup>9</sup> and 1 &le; <i>E</i><sub><i>i</i></sub> &le; 10<sup>9</sup>.
+</p>
+<p>
+The input is terminated by a line with three zeros. This is not part of any datasets.
+</p>
+
+<H2>Output</H2>
+
+<p>
+For each dataset, output the average satisfaction over all customers in a line. Each output value
+may be printed with an arbitrary number of fractional digits, but may not contain an absolute
+error greater than 10<sup>-9</sup>.
+</p>
+
+<H2>Sample Input</H2>
+<pre>
+1 4 100
+7
+10 1 50 50
+15 2 50 50
+25 1 50 50
+35 3 50 50
+1 2 100
+5
+30 3 20 50
+40 4 40 50
+1 2 100
+5
+49 3 20 50
+60 4 50 30
+1 2 100
+5
+50 3 20 50
+60 4 50 30
+2 3 100
+4 2
+10 4 20 20
+30 2 20 20
+40 4 20 20
+0 0 0
+</pre>
+
+<H2>Output for the Sample Input</H2>
+<pre>
+0.7428571428571429
+0.4285714285714285
+0.5542857142857143
+-0.1428571428571428
+0.8000000000000000
+</pre>
+

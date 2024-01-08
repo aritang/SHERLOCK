@@ -1,0 +1,133 @@
+
+<h1>Problem J: BD Shelf</h1>
+<p>
+Remember the boy called Jack. He likes anime, especially programs broadcasting in midnight or early morning. In his room, there is a big shelf and it is kept organized well. And there are anime BD/DVDs which he watched or gave up because of overlapping of broadcasting time with other animes.  His money is tight, but he succeeded to get <i>W</i> hundreds dollars because of an unexpected event. And he came up with enhancing the content of his BD shelf.
+</p>
+<p>
+He is troubled about the usage of the unexpected income. He has a good judge for anime to choose the anime he can enjoy because he is a great anime lover. Therefore, first of all, he listed up expectable animes and assigned each anime a value that represents "a magnitude of expectation". Moreover Jack tagged a mysterious string M for each anime. However Jack did not tell you the meaning of the string M.
+</p>
+<p>
+Your task is to write a program that reads a string <i>X</i> and that maximizes the sum of magnitudes of expectation when Jack bought BD/DVD boxes of anime with the budget of <i>W</i> hundreds dollars. Here, Jack must buy anime's BD/DVD box that have a string <i>X</i> as a sub-string of the string <i>M</i> assigned the anime. If he can not buy any boxes, output -1.
+</p>
+<p>
+A sequence of string <i>X</i> is given in order in the input as query. Assume two strings <i>X<sub>1</sub></i> and <i>X<sub>2</sub></i> are given as string <i>X</i>, and <i>X<sub>1</sub></i> is the prefix of <i>X<sub>2</sub></i>.  If <i>X<sub>1</sub></i> is given in the input preceding <i>X<sub>2</sub></i>, you must not buy an anime which has the minimum magnitude of expectation among animes extracted by <i>X<sub>1</sub></i> in the calculation for <i>X<sub>2</sub></i>.  And vice versa (<i>X<sub>1</sub></i> is the prefix of <i>X<sub>2</sub></i> and if <i>X<sub>2</sub></i> is given in the input preceding <i>X<sub>1</sub></i>, ...) .
+For example, If three strings "a", "abc" and "ab" are given in this order in the input, In the processing for string "abc", you must not extract an anime which has the minimum magnitude of expectation among animes extracted by the processing of the string "a". In the processing for string "ab", you must not extract an anime has minimum magnitude of expectation among animes extracted by the processing of the string "abc" and "a".
+</p>
+<h2>Input</h2>
+<p>
+Input consists of multiple datasets.<br>
+A dataset is given in the following format.
+<p>
+<pre>
+<i>N</i> <i>W</i>
+<i>string<sub>1</sub></i> <i>expectation<sub>1</sub></i> <i>price<sub>1</sub></i>
+<i>string<sub>2</sub></i> <i>expectation<sub>2</sub></i> <i>price<sub>2</sub></i>
+...
+<i>string<sub>N</sub></i> <i>expectation<sub>N</sub></i> <i>price<sub>N</sub></i>
+<i>Q</i>
+<i>query<sub>1</sub></i>
+<i>query<sub>2</sub></i>
+...
+<i>query<sub>Q</sub></i>
+</pre>
+<p>
+<i>N</i> is an integer that represents the number of anime. Following <i>N</i> lines contains the information of each anime.<br>
+<i>string<sub>i</sub></i>(1&le;<i>i</i>&le;<i>N</i>) is a string consists of lowercase letters that represents string <i>M</i> assigned <i>i</i>-th anime by Jack. No two characters in this string are same.<br>
+<i>expectation<sub>i</sub></i>(1&le;<i>i</i>&le;<i>N</i>) is a natural number that represents a magnitude of expectation of the <i>i</i>-th anime.<br>
+<i>price<sub>i</sub></i>(1&le;<i>i</i>&le;<i>N</i>) is a natural number that represents a price(cost) in hundreds to buy the <i>i</i>-th anime.
+<i>Q</i> is an integer that represents the number of queries.<br>
+<i>query<sub>i</sub></i>(1&le;<i>i</i>&le;<i>Q</i>) is a string consists of lowercase letters. This is a string <i>X</i> described in the problem statement.<br>
+<i>N</i>=<i>W</i>=0 shows the end of the input.
+</p>
+<h2>Constraints</h2>
+<p>
+There are 4 test cases. This is given by the following order.<br>
+In the first testcase, 4 datasets satisfy <i>N</i>&le;10 and <i>Q</i>&le;10, 6 datasets satisfy <i>N</i>&le;5000 and <i>Q</i>&le;5000.<br>
+In the 2nd, 3rd and 4th testcase, each satisfies <i>N</i>&le;20000 and <i>Q</i>&le;20000.<br>
+The time limit for this problem is the limit for each testcase.<br>
+1&le;<i>N</i>&le;20000<br>
+1&le;<i>W</i>&le;20<br>
+1&le;(the length of <i>string<sub>i</sub></i>(1&le;<i>i</i>&le;<i>N</i>))&le;10<br>
+1&le;<i>price<sub>i</sub></i>(1&le;<i>i</i>&le;<i>N</i>)&le;20<br>
+1&le;<i>expectation<sub>i</sub></i>(1&le;<i>i</i>&le;<i>N</i>)&le;7000000<br>
+1&le;<i>Q</i>&le;20000<br>
+1&le;(the length of <i>query<sub>i</sub></i>(1&le;<i>i</i>&le;<i>Q</i>))&le;5<br>
+It is assured that all values for expectation are different.
+</p>
+<h2>Output</h2>
+<p>
+For each query, output an integer <i>S</i> on a line that represents the maximum sum of magnitudes of expectation in the following format.
+<pre>
+<i>S</i>
+</pre>
+</p>
+<h2>Sample Input</h2>
+<pre>
+3 4
+abc 1 1
+abc 10 1
+abc 100 1
+3
+a
+abc
+ab
+3 4
+ab 1 1
+ab 10 1
+abc 100 1
+3
+abc
+ab
+a
+3 4
+abc 1 1
+abc 10 1
+abc 100 1
+3
+ab
+ab
+ab
+8 20
+abcdef 100 2
+bcdef 200 1
+cfghj 300 3
+ksjirto 400 6
+ksitoew 500 2
+qwertyl 600 2
+kjhbvc 700 2
+edfghucb 800 1
+10
+ks
+cd
+hj
+e
+a
+g
+h
+j
+i
+a
+0 0
+</pre>
+<h2>Output for the Sample Input</h2>
+<pre>
+111
+110
+100
+100
+11
+10
+111
+110
+100
+900
+300
+300
+2200
+100
+1100
+1500
+1400
+900
+-1
+</pre>

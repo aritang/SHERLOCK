@@ -1,0 +1,105 @@
+
+
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({ tex2jax: { inlineMath: [["$","$"], ["\\(","\\)"]], processEscapes: true }});
+</script>
+<script language="JavaScript" type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+
+<h3>マトリョーシカ</h3>
+
+<p>マトリョーシカはロシアの民芸品として有名な人形である．
+マトリョーシカは上下に分割でき，開くと中により小さい別の人形が入っている．
+現れた小さい人形を開くとさらに小さい人形が入っている，というような入れ子構造になっている．
+</p>
+<div style="text-align:center">
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_JAGDomestic2017_matryoshkas" witdh="300" height="300">
+<br/>
+</div>
+
+<p>あなたは旅行先で珍しい形のマトリョーシカを見つけ，<i>N</i> 体の人形を購入した．
+<i>i</i> 番目の人形の形状は，<i>x<sub>i</sub> &times; y<sub>i</sub> &times; z<sub>i</sub></i> の直方体である．
+</p>
+
+<p>ひとしきりマトリョーシカを鑑賞したあなたは，マトリョーシカを仕舞おうとしている．
+その前に，いくつかの人形を別の人形に格納することによって必要なスペースを減らしたい．
+人形を格納する際には，まだ中にひとつも人形を格納していない人形にだけ，他の人形をひとつ格納できる．
+ただし，直接的に格納される人形についてだけ数えるものとし，中に人形が入っている人形を別の人形に格納することはできる．
+</p>
+
+<p>収納された人形は，外部から見えない状態になる．
+ただし，以下の条件を満たさなければならない．
+</p><ul><li> 人形は回転してよいが，直方体のそれぞれの辺は，他方の直方体のいずれかの辺に平行
+</li><li> 回転後，対応する辺同士の長さそれぞれについて，収納される側の人形の長さの方が短い
+</li><li> 1 個の人形の中に直接収納できる人形の数は高々 1 個
+</li></ul>
+
+<p>押入れの容積は限られているので，外部から見えている人形の体積の和を最小化したい．
+あなたの仕事は，人形を収納する操作を任意の回数繰り返して達成できる，外部から見えている人形の体積の和の最小値を求めるプログラムを作成することである．
+</p>
+
+
+<h3>Input</h3>
+
+<p>入力は複数のデータセットからなる．
+データセットの個数は最大でも 50 個を超えない．
+各データセットは次の形式で表される．
+</p><blockquote><i>N</i><br><i>x<sub>1</sub></i> <i>y<sub>1</sub></i> <i>z<sub>1</sub></i><br>:<br>:<br><i>x<sub>N</sub></i> <i>y<sub>N</sub></i> <i>z<sub>N</sub></i><br></blockquote>
+<p>各データセットは <i>N + 1</i> 行からなり，データセットの 1 行目には，人形の数を表す整数 <i>N</i> が与えられる．
+続く <i>N</i> 行の内 <i>i</i> 行目には，<i>i</i> 番目の人形の大きさを表す 3 つの整数 <i>x<sub>i</sub>, y<sub>i</sub>, z<sub>i</sub></i> が半角スペース区切りで与えられる．
+これらの整数は，<i>1 &le; N, x<sub>i</sub>, y<sub>i</sub>, z<sub>i</sub> &le; 100</i> を満たす．
+</p><blockquote></blockquote>
+<p>入力の終わりは 1 つのゼロからなる行で表される．
+</p><blockquote></blockquote>
+
+
+
+
+<h3>Output</h3>
+
+<p>各データセットについて，外部から見えている人形の体積の和の最小値を 1 行で出力せよ．
+</p><blockquote></blockquote>
+
+
+<h3>Sample Input</h3>
+
+<pre>2
+1 2 3
+4 2 3
+3
+2 5 2
+3 3 4
+5 5 5
+5
+1 1 1
+2 2 2
+3 3 3
+4 4 4
+5 5 5
+5
+1 1 1
+2 1 1
+3 1 1
+4 1 1
+5 1 1
+10
+3 1 4
+1 5 9
+2 6 5
+3 5 8
+9 7 9
+3 2 3
+8 4 6
+2 6 4
+3 3 8
+3 2 7
+0
+</pre>
+
+<h3>Output for Sample Input</h3>
+
+<pre>24
+145
+125
+15
+864</pre>

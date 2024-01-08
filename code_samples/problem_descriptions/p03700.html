@@ -1,0 +1,97 @@
+<span class="lang-en">
+<p>Score : <var>400</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>You are going out for a walk, when you suddenly encounter <var>N</var> monsters. Each monster has a parameter called <em>health</em>, and the health of the <var>i</var>-th monster is <var>h_i</var> at the moment of encounter. A monster will vanish immediately when its health drops to <var>0</var> or below.</p>
+<p>Fortunately, you are a skilled magician, capable of causing explosions that damage monsters. In one explosion, you can damage monsters as follows:</p>
+<ul>
+<li>Select an alive monster, and cause an explosion centered at that monster. The health of the monster at the center of the explosion will decrease by <var>A</var>, and the health of each of the other monsters will decrease by <var>B</var>. Here, <var>A</var> and <var>B</var> are predetermined parameters, and <var>A &gt; B</var> holds.</li>
+</ul>
+<p>At least how many explosions do you need to cause in order to vanish all the monsters?</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li>All input values are integers.</li>
+<li><var>1 ≤ N ≤ 10^5</var></li>
+<li><var>1 ≤ B &lt; A ≤ 10^9</var></li>
+<li><var>1 ≤ h_i ≤ 10^9</var></li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var> <var>A</var> <var>B</var>
+<var>h_1</var>
+<var>h_2</var>
+<var>:</var>
+<var>h_N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the minimum number of explosions that needs to be caused in order to vanish all the monsters.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>4 5 3
+8
+7
+4
+2
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>2
+</pre>
+<p>You can vanish all the monsters in two explosion, as follows:</p>
+<ul>
+<li>First, cause an explosion centered at the monster with <var>8</var> health. The healths of the four monsters become <var>3</var>, <var>4</var>, <var>1</var> and <var>-1</var>, respectively, and the last monster vanishes.</li>
+<li>Second, cause an explosion centered at the monster with <var>4</var> health remaining. The healths of the three remaining monsters become <var>0</var>, <var>-1</var> and <var>-2</var>, respectively, and all the monsters are now vanished.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>2 10 4
+20
+20
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>4
+</pre>
+<p>You need to cause two explosions centered at each monster, for a total of four.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>5 2 1
+900000000
+900000000
+1000000000
+1000000000
+1000000000
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>800000000
+</pre></section>
+</div>
+</span>

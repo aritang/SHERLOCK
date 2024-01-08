@@ -1,0 +1,78 @@
+
+<H1><font color="#000">Problem B:</font> Magic Slayer</H1>
+
+<p>
+You are in a fantasy monster-ridden world. You are a slayer fighting against the monsters with magic
+spells.
+</p>
+
+<p>
+The monsters have <i>hit points</i> for each, which represent their vitality. You can decrease their hit points
+by your magic spells: each spell gives certain points of <i>damage</i>, by which monsters lose their hit points,
+to either one monster or all monsters in front of you (depending on the spell). Monsters are defeated
+when their hit points decrease to less than or equal to zero. On the other hand, each spell may consume
+a certain amount of your <i>magic power</i>. Since your magic power is limited, you want to defeat monsters
+using the power as little as possible.
+</p>
+<p>
+Write a program for this purpose.
+</p>
+
+<H2>Input</H2>
+
+<p>
+The input consists of multiple datasets. Each dataset has the following format:
+</p>
+
+<p>
+<i>N</i><br>
+<i>HP</i><sub>1</sub><br>
+<i>HP</i><sub>2</sub><br>
+...<br>
+<i>HP</i><sub><i>N</i></sub><br>
+<i>M</i><br>
+<i>Name</i><sub>1</sub> <i>MP</i><sub>1</sub> <i>Target</i><sub>1</sub> <i>Damage</i><sub>1</sub><br>
+<i>Name</i><sub>2</sub> <i>MP</i><sub>2</sub> <i>Target</i><sub>2</sub> <i>Damage</i><sub>2</sub><br>
+...<br>
+<i>Name</i><sub><i>M</i></sub> <i>MP</i><sub><i>M</i></sub> <i>Target</i><sub><i>M</i></sub> <i>Damage</i><sub><i>M</i></sub><br>
+</p>
+
+<p>
+<i>N</i> is the number of monsters in front of you (1 &le; <i>N</i> &le; 100); <i>HP<sub>i</sub></i> is the hit points of the <i>i</i>-th monster
+(1 &le; <i>HP<sub>i</sub></i> &le; 100000); <i>M</i> is the number of available magic spells (1 &le; <i>M</i> &le; 100); <i>Name<sub>j</sub></i> is the name
+of the <i>j</i>-th spell, consisting of up to 16 uppercase and lowercase letters; <i>MP<sub>j</sub></i> is the amount of magic
+power consumed by the <i>j</i>-th spell (0 &le; <i>MP<sub>j</sub></i> &le; 99); <i>Target<sub>j</sub></i> is either "<span>Single</span>" or "<span>All</span>", where these
+indicate the <i>j</i>-th magic gives damage just to a single monster or to all monsters respectively; <i>Damage<sub>j</sub></i> is
+the amount of damage (per monster in case of "<span>All</span>") made by the <i>j</i>-th magic (0 &le; <i>Damage<sub>j</sub></i> &le; 999999).
+</p>
+<p>
+All the numbers in the input are integers. There is at least one spell that gives non-zero damage to
+monsters.
+</p>
+
+<p>
+The last dataset is followed by a line containing one zero. This line is not a part of any dataset and should not be processed.
+</p>
+
+
+<H2>Output</H2>
+
+<p>
+For each dataset, Print in a line the minimum amount of magic power consumed to defeat all the monsters in the input.
+</p>
+
+<H2>Sample Input</H2>
+<pre>
+3
+8000 15000 30000
+3
+Flare 45 Single 8000
+Meteor 62 All 6000
+Ultimate 80 All 9999
+0
+</pre>
+
+<H2>Output for the Sample Input</H2>
+<pre>
+232
+</pre>

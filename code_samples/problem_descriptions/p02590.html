@@ -1,0 +1,70 @@
+<span class="lang-en">
+<p>Score : <var>800</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>Let’s take a prime <var>P = 200\,003</var>.
+You are given <var>N</var> integers <var>A_1, A_2, \ldots, A_N</var>.
+Find the sum of <var>((A_i \cdot A_j) \bmod P)</var> over all <var>N \cdot (N-1) / 2</var> unordered pairs of elements (<var>i &lt; j</var>).</p>
+<p>Please note that the sum isn't computed modulo <var>P</var>.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>2 \leq N \leq 200\,000</var></li>
+<li><var>0 \leq A_i &lt; P = 200\,003</var></li>
+<li>All values in input are integers.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format.</p>
+<pre><var>N</var>
+<var>A_1</var> <var>A_2</var> <var>\cdots</var> <var>A_N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print one integer — the sum over <var>((A_i \cdot A_j) \bmod P)</var>.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>4
+2019 0 2020 200002
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>474287
+</pre>
+<p>The non-zero products are:</p>
+<ul>
+<li><var>2019 \cdot 2020 \bmod P = 78320</var></li>
+<li><var>2019 \cdot 200002 \bmod P = 197984</var></li>
+<li><var>2020 \cdot 200002 \bmod P = 197983</var></li>
+</ul>
+<p>So the answer is <var>0 + 78320 + 197984 + 0 + 0 + 197983 = 474287</var>. </p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>5
+1 1 2 2 100000
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>600013
+</pre></section>
+</div>
+</span>

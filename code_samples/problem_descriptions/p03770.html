@@ -1,0 +1,112 @@
+<span class="lang-en">
+<p>Score : <var>1000</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>Snuke arranged <var>N</var> colorful balls in a row.
+The <var>i</var>-th ball from the left has color <var>c_i</var> and weight <var>w_i</var>.</p>
+<p>He can rearrange the balls by performing the following two operations any number of times, in any order:</p>
+<ul>
+<li>Operation <var>1</var>: Select two balls with the same color. If the total weight of these balls is at most <var>X</var>, swap the positions of these balls.</li>
+<li>Operation <var>2</var>: Select two balls with different colors. If the total weight of these balls is at most <var>Y</var>, swap the positions of these balls.</li>
+</ul>
+<p>How many different sequences of colors of balls can be obtained? Find the count modulo <var>10^9 + 7</var>.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 ≤ N ≤ 2 × 10^5</var></li>
+<li><var>1 ≤ X, Y ≤ 10^9</var></li>
+<li><var>1 ≤ c_i ≤ N</var></li>
+<li><var>1 ≤ w_i ≤ 10^9</var></li>
+<li><var>X, Y, c_i, w_i</var> are all integers.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var> <var>X</var> <var>Y</var>
+<var>c_1</var> <var>w_1</var>
+<var>:</var>
+<var>c_N</var> <var>w_N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the answer.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>4 7 3
+3 2
+4 3
+2 1
+4 4
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>2
+</pre>
+<ul>
+<li>The sequence of colors <var>(2,4,3,4)</var> can be obtained by swapping the positions of the first and third balls by operation <var>2</var>.</li>
+<li>It is also possible to swap the positions of the second and fourth balls by operation <var>1</var>, but it does not affect the sequence of colors.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>1 1 1
+1 1
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>1
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>21 77 68
+16 73
+16 99
+19 66
+2 87
+2 16
+7 17
+10 36
+10 68
+2 38
+10 74
+13 55
+21 21
+3 7
+12 41
+13 88
+18 6
+2 12
+13 87
+1 9
+2 27
+13 15
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>129729600
+</pre></section>
+</div>
+</span>

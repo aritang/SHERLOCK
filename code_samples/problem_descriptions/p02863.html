@@ -1,0 +1,121 @@
+<span class="lang-en">
+<p>Score : <var>500</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>Takahashi is at an all-you-can-eat restaurant.</p>
+<p>The restaurant offers <var>N</var> kinds of dishes. It takes <var>A_i</var> minutes to eat the <var>i</var>-th dish, whose deliciousness is <var>B_i</var>.</p>
+<p>The restaurant has the following rules:</p>
+<ul>
+<li>You can only order one dish at a time. The dish ordered will be immediately served and ready to eat.</li>
+<li>You cannot order the same kind of dish more than once.</li>
+<li>Until you finish eating the dish already served, you cannot order a new dish.</li>
+<li>After <var>T-0.5</var> minutes from the first order, you can no longer place a new order, but you can continue eating the dish already served.</li>
+</ul>
+<p>Let Takahashi's happiness be the sum of the deliciousness of the dishes he eats in this restaurant.</p>
+<p>What is the maximum possible happiness achieved by making optimal choices?</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>2 \leq N \leq 3000</var></li>
+<li><var>1 \leq T \leq 3000</var></li>
+<li><var>1 \leq A_i \leq 3000</var></li>
+<li><var>1 \leq B_i \leq 3000</var></li>
+<li>All values in input are integers.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var> <var>T</var>
+<var>A_1</var> <var>B_1</var>
+<var>:</var>
+<var>A_N</var> <var>B_N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the maximum possible happiness Takahashi can achieve.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>2 60
+10 10
+100 100
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>110
+</pre>
+<p>By ordering the first and second dishes in this order, Takahashi's happiness will be <var>110</var>.</p>
+<p>Note that, if we manage to order a dish in time, we can spend any amount of time to eat it.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>3 60
+10 10
+10 20
+10 30
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>60
+</pre>
+<p>Takahashi can eat all the dishes within <var>60</var> minutes.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>3 60
+30 10
+30 20
+30 30
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>50
+</pre>
+<p>By ordering the second and third dishes in this order, Takahashi's happiness will be <var>50</var>.</p>
+<p>We cannot order three dishes, in whatever order we place them.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 4</h3><pre>10 100
+15 23
+20 18
+13 17
+24 12
+18 29
+19 27
+23 21
+18 20
+27 15
+22 25
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 4</h3><pre>145
+</pre></section>
+</div>
+</span>

@@ -1,0 +1,83 @@
+
+
+
+<h1>Problem D: Let's Go To School</h1>
+
+<h2>Problem</h2>
+<p>
+がっちょ君は期末試験が近づくとやる気がなくなってしまい、しばしば学校を休むようになる。<br>
+期末試験まで残り<var>N</var>日である。<br>
+がっちょ君の<var>i</var>日目のやる気は<var>X<sub>i</sub></var>であり、<var>i</var>日目に学校に行くために必要なやる気は<var>Y<sub>i</sub></var>である。<br>
+がっちょ君は <var>X<sub>i</sub></var> &ge; <var>Y<sub>i</sub></var> となる日のみ学校に行く。<br>
+
+がっちょ君を心配したハジ君は、がっちょ君を励ますことで、可能な限り学校に行かせようと考えた。<br>
+ハジ君は最初、励まし力<var>P</var>を持っている。<br>
+
+ハジ君が<var>i</var>日目に励まし力<var>t</var>(<var>t</var>は0以上の任意の実数)を消費してがっちょ君を励ますと、
+がっちょ君の<var>i</var>日目のやる気は<var>t</var>だけ増加して、ハジ君の励まし力は<var>t</var>だけ減少する。さらに、<var>i</var>&plus;1 &le; <var>N</var>のとき、<var>i</var>&plus;1日目のがっちょ君のやる気<var>X<sub>i&plus;1</sub></var>はmax(0, <var>X<sub>i&plus;1</sub></var> &minus; <var>t</var>) に変化する。<br>
+ハジ君は自分の持っている励まし力を超えて励ますことはできない。
+</p>
+
+<p>
+ハジ君が最適な励まし方をしたときの、がっちょ君が学校に行く最大日数を求めよ。
+</p>
+
+<h2>Input</h2>
+<p>入力は以下の形式で与えられる。</p>
+<pre>
+<var>N</var> <var>P</var>
+<var>X<sub>1</sub></var> <var>Y<sub>1</sub></var>
+<var>X<sub>2</sub></var> <var>Y<sub>2</sub></var>
+...
+<var>X<sub>N</sub></var> <var>Y<sub>N</sub></var>
+</pre>
+
+<p>
+  入力はすべて整数で与えられる。<br>
+  1行目に期末試験までの日数<var>N</var>とハジ君が最初に持っている励まし力<var>P</var>が空白区切りで与えられる。<br>
+  2行目から続く<var>N</var>行にはがっちょ君の<var>i</var>(<var>i</var>=1,2,...,<var>N</var>)日目のやる気<var>X<sub>i</sub></var>と学校に行くために必要なやる気<var>Y<sub>i</sub></var>が空白区切りで与えられる。<br>
+
+</p>
+
+<h2>Constraints</h2>
+<p>入力は以下の条件を満たす。</p>
+<ul>
+  <li>1 &le; <var>N</var> &le; 100</li>
+  <li>0 &le; <var>P</var> &le; 10<sup>6</sup></li>
+  <li>0 &le; <var>X<sub>i</sub></var> &le; 10<sup>6</sup></li>
+  <li>0 &le; <var>Y<sub>i</sub></var> &le; 10<sup>6</sup></li>
+</ul>
+
+<h2>Output</h2>
+<p>
+  がっちょ君が学校に行くことができる最大の日数を1行に出力せよ。
+</p>
+
+
+<h2>Sample Input 1</h2>
+<pre>
+3 10
+1 6
+5 10
+0 5
+</pre>
+
+<h2>Sample Output 1</h2>
+<pre>
+2
+</pre>
+
+<h2>Sample Input 2</h2>
+<pre>
+5 5
+1 1
+1 2
+1 2
+1 3
+1 3
+</pre>
+
+<h2>Sample Output 2</h2>
+<pre>
+4
+</pre>

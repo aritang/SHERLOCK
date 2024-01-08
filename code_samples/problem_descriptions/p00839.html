@@ -1,0 +1,168 @@
+
+<H1><font color="#000">Problem D:</font> Organize Your Train</H1>
+
+<p>
+In the good old Hachioji railroad station located in the west of Tokyo, there are several parking
+lines, and lots of freight trains come and go every day.
+</p>
+<p>
+All freight trains travel at night, so these trains containing various types of cars are settled in
+your parking lines early in the morning. Then, during the daytime, you must reorganize cars
+in these trains according to the request of the railroad clients, so that every line contains the
+“right” train, i.e. the right number of cars of the right types, in the right order.
+</p>
+<p>
+As shown in Figure 7, all parking lines run in the East-West direction. There are exchange
+lines connecting them through which you can move cars. An exchange line connects two ends
+of different parking lines. Note that an end of a parking line can be connected to many ends of
+other lines. Also note that an exchange line may connect the East-end of a parking line and the
+West-end of another.
+</p>
+
+<center>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE1_organizeYourTrain1">
+</center>
+
+<p>
+Cars of the same type are not discriminated between each other. The cars are symmetric, so
+directions of cars don’t matter either.
+</p>
+<p>
+You can divide a train at an arbitrary position to make two sub-trains and move one of them
+through an exchange line connected to the end of its side. Alternatively, you may move a whole
+train as is without dividing it. Anyway, when a (sub-) train arrives at the destination parking
+line and the line already has another train in it, they are coupled to form a longer train.
+</p>
+<p>
+Your superautomatic train organization system can do these without any help of locomotive
+engines. Due to the limitation of the system, trains cannot stay on exchange lines; when you
+start moving a (sub-) train, it must arrive at the destination parking line before moving another
+train.
+</p>
+<p>
+In what follows, a letter represents a car type and a train is expressed as a sequence of letters.
+For example in Figure 8, from an initial state having a train "<span>aabbccdee</span>" 
+on line 0 and no trains
+on other lines, you can make "<span>bbaadeecc</span>" on line 2 with the four moves shown in the figure.
+</p>
+<center>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE1_organizeYourTrain2">
+</center>
+
+<p>
+To cut the cost out, your boss wants to minimize the number of (sub-) train movements. For
+example, in the case of Figure 8, the number of movements is 4 and this is the minimum.
+</p>
+<p>
+Given the configurations of the train cars in the morning (arrival state) and evening (departure
+state), your job is to write a program to find the optimal train reconfiguration plan.
+</p>
+
+<H2>Input</H2>
+
+<p>
+The input consists of one or more datasets. A dataset has the following format:
+</p>
+
+<pre>
+<i>x y</i>
+<i>p</i><sub>1</sub> <i>P</i><sub>1</sub> <i>q</i><sub>1</sub> <i>Q</i><sub>1</sub>
+<i>p</i><sub>2</sub> <i>P</i><sub>2</sub> <i>q</i><sub>2</sub> <i>Q</i><sub>2</sub>
+.
+.
+.
+<i>p</i><sub><i>y</i></sub> <i>P</i><sub><i>y</i></sub> <i>q</i><sub><i>y</i></sub> <i>Q</i><sub><i>y</i></sub>
+<i>s</i><sub>0</sub>
+<i>s</i><sub>1</sub>
+.
+.
+.
+<i>s</i><sub><i>x</i>-1</sub>
+<i>t</i><sub>0</sub>
+<i>t</i><sub>1</sub>
+.
+.
+.
+<i>t</i><sub><i>x</i>-1</sub>
+</pre>
+
+<p>
+<i>x</i> is the number of parking lines, which are numbered from 0 to <i>x</i>-1. <i>y</i> is the number of exchange
+lines. Then <i>y</i> lines of the exchange line data follow, each describing two ends connected by the
+exchange line; <i>p</i><sub><i>i</i></sub> and <i>q</i><sub><i>i</i></sub> are integers between 0 and <i>x</i> - 1 which indicate parking line numbers,
+and <i>P<sub>i</sub></i> and <i>Q<sub>i</sub></i> are either "<span>E</span>" (East) or "<span>W</span>" (West) which indicate the ends of the parking lines.
+</p>
+<p>
+Then <i>x</i> lines of the arrival (initial) configuration data, <i>s</i><sub>0</sub>, ... , <i>s</i><sub><i>x</i>-1</sub>, and <i>x</i> lines of the departure
+(target) configuration data, <i>t</i><sub>0</sub>, ... <i>t</i><sub><i>x</i>-1</sub>, follow. Each of these lines contains one or more lowercase letters "<span>a</span>", "<span>b</span>", ..., "<span>z</span>", which indicate types of cars of the train in the corresponding parking
+line, in west to east order, or alternatively, a single "<span>-</span>" when the parking line is empty.
+</p>
+<p>
+You may assume that x does not exceed 4, the total number of cars contained in all the trains
+does not exceed 10, and every parking line has sufficient length to park all the cars.
+</p>
+<p>
+You may also assume that each dataset has at least one solution and that the minimum number
+of moves is between one and six, inclusive.
+</p>
+<p>
+Two zeros in a line indicate the end of the input.
+</p>
+
+
+<H2>Output</H2>
+
+<p>
+For each dataset, output the number of moves for an optimal reconfiguration plan, in a separate
+line.
+
+</p>
+
+<H2>Sample Input</H2>
+<pre>
+3 5
+0W 1W
+0W 2W
+0W 2E
+0E 1E
+1E 2E
+aabbccdee
+-
+-
+-
+-
+bbaadeecc
+3 3
+0E 1W
+1E 2W
+2E 0W
+aabb
+bbcc
+aa
+bbbb
+cc
+aaaa
+3 4
+0E 1W
+0E 2E
+1E 2W
+2E 0W
+ababab
+-
+-
+aaabbb
+-
+-
+0 0
+</pre>
+
+<H2>Output for the Sample Input</H2>
+<pre>
+4
+2
+5
+</pre>
+
+
+
+

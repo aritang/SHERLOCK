@@ -1,0 +1,114 @@
+
+
+<h1>問題名 Zero division checker</h1>
+<p>森下さんは困っていました... 姉原さんにプログラムを書いてもらったのですが、そのプログラムがクラッシュするのです。
+</p>
+<p>姉原さんに書いてもらったのは、逆ポーランド記法の式を読んで、その計算結果を出力するプログラムで、クラッシュログによると、 0 で割り算をしてしまったのが原因のようです。これは、森下さんが間違った式を入力してしまったからかもしれませんし、もしかしたら、もしかしたら、姉原さんの書いたプログラムにバグがあるのかもしれません。
+</p>
+<p>姉原さんの書いたプログラムを読んでみようと思いましたが、姉原さんのプログラムはアセンブリというよくわからないことばで書かれているようで、見ているだけで頭がガンガンしてきます。
+</p>
+<p>そこで、森下さんはあなたに、式が間違っていないかどうか調べるプログラムを書いてもらうことにしました。式が間違っている、とは、その式に従って計算すると、 0 での割り算をしてしまう可能性のあることをいいます。
+</p>
+
+<p>なお、姉原さんの書いたコードはとてもふるいコンピューターで動くもので、加減乗除は整数で行い、結果は 8 bit の符号なし整数として保存されます。
+例えば、<code>255+1</code> は 0 になってしまうし、<code>3/2</code> は 1 になります。
+</p>
+
+<p>あ、姉原さんにはないしょですよ。
+</p>
+
+<h3>(参考)逆ポーランド記法で表された式を計算する、擬似コード</h3>
+</p><pre>s = 空のスタック
+n = 式の要素数
+for i in 1..n:
+  if 式のi番目の要素が整数:
+    sにその整数をプッシュする
+  if 式のi番目の要素が変数:
+    sにその変数の値をプッシュする
+  if 式のi番目の要素が演算子:
+    sから値をポップし、bとする
+    sから値をポップし、aとする
+    if 演算子が'+':
+      r = (a + b) % 256 とする
+    if 演算子が'-':
+      r = (a - b + 256) % 256 とする
+    if 演算子が'*':
+      r = (a * b) % 256 とする
+    if 演算子が'/':
+      r = (a / b) % 256 とする
+    sにrをプッシュする
+sから値をポップし、式の計算結果とする
+</pre>
+
+
+
+<h2>Input</h2>
+<blockquote>
+<var>m</var><br>
+<var>name<sub>1</sub></var> <var>lb<sub>1</sub></var> <var>ub<sub>1</sub></var><br>
+...<br>
+<var>name<sub>m</sub></var> <var>lb<sub>m</sub></var> <var>ub<sub>m</sub></var><br>
+<var>n</var><br>
+<var>e<sub>1</sub></var> <var>e<sub>2</sub></var> ... <var>e<sub>n</sub></var><br>
+</blockquote>
+
+<p><var>0 &le; m &le; 100</var>
+</p>
+<p><var>0 &le; lb<sub>i</sub> &le; ub<sub>i</sub> &le; 255</var>
+</p>
+<p><var>1 &le; name<sub>i</sub> (1 &le; i &le; m) の長さ &le; 20</var>
+</p>
+<p><var>1 &le; n &le; 100</var>
+</p>
+<p><var>m</var> は変数の数、<var>name<sub>i</sub></var>, <var>lb<sub>i</sub></var>, <var>ub<sub>i</sub></var> はそれぞれ変数iの名前、下限、上限を表します。
+</p>
+<p><var>n</var> は式に含まれる要素の数を表し、<var>e<sub>i</sub></var> は式の <var>i</var> 番目の要素を表します。
+</p>
+<p>各変数は式の中に高々1回しか現れません。
+</p>
+
+
+<h2>Output</h2>
+<p>式が間違っているときには<code>error</code>、間違っていないときには<code>correct</code>と一行で出力してください。
+</p>
+
+
+<h2>Sample Input 1</h2>
+
+<pre>1
+a 1 10
+3
+10 a /
+</pre>
+
+<h2>Output for the Sample Input 1</h2>
+
+<pre>correct
+</pre>
+
+<h2>Sample Input 2</h2>
+
+<pre>2
+a 1 10
+b 1 10
+5
+1 a b - /
+</pre>
+
+<h2>Output for the Sample Input 2</h2>
+
+<pre>error
+</pre>
+
+<h2>Sample Input 3</h2>
+
+<pre>1
+a 0 255
+7
+1 a 2 * 1 + /
+</pre>
+
+<h2>Output for the Sample Input 3</h2>
+
+<pre>correct
+</pre>

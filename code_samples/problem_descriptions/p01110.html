@@ -1,0 +1,161 @@
+<h3>Origami, or the art of folding paper</h3>
+<!-- end en only -->
+
+
+
+<!-- begin en only -->
+<p>
+Master Grus is a famous <i>origami</i> (paper folding) artist, who is
+enthusiastic about exploring the possibility of origami art.
+For future creation, he is now planning fundamental
+experiments to establish the general theory of origami.
+</p>
+<!-- end en only -->
+
+<!-- begin en only -->
+<p>
+One rectangular piece of paper is used in each of his experiments.
+He folds it horizontally and/or vertically several times and then
+punches through holes in the folded paper.
+</p>
+<!-- end en only -->
+
+<!-- begin en only -->
+<p>
+The following figure illustrates the folding process of a simple experiment,
+which corresponds to the third dataset of the Sample Input below.
+Folding the 10 &times; 8 rectangular piece of paper shown at top left
+three times results in the 6 &times; 6 square shape shown at
+bottom left.
+In the figure, dashed lines indicate the locations to fold the paper
+and round arrows indicate the directions of folding.
+Grid lines are shown as solid lines to tell the sizes of rectangular
+shapes and the exact locations of folding.
+Color densities represent the numbers of overlapping layers.
+Punching through holes at A and B in the folded paper makes
+nine holes in the paper, eight at A and another at B.
+</p>
+<!-- end en only -->
+
+<center>
+  <p>
+    <img src="https://judgeapi.u-aizu.ac.jp/resources/images/ICPCDomestic2018_B1.png" width="80%">
+  </p>
+</center>
+
+<!-- begin en only -->
+<p>
+Your mission in this problem is to write a computer program to count
+the number of holes in the paper, given the information on a rectangular
+piece of paper and folding and punching instructions.
+</p>
+<!-- end en only -->
+
+
+
+<h3>Input</h3>
+
+
+
+<!-- begin en only -->
+<p>
+The input consists of at most 1000 datasets, each in the following format.
+</p>
+<!-- end en only -->
+
+<blockquote>
+<p>
+<i>n</i> <i>m</i> <i>t</i> <i>p</i><br>
+<i>d</i><sub>1</sub> <i>c</i><sub>1</sub> <br>
+... <br>
+<i>d<sub>t</sub></i> <i>c<sub>t</sub></i> <br>
+<i>x</i><sub>1</sub> <i>y</i><sub>1</sub> <br>
+... <br>
+<i>x<sub>p</sub></i> <i>y<sub>p</sub></i> <br>
+</p>
+</blockquote>
+
+<!-- begin en only -->
+<p>
+<i>n</i> and <i>m</i> are the width and the height, respectively, of
+a rectangular piece of paper.
+They are positive integers at most 32.
+<i>t</i> and <i>p</i> are the numbers of folding and punching
+instructions, respectively.
+They are positive integers at most 20.
+The pair of <i>d<sub>i</sub></i> and <i>c<sub>i</sub></i> gives the
+<i>i</i>-th folding instruction as follows:
+</p><ul>
+  <li><i>d<sub>i</sub></i> is either 1 or 2.</li>
+  <li><i>c<sub>i</sub></i> is a positive integer.</li>
+  <li>If <i>d<sub>i</sub></i> is 1, the left-hand side of the vertical folding line that passes at <i>c<sub>i</sub></i> right to the left boundary is folded onto the right-hand side. </li>
+  <li>If <i>d<sub>i</sub></i> is 2, the lower side of the horizontal folding line that passes at <i>c<sub>i</sub></i> above the lower boundary is folded onto the upper side. </li>
+</ul>
+After performing the first <i>i</i>&#8722;1 folding instructions, if <i>d<sub>i</sub></i> is 1, the width of the shape is greater than <i>c<sub>i</sub></i>.
+Otherwise the height is greater than <i>c<sub>i</sub></i>.
+
+(<i>x<sub>i</sub></i> + 1/2, <i>y<sub>i</sub></i> + 1/2) gives the coordinates of
+the point where the <i>i</i>-th punching instruction is performed.
+The origin (0, 0) is at the bottom left of the finally obtained shape.
+<i>x<sub>i</sub></i> and <i>y<sub>i</sub></i> are both non-negative integers and they are less than the width and the height, respectively, of the shape.
+You can assume that no two punching instructions punch holes at the same location.
+<p></p>
+<!-- end en only -->
+
+<!-- begin en only -->
+<p>
+The end of the input is indicated by a line containing four zeros.
+</p>
+<!-- end en only -->
+
+
+
+<h3>Output</h3>
+
+
+
+<!-- begin en only -->
+<p>
+For each dataset, output <i>p</i> lines, the <i>i</i>-th of which contains
+the number of holes punched in the paper by the <i>i</i>-th punching instruction.
+</p>
+<!-- end en only -->
+
+
+
+<h3>Sample Input</h3>
+
+
+<pre>2 1 1 1
+1 1
+0 0
+1 3 2 1
+2 1
+2 1
+0 0
+10 8 3 2
+2 2
+1 3
+1 1
+0 1
+3 4
+3 3 3 2
+1 2
+2 1
+1 1
+0 1
+0 0
+0 0 0 0
+</pre>
+
+
+<h3>Output for the Sample Input</h3>
+
+
+<pre>2
+3
+8
+1
+3
+6
+</pre>

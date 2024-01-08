@@ -1,0 +1,87 @@
+
+<H1><font color="#000">Problem A:</font> The Balance</H1>
+
+<p>
+Ms. Iyo Kiffa-Australis has a balance and only two kinds of weights to measure a dose of medicine.
+</p>
+<p>
+For example, to measure 200mg of aspirin using 300mg weights and 700mg weights, she can put
+one 700mg weight on the side of the medicine and three 300mg weights on the opposite side
+(Figure 1). Although she could put four 300mg weights on the medicine side and two 700mg
+weights on the other (Figure 2), she would not choose this solution because it is less convenient
+to use more weights.
+</p>
+<p>
+You are asked to help her by calculating how many weights are required.
+</p>
+
+<center>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE1_theBalance1">
+<p>Figure 1: To measure 200mg of aspirin using three 300mg weights and one 700mg weight</p>
+</center>
+<br>
+<center>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE1_theBalance2">
+<p>Figure 2: To measure 200mg of aspirin using four 300mg weights and two 700mg weights</p>
+</center>
+
+
+<H2>Input</H2>
+
+<p>
+The input is a sequence of datasets. A dataset is a line containing three positive integers <i>a</i>, <i>b</i>,
+and <i>d</i> separated by a space. The following relations hold: <i>a</i> &ne; <i>b</i>, <i>a</i> &le; 10000, <i>b</i> &le; 10000, and
+<i>d</i> &le; 50000. You may assume that it is possible to measure <i>d</i> mg using a combination of <i>a</i> mg
+and <i>b</i> mg weights. In other words, you need not consider “no solution” cases.
+</p>
+
+<p>
+The end of the input is indicated by a line containing three zeros separated by a space. It is not
+a dataset.
+</p>
+
+<H2>Output</H2>
+
+<p>
+The output should be composed of lines, each corresponding to an input dataset (<i>a</i>, <i>b</i>, <i>d</i>). An
+output line should contain two nonnegative integers <i>x</i> and <i>y</i> separated by a space. They should
+satisfy the following three conditions.
+</p>
+
+<ul>
+<li> You can measure <i>d</i> mg using <i>x</i> many <i>a</i> mg weights and <i>y</i> many <i>b</i> mg weights.</li>
+<li> The total number of weights (<i>x</i> + <i>y</i>) is the smallest among those pairs of nonnegative
+  integers satisfying the previous condition.</li>
+<li> The total mass of weights (<i>ax</i> + <i>by</i>) is the smallest among those pairs of nonnegative
+  integers satisfying the previous two conditions.</li>
+</ul>
+
+<p>
+No extra characters (e.g. extra spaces) should appear in the output.
+</p>
+
+<H2>Sample Input</H2>
+<pre>
+700 300 200
+500 200 300
+500 200 500
+275 110 330
+275 110 385
+648 375 4002
+3 1 10000
+0 0 0
+</pre>
+
+<H2>Output for the Sample Input</H2>
+<pre>
+1 3
+1 1
+1 0
+0 3
+1 1
+49 74
+3333 1
+</pre>
+
+
+

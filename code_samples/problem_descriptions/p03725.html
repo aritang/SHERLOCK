@@ -1,0 +1,103 @@
+<span class="lang-en">
+<p>Score : <var>700</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>Takahashi is locked within a building.</p>
+<p>This building consists of <var>H×W</var> rooms, arranged in <var>H</var> rows and <var>W</var> columns.
+We will denote the room at the <var>i</var>-th row and <var>j</var>-th column as <var>(i,j)</var>. The state of this room is represented by a character <var>A_{i,j}</var>. If <var>A_{i,j}=</var> <code>#</code>, the room is locked and cannot be entered; if <var>A_{i,j}=</var> <code>.</code>, the room is not locked and can be freely entered.
+Takahashi is currently at the room where <var>A_{i,j}=</var> <code>S</code>, which can also be freely entered.</p>
+<p>Each room in the <var>1</var>-st row, <var>1</var>-st column, <var>H</var>-th row or <var>W</var>-th column, has an exit.
+Each of the other rooms <var>(i,j)</var> is connected to four rooms: <var>(i-1,j)</var>, <var>(i+1,j)</var>, <var>(i,j-1)</var> and <var>(i,j+1)</var>.</p>
+<p>Takahashi will use his magic to get out of the building. In one cast, he can do the following:</p>
+<ul>
+<li>Move to an adjacent room at most <var>K</var> times, possibly zero. Here, locked rooms cannot be entered.</li>
+<li>Then, select and unlock at most <var>K</var> locked rooms, possibly zero. Those rooms will remain unlocked from then on.</li>
+</ul>
+<p>His objective is to reach a room with an exit. Find the minimum necessary number of casts to do so.</p>
+<p>It is guaranteed that Takahashi is initially at a room without an exit.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>3 ≤ H ≤ 800</var></li>
+<li><var>3 ≤ W ≤ 800</var></li>
+<li><var>1 ≤ K ≤ H×W</var></li>
+<li>Each <var>A_{i,j}</var> is <code>#</code> , <code>.</code>  or <code>S</code>.</li>
+<li>There uniquely exists <var>(i,j)</var> such that <var>A_{i,j}=</var> <code>S</code>, and it satisfies <var>2 ≤ i ≤ H-1</var> and <var>2 ≤ j ≤ W-1</var>.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>H</var> <var>W</var> <var>K</var>
+<var>A_{1,1}A_{1,2}</var>...<var>A_{1,W}</var>
+:
+<var>A_{H,1}A_{H,2}</var>...<var>A_{H,W}</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the minimum necessary number of casts.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>3 3 3
+#.#
+#S.
+###
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>1
+</pre>
+<p>Takahashi can move to room <var>(1,2)</var> in one cast.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>3 3 3
+###
+#S#
+###
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>2
+</pre>
+<p>Takahashi cannot move in the first cast, but can unlock room <var>(1,2)</var>.
+Then, he can move to room <var>(1,2)</var> in the next cast, achieving the objective in two casts.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>7 7 2
+#######
+#######
+##...##
+###S###
+##.#.##
+###.###
+#######
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>2
+</pre></section>
+</div>
+</span>

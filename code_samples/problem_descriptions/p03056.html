@@ -1,0 +1,79 @@
+<span class="lang-en">
+<p>Score : <var>1000</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p><strong>Note the unusual memory limit.</strong></p>
+<p>For a rectangular grid where each square is painted white or black, we define its <strong>complexity</strong> as follows:</p>
+<ul>
+<li>If all the squares are black or all the squares are white, the complexity is <var>0</var>.</li>
+<li>Otherwise, divide the grid into two subgrids by a line parallel to one of the sides of the grid, and let <var>c_1</var> and <var>c_2</var> be the complexities of the subgrids. There can be multiple ways to perform the division, and let <var>m</var> be the minimum value of <var>\max(c_1, c_2)</var> in those divisions. The complexity of the grid is <var>m+1</var>.</li>
+</ul>
+<p>You are given a grid with <var>H</var> horizontal rows and <var>W</var> vertical columns where each square is painted white or black.
+<var>HW</var> characters from <var>A_{11}</var> to <var>A_{HW}</var> represent the colors of the squares.
+<var>A_{ij}</var> is <code>#</code> if the square at the <var>i</var>-th row from the top and the <var>j</var>-th column from the left is black, and <var>A_{ij}</var> is <code>.</code> if that square is white.</p>
+<p>Find the complexity of the given grid.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 \leq H,W \leq 185</var></li>
+<li><var>A_{ij}</var> is <code>#</code> or <code>.</code>.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>H</var> <var>W</var>
+<var>A_{11}</var><var>A_{12}</var><var>...</var><var>A_{1W}</var>
+<var>:</var>
+<var>A_{H1}</var><var>A_{H2}</var><var>...</var><var>A_{HW}</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the complexity of the given grid.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>3 3
+...
+.##
+.##
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>2
+</pre>
+<p>Let us divide the grid by the boundary line between the first and second columns.
+The subgrid consisting of the first column has the complexity of <var>0</var>, and the subgrid consisting of the second and third columns has the complexity of <var>1</var>, so the whole grid has the complexity of at most <var>2</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>6 7
+.####.#
+#....#.
+#....#.
+#....#.
+.####.#
+#....##
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>4
+</pre></section>
+</div>
+</span>

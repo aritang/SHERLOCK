@@ -1,0 +1,93 @@
+
+<H1><font color="#000">Problem J:</font> Cave Explorer</H1>
+
+<p>
+Mike Smith is a man exploring caves all over the world.
+</p>
+
+<p>
+One day, he faced a scaring creature blocking his way. He got scared, but in short time he took
+his knife and then slashed it to attempt to kill it. Then they were split into parts, which soon
+died out but the largest one. He slashed the creature a couple of times more to make it small
+enough, and finally became able to go forward.
+</p>
+
+<p>
+Now let us think of his situation in a mathematical way. The creature is considered to be a
+polygon, convex or concave. Mike slashes this creature straight with his knife in some direction.
+We suppose here the direction is given for simpler settings, while the position is arbitrary. Then
+all split parts but the largest one disappears.
+</p>
+
+<p>
+Your task is to write a program that calculates the area of the remaining part when the creature
+is slashed in such a way that the area is minimized.
+</p>
+
+<H2>Input</H2>
+
+<p>
+The input is a sequence of datasets. Each dataset is given in the following format:
+</p>
+
+<p>
+       <i>n</i><br>
+       <i>v<sub>x</sub> v<sub>y</sub></i><br>
+       <i>x</i><sub>1</sub> <i>y</i><sub>1</sub><br>
+       ...<br>
+       <i>x<sub>n</sub> y<sub>n</sub></i>
+</p>
+
+<p>
+The first line contains an integer <i>n</i>, the number of vertices of the polygon that represents the
+shape of the creature (3 &le; <i>n</i> &le; 100). The next line contains two integers <i>v<sub>x</sub></i> and <i>v<sub>y</sub></i>, where
+(<i>v<sub>x</sub></i>, <i>v<sub>y</sub></i>) denote a vector that represents the direction of the knife (-10000 &le; <i>v<sub>x</sub></i>, <i>v<sub>y</sub></i> &le; 10000,
+
+<i>v</i><sub><i>x</i></sub><sup>2</sup> + <i>v</i><sub><i>y</i></sub><sup>2</sup> &gt; 0). Then <i>n</i> lines follow. The <i>i</i>-th line contains two integers <i>x<sub>i</sub></i> and <i>y<sub>i</sub></i>, where (<i>x<sub>i</sub></i>, <i>y<sub>i</sub></i>)
+denote the coordinates of the <i>i</i>-th vertex of the polygon (0 &le; <i>x<sub>i</sub></i>, <i>y<sub>i</sub></i> &le; 10000).
+</p>
+
+<p>
+The vertices are given in the counterclockwise order. You may assume the polygon is always
+simple, that is, the edges do not touch or cross each other except for end points.
+</p>
+<p>
+The input is terminated by a line with a zero. This should not be processed.
+</p>
+
+
+<H2>Output</H2>
+
+<p>
+For each dataset, print the minimum possible area in a line. The area may be printed with
+an arbitrary number of digits after the decimal point, but should not contain an absolute error
+greater than 10<sup>-2</sup>.
+
+</p>
+
+<H2>Sample Input</H2>
+<pre>
+5
+0 1
+0 0
+5 0
+1 1
+5 2
+0 2
+7
+9999 9998
+0 0
+2 0
+3 1
+1 1
+10000 9999
+2 2
+0 2
+0
+</pre>
+
+<H2>Output for the Sample Input</H2>
+<pre>
+2.00
+2.2500000
+</pre>

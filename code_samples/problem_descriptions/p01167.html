@@ -1,0 +1,109 @@
+
+<H1><font color="#000">Problem E:</font> Alice in Foxland</H1>
+
+<p>
+<i>
+- The world is made of foxes; people with watchful eyes will find foxes in every
+fragment of the world.
+</i>
+</p>
+
+<p>
+</i>Defoxyrenardnucleic Acids</i> (or DNAs for short) and <i>Renardnucleic Acids</i> (or RNAs) are similar
+organic molecules contained in organisms. Each of those molecules consists of a sequence of 26
+kinds of nucleobases. We can represent such sequences as strings by having each lowercase letter
+from ‘a’ to ‘z’ denote one kind of nucleobase. The only difference between DNAs and RNAs is
+the way of those nucleobases being bonded.
+</p>
+<p>
+In the year of 2323, Prof. Fuchs discovered that DNAs including particular substrings act as
+catalysts, that is, accelerate some chemical reactions. He further discovered that the reactions
+are accelerated as the DNAs have longer sequences. For example, DNAs including the sequence
+“fox” act as catalysts that accelerate dissolution of nitrogen oxides (NOx ). The DNAs “redfox”
+and “cutefoxes” are two of the instances, and the latter provides more acceleration than the
+former. On the other hand, the DNA “foooox” will <i>not</i> be such a catalyst, since it does not
+include “fox” as a <i>substring</i>.
+</p>
+<p>
+DNAs can be easily obtained by extraction from some plants such as glory lilies. However,
+almost all of extracted molecules have different sequences each other, and we can obtain very
+few molecules that act as catalysts. From this background, many scientists have worked for
+finding a way to obtain the demanded molecules.
+</p>
+<p>
+In the year of 2369, Prof. Hu finally discovered the following process:
+</p>
+
+<ol>
+<li>   Prepare two DNAs <i>X</i> and <i>Y</i> .</li>
+<li> Generate RNAs <i>X'</i> and <i>Y'</i> with their sequences copied from the DNAs <i>X</i> and <i>Y</i> respectively.</li>
+<li> Delete zero or more bases from <i>X'</i> using some chemicals to obtain an RNA <i>X''</i>.</li>
+<li> Also delete zero or more bases from <i>Y'</i> to obtain an RNA <i>Y''</i> , which has the same sequence
+   as <i>X''</i> .</li>
+<li> Obtain a resulting DNA <i>Z</i> from the two RNAs <i>X''</i> and <i>Y''</i>
+   same sequence as <i>X''</i> and <i>Y''</i>.</li>
+</ol>
+
+<center>
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE1_aliceInFoxland">
+<p>Figure 1: New Method for Generation of DNAs</p>
+</center>
+
+<p>
+The point is use of RNAs. It is difficult to delete specific bases on DNAs but relatively easy on
+RNAs. On the other hand, since RNAs are less stable than DNAs, there is no known way to
+obtain RNAs directly from some organisms. This is why we obtain RNAs from DNAs.
+</p>
+<p>
+Alice is a researcher in Tail Environmental Natural Catalyst Organization. She is now requested
+to generate DNAs with particular substrings, applying Hu’s method to some pairs of DNAs.
+Since longer DNAs are preferred, she wants a means of knowing the longest possible DNAs. So
+she asked you for help.
+</p>
+<p>
+Your task is to write a program that outputs the sequence of the longest possible DNA which
+can be generated from the given pair of DNAs <i>X</i> and <i>Y</i> and contains the given substring <i>C</i>.
+</p>
+
+
+<H2>Input</H2>
+
+<p>
+The input consists of multiple datasets. Each dataset consists of three lines. The first and
+second lines contain the sequences <i>X</i> and <i>Y</i> respectively. The third line contains the substring
+<i>C</i>. Each of the sequences and the substrings contains only lowercase letters (‘a’–‘z’) and has
+the length between 1 and 1600 inclusive.
+</p>
+<p>
+The input is terminated by a line with “*”.
+</p>
+
+<H2>Output</H2>
+
+<p>
+For each dataset, output the longest sequence in a line. If DNAs with the substring <i>C</i> cannot
+be obtained in any way, output “Impossible” instead. Any of them is acceptable in case there
+are two or more longest DNAs possible.
+</p>
+
+<H2>Sample Input</H2>
+<pre>
+czujthebdgfoliskax
+bdgchuptzefliskaox
+fox
+fennec
+oinarisama
+xiaorong
+customizedrevisedfoooox
+accurateredundantfooooooooox
+fox
+*
+</pre>
+
+<H2>Output for the Sample Input</H2>
+<pre>
+cutefox
+Impossible
+cuteredfox
+</pre>
+

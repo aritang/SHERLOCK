@@ -1,0 +1,79 @@
+<span class="lang-en">
+<p>Score : <var>100</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>You have <var>N</var> cups and <var>1</var> ball.</p>
+<p>The cups are arranged in a row, from left to right.</p>
+<p>You turned down all the cups, then inserted the ball into the leftmost cup.</p>
+<p>Then, you will perform the following <var>Q</var> operations:</p>
+<ul>
+<li>The <var>i</var>-th operation: swap the positions of the <var>A_i</var>-th and <var>B_i</var>-th cups from the left. If one of these cups contains the ball, the ball will also move.</li>
+</ul>
+<p>Since you are a magician, you can cast a magic described below:</p>
+<ul>
+<li>Magic: When the ball is contained in the <var>i</var>-th cup from the left, teleport the ball into the adjacent cup (that is, the <var>(i-1)</var>-th or <var>(i+1)</var>-th cup, if they exist).</li>
+</ul>
+<p>The magic can be cast before the first operation, between two operations, or after the last operation, but you are allowed to cast it at most once during the whole process.</p>
+<p>Find the number of cups with a possibility of containing the ball after all the operations and possibly casting the magic.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>2 \leq N \leq 10^5</var></li>
+<li><var>1 \leq Q \leq 10^5</var></li>
+<li><var>1 \leq A_i &lt; B_i \leq N</var></li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>The input is given from Standard Input in the following format:</p>
+<pre><var>N</var> <var>Q</var>
+<var>A_1</var> <var>B_1</var>
+<var>A_2</var> <var>B_2</var>
+:          
+<var>A_Q</var> <var>B_Q</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the number of cups with a possibility of eventually containing the ball.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>10 3
+1 3
+2 4
+4 5
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>4
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>20 3
+1 7
+8 20
+1 19
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>5
+</pre></section>
+</div>
+</span>

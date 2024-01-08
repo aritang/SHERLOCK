@@ -1,0 +1,135 @@
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({ tex2jax: { inlineMath: [["$","$"], ["\\(","\\)"]], processEscapes: true }});
+</script>
+<script type='text/javascript' src='http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
+</script>
+
+<h2>Problem A:
+Where is the Boundary
+</h2>
+
+<p>
+An island country JAGAN in a certain planet is very long and narrow, and extends east and
+west. This long country is said to consist of two major cultural areas | the eastern and the
+western. Regions in the east tend to have the eastern cultural features and regions in the west
+tend to have the western cultural features, but, of course, the boundary between the two cultural
+areas is not clear, which has been an issue.
+</p>
+
+<p>
+You are given an assignment estimating the boundary using a given data set.
+</p>
+
+<p>
+More precise specification of the assignment is as follows:
+</p>
+
+<ol>
+<li> JAGAN is divided into $n$ prefectures forming a line in the east-west direction. Each
+prefecture is numbered 1, 2, ..., $n$ <b>from WEST to EAST</b>.</li>
+<li> Each data set consists of $m$ features, which has 'E' (east) or 'W' (west) for each prefecture.
+These data indicate that each prefecture has eastern or western features from $m$ different
+point of views, for example, food, clothing, and so on.</li>
+<li> In the estimation, you have to choose a cultural boundary achieving the minimal errors.
+That is, you have to minimize the sum of 'W's in the eastern side and 'E's in the western
+side.</li>
+<li> In the estimation, you can choose a cultural boundary only from the boundaries between
+two prefectures.</li>
+</ol>
+
+<p>
+Sometimes all prefectures may be estimated to be the eastern or the western cultural area.
+In these cases, to simplify, you must virtually consider that the boundary is placed between
+prefecture No. 0 and No. 1 or between prefecture No. $n$ and No. $n+1$. When you get multiple
+minimums, you must output the most western (least-numbered) result.
+</p>
+
+<p>
+Write a program to solve the assignment.
+</p>
+
+<h3>Input</h3>
+<p>
+Each input is formatted as follows:<br>
+
+<br>
+$n$ $m$<br>
+$d_{11} ... d_{1n}$<br>
+:<br>
+:<br>
+$d_{m1} ... d_{mn}$<br>
+<br>
+</p>
+
+<p>
+The first line consists of two integers $n$ ($1 \leq n \leq 10,000$), $m$ ($1 \leq m \leq 100$), which indicate
+the number of prefectures and the number of features in the assignment. The following m lines
+are the given data set in the assignment. Each line contains exactly $n$ characters. The $j$-th
+character in the $i$-th line $d_{ij}$ is 'E' (east) or 'W' (west), which indicates $j$-th prefecture has the
+eastern or the western feature from the $i$-th point of view.
+</p>
+
+<h3>Output</h3>
+<p>
+Print the estimated result in a line. The output consists of two integers sorted in the ascending
+order which indicate two prefectures touching the boundary.
+</p>
+
+<h3>Sample Input</h3>
+<pre>
+2 1
+WE
+</pre>
+
+<h3>Output for the Sample Input</h3>
+<pre>
+1 2
+</pre>
+
+<h3>Sample Input</h3>
+<pre>
+3 2
+WWE
+WEE
+</pre>
+
+<h3>Output for the Sample Input</h3>
+<pre>
+1 2
+</pre>
+<p>
+Both estimates "1 2" and "2 3" achieve 1 error as the minimum. From the restriction that you
+must adopt the most western estimate, you must output "1 2".
+</p>
+
+<h3>Sample Input</h3>
+<pre>
+3 1
+WWW
+</pre>
+
+<h3>Output for the Sample Input</h3>
+<pre>
+3 4
+</pre>
+<p>
+In this case, all the prefectures are western. As described in the problem statement, you must
+virtually consider that the boundary is placed between third and fourth prefectures.
+</p>
+
+<h3>Sample Input</h3>
+<pre>
+3 1
+WEW
+</pre>
+
+<h3>Output for the Sample Input</h3>
+<pre>
+1 2
+</pre>
+<p>
+You cannot assume that 'E's and 'W's are separated.
+</p>
+
+

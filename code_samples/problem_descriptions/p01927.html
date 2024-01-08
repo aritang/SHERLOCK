@@ -1,0 +1,96 @@
+
+
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({ tex2jax: { inlineMath: [["$","$"], ["\\(","\\)"]], processEscapes: true }});
+</script>
+<script language="JavaScript" type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+
+<h3>凸多角形柱工業都市</h3>
+
+<p>凸多角形柱工業都市 (Industrial Convex Pillar City, ICPC) はいくつかの凸多角形柱の形状をした建物からなる街である．あなたはこの街の中を現在地 <i>S</i> から目的地 <i>T</i> に向けて歩こうとしている．今日は日差しが強いので，出来る限りひなたを通らずに目的地へ向かいたい．あなたが立っている地点と太陽を一直線に結んだ線上に建物がある場合，あなたは建物の陰にいるので日差しを受けずにすむ．また，この街の建物の外周には全てひさしが付いているので，建物の外周に沿って歩いている間は，日が当たる縁に沿って歩いても日差しを受けることはない．あなたは建物の内部以外はこの街をどこでも自由に歩くことができる．
+</p>
+
+<p>もっとも日差しを受けないように現在地から目的地まで歩いた時の，ひなたを歩く距離を出力するプログラムを作成しなさい．
+</p>
+
+<div style="text-align:center">
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_JAGDomestic2017_E1" witdh="300" height="300">
+  <p>図E1: 第1インプットの場合
+  </p>
+</div>
+
+<div style="text-align:center">
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_JAGDomestic2017_E2" witdh="300" height="300">
+  <p>図E2: 第2インプットの場合
+  </p>
+</div>
+
+<div style="text-align:center">
+<img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE2_JAGDomestic2017_E3" witdh="300" height="300">
+  <p>図E3: 第3インプットの場合
+  </p>
+</div>
+
+
+<h3>Input</h3>
+
+<p>入力は複数のデータセットからなる．
+データセットの個数は最大でも 30 個を超えない．
+各データセットは次の形式で表される．
+</p><blockquote><i>N</i><br><i>NV<sub>1</sub></i> <i>H<sub>1</sub></i> <i>X<sub>1,1</sub></i> <i>Y<sub>1,1</sub></i> <i>X<sub>1,2</sub></i> <i>Y<sub>1,2</sub></i> ... <i>X<sub>1,NV<sub>1</sub></sub></i> <i>Y<sub>1,NV<sub>1</sub></sub></i><br>...<br><i>NV<sub>N</sub></i> <i>H<sub>N</sub></i> <i>X<sub>N,1</sub></i> <i>Y<sub>N,1</sub></i> <i>X<sub>N,2</sub></i> <i>Y<sub>N,2</sub></i> ... <i>X<sub>N,NV<sub>N</sub></sub></i> <i>Y<sub>N,NV<sub>N</sub></sub></i><br><i>&theta;</i> <i>&phi;</i><br><i>S<sub>x</sub></i> <i>S<sub>y</sub></i> <i>T<sub>x</sub></i> <i>T<sub>y</sub></i><br></blockquote>
+<p>１行目の <i>N</i> は建物の数を表す．続く <i>N</i> 行は各建物の形状を指定する．<i>NV<sub>i</sub></i> は <i>i</i> 番目の建物を上から見た多角形の頂点数，<i>H<sub>i</sub></i> は <i>i</i> 番目の建物の高さを表す．<i>X<sub>i, j</sub></i> と <i>Y<sub>i, j</sub></i> は <i>i</i> 番目の建物を上から見た多角形の <i>j</i> 番目の頂点の <i>x</i> 座標と <i>y</i> 座標を表す．頂点は反時計回りの順で与えられる．全ての建物は上から見ると凸多角形であり，建物の内部に他の建物があったり，頂点や辺が他の多角形と重なったりすることはない．続く行には太陽の方向を表す <i>&theta;</i> と <i>&phi;</i> が与えられ，<i>&theta;</i> は太陽の向きを <i>x</i> の正の方向から反時計回りの角度で表し，<i>&phi;</i> は地平線からの太陽の仰角，すなわち太陽を見上げた時の視線の方向と地表面がなす角度を表す．ただし，太陽は無限遠にあり，移動中には位置を変えないものとする．続く行には現在地と目的地の座標， (<i>S<sub>x</sub></i>, <i>S<sub>y</sub></i>) と (<i>T<sub>x</sub></i>, <i>T<sub>y</sub></i>) が与えられる．
+</p><blockquote></blockquote>
+<p>入力で与えられる数値は全て整数であり，以下の条件を満たす．
+</p><blockquote><i>1 &le; N &le; 100</i><br><i>3 &le; NV<sub>i</sub> &le; 12</i><br><i>1 &le; H<sub>i</sub> &le; 1,</sub>000</i><br><i>0 &le; &theta; &lt; 360</i><br><i>0 &lt; &phi; &lt; 90</i></blockquote>
+<p>座標は全て <i>-1,</sub>000</i> 以上 <i>1,</sub>000</i> 以下である．
+現在地と目的地は異なり，どちらも建物の内部及び外周には存在しない．
+</p><blockquote></blockquote>
+<p>入力の終わりは，１つのゼロからなる行で表される．
+</p><blockquote></blockquote>
+
+
+<h3>Output</h3>
+
+
+<p>各データセットについて，ひなたを歩く最短距離を１行に出力せよ．出力には 0.001 を超える絶対誤差があってはならない．
+</p><blockquote></blockquote>
+
+
+<h3>Sample Input</h3>
+
+<pre>2
+4 1 0 0 1 0 1 1 0 1
+4 2 2 2 3 2 3 3 2 3
+60 45
+-1 -1 4 4
+4
+4 1 0 0 3 1 1 2 0 1
+3 2 10 7 8 2 12 4
+6 8 7 12 8 13 9 15 10 19 11 24 10 25
+5 4 16 2 16 4 12 8 14 2 15 0
+167 38
+3 3 15 21
+12
+4 3 -8 -3 -9 -3 -9 -5 -8 -6
+4 5 -4 -5 -7 -5 -7 -6 -5 -6
+4 2 -4 1 -5 1 -5 -4 -4 -4
+4 1 -1 1 -2 1 -2 -4 -1 -3
+4 2 2 3 -1 3 -2 2 3 2
+4 1 3 1 2 1 2 -3 3 -4
+4 7 1 0 0 0 0 -1 1 -1
+4 4 9 5 7 5 7 4 10 4
+4 3 6 5 5 4 5 0 6 0
+4 5 8 -1 5 -1 6 -2 8 -2
+4 1 10 0 9 0 9 -2 10 -1
+4 6 10 2 8 2 8 1 10 1
+131 78
+-10 10 10 -10
+0
+</pre>
+
+<h3>Output for Sample Input</h3>
+
+<pre>1.93185
+7.87174
+20.86840</pre>

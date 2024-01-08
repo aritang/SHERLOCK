@@ -1,0 +1,133 @@
+<span class="lang-en">
+<p>Score : <var>1000</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p><em>ButCoder Inc.</em> is a startup company whose main business is the development and operation of the programming competition site "<em>ButCoder</em>".</p>
+<p>There are <var>N</var> members of the company including the president, and each member except the president has exactly one direct boss. Each member has a unique ID number from <var>1</var> to <var>N</var>, and the member with the ID <var>i</var> is called Member <var>i</var>. The president is Member <var>1</var>, and the direct boss of Member <var>i</var> <var>(2 ≤ i ≤ N)</var> is Member <var>b_i</var> <var>(1 ≤ b_i &lt; i)</var>.</p>
+<p>All the members in ButCoder have gathered in the great hall in the main office to take a group photo. The hall is very large, and all <var>N</var> people can stand in one line. However, they have been unable to decide the order in which they stand. For some reason, all of them except the president want to avoid standing next to their direct bosses.</p>
+<p>How many ways are there for them to stand in a line that satisfy their desires? Find the count modulo <var>10^9+7</var>.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>2 ≤ N ≤ 2000</var></li>
+<li><var>1 ≤ b_i &lt; i</var> <var>(2 ≤ i ≤ N)</var></li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+<var>b_2</var>
+<var>b_3</var>
+<var>:</var>
+<var>b_N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the number of ways for the <var>N</var> members to stand in a line, such that no member except the president is next to his/her direct boss, modulo <var>10^9+7</var>.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>4
+1
+2
+3
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>2
+</pre>
+<p>Below, we will write <var>A → B</var> to denote the fact that Member <var>A</var> is the direct boss of Member <var>B</var>.</p>
+<p>In this case, the hierarchy of the members is <var>1 → 2 → 3 → 4</var>. There are two ways for them to stand in a line that satisfy their desires:</p>
+<ul>
+<li><var>2, 4, 1, 3</var></li>
+<li><var>3, 1, 4, 2</var></li>
+</ul>
+<p>Note that the latter is the reverse of the former, but we count them individually.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>3
+1
+2
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>0
+</pre>
+<p>The hierarchy of the members is <var>1 → 2 → 3</var>. No matter what order they stand in, at least one of the desires of Member <var>2</var> and <var>3</var> is not satisfied, so the answer is <var>0</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>5
+1
+1
+3
+3
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>8
+</pre>
+<p>The hierarchy of the members is shown below:</p>
+<p><img alt="" src="https://img.atcoder.jp/cf17-exhibition/88bc845e074e0a3fecd96e2db9f3b1a5.png"/></p>
+<p>There are eight ways for them to stand in a line that satisfy their desires:</p>
+<ul>
+<li><var>1, 4, 5, 2, 3</var></li>
+<li><var>1, 5, 4, 2, 3</var></li>
+<li><var>3, 2, 4, 1, 5</var></li>
+<li><var>3, 2, 4, 5, 1</var></li>
+<li><var>3, 2, 5, 1, 4</var></li>
+<li><var>3, 2, 5, 4, 1</var></li>
+<li><var>4, 1, 5, 2, 3</var></li>
+<li><var>5, 1, 4, 2, 3</var></li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 4</h3><pre>15
+1
+2
+3
+1
+4
+2
+7
+1
+8
+2
+8
+1
+8
+2
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 4</h3><pre>97193524
+</pre></section>
+</div>
+</span>

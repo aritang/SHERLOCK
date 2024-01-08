@@ -1,0 +1,110 @@
+<span class="lang-en">
+<p>Score : <var>1000</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>You have two strings <var>A = A_1 A_2 ... A_n</var> and <var>B = B_1 B_2 ... B_n</var> of the same length consisting of <var>0</var> and <var>1</var>.</p>
+<p>You can transform <var>A</var> using the following operations in any order and as many times as you want:</p>
+<ul>
+<li>Shift <var>A</var> by one character to the left (i.e., if <var>A = A_1 A_2 ... A_n</var>, replace <var>A</var> with <var>A_2 A_3 ... A_n A_1</var>).</li>
+<li>Shift <var>A</var> by one character to the right (i.e., if <var>A = A_1 A_2 ... A_n</var>, replace <var>A</var> with <var>A_n A_1 A_2 ... A_{n-1}</var>).</li>
+<li>Choose any <var>i</var> such that <var>B_i = 1</var>. Flip <var>A_i</var> (i.e., set <var>A_i = 1 - A_i</var>).</li>
+</ul>
+<p>You goal is to make strings <var>A</var> and <var>B</var> equal.</p>
+<p>Print the smallest number of operations required to achieve this, or <var>-1</var> if the goal is unreachable.</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 \leq |A| = |B| \leq 2,000</var></li>
+<li><var>A</var> and <var>B</var> consist of <var>0</var> and <var>1</var>.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>A</var>
+<var>B</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Print the smallest number of operations required to make strings <var>A</var> and <var>B</var> equal, or <var>-1</var> if the goal is unreachable.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>1010
+1100
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>3
+</pre>
+<p>Here is one fastest way to achieve the goal:</p>
+<ul>
+<li>Flip <var>A_1</var>: <var>A = 0010</var></li>
+<li>Shift <var>A</var> to the left: <var>A = 0100</var></li>
+<li>Flip <var>A_1</var> again: <var>A = 1100</var></li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>1
+0
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>-1
+</pre>
+<p>There is no way to flip the only bit in <var>A</var>.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>11010
+10001
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>4
+</pre>
+<p>Here is one fastest way to achieve the goal:</p>
+<ul>
+<li>Shift <var>A</var> to the right: <var>A = 01101</var></li>
+<li>Flip <var>A_5</var>: <var>A = 01100</var></li>
+<li>Shift <var>A</var> to the left: <var>A = 11000</var></li>
+<li>Shift <var>A</var> to the left again: <var>A = 10001</var></li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 4</h3><pre>0100100
+1111111
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 4</h3><pre>5
+</pre>
+<p>Flip <var>A_1</var>, <var>A_3</var>, <var>A_4</var>, <var>A_6</var> and <var>A_7</var> in any order.</p></section>
+</div>
+</span>

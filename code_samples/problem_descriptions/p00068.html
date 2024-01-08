@@ -1,0 +1,121 @@
+
+
+
+<H1>輪ゴム</H1>
+
+<p>
+<var>n</var> 本の釘を平板上の座標 <var>P<sub>1</sub></var> (<var>x<sub>1</sub></var>, <var>y</sub>1</sub></var>), <var>P<sub>2</sub></var> (<var>x<sub>2</sub></var>, <var>y<sub>2</sub></var>), <var>P<sub>3</sub></var> (<var>x<sub>3</sub></var>, <var>y<sub>3</sub></var>),..., <var>P<sub>n</sub></var> (<var>x<sub>n</sub></var>, <var>y<sub>n</sub></var>) に１本ずつ打ち、輪ゴムの輪の中に全ての釘が入るように 1 本の輪ゴムで囲みます。このとき、輪ゴムが交差してはいけません。
+</p>
+
+<p>
+釘の座標を読み込んで、上記のように釘を輪ゴムで囲んだときに輪ゴムに接していない釘の本数を出力するプログラムを作成してください。輪ゴムは充分に伸び縮みするものとします。同じ座標に 2 本以上の釘を打つことはないものとします。また、輪ゴムがかかった釘と釘の間は直線で結ばれるものとし、その直線上に 3 本以上の釘が並ぶことはないものとします。例えば、図 1 に示すような入力はありえません。図 2 に示すように輪ゴムがかかっていない釘が 1 直線上に並ぶことはありえます。
+</p>
+
+<center>
+<table>
+<tr>
+<td width="240"><img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE1_convex1"></td>
+<td width="240"><img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE1_convex2"></td>
+</tr>
+<tr>
+<td>図１</td>
+<td>図２</td>
+</tr>
+</table>
+</center>
+<br/>
+
+<p>
+ただし、それぞれの座標値は -1000.0 以上1000.0 以下の実数です。また、<var>n</var> は 3 以上 100 以下の整数です。
+</p>
+
+
+<H2>Input</H2>
+
+<p>
+複数のデータセットが与えられます。各データセットは以下のような形式です与えられます。
+</p>
+
+<pre>
+<var>n</var>  
+<var>x<sub>1</sub></var>, <var>y<sub>1</sub></var>
+<var>x<sub>2</sub></var>, <var>y<sub>2</sub></var>
+... 　　　　
+...
+<var>x<sub>n</sub></var>, <var>y<sub>n</sub></var>
+</pre>
+
+<p>
+<var>n</var> が 0 の時、入力の最後を示します。データセットの数は 50 を超えません。
+</p>
+
+
+
+<H2>Output</H2>
+
+<p>
+データセットごとに、ゴムと接していない釘の本数を出力してください。
+
+例えば、図 3 に示す４つの釘を表す入力があった場合、図 4 のように囲まれるので、輪ゴムに接していない釘の本数は 1 本です。
+</p>
+<center>
+<table>
+<tr>
+<td width="240"><img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE1_convex3"></td>
+<td width="240"><img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE1_convex4"></td>
+</tr>
+<tr>
+<td>図３</td>
+<td>図４</td>
+</tr>
+</table>
+</center>
+<br/>
+
+<H2>Sample Input</H2>
+
+<pre>
+4
+1.0,0.0
+0.0,1.0
+2.0,1.0
+1.0,2.0
+9
+-509.94,892.63
+567.62,639.99
+-859.32,-64.84
+-445.99,383.69
+667.54,430.49
+551.12,828.21
+-940.2,-877.2
+-361.62,-970
+-125.42,-178.48
+0
+</pre>
+
+<H2>Output for the Sample Input</H2>
+
+<pre>
+0
+3
+</pre>
+
+
+<H2>Hint</H2>
+<p>
+以下は２つめのサンプル入力に対する図です。
+</p>
+
+<center>
+<table>
+<tr>
+<td><img src="https://judgeapi.u-aizu.ac.jp/resources/images/IMAGE1_convex5"></td>
+</tr>
+<tr>
+</tr>
+</table>
+</center>
+
+
+
+

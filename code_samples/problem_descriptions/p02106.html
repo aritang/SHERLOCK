@@ -1,0 +1,98 @@
+
+
+
+<script language="JavaScript" type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML">
+</script>
+
+<h1>Problem I: Tree-Light</h1>
+
+<h2>Problem</h2>
+
+<p>あなたはツリーライトというツリー状の照明器具を買ってきた。</p>
+
+<p>この照明器具には<var>n</var>個の接点があり、それぞれ<var>0</var>から<var>n&minus;1</var>までの番号がついている。各接点は10段階の明るさを表現できる電球と、電球の状態を切り替えるための装置で構成されている。最初、すべての接点の電球の明るさは<var>0</var>である。</p>
+<p>また、接点と接点の間にはケーブル線がある。すべての接点は<var>n&minus;1</var>本のケーブル線によって繋がれており、接点<var>0</var>を上にして吊り下げられる。ここで、接点<var>i</var>から下方向に0本以上のケーブル線を介して、接点<var>i</var>と繋がる接点の集合を、接点<var>i</var>を根とした部分木と呼ぶ。</p>
+
+<p>あなたはこの照明器具に対し、以下のいずれかの行動をとる。</p>
+
+<ul>
+    <li><var>count(r, x, y)</var>: 接点<var>r</var>を根とした部分木に含まれる接点の電球の中で、明るさが<var>x</var>以上<var>y</var>以下になっている電球の数を数える。</li>
+    <li><var>change(r, x, y)</var>: 接点<var>r</var>を根とした部分木に含まれる接点の電球の中で、明るさがちょうど<var>x</var>になっているすべての電球の明るさを<var>y</var>に変更する。</li>
+</ul>
+
+<p><var>q</var>回の行動が与えられるので、<var>count(r, x, y)</var>が与えられるたびにその時点での電球の数を出力せよ。</p>
+
+<h2>Input</h2>
+<p>入力は以下の形式で与えられる。</p>
+<pre>
+<var>n</var> <var>q</var>
+<var>u<sub>1</sub></var> <var>v<sub>1</sub></var>
+<var>u<sub>2</sub></var> <var>v<sub>2</sub></var>
+...
+<var>u<sub>n&minus;1</sub></var> <var>v<sub>n&minus;1</sub></var>
+<var>t<sub>1</sub></var> <var>r<sub>1</sub></var> <var>x<sub>1</sub></var> <var>y<sub>1</sub></var>
+<var>t<sub>2</sub></var> <var>r<sub>2</sub></var> <var>x<sub>2</sub></var> <var>y<sub>2</sub></var>
+...
+<var>t<sub>q</sub></var> <var>r<sub>q</sub></var> <var>x<sub>q</sub></var> <var>y<sub>q</sub></var>
+</pre>
+
+<p>
+1行目にツリーライトを構成する接点の数<var>n</var>、あなたのとる行動の数<var>q</var>が空白区切りで与えられる。<br>
+続く<var>n&minus;1</var>行にはケーブル線の情報が空白区切りで与えられる。<var>i</var>番目のケーブル線の情報は、ケーブル線<var>i</var>が接点<var>u<sub>i</sub></var>を上にして、接点<var>u<sub>i</sub></var>と接点<var>v<sub>i</sub></var>を繋ぐことを表す。<br>
+<var>n&plus;1</var>行目以降の<var>q</var>行にはあなたのとる行動が空白区切りで与えられる。<var>t<sub>i</sub> = 1</var>なら<var>count(r<sub>i</sub>, x<sub>i</sub>, y<sub>i</sub>)</var>を、<var>t<sub>i</sub> = 2</var>なら<var>change(r<sub>i</sub>, x<sub>i</sub>, y<sub>i</sub>)</var>を表す。
+</p>
+
+<h2>Constraints</h2>
+<ul>
+    <li><var>1 &le; n &le; 10<sup>5</sup></var></li>
+    <li><var>1 &le; q &le; 10<sup>5</sup></var></li>
+    <li><var>0 &le; u<sub>i</sub>, v<sub>i</sub>, r<sub>i</sub> &le; n&minus;1 (u<sub>i</sub> ≠ v<sub>i</sub>)</var></li>
+    <li><var>0 &le; x<sub>i</sub>, y<sub>i</sub> &le; 9 (t<sub>i</sub> = 1</var>の時<var>x<sub>i</sub> &le; y<sub>i</sub>)</var></li>
+</ul>
+
+<h2>Output</h2>
+<p>各<var>count(r<sub>i</sub>, x<sub>i</sub>, y<sub>i</sub>)</var>について、その答えを1行に出力する。</p>
+
+<h2>Sample Input 1</h2>
+<pre>
+7 5
+0 1
+1 2
+1 3
+0 4
+4 5
+4 6
+1 0 0 9
+2 0 0 5
+2 1 5 8
+1 0 5 8
+1 0 8 8
+</pre>
+
+<h2>Sample Output 1</h2>
+<pre>
+7
+7
+3
+</pre>
+
+<h2>Sample Input 2</h2>
+<pre>
+7 5
+0 1
+1 2
+2 3
+0 4
+4 5
+5 6
+2 1 0 5
+2 4 0 6
+2 3 5 6
+2 5 6 5
+1 0 0 5
+</pre>
+
+<h2>Sample Output 2</h2>
+<pre>
+5
+</pre>

@@ -1,0 +1,71 @@
+
+
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({ tex2jax: { inlineMath: [["$","$"], ["\\(","\\)"]], processEscapes: true }});
+</script>
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+
+<H1>カエルはまっすぐ帰る</H1>
+
+<p>
+一匹のカエルが巣穴に帰ろうとしています。巣穴はカエルの <var>D</var> センチメートル前方にあって、カエルは巣穴に向かってまっすぐ進みます。カエルができる行動は、以下の２つだけです。
+</p>
+<ul>
+<li> 大ジャンプ（<var>L</var> センチメートル前方に進む）</li>
+<li> 小ジャンプ（１センチメートル前方に進む）</li>
+</ul>
+
+<p>
+カエルは巣穴を跳び越すことなく、ちょうど巣穴に着地することをねらっています。
+</p>
+
+<p>
+カエルが巣穴に帰るために、最低何回跳ぶ必要があるかを求めるプログラムを作成せよ。
+</p>
+
+<h2>Input</h2>
+
+<p>
+入力は以下の形式で与えられる。
+</p>
+
+<pre>
+<var>D</var> <var>L</var>
+</pre>
+
+<p>
+入力は１行であり、巣穴までの距離 <var>D</var> (1 &le; <var>D</var> &le; 10000) と大ジャンプでカエルが進む距離 <var>L</var> (2 &le; <var>L</var> &le; 10000) が与えられる。
+</p>
+
+
+<h2>Output</h2>
+
+<p>
+カエルが最低何回跳ぶ必要があるかを、１行に出力する。
+</p>
+
+<h2>Sample Input 1</h2>
+
+<pre>
+10 5
+</pre>
+
+<h2>Sample Output 1</h2>
+<pre>
+2
+</pre>
+<br/>
+
+
+<h2>Sample Input 2</h2>
+<pre>
+7 4
+</pre>
+
+<h2>Sample Output 2</h2>
+<pre>
+4
+</pre>

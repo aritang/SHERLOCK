@@ -1,0 +1,107 @@
+<H1>Finding Missing Cards</H1>
+
+<p>
+  Taro is going to play a card game. However, now he has only <var>n</var> cards, even though there should be 52 cards (he has no Jokers).
+</p>
+
+<p>
+The 52 cards include 13 ranks of each of the four suits: spade, heart, club and diamond.
+</p>
+
+
+<H2>Input</H2>
+<p>
+  In the first line, the number of cards <var>n</var> (<var>n</var> &le; 52) is given.
+</p>
+
+<p>
+  In the following <var>n</var> lines, data of the <var>n</var> cards are given. Each card is given by a pair of a character and an integer which represent its suit and rank respectively. A suit is represented by 'S', 'H', 'C' and 'D' for spades, hearts, clubs and diamonds respectively. A rank is represented by an integer from 1 to 13.
+</p>
+
+<H2>Output</H2>
+
+<p>
+  Print the missing cards. The same as the input format, each card should be printed with a character and an integer separated by a space character in a line.
+ Arrange the missing cards in the following priorities:
+</p>
+
+<ul>
+<li>Print cards of spades, hearts, clubs and diamonds in this order.</li>
+<li>If the suits are equal, print cards with lower ranks first.</li>
+</ul>
+
+<H2>Sample Input</H2>
+
+<pre>
+47
+S 10
+S 11
+S 12
+S 13
+H 1
+H 2
+S 6
+S 7
+S 8
+S 9
+H 6
+H 8
+H 9
+H 10
+H 11
+H 4
+H 5
+S 2
+S 3
+S 4
+S 5
+H 12
+H 13
+C 1
+C 2
+D 1
+D 2
+D 3
+D 4
+D 5
+D 6
+D 7
+C 3
+C 4
+C 5
+C 6
+C 7
+C 8
+C 9
+C 10
+C 11
+C 13
+D 9
+D 10
+D 11
+D 12
+D 13
+</pre>
+
+
+
+<H2>Sample Output</H2>
+
+<pre>
+S 1
+H 3
+H 7
+C 12
+D 8
+</pre>
+
+<h2>Note</h2>
+
+
+<center>
+<a href="commentary.jsp?id=ITP1_6_B">
+<div class="button">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;解説&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+</a>	
+</center>
+
+

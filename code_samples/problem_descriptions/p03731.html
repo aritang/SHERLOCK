@@ -1,0 +1,110 @@
+<span class="lang-en">
+<p>Score : <var>300</var> points</p>
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>In a public bath, there is a shower which emits water for <var>T</var> seconds when the switch is pushed.</p>
+<p>If the switch is pushed when the shower is already emitting water, from that moment it will be emitting water for <var>T</var> seconds.
+Note that it does not mean that the shower emits water for <var>T</var> additional seconds.</p>
+<p><var>N</var> people will push the switch while passing by the shower.
+The <var>i</var>-th person will push the switch <var>t_i</var> seconds after the first person pushes it.</p>
+<p>How long will the shower emit water in total?</p>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 ≤ N ≤ 200,000</var></li>
+<li><var>1 ≤ T ≤ 10^9</var></li>
+<li><var>0 = t_1 &lt; t_2 &lt; t_3 &lt; , ..., &lt; t_{N-1} &lt; t_N ≤ 10^9</var></li>
+<li><var>T</var> and each <var>t_i</var> are integers.</li>
+</ul>
+</section>
+</div>
+<hr/>
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var> <var>T</var>
+<var>t_1</var> <var>t_2</var> ... <var>t_N</var>
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Output</h3><p>Assume that the shower will emit water for a total of <var>X</var> seconds. Print <var>X</var>.</p>
+</section>
+</div>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>2 4
+0 3
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>7
+</pre>
+<p>Three seconds after the first person pushes the water, the switch is pushed again and the shower emits water for four more seconds, for a total of seven seconds.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>2 4
+0 5
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>8
+</pre>
+<p>One second after the shower stops emission of water triggered by the first person, the switch is pushed again.</p>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>4 1000000000
+0 1000 1000000 1000000000
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>2000000000
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 4</h3><pre>1 1
+0
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 4</h3><pre>1
+</pre>
+</section>
+</div>
+<hr/>
+<div class="part">
+<section>
+<h3>Sample Input 5</h3><pre>9 10
+0 3 5 7 100 110 200 300 311
+</pre>
+</section>
+</div>
+<div class="part">
+<section>
+<h3>Sample Output 5</h3><pre>67
+</pre></section>
+</div>
+</span>
